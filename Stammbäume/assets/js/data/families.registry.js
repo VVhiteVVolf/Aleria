@@ -16,6 +16,8 @@ import { HOUSE_ARD_CONBHRON_FAMILY } from './house-ard-conbhron-family.js';
 import { HOUSE_UI_TALAMH_FAMILY } from './house-ui-talamh-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js?v=hausbio-20260911c';
 import { HOUSE_CHAMOIS_FAMILY } from './house-chamois-family.js';
+import { HOUSE_BWACH_FAMILY } from './house-bwach-family.js';
+import { GWYNTHOR_NORTHERN_FARM_FAMILIES } from './gwynthor-northern-farm-families.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js?v=gais-bio-20260912';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js?v=anwyll-bio-20260912';
 import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
@@ -191,6 +193,9 @@ export const FAMILY_REGISTRY = Object.freeze([
   familyRecord({ id: 'melog', title: 'Familie Melog', family: HOUSE_MELOG_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'perllan', title: 'Familie Perllan', family: HOUSE_PERLLAN_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'glynmor', title: 'Familie Glynmor', family: HOUSE_GLYNMOR_FAMILY, type: 'commoner' }),
+  ...GWYNTHOR_NORTHERN_FARM_FAMILIES.map(family => familyRecord({
+    id: family.document.id, title: family.document.title, family, type: 'commoner'
+  })),
   familyRecord({id:'haus-hamnett',title:'Haus Hamnett',family:HOUSE_HAMNETT_FAMILY,type:'commoner'}),
   ...CENYR_TERRITORY_COMMONER_FAMILIES.map(family => familyRecord({
     id: family.document.id, title: family.document.title, family, type: 'commoner'
@@ -222,6 +227,7 @@ export const FAMILY_REGISTRY = Object.freeze([
     family: HOUSE_GAFYR_FAMILY
   }),
   familyRecord({ id: 'haus-chamois', title: 'Haus Chamois', family: HOUSE_CHAMOIS_FAMILY }),
+  familyRecord({ id: 'haus-bwach', title: 'Haus Bwach', family: HOUSE_BWACH_FAMILY }),
   familyRecord({
     id: 'haus-gwefrydd',
     title: 'Haus Gwefrydd',

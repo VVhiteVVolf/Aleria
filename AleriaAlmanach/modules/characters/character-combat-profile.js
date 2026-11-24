@@ -1,5 +1,6 @@
 import { renderAttributeIcon } from '../skill-checks/attribute-icon-registry.js?v=20261015-check-options-v1';
 import { renderCombatSheetHeader, renderCombatSheetPages } from '../combat-sheet/combat-sheet-pages.js';
+import { renderCombatConditionPresetOptions, selectCombatConditionPreset } from '../combat-status/combat-condition-authoring.js';
 import { createCombatSheetWorkspace } from '../combat-sheet/combat-sheet-workspace.js';
 import { getEarnedClassPassiveFeatures } from '../classes/combat-passives/class-passive-curriculum.js';
 import { getDerwynFocusWeapons } from '../classes/combat-passives/derwyn-passives.js';
@@ -732,7 +733,7 @@ function renderConditionCollection(profile, title, kicker, addLabel) {
         <div class="cp-condition-card-body">
           ${renderMechanicsSummary(item.mechanics) ? `<p class="cp-entry-mechanics-summary">${escapeMarkup(renderMechanicsSummary(item.mechanics))}</p>` : ''}
           <div class="cp-sheet-narrative-title"><label><input type="checkbox" data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="active"${checked(item.active)}> aktiv</label><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="name" value="${escapeMarkup(item.name)}" maxlength="100" placeholder="Name"><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" aria-label="${escapeMarkup(item.name || 'Zustand')} entfernen">×</button></div>
-          <div class="cp-sheet-fields compact"><label><span>Dauer</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="duration" value="${escapeMarkup(item.duration)}" maxlength="100"></label><label><span>Quelle</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="source" value="${escapeMarkup(item.source)}" maxlength="160"></label></div>
+          <div class="cp-sheet-fields compact"><label><span>Vorlage</span><select data-combat-condition-preset="${escapeMarkup(item.id)}">${renderCombatConditionPresetOptions(item.presetId, { scene: false })}</select></label><label><span>Dauer</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="duration" value="${escapeMarkup(item.duration)}" maxlength="100"></label><label><span>Quelle</span><input data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="source" value="${escapeMarkup(item.source)}" maxlength="160"></label></div>
           <textarea data-combat-collection="conditions" data-combat-item-id="${escapeMarkup(item.id)}" data-combat-property="description" maxlength="1200" placeholder="Beschreibung und erzählerische Bedeutung">${escapeMarkup(item.description)}</textarea>
           ${renderMechanicsFields(collection, item)}
         </div>
@@ -1302,6 +1303,17 @@ document.addEventListener('input', event => {
 document.addEventListener('change', event => {
   const target = event.target;
   if (!target?.closest?.('#cp-tab-combat')) return;
+  if (target.matches('[data-combat-condition-preset]')) {
+    const id = target.dataset.combatConditionPreset;
+    const index = draftProfile.conditions.findIndex(condition => condition.id === id);
+    if (index >= 0) {
+      draftProfile.conditions[index] = selectCombatConditionPreset(draftProfile.conditions[index], target.value, { scene: false });
+      renderSheet();
+      const field = [...document.querySelectorAll('[data-combat-condition-preset]')].find(element => element.dataset.combatConditionPreset === id);
+      if (field) { field.closest('details').open = true; field.focus({ preventScroll: true }); }
+    }
+    return;
+  }
   if (updateLevelUpPlan(target)) return;
   if (target.matches('[data-combat-foundation-choice]')) {
     const result = selectCenyrTrainingOption(draftProfile, { kind: 'foundation', selectionId: target.value, selectedAtLevel: 1 });

@@ -13,7 +13,11 @@ import { prepareTestAction } from './combat-test-actions.mjs';
 export { CheckupDice } from './combat-test-actions.mjs';
 
 const projectId = 'demo-aleria-combat-checkup';
-if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8180') throw Error('This integration fixture requires the dedicated local emulator at 127.0.0.1:8180.');
+const emulatorPort = Number(process.env.ALERIA_COMBAT_TEST_PORT || 8180);
+const emulatorHost = `127.0.0.1:${emulatorPort}`;
+if (!Number.isInteger(emulatorPort) || emulatorPort < 1024 || emulatorPort > 65535 || process.env.FIRESTORE_EMULATOR_HOST !== emulatorHost) {
+  throw Error(`This integration fixture requires a dedicated loopback emulator at ${emulatorHost}.`);
+}
 initializeApp({ projectId });
 export const database = getFirestore();
 export const actorRecords = await Promise.all(['gildas-gafyr', 'gawain-draig'].map(async name =>
@@ -29,7 +33,7 @@ export const active = async () => getActiveCombatEncounter(await history());
 
 export async function resetScene({ actors = actorRecords } = {}) {
   // This endpoint deletes only the disposable, fixed demo project above.
-  const result = await fetch(`http://127.0.0.1:8180/emulator/v1/projects/${projectId}/databases/(default)/documents`, { method: 'DELETE' });
+  const result = await fetch(`http://${emulatorHost}/emulator/v1/projects/${projectId}/databases/(default)/documents`, { method: 'DELETE' });
   if (!result.ok) throw Error(`Emulator reset failed: ${result.status}`);
   for (const actor of actors) await database.collection(actor.entityType === 'creature' ? 'creatures' : 'characters').doc(actor.sourceCreatureId || actor.id).set({
     id: actor.id, name: actor.name, title: actor.title || '', portrait: actor.portrait || '',

@@ -118,7 +118,7 @@ function importDraft(event, issues) {
   setHerausforderungStatus(issues.length ? `Entwurf importiert. ${issues.length} Pflichtangaben bitte ergänzen.` : 'Entwurf importiert. Situation, Lösungswege und Belohnungen prüfen; danach ausdrücklich veröffentlichen.');
 }
 
-function openDialog(comment = null) {
+function openDialog(comment = null, { phase, elementType = 'challenge' } = {}) {
   if (submitting) return;
   const thread = globalThis.getCurrentCommentThread?.();
   if (!thread || thread.kind !== 'session') {
@@ -142,7 +142,7 @@ function openDialog(comment = null) {
   operationId = crypto.randomUUID();
   submittedDraft = '';
   const root = ensureHerausforderungDialog();
-  ensureElementEditor(root).set(editingComment?.herausforderung || {}, { prepared: !!preparedElementId });
+  ensureElementEditor(root).set(editingComment?.herausforderung || (phase ? { elementType, activation: { enabled: true, phase } } : {}), { prepared: !!preparedElementId });
   const registerOperationId = operationId;
   requestItemRegister().then(() => {
     if (activeThreadId && operationId === registerOperationId && !submitting) refreshHerausforderungRewardTemplates(root);
@@ -151,7 +151,7 @@ function openDialog(comment = null) {
   });
   const title = root.querySelector('[data-herausforderung-field="title"]');
   const description = root.querySelector('[data-herausforderung-field="publicDescription"]');
-  if (title) title.value = 'Herausforderung';
+  if (title) title.value = SCENE_ELEMENT_TYPES.find(type => type.id === elementType)?.label || 'Herausforderung';
   if (description) description.value = '';
   setChallengeSceneImage(root, null);
   root.dataset.editing = editingComment ? 'true' : 'false';
@@ -278,7 +278,8 @@ async function submitEvent() {
   if (!published) return;
   const edited = !!editingComment;
   closeDialog();
-  globalThis.showAppStatus?.(edited ? 'Die Änderungen wurden gespeichert.' : 'Die Herausforderung wurde veröffentlicht.', 'success');
+  globalThis.showAppStatus?.(edited ? 'Die Änderungen wurden gespeichert.' : event.activation.phase
+    ? `Der Eintrag ist für Phase ${event.activation.phase} vorbereitet.` : 'Die Herausforderung wurde veröffentlicht.', 'success');
   try {
     await globalThis.loadCommentsIntoPage?.(threadId, true, edited ? {} : { page: 'last' });
   } catch (error) {
@@ -401,6 +402,7 @@ document.addEventListener('keydown', event => {
 
 globalThis.AleriaHerausforderung = Object.freeze({
   open: openDialog,
+  openForPhase: (phase, elementType) => openDialog(null, { phase, elementType }),
   openPrepared: ({ id, event, revision }) => openDialog({ id: 'signal-' + id, herausforderung: event, herausforderungRevision: revision, _sceneElementId: id }),
   setRenderContext(comments = []) { renderProgress = collectHerausforderungProgress(comments); renderEncounter = getActiveCombatEncounter(comments); },
   isComment: comment => isHerausforderungComment(comment),

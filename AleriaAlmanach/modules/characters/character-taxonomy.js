@@ -177,7 +177,7 @@ function appendCharacterTaxonomyNodes(parent, nodes, depth = 0) {
   });
 }
 
-function createCharacterTaxonomyNavigator() {
+function createCharacterTaxonomyNavigator({ expanded = false } = {}) {
   const shell = document.createElement('div');
   shell.className = 'char-taxonomy-shell';
 
@@ -203,14 +203,12 @@ function createCharacterTaxonomyNavigator() {
   tools.appendChild(addBtn);
   shell.appendChild(tools);
 
-  if (!_charOrganizeMode && (_activeCharTab === 'Alle' || _activeCharTab === CHARACTER_ARCHIVE_TAB)) return shell;
-
   const drawer = document.createElement('details');
   drawer.className = 'char-taxonomy-drawer';
-  drawer.open = _charOrganizeMode || (_activeCharTab !== 'Alle' && _activeCharTab !== CHARACTER_ARCHIVE_TAB);
+  drawer.open = _charOrganizeMode || expanded;
   const summary = document.createElement('summary');
   const groupCount = _charTabs.filter(tab => tab && tab !== 'Alle').length;
-  summary.innerHTML = `<span>Eigene Gruppen</span><strong>${groupCount}</strong><small>manuell gepflegt</small>`;
+  summary.innerHTML = `<span>Eigene Gruppen</span><strong>${groupCount}</strong>`;
   drawer.appendChild(summary);
 
   const tree = document.createElement('div');

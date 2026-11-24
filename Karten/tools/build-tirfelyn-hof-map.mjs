@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { buildHofMap, hofMapConfig, hofMapRegistryEntry, HOF_MAP_LINK } from '../modules/tirfelyn-hof/hof-map.mjs';
+import { buildHofMap, hofMapConfig, hofMapRegistryEntry, HOF_MAP_IMAGE, HOF_MAP_LINK } from '../modules/tirfelyn-hof/hof-map.mjs';
 import { HOF_MAP_FOLDER } from '../../shared/tirfelyn-hof/hof-pois.mjs';
 import { writeGeneratedMap, updateGeneratedMapRegistry } from './generated-map-output.mjs';
 import { HOF_MARKER_DEFINITIONS } from '../modules/tirfelyn-hof/hof-markers.mjs';
@@ -32,11 +32,11 @@ const pin = map.state.pins.find(pin => pin.id === 'gwynthor-marking-107');
 const location = source.locations.find(location => location.pinId === pin.id);
 const otherPins = JSON.stringify(map.state.pins.filter(candidate => candidate.id !== pin.id));
 const otherLocations = JSON.stringify(source.locations.filter(candidate => candidate.pinId !== pin.id));
-const sceneImage = '/AleriaAlmanach/assets/tirfelyn-hof/scenes/bauernherrenhaus-v1.png';
+const mapImage = `/Karten/${HOF_MAP_IMAGE}`;
 const textLink = `[URL=${HOF_MAP_LINK}]Ortskarte des Tirfelyn-Hofs öffnen[/URL]`;
 let changed = false;
 for (const target of [pin, location.patch]) {
-  for (const [key, value] of Object.entries({ img: sceneImage, imgLink: HOF_MAP_LINK })) {
+  for (const [key, value] of Object.entries({ img: mapImage, imgLink: HOF_MAP_LINK })) {
     if (target[key] !== value) { if (check) throw Error(`Hofkartenlink fehlt: ${key}`); target[key] = value; changed = true; }
   }
   if (!target.text.includes(textLink)) { if (check) throw Error('Hofkarten-Textlink fehlt'); target.text += `\n\n${textLink}`; changed = true; }

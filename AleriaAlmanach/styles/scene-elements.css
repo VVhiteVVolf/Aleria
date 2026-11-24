@@ -55,6 +55,8 @@
 .scene-elements-host.has-scene-elements[data-scene-elements-expanded="false"] > .comments-scroll { padding-right: 62px; }
 .scene-elements-rail { position: absolute; z-index: 8; right: 8px; top: 0; visibility: hidden; display: grid; gap: 8px; max-height: 60%; overflow-y: auto; padding: 7px; border: 1px solid #bca16f; border-radius: 10px; background: #f5ecd9ed; box-shadow: 0 4px 14px #4c301a29; scrollbar-width: thin; }
 .scene-elements-rail[hidden] { display: none; }
+[data-scene-elements-rail-content] { display: grid; gap: inherit; min-height: 0; overflow: auto; scrollbar-width: thin; }
+.scene-elements-rail:has([data-scene-rail-accessory]:not([hidden])) { grid-template-rows: minmax(0, auto) auto; }
 .scene-element-stage-access { display: flex; align-items: flex-start; gap: 8px; }
 .scene-element-stage-access > .session-intro { flex: 1; min-width: 0; }
 [data-scene-elements-dock]:empty { display: none; }

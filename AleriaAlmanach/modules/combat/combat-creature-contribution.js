@@ -9,8 +9,8 @@ function contributionProfiles(segments, characterId, profileFor) {
     .filter(profile => profile?.currentHitPoints > 0);
 }
 
-export const hasCreatureContribution = (segments, characterId, profileFor) => contributionProfiles(segments, characterId, profileFor)
-  .some(profile => getHeldCondition(profile) || hasCreatureTurnEnd(profile));
+export const hasCreatureContribution = (segments, characterId, profileFor, { deferConditionTime } = {}) => !deferConditionTime
+  && contributionProfiles(segments, characterId, profileFor).some(profile => getHeldCondition(profile) || hasCreatureTurnEnd(profile));
 
 function targetedByHold(segments, characterId, profiles) {
   const byId = new Map(profiles.map(profile => [profile.characterId, profile]));
@@ -31,7 +31,8 @@ function creatureSegment(profile, combatActionId, text) {
     creatureAutomatic: true };
 }
 
-export function withCreatureContribution(segments, characterId, profileFor, previews = new Map()) {
+export function withCreatureContribution(segments, characterId, profileFor, previews = new Map(), { deferConditionTime } = {}) {
+  if (deferConditionTime) return segments.slice();
   const prepared = segments.slice();
   const profiles = contributionProfiles(segments, characterId, profileFor);
   const holdTargets = targetedByHold(segments, characterId, profiles);

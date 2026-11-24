@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 27,
-  "updatedAt": "2026-11-22T22:05:39.998Z",
+  "revision": 31,
+  "updatedAt": "2026-11-23T23:54:24.740Z",
   "state": {
     "pins": [
       {
@@ -3571,12 +3571,12 @@
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caehelyg/caehelyg-wappen-v1.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-caehelyg&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "",
-        "house": "",
+        "house": "Familie Caehelyg",
         "faction": "",
         "table": [
           {
@@ -3626,11 +3626,18 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Dienstbindung",
+            "v": "Haus Draig"
           }
         ],
-        "text": "Hof Caehelyg liegt im nördlichen Bannkreis Gwynthors. Die Bauernfamilie Caehelyg bewirtschaftet den Hof und seine umliegenden Felder.",
+        "text": "Die bäuerliche Familie Caehelyg bewirtschaftet ihren Hof und die umliegenden Felder im nördlichen Bannkreis von Gwynthor. Die Familie ist Haus Draig unmittelbar verpflichtet.\n\nDen Hof umgeben die Felder der Caehelyg. Welche Feldfrüchte die Familie anbaut, ist bislang offen.\n\n[URL=/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-caehelyg]Familienakte[/URL] · [URL=/Stammbäume/Stammbaum.html?family=haus-caehelyg&mode=view]Stammbaum[/URL]",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "landwirtschaft",
+        "residentFamilyIds": [
+          "haus-caehelyg"
+        ]
       },
       {
         "id": "gwynthor-marking-043",
@@ -4668,12 +4675,12 @@
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwerfil/gwerfil-wappen-v1.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gwerfil&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
-        "house": "Haus Gwerfil",
+        "house": "Familie Gwerfil",
         "faction": "",
         "table": [
           {
@@ -4722,13 +4729,20 @@
           },
           {
             "k": "Besonderheiten",
-            "v": "Beide Familien unterstehen dem Ritterhaus Tlawd"
+            "v": ""
+          },
+          {
+            "k": "Dienstbindung",
+            "v": "Haus Gafyr"
           }
         ],
-        "text": "Der **Gwerfil-Hof** ist ein großer Bauernhof entlang der nördlichen Hauptstraße und wird von der Familie Gwerfil bewirtschaftet. Seine Felder dienen vor allem dem Anbau von Weizen und Tierfutter, während auf dem Hof Ziegen, Schafe und Rinder gehalten werden. Seit Jahrzehnten führen die Gwerfil eine Fehde mit der benachbarten Familie Afelwyn, deren ursprünglicher Anlass inzwischen selbst den heutigen Familienmitgliedern kaum noch bekannt ist. Beide Familien unterstehen dem westlich gelegenen Ritterhaus Tlawd, das sich nur äußerst ungern mit dem alten Streit seiner beiden Untergebenen befasst.",
+        "text": "Die Familie Gwerfil bewirtschaftet einen großen Bauernhof an der nördlichen Hauptstraße von Gwynthor. Ihre Felder und Herden versorgen die Stadt und die umliegenden Höfe. Die Gwerfil stehen im Dienst von Haus Gafyr.\n\nAuf den Feldern wachsen Weizen und Futterpflanzen. Zum Betrieb gehören Ziegen, Schafe und Rinder.\n\nDie Gwerfil tragen seit Jahrzehnten eine Fehde mit der benachbarten Familie Afelwyn aus. Der Ursprung ist kaum noch bekannt. Beide Familien dienen den Gafyr.\n\n[URL=/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-gwerfil]Familienakte[/URL] · [URL=/Stammbäume/Stammbaum.html?family=haus-gwerfil&mode=view]Stammbaum[/URL]",
         "secret": false,
         "templateId": "landwirtschaft",
-        "dominionId": "cw-haus-tlawd"
+        "dominionId": "cw-haus-tlawd",
+        "residentFamilyIds": [
+          "haus-gwerfil"
+        ]
       },
       {
         "id": "gwynthor-marking-059",
@@ -5013,8 +5027,8 @@
         "title": "Halenrhyd-Landgestüt",
         "cat": "location-rosszuchtsiedlung",
         "kind": "place",
-        "img": "/AleriaAlmanach/assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
-        "imgLink": "/AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd",
+        "img": "",
+        "imgLink": "",
         "crest": "/AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
         "crestLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-halenrhyd",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
@@ -5048,7 +5062,7 @@
             "v": "Haus Wyrm · keine neue Hoheitsgrenze"
           }
         ],
-        "text": "Das eigene Landgestüt der Halenrhyd liegt im östlichen Bannkreis Gwynthors. Bryndor und Melyssa führen mit ihrem Haushalt Zucht, Aufzucht und die Vorbereitung geeigneter Pferde. Der Stadtzweig verkauft Tiere im Gestüt Zum Silberhalm; der eigene Familienhof liefert Futter. Die Dienstbindung an Haus Wyrm bleibt erhalten und begründet keine neue territoriale Herrschaft.",
+        "text": "Das eigene Landgestüt der Halenrhyd liegt im östlichen Bannkreis Gwynthors. Bryndor und Melyssa führen mit ihrem Haushalt Zucht, Aufzucht und die Vorbereitung geeigneter Pferde. Der Stadtzweig verkauft Tiere im Gestüt Zum Silberhalm; der eigene Familienhof liefert Futter. Die Dienstbindung an Haus Wyrm bleibt erhalten und begründet keine neue territoriale Herrschaft.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd]Zum Silberhalm im Almanach[/URL]",
         "secret": false,
         "templateId": "siedlung",
         "residentFamilyIds": [
@@ -5202,8 +5216,8 @@
         "title": "Halenrhyd-Futterhof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
-        "img": "/AleriaAlmanach/assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
-        "imgLink": "/AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd",
+        "img": "",
+        "imgLink": "",
         "crest": "/AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
         "crestLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-halenrhyd",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
@@ -5237,7 +5251,7 @@
             "v": "Haus Wyrm · keine neue Hoheitsgrenze"
           }
         ],
-        "text": "Der eigene Bauernhof der Halenrhyd wird von Odrig, Rhaenna und ihrem Familienzweig bewirtschaftet. Futterpflanzen, Heu, Getreide und Gemüse sowie die Haltung von Hofvieh bilden seine Grundlage. Er versorgt die familieneigene Rosszucht und den Stadtbetrieb mit vereinbarten Lieferungen; Vorräte und Abrechnung bleiben nachvollziehbar. Grundstücksgröße und konkrete Abgabensätze sind nicht festgelegt.",
+        "text": "Der eigene Bauernhof der Halenrhyd wird von Odrig, Rhaenna und ihrem Familienzweig bewirtschaftet. Futterpflanzen, Heu, Getreide und Gemüse sowie die Haltung von Hofvieh bilden seine Grundlage. Er versorgt die familieneigene Rosszucht und den Stadtbetrieb mit vereinbarten Lieferungen; Vorräte und Abrechnung bleiben nachvollziehbar. Grundstücksgröße und konkrete Abgabensätze sind nicht festgelegt.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd]Zum Silberhalm im Almanach[/URL]",
         "secret": false,
         "templateId": "landwirtschaft",
         "residentFamilyIds": [
@@ -5533,8 +5547,8 @@
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Afelwyn/afelwyn-wappen-v1.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-afelwyn&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
@@ -5575,7 +5589,7 @@
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": "Vorwiegend Gwynthor, Haus Tlawd"
+            "v": "Gwynthor und Haus Gafyr"
           },
           {
             "k": "Zustand",
@@ -5588,12 +5602,19 @@
           {
             "k": "Besonderheiten",
             "v": "Bedeutender Lieferant für frisches Obst in Gwynthor; eigene Imkerei"
+          },
+          {
+            "k": "Dienstbindung",
+            "v": "Haus Gafyr"
           }
         ],
-        "text": "Die **Afelwyn-Obstplantage** ist ein großer, von der Familie Afelwyn bewirtschafteter Obsthof im Umland Gwynthors. Auf den ausgedehnten Pflanzungen wachsen verschiedene verbreitete Obstsorten, allen voran Äpfel und Birnen. Ein Großteil der Ernte wird nach Gwynthor gebracht und dort als frisches Obst verkauft, wodurch der Hof einen bedeutenden Anteil an der Versorgung der Stadt übernimmt. Neben dem Obstbau betreiben die Afelwyn eine eigene Imkerei und liefern auch Honig nach Gwynthor.",
+        "text": "Die Familie Afelwyn bewirtschaftet an der nördlichen Straße von Gwynthor eine Obstplantage mit eigener Imkerei. Vor allem Äpfel und Birnen gehen auf die Märkte der Stadt. Die Afelwyn stehen im Dienst von Haus Gafyr.\n\nAuf der Plantage wachsen Äpfel, Birnen und weitere Obstsorten. Neben frischem Obst liefert der Hof eigenen Honig.\n\nDie Afelwyn und ihre Nachbarn, die Familie Gwerfil, verbindet eine jahrzehntelange Fehde. Ihr ursprünglicher Anlass ist kaum noch bekannt. Beide Familien dienen den Gafyr.\n\n[URL=/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-afelwyn]Familienakte[/URL] · [URL=/Stammbäume/Stammbaum.html?family=haus-afelwyn&mode=view]Stammbaum[/URL]",
         "secret": false,
         "templateId": "landwirtschaft",
-        "dominionId": "cw-haus-tlawd"
+        "dominionId": "cw-haus-tlawd",
+        "residentFamilyIds": [
+          "haus-afelwyn"
+        ]
       },
       {
         "id": "gwynthor-marking-073",
@@ -7753,7 +7774,7 @@
         "title": "Tirfelyn-Hof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
-        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bauernherrenhaus-v1.png",
+        "img": "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2",
         "imgLink": "/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof",
         "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view",
@@ -8903,8 +8924,8 @@
         "title": "Castell Chamois",
         "cat": "muosqfkvnxxj",
         "kind": "place",
-        "img": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/castell-chamois-v1.webp",
-        "imgLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+        "img": "",
+        "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
         "crestLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
@@ -10694,8 +10715,8 @@
         "title": "Hof Maesglas",
         "cat": "muosqiyl9n1p",
         "kind": "place",
-        "img": "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/assets/pert-bauer.png",
-        "imgLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=pert",
+        "img": "",
+        "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=pert&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
@@ -11521,8 +11542,8 @@
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Cyffiniau/cyffiniau-wappen-v1.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cyffiniau&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
@@ -11563,7 +11584,7 @@
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": "Vorwiegend Haus Wyrm aus Gwynthor"
+            "v": "Haus Draig"
           },
           {
             "k": "Zustand",
@@ -11575,13 +11596,20 @@
           },
           {
             "k": "Besonderheiten",
-            "v": "Direkter Zulieferer des Hauses Wyrm"
+            "v": ""
+          },
+          {
+            "k": "Dienstbindung",
+            "v": "Haus Draig"
           }
         ],
-        "text": "",
+        "text": "Die Familie Cyffiniau bewirtschaftet einen kleinen Hof nördlich von Gwynthor. Sie baut Flachs und Futterpflanzen an, hält Schweine und stellt aus Flachs einfache Seile her. Die Cyffiniau sind Haus Draig unmittelbar verpflichtet.\n\nDer Hof liefert Flachs, Seile, Tierfutter und Schweine. Feld- und Gartenerzeugnisse dienen auch dem Eigenbedarf.\n\n[URL=/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-cyffiniau]Familienakte[/URL] · [URL=/Stammbäume/Stammbaum.html?family=haus-cyffiniau&mode=view]Stammbaum[/URL]",
         "secret": false,
         "templateId": "landwirtschaft",
-        "dominionId": "msa3c53viyll7z"
+        "dominionId": "msa3c53viyll7z",
+        "residentFamilyIds": [
+          "haus-cyffiniau"
+        ]
       },
       {
         "id": "gwynthor-marking-170",

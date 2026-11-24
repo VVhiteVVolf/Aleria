@@ -2,11 +2,6 @@
 .comment-combat-profile-context,
 .comment-combat-profile-section-head,
 .comment-combat-profile-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.72rem; color: #d2b780; }
-.comment-combat-profile-panel { display: flex; flex-direction: column; gap: 0.75rem; overflow: auto; scrollbar-width: thin; scrollbar-color: #889477 #20332f; overscroll-behavior: contain; }
-.comment-combat-profile-panel > * { flex-shrink: 0; }
-.comment-combat-profile-panel button { border: 1px solid #8d8564; border-radius: 4px; padding: 0.4rem 0.65rem; color: var(--mini-profile-gold); background: #34483d; font: inherit; cursor: pointer; }
-.comment-combat-profile-panel button:disabled { opacity: 0.55; cursor: not-allowed; }
-.comment-combat-profile-panel button:focus-visible,
 .combat-status-dialog :is(button, input, textarea, select):focus-visible { outline: 2px solid #e1b666; outline-offset: 2px; }
 .comment-combat-profile-vitals > span:first-child { flex: 3; }
 .comment-combat-profile-vitals meter { width: 100%; height: 0.6rem; accent-color: #6d914e; }
@@ -42,6 +37,19 @@
 .comment-combat-condition-icon img { width: 100%; height: 100%; object-fit: contain; }
 .comment-combat-status-audit { margin: 0.7rem auto; padding: 0.65rem 1rem; max-width: 720px; border: 1px solid #b89a68; border-left: 3px solid #8b6e35; background: #f2e6cc; color: #543d26; font-size: 0.85rem; }
 .comment-combat-status-audit p { margin: 0.2rem 0; }
+.comment-combat-status-strip { width: fit-content; max-width: 100%; margin-top: .3rem; }
+.comment-combat-status-strip[hidden] { display: none; }
+.comment-entry:has(> .comment-combat-status-strip:not([hidden])) { flex-wrap: wrap; }
+.comment-entry > .comment-combat-status-strip:not([hidden]) { display: flex; flex: 0 0 auto; width: 100%; margin-block-start: .8rem; }
+.comment-entry.right > .comment-combat-status-strip { justify-content: flex-end; }
+.combat-status-chips { display: flex; flex-wrap: wrap; gap: .23rem .35rem; list-style: none; margin: 0; padding: 0; }
+.comment-entry.right .combat-status-chips { justify-content: flex-end; }
+.combat-status-chips li { display: flex; align-items: center; gap: .26rem; min-width: 0; min-height: 24px; padding-inline: .15rem .46rem; border: 1px solid #ae8c5d; border-radius: 3px; background: #f3e6c9; color: #493322; font: 600 .76rem/1.2 Georgia, serif; }
+.combat-status-chips li > span { min-width: 0; overflow-wrap: anywhere; }
+.combat-status-chips :is(img, .combat-status-icon-fallback) { flex: 0 0 22px; width: 22px; height: 22px; object-fit: contain; line-height: 22px; text-align: center; }
+@media (max-width: 760px) {
+  .comment-entry.right > .comment-combat-status-strip, .comment-entry.right .combat-status-chips { justify-content: flex-start; }
+}
 .combat-status-dialog { box-sizing: border-box; width: min(600px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); padding: 1.2rem; border: 1px solid #b58c49; border-radius: 12px; background: linear-gradient(140deg, #3b2a20, #201917); color: #ead4a8; box-shadow: 0 12px 50px #0009; font: 1rem/1.4 'EB Garamond', Georgia, serif; scrollbar-width: thin; }
 .combat-status-dialog::backdrop { background: #160e0bcc; }
 .combat-status-dialog form { display: grid; gap: 0.8rem; }
@@ -65,9 +73,4 @@
 @media (max-width: 480px) {
   .combat-status-dialog { padding: 0.85rem; }
   .combat-status-dialog footer { flex-wrap: wrap; }
-}
-@media (max-width: 760px) {
-  .comment-entry:has(> .comment-combat-profile-shell.is-profile-open) { flex-wrap: wrap; }
-  .comment-entry:has(> .comment-combat-profile-shell.is-profile-open) > .comment-content { flex-basis: 100%; }
-  .comment-entry-fused > .comment-combat-profile-shell.is-profile-open { margin-inline: 0; }
 }

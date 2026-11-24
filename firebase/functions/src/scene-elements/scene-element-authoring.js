@@ -5,6 +5,19 @@ import { bindHerausforderungCombatContext } from '../mechanics/herausforderung-c
 import { bindHerausforderungTarget } from '../mechanics/herausforderung-target.js';
 import { prepareHerausforderungRewards } from '../mechanics/herausforderung-rewards.js';
 import { collectSceneElementParticipants } from '../generated/scene-elements/scene-element-conditions.js';
+import { getLatestCombatPhase } from '../generated/combat-phase-counter/combat-phase-model.js';
+import { isTrustedMechanicalComment, sortSceneHistory } from '../mechanics/trusted-scene-history.js';
+
+export function assertFutureScenePhase(scene, phase) {
+  const history = sortSceneHistory(scene.docs.map(doc => ({ ...doc.data(), id: doc.id }))).filter(isTrustedMechanicalComment);
+  const current = getLatestCombatPhase(history);
+  if (current?.operation === 'stop') {
+    throw new HttpsError('failed-precondition', 'Der Phasenzähler dieser Szene wurde beendet.');
+  }
+  if (current && (phase <= current.phase || phase > current.lastPhase)) {
+    throw new HttpsError('failed-precondition', `Wähle eine kommende Phase bis ${current.lastPhase}.`);
+  }
+}
 
 export function sceneElementSignal(id, event, state, revision, challengeId = '') {
   const publicItem = event.elementType === 'item';
@@ -40,6 +53,7 @@ export async function commitArmedSceneElement({ database, request, metadata, eve
     if (!event.activation.enabled) throw new HttpsError('invalid-argument', 'Eine gespeicherte Vorbereitung benötigt weiterhin Auslösebedingungen.');
     const scene = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const definitions = await transaction.get(database.collection('scene_elements').where('entryId', '==', entryId));
+    if (event.activation.phase) assertFutureScenePhase(scene, event.activation.phase);
     if (!previous && definitions.size >= 50) throw new HttpsError('resource-exhausted', 'Diese Szene enthält bereits 50 vorbereitete Elemente.');
     // Validate a fixed future target now; it must additionally participate before activation.
     if (event.activation.target.mode === 'fixed') {
@@ -53,7 +67,8 @@ export async function commitArmedSceneElement({ database, request, metadata, eve
     await bindHerausforderungCombatContext(database, transaction, event, entryId, { encounterId: previous?.event?.combatContext?.encounterId || '' });
     await bindHerausforderungTarget(database, transaction, event);
     await prepareHerausforderungRewards(database, transaction, event);
-    const definition = { entryId, event, state: previous?.state || 'armed', revision: (previous?.revision || 0) + 1,
+    const definition = { entryId, event,
+      state: previous?.state || 'armed', revision: (previous?.revision || 0) + 1,
       baselineCommentIds: previous?.baselineCommentIds || scene.docs.map(doc => doc.id),
       interactions: previous?.interactions || [], createdBy: previous?.createdBy || request.auth.uid,
       armedAt: previous?.armedAt ?? now, orderKey: previous?.orderKey ?? now,

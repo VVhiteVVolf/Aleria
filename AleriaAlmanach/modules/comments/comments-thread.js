@@ -312,11 +312,15 @@ function renderCommentsToScroll(scroll, comments) {
     ? dedupeSceneTransitionComments(sortCommentsByTimeline(comments))
     : sortCommentsByTimeline(comments);
   const publicHistory = globalThis.AleriaSceneElements?.filterTimeline?.(sortedHistory) || sortedHistory.filter(comment => !comment.sceneElementSignal);
-  const sortedComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(publicHistory) || publicHistory;
+  const phaseCounter = globalThis.AleriaCombatPhaseCounter;
+  const sceneHistory = phaseCounter?.filterTimeline(publicHistory) || publicHistory;
+  const sortedComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(sceneHistory) || sceneHistory;
   window.AleriaSkillChecks?.setRenderContext?.(sortedHistory);
   window.AleriaHerausforderung?.setRenderContext?.(sortedHistory);
   const threadId = getCommentPaginationThreadId(scroll);
-  globalThis.AleriaSceneElements?.sync?.(sortedHistory, { threadId, host: scroll.parentElement, scroll });
+  const host = scroll.parentElement;
+  const railAccessory = phaseCounter?.sync(sortedHistory, { threadId, host });
+  globalThis.AleriaSceneElements?.sync?.(sortedHistory, { threadId, host, scroll, railAccessory });
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;
   const sceneTimeline = typeof buildSceneTimeline === 'function' ? buildSceneTimeline(sortedComments) : [];
@@ -380,6 +384,7 @@ function renderCommentsToScroll(scroll, comments) {
     });
     patchCommentScroll(scroll, paginationTop, units, paginationBottom);
   }
+  globalThis.AleriaCommentCombatMiniProfile?.refreshStatusStrips?.(scroll, sortedHistory);
   syncCommentJumpTools(scroll, sortedComments);
   globalThis.AleriaCombatEncounter?.renderActivePanel?.(scroll, threadId, sortedHistory);
   if (typeof refreshSessionStatusFromComments === 'function') {
@@ -473,7 +478,7 @@ function detachCommentAnimObserver(scroll) {
 
 function renderCommentInsertControl(comment, idx, comments) {
   const id = String(comment?.id || '');
-  if (!id) return '';
+  if (!id || (comment?.serverValidatedMechanics && comment.combatPhase)) return '';
   const label = idx < comments.length - 1 ? 'Hier nachträglich antworten' : 'Danach antworten';
   const safeId = escapeHtml(id);
   const currentThreadKind = typeof parseCommentThreadLocation === 'function'

@@ -1,6 +1,7 @@
 import { projectTirfelynOriginalPinImages } from './support/tirfelyn-hof-pin-history.mjs';
+import { FLEISCHSAMMLER_LOCALITIES, FLEISCHSAMMLER_MAP_ID } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
@@ -8,11 +9,13 @@ import { projectHalenrhydOriginalPins } from './support/halenrhyd-pin-history.mj
 import { projectNorthernFarmOriginalPins } from './support/northern-farms-pin-history.mjs';
 import { projectChamoisOriginalPin } from './support/chamois-estate-pin-history.mjs';
 import vm from 'node:vm';
-import { FLEISCHSAMMLER_LOCALITIES, FLEISCHSAMMLER_MAP_ID } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
 
 await import('../assets/js/pins/category-catalog.js');
 await import('../assets/js/pins/pin-template-catalog.js');
 await import('../assets/js/pins/pin-table-presets.js');
+const mapRegistry = vm.createContext({ window: {} });
+vm.runInContext(readFileSync(new URL('../karten.registry.js', import.meta.url), 'utf8'), mapRegistry);
+globalThis.KartoMapRegistry = mapRegistry.window.KartoMapRegistry;
 await import('../assets/js/pins/pin-placeholder-images.js');
 
 const placeholders = globalThis.KartoPinPlaceholders;
@@ -38,16 +41,18 @@ test('every configured placeholder exists in the project', () => {
   }
 });
 
-test('an explicit pin image and its link take precedence', () => {
+test('a registered location map and its link take precedence', () => {
+  const map = placeholders.localMaps.find(map => map.name === 'Tirfelyn-Hof');
+  assert.ok(map);
   const result = placeholders.resolve({
     id: 'gwynthor-markt',
-    img: '/eigene-bilder/markt.webp',
+    img: map.url,
     imgLink: '/orte/gwynthor/markt',
     templateId: 'handel',
   });
 
   assert.deepEqual(result, {
-    src: '/eigene-bilder/markt.webp',
+    src: map.url,
     link: '/orte/gwynthor/markt',
     isPlaceholder: false,
   });
@@ -125,15 +130,34 @@ test('matching template families use the specific location artwork for every cat
   }
 });
 
-test('previously saved generic artwork is corrected while uploaded images and links stay intact', () => {
+test('legacy artwork falls back to the appropriate template', () => {
   const category = {label:'Mine'};
   for(const img of ['',asset('template-handwerk'),asset('default-siedlung')]){
     assert.equal(placeholders.resolve({templateId:'handwerk',img},category).src,asset('location-mine'));
   }
   assert.deepEqual(placeholders.resolve({templateId:'handwerk',img:'/my-mine.jpg',imgLink:'/my-mine'},category),{
-    src:'/my-mine.jpg',link:'/my-mine',isPlaceholder:false,
+    src:asset('location-mine'),link:'',isPlaceholder:true,
   });
   assert.equal(placeholders.resolve({templateId:'militaer'},category).src,asset('template-militaer'));
+});
+
+test('all persisted pin images are validated locality maps or established templates', () => {
+  const directory = resolve(testDirectory, '..');
+  const fileNames = readdirSync(directory, { recursive: true }).filter(file =>
+    /(?:^|[\\/])data\.json$/.test(file) && !file.startsWith('node_modules'));
+  let maps = 0;
+  for (const file of fileNames) {
+    const pins = JSON.parse(readFileSync(resolve(directory, file), 'utf8')).state?.pins;
+    if (!Array.isArray(pins)) continue;
+    maps++;
+    for (const { img, id } of pins) {
+      if (!img) continue;
+      assert.ok(placeholders.isMap(img) || placeholders.sources.includes(img), `${file}/${id}: ${img}`);
+    }
+  }
+  assert.ok(maps >= 40);
+  assert.ok(!placeholders.isMap('https://foreign.invalid/Karten/public/Kartenbilder/locality.webp'));
+  assert.ok(!placeholders.isMap('/Karten/private/Kartenbilder/portrait.webp'));
 });
 
 test('every imported Gwynthor pin uses its reviewed location motif without changing map data', () => {

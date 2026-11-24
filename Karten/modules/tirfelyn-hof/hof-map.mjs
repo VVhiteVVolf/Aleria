@@ -37,9 +37,10 @@ export function buildHofMap() {
     const marker = hofMapMarker(poi);
     const cat = poi.residenceId ? 'hof-wohnhaus' : /acker|getreide|weide|garten|gehege/.test(poi.key) ? 'hof-land'
       : /lager|speicher|schuppen|brunnen/.test(poi.key) && poi.key !== 'holzfaellerlager' ? 'hof-vorrat' : 'hof-arbeit';
+    const templateId = poi.residenceId ? 'gebaeude' : /schmiede|muehle/.test(poi.key) ? 'handwerk' : 'landwirtschaft';
     return { id: `tirfelyn-${poi.key}`, title: poi.title, x: poi.position[0], y: poi.position[1], cat, kind: 'place',
       pinMarker: marker?.url || '', pinMarkerScale: 1.5,
-      img: poi.image, imgLink: '', crest: '', crestLink: '', banner: '', bannerLink: '',
+      templateId, img: '', imgLink: '', crest: '', crestLink: '', banner: '', bannerLink: '',
       region: 'Tirfelyn-Hof · Bannkreis Gwynthor', house: 'Familie Tirfelyn', faction: '',
       table: hofPinTable(poi),
       text: `${poi.text}\n\n[URL=${hofSceneLink(poi)}]Interaktive Szene im Almanach öffnen[/URL]`, secret: false };

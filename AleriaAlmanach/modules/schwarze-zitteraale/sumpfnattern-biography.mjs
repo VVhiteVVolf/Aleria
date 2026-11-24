@@ -1,5 +1,5 @@
 import { sanitizeCharacterBiographyForFirestore } from '../characters/character-save-guard.js';
-import { CADWGAN_ID, CADWGAN_NAME, CADWGAN_PORTRAIT, CADWGAN_FAMILY_EMBLEM, BWACH_WARRIOR, SUMPFNATTERN_ID, SUMPFNATTERN_LIEUTENANTS } from './sumpfnattern-people.mjs';
+import { CADWGAN_ID, CADWGAN_NAME, CADWGAN_WORLD_PERSON_ID, CADWGAN_PORTRAIT, CADWGAN_FAMILY_EMBLEM, BWACH_WARRIOR, SUMPFNATTERN_ID, SUMPFNATTERN_LIEUTENANTS } from './sumpfnattern-people.mjs';
 
 export const CADWGAN_SUMMARY = 'Cadwgan Bwach aus dem Haus Bwach in Gwaulwyn, genannt die Grüne Natter, führt die Sumpfnattern als Unterbande der Schwarzen Zitteraale. Im Großen Krieg diente er als Ritter unter den Gafyr. Nach der Plünderung eines albischen Dorfes in Ceitheach verlor er seinen Ritterstand und floh vor dem vorgesehenen Gerichtsverfahren. Seine heutige Bande handelt weitgehend nach eigenen Interessen und richtet sich besonders gegen die Herrschaft und Ländereien des Hauses Gafyr.';
 
@@ -51,5 +51,10 @@ export function buildCadwganCharacterExport() {
     character: { id: CADWGAN_ID, name: CADWGAN_NAME, aliases: ['Die Grüne Natter', 'Grüne Natter'], gender: 'male', race: 'Mensch',
       title: 'Die Grüne Natter · ehemaliger Ritter', role: 'Anführer der Sumpfnattern', fraktion: 'Schwarze Zitteraale', portrait: CADWGAN_PORTRAIT,
       bio: `${CADWGAN_SUMMARY}\n\n${CADWGAN_HISTORY.map(s => `${s.title}\n${s.text.replace(/<[^>]*>/g, '')}`).join('\n\n')}`,
-      biography, archived: false } };
+      biography, archived: false, worldPersonId: CADWGAN_WORLD_PERSON_ID,
+      genealogy: { worldPersonId: CADWGAN_WORLD_PERSON_ID, sex: 'male', status: 'alive',
+        familyId: 'haus-bwach', houseId: 'house-bwach', houseName: 'Haus Bwach', personId: 'cadwgan-bwach', familyRole: 'core',
+        sources: [{ familyId: 'haus-bwach', personId: 'cadwgan-bwach',
+          url: '/Stammbäume/Stammbaum.html?family=haus-bwach&person=cadwgan-bwach&mode=view' }],
+        relationships: { parents: [], partners: [], children: [] } } } };
 }

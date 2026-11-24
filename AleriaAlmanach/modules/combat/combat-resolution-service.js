@@ -41,6 +41,7 @@ import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
+  needsImplicitCombatDamage,
   resolveCombatEffectDamageType,
   normalizeCombatEffect,
   normalizeCombatEffects
@@ -63,7 +64,8 @@ import {
 import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
-import { withCurrentCombatPermissionState } from './combat-action-permission.js';
+import { isVoluntaryCombatMove, withCurrentCombatPermissionState } from './combat-action-permission.js';
+import { getMovementBlockingCondition } from '../character-health/health-trait-policy.js';
 import { normalizeCombatDistance } from './combat-rule-distance.js';
 import { buildSupportAuraApplications } from './combat-support-aura.js';
 import { getDerwynChannelingFocus } from '../classes/combat-passives/derwyn-passives.js';
@@ -72,7 +74,7 @@ import { classEquipmentTransitionEffects } from '../classes/combat-passives/venn
 import { attachCreatureEscape, hasOwnHold, prepareCreatureTurnEnd } from './combat-creature-actions.js';
 import { getRegenerationTrait, isActivelyBurning } from './combat-creature-traits.js';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-18';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-19';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -136,6 +138,11 @@ function effectApplies(effect, attack, savingThrowMode, halfDamageOnSave = false
   // bestandenen Rettungswurf gefunden und angewendet werden (dann später halbiert).
   if (savingThrowMode && halfDamageOnSave && effect.type === 'damage' && effect.target !== 'self' && attack.hit === false) return true;
   return attack.hit === true;
+}
+
+function triggeredResultEffects(applications) {
+  return applications.flatMap(application => normalizeCombatEffects(application.resultEffects || []).map(effect => ({ ...effect,
+    conditionSource: { name: application.entryName || application.ruleName, actorId: application.sourceActorId } })));
 }
 
 function hasHostileEffects(effects = []) {
@@ -327,7 +334,7 @@ export class CombatResolutionService {
     validateSpellCatalogTarget(actor.selectedAction, target);
     const structuredEffects = normalizeCombatEffects(actor.selectedAction?.effects || []).map(effect => effect.scaling === 'hit-die-and-tenth-maximum'
       ? { ...effect, formula: `1d${actor.hitPoints?.hitDie || 8}+${Math.ceil(actor.maximumHitPoints / 10)}` } : effect);
-    const actionEffects = structuredEffects.length || actor.selectedAction?.nonDamaging ? structuredEffects : normalizeCombatEffects([{
+    const actionEffects = needsImplicitCombatDamage(actor.selectedAction, actor.profileActionKind) ? [...normalizeCombatEffects([{
       id: 'implicit-weapon-damage',
       type: 'damage',
       target: 'target',
@@ -335,7 +342,7 @@ export class CombatResolutionService {
       damageType: actor.weapon?.damageType || 'physisch',
       magical: ['spell', 'prayer', 'song'].includes(actor.profileActionKind),
       on: 'hit'
-    }]);
+    }]), ...structuredEffects] : structuredEffects;
     const effectiveEffects = options.skipSelfEffects
       ? actionEffects.filter(effect => effect.target !== 'self')
       : actionEffects;
@@ -585,6 +592,15 @@ export class CombatResolutionService {
       let recipientResources = appliesToActor ? actorResources : targetResources;
       let recipientConditions = appliesToActor ? actorConditions : targetConditions;
       const recipient = appliesToActor ? 'actor' : 'target';
+      if (isVoluntaryCombatMove(effect)) {
+        const profile = withCurrentCombatPermissionState(actor, actorHitPoints,
+          actor.characterId === target.characterId ? targetConditions : actorConditions);
+        const hindered = getMovementBlockingCondition(profile);
+        if (hindered) {
+          effectResults.push({ effect, applied: false, recipient, prevented: `${hindered.name}: Eigenständige Bewegung ist gesperrt.` });
+          continue;
+        }
+      }
       let amount = Math.max(0, (Number(effect.amount) || 0) + getCombatEffectAttributeModifier(actor, effect));
       let roll = null;
       if (effect.formula && !(effect === primaryDamageEffect && !consumedPrimaryDamage && damageRoll)) {
@@ -627,7 +643,7 @@ export class CombatResolutionService {
       if (effect.type === 'healing') {
         const applied = applyCombatHealing(recipientHitPoints, amount);
         const afterHealing = conditionsAfterHealing(recipientConditions, applied.before, applied.after);
-        const removed = afterHealing === recipientConditions ? [] : recipientConditions.filter(condition => condition.endsOnHealing);
+        const removed = recipientConditions.filter(condition => !afterHealing.includes(condition));
         recipientConditions = afterHealing;
         if (appliesToActor) { actorHitPoints = applied.after; actorConditions = recipientConditions; }
         else { targetHitPoints = applied.after; targetConditions = recipientConditions; }
@@ -663,9 +679,9 @@ export class CombatResolutionService {
           ...(rolledMechanics ? { mechanics: rolledMechanics } : {}),
           id: `${effect.condition.id || effect.id}-${createResolutionId()}`,
           sourceConditionId: effect.condition.id || effect.id,
-          sourceActorId: actor.characterId,
+          sourceActorId: effect.conditionSource?.actorId || actor.characterId,
           ...(effect.condition.creatureMark && ruleProfileState.actorPartyId ? { creatureMarkParty: ruleProfileState.actorPartyId } : {}),
-          source: actor.selectedAction?.name || actor.weapon?.name || actor.name,
+          source: effect.conditionSource?.name || actor.selectedAction?.name || actor.weapon?.name || actor.name,
           active: true,
           ...(sustainsConcentration
             ? { concentrationOwnerId: actor.characterId, concentrationInstanceId }
@@ -681,7 +697,7 @@ export class CombatResolutionService {
         const before = recipientConditions;
         const tags = new Set(String(effect.conditionTags || '').toLocaleLowerCase('de').split(/[,;·]/).map(value => value.trim()).filter(Boolean));
         recipientConditions = recipientConditions.filter(condition => {
-          if (effect.conditionId && [String(condition.id), String(condition.sourceConditionId || '')].includes(effect.conditionId)) return false;
+          if (effect.conditionId && [condition.id, condition.sourceConditionId, condition.presetId].includes(effect.conditionId)) return false;
           if (!tags.size) return true;
           const conditionTags = new Set(String(condition.tags || '').toLocaleLowerCase('de').split(/[,;·]/).map(value => value.trim()).filter(Boolean));
           return ![...tags].some(tag => conditionTags.has(tag));
@@ -707,7 +723,7 @@ export class CombatResolutionService {
     await applyEffectList(effectiveEffects);
     // Structured consequences from the attack phases share the same result
     // pipeline as late rules and are each applied once.
-    await applyEffectList(allRuleApplications.flatMap(application => normalizeCombatEffects(application.resultEffects || [])));
+    await applyEffectList(triggeredResultEffects(allRuleApplications));
     const mountedHits = [];
     if (target.combat?.mounted && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
       mountedHits.push({ index: 0, damage: effectResults.filter(entry => entry.effect.type === 'damage'
@@ -759,7 +775,7 @@ export class CombatResolutionService {
     allRuleApplications.push(...riding.applications);
     if (riding.condition) effectResults.push({ effect: { type: 'apply-condition', target: 'target' },
       condition: riding.condition, applied: true, recipient: 'target' });
-    await applyEffectList(riding.applications.flatMap(rule => normalizeCombatEffects(rule.resultEffects || [])));
+    await applyEffectList(triggeredResultEffects(riding.applications));
     let damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
     let totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
     let rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming ?? result.amount ?? 0), 0);
@@ -848,9 +864,7 @@ export class CombatResolutionService {
       });
       markCombatRuleApplications(applications, usedRuleFrequencyKeys);
       allRuleApplications = allRuleApplications.concat(applications);
-      applications.forEach(application => {
-        lateResultEffects.push(...normalizeCombatEffects(application.resultEffects || []));
-      });
+      lateResultEffects.push(...triggeredResultEffects(applications));
       const conflicts = mergeCombatRuleEffects(applications).conflicts;
       if (Array.isArray(conflicts) && conflicts.length) followRuleConflicts.push({ phase, applications: conflicts });
     });

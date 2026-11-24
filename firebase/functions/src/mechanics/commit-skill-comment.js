@@ -7,6 +7,8 @@ import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigge
 import { withClassPassivePeriods } from '../generated/classes/combat-passives/class-passive-periods.js';
 import { resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
+import { getLatestCombatPhase, getCombatPhaseClock } from '../generated/combat-phase-counter/combat-phase-model.js';
+import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 import {
   getTrustedSceneDay,
   isTrustedHerausforderungComment,
@@ -61,10 +63,11 @@ export async function commitSkillCommentOperation(request, { database = getFires
     const contributionHistory = allHistory.filter(isTrustedSceneContributionComment);
     const rulePeriods = withClassPassivePeriods({ comment: ref.id, scene: entryId, day: `scene:${entryId}:day-${sceneDay}` }, contributionHistory, payload.metadata);
     const historyStates = deriveCombatStateFromComments(contributionHistory);
+    const phase = getLatestCombatPhase(contributionHistory);
     const workingStates = new Map(historyStates);
     const persistentUpdates = new Map();
     const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates,
-      metadata: payload.metadata, updates: persistentUpdates });
+      metadata: payload.metadata, updates: persistentUpdates, clock: getCombatPhaseClock(phase) });
     const validated = await validateSkillCommentSegments({
       database,
       transaction,
@@ -115,6 +118,7 @@ export async function commitSkillCommentOperation(request, { database = getFires
     const metadata = { ...payload.metadata, commentSegments: storedSegments };
     document = {
       ...buildNarrativeCommentDocument({ ...payload, metadata }, entryId, request, now),
+      ...(phase ? { orderKey: nextMechanicalCommentOrderKey(allHistory, metadata.orderKey, now) } : {}),
       commentSegments: storedSegments,
       skillTransaction: {
         schemaVersion: 1,

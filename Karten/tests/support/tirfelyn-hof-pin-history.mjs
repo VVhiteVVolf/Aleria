@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { HOF_MAP_LINK } from '../../modules/tirfelyn-hof/hof-map.mjs';
+import { HOF_MAP_IMAGE, HOF_MAP_LINK } from '../../modules/tirfelyn-hof/hof-map.mjs';
 
 const history = JSON.parse(readFileSync(new URL('../fixtures/tirfelyn-hof-parent-pin-before-20261115.json', import.meta.url), 'utf8'));
 
@@ -14,7 +14,7 @@ export function projectTirfelynOriginalPinImages(pins) {
   const current = pins.filter(pin => pin.id === original.id);
   assert.equal(current.length, 1);
   assert.deepEqual(current[0], { ...original,
-    img: '/AleriaAlmanach/assets/tirfelyn-hof/scenes/bauernherrenhaus-v1.png', imgLink: HOF_MAP_LINK,
+    img: '/Karten/' + HOF_MAP_IMAGE, imgLink: HOF_MAP_LINK,
     text: original.text + `\n\n[URL=${HOF_MAP_LINK}]Ortskarte des Tirfelyn-Hofs öffnen[/URL]` });
   return pins.map(pin => pin.id === original.id ? { ...pin, img: original.img, imgLink: original.imgLink } : pin);
 }

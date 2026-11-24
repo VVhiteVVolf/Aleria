@@ -51,6 +51,7 @@ function ensureDialog() {
   document.body.append(dialog);
   dialog.addEventListener('close', () => { draft?.trigger?.focus?.(); draft = null; });
   dialog.addEventListener('cancel', event => { if (draft?.submitting) event.preventDefault(); });
+  dialog.addEventListener('keydown', event => { if (event.key === 'Escape') event.stopPropagation(); });
   dialog.addEventListener('click', event => {
     if (event.target.closest('[data-status-close]') && !draft?.submitting) dialog.close();
     if (event.target.closest('[data-status-refresh]') && draft && !draft.submitting) void refreshDraft();
@@ -136,7 +137,7 @@ export function openCombatStatusDialog(context, { operation = 'add', conditionId
   draft = { ...context, operation, conditionId, trigger, expectedLastCommentId: comments(context.threadId).at(-1)?.id || '',
     kind: profile.persistence?.kind === 'character' ? 'character' : 'creature', submitting: false };
   const selected = profile.temporaryConditions?.find(condition => condition.id === conditionId);
-  const title = operation === 'add' ? 'Temporären Effekt vergeben' : operation === 'remove' ? 'Effekt entfernen' : 'Kampfwerte zurücksetzen';
+  const title = operation === 'add' ? 'Zustand vergeben' : operation === 'remove' ? 'Effekt entfernen' : 'Kampfwerte zurücksetzen';
   dialog.innerHTML = `<form><header><div><small>${e(profile.name)}</small><h3 id="combat-status-title">${title}</h3></div><button type="button" data-status-close aria-label="Schließen">×</button></header>
     ${operation === 'add' ? formMarkup() : operation === 'remove' ? `<ul class="comment-combat-conditions">${selected ? renderMiniProfileCondition(selected, { temporary: true }) : ''}</ul><p>Diesen temporären Effekt jetzt entfernen?</p>`
       : '<p>Lebenspunkte, Ressourcen und begrenzte Fähigkeiten auffüllen. Temporäre Lebenspunkte, Zustände, Konzentration und Kanalisierung entfernen.</p><p>Ausrüstung und dauerhafte Einträge im Charakterbogen bleiben erhalten. Der Reset wird im Szenenverlauf festgehalten.</p>'}

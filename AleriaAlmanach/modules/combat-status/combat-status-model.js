@@ -2,6 +2,8 @@ import { createConditionUsage } from '../combat/combat-condition-usage.js?v=2026
 import { createSubstanceIntoxication, createSubstanceHangover } from '../character-health/substance-state.js';
 import { normalizeRuntimeCondition } from '../combat/combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
+import { getActionLockPrevention } from '../combat/combat-action-lock-recovery.js';
+import { refreshRuntimeCondition } from '../combat/combat-condition-lifecycle.js';
 
 export const STATUS_DURATIONS = Object.freeze([
   ['actor-comments', 'Eigene Beiträge'], ['scene-comments', 'Szenenbeiträge'],
@@ -25,23 +27,22 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '', 
   if (['actor-comments', 'scene-comments'].includes(kind) && (!Number.isInteger(amount) || amount < 1 || amount > 999)) {
     throw new Error('Die Dauer muss zwischen 1 und 999 Beiträgen liegen.');
   }
-  const mechanics = preset?.mechanics?.blocksActions ? { blocksActions: true } : {};
+  const mechanics = {};
   for (const [key] of STATUS_MODIFIERS) {
-    const modifier = Number(value.mechanics?.[key] || 0);
+    const modifier = Number(value.mechanics?.[key] ?? preset?.mechanics?.[key] ?? 0);
     if (!Number.isInteger(modifier) || Math.abs(modifier) > 30) throw new Error('Boni und Mali müssen ganze Zahlen zwischen −30 und +30 sein.');
-    if (modifier) mechanics[key] = modifier;
+    if (modifier || Object.hasOwn(preset?.mechanics || {}, key)) mechanics[key] = modifier;
   }
   for (const [key] of STATUS_ROLL_MODES) {
     const mode = value.mechanics?.[key] ?? preset?.mechanics?.[key] ?? 'normal';
     if (!['normal', 'advantage', 'disadvantage'].includes(mode)) throw new Error('Wähle eine gültige Wurfart.');
-    if (mode !== 'normal') mechanics[key] = mode;
+    if (mode !== 'normal' || Object.hasOwn(preset?.mechanics || {}, key)) mechanics[key] = mode;
   }
   return normalizeRuntimeCondition({
     id: clean(id, 180), name, active: true, source: clean(value.source || 'Manuell vergeben'),
     presetId: preset?.id || '', statusKind: ['buff', 'debuff', 'condition'].includes(value.kind) ? value.kind : preset?.kind || 'condition',
     description: clean(value.description || preset?.description, 1600), mechanics, manual: true,
-    ...createConditionUsage(value.usage, mechanics),
-    ...(preset?.blockedResource ? { blockedResource: preset.blockedResource } : {}),
+    ...createConditionUsage(value.usage, { ...preset?.mechanics, ...mechanics }),
     durationModel: { kind, amount, encounterId: kind === 'combat' ? encounterId : '',
       ...(kind === 'scene-time' ? { sceneId, startedAtSeconds: sceneClockSeconds, expiresAtSeconds: sceneClockSeconds + amount * 60, remainingSeconds: amount * 60 } : {}) }
   });
@@ -73,9 +74,13 @@ export function getCombatConditionGroups(profile = {}) {
 export function buildCombatStatusChange({ operation, profile, state = {}, condition, conditionId, resetState } = {}) {
   const conditions = (state.temporaryConditions || profile.temporaryConditions || []).map(normalizeRuntimeCondition).filter(item => item.active);
   if (operation === 'add') {
-    if (conditions.length >= 60) throw new Error('Es sind bereits 60 temporäre Effekte aktiv. Entferne zuerst einen Effekt.');
-    const retained = condition.substance ? conditions.filter(entry => entry.id !== condition.id && !(condition.substance.phase === 'intoxication' && entry.substance?.kind === condition.substance.kind)) : conditions;
-    return { temporaryConditions: [...retained, condition] };
+    const prevention = getActionLockPrevention([...(profile.conditions || []), ...conditions], condition);
+    if (prevention) throw new Error(prevention);
+    const retained = conditions.filter(entry => entry.id !== condition.id
+      && !(condition.substance?.phase === 'intoxication' && entry.substance?.kind === condition.substance.kind)
+      && !(condition.manual && condition.presetId && entry.manual && condition.presetId === entry.presetId && condition.source === entry.source));
+    if (retained.length >= 60) throw new Error('Es sind bereits 60 Szeneneffekte aktiv. Entferne zuerst einen Effekt.');
+    return { temporaryConditions: refreshRuntimeCondition(retained, condition) };
   }
   if (operation === 'remove') {
     const existing = conditions.find(item => item.id === conditionId);
@@ -100,6 +105,7 @@ export function applyCombatStatusCommentToStateMap(states, comment = {}) {
   const event = comment.combatStatus;
   if (!event?.actorId || !event.after || !['add', 'remove', 'reset'].includes(event.operation)) return false;
   const actorId = String(event.actorId);
-  states.set(actorId, { ...(states.get(actorId) || {}), ...event.after });
+  states.set(actorId, { ...(states.get(actorId) || {}), ...event.after,
+    ...(event.persistence ? { profilePersistence: event.persistence } : {}) });
   return true;
 }

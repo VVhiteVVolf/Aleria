@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { sortSceneHistory } from '../mechanics/trusted-scene-history.js';
+import { getDisplayCombatPhaseEvent } from '../generated/combat-phase-counter/combat-phase-model.js';
 
 export const SCENE_BACKUP_ROOT = 'AleriaAlmanach/backups/scenes';
 const PRIVATE_FIELDS = new Set(['deleteCode', 'deleteCodeHash', 'deleteCodeVersion', 'createdBy', 'updatedBy', 'importedBy']);
@@ -69,6 +70,8 @@ function readableHistory(entry, comments) {
   comments.forEach((comment, index) => {
     const speaker = comment.narrator ? 'Erzähler' : (comment.charName || comment.name || 'Unbekannt');
     lines.push(`## ${index + 1}. ${speaker}`, '', `Kommentar: ${comment.id} · Thread: ${comment.entryId}`, '', String(comment.text || ''), '');
+    const phase = getDisplayCombatPhaseEvent(comment);
+    if (phase?.flavor && ['start', 'advance'].includes(phase.operation)) lines.push(phase.flavor, '');
     (comment.commentSegments || []).forEach(segment => {
       if (segment?.text && segment.text !== comment.text) lines.push(String(segment.text), '');
     });

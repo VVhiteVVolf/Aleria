@@ -1,5 +1,4 @@
 import { randomInt } from 'node:crypto';
-import { FieldValue } from 'firebase-admin/firestore';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { collectSceneElementParticipants, getSceneElementContributors, evaluateSceneElementConditions } from '../generated/scene-elements/scene-element-conditions.js';
 import { normalizeHerausforderungEvent } from '../generated/herausforderung/herausforderung-model.js';
@@ -15,13 +14,14 @@ import { isTrustedSceneContributionComment, sortSceneHistory } from '../mechanic
 import { nextMechanicalCommentOrderKey } from '../mechanics/mechanical-comment-order.js';
 import { ServerCombatDiceAdapter } from '../mechanics/server-combat-dice.js';
 import { sceneElementSignal } from './scene-element-authoring.js';
+import { stageSceneElementReveal } from './scene-element-publication.js';
 import { resolveSceneElementDetection } from './scene-element-detection.js';
+import { getLatestCombatPhase } from '../generated/combat-phase-counter/combat-phase-model.js';
 
-async function readParticipantProfiles(database, transaction, history) {
+export async function readParticipantProfiles(database, transaction, history, participants = collectSceneElementParticipants(history)) {
   const states = deriveCombatStateFromComments(history);
-  const descriptors = collectSceneElementParticipants(history);
   const records = new Map();
-  for (const descriptor of descriptors) {
+  for (const descriptor of participants) {
     const key = `${descriptor.kind}:${descriptor.recordId}`;
     if (records.has(key)) continue;
     const ref = database.collection(descriptor.kind === 'creature' ? 'creatures' : 'characters').doc(descriptor.recordId);
@@ -31,7 +31,7 @@ async function readParticipantProfiles(database, transaction, history) {
   }
   const definitions = await readItemDefinitionIndex(database, transaction, [...records.values()].map(entry => entry.record));
   const day = getSceneRecoveryDayKey(history[0]?.entryId || '', history);
-  return descriptors.flatMap(descriptor => {
+  return participants.flatMap(descriptor => {
     const entry = records.get(`${descriptor.kind}:${descriptor.recordId}`);
     if (!entry) return [];
     const state = states.get(descriptor.actorId);
@@ -45,6 +45,20 @@ async function readParticipantProfiles(database, transaction, history) {
       persistence: persistent ? { kind: descriptor.kind, recordId: descriptor.recordId, stateKey: descriptor.actorId, persistent: true }
         : { kind: 'scene-creature', sourceCreatureId: descriptor.recordId, stateKey: descriptor.actorId, persistent: false } }];
   });
+}
+
+export async function prepareSceneElementReaction({ event, evaluation, target, history, entryId, revealId, dice, now }) {
+  if (!target || !['danger', 'item'].includes(event.elementType)) return null;
+  const detection = await resolveSceneElementDetection({ activation: event.activation, evaluation,
+    target, history, entryId, revealId, dice, now });
+  event.audience = { mode: 'selected', actorIds: [target.actorId] };
+  event.reaction = { actorId: target.actorId, actorName: target.name, detected: detection.detected,
+    rollMode: detection.detected ? 'advantage' : 'disadvantage', saveContext: event.activation.saveContext,
+    description: detection.detected ? event.activation.detection.detectedText : event.activation.detection.missedText,
+    detection: detection.proof };
+  event.approaches = event.approaches.map(approach => ({ ...approach, attemptLimit: 1 }));
+  event.completionMode = 'any';
+  return detection;
 }
 
 export function assertPublicInteraction(history, interaction) {
@@ -77,8 +91,9 @@ export async function evaluateSceneElement(database, entryId, id, { interaction 
     if (!validatedInteraction) assertPublicInteraction(history, interaction);
     const event = normalizeHerausforderungEvent(definition.event);
     const encounter = getActiveCombatEncounter(history);
+    if (event.activation.phase && getLatestCombatPhase(history)?.operation !== 'stop') return { id, state: 'armed' };
     const expired = getChallengeCombatBindingError(event, encounter);
-    if (expired) {
+    if (expired || event.activation.phase) {
       transaction.update(ref, { state: 'expired', updatedAt: now });
       transaction.update(signalRef, { sceneElementSignal: sceneElementSignal(id, event, 'expired', definition.revision) });
       return { id, state: 'expired' };
@@ -104,35 +119,11 @@ export async function evaluateSceneElement(database, entryId, id, { interaction 
     if (!choices.has(selectionKey)) choices.set(selectionKey, selectIndex ? selectIndex(eligible.length) : randomInt(eligible.length));
     const interactingActor = relevantInteraction ? interaction.actorId : evaluation.receipts.find(receipt => receipt.type === 'interaction' && receipt.satisfied)?.actorId;
     const target = eligible.find(actor => actor.actorId === interactingActor) || eligible[choices.get(selectionKey)];
-    const hazardous = event.elementType === 'danger' || event.elementType === 'item';
-    const detection = hazardous ? await resolveSceneElementDetection({ activation: event.activation, evaluation,
-      target, history, entryId, revealId: revealRef.id, dice, now }) : null;
-    if (hazardous) {
-      event.audience = { mode: 'selected', actorIds: [target.actorId] };
-      event.reaction = { actorId: target.actorId, actorName: target.name, detected: detection.detected,
-        rollMode: detection.detected ? 'advantage' : 'disadvantage', saveContext: event.activation.saveContext,
-        description: detection.detected ? event.activation.detection.detectedText : event.activation.detection.missedText,
-        detection: detection.proof };
-      event.approaches = event.approaches.map(approach => ({ ...approach, attemptLimit: 1 }));
-      // A danger is one reaction, even if it offers several alternative checks.
-      event.completionMode = 'any';
-    }
-    event.activation.enabled = false;
-    event.sceneElementId = id;
+    const detection = await prepareSceneElementReaction({ event, evaluation, target, history, entryId, revealId: revealRef.id, dice, now });
     const orderKey = nextMechanicalCommentOrderKey(history, null, now);
     if (detection?.update) transaction.update(target.ref, detection.update);
-    transaction.create(revealRef, { entryId, charName: 'Erzähler', narrator: true,
-      text: `${event.elementType === 'puzzle' ? 'Rätsel' : 'Gefahr'}: ${event.title}`,
-      commentKind: 'herausforderung-event', commentMode: 'herausforderung', commentSegments: null,
-      herausforderung: event, herausforderungRevision: 0,
-      ...(detection?.resolution ? { sceneElementDetection: detection.resolution } : {}),
-      herausforderungTransaction: { schemaVersion: 1, transactionId: revealRef.id, validatedBy: 'commitSceneElement' },
-      serverValidatedMechanics: true, mechanicalAudit: true, createdBy: definition.createdBy,
-      orderKey, createdAtClient: now, activityAtClient: now, ts: FieldValue.serverTimestamp() });
-    transaction.update(ref, { state: 'revealed', challengeId: revealRef.id, revealedAt: now, interactions,
-      triggerReceipt: evaluation, targetActorId: target.actorId });
-    transaction.update(signalRef, { sceneElementSignal: sceneElementSignal(id, event, 'revealed', definition.revision, revealRef.id) });
-    return { id, state: 'revealed', challengeId: revealRef.id };
+    return stageSceneElementReveal(database, transaction, { id, definition, event, orderKey, now, evaluation, interactions,
+      targetActorId: target.actorId, detection: detection?.resolution });
   });
 }
 

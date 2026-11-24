@@ -12,8 +12,8 @@ for (const p of source.pins) {
   const fields = { title: p.title, house: 'Familie Halenrhyd', faction: 'Im Dienst Haus Wyrms', region: 'Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht',
     crest: '/AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png', crestLink: '/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-halenrhyd', residentFamilyIds: [source.familyId],
     table: [{ k: 'Name', v: p.title }, { k: 'Typ', v: p.type }, { k: 'Besitzer', v: 'Familie Halenrhyd' }, { k: 'Leitung', v: p.lead }, { k: 'Aufgaben', v: p.work }, { k: 'Dienstbindung', v: 'Haus Wyrm · keine neue Hoheitsgrenze' }],
-    img: '/AleriaAlmanach/assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png',
-    imgLink: `/AleriaAlmanach/AleriaAlmanach.html?entry=${source.moduleId}`, text: p.text };
+    img: '', imgLink: '',
+    text: `${p.text}\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=${source.moduleId}]Zum Silberhalm im Almanach[/URL]` };
   if (Object.entries(fields).some(([k, v]) => JSON.stringify(pin[k]) !== JSON.stringify(v))) { Object.assign(pin, fields); changed = true; }
 }
 assert.deepEqual(next.state.pins.filter(x => !owned.has(x.id)), before.state.pins.filter(x => !owned.has(x.id)));

@@ -4,6 +4,7 @@ import { consumeDamageGuard } from './combat-damage-guard.js';
 import { resolveEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { applyRegenerationFireExposure, applyTenebriumExposure } from './combat-creature-traits.js';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
+import { getCombatStoredConditions } from './combat-runtime-condition-projection.js';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([
   'damage', 'healing', 'temporary-hit-points', 'apply-condition', 'remove-condition',
@@ -49,18 +50,20 @@ export function normalizeDamageAffinity(value = {}, index = 0) {
 
 export function normalizeCombatEffect(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
+  const id = text(source.id || `effect-${index + 1}`, 160);
   const type = text(source.type, 40);
   const target = text(source.target, 30);
   const condition = source.condition && typeof source.condition === 'object'
     ? normalizeRuntimeCondition({
         ...source.condition,
+        id: source.condition.id || id,
         // Let the runtime normalizer migrate legacy counters when no explicit
         // duration model exists; an empty permanent model would erase them.
         durationModel: source.condition.durationModel || source.durationModel
       })
     : null;
   return {
-    id: text(source.id || `effect-${index + 1}`, 160),
+    id,
     type: EFFECT_TYPES.has(type) ? type : 'damage',
     target: TARGETS.has(target) ? target : 'target',
     amount: number(source.amount, 0, 0),
@@ -96,6 +99,13 @@ export function normalizeCombatEffects(values = []) {
   return (Array.isArray(values) ? values : []).slice(0, 30).map(normalizeCombatEffect);
 }
 
+export function needsImplicitCombatDamage(action = {}, kind = '') {
+  const effects = Array.isArray(action?.effects) ? action.effects : [];
+  return !action?.nonDamaging && (!effects.length || (kind === 'weapon'
+    && effects.some(effect => effect.condition?.presetId && ['apply-condition', 'buff', 'debuff'].includes(effect.type))
+    && !effects.some(effect => effect.type === 'damage')));
+}
+
 export function inferCombatEffectTargetLimit(effects = []) {
   return effects.some(effect => ['selected', 'allies', 'enemies', 'all'].includes(effect.target)) ? 20 : 1;
 }
@@ -116,8 +126,9 @@ function affinityMatches(affinity, kinds, magical) {
   return true;
 }
 
-export function resolveDamageResponse(profile = {}, { damageType = 'physisch', magical = false, weaponMaterial = '' } = {}) {
-  const traitAffinities = (profile.quirks || []).filter(q => q.active !== false)
+export function resolveDamageResponse(profile = {}, { damageType = 'physisch', magical = false, weaponMaterial = '', conditions } = {}) {
+  const conditionSources = conditions == null ? profile.conditions || [] : [...getCombatStoredConditions(profile), ...conditions];
+  const traitAffinities = [...(profile.quirks || []), ...conditionSources].filter(q => q.active !== false)
     .flatMap(q => (q.mechanics?.damageAffinities || []).map(a => ({ ...a, source: q.name })));
   const matches = [...(Array.isArray(profile.damageAffinities) ? profile.damageAffinities : []), ...traitAffinities]
     .map(normalizeDamageAffinity)

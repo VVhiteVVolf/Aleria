@@ -2,6 +2,7 @@ const art = '/AleriaAlmanach/assets/schwarze-zitteraale/groups';
 
 export const SUMPFNATTERN_ID = 'zitteraale-gruppe-ii';
 export const CADWGAN_ID = 'zitteraale-gruppe-ii-fuehrer';
+export const CADWGAN_WORLD_PERSON_ID = 'person--haus-bwach--cadwgan-bwach';
 export const CADWGAN_NAME = 'Cadwgan Bwach';
 export const CADWGAN_FAMILY_EMBLEM = `${art}/icons/familie-bwch-v3.png`;
 export const BWACH_WARRIOR = `${art}/figures/haus-bwach-ritter-v1.png`;

@@ -1,4 +1,6 @@
 import { beginCombatContribution } from './combat-contribution-start.js';
+import { getCombatPhaseBoundary, getCombatPhaseClock, getCombatPhaseEvent } from '../combat-phase-counter/combat-phase-model.js';
+import { replayPeriodicConditionDamage } from './combat-condition-periodic.js';
 import { getSegmentCombatStateReceipts } from './combat-resolution-tree.js';
 import { applySceneRegenerationToStateMap, isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
 import { advanceSceneConditionClock, sceneClockBeforeSegment } from '../scene-time/scene-condition-clock.js';
@@ -23,7 +25,7 @@ import {
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
-import { beginCriticalContribution, expireCriticalTemporaryHitPoints, reconcileCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
+import { beginCriticalContribution, criticalConditionIds, expireCriticalTemporaryHitPoints, reconcileCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import { applyChallengeCombatSnapshots } from '../herausforderung/herausforderung-combat-snapshots.js';
@@ -268,7 +270,8 @@ export function applyCombatResolutionState(states, resolution, sceneItems = new 
   const state = getResolutionHitPointState(resolution);
   if (state) {
     const previous = states.get(String(resolution.targetId)) || {};
-    states.set(String(resolution.targetId), { ...previous, ...state });
+    states.set(String(resolution.targetId), { ...previous, ...state,
+      ...(resolution.targetPersistence ? { profilePersistence: resolution.targetPersistence } : {}) });
   }
   const actorResources = getResolutionActorResourceState(resolution);
   const actorAbilities = getResolutionActorAbilityState(resolution);
@@ -285,6 +288,7 @@ export function applyCombatResolutionState(states, resolution, sceneItems = new 
       ...(actorInventory ? { inventory: actorInventory } : {}),
       ...(actorHitPoints || {}),
       ...(actorConditions ? { temporaryConditions: actorConditions } : {}),
+      ...(resolution.actorPersistence ? { profilePersistence: resolution.actorPersistence } : {}),
       ...getResolutionActorLoadoutState(resolution)
     });
   }
@@ -301,7 +305,8 @@ export function applyCombatResolutionState(states, resolution, sceneItems = new 
   if (targetConditions) {
     const targetId = String(resolution.targetId || '');
     const previous = states.get(targetId) || {};
-    states.set(targetId, { ...previous, temporaryConditions: targetConditions });
+    states.set(targetId, { ...previous, temporaryConditions: targetConditions,
+      ...(resolution.targetPersistence ? { profilePersistence: resolution.targetPersistence } : {}) });
   }
   const actorChanneling = getResolutionActorChannelingState(resolution);
   const actorConcentration = getResolutionActorConcentrationState(resolution);
@@ -349,15 +354,42 @@ export function applyCombatResolutionState(states, resolution, sceneItems = new 
   return states;
 }
 
+function applyPhaseBoundary(states, comment, phase) {
+  const boundary = getCombatPhaseBoundary(phase);
+  if (!boundary) return;
+  const { actorIds, contribution, clock } = boundary;
+  beginCombatContribution(states, contribution, clock);
+  const before = criticalConditionIds(states);
+  beginCriticalContribution(states, contribution, clock);
+  replayPeriodicConditionDamage(states, comment);
+  for (const resolution of phase.creatureResolutions || []) applyCombatResolutionState(states, resolution);
+  expireCriticalTemporaryHitPoints(states, contribution, before, clock);
+  advanceTemporaryConditionsForComment(states, contribution, { ...clock, eligibleActorIds: actorIds, conditionIdsByActor: before });
+  for (const combatStatus of phase.conditionApplications || []) {
+    applyCombatStatusCommentToStateMap(states, { serverValidatedMechanics: true, combatStatus });
+  }
+  reconcileConcentrationConditions(states, { pruneEmpty: true });
+}
+
 export function deriveCombatStateFromComments(comments = [], position = {}) {
   const states = new Map();
   const sceneItems = new Map();
   let sceneDay = 1;
   let conditionClock = {};
+  let phaseClock = {};
   const conditionSceneId = position.sceneId || comments.find(comment => comment.entryId)?.entryId || '';
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    const phase = getCombatPhaseEvent(comment);
+    if (phase || (comment.serverValidatedMechanics && comment.combatPhaseReveal && !comment.importedHistoricalMechanics)) {
+      if (stopCommentId && String(comment.id || '') === stopCommentId) break;
+      if (phase) {
+        phaseClock = getCombatPhaseClock(phase);
+        applyPhaseBoundary(states, comment, phase);
+      } else if (comment.sceneElementDetection) applyCombatResolutionState(states, comment.sceneElementDetection, sceneItems);
+      continue;
+    }
     if (comment.sceneElementSignal || comment.sceneElementInteraction
       || (comment.herausforderung?.elementType && comment.herausforderung.elementType !== 'challenge') || comment.sceneElementDetection) {
       if (stopCommentId && String(comment.id || '') === stopCommentId) break;
@@ -385,12 +417,13 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     }
     const isStopComment = stopCommentId && String(comment?.id || '') === stopCommentId;
     if (isStopComment && stopSegmentIndex == null) break;
-    beginCombatContribution(states, comment);
+    beginCombatContribution(states, comment, phaseClock);
     const conditionIdsBeforeComment = new Map([...states].map(([actorId, state]) => [
       String(actorId),
       new Set((Array.isArray(state?.temporaryConditions) ? state.temporaryConditions : []).map(condition => String(condition?.id || '')).filter(Boolean))
     ]));
-    beginCriticalContribution(states, comment);
+    beginCriticalContribution(states, comment, phaseClock);
+    replayPeriodicConditionDamage(states, comment);
     const segments = Array.isArray(comment?.commentSegments) ? comment.commentSegments : [];
     const entries = segments.length
       ? segments.flatMap((segment, index) => getSegmentCombatStateReceipts(segment).map(resolution => ({ index, resolution })))
@@ -407,8 +440,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     advanceSubstanceStateMap(states, conditionClock.seconds, conditionSceneId);
     // All contribution kinds advance clocks. Conditions remain active for the
     // complete contribution and expire only after its final segment.
-    expireCriticalTemporaryHitPoints(states, comment, conditionIdsBeforeComment);
-    advanceTemporaryConditionsForComment(states, comment, { conditionIdsByActor: conditionIdsBeforeComment });
+    expireCriticalTemporaryHitPoints(states, comment, conditionIdsBeforeComment, phaseClock);
+    advanceTemporaryConditionsForComment(states, comment, { ...phaseClock, conditionIdsByActor: conditionIdsBeforeComment });
     applyCriticalConsequencesForComment(states, comment);
     for (const event of sceneItemEvents(comment)) applySceneItemEvent(sceneItems, event);
     applyDroppedWeaponsToStates(states, sceneItems);
@@ -466,7 +499,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
   const temporaryConditions = Array.isArray(state.temporaryConditions)
     ? state.temporaryConditions.map(reconcileClassDamageCondition).map(normalizeRuntimeCondition).filter(condition => condition.active !== false)
     : [];
-  resources = capCriticalResources(resources, temporaryConditions);
+  resources = capCriticalResources(resources, [...getCombatStoredConditions(profile), ...temporaryConditions]);
   // A generic attack modifier applies to every attack. Damage bonuses are
   // weapon-only unless their source explicitly includes all effects.
   const magicalAction = ['spell', 'song', 'prayer'].includes(profile.profileActionKind);

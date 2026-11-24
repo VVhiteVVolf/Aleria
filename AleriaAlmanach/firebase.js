@@ -19,7 +19,7 @@
       from "./modules/characters/character-save-guard.js?v=20261006-regional-equipment-v2";
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
-    import { createCharacterDirectoryReader } from './modules/characters/character-directory-firebase.mjs';
+    import { createCharacterDirectoryReader } from './modules/characters/character-directory-firebase.mjs?v=20261124-register-search';
     import { saveCharacterContent } from './modules/characters/character-content-firebase.js';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
     import { createItemDefinitionsFirebase } from './modules/item-definitions/item-definition-firebase.js';

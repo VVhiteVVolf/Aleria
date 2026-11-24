@@ -3,7 +3,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { onDocumentCreated } from 'firebase-functions/v2/firestore';
 import { getSceneElementContributors } from '../generated/scene-elements/scene-element-conditions.js';
 import { evaluateSceneElements } from './scene-element-evaluation.js';
-import { sceneElementSignal } from './scene-element-authoring.js';
+import { assertFutureScenePhase, sceneElementSignal } from './scene-element-authoring.js';
 import { recordSceneElementInteraction } from './scene-element-interactions.js';
 
 const identifier = (value, label) => {
@@ -26,6 +26,7 @@ export async function commitSceneElementOperation(request, { database = getFires
     return { elements: snapshot.docs.map(doc => {
       const data = doc.data();
       return { id: doc.id, title: data.event.title, elementType: data.event.elementType, state: data.state, revision: data.revision,
+        ...(data.event.activation.phase ? { phase: data.event.activation.phase } : {}),
         challengeId: data.challengeId || '' };
     }) };
   });
@@ -46,6 +47,7 @@ export async function commitSceneElementOperation(request, { database = getFires
     const patch = { state, revision: definition.revision + 1, updatedAt: now };
     if (state === 'armed') {
       const history = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
+      if (definition.event.activation.phase) assertFutureScenePhase(history, definition.event.activation.phase);
       patch.baselineCommentIds = history.docs.map(doc => doc.id);
       patch.interactions = [];
       patch.armedAt = now;

@@ -26,7 +26,19 @@ test('directory requests mask heavy fields, carry the session token and follow t
   assert.equal(result.nextPageToken, 'opaque/+cursor');
 });
 
-function harness(backend) {
+test('the public directory remains readable if session authentication is unavailable', async () => {
+  let sent;
+  const read = createCharacterDirectoryReader({ projectId: 'fixture', getIdToken: async () => { throw Error('offline'); },
+    fetch: async (_url, options) => {
+      sent = options;
+      return { ok: true, json: async () => ({ documents: [] }) };
+    }
+  });
+  assert.deepEqual(await read(), { records: [], nextPageToken: '' });
+  assert.equal(sent.headers, undefined);
+});
+
+function harness(backend, snapshot = []) {
   const events = new Map();
   const context = vm.createContext({ console, setTimeout, clearTimeout, queueMicrotask,
     window: { _fb: backend }, document: { addEventListener: (type, handler) => events.set(type, handler),
@@ -36,7 +48,11 @@ function harness(backend) {
     characterWorldIdentitiesConflict: () => false,
     getCharacterWorldIdentity: record => record.identity?.worldPersonId || '',
     loadCharacterTabData: async () => {},
-    loadLocalCharacterDirectoryState: async () => ({ loadMissing: async () => {}, loadFull: async () => null }),
+    loadLocalCharacterDirectoryState: async () => {
+      const directory = createLocalCharacterDirectory();
+      return { ...directory, loadMissing: async () => {} };
+    },
+    loadLocalCharacterDatabaseState: async () => ({ database: { characters: snapshot } }),
     loadCharacters: () => { throw Error('The register must not load the entire character collection'); },
     getAllCharacterRecords: () => context.records,
     getCharacterById: id => context.records.find(record => record.id === id) || null,
@@ -49,6 +65,20 @@ function harness(backend) {
     + '\nglobalThis.directory = AleriaCharacterDirectory;', context);
   return { context, directory: context.directory, events };
 }
+
+test('an interrupted online directory shows the packaged records and can open their complete profiles', async () => {
+  const offline = async () => { throw Error('Network interrupted'); };
+  const { directory, context } = harness({ loadCharacterDirectoryPage: offline, loadCharacters: offline },
+    [{ id: 'chamois', name: 'Avelwen Chamois', bio: 'Familienchronik', inventory: { revision: 3 } }]);
+  assert.equal(directory.isLoading(), true);
+  await directory.load();
+  assert.equal(directory.isLoading(), false);
+  assert.equal(directory.isComplete(), false);
+  assert.equal(directory.getById('chamois').name, 'Avelwen Chamois');
+  assert.equal(directory.getById('chamois').inventory, undefined);
+  assert.equal(context.records.length, 0);
+  assert.equal((await directory.ensureRecord('chamois')).bio, 'Familienchronik');
+});
 
 test('paged directory metadata stays separate from complete records and overlapping requests share work', async () => {
   let reads = 0, finish;

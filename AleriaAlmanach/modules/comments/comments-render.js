@@ -239,12 +239,15 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (c.combatPhase && c.commentKind === 'combat-phase-event') return globalThis.AleriaCombatPhaseCounter?.renderComment(c) || '';
   if (c.sceneElementSignal) return globalThis.AleriaSceneElements?.renderSignal?.(c) || '';
   if (c.sceneElementInteraction) return `<aside class="scene-element-interaction-receipt" role="note">${escapeHtml(c.text || '')}</aside>`;
   if (globalThis.AleriaSceneRegenerationPolicy?.isComment(c)) return '';
   if (Array.isArray(c.criticalLifecycle) && c.criticalLifecycle.length) {
     const rows = c.criticalLifecycle.map(event => {
-      const change = event.loss != null ? `−${Number(event.loss) || 0} TP`
+      const change = event.conditionDamage ? [event.loss > 0 && `−${Number(event.loss)} TP`,
+        event.absorbedByTemporary > 0 && `−${Number(event.absorbedByTemporary)} temporäre TP`, event.damageType].filter(Boolean).join(' · ')
+        : event.loss != null ? `−${Number(event.loss) || 0} TP`
         : event.grantedTemporary != null ? `+${Number(event.grantedTemporary) || 0} temporäre TP`
         : `${Number(event.expiredTemporary) || 0} temporäre TP verfallen`;
       return `<p><strong>${escapeHtml(event.actorName || event.actorId)} · ${escapeHtml((event.names || []).join(', '))}</strong>: ${change} (${event.phase === 'start' ? 'Beitragsbeginn' : 'Beitragsende'}).</p>`;
@@ -431,9 +434,12 @@ function renderCommentBubble(c, idx) {
       renderIndex: idx,
       partIndex: partIdx,
       displayName: displayCharName,
+      portrait: part.portrait,
       secret: isSecretAction
     }) || portraitMarkup);
     const actions = !c._hideActions && partIdx === parts.length - 1 ? renderCommentEntryActions(c) : '';
+    const statusStrip = !isSecretAction && !hasAnonymousPresentation && c.id && partIdx === parts.length - 1
+      ? window.AleriaCommentCombatMiniProfile?.renderStatusStrip?.(combatActorId) || '' : '';
     const translationId = c._twinLane ? `${commentId}-${idx}-${c._twinLane}` : commentId;
     const textMarkup = commentKind === 'animal'
       ? buildAnimalCommentTextMarkup(part.text, translationId, partIdx)
@@ -452,6 +458,7 @@ function renderCommentBubble(c, idx) {
             </div>
             ${textMarkup}
             ${actions}
+            ${statusStrip}
           </div>
         </div>`;
     }
@@ -470,6 +477,7 @@ function renderCommentBubble(c, idx) {
             ${actions}
           </div>
         </div>
+        ${statusStrip}
       </div>`;
   }).join('');
 

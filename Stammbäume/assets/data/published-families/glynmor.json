@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "glynmor",
-  "revision": 2,
-  "updatedAt": "2026-11-22T18:03:17.496Z",
+  "revision": 3,
+  "updatedAt": "2026-11-23T23:54:24.182Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -33,7 +33,7 @@
       {
         "id": "glynmor-gruender",
         "worldPersonId": "person--glynmor--glynmor-gruender",
-        "name": "Unbekannter Gründer",
+        "name": "Cynfal",
         "title": "Gründer des Hauses",
         "sex": "male",
         "status": "alive",
@@ -53,7 +53,7 @@
       {
         "id": "glynmor-gruenderin",
         "worldPersonId": "person--glynmor--glynmor-gruenderin",
-        "name": "Unbekannte Gründerin",
+        "name": "Unbekannter Partner",
         "title": "Gründerin des Hauses",
         "sex": "female",
         "status": "alive",
@@ -394,7 +394,7 @@
       {
         "id": "person-46a3c794",
         "worldPersonId": "person--glynmor--person-46a3c794",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "female",
         "status": "alive",
@@ -901,7 +901,7 @@
       {
         "id": "person-820804c4",
         "worldPersonId": "person--glynmor--person-820804c4",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "female",
         "status": "alive",
@@ -919,7 +919,7 @@
       {
         "id": "person-80f3a0c9",
         "worldPersonId": "person--glynmor--person-80f3a0c9",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "female",
         "status": "alive",
@@ -937,7 +937,7 @@
       {
         "id": "person-d313049f",
         "worldPersonId": "person--glynmor--person-d313049f",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "male",
         "status": "alive",
@@ -955,7 +955,7 @@
       {
         "id": "person-8f77786a",
         "worldPersonId": "person--glynmor--person-8f77786a",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "male",
         "status": "alive",
@@ -1831,7 +1831,7 @@
       {
         "id": "person-e6b5df1c",
         "worldPersonId": "person--glynmor--person-e6b5df1c",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "female",
         "status": "alive",
@@ -1991,7 +1991,7 @@
       {
         "id": "person-fa571002",
         "worldPersonId": "person--glynmor--person-fa571002",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "female",
         "status": "alive",
@@ -2009,7 +2009,7 @@
       {
         "id": "person-c0b38f3f",
         "worldPersonId": "person--glynmor--person-c0b38f3f",
-        "name": "??",
+        "name": "Unbekannter Partner",
         "title": "",
         "sex": "male",
         "status": "alive",
@@ -2027,7 +2027,7 @@
       {
         "id": "person-9176e0d0",
         "worldPersonId": "person--glynmor--person-9176e0d0",
-        "name": "??",
+        "name": "Lleirwg",
         "title": "",
         "sex": "male",
         "status": "alive",
@@ -2301,7 +2301,7 @@
       {
         "id": "person-0289ab3e",
         "worldPersonId": "person--glynmor--person-0289ab3e",
-        "name": "??",
+        "name": "Euron",
         "title": "",
         "sex": "female",
         "status": "alive",
@@ -2319,7 +2319,7 @@
       {
         "id": "person-e2cc718f",
         "worldPersonId": "person--glynmor--person-e2cc718f",
-        "name": "??",
+        "name": "Tathan",
         "title": "",
         "sex": "male",
         "status": "alive",
@@ -2971,7 +2971,7 @@
         "specialTraits": ""
       },
       "blankFamily": false,
-      "sourceRevision": 2,
+      "sourceRevision": 3,
       "registryManagedEntitySourceRevision": 2,
       "registryManagedDocumentFields": [
         "title",

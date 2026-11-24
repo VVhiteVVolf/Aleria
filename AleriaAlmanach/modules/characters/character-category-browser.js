@@ -80,7 +80,7 @@ const AleriaCharacterCategoryBrowser = (() => {
       } else {
         const empty = document.createElement('p');
         empty.className = 'char-category-empty';
-        empty.textContent = 'Keine Figuren für diese Auswahl. Ändere die Suche oder kehre zur Übersicht zurück.';
+        empty.textContent = hasSearch ? getCharacterRegisterSearchEmptyMessage() : 'In dieser Auswahl sind keine Figuren sichtbar.';
         section.appendChild(empty);
       }
     } else {
@@ -163,5 +163,6 @@ const AleriaCharacterCategoryBrowser = (() => {
   }
 
   document.addEventListener('click', handleClick);
-  return Object.freeze({ render, reset, hasSelection, filterEntries, focusResults, select });
+  return Object.freeze({ render, reset, hasSelection, filterEntries, focusResults, select,
+    selectionLabel: () => selected?.key ? selected.label : '' });
 })();

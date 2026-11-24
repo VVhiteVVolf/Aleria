@@ -1,5 +1,6 @@
 import { getCombatTechniqueIconSource } from '../combat-styles/combat-technique-icons.js';
 import { getCharacterAbilityIconSource } from '../character-archive/character-archive-ability-icons.js';
+import { getCombatConditionIconId, getCombatConditionIconSource } from '../combat-status/combat-condition-icons.js';
 
 const ICON_ROOT = '../../../IconOrdner';
 const CARD_ICON_ROOT = '../../../IconOrdner/Zauberkarten Icons';
@@ -141,6 +142,9 @@ function getAutomaticEntryIconSource(kind, entry = {}, ownerContext = {}) {
     return matchAsset(searchText, SPELL_ICON_MAPPINGS, 'Zauber Icons/Oblivion Style/OB-icon-Fortifymagic.png');
   }
   if (kind === 'condition') {
+    if (entry.presetId && getCombatConditionIconId({ presetId: entry.presetId }) !== 'condition') {
+      return getCombatConditionIconSource({ presetId: entry.presetId });
+    }
     return matchAsset(searchText, CONDITION_ICON_MAPPINGS, 'Zauber Icons/Baldurs Gate/Condition Icons/Dazed_Condition_Icon.webp');
   }
   if (kind === 'ability' && /zauber|magie|arkan|aura|gebet|spell|prayer/.test(searchText)) {

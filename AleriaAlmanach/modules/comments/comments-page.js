@@ -10,6 +10,7 @@ const COMMENT_ACTION_ICONS = {
   encounter: '../IconOrdner/Buttom Icons/Kampfstarter.png',
   poll: 'https://i.imgur.com/jeMqIr7.png',
   herausforderung: './assets/scene-elements/icons/web/challenge-v1.webp',
+  phase: './public/assets/combat-phase-counter/counter-v1.webp',
   fazit: '../IconOrdner/Buttom Icons/Fazit.png'
 };
 
@@ -37,6 +38,9 @@ function buildCommentActionBar(hintText, options = {}) {
   const herausforderungButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-herausforderung-btn" type="button" data-herausforderung-action="open" title="Herausforderung, Rätsel, Gefahr oder Erzählelement gestalten" aria-label="Herausforderung gestalten">${buildCommentActionIcon('herausforderung')}</button>`
     : '';
+  const phaseCounterButton = options.allowSceneTime
+    ? `<button class="comments-add-btn comments-action-icon-btn" type="button" data-combat-phase-action="open" aria-haspopup="dialog" title="Phasenzähler" aria-label="Phasenzähler">${buildCommentActionIcon('phase')}</button>`
+    : '';
   const moduleInsertButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-module-insert-add-btn" type="button" data-action="open-module-insert-form" title="Modul einfuegen" aria-label="Modul einfuegen">${buildCommentActionIcon('module')}</button>`
     : '';
@@ -52,6 +56,7 @@ function buildCommentActionBar(hintText, options = {}) {
       ${sceneTransitionButton}
       ${scenePollButton}
       ${herausforderungButton}
+      ${phaseCounterButton}
       <button class="comments-add-btn comments-action-icon-btn comments-showcase-add-btn" type="button" data-action="open-showcase-form" title="Objekt vorstellen" aria-label="Objekt vorstellen">${buildCommentActionIcon('object')}</button>
       ${moduleInsertButton}
       <button class="comments-add-btn comments-action-icon-btn comments-attachment-add-btn" type="button" data-action="open-attachment-form" title="Anhang präsentieren" aria-label="Anhang präsentieren">${buildCommentActionIcon('attachment')}</button>

@@ -5,10 +5,12 @@ import { withClassPassivePeriods } from '../classes/combat-passives/class-passiv
 import { getClassPassiveSupportOption } from '../classes/combat-passives/class-passive-rules.js';
 import { bindCombatTooltips } from './ui/combat-tooltips.js?v=20261015-skill-challenges-v2';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
+import { getLatestCombatPhase, getCombatPhaseClock } from '../combat-phase-counter/combat-phase-model.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
 import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
 import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { beginCriticalContribution } from '../combat-critical/combat-critical-lifecycle.js';
+import { applyPeriodicConditionDamage } from './combat-condition-periodic.js';
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
 import { applyDismountSnapshots, canCarryCombatShield } from './combat-support-equipment.js';
@@ -319,15 +321,16 @@ function resolveActorProfile(character, options = {}) {
     includeAiSnapshot: options.includeAiSnapshot
   });
   const resetActors = options.commentResourceResetActors;
-  const shouldResetCommentResources = options.resetCommentResources && !resetActors?.has(actorId);
+  const firstInContribution = options.resetCommentResources && !resetActors?.has(actorId);
+  const expiresAtStart = firstInContribution && !options.phaseClock?.deferConditionTime;
   let effectiveResources = state?.resources || profile.resources;
-  if (shouldResetCommentResources) effectiveResources = resetCommentScopedResources(effectiveResources);
-  if (shouldResetCommentResources) resetActors?.add(actorId);
+  if (firstInContribution) effectiveResources = resetCommentScopedResources(effectiveResources, Array.isArray(state?.resources) ? options.phaseClock : undefined);
+  if (firstInContribution) resetActors?.add(actorId);
   effectiveResources = recoverDailyCombatResources(effectiveResources, options.recoveryDayKey);
-  const effectiveState = state || shouldResetCommentResources || options.recoveryDayKey
+  const effectiveState = state || firstInContribution || options.recoveryDayKey
     ? { ...(state || {}), resources: effectiveResources,
       ...(prepared.preparation?.after ? { supportEquipment: prepared.preparation.after } : {}),
-      ...(shouldResetCommentResources && state?.temporaryConditions ? { temporaryConditions: conditionsAtContributionStart(state.temporaryConditions) } : {}) }
+      ...(expiresAtStart && state?.temporaryConditions ? { temporaryConditions: conditionsAtContributionStart(state.temporaryConditions) } : {}) }
     : null;
   return reserveCombatEquipment(overlayCombatHitPointState(profile, effectiveState), prepared.preparation);
 }
@@ -375,7 +378,7 @@ function previewConsumedItem(segment, characters, fallbackActorId, workingStates
     const entry = sceneItems?.get(segment.sceneItemId || segment.inventoryUse?.sceneItemId);
     if (!entry) return;
     const actor = resolveActorProfile(character, { actorId, storedStates, workingStates, resetCommentResources: true,
-      commentResourceResetActors: options.resourceResetActors, recoveryDayKey: options.recoveryDayKey });
+      commentResourceResetActors: options.resourceResetActors, recoveryDayKey: options.recoveryDayKey, phaseClock: options.phaseClock });
     const applied = applySceneItemInteraction({ entry, actor,
       sourceActor: characters.find(source => source.id === entry.sourceActorId),
       operation: (segment.kind || segment.commentKind) === 'consume' ? 'consume' : entry.operation === 'drop' ? 'pickup' : segment.inventoryOperation || 'use',
@@ -409,6 +412,7 @@ function mountComposers(context = {}) {
   const storedStates = getStoredCombatStates(context.threadId || '');
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
   const composerStates = new Map(storedStates);
+  const phaseClock = getCombatPhaseClock(getLatestCombatPhase(cachedComments));
   const conditionClock = getSceneConditionClock(cachedComments);
   const actorsWithPosts = getActorsWithCombatPosts(cachedComments);
   const previewRulePeriods = withClassPassivePeriods(
@@ -446,6 +450,7 @@ function mountComposers(context = {}) {
       storedStates,
       workingStates: composerStates,
       commentResourceResetActors: composerResourceResets,
+      phaseClock,
       resetCommentResources: true,
       segmentKind: getEffectiveCombatSegmentKind(segment),
       paymentMode: segment.combatPaymentMode,
@@ -749,6 +754,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     storedStates: stateContext.storedStates,
     workingStates: stateContext.workingStates,
     commentResourceResetActors: stateContext.commentResourceResetActors,
+    phaseClock: stateContext.phaseClock,
     resetCommentResources: true,
     segmentKind: getEffectiveCombatSegmentKind(segment),
     paymentMode: segment.combatPaymentMode,
@@ -946,12 +952,14 @@ function creatureContributionContext(threadId) {
     const character = characters.find(entry => String(entry.id) === actorId);
     return character ? resolveActorProfile(character, { actorId, storedStates, includeAiSnapshot: false }) : null;
   };
-  return { cachedComments, encounter, characters, storedStates, profileFor, composer };
+  return { cachedComments, encounter, characters, storedStates, profileFor, composer, phaseClock: getCombatPhaseClock(getLatestCombatPhase(cachedComments)) };
 }
 
 function hasCombatContribution(segments, { threadId = '', characterId = '' } = {}) {
   if ((segments || []).some(isCombatSegment)) return true;
-  return Boolean(threadId && hasCreatureContribution(segments || [], characterId, creatureContributionContext(threadId).profileFor));
+  if (!threadId) return false;
+  const { profileFor, phaseClock } = creatureContributionContext(threadId);
+  return hasCreatureContribution(segments || [], characterId, profileFor, phaseClock);
 }
 
 function skipAutomaticCreatureSegment(segment, { workingStates, rulePeriods }) {
@@ -965,9 +973,9 @@ function skipAutomaticCreatureSegment(segment, { workingStates, rulePeriods }) {
 
 async function handleSubmission(submission = {}) {
   const sourceSegments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
-  const { cachedComments, encounter, characters, storedStates, profileFor, composer } = creatureContributionContext(submission.threadId || '');
+  const { cachedComments, encounter, characters, storedStates, profileFor, composer, phaseClock } = creatureContributionContext(submission.threadId || '');
   const escapePreviews = await getCommentCreatureEscapePreviews(composer?.list);
-  const segments = withCreatureContribution(sourceSegments, submission.characterId, profileFor, escapePreviews);
+  const segments = withCreatureContribution(sourceSegments, submission.characterId, profileFor, escapePreviews, phaseClock);
   const combatSegments = segments.filter(isCombatSegment);
   if (!combatSegments.length) return { handled: false, published: false };
   const encounterId = encounter?.encounterId || '';
@@ -978,6 +986,7 @@ async function handleSubmission(submission = {}) {
     escapePreviews,
     workingStates: new Map(),
     commentResourceResetActors: new Set(),
+    phaseClock,
     recoveryDayKey: getCombatRecoveryDayKey(submission.threadId || ''),
     actorsWithPosts: getActorsWithCombatPosts(globalThis.getCachedCommentsForThread?.(submission.threadId || submission.entryId || '') || []),
     rulePeriods: withClassPassivePeriods({
@@ -991,11 +1000,13 @@ async function handleSubmission(submission = {}) {
     stateContext.rulePeriods
   );
   stateContext.workingStates = new Map(stateContext.storedStates);
-  beginCombatContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
+  const contribution = { characterId: submission.characterId, commentSegments: segments };
+  beginCombatContribution(stateContext.workingStates, contribution, stateContext.phaseClock);
   for (const actorId of getCommentActorIds({ characterId: submission.characterId, commentSegments: segments })) {
     if (Array.isArray(stateContext.workingStates.get(actorId)?.resources)) stateContext.commentResourceResetActors.add(actorId);
   }
-  beginCriticalContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
+  beginCriticalContribution(stateContext.workingStates, contribution, stateContext.phaseClock);
+  applyPeriodicConditionDamage(stateContext.workingStates, contribution, profileFor, stateContext.phaseClock);
 
   activateResolutionDialog();
   try {
@@ -1012,6 +1023,7 @@ async function handleSubmission(submission = {}) {
           const profile = resolveActorProfile(actor, {
             actorId: actor.id, storedStates: stateContext.storedStates, workingStates: stateContext.workingStates,
             resetCommentResources: true, commentResourceResetActors: stateContext.commentResourceResetActors,
+            phaseClock: stateContext.phaseClock,
             recoveryDayKey: stateContext.recoveryDayKey
           });
           const previous = stateContext.workingStates.get(actor.id) || {};
@@ -1024,6 +1036,7 @@ async function handleSubmission(submission = {}) {
     for (const [segmentIndex, segment] of segments.entries()) {
       previewConsumedItem(segment, characters, submission.characterId, stateContext.workingStates, stateContext.storedStates,
         { sceneItems: stateContext.sceneItems, resourceResetActors: stateContext.commentResourceResetActors, recoveryDayKey: stateContext.recoveryDayKey,
+          phaseClock: stateContext.phaseClock,
           sceneClockSeconds: sceneClockBeforeSegment(getSceneConditionClock(cachedComments), segments, segmentIndex), sceneId: submission.threadId });
       if (String(segment.mechanicMode) === 'skill') {
         if (!globalThis.AleriaSkillChecks?.resolveDraftSegment) throw Error('Die Fertigkeitsauswertung ist noch nicht geladen.');

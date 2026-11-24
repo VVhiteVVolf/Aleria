@@ -14,12 +14,15 @@ export function createSceneElementsController({ renderChallenge }) {
   let railExpanded = getSceneElementRailExpanded();
   function positionRail() {
     if (!layout?.host.isConnected || layout.rail.hidden) return;
-    const { host, scroll, rail, dock } = layout;
+    const { host, scroll, rail, dock, accessory } = layout;
     const parent = host.getBoundingClientRect(), viewport = scroll.getBoundingClientRect();
     const offset = Math.min(64, Math.max(8, viewport.height * .12));
     const availableHeight = viewport.height - offset - 8;
-    const compact = availableHeight < 144;
-    const docked = !!dock && availableHeight < 56;
+    const elementControls = rail.querySelector('[data-scene-elements-rail-content]');
+    const panelHeight = accessory.hidden ? 0 : Math.ceil(accessory.getBoundingClientRect().height);
+    const minimumHeight = accessory.hidden ? 56 : panelHeight + (elementControls.hidden ? 16 : 61);
+    const docked = !!dock && availableHeight < minimumHeight;
+    const compact = docked || availableHeight < 144;
     if (layout.docked !== docked) {
       layout.docked = docked;
       host.dataset.sceneElementsDocked = String(docked);
@@ -33,6 +36,16 @@ export function createSceneElementsController({ renderChallenge }) {
     rail.style.top = docked ? '' : `${Math.round(viewport.top - parent.top + offset)}px`;
     rail.style.right = docked ? '' : `${Math.max(4, Math.round(parent.right - viewport.right + 6))}px`;
     rail.style.maxHeight = docked ? '' : `${Math.max(48, Math.floor(availableHeight))}px`;
+    // Keep the companion controls visible while only the scene-element list
+    // scrolls. A grid with just max-height can still lay out overflowing rows.
+    if (docked || accessory.hidden) elementControls.style.maxHeight = '';
+    else {
+      const style = getComputedStyle(rail);
+      const insets = ['paddingTop', 'paddingBottom', 'borderTopWidth', 'borderBottomWidth', 'rowGap']
+        .reduce((total, key) => total + (parseFloat(style[key]) || 0), 0);
+      elementControls.style.maxHeight = `${Math.max(0, Math.floor(availableHeight - panelHeight - insets))}px`;
+      rail.scrollTop = 0;
+    }
     rail.style.visibility = 'visible';
   }
   const resizeObserver = new ResizeObserver(positionRail);
@@ -64,7 +77,9 @@ export function createSceneElementsController({ renderChallenge }) {
     rail.dataset.expanded = String(railExpanded);
     rail.dataset.controlsId ||= 'scene-element-rail-' + crypto.randomUUID();
     const html = renderSceneElementRail(available, { expanded: railExpanded, compact, controlsId: rail.dataset.controlsId });
-    if (rail.__content !== html) { rail.innerHTML = html; rail.__content = html; }
+    const content = rail.querySelector('[data-scene-elements-rail-content]');
+    if (content.__markup !== html) { content.innerHTML = available.length ? html : ''; content.__markup = html; }
+    content.hidden = !available.length;
   }
   function setRailExpanded(value, { persist = true, focus = false } = {}) {
     railExpanded = value === true;
@@ -192,7 +207,8 @@ export function createSceneElementsController({ renderChallenge }) {
         if (!current()) return;
         Object.assign(item, changed); renderManagement();
         status(changed.state === 'revealed' ? 'Eine bereits erfüllte Bedingung hat das Element sofort ausgelöst.'
-          : action === 'arm' ? 'Scharfgeschaltet. Die Beitragszählung beginnt jetzt neu.' : 'Deaktiviert. Die Vorbereitung bleibt erhalten.');
+          : action === 'arm' ? item.phase ? `Für Phase ${item.phase} scharfgeschaltet.`
+            : 'Scharfgeschaltet. Die Beitragszählung beginnt jetzt neu.' : 'Deaktiviert. Die Vorbereitung bleibt erhalten.');
         await refresh(expectedThread);
       });
     }
@@ -211,16 +227,26 @@ export function createSceneElementsController({ renderChallenge }) {
       if (!host) return;
       host.classList.add('scene-elements-host');
       let rail = host.querySelector('[data-scene-elements-rail]');
-      if (!rail) { rail = document.createElement('nav'); rail.dataset.sceneElementsRail = ''; rail.className = 'scene-elements-rail'; rail.setAttribute('aria-label', 'Rätsel, Gefahren und Gegenstände'); host.append(rail); }
+      if (!rail) {
+        rail = document.createElement('aside');
+        rail.dataset.sceneElementsRail = '';
+        rail.className = 'scene-elements-rail';
+        rail.innerHTML = '<nav data-scene-elements-rail-content aria-label="Rätsel, Gefahren und Gegenstände"></nav><div data-scene-rail-accessory hidden></div>';
+        host.append(rail);
+      }
       const available = elements();
-      host.classList.toggle('has-scene-elements', available.length > 0);
-      rail.hidden = available.length === 0;
+      const accessory = rail.querySelector('[data-scene-rail-accessory]');
+      if (accessory.firstChild !== (context.railAccessory || null)) accessory.replaceChildren(...(context.railAccessory ? [context.railAccessory] : []));
+      accessory.hidden = !context.railAccessory;
+      host.classList.toggle('has-scene-elements', available.length > 0 || !accessory.hidden);
+      host.classList.toggle('has-scene-rail-accessory', !accessory.hidden);
+      rail.hidden = available.length === 0 && accessory.hidden;
       updateRail(rail, host, available);
       const scroll = context.scroll || host.querySelector('.comments-scroll');
       if (scroll) {
         if (layout?.host !== host || layout?.scroll !== scroll) {
-          resizeObserver.disconnect(); layout = { host, scroll, rail, dock: host.querySelector('[data-scene-elements-dock]') };
-          resizeObserver.observe(host); resizeObserver.observe(scroll);
+          resizeObserver.disconnect(); layout = { host, scroll, rail, accessory, dock: host.querySelector('[data-scene-elements-dock]') };
+          resizeObserver.observe(host); resizeObserver.observe(scroll); resizeObserver.observe(accessory);
         }
         requestAnimationFrame(positionRail);
       }

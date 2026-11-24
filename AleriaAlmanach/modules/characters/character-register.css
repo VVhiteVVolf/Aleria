@@ -11,7 +11,9 @@
 .char-register-find-control > span { color: #294b3e; font: 600 1rem 'Cinzel', serif; }
 .char-register-find-control input { width: 100%; min-height: 3rem; padding: .65rem .85rem; border: 1px solid #9bab9c; border-radius: 4px; color: #302b25; background: #fffef9; font: 1.08rem 'EB Garamond', serif; }
 .char-register-find-control input:focus { outline: 2px solid #456956; outline-offset: 2px; }
-.char-register-search-hint { grid-column: 1 / -1; color: #625e54; font-size: .82rem; }
+.char-register-search-scope { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .45rem 1rem; align-items: center; color: #4f5d51; }
+.char-register-search-scope small { overflow-wrap: anywhere; }
+.char-register-search-scope button { min-height: 2.75rem; border: 1px solid #b4c3b6; border-radius: 4px; padding: .45rem .7rem; background: #fbfaf4; color: #355d4a; font: .9rem 'EB Garamond', serif; cursor: pointer; }
 .char-register-view-options { display: flex; flex-wrap: wrap; align-items: end; gap: .4rem; min-width: 0; }
 .char-register-view-options button { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .65rem; min-height: 2.8rem; border: 1px solid #d6d1c3; border-radius: 4px; background: #fffef9; color: #48463e; font: .76rem 'Cinzel', serif; cursor: pointer; }
 .char-register-view-options .char-register-icon { width: 1.7rem; height: 1.7rem; }
@@ -58,8 +60,10 @@
   .char-register-view-toolbar { padding: .75rem; gap: .6rem; }
   .char-register-view-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .char-register-view-options button { min-width: 0; font-size: .72rem; }
-  .char-register-find-row { flex-wrap: wrap; }
-  .char-register-find-control { flex-basis: 100%; }
+  .char-register-find-row { gap: .4rem; }
+  .char-register-search-clear { flex: 0 0 auto; max-width: 7rem; }
+  .char-register-group-controls { flex: 0 0 100%; }
+  .char-register-find-row:has(.char-register-group-controls) { flex-wrap: wrap; }
   .char-archive-actions { justify-content: flex-start; }
   .char-archive-actions .char-genealogy-import-action { flex-basis: 100%; margin: 0; }
   .char-dashboard-head { align-items: flex-start; flex-direction: column; }

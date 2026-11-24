@@ -30,7 +30,7 @@ test('an older Gawain record earns prepared replies and rank-30 damage through a
   const response = await action('gawain', 'opponent', techniqueId('sicherer-drachenhieb'));
   const committed = await party.commit(response);
   const receipt = resultOf(committed);
-  assert.equal(receipt.rulesVersion, 'combat-evaluation-18');
+  assert.equal(receipt.rulesVersion, 'combat-evaluation-19');
   assert.match(receipt.damage.notation, /1[dW]8\+1[dW]10\+1[dW]6/i);
   assert.equal(classRules(receipt).find(rule => rule.ruleId.startsWith('answer:')).effects.attackModifier, 1);
   assert.equal(classRules(receipt).find(rule => rule.ruleId.startsWith('answer-damage:')).effects.damageModifier, 2);

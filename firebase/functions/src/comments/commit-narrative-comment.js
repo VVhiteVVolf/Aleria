@@ -1,6 +1,8 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
+import { getCommentActorIds } from '../generated/combat/combat-condition-duration.js';
+import { getLatestCombatPhase, getCombatPhaseClock } from '../generated/combat-phase-counter/combat-phase-model.js';
 import { isTrustedSceneContributionComment, sortSceneHistory } from '../mechanics/trusted-scene-history.js';
 import { nextMechanicalCommentOrderKey } from '../mechanics/mechanical-comment-order.js';
 import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from '../mechanics/critical-comment-lifecycle.js';
@@ -85,6 +87,11 @@ export async function commitNarrativeCommentOperation(request, { database = getF
     .filter(Boolean);
   const uniqueEntryIds = [...new Set(entryIds)].slice(0, 2);
   if (!uniqueEntryIds.length || !clean(payload.text)) fail('invalid-argument', 'Kommentarbereich und Text sind erforderlich.');
+  const transition = payload.metadata?.sceneTransition;
+  if (transition && (uniqueEntryIds.length !== 2 || transition.source?.threadId === transition.target?.threadId
+    || !uniqueEntryIds.includes(transition.source?.threadId) || !uniqueEntryIds.includes(transition.target?.threadId))) {
+    fail('invalid-argument', 'Der Szenenwechsel braucht eine passende Quell- und Zielszene.');
+  }
   if (containsPersistentMechanics(payload.metadata)) {
     fail('failed-precondition', 'ZustandsÃ¤ndernde Mechanik braucht ihre eigene serverseitige Transaktion.');
   }
@@ -100,10 +107,15 @@ export async function commitNarrativeCommentOperation(request, { database = getF
       const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
       const history = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))).filter(isTrustedSceneContributionComment);
       const states = deriveCombatStateFromComments(history), updates = new Map();
-      const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states, metadata: payload.metadata || {}, updates });
+      const phase = getLatestCombatPhase(history);
+      const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states, metadata: payload.metadata || {}, updates,
+        clock: getCombatPhaseClock(phase) });
       const events = lifecycle.finish(payload.metadata || {});
       const document = buildNarrativeCommentDocument(payload, entryId, request, now);
-      if (events.length) document.orderKey = nextMechanicalCommentOrderKey(history, payload.metadata?.orderKey, now);
+      const movesSceneState = transition || document.sceneTimeEvent || getCommentActorIds(document).size;
+      if (events.length || (movesSceneState && phase && phase.operation !== 'stop')) {
+        document.orderKey = nextMechanicalCommentOrderKey(history, payload.metadata?.orderKey, now);
+      }
       pending.push({ ref, updates, events, document });
     }
     const profileUpdates = [], criticalLifecycle = [];

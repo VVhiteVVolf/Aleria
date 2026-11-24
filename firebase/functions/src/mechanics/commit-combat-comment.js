@@ -8,6 +8,7 @@ import { transferredEquipmentProfile } from '../items/item-transfer-equipment.js
 import { removeTransferredSceneEquipment } from '../generated/scene-items/scene-item-equipment.js';
 import { materializeInventoryItem } from '../generated/item-definitions/item-definition-resolver.js';
 import { prepareCriticalCommentLifecycle } from './critical-comment-lifecycle.js';
+import { getLatestCombatPhase, getCombatPhaseClock } from '../generated/combat-phase-counter/combat-phase-model.js';
 import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
 import { applyDismountSnapshots } from '../generated/combat/combat-support-equipment.js';
 import { randomUUID, randomInt, createHash } from 'node:crypto';
@@ -306,8 +307,9 @@ export async function commitCombatCommentOperation(request, {
     const advanceSubstancesToSegment = index => advanceSubstanceStateMap(workingStates, sceneClockBeforeSegment(conditionClock, metadata.commentSegments, index), entryId);
     const workingInventories = new Map();
     const persistentUpdates = new Map();
+    const phaseClock = getCombatPhaseClock(getLatestCombatPhase(contributionHistory));
     const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates, metadata,
-      records, entries: uniqueRecords, updates: persistentUpdates });
+      records, entries: uniqueRecords, updates: persistentUpdates, clock: phaseClock });
     const combatResolutionsBySegment = new Map();
     let enhancedSegments = metadata.commentSegments.map(segment => {
       const clean = { ...segment };
@@ -509,11 +511,12 @@ export async function commitCombatCommentOperation(request, {
       const target = applyStoredState(targetBase, targetState);
       if (primary && hasCreatureTurnEnd(actor)) {
         if (actionId === CREATURE_TURN_END_ID) {
+          if (phaseClock.deferConditionTime) fail('failed-precondition', 'Trollblut wird beim nächsten manuellen Phasenwechsel ausgewertet.');
           const actedLater = metadata.commentSegments.slice(index + 1).some(next =>
             String(next.sceneActorId || next.actorId || next.characterId || metadata.characterId || '') === String(submitted.actorId));
           if (actedLater || creatureEndResolved.has(submitted.actorId)) fail('failed-precondition', 'Trollblut wird einmal am Ende des eigenen Beitrags ausgewertet.');
           creatureEndResolved.add(submitted.actorId);
-        } else creatureEndRequired.add(submitted.actorId);
+        } else if (!phaseClock.deferConditionTime) creatureEndRequired.add(submitted.actorId);
       }
       const broadTargetEffect = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
       const maximumTargets = Math.max(1, Number(actor.selectedAction?.maximumTargets) || (broadTargetEffect ? 20 : 1));

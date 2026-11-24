@@ -36,6 +36,8 @@ import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 import { getHealthTaskError } from '../character-health/health-trait-policy.js';
 import { getVoluntaryCombatActionBlock } from './combat-action-permission.js';
 import { getRuntimeCreatureAction } from './combat-creature-actions.js';
+import { capCriticalResources } from '../combat-critical/combat-critical-model.js';
+import { needsImplicitCombatDamage } from './combat-effect-model.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -448,7 +450,8 @@ function applySpellCastLevel(action, profile, requestedLevel) {
 
 export function resolveCombatProfile(character = {}, options = {}) {
   const effectiveCharacter = withAutofilledCenyrProfile(character);
-  const profile = resolveCharacterCombatProfile(effectiveCharacter, { definitions: options.definitions });
+  const resolved = resolveCharacterCombatProfile(effectiveCharacter, { definitions: options.definitions });
+  const profile = { ...resolved, resources: capCriticalResources(resolved.resources, resolved.conditions) };
   const segmentKind = String(options.segmentKind || '');
   const allActions = buildCombatProfileActions(effectiveCharacter, profile, options);
   const runtimeAction = getRuntimeCreatureAction(options.actionId, profile);
@@ -519,6 +522,7 @@ export function resolveCombatTargetProfile(character = {}) {
   }
   return {
     ...profile,
+    resources: capCriticalResources(profile.resources, profile.conditions),
     characterId: String(effectiveCharacter.id || ''),
     name: String(effectiveCharacter.name || 'Unbekannt'),
     portrait: combatPortrait(effectiveCharacter),
@@ -536,8 +540,7 @@ export function getCombatActorProblems(profile = {}) {
   if (profile.selectedAction?.compatible === false) problems.push('incompatibleAction');
   if (waiting || profile.selectedAction?.kind === 'equipment-switch') return problems;
   if (!String(profile.weapon?.name || '').trim()) problems.push('weaponName');
-  const hasStructuredEffects = Array.isArray(profile.selectedAction?.effects) && profile.selectedAction.effects.length > 0;
-  if (!hasStructuredEffects && !profile.selectedAction?.nonDamaging) {
+  if (needsImplicitCombatDamage(profile.selectedAction, profile.profileActionKind)) {
     try {
       parseDamageFormula(profile.weapon?.damageFormula);
     } catch {

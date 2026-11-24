@@ -112,7 +112,8 @@ test('all sixteen mapped places have seven meaningful facts and link to the corr
   for (const poi of HOF_MAPPED_POIS) {
     const pin = map.state.pins.find(pin => pin.id === `tirfelyn-${poi.key}`);
     assert.deepEqual([pin.x, pin.y], poi.position);
-    assert.equal(pin.img, poi.image);
+    assert.equal(pin.img, '');
+    assert.ok(['gebaeude', 'handwerk', 'landwirtschaft'].includes(pin.templateId));
     assert.equal(pin.table.length, 7);
     assert.ok(pin.table.every(row => row.k && row.v.trim()));
     assert.equal(new Set(pin.table.map(row => row.k)).size, 7);
@@ -162,7 +163,7 @@ test('the existing Bannkreis farm pin links through its main image and preserves
   const pin = parent.state.pins.find(pin => pin.id === 'gwynthor-marking-107');
   assert.deepEqual([pin.x, pin.y], [0.67431640625, 0.5049015873015873]);
   assert.equal(pin.imgLink, HOF_MAP_LINK);
-  assert.match(pin.img, /bauernherrenhaus-v1\.png$/);
+  assert.equal(pin.img, '/Karten/' + HOF_MAP_IMAGE);
   assert.ok(pin.text.includes(HOF_MAP_LINK));
   const local = JSON.parse(await readFile(new URL(`Karten/${HOF_MAP_FOLDER}/data.json`, root), 'utf8'));
   assert.deepEqual(local, buildHofMap());

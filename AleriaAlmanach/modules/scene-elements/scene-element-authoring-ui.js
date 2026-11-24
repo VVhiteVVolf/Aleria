@@ -3,6 +3,7 @@ import { SKILL_DEFINITIONS, normalizeSkillCheckSettings } from '../skill-checks/
 import { renderSkillSaveContext } from '../skill-checks/skill-save-context-view.js';
 import { sceneElementEscape } from './scene-element-markup.js';
 import { renderSceneElementIcon } from './scene-element-icon-view.js';
+import { MAX_COMBAT_PHASE } from '../combat-phase-counter/combat-phase-model.js';
 
 const escape = sceneElementEscape;
 const option = (id, label, current) => `<option value="${escape(id)}"${id === current ? ' selected' : ''}>${escape(label)}</option>`;
@@ -32,18 +33,23 @@ export function createSceneElementAuthoringEditor(root, { getActors = () => [], 
 
   function renderActivation() {
     const enabled = activation.enabled;
+    const phaseBound = Object.hasOwn(activation, 'phase');
     const hazardous = elementType === 'danger' || elementType === 'item';
     const actors = getActors();
     host.hidden = elementType === 'narration';
     host.innerHTML = `<div class="scene-element-trigger-heading"><h3>03 <span>Auslösung & Entdeckung</span></h3><span class="scene-element-private-badge">Vorbereitung</span></div>
       ${revealed ? '<p class="herausforderung-note">Bereits ausgelöst. Die Entdeckungsprüfung und ihre Zielfigur bleiben erhalten.</p>' : `<label class="scene-element-toggle"><input type="checkbox" data-se-field="enabled"${enabled ? ' checked' : ''}${elementType === 'danger' || prepared ? ' disabled' : ''}><span>${elementType === 'danger' ? 'Bis zur Auslösung verborgen halten' : 'Erst nach festgelegten Bedingungen freigeben'}</span></label>`}
-      ${enabled && !revealed ? `<div class="scene-element-trigger-settings"><p class="herausforderung-note">Die Vorbereitung wird einmalig freigegeben. Vorhandene Beiträge zählen nicht mit; erneutes Laden und Bearbeiten erzeugen keinen weiteren Beitrag.</p>
+      ${enabled && !revealed ? `<div class="scene-element-trigger-settings">
+        ${['challenge', 'danger'].includes(elementType) ? `<label><span>Auslöser</span><select data-se-field="trigger">${option('conditions', 'Bedingungen in der Szene', phaseBound ? 'phase' : 'conditions')}${option('phase', 'Manueller Szenenzähler', phaseBound ? 'phase' : 'conditions')}</select></label>` : ''}
+        ${phaseBound ? `<label><span>Verborgen bis Phase</span><input type="number" min="1" max="${MAX_COMBAT_PHASE}" step="1" data-se-field="phase" value="${escape(activation.phase)}"></label>
+        <p class="herausforderung-note">Der Eintrag erscheint direkt nach dem Wechsel auf diese Phase.</p>`
+        : `<p class="herausforderung-note">Die Vorbereitung wird einmalig freigegeben. Vorhandene Beiträge zählen nicht mit; erneutes Laden und Bearbeiten erzeugen keinen weiteren Beitrag.</p>
         <label><span>Bedingungen verknüpfen</span><select data-se-field="mode">${option('any', 'ODER · eine Bedingung genügt', activation.mode)}${option('all', 'UND · alle Bedingungen erforderlich', activation.mode)}</select></label>
         <div class="scene-element-conditions">${activation.conditions.map(conditionRow).join('')}</div>
         <button type="button" class="herausforderung-button" data-se-add-condition${activation.conditions.length >= 6 ? ' disabled' : ''}>＋ Bedingung hinzufügen</button>
-        <label class="scene-element-toggle"><input type="checkbox" data-se-field="showSignal"${activation.showSignal ? ' checked' : ''}><span>Vorher ein neutrales Interaktionssymbol zeigen</span></label>
+        <label class="scene-element-toggle"><input type="checkbox" data-se-field="showSignal"${activation.showSignal ? ' checked' : ''}><span>Vorher ein neutrales Interaktionssymbol zeigen</span></label>`}
         ${hazardous ? `<div class="scene-element-target"><label><span>Wer muss reagieren?</span><select data-se-field="targetMode">${option('random', 'Zufällige beteiligte Figur / interagierende Figur', activation.target.mode)}${option('fixed', 'Festgelegte beteiligte Figur', activation.target.mode)}</select></label>
-          ${activation.target.mode === 'fixed' ? `<label><span>Zielfigur</span><select data-se-field="targetActorId"><option value="">Figur wählen …</option>${actors.map(actor => option(actor.id, actor.name || actor.id, activation.target.actorId)).join('')}</select><small>Die Figur muss bereits in dieser Szene kommentiert haben.</small></label>` : ''}</div>
+          ${activation.target.mode === 'fixed' ? `<label><span>Zielfigur</span><select data-se-field="targetActorId"><option value="">Figur wählen …</option>${actors.map(actor => option(actor.id, actor.name || actor.id, activation.target.actorId)).join('')}</select><small>${phaseBound ? 'Die Figur muss bei Auslösung an der Szene oder am Kampf beteiligt sein.' : 'Die Figur muss bereits in dieser Szene kommentiert haben.'}</small></label>` : ''}</div>
           <label class="scene-element-toggle"><input type="checkbox" data-se-field="detectionEnabled"${activation.detection.enabled ? ' checked' : ''}><span>Bei Auslösung verdeckt auf Entdeckung würfeln</span></label>
           <p class="herausforderung-note">Ein erfüllter passiver Auslöser entdeckt die Gefahr bereits. Sonst entscheidet die Entdeckungsprobe. Erkannt: Vorteil auf die Reaktion. Unbemerkt: Nachteil. Geltende Vor-/Nachteile werden miteinander verrechnet.</p>
           ${activation.detection.enabled ? `<div class="scene-element-detection-fields"><label><span>Entdeckungsprobe</span><select data-se-field="detectionSkill">${skills(activation.detection.skillId)}</select></label><label><span>Entdeckungs-SG</span><input type="number" min="1" max="40" data-se-field="detectionDifficulty" value="${activation.detection.difficulty}"></label><label><span>Benötigter Sinn</span><select data-se-field="detectionSense">${senses(activation.detection.requiredSense)}</select></label></div>` : ''}
@@ -101,11 +107,22 @@ export function createSceneElementAuthoringEditor(root, { getActors = () => [], 
     } else if (field === 'elementType') {
       if (revealed && value === 'danger') return;
       elementType = value; typeChanged = true;
+      if (!['challenge', 'danger'].includes(value)) delete activation.phase;
       completionMode = value === 'puzzle' ? 'any' : 'all';
-      activation.enabled = value === 'danger' || prepared;
+      activation.enabled = value === 'danger' || prepared || !!activation.phase;
       if (value === 'narration') activation.enabled = false;
       if (activation.enabled && !activation.conditions.length) activation.conditions.push({ type: 'comments', minimum: 6 });
-    } else if (field === 'completionMode') completionMode = value;
+    } else if (field === 'trigger') {
+      if (value === 'phase') {
+        activation.phase = 1;
+        activation.showSignal = false;
+      } else {
+        delete activation.phase;
+        if (!activation.conditions.length) activation.conditions.push({ type: 'comments', minimum: 6 });
+      }
+      rerender = true;
+    } else if (field === 'phase') activation.phase = Number(value);
+    else if (field === 'completionMode') completionMode = value;
     else if (field === 'enabled' || field === 'showSignal' || field === 'mode') {
       activation[field] = value; rerender = field === 'enabled';
       if (field === 'enabled' && value && !activation.conditions.length) activation.conditions.push({ type: 'comments', minimum: 6 });

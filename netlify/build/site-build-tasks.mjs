@@ -567,7 +567,8 @@ export const SITE_BUILD_TASKS = [
       testCommand('Karten/tests/gwynthor-map-review.test.mjs', 'Karten/tests/category-catalog.test.mjs',
         'Karten/tests/pin-tools.test.mjs', 'Karten/tests/interactive-marker-layer.test.mjs',
         'Karten/tests/pin-navigation.test.mjs', 'Karten/tests/pert-maesglas.test.mjs',
-        'Karten/tests/northern-farms.test.mjs')]
+        'Karten/tests/northern-farms.test.mjs', 'Karten/tests/pin-placeholder-images.test.mjs'),
+      ['Karten/tools/project-northern-farm-families.mjs', '--check']]
   },
   {
     id: 'scene-presentation', label: 'Fazit reports, optional painted speech and compact scene controls',

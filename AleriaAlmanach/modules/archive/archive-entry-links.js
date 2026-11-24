@@ -20,7 +20,21 @@
       return;
     }
     const characterId = parameters.get('character'), creatureId = parameters.get('creature');
+    const group = parameters.get('characterGroup')?.trim();
+    const subgroup = parameters.get('characterSubgroup')?.trim();
     try {
+      if (group && group.length <= 80) {
+        switchTab('Charaktere');
+        await AleriaCharacterDirectory.load();
+        if (_activeTab !== 'Charaktere') return;
+        if (!_charTabs.includes(group)) {
+          showAppStatus('Diese Figurengruppe wurde nicht gefunden.', 'info');
+          return;
+        }
+        selectCharacterTab(group);
+        if (subgroup && getCharacterSubtabs(group).includes(subgroup)) selectCharacterSubtab(subgroup);
+        return;
+      }
       if (characterId && /^[\w:.-]{1,180}$/.test(characterId)) {
         await loadCharacters();
         if (getCharacterById(characterId)) openCharProfile(characterId);

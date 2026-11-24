@@ -5,6 +5,7 @@ import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-
 import { describeTechniqueDamage } from '../combat-technique-damage.js?v=20260905-party-combat-v1';
 import { summarizeCombatMechanics } from './combat-mechanics-presentation.js';
 import { describeCombatWardDeflection, COMBAT_WARD_PERCENTAGE_HELP } from './combat-ward-presentation.js';
+import { renderCombatConditionPresetOptions, selectCombatConditionPreset } from '../../combat-status/combat-condition-authoring.js';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -132,6 +133,7 @@ function renderEffects(item, {
         <label><span>Schadensart</span><input data-entry-field="effects.${index}.damageType" value="${escapeHtml(effect.damageType)}"></label>
         <label class="check"><input type="checkbox" data-entry-field="effects.${index}.magical"${checked(effect.magical)}> Magisch</label>
         <label><span>Ressource</span><select data-entry-field="effects.${index}.resourceId"><option value="">Keine</option>${state.resources.map(resource => `<option value="${escapeHtml(resource.id)}"${selected(effect.resourceId, resource.id)}>${escapeHtml(resource.name)}</option>`).join('')}</select></label>
+        <label><span>Zustandsvorlage</span><select data-entry-condition-preset="${escapeHtml(path)}.${index}.condition">${renderCombatConditionPresetOptions(effect.condition?.presetId)}</select></label>
         <label><span>Zustandsname</span><input data-entry-field="effects.${index}.condition.name" value="${escapeHtml(effect.condition?.name)}"></label>
         ${effect.condition?.ward?.enabled ? `<p class="wide">Magische Abwehr: ${escapeHtml(describeCombatWardDeflection(effect.condition.ward))}. ${escapeHtml(COMBAT_WARD_PERCENTAGE_HELP)}</p>` : ''}
         <label><span>Zustands-ID / zu entfernen</span><input data-entry-field="effects.${index}.conditionId" value="${escapeHtml(effect.conditionId)}"></label>
@@ -525,6 +527,14 @@ document.addEventListener('input', event => {
 });
 
 document.addEventListener('change', event => {
+  const presetField = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-condition-preset]');
+  if (presetField && state.item) {
+    const path = presetField.dataset.entryConditionPreset;
+    const current = getAtPath(state.item, path);
+    setAtPath(state.item, path, selectCombatConditionPreset(current, presetField.value));
+    render();
+    return;
+  }
   const ruleKind = event.target?.closest?.('#combat-entry-editor-overlay [data-entry-rule-kind]');
   if (ruleKind && state.item) {
     const rule = state.item.triggerRules?.[Number(ruleKind.dataset.entryRuleIndex)];

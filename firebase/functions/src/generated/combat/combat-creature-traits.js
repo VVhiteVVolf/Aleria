@@ -25,7 +25,8 @@ export function isBurning(conditions = []) {
 }
 
 export function isActivelyBurning(conditions = []) {
-  return conditions.some(condition => condition.active !== false && /^(brennend|burning)$/i.test(String(condition.name || '')));
+  return conditions.some(condition => condition.active !== false && condition.id !== 'regeneration-fire-exposure'
+    && (condition.presetId === 'burning' || /^(brennend|burning)$/i.test(String(condition.name || ''))));
 }
 
 export function getBurningArmorPenalty(profile = {}) {
@@ -40,7 +41,7 @@ export function applyRegenerationFireExposure(conditions, profile, damageType, i
     || !trait?.regeneration.blockedByBurning) return conditions;
   const burn = {
     id: 'regeneration-fire-exposure', sourceConditionId: 'regeneration-fire-exposure',
-    presetId: trait.regeneration.timing === 'end' ? 'burned' : 'burning', name: 'Verbrannt', active: true, source: 'Feuerschaden',
+    presetId: 'burned', name: 'Verbrannt', active: true, source: 'Feuerschaden',
     description: `Trollblut setzt aus.${trait.regeneration.burningArmorPenalty ? ` Rüstungsklasse −${trait.regeneration.burningArmorPenalty}.` : ''} Erneutes Feuer erneuert die Dauer.`,
     duration: 'Bis zum Ende des nächsten eigenen Kampfposts',
     durationModel: { kind: 'actor-comments', remainingActorComments: 1 },

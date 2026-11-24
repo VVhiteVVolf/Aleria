@@ -1,4 +1,5 @@
 import { getActionBlockingCondition } from './combat-wait-action.js';
+import { getHealthTaskError, getMovementBlockingCondition } from '../character-health/health-trait-policy.js';
 
 function knownCurrentHitPoints(profile) {
   const value = profile.currentHitPoints ?? profile.hitPoints?.current;
@@ -15,10 +16,19 @@ export function getVoluntaryCombatActionBlock(profile = {}) {
   const condition = getActionBlockingCondition(profile);
   if (condition) return { code: 'conditionBlocksActions', condition,
     message: `${profile.name || 'Die Figur'} kann wegen „${condition.name || 'Aktiver Zustand'}“ keine selbstbestimmte Handlung ausführen. Der Zug kann mit „Abwarten / Zug aussetzen“ verstreichen.` };
+  const needsVoice = profile.profileActionKind && profile.selectedAction?.requiresVoice;
+  const voiceError = needsVoice && getHealthTaskError(profile, { requiresVoice: true });
+  if (voiceError) return { code: 'conditionBlocksActions', message: voiceError };
+  const actionEffects = profile.profileActionKind && profile.selectedAction?.effects;
+  const movementLock = actionEffects?.length && actionEffects.every(effect => isVoluntaryCombatMove(effect)) && getMovementBlockingCondition(profile);
+  if (movementLock) return { code: 'conditionBlocksActions', condition: movementLock, message: `${movementLock.name}: Eigenständige Bewegung ist gesperrt.` };
   const magicLock = ['spell', 'prayer', 'song'].includes(profile.profileActionKind)
-    && (profile.temporaryConditions || []).find(entry => entry.active !== false && entry.blocksMagic === true);
+    && [...(profile.conditions || []), ...(profile.temporaryConditions || [])].find(entry => entry.active !== false && entry.blocksMagic === true);
   return magicLock ? { code: 'conditionBlocksActions', condition: magicLock, message: `${magicLock.name} · Magische Kampfhandlungen sind gesperrt.` } : null;
 }
+
+export const isVoluntaryCombatMove = effect => effect.type === 'move' && (!effect.movementKind || effect.movementKind === 'move')
+  && effect.target === 'self' && !effect.magical && Number(effect.movementMeters) > 0;
 
 export function getCombatReactionBlock(profile = {}) {
   const block = getVoluntaryCombatActionBlock({ ...profile, profileActionKind: '' });

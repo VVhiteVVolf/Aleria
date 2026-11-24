@@ -77,7 +77,13 @@ export function createLocalCharacterDirectory({ fetch: read = globalThis.fetch }
     const repository = await import('../../../CharakterDatenbank/assets/js/character-database-client.mjs');
     return repository.mergeOnlineAndLocalCharacter(online, local);
   }
-  return Object.freeze({ loadMissing, getFull: id => full.get(String(id)), mergeRecord,
+  function loadSnapshot(records) {
+    return records.filter(record => record?.id).map(record => {
+      full.set(String(record.id), record);
+      return projectLocalDirectoryRecord(record);
+    });
+  }
+  return Object.freeze({ loadMissing, loadSnapshot, getFull: id => full.get(String(id)), mergeRecord,
     async loadFull(id) {
       const entry = entriesById.get(String(id));
       return entry ? loadEntry(entry) : full.get(String(id));

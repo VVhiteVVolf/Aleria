@@ -11,25 +11,28 @@ import { getCombatConditionGroups } from './combat-status-model.js?v=20260906-ef
 import { escapeCombatMarkup as e, formatCombatModifier as modifier, renderCombatIcon as image, renderCombatCondition as renderMiniProfileCondition } from '../combat-status/combat-status-view.js?v=20260906-effect-rolls-v1';
 export { escapeCombatMarkup, safeCombatImage } from '../combat-status/combat-status-view.js?v=20260906-effect-rolls-v1';
 
-function renderResource(resource) {
+export function renderCombatProfileResource(resource, { blocked = false, diamond = '' } = {}) {
   const icon = getCombatResourceIconPresentation(resource);
-  return `<li class="${Number(resource.current) <= 0 ? 'is-depleted' : ''}" title="${e(resource.name)}">
-    ${image(icon.source, icon.fallback)}<span>${e(resource.name)}</span><b>${e(resource.current)}/${e(resource.maximum)}</b></li>`;
+  return `<li class="${Number(resource.current) <= 0 ? 'is-depleted' : ''}${blocked ? ' is-blocked' : ''}" title="${e(resource.name)}${blocked ? ' · gesperrt' : ''}">
+    ${image(diamond || icon.source, icon.fallback)}<span>${e(resource.name)}${blocked ? '<small>Gesperrt</small>' : ''}</span><b>${e(resource.current)}/${e(resource.maximum)}</b></li>`;
 }
+const renderResource = resource => renderCombatProfileResource(resource);
 
-export function renderMiniCombatProfile(profile, displayName, options = {}) {
+export function getCombatProfileSummary(profile) {
   const maximum = Math.max(0, Number(profile.maximumHitPoints) || 0);
   const current = Math.max(0, Number(profile.currentHitPoints ?? maximum) || 0);
   const temporary = Math.max(0, Number(profile.temporaryHitPoints) || 0);
   const incapacitated = current === 0 && profile.combat?.canActAtZeroHitPoints !== true;
   const slotIds = new Set(profile.magic?.slotResourceIds || []);
-  const resources = (profile.resources || []).filter(resource => !slotIds.has(resource.id) && !/^spell-slot-/.test(resource.id) && (resource.maximum > 0 || resource.current > 0));
+  const hasBalance = resource => resource.maximum > 0 || resource.current > 0;
+  const isSlot = resource => slotIds.has(resource.id) || /^spell-slot-/.test(resource.id);
+  const resources = (profile.resources || []).filter(resource => !isSlot(resource) && hasBalance(resource));
+  const spellSlots = (profile.resources || []).filter(resource => isSlot(resource) && hasBalance(resource));
   const mainResourceIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus', 'inspiration', 'mana-focus', 'mana', 'focus', 'pact-points', 'celestial-points', 'infernal-points']);
   const mainResources = resources.filter(resource => mainResourceIds.has(resource.id));
   const otherResources = resources.filter(resource => !mainResourceIds.has(resource.id));
   const { temporary: temporaryConditions, permanent: permanentConditions } = getCombatConditionGroups(profile);
   const abilities = (profile.abilities || []).filter(ability => ability.active !== false && ability.usesMaximum > 0);
-  const canManage = options.canManage && !options.historical;
   const loadout = getCombatWeaponLoadout(profile);
   const right = loadout.right || profile.weapon;
   const held = [right, loadout.left].filter(entry => entry && !getDroppedCombatWeapon(profile, entry));
@@ -48,6 +51,16 @@ export function renderMiniCombatProfile(profile, displayName, options = {}) {
   const magicProtection = getEquipmentPassiveDamageProtection(profile, { magical: true });
   const activeProtection = Math.max(0, ...magicProtection.map(effect => effect.amount));
   const protectionSources = magicProtection.filter(effect => effect.amount === activeProtection).map(effect => effect.itemName || effect.name);
+  return { current, maximum, temporary, incapacitated, mainResources, otherResources, spellSlots,
+    temporaryConditions, permanentConditions, abilities, held, weapon, attackModifier, damageModifier,
+    mountLabel, shield, documentation, activeProtection, protectionSources };
+}
+
+export function renderMiniCombatProfile(profile, displayName, options = {}) {
+  const { current, maximum, temporary, incapacitated, mainResources, otherResources, temporaryConditions, permanentConditions,
+    abilities, held, weapon, attackModifier, damageModifier, mountLabel, shield, documentation, activeProtection, protectionSources
+  } = getCombatProfileSummary(profile);
+  const canManage = options.canManage && !options.historical;
   return `<header class="comment-combat-profile-head"><strong>${e(displayName || profile.name)}</strong><span>Stufe ${e(profile.effectiveLevel || 1)}</span></header>
     <div class="comment-combat-profile-context" role="status" aria-live="polite"><span>${e(options.contextLabel || (options.historical ? 'Vor diesem Beitrag' : 'Aktueller Szenenstand'))}${incapacitated ? ' · Kampfunfähig' : ''}</span></div>
     <div class="comment-combat-profile-vitals"><span><small>Lebenspunkte</small><b>${e(current)}/${e(maximum)}${temporary ? ` <em>+${e(temporary)} temporär</em>` : ''}</b><meter min="0" max="${e(maximum || 1)}" value="${e(current)}" aria-label="Lebenspunkte"></meter></span><span><small>RK</small><b>${e(profile.totalDefense ?? 10)}</b></span></div>

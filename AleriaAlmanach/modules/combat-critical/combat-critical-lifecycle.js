@@ -1,4 +1,4 @@
-import { getCommentActorIds } from '../combat/combat-condition-duration.js';
+import { getConditionClockContributors } from '../combat/combat-condition-duration.js';
 import { replacesRuntimeCondition } from '../combat/combat-condition-lifecycle.js';
 
 export function criticalConditionIds(states) {
@@ -46,10 +46,10 @@ export function reconcileCriticalTemporaryOwnership(previous = {}, next = {}) {
 }
 
 // The clock belongs to the whole contribution, including speech and items.
-export function beginCriticalContribution(states, comment) {
+export function beginCriticalContribution(states, comment, clock) {
   const events = [];
   if (comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease || comment.sceneRest) return events;
-  for (const id of getCommentActorIds(comment)) {
+  for (const id of getConditionClockContributors(comment, clock)) {
     const state = states.get(id);
     if (!state) continue;
     const effects = (state.temporaryConditions || []).filter(c => c.active !== false && c.criticalPeriodicLoss > 0);
@@ -64,10 +64,10 @@ export function beginCriticalContribution(states, comment) {
   return events;
 }
 
-export function expireCriticalTemporaryHitPoints(states, comment, previousIds = criticalConditionIds(states)) {
+export function expireCriticalTemporaryHitPoints(states, comment, previousIds = criticalConditionIds(states), clock) {
   const events = [];
   const contributors = comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease || comment.sceneRest
-    ? new Set() : getCommentActorIds(comment);
+    ? new Set() : getConditionClockContributors(comment, clock);
   for (const [id, state] of states) {
     const baselineOwners = new Set(state.encounterAuraTemporaryHitPoints?.baselineCriticalConditionIds || []);
     const expiring = (state.temporaryConditions || []).filter(c => (ownsExpiringTemporaryHitPoints(c) || baselineOwners.has(c.id))

@@ -9,8 +9,8 @@ const PELLINARD_YSABEL_MARRIAGE_ID = 'marriage-pellinard-brandyddyn-ysabel-bronn
 const YSABEL_SOURCE_REVISION = 3;
 const PREPARED_FAMILY_SOURCE = 'Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet.';
 const YSABEL_FORMER_DEFAULT_NOTES = 'Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.';
-const definition = (slug, name, members, emblemDescription, martial = false) => Object.freeze({
-  slug, name, title: name, members: Object.freeze(members), martial,
+const definition = (slug, name, members, emblemDescription, martial = false, sourceRevision = 1) => Object.freeze({
+  slug, name, title: name, members: Object.freeze(members), martial, sourceRevision,
   file: `${name}/${slug}-emblem.png`, emblem: `${EMBLEM_ROOT}/${name}/${slug}-emblem.png`,
   emblemDescription
 });
@@ -21,11 +21,11 @@ export const DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
   definition('curiad', 'Curiad', ['marared-curiad', 'mathon-curiad', 'morcant-curiad'],
     'Eine silberne gepanzerte Faust mit aufrechter Streitkeule auf dunkelrotem Grund.', true),
   definition('caelrith', 'Caelrith', ['urien-caelrith'],
-    'Ein silberner Reiher über drei silbernen Wellenlinien auf dunkelgrünem Grund.'),
+    'Ein silberner Reiher über drei silbernen Wellenlinien auf dunkelgrünem Grund.', true, 2),
   definition('myrgath', 'Myrgath', ['lleucu-myrgath'],
-    'Ein silberner Luchskopf unter einem achtzackigen Stern auf nachtblauem Grund.'),
+    'Ein silberner Luchskopf unter einem achtzackigen Stern auf nachtblauem Grund.', true, 2),
   definition('aelgorn', 'Aelgorn', ['angharad-aelgorn'],
-    'Ein goldener Erlenzweig mit fünf Blättern und zwei dunkelroten Fruchtständen auf tiefgrünem Grund.')
+    'Ein goldener Erlenzweig mit fünf Blättern und zwei dunkelroten Fruchtständen auf tiefgrünem Grund.', true, 2)
 ]);
 
 function familyPerson(id) {
@@ -135,7 +135,7 @@ export const DRAIG_GARDE_COMMONER_HOUSE_FAMILIES = Object.freeze(
   DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS.map(record => buildFamily({
     id: `haus-${record.slug}`, title: `Haus ${record.name}`, emblem: record.emblem,
     houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES[record.slug], martial: record.martial,
-    sourceRevision: record.slug === 'brandyddyn' ? YSABEL_SOURCE_REVISION : 1,
+    sourceRevision: record.slug === 'brandyddyn' ? YSABEL_SOURCE_REVISION : record.sourceRevision,
     roots: record.members.filter(id => id !== 'eurgain-brandyddyn'),
     members: record.slug === 'brandyddyn' ? [...record.members, 'ysabel-bronnor'] : record.members
   }))

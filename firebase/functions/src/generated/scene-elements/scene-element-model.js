@@ -1,4 +1,5 @@
 import { getSkillDefinition, normalizeSkillCheckSettings } from '../skill-checks/skill-check-model.js';
+import { MAX_COMBAT_PHASE } from '../combat-phase-counter/combat-phase-model.js';
 
 export const SCENE_ELEMENT_TYPES = Object.freeze([
   { id: 'challenge', label: 'Herausforderung', shortLabel: 'Aufgabe', symbol: '◇', description: 'Mehrere Wege, Proben und vorbereitete Folgen.' },
@@ -15,6 +16,7 @@ export const getSceneElementType = id => SCENE_ELEMENT_TYPES.find(type => type.i
 export function normalizeSceneElementActivation(value = {}, elementType = 'challenge') {
   const source = value && typeof value === 'object' ? value : {};
   const enabled = source.enabled === true || (elementType === 'danger' && source.enabled !== false);
+  const phase = enabled && ['challenge', 'danger'].includes(elementType) && source.phase ? number(source.phase, 1, 1, MAX_COMBAT_PHASE) : 0;
   const conditions = (Array.isArray(source.conditions) ? source.conditions : enabled ? [{ type: 'comments', minimum: 6 }] : [])
     .slice(0, 6).map(condition => ({
       type: ['comments', 'passive', 'interaction'].includes(condition?.type) ? condition.type : 'comments',
@@ -23,7 +25,8 @@ export function normalizeSceneElementActivation(value = {}, elementType = 'chall
         : condition?.type === 'interaction' ? { sourceId: text(condition.sourceId) }
           : { minimum: number(condition?.minimum, 6, 1, 999) })
     }));
-  return { enabled, showSignal: source.showSignal === true, mode: source.mode === 'all' ? 'all' : 'any', conditions,
+  return { enabled, showSignal: !phase && source.showSignal === true, mode: source.mode === 'all' ? 'all' : 'any', conditions: phase ? [] : conditions,
+    ...(phase ? { phase } : {}),
     saveContext: normalizeSkillCheckSettings({ saveContext: source.saveContext }).saveContext,
     target: { mode: source.target?.mode === 'fixed' ? 'fixed' : 'random', actorId: text(source.target?.actorId) },
     detection: { enabled: source.detection?.enabled !== false, skillId: text(source.detection?.skillId, 60) || 'perception',
@@ -51,11 +54,15 @@ export function validateSceneElementConfiguration(event = {}) {
   if (event.elementType === 'narration' && (event.approaches?.length || activation?.enabled)) error('Ein Erzählelement hat keine Proben oder Auslöser.');
   if (event.elementType === 'danger' && activation?.enabled === false && !event.sceneElementId) error('Eine Gefahr benötigt einen Auslöser.');
   if (!normalizeSceneElementActivation(activation, event.elementType).enabled) return issues;
-  if (activation?.mode != null && !['all', 'any'].includes(activation.mode)) error('Bedingungen mit UND oder ODER verknüpfen.');
-  if (!Array.isArray(activation?.conditions) || !activation.conditions.length || activation.conditions.length > 6) {
+  if (activation?.phase != null) {
+    if (event.elementType && !['challenge', 'danger'].includes(event.elementType)) error('Wähle für die Phasenauslösung eine Herausforderung oder Gefahr.');
+    if (!Number.isInteger(activation.phase) || activation.phase < 1 || activation.phase > MAX_COMBAT_PHASE) error(`Wähle eine Kampfphase zwischen 1 und ${MAX_COMBAT_PHASE}.`);
+    if (activation.showSignal) error('Eine Phasenherausforderung bleibt bis zur Phase verborgen.');
+  } else if (!Array.isArray(activation?.conditions) || !activation.conditions.length || activation.conditions.length > 6) {
     error('Eine bis sechs Auslösebedingungen vorbereiten.'); return issues;
   }
-  for (const condition of activation.conditions) {
+  if (activation?.mode != null && !['all', 'any'].includes(activation.mode)) error('Bedingungen mit UND oder ODER verknüpfen.');
+  for (const condition of activation.phase != null ? [] : activation.conditions) {
     if (!['comments', 'passive', 'interaction'].includes(condition?.type)) error('Unbekannte Auslösebedingung.');
     if (['comments', 'passive'].includes(condition?.type)) {
       const min = condition.type === 'comments' ? 1 : -99, max = condition.type === 'comments' ? 999 : 99;

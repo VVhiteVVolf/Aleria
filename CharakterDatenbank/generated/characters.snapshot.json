@@ -259594,31 +259594,39 @@
       },
       "archived": false,
       "identity": {
-        "worldPersonId": ""
+        "worldPersonId": "person--haus-bwach--cadwgan-bwach"
       },
       "genealogy": {
-        "worldPersonId": "",
-        "sex": "",
-        "status": "",
+        "worldPersonId": "person--haus-bwach--cadwgan-bwach",
+        "sex": "male",
+        "status": "alive",
         "birth": "",
         "death": "",
-        "houseId": "",
-        "houseName": "",
-        "familyRole": "",
+        "houseId": "house-bwach",
+        "houseName": "Haus Bwach",
+        "familyRole": "core",
         "portraitPlaceholder": "",
         "tags": [],
-        "sources": [],
+        "sources": [
+          {
+            "familyId": "haus-bwach",
+            "personId": "cadwgan-bwach",
+            "url": "/Stammbäume/Stammbaum.html?family=haus-bwach&person=cadwgan-bwach&mode=view"
+          }
+        ],
         "relationships": {
           "parents": [],
           "partners": [],
           "children": []
-        }
+        },
+        "familyId": "haus-bwach",
+        "personId": "cadwgan-bwach"
       },
       "localRecord": {
         "recordId": "character--zitteraale-gruppe-ii-fuehrer",
         "path": "records/gruppen/schwarze-zitteraale/cadwgan-bwach--zitteraale-gruppe-ii-fuehrer/character.json",
         "schemaVersion": 1,
-        "contentHash": "c8f7a222f56a9790889de81a91262d29fdf8cd2230c4a541b5822161c702c5f2",
+        "contentHash": "cef42ca8fe260a31227b283cde58244258c10fbc43ee9bd2ce0d6c3b47a3ffc8",
         "firestoreDocumentIds": [
           "zitteraale-gruppe-ii-fuehrer"
         ],
@@ -259629,8 +259637,28 @@
             "label": "Schwarze Zitteraale",
             "source": "archive-tab"
           },
-          "familyStatus": "pending",
-          "families": [],
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-bwach",
+              "familyTitle": "Haus Bwach",
+              "personId": "cadwgan-bwach",
+              "worldPersonId": "person--haus-bwach--cadwgan-bwach",
+              "houseId": "house-bwach",
+              "houseName": "Haus Bwach",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Herrschaft der Gafyr",
+                "Gwaulwyn"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Cadwgan Bwach\",\"title\":\"Die Grüne Natter\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-bwach\",\"portrait\":\"/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-bwach-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-bwach--haus-bwach-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-bwach-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-bwach--haus-bwach-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
           "groups": [
             {
               "id": "schwarze-zitteraale",
@@ -259641,7 +259669,8 @@
           "places": []
         },
         "authoredFeature": "schwarze-zitteraale"
-      }
+      },
+      "worldPersonId": "person--haus-bwach--cadwgan-bwach"
     },
     {
       "id": "person--haus-chamois--abaelor-chamois",
@@ -267458,7 +267487,8 @@
       "Gwynthor": [
         "Gwynthor - Haus Draig",
         "Gwynthor - Haus Swyll",
-        "Gwynthor - Haus Balchder"
+        "Gwynthor - Haus Balchder",
+        "Gwynthor - Haus Chamois"
       ],
       "Felsenritter der Treue": [],
       "Wolfshorn": [],
@@ -267524,6 +267554,33 @@
           "person--haus-balchder--kamber-balchder",
           "person--haus-balchder--blodwen-balchder",
           "person--haus-balchder--rice-balchder"
+        ],
+        "Gwynthor - Haus Chamois": [
+          "person--haus-chamois--abaelor-chamois",
+          "person--haus-chamois--avelwen-chamois",
+          "person--haus-chamois--brenae-chamois",
+          "person--haus-chamois--cyran-chamois",
+          "person--haus-chamois--cyrban-chamois",
+          "person--haus-chamois--dyror-chamois",
+          "person--haus-chamois--firen-chamois",
+          "person--haus-chamois--gwaedric-chamois",
+          "person--haus-chamois--helygys-chamois",
+          "person--haus-chamois--iwrban-chamois",
+          "person--haus-chamois--iwrwyn-chamois",
+          "person--haus-chamois--jannwen-chamois",
+          "person--haus-chamois--kyrban-chamois",
+          "person--haus-chamois--lleirys-chamois",
+          "person--haus-chamois--lleuen-chamois",
+          "person--haus-chamois--neddor-chamois",
+          "person--haus-chamois--nerella-chamois",
+          "person--haus-chamois--peran-chamois",
+          "person--haus-chamois--perwyn-chamois",
+          "person--haus-chamois--rhewella-chamois",
+          "person--haus-chamois--rhydeth-chamois",
+          "person--haus-chamois--sairwen-chamois",
+          "person--haus-chamois--saithan-chamois",
+          "person--haus-chamois--uffyrena-chamois",
+          "person--haus-chamois--uwchyr-chamois"
         ]
       },
       "Die kleinen Dubglais": {},

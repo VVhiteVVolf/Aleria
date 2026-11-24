@@ -1,5 +1,6 @@
 import { parseDamageFormula } from '../combat/rules/combat-mvp-rules.js';
 import { applyTypedCombatDamage, applyCombatHealing, applyTemporaryHitPoints } from '../combat/combat-effect-model.js';
+import { conditionsAfterHealing } from '../combat/combat-condition-lifecycle.js';
 import { normalizeCombatHitPointState, applyCombatResourceCosts } from '../combat/combat-state-model.js';
 import { createManualCombatCondition, buildCombatStatusChange } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
 import { resolveCombatConcentration } from '../combat/combat-concentration-resolution.js';
@@ -117,6 +118,7 @@ export async function applyChallengeCombatBenefits({ actorId, benefits = {}, rec
     } else if (effect.type === 'healing' || effect.type === 'temporary-hit-points') {
       applied = effect.type === 'healing' ? applyCombatHealing(context.state, amount) : applyTemporaryHitPoints(context.state, amount);
       Object.assign(context.state, applied.after);
+      if (effect.type === 'healing') context.state.temporaryConditions = conditionsAfterHealing(context.state.temporaryConditions, applied.before, applied.after);
     } else if (['restore-resource', 'spend-resource'].includes(effect.type)) {
       const resource = context.state.resources.find(item => item.id === effect.resourceId);
       if (!resource) throw Error('Die gewählte Ressource gehört nicht zum Empfänger.');

@@ -18,9 +18,12 @@ export function getAlcoholSensitivity(profile) {
   return effectiveHealthTraits(profile.quirks || []).some(entry => getHealthTraitOrigin(entry)?.alcoholMultiplier) ? 1.25 : 1;
 }
 export function resolveHealthWalkingMovement(profile, meters) {
-  const disabled = effectiveHealthTraits(profile.quirks || []).some(entry => getHealthTraitOrigin(entry)?.disablesWalking);
+  const disabled = getMovementBlockingCondition(profile)
+    || effectiveHealthTraits(profile.quirks || []).some(entry => getHealthTraitOrigin(entry)?.disablesWalking);
   return disabled ? 0 : Math.max(0, Number(meters) || 0);
 }
+const activeConditions = profile => [...(profile.conditions || []), ...(profile.temporaryConditions || [])].filter(entry => entry.active !== false);
+export const getMovementBlockingCondition = profile => activeConditions(profile).find(entry => entry.blocksMovement === true);
 export function getHealthOverlayDelta(profile, conditions) {
   const after = { ...profile, conditions: [...(profile.conditions || []), ...conditions], temporaryConditions: conditions };
   const result = { saveAttributeDeltas: {} };
@@ -38,6 +41,10 @@ export function healthSelectionWarnings(traits) {
 }
 export const selectHealthTrait = (ids, id) => selectGroupedTrait(ids, id, getHealthTraitOrigin);
 export function getHealthTaskError(profile, requirements = {}) {
+  const condition = activeConditions(profile).find(entry => (requirements.sense && entry.blockedSense === requirements.sense)
+    || (requirements.requiresVoice && entry.blocksVoice));
+  if (condition) return `${condition.name}: ${requirements.requiresVoice && condition.blocksVoice
+    ? 'Diese Handlung benötigt eine Stimme.' : 'Der für diese Aufgabe benötigte Sinn ist eingeschränkt.'}`;
   const ids = new Set(effectiveHealthTraits(profile.quirks || []).map(entry => getHealthTraitOrigin(entry)?.id));
   if (requirements.sense === 'vision' && ids.has('development-trait-blind')) return 'Diese Aufgabe benötigt Sicht. Ein geeigneter Ersatzsinn oder eine andere Vorgehensweise ist erforderlich.';
   if (requirements.sense === 'hearing' && ids.has('development-trait-taub')) return 'Diese Aufgabe benötigt Gehör. Wähle eine geeignete andere Wahrnehmungsweise.';

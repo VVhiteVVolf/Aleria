@@ -7,10 +7,12 @@ function harness(chars = [], map = {}) {
   const context = vm.createContext({
     chars, map, window: {}, console,
     document: { addEventListener() {}, getElementById: () => ({ contains: () => true }), querySelector: () => null },
-    normalizeSearchText: value => String(value || '').toLowerCase(),
+    normalizeSearchText: value => String(value || '').toLowerCase().replaceAll('ß', 'ss').normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim(),
     sanitizeImageSrc: value => value || '',
     escapeHtml: value => String(value || '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;'),
     getCharacterAssignedTab: id => Object.keys(map).find(key => map[key].includes(id)) || '',
+    getCharacterAssignedSubtab: id => id === 'chamois' ? 'Gwynthor - Haus Chamois' : '',
     getVisibleCharacterRecords: () => chars.filter(char => !char.archived),
     renderCharGrid() {}, renderCharSubtabs() {}
   });
@@ -89,6 +91,22 @@ test('category selection, category-aware search and reset keep a single visible 
   assert.equal(run('AleriaCharacterCategoryBrowser.hasSelection()'), false);
   assert.equal(run('hasCharacterRegisterSearch()'), false);
   assert.equal(run('AleriaCharacterCategoryBrowser.filterEntries(chars).length'), 2);
+});
+
+test('register search folds spelling and punctuation equally across names, aliases and collection labels', () => {
+  const run = harness([
+    { id: 'chamois', name: 'Avelwen Chamois', aliases: ['Das Juwel'] },
+    { id: 'other', name: 'Séra Maëtha', aliases: ['Frau von der Straße'] },
+  ], { Gwynthor: ['chamois'] });
+  for (const [query, id] of [['Gwynthor – Haus-Chamois', 'chamois'], ['jUwel Avelwen', 'chamois'],
+    ['strasse SéRa', 'other'], ['Straße MaeTha', 'other']]) {
+    run(`_characterRegisterSearch = ${JSON.stringify(query)}`);
+    assert.equal(run('filterCharacterRegisterEntries(chars).map(c => c.id).join()'), id);
+  }
+  run("resetCharacterRegisterFilters({ preserveSearch: true });");
+  assert.equal(run('hasCharacterRegisterSearch()'), true);
+  run('resetCharacterRegisterFilters()');
+  assert.equal(run('hasCharacterRegisterSearch()'), false);
 });
 
 test('dashboard character buttons open profiles while card form controls do not', () => {

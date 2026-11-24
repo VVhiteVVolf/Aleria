@@ -45,7 +45,7 @@ function loadLocalCharacterDatabaseState() {
 }
 
 async function loadLocalCharacterDirectoryState() {
-  const module = await import('./character-directory-local.mjs?v=20261113-register-v2');
+  const module = await import('./character-directory-local.mjs?v=20261124-register-search');
   return module.createLocalCharacterDirectory();
 }
 
@@ -396,16 +396,16 @@ function renameCharTab(tab) {
   renderCharGrid();
 }
 
-function selectCharacterTab(tab) {
+function selectCharacterTab(tab, { preserveSearch = false } = {}) {
   if (!tab) return;
   if (tab !== CHARACTER_ARCHIVE_TAB && !_charTabs.includes(tab)) return;
-  if (typeof resetCharacterRegisterFilters === 'function') resetCharacterRegisterFilters();
+  if (typeof resetCharacterRegisterFilters === 'function') resetCharacterRegisterFilters({ preserveSearch });
   _activeCharTab = tab;
   _activeCharSubtab = 'Alle';
   if (tab !== 'Alle' && typeof setCharacterRegisterViewMode === 'function') {
     setCharacterRegisterViewMode('collections', { render: false });
   }
-  renderCharSubtabs();
+  renderCharSubtabs({ keepGroupDrawer: false });
   renderCharGrid();
 }
 
@@ -413,7 +413,7 @@ function selectCharacterSubtab(subtab) {
   if (typeof resetCharacterRegisterFilters === 'function') resetCharacterRegisterFilters();
   const next = getCharacterSubtabs(_activeCharTab).includes(subtab) ? subtab : 'Alle';
   _activeCharSubtab = next;
-  renderCharSubtabs();
+  renderCharSubtabs({ keepGroupDrawer: false });
   renderCharGrid();
 }
 
@@ -657,14 +657,15 @@ function renderCharacterSubtabRow(parent) {
   return row;
 }
 
-function renderCharSubtabs() {
+function renderCharSubtabs({ keepGroupDrawer = true } = {}) {
   normalizeCharTabState();
   const bar = document.getElementById('char-subtabs-bar');
   if (!bar) return;
+  const expanded = keepGroupDrawer && bar.querySelector('.char-taxonomy-drawer')?.open;
   bar.innerHTML = '';
 
   if (typeof createCharacterTaxonomyNavigator === 'function') {
-    bar.appendChild(createCharacterTaxonomyNavigator());
+    bar.appendChild(createCharacterTaxonomyNavigator({ expanded }));
     const childRow = renderCharacterSubtabRow(_activeCharTab);
     if (childRow) bar.appendChild(childRow);
     return;

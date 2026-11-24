@@ -3,9 +3,11 @@
 import { isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
 import { isTrustedSceneTimeComment } from './scene-recovery-day.js';
 import { getSceneConditionAnchor } from './scene-condition-anchor.js';
+import { getCombatPhaseEvent } from '../combat-phase-counter/combat-phase-model.js';
 export const SCENE_CONTRIBUTION_SECONDS = 5;
 export function isConditionClockContribution(comment = {}) {
   return !comment.sceneElementSignal && !comment.sceneElementInteraction && !comment.sceneElementDetection
+    && !getCombatPhaseEvent(comment) && !comment.combatPhaseReveal
     && !(comment.herausforderung?.elementType && comment.herausforderung.elementType !== 'challenge')
     && !isSilentSceneRegeneration(comment) && comment.importedHistoricalMechanics !== true && (comment.serverValidatedMechanics === true || comment.serverCommitted === true);
 }

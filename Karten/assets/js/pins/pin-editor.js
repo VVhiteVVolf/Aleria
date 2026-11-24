@@ -218,7 +218,7 @@
           <p class="pin-editor-help">Die Mediathek greift auf die vorhandenen Projektordner für Ortszeichen, Wappen und Banner zu.</p>
           ${mediaField({ role: 'crest', label: 'Wappen / Ortsbanner', url: pin.crest, link: pin.crestLink, fallback: '🏰', hint: 'Kleines Wappen im Kopf des Eintrags.' })}
           ${mediaField({ role: 'banner', label: 'Regionsbanner', url: pin.banner, link: pin.bannerLink, fallback: '⚑', hint: 'Optionales Banner der zugehörigen Herrschaft oder Region.' })}
-          ${mediaField({ role: 'img', label: 'Vorschaubild', url: pin.img, link: pin.imgLink, previewUrl: previewImage?.src || pin.img, fallback: '▧', hint: 'Ohne eigenes Bild erscheint das Motiv der Vorlage. Bei „Siedlung / Ort“ oder ohne Vorlage bestimmt die Kategorie das Motiv.' })}
+          ${mediaField({ role: 'img', label: 'Ortskarte', url: pin.img, link: pin.imgLink, previewUrl: previewImage?.src, fallback: '▧', hint: 'Wähle eine Ortskarte aus der Mediathek oder lass das Feld für das Vorlagenmotiv leer.' })}
           <div class="e-row">
             <label class="e-lbl" for="sb-img-position">Bildausschnitt</label>
             <select class="e-sel" id="sb-img-position">
@@ -365,6 +365,13 @@
     const wasNew = session.isNew();
     const changed = session.isDirty();
     const before = session.original();
+    const image = String(currentPin().img || '').trim();
+    if (image && image !== before.img && !window.KartoPinPlaceholders.isMap(image)) {
+      switchTab('medien');
+      document.getElementById('sb-img')?.focus();
+      runtime.toast('Wähle eine Ortskarte aus dem Kartenregister.');
+      return null;
+    }
     const pin = session.commitInto(target);
     pin.title = String(pin.title || '').trim() || 'Unbekannter Ort';
     pin.cat = pin.cat || state().cats[0]?.id || 'other';

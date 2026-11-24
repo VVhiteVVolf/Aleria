@@ -31,7 +31,7 @@ const family = {
     {
       "id": "glynmor-gruender",
       "worldPersonId": "person--glynmor--glynmor-gruender",
-      "name": "Unbekannter Gründer",
+      "name": "Cynfal",
       "title": "Gründer des Hauses",
       "sex": "male",
       "status": "alive",
@@ -45,12 +45,24 @@ const family = {
         "Gründerfamilie"
       ],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "Unbekannter Gründer"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "glynmor-gruenderin",
       "worldPersonId": "person--glynmor--glynmor-gruenderin",
-      "name": "Unbekannte Gründerin",
+      "name": "Unbekannter Partner",
       "title": "Gründerin des Hauses",
       "sex": "female",
       "status": "alive",
@@ -64,7 +76,19 @@ const family = {
         "Gründerfamilie"
       ],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "Unbekannte Gründerin"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-c8d56880",
@@ -387,7 +411,7 @@ const family = {
     {
       "id": "person-46a3c794",
       "worldPersonId": "person--glynmor--person-46a3c794",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "female",
       "status": "alive",
@@ -399,7 +423,19 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-3ccbd57f",
@@ -888,7 +924,7 @@ const family = {
     {
       "id": "person-820804c4",
       "worldPersonId": "person--glynmor--person-820804c4",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "female",
       "status": "alive",
@@ -900,12 +936,24 @@ const family = {
       "lineageRole": "mainline",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-80f3a0c9",
       "worldPersonId": "person--glynmor--person-80f3a0c9",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "female",
       "status": "alive",
@@ -917,12 +965,24 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-d313049f",
       "worldPersonId": "person--glynmor--person-d313049f",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "male",
       "status": "alive",
@@ -934,12 +994,24 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-8f77786a",
       "worldPersonId": "person--glynmor--person-8f77786a",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "male",
       "status": "alive",
@@ -951,7 +1023,19 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-64064dfd",
@@ -1806,7 +1890,7 @@ const family = {
     {
       "id": "person-e6b5df1c",
       "worldPersonId": "person--glynmor--person-e6b5df1c",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "female",
       "status": "alive",
@@ -1818,7 +1902,19 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-fd713153",
@@ -1963,7 +2059,7 @@ const family = {
     {
       "id": "person-fa571002",
       "worldPersonId": "person--glynmor--person-fa571002",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "female",
       "status": "alive",
@@ -1975,12 +2071,24 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-c0b38f3f",
       "worldPersonId": "person--glynmor--person-c0b38f3f",
-      "name": "??",
+      "name": "Unbekannter Partner",
       "title": "",
       "sex": "male",
       "status": "alive",
@@ -1992,12 +2100,24 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-9176e0d0",
       "worldPersonId": "person--glynmor--person-9176e0d0",
-      "name": "??",
+      "name": "Lleirwg",
       "title": "",
       "sex": "male",
       "status": "alive",
@@ -2009,7 +2129,19 @@ const family = {
       "lineageRole": "mainline",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-f8371211",
@@ -2267,7 +2399,7 @@ const family = {
     {
       "id": "person-0289ab3e",
       "worldPersonId": "person--glynmor--person-0289ab3e",
-      "name": "??",
+      "name": "Euron",
       "title": "",
       "sex": "female",
       "status": "alive",
@@ -2279,12 +2411,24 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     },
     {
       "id": "person-e2cc718f",
       "worldPersonId": "person--glynmor--person-e2cc718f",
-      "name": "??",
+      "name": "Tathan",
       "title": "",
       "sex": "male",
       "status": "alive",
@@ -2296,7 +2440,19 @@ const family = {
       "lineageRole": "branch",
       "tags": [],
       "notes": "",
-      "extensions": {}
+      "extensions": {
+        "registryManagedFields": [
+          "name"
+        ],
+        "registryManagedFieldPreviousValues": {
+          "name": [
+            "??"
+          ]
+        },
+        "registryManagedFieldRevisions": {
+          "name": 3
+        }
+      }
     }
   ],
   "partnerships": [
@@ -2935,7 +3091,7 @@ const family = {
       "specialTraits": ""
     },
     "blankFamily": false,
-    "sourceRevision": 2,
+    "sourceRevision": 3,
     "registryManagedEntitySourceRevision": 2,
     "registryManagedDocumentFields": [
       "title",

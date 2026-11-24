@@ -1,12 +1,13 @@
 // Scene-owned condition identity and concentration links. Shared by browser and server.
 import { getActionLockPrevention } from './combat-action-lock-recovery.js';
+import { getCombatConditionRule } from '../combat-status/combat-condition-rules.js';
 export function getConditionConcentrationOwnerId(condition = {}) {
   return String(condition.concentrationOwnerId || condition.durationModel?.concentrationOwnerId || '');
 }
 
 export function conditionsAfterHealing(conditions, before, after) {
   if (!(Number(after?.current) > Number(before?.current))) return conditions;
-  const remaining = conditions.filter(condition => !condition.endsOnHealing);
+  const remaining = conditions.filter(condition => !(condition.endsOnHealing ?? getCombatConditionRule(condition.presetId)?.endsOnHealing));
   return remaining.length === conditions.length ? conditions : remaining;
 }
 

@@ -27,13 +27,15 @@ export function createDraigGardeHouseContent(slug) {
       : 'Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.';
   const emblem = `${definition.emblemDescription} Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet.`;
   const primary = card(people[0]);
+  const contentVersion = definition.sourceRevision === 2 ? '20261124-gwynthor-kriegerfamilien'
+    : isBrandyddyn ? '20261121-ysabel-bronnor-v1' : '20261112-draig-garde-v1';
   return {
     id: family.document.id, name: family.document.title, type: 'Bürgerliches Haus',
     page: 'kleinehaeuser.html', county: 'Celtigerns Wacht', liege: 'Haus Draig', parentHouseId: '',
     territoryId: 'grafschaft-celtigerns-wacht', territoryName: 'Celtigerns Wacht',
     territoryHref: '../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html',
     extinct: false, showMotto: false, registerPage: true, prepared: true,
-    contentVersion: isBrandyddyn ? '20261121-ysabel-bronnor-v1' : '20261112-draig-garde-v1',
+    contentVersion,
     biographySourceRevision: family.extensions.sourceRevision,
     ...(isBrandyddyn ? { biographyPreviousDefaultFingerprints: ['3396:bc6d84f5:38ca1fa3'] } : {}),
     biographyIntroTitle: 'Über das Haus', biographyHistoryTitle: 'Vorbereitete Familienakte',

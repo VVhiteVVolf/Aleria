@@ -84,19 +84,23 @@ function restoreHiddenBuiltinCharacters() {
 
 function getCharsForActiveTab() {
   const records = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getRecords() : getAllCharacterRecords();
-  const byId = new Map(records.map(record => [String(record.id), record]));
   if (_activeCharTab === CHARACTER_ARCHIVE_TAB) {
     return records.filter(char => char.archived);
   }
   if (_activeCharTab === 'Alle') {
     return records.filter(char => !char.archived && char.mergeIdentity?.status !== 'merged');
   }
-  if (_activeCharSubtab && _activeCharSubtab !== 'Alle') {
-    const ids = ((_charSubtabMap[_activeCharTab] || {})[_activeCharSubtab] || []);
-    return ids.map(id => byId.get(String(id))).filter(char => char && !char.archived);
+  const byId = new Map(records.map(record => [String(record.id), record]));
+  for (const record of records) {
+    for (const id of record.localRecord?.firestoreDocumentIds || []) {
+      if (!byId.has(String(id))) byId.set(String(id), record);
+    }
   }
-  const ids = _charTabMap[_activeCharTab] || [];
-  return ids.map(id => byId.get(String(id))).filter(char => char && !char.archived);
+  const ids = _activeCharSubtab && _activeCharSubtab !== 'Alle'
+    ? _charSubtabMap[_activeCharTab]?.[_activeCharSubtab] || []
+    : _charTabMap[_activeCharTab] || [];
+  return [...new Set(ids.map(id => byId.get(String(id))).filter(char => char && !char.archived
+    && char.mergeIdentity?.status !== 'merged'))];
 }
 
 function getCharacterGroupLabel(char) {
@@ -325,6 +329,7 @@ function renderCharGrid() {
   grid.classList.toggle('organizing', _charOrganizeMode);
   grid.classList.toggle('grouped', facetView || _activeCharTab === 'Alle' || groupBySubtab);
 
+  if (typeof renderCharacterRegisterViewToolbar === 'function') renderCharacterRegisterViewToolbar(grid);
   const block = document.querySelector('.section-block[data-tab="Charaktere"]');
   const actions = document.createElement('div');
   actions.className = 'char-archive-actions';
@@ -338,9 +343,6 @@ function renderCharGrid() {
     </div></details>`;
   grid.appendChild(actions);
 
-  if (typeof renderCharacterRegisterViewToolbar === 'function') {
-    renderCharacterRegisterViewToolbar(grid);
-  }
   if (typeof AleriaCharacterDirectory !== 'undefined') AleriaCharacterDirectory.renderStatus(grid);
   if (typeof renderCharacterRegisterGenealogyReadiness === 'function'
     && renderCharacterRegisterGenealogyReadiness(grid)) return;
@@ -435,7 +437,9 @@ function renderCharGrid() {
 
   const narratorMatches = !_archiveSearchNeedle || matchesArchiveSearch(normalizeSearchText('Erzähler neutrale Stimme kein Portrait'));
 
-  if (chars.length === 0 && _activeCharTab === CHARACTER_ARCHIVE_TAB && !_archiveSearchNeedle) {
+  if (!categoryBrowserRendered && chars.length === 0 && typeof hasCharacterRegisterSearch === 'function' && hasCharacterRegisterSearch()) {
+    appendCharacterEmptyHint(grid, getCharacterRegisterSearchEmptyMessage());
+  } else if (chars.length === 0 && _activeCharTab === CHARACTER_ARCHIVE_TAB && !_archiveSearchNeedle) {
     appendCharacterEmptyHint(grid, 'Keine archivierten Charaktere vorhanden.');
   } else if (chars.length === 0 && _activeCharSubtab !== 'Alle' && !_archiveSearchNeedle) {
     appendCharacterEmptyHint(grid, _charOrganizeMode

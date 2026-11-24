@@ -2,6 +2,7 @@
 // A condition owns an explicit clock; prose in `duration` is presentation only.
 import { advanceBerserkForComment } from './combat-berserk-state.js';
 import { createActionLockRecovery } from './combat-action-lock-recovery.js';
+import { getCombatConditionRule, withCombatConditionRules } from '../combat-status/combat-condition-rules.js';
 
 const DURATION_KINDS = new Set([
   'permanent', 'combat', 'actor-comments', 'scene-comments',
@@ -63,13 +64,15 @@ function sanitizeWard(value) {
 }
 
 export function normalizeRuntimeCondition(value = {}, index = 0) {
-  const source = value && typeof value === 'object' ? value : {};
+  const source = withCombatConditionRules(value && typeof value === 'object' ? value : {});
   const legacyActorComments = integer(source.remainingActorComments, 0);
+  const legacySceneComments = integer(source.remainingSceneComments, 0);
+  const defaultTurns = legacyActorComments || legacySceneComments || !getCombatConditionRule(source.presetId) ? 0 : 1;
   const duration = normalizeConditionDuration(
     source.durationModel || {
-      kind: legacyActorComments > 0 ? 'actor-comments' : '',
-      remainingActorComments: legacyActorComments,
-      remainingSceneComments: source.remainingSceneComments
+      kind: legacyActorComments > 0 || defaultTurns ? 'actor-comments' : '',
+      remainingActorComments: legacyActorComments || defaultTurns,
+      remainingSceneComments: legacySceneComments
     },
     source.duration
   );
@@ -108,6 +111,10 @@ export function getCommentActorIds(comment = {}) {
   return ids;
 }
 
+export function getConditionClockContributors(comment, { deferConditionTime } = {}) {
+  return deferConditionTime ? new Set() : getCommentActorIds(comment);
+}
+
 export function advanceConditionForComment(condition = {}, ownerId = '', contributingActorIds = new Set()) {
   const normalized = normalizeRuntimeCondition(condition);
   if (normalized.durationModel.expiresAt === 'actor-start') return { condition: normalized, expired: false, reason: '' };
@@ -138,11 +145,12 @@ export function advanceConditionForComment(condition = {}, ownerId = '', contrib
 }
 
 export function advanceTemporaryConditionsForComment(states, comment = {}, options = {}) {
-  if (!(states instanceof Map)) return states;
+  if (!(states instanceof Map) || options.deferConditionTime) return states;
   if (comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease || comment.sceneRest) return states;
-  const actors = getCommentActorIds(comment);
+  const actors = getConditionClockContributors(comment, options);
   const eligibleByActor = options.conditionIdsByActor instanceof Map ? options.conditionIdsByActor : null;
   states.forEach((state, actorId) => {
+    if (options.eligibleActorIds && !options.eligibleActorIds.has(actorId)) return;
     const conditions = Array.isArray(state?.temporaryConditions) ? state.temporaryConditions : [];
     if (!conditions.length) return;
     const eligibleIds = eligibleByActor ? (eligibleByActor.get(String(actorId)) || new Set()) : null;

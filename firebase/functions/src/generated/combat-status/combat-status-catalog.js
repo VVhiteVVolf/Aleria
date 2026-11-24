@@ -1,29 +1,27 @@
-// Local artwork and explicit Aleria effects; an icon never imports BG3 rules.
 import { HEALTH_STATUS_PRESETS } from '../character-health/health-status-presets.js';
+import { getCombatConditionIconSource } from './combat-condition-icons.js';
+import { COMBAT_CONDITION_RULES } from './combat-condition-rules.js';
+
 const iconRoot = '../IconOrdner/Zauber Icons/Baldurs Gate/Condition Icons/';
+const legacyIcons = {
+  advantage: 'Bless_Condition_Icon.webp', disadvantage: 'Bane_Condition_Icon.webp', blessed: 'Bless_Condition_Icon.webp',
+  protected: 'Shielded_Condition_Icon.webp', bane: 'Bane_Condition_Icon.webp', poisoned: 'Poisoned_Condition_Icon.webp',
+  burning: 'Burning_Condition_Icon.webp', bleeding: 'Bleeding_Condition_Icon.webp', blinded: 'Blinded_Condition_Icon.webp',
+  prone: 'Prone_Condition_Icon.webp', restrained: 'Restrained_Condition_Icon.webp',
+  festgehalten: '/Bestiarium/assets/kreaturenkarten/zeichen/festgehalten.webp', stunned: 'Stunned_Condition_Icon.webp',
+  sleeping: 'Sleeping_Condition_Icon.webp', wet: 'Wet_Condition_Icon.webp'
+};
+
 export const COMBAT_STATUS_PRESETS = Object.freeze([
-  { id: 'advantage', name: 'Vorteil', kind: 'buff', icon: 'Bless_Condition_Icon.webp', description: 'Vorteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Nachteil hebt ihn auf.', mechanics: { attackRollMode: 'advantage', skillRollMode: 'advantage' } },
-  { id: 'disadvantage', name: 'Nachteil', kind: 'debuff', icon: 'Bane_Condition_Icon.webp', description: 'Nachteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Vorteil hebt ihn auf.', mechanics: { attackRollMode: 'disadvantage', skillRollMode: 'disadvantage' } },
-  { id: 'blessed', name: 'Gesegnet', kind: 'buff', icon: 'Bless_Condition_Icon.webp', description: 'Ein Segen begleitet die Figur. Trage die vereinbarten Boni unten ein.' },
-  { id: 'protected', name: 'Geschützt', kind: 'buff', icon: 'Shielded_Condition_Icon.webp', description: 'Vorübergehender Schutz. Rüstungsbonus nach Quelle eintragen.' },
-  { id: 'bane', name: 'Verflucht', kind: 'debuff', icon: 'Bane_Condition_Icon.webp', description: 'Ein Fluch beeinträchtigt die Figur. Mali nach Quelle eintragen.' },
-  { id: 'poisoned', name: 'Vergiftet', kind: 'debuff', icon: 'Poisoned_Condition_Icon.webp', description: 'Giftwirkung und gegebenenfalls Folgeschaden nach Quelle berücksichtigen.' },
-  { id: 'burning', name: 'Brennend', kind: 'debuff', icon: 'Burning_Condition_Icon.webp', description: 'Die Figur brennt. Folgeschaden und Löschbedingungen nach Quelle berücksichtigen.' },
-  { id: 'bleeding', name: 'Blutend', kind: 'debuff', icon: 'Bleeding_Condition_Icon.webp', description: 'Eine blutende Wunde. Folgeschaden und Versorgung nach Quelle berücksichtigen.' },
-  { id: 'blinded', name: 'Geblendet', kind: 'condition', icon: 'Blinded_Condition_Icon.webp', description: 'Die Sicht ist beeinträchtigt. Einschränkungen nach Quelle berücksichtigen.' },
-  { id: 'prone', name: 'Liegend', kind: 'condition', icon: 'Prone_Condition_Icon.webp', blockedResource: 'bonus-action', description: 'Die Figur liegt am Boden und verliert im nächsten eigenen Beitrag ihre Bonusaktion. Kein Bewegungsabzug und kein Angriffsnachteil.' },
-  { id: 'restrained', name: 'Festgesetzt', kind: 'condition', icon: 'Restrained_Condition_Icon.webp', description: 'Die Figur ist festgesetzt. Befreiungsbedingungen nach Quelle berücksichtigen.' },
-  { id: 'festgehalten', name: 'Festgehalten', kind: 'condition', icon: '/Bestiarium/assets/kreaturenkarten/zeichen/festgehalten.webp',
-    description: 'Die Figur wird festgehalten. Handlungen und Reaktionen sind gesperrt, Angriffe haben Nachteil.', mechanics: { blocksActions: true, attackRollMode: 'disadvantage' } },
-  { id: 'stunned', name: 'Betäubt', kind: 'condition', icon: 'Stunned_Condition_Icon.webp', description: 'Die Figur kann keine Kampfhandlungen ausführen. Mit „Abwarten / Zug aussetzen“ vergeht ihr eigener Kampfpost.', mechanics: { blocksActions: true } },
-  { id: 'sleeping', name: 'Schlafend', kind: 'condition', icon: 'Sleeping_Condition_Icon.webp', description: 'Die Figur schläft und kann keine selbstbestimmten Handlungen oder Reaktionen ausführen. „Abwarten / Zug aussetzen“ lässt den Zug verstreichen; Rettungswürfe bleiben möglich. Aufweckbedingungen und Entfernung richten sich nach der Quelle.', mechanics: { blocksActions: true } },
-  { id: 'wet', name: 'Nass', kind: 'condition', icon: 'Wet_Condition_Icon.webp', description: 'Die Figur ist durchnässt. Wechselwirkungen nach Quelle berücksichtigen.' },
+  ...Object.entries(COMBAT_CONDITION_RULES).map(([id, rule]) => ({ id, kind: 'condition', ...rule,
+    icon: legacyIcons[id] || getCombatConditionIconSource({ presetId: id }) })),
   ...HEALTH_STATUS_PRESETS
 ]);
 
 export const STATUS_MODIFIERS = Object.freeze([
   ['attack', 'Angriff'], ['damage', 'Schaden'], ['armorClass', 'Rüstungsklasse'],
-  ['savingThrow', 'Rettungswürfe'], ['skill', 'Fertigkeiten'], ['spellAttack', 'Zauberangriff'], ['spellSaveDc', 'Zauber-SG']
+  ['savingThrow', 'Rettungswürfe'], ['skill', 'Fertigkeiten'], ['spellAttack', 'Zauberangriff'], ['spellSaveDc', 'Zauber-SG'],
+  ['movement', 'Bewegung in Metern'], ['initiative', 'Initiative']
 ]);
 
 export const STATUS_ROLL_MODES = Object.freeze([

@@ -7,14 +7,15 @@ export function conditionsAtContributionStart(conditions = []) {
   return conditions.filter(condition => normalizeRuntimeCondition(condition).durationModel.expiresAt !== 'actor-start');
 }
 
-export function beginCombatContribution(states, comment = {}) {
+export function beginCombatContribution(states, comment = {}, clock = {}) {
   if (comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease || comment.sceneRest) return states;
   for (const actorId of getCommentActorIds(comment)) {
     const state = states.get(actorId);
     if (!state) continue;
     states.set(actorId, { ...state,
-      ...(Array.isArray(state.resources) ? { resources: resetCommentScopedResources(state.resources) } : {}),
-      ...(Array.isArray(state.temporaryConditions) ? { temporaryConditions: conditionsAtContributionStart(state.temporaryConditions) } : {})
+      ...(Array.isArray(state.resources) ? { resources: resetCommentScopedResources(state.resources, clock) } : {}),
+      ...(!clock.deferConditionTime && Array.isArray(state.temporaryConditions)
+        ? { temporaryConditions: conditionsAtContributionStart(state.temporaryConditions) } : {})
     });
   }
   return states;

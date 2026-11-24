@@ -106,12 +106,14 @@ export function ensureCombatActionResources(resources = [], progression = {}) {
   return result;
 }
 
-export function resetCommentScopedResources(resources = []) {
-  return (Array.isArray(resources) ? resources : []).map(resource => (
-    resource?.scope === 'comment' || COMMENT_SCOPED_ACTION_RESOURCE_IDS.has(String(resource?.id || ''))
+export function resetCommentScopedResources(resources = [], { deferActionRecovery, deferConditionTime } = {}) {
+  return (Array.isArray(resources) ? resources : []).map(resource => {
+    const perContribution = resource?.scope === 'comment' || COMMENT_SCOPED_ACTION_RESOURCE_IDS.has(String(resource?.id || ''));
+    const deferred = resource?.category === 'turn-effect' ? deferConditionTime : deferActionRecovery;
+    return perContribution && !deferred
       ? { ...resource, current: Math.max(0, Number(resource.maximum) || 0), scope: 'comment' }
-      : { ...resource }
-  ));
+      : { ...resource };
+  });
 }
 
 export function recoverDailyCombatResources(resources = [], recoveryDayKey = '') {

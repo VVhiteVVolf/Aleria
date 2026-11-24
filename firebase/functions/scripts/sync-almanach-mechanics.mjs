@@ -59,6 +59,7 @@ const files = [
   'combat/combat-wait-action.js',
   'combat/combat-aura-attack.js',
   'combat-status/combat-status-catalog.js',
+  'combat-status/combat-condition-icons.js',
   'combat-status/combat-status-model.js',
   'classes/class-damage-revisions.js',
   'classes/class-special-maneuvers.js',

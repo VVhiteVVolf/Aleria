@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Kriegerisch geprägtes Bürgerhaus · Erhebung ausstehend",
     "parentHouseId": "",
     "rootHouseId": "haus-myrgath",
     "territoryId": "grafschaft-celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Kriegerisch geprägtes Bürgerhaus · Erhebung ausstehend",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -93,10 +93,10 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Myrgath ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Lleucu Myrgath. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus gehört zu den bürgerlichen Häusern Gwynthors. Ein eigener Ritterhausrang ist nicht belegt.",
+    "overview": "Haus Myrgath ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Lleucu Myrgath. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
     "history": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
     "traditions": "Eigene Hausbräuche sind noch nicht überliefert.",
-    "knighthood": "Das Haus gehört zu den bürgerlichen Häusern Gwynthors. Ein eigener Ritterhausrang ist nicht belegt.",
+    "knighthood": "Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
     "holdings": "Eine genaue Wohnstätte, weitere Besitzungen und Einnahmequellen sind nicht belegt.",
     "cultureReligion": "Besondere religiöse Bindungen sind noch nicht überliefert.",
     "conflictsAlliances": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.",

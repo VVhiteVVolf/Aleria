@@ -31,8 +31,9 @@ export function createCharacterDirectoryReader({ projectId, getIdToken, fetch: r
     url.searchParams.set('pageSize', '200');
     CHARACTER_DIRECTORY_FIELDS.forEach(field => url.searchParams.append('mask.fieldPaths', field));
     if (pageToken) url.searchParams.set('pageToken', pageToken);
+    const token = await getIdToken().catch(() => '');
     const response = await read(url, { method: 'GET', cache: 'no-store', signal: signal || AbortSignal.timeout(15000),
-      headers: { Authorization: `Bearer ${await getIdToken()}` } });
+      ...(token ? { headers: { Authorization: `Bearer ${token}` } } : {}) });
     if (!response.ok) throw new Error('Das Figurenverzeichnis konnte nicht geladen werden. Bitte erneut versuchen.');
     const payload = await response.json();
     if (payload.error || (payload.documents && !Array.isArray(payload.documents))) {

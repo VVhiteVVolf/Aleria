@@ -3,6 +3,18 @@ import { getConditionConcentrationOwnerId } from '../generated/combat/combat-con
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
 import { sceneItemEvents } from '../generated/scene-items/scene-items-model.js';
 import { isSilentSceneRegeneration } from '../generated/scene-regeneration/scene-regeneration-model.js';
+import { getCombatPhaseBoundary, getCombatPhaseEvent } from '../generated/combat-phase-counter/combat-phase-model.js';
+
+function phaseActorIds(comment, phase) {
+  const ids = new Set((phase.conditionApplications || []).map(event => event.actorId));
+  for (const event of comment.criticalLifecycle || []) ids.add(event.actorId);
+  for (const event of phase.creatureResolutions || []) ids.add(event.actorId);
+  const boundary = getCombatPhaseBoundary(phase);
+  if (boundary && (!boundary.clock.deferActionRecovery || !boundary.clock.deferConditionTime)) {
+    for (const id of boundary.actorIds) ids.add(id);
+  }
+  return ids;
+}
 
 function concentrationLinks(states) {
   const links = new Map();
@@ -23,6 +35,8 @@ function actorIds(comment = {}) {
   const add = value => { if (value) ids.add(String(value)); };
   add(comment.characterId);
   add(comment.combatStatus?.actorId);
+  const phase = getCombatPhaseEvent(comment);
+  if (phase) for (const actorId of phaseActorIds(comment, phase)) add(actorId);
   for (const participant of comment.combatEncounter?.participants || []) add(participant.actorId);
   for (const participant of comment.sceneRest?.participants || []) add(participant.actorId);
   for (const participant of comment.sceneRegeneration?.participants || []) add(participant.actorId);
@@ -59,6 +73,20 @@ export function findLaterSceneRegenerationBoundary(history = [], commentId) {
   const affected = affectedActorIds(history, index);
   return history.slice(index + 1).find(comment => isSilentSceneRegeneration(comment)
     && [...actorIds(comment)].some(id => affected.has(id))) || null;
+}
+
+export function findLaterCombatPhaseBoundary(history, commentId) {
+  const index = history.findIndex(comment => comment.id === commentId);
+  if (index < 0) return null;
+  const affected = affectedActorIds(history, index);
+  const later = history.slice(index + 1);
+  const revealedPhases = new Set(later.map(comment => comment.combatPhaseReveal?.commentId).filter(Boolean));
+  return later.find(comment => {
+    const phase = getCombatPhaseEvent(comment);
+    if (!phase) return false;
+    const actors = revealedPhases.has(comment.id) ? phase.actorIds || [] : phaseActorIds(comment, phase);
+    return [...actors].some(id => affected.has(id));
+  }) || null;
 }
 
 // Read dependencies matter too: a final summary or a later attack may depend on

@@ -39,8 +39,10 @@ test('the farm uses canonical Pert identity, house and tree links with active im
   assert.deepEqual(pin.residentFamilyIds, ['pert']);
   assert.equal(pin.crest, `/Stammbäume/${record.family.document.emblem}`);
   assert.match(pin.crestLink, /Stammbaum\.html\?family=pert&mode=view$/);
-  assert.match(pin.imgLink, /kleinehaeuser\.html\?haus=pert$/);
-  for (const image of [pin.img, pin.crest, pin.banner]) assert.ok(existsSync(new URL(image.slice(1), root)), image);
+  assert.equal(pin.img, '');
+  assert.equal(pin.imgLink, '');
+  assert.match(pin.text, /kleinehaeuser\.html\?haus=pert/);
+  for (const image of [pin.crest, pin.banner]) assert.ok(existsSync(new URL(image.slice(1), root)), image);
   for (const role of source.personnel) {
     const person = record.family.persons.find(person => person.id === role.personId);
     assert.ok(person, role.personId);

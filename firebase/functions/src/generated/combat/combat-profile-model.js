@@ -11,6 +11,7 @@ import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
 import { normalizeAdditionalClassSelections } from '../character-development/character-training-state.js';
 import { YLVA_DUEL_OWNER_ID, describeYlvaTechniques } from '../characters/personal-techniques/ylva-technique-prose.js';
 import { normalizeConditionDuration } from './combat-condition-duration.js';
+import { withCombatConditionRules } from '../combat-status/combat-condition-rules.js';
 import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute, normalizeWeaponAttributeOverride } from './combat-personal-modifiers.js';
 import { isCombatProfileReadModel, freezeCombatProfileReadModel } from './combat-profile-read-model.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
@@ -183,7 +184,7 @@ function sanitizeMechanicalModifiers(value = {}) {
     ...(source.saveModifiers ? { saveModifiers: sanitizeList(source.saveModifiers, m => ({ kind: normalizeText(m.kind), bonus: normalizeNumber(m.bonus) })) } : {}),
     attack: normalizeNumber(source.attack, 0, -99, 99),
     ...(source.attackScope === 'weapon' ? { attackScope: 'weapon' } : {}),
-    ...(source.blocksActions === true ? { blocksActions: true } : {}),
+    ...(typeof source.blocksActions === 'boolean' ? { blocksActions: source.blocksActions } : {}),
     ...(Number(source.strength) ? { strength: normalizeNumber(source.strength, 0, -30, 30) } : {}),
     damage: normalizeNumber(source.damage, 0, -99, 99),
     ...(source.damageScope === 'all-effects' ? { damageScope: 'all-effects' } : {}),
@@ -492,10 +493,22 @@ function sanitizeQuirkFields(value = {}, index = 0) {
   };
 }
 
+function sanitizeConditionCapabilities(source) {
+  return {
+    ...(typeof source.blocksMovement === 'boolean' ? { blocksMovement: source.blocksMovement } : {}),
+    ...(typeof source.blocksVoice === 'boolean' ? { blocksVoice: source.blocksVoice } : {}),
+    ...(typeof source.blocksMagic === 'boolean' ? { blocksMagic: source.blocksMagic } : {}),
+    ...(['', 'vision', 'hearing', 'smell', 'taste'].includes(source.blockedSense) ? { blockedSense: source.blockedSense } : {}),
+    ...(['', 'action', 'bonus-action', 'reaction'].includes(source.blockedResource) ? { blockedResource: source.blockedResource } : {})
+  };
+}
+
 function sanitizeCondition(value = {}, index = 0) {
-  const source = value && typeof value === 'object' ? value : {};
+  const source = withCombatConditionRules(value && typeof value === 'object' ? value : {}, { scene: false });
   return {
     ...(source.presetId ? { presetId: normalizeText(source.presetId, 80) } : {}),
+    ...(source.statusKind ? { statusKind: normalizeText(source.statusKind, 30) } : {}),
+    ...sanitizeConditionCapabilities(source),
     armorStance: source.armorStance === true,
     stanceGroup: normalizeText(source.stanceGroup, 120),
     tags: normalizeText(source.tags, 500),
@@ -669,6 +682,7 @@ function sanitizeTechniqueSecondarySave(value = {}) {
 }
 
 function sanitizeTechniqueSaveCondition(failure = {}) {
+  failure = withCombatConditionRules(failure);
   return {
     ...(failure.presetId ? { presetId: normalizeText(failure.presetId, 100) } : {}),
     ...(failure.tags ? { tags: normalizeText(failure.tags, 500) } : {}),
@@ -679,7 +693,9 @@ function sanitizeTechniqueSaveCondition(failure = {}) {
     duration: normalizeText(failure.duration, 160), description: normalizeText(failure.description, 1200),
     mechanics: sanitizeMechanicalModifiers(failure.mechanics),
     ...(failure.disarm === true ? { disarm: true } : {}),
-    ...(['action', 'bonus-action', 'reaction'].includes(failure.blockedResource) ? { blockedResource: failure.blockedResource } : {}),
+    ...sanitizeConditionCapabilities(failure),
+    ...(failure.periodicDamage ? { periodicDamage: failure.periodicDamage } : {}),
+    ...(typeof failure.endsOnHealing === 'boolean' ? { endsOnHealing: failure.endsOnHealing } : {}),
     ...(failure.durationModel ? { durationModel: normalizeConditionDuration(failure.durationModel) } : {})
   };
 }

@@ -9,6 +9,7 @@ import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary } from './c
 import { ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from './combat-encounter-outcome.js';
 import { getCombatRulesRelease } from './combat-rules-release.js';
 import { getCombatResolutionTree, getSegmentCombatResolutions, getSegmentSkillCombatResolutions, getSegmentCombatStateReceipts } from './combat-resolution-tree.js';
+import { getCombatPhaseEvent } from '../combat-phase-counter/combat-phase-model.js';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
 export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 2;
@@ -216,6 +217,7 @@ export function deriveCombatEncounterState(comments = []) {
     for (const event of comment.criticalLifecycle || []) if (event.phase === 'start') {
       applyParticipantHitPoints(encounters, event.actorId, event.before?.current, event.after?.current);
     }
+    for (const receipt of getCombatPhaseEvent(comment)?.creatureResolutions || []) applyCombatResolutionToEncounters(encounters, receipt);
     const hasCombatResolution = applyContributionToEncounters(encounters, comment);
     // Conservatively invalidate an open preview after any further mechanical
     // contribution in the scene, including rests and resource use.

@@ -3,7 +3,7 @@
 const AleriaCharacterDirectory = (() => {
   const summaries = new Map(), hydration = new Map(), patches = new Map(), hydratedIds = new Set(), updates = new Map();
   const canonicalTargets = new Map();
-  let request = null, complete = false, error = '', generation = 0, openToken = 0;
+  let request = null, complete = false, error = '', fallbackCount = 0, generation = 0, openToken = 0;
   let localSource = null;
   let cached = null, cachedGeneration = -1, cachedBase = [], cachedById = new Map();
 
@@ -42,15 +42,20 @@ const AleriaCharacterDirectory = (() => {
   function repaint() {
     if (!document.getElementById('char-grid')) return;
     const search = document.querySelector('#char-grid [data-character-register-action="search"]');
-    const focused = search && document.activeElement === search;
+    const selection = search && document.activeElement === search ? [search.selectionStart, search.selectionEnd] : null;
     renderCharSubtabs(); renderCharGrid();
-    if (focused) document.querySelector('#char-grid [data-character-register-action="search"]')?.focus({ preventScroll: true });
+    if (selection) {
+      const current = document.querySelector('#char-grid [data-character-register-action="search"]');
+      current?.focus({ preventScroll: true });
+      current?.setSelectionRange(...selection);
+    }
   }
 
   function load() {
     if (complete || _charactersLoaded) { complete = true; repaint(); return Promise.resolve(); }
     if (request) return request;
     error = '';
+    fallbackCount = 0;
     request = (async () => {
       if (!_fbReady) await waitForFirebaseReady();
       if (!window._fb?.loadCharacterDirectoryPage) {
@@ -75,7 +80,18 @@ const AleriaCharacterDirectory = (() => {
       });
       generation++;
       complete = true;
-    })().catch(failure => { error = failure.message; throw failure; })
+    })().catch(async failure => {
+      error = failure.message;
+      localSource ||= await loadLocalCharacterDirectoryState();
+      const { database } = await loadLocalCharacterDatabaseState();
+      const fallback = localSource.loadSnapshot(database?.characters || []);
+      for (const record of fallback) {
+        if (!summaries.has(String(record.id))) summaries.set(String(record.id), record);
+      }
+      fallbackCount = fallback.length;
+      generation++;
+      if (!fallbackCount) throw failure;
+    })
       .finally(() => { request = null; repaint(); });
     repaint();
     return request;
@@ -92,7 +108,11 @@ const AleriaCharacterDirectory = (() => {
       if (!_fbReady) await waitForFirebaseReady();
       const local = await localSource?.loadFull(key);
       if (!window._fb?.loadCharacters && !local) throw new Error('Das vollständige Charakterprofil ist derzeit nicht erreichbar.');
-      const records = window._fb?.loadCharacters ? await window._fb.loadCharacters({ ids: [key], fromServer: true, throwOnError: true }) : [];
+      const records = window._fb?.loadCharacters
+        ? await window._fb.loadCharacters({ ids: [key], fromServer: true, throwOnError: true }).catch(failure => {
+          if (!local) throw failure;
+          return [];
+        }) : [];
       const online = records.find(item => String(item.id) === key);
       const record = online && local ? await localSource.mergeRecord(online, local) : online || local;
       if (!record) throw new Error('Dieses Charakterprofil ist nicht mehr vorhanden.');
@@ -141,8 +161,9 @@ const AleriaCharacterDirectory = (() => {
     const status = document.createElement('div');
     status.className = 'char-directory-status';
     status.setAttribute('role', 'status');
-    status.textContent = error ? `${error} Die bisher geladenen Figuren bleiben sichtbar. `
-      : `Figurenverzeichnis wird ergänzt … ${summaries.size} Einträge geladen. Die Suche durchsucht die bisher geladenen Einträge.`;
+    status.textContent = error
+      ? fallbackCount ? 'Online-Aktualisierung fehlgeschlagen. Die Suche verwendet den mitgelieferten Figurenbestand. ' : `${error} Bereits geladene Figuren bleiben sichtbar. `
+      : `Figurenverzeichnis wird geladen. ${summaries.size} Einträge verfügbar.`;
     if (error) {
       const retry = document.createElement('button');
       retry.type = 'button'; retry.textContent = 'Erneut laden';
@@ -163,5 +184,6 @@ const AleriaCharacterDirectory = (() => {
     cancelOpening: () => { openToken++; },
     remove: id => { const key = String(id); summaries.delete(key); hydratedIds.delete(key); updates.delete(key); generation++; },
     getVisible: () => getRecords().filter(record => !record.archived && record.mergeIdentity?.status !== 'merged'),
-    isComplete: () => complete || _charactersLoaded });
+    isComplete: () => complete || _charactersLoaded,
+    isLoading: () => !error && !complete && !_charactersLoaded });
 })();

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { database, request, resetScene, history, record, ids, threadId, startFight, active, encounter, prepareAction, commitAction, undo } from './combat-test-context.mjs';
 import { commitCombatStatus } from '../../src/mechanics/commit-combat-status.js';
+import { commitNarrativeCommentOperation } from '../../src/comments/commit-narrative-comment.js';
 import { commitResetCombatParticipants } from '../../src/mechanics/commit-reset-combat-participants.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../../../../AleriaAlmanach/modules/combat/combat-state-model.js';
 import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
@@ -11,6 +12,39 @@ async function change(extra = {}, actorId = ids[1]) {
     expectedLastCommentId: (await history()).at(-1)?.id || '', operation: 'add',
     condition: { name: 'Mut', durationKind: 'actor-comments', durationAmount: 2, mechanics: { attack: 2, armorClass: 1 } }, ...extra }));
 }
+
+test('Vorlagenkennungen, Dauer und Grundwirkungen überstehen das Speichern', async () => {
+  await resetScene();
+  const presets = [['frostburn', 'Frostbrand'], ['paralyzed', 'Gelähmt'], ['dazed', 'Benommen'], ['burned', 'Verbrannt']];
+  for (const [presetId] of presets) await change({ condition: { presetId, durationKind: 'actor-comments', durationAmount: 3 } });
+  const effects = deriveCombatStateFromComments(await history()).get(ids[1]).temporaryConditions;
+  assert.deepEqual(effects.map(effect => [effect.presetId, effect.name]), presets);
+  assert.ok(effects.every(effect => effect.durationModel.remainingActorComments === 3));
+  assert.equal(effects[0].mechanics.movement, -3);
+  assert.equal(effects[1].mechanics.blocksActions, true);
+  assert.equal(effects[2].blockedResource, 'action');
+  assert.equal(effects[3].mechanics.attack, -1);
+});
+
+test('Der erste reine Rede-Beitrag tickt Feuer und Blutung genau einmal samt Serverreplay und Rücknahme', async () => {
+  await resetScene();
+  const actorId = ids[1];
+  const original = resolveCombatProfile(await record(actorId));
+  for (const presetId of ['bleeding', 'burning', 'wet']) {
+    await change({ condition: { presetId, durationKind: 'actor-comments', durationAmount: 2 } });
+  }
+  const saved = await commitNarrativeCommentOperation(request({ entryId: threadId, text: 'Gawain spricht und wartet.', metadata: { characterId: actorId,
+    commentSegments: ['Gawain spricht.', 'Dann schweigt er.'].map(text => ({ text, characterId: actorId, kind: 'speech' })) } }));
+  const ticks = saved.mechanics.criticalLifecycle;
+  assert.deepEqual(ticks.map(event => [event.names[0], event.loss]), [['Blutend', 1], ['Brennend', 1]]);
+  assert.equal((await record(actorId)).combatProfile.hitPoints.current, original.currentHitPoints - 2);
+  const replay = deriveCombatStateFromComments(await history()).get(actorId);
+  assert.equal(replay.current, original.currentHitPoints - 2);
+  assert.ok(replay.temporaryConditions.every(effect => effect.durationModel.remainingActorComments === 1));
+  await undo(saved.id);
+  assert.equal(resolveCombatProfile(await record(actorId)).currentHitPoints, original.currentHitPoints);
+  assert.ok(deriveCombatStateFromComments(await history()).get(actorId).temporaryConditions.every(effect => effect.durationModel.remainingActorComments === 2));
+});
 
 test('Zustände vor dem Kampf bleiben im Kampf wirksam und laufen ab', async () => {
   await resetScene();

@@ -60,8 +60,8 @@ function isCharacterRegisterFacetView(mode = _characterRegisterViewMode) {
   return mode !== 'collections' && mode !== 'categories';
 }
 
-function resetCharacterRegisterFilters() {
-  _characterRegisterSearch = '';
+function resetCharacterRegisterFilters({ preserveSearch = false } = {}) {
+  if (!preserveSearch) _characterRegisterSearch = '';
   if (typeof _characterDashboardFilter !== 'undefined') _characterDashboardFilter = '';
   if (typeof AleriaCharacterCategoryBrowser !== 'undefined') AleriaCharacterCategoryBrowser.reset();
 }
@@ -153,20 +153,39 @@ function getCharacterRegisterSearchText(char) {
     ...(char?.aliases || [])
   ].join(' ');
   const category = typeof AleriaCharacterCategories !== 'undefined' ? AleriaCharacterCategories.classify(char).label : '';
-  return `${base} ${category}`.toLocaleLowerCase('de');
+  const tab = typeof getCharacterAssignedTab === 'function' ? getCharacterAssignedTab(char.id) : '';
+  const subtab = tab && typeof getCharacterAssignedSubtab === 'function' ? getCharacterAssignedSubtab(char.id, tab) : '';
+  return normalizeSearchText([base, category, tab, subtab].filter(Boolean).join(' '));
 }
 
 function hasCharacterRegisterSearch() {
-  return !!_characterRegisterSearch.trim();
+  return !!normalizeSearchText(_characterRegisterSearch);
 }
 
 function filterCharacterRegisterEntries(chars) {
-  const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('de');
-  const needle = normalize(_characterRegisterSearch.trim());
-  if (!needle) return Array.isArray(chars) ? chars : [];
-  const words = needle.split(/\s+/).filter(Boolean);
-  return (Array.isArray(chars) ? chars : [])
-    .filter(char => { const text = normalize(getCharacterRegisterSearchText(char)); return words.every(word => text.includes(word)); });
+  const entries = Array.isArray(chars) ? chars : [];
+  const needle = normalizeSearchText(_characterRegisterSearch);
+  if (!needle) return entries;
+  const words = needle.split(' ');
+  return entries.filter(char => {
+    const text = getCharacterRegisterSearchText(char);
+    return words.every(word => text.includes(word));
+  });
+}
+
+function getCharacterRegisterScope() {
+  if (_activeCharTab !== 'Alle') {
+    return _activeCharSubtab === 'Alle' ? _activeCharTab : `${_activeCharTab} / ${_activeCharSubtab}`;
+  }
+  return AleriaCharacterCategoryBrowser.selectionLabel()
+    || CHARACTER_DASHBOARD_FILTER_LABELS[_characterDashboardFilter] || '';
+}
+
+function getCharacterRegisterSearchEmptyMessage() {
+  if (typeof AleriaCharacterDirectory !== 'undefined' && AleriaCharacterDirectory.isLoading()) {
+    return 'Weitere Figuren werden geladen. Die Trefferliste aktualisiert sich automatisch.';
+  }
+  return 'Keine Treffer im aktuellen Suchbereich.';
 }
 
 function getCharacterRegisterManualGroupLabel(char) {
@@ -292,11 +311,12 @@ function renderCharacterRegisterViewToolbar(grid) {
   const toolbar = document.createElement('section');
   toolbar.className = 'char-register-view-toolbar';
   toolbar.setAttribute('aria-label', 'Charakteransicht und Sortierung');
+  const scope = getCharacterRegisterScope();
   toolbar.innerHTML = `
     <div class="char-register-find-row">
       <label class="char-register-find-control">
-        <span>Wen suchst du?</span>
-        <input type="search" data-character-register-action="search" value="${escapeCharacterRegisterMarkup(_characterRegisterSearch)}" placeholder="Name, Haus, Rolle, Ort oder Alias …" aria-describedby="char-register-search-hint">
+        <span>Charaktere suchen</span>
+        <input type="search" data-character-register-action="search" value="${escapeCharacterRegisterMarkup(_characterRegisterSearch)}" placeholder="Name, Haus, Rolle, Ort oder Alias …" aria-describedby="char-register-search-scope">
       </label>
       ${hasCharacterRegisterSearch() ? '<button class="char-register-search-clear" type="button" data-character-register-action="clear-search">Suche leeren</button>' : ''}
       ${_charOrganizeMode ? `<div class="char-register-group-controls" aria-label="Gruppen ein- oder ausklappen">
@@ -304,7 +324,10 @@ function renderCharacterRegisterViewToolbar(grid) {
         <button type="button" data-character-grid-action="expand-all-groups">Alle aufklappen</button>
       </div>` : ''}
     </div>
-    <small class="char-register-search-hint" id="char-register-search-hint">Mehrere Suchwörter kombinieren, zum Beispiel Name und Ort.</small>
+    <div class="char-register-search-scope" id="char-register-search-scope">
+      <small>Suche in ${escapeCharacterRegisterMarkup(scope || 'allen Figuren')}</small>
+      ${scope && !_charOrganizeMode ? '<button type="button" data-character-register-action="search-all">In allen Figuren suchen</button>' : ''}
+    </div>
     <div class="char-register-view-options" role="group" aria-label="Charaktere gruppieren nach">
       ${CHARACTER_REGISTER_VIEW_OPTIONS.map(option => `
         <button type="button" data-tone="${AleriaCharacterRegisterIcons.tone(option.value)}"
@@ -337,6 +360,13 @@ function handleCharacterRegisterViewClick(event) {
     event.preventDefault();
     _characterRegisterSearch = '';
     renderCharGrid();
+    document.querySelector('#char-grid [data-character-register-action="search"]')?.focus();
+    return;
+  }
+  if (trigger.dataset.characterRegisterAction === 'search-all') {
+    event.preventDefault();
+    setCharacterRegisterViewMode('categories', { render: false });
+    selectCharacterTab('Alle', { preserveSearch: true });
     document.querySelector('#char-grid [data-character-register-action="search"]')?.focus();
     return;
   }

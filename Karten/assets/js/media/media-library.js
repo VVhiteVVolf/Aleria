@@ -7,6 +7,7 @@
     marker: 'Ortszeichen & Pins',
     crest: 'Hauswappen',
     region: 'Orts- & Regionsbanner',
+    map: 'Ortskarten',
     favorites: 'Favoriten',
     recent: 'Zuletzt benutzt',
   };
@@ -60,7 +61,7 @@
       .map(item => normalizedAsset(item, { kind: 'marker', source: 'Karten-Marker-Katalog' }))
       .filter(Boolean);
     const byUrl = new Map();
-    [...generated, ...markers].forEach(item => {
+    [...generated, ...markers, ...(window.KartoPinPlaceholders?.localMaps || [])].forEach(item => {
       let key = item.url;
       try { key = new URL(item.url, document.baseURI).href; } catch { /* keep the original key */ }
       if (!byUrl.has(key)) byUrl.set(key, item);
@@ -72,7 +73,7 @@
     if (target === 'marker') return new Set(['marker']);
     if (target === 'crest') return new Set(['crest', 'region']);
     if (target === 'banner') return new Set(['region', 'crest']);
-    return new Set(['marker', 'crest', 'region']);
+    return new Set(['map']);
   }
 
   function filteredAssets() {

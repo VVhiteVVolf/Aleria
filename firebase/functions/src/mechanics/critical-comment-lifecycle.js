@@ -1,16 +1,27 @@
 import { beginCombatContribution } from '../generated/combat/combat-contribution-start.js';
 import { beginCriticalContribution, criticalConditionIds, expireCriticalTemporaryHitPoints } from '../generated/combat-critical/combat-critical-lifecycle.js';
 import { applyCriticalConsequencesForComment } from '../generated/combat-critical/combat-critical-model.js';
-import { getCommentActorIds } from '../generated/combat/combat-condition-duration.js';
+import { getConditionClockContributors } from '../generated/combat/combat-condition-duration.js';
+import { applyPeriodicConditionDamage, getPeriodicConditionContributors } from '../generated/combat/combat-condition-periodic.js';
+import { resolveCombatTargetProfile } from '../generated/combat/combat-profile-resolver.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+
+function periodicProfileSource(actorId, persistence) {
+  const sceneCreature = persistence?.kind === 'scene-creature';
+  const kind = sceneCreature ? 'creature' : persistence?.kind;
+  const recordId = sceneCreature ? (persistence.sourceCreatureId || persistence.recordId) : persistence?.recordId;
+  if (!['character', 'creature'].includes(kind) || typeof recordId !== 'string' || !recordId || recordId.includes('/')
+    || (!sceneCreature && recordId !== actorId)) return null;
+  return { kind, recordId, key: `${kind}:${recordId}`, persistent: !sceneCreature };
+}
 
 // One shared lifecycle for combat, skills and narrative posts. All reads finish
 // before their caller starts writing; HP changes join its existing transaction.
 export async function prepareCriticalCommentLifecycle({ database, transaction, states, metadata,
-  records = new Map(), entries = new Map(), updates = new Map() }) {
-  beginCombatContribution(states, metadata);
+  records = new Map(), entries = new Map(), updates = new Map(), clock, persistenceByActor }) {
+  beginCombatContribution(states, metadata, clock);
   const previousIds = criticalConditionIds(states);
-  const contributors = getCommentActorIds(metadata);
+  const contributors = getConditionClockContributors(metadata, clock);
   const sources = new Map();
   for (const [id, state] of states) {
     if (!contributors.has(id)) continue;
@@ -21,7 +32,13 @@ export async function prepareCriticalCommentLifecycle({ database, transaction, s
       sources.set(id, { ...p, key: `${p.kind}:${p.recordId}` });
     }
   }
-  for (const p of sources.values()) {
+  const periodicSources = new Map();
+  for (const actorId of getPeriodicConditionContributors(states, metadata, clock).keys()) {
+    const fallback = [...entries.values()].find(entry => entry.recordId === actorId && entry.persistent !== false);
+    const source = periodicProfileSource(actorId, states.get(actorId)?.profilePersistence || persistenceByActor?.get(actorId) || fallback);
+    if (source) periodicSources.set(actorId, source);
+  }
+  for (const p of [...sources.values(), ...periodicSources.values()]) {
     if (records.has(p.key)) continue;
     const entry = { ...p, ref: database.collection(p.kind === 'creature' ? 'creatures' : 'characters').doc(p.recordId) };
     const snapshot = await transaction.get(entry.ref);
@@ -29,10 +46,19 @@ export async function prepareCriticalCommentLifecycle({ database, transaction, s
     records.set(p.key, snapshot.data());
     entries.set(p.key, entry);
   }
-  const events = beginCriticalContribution(states, metadata);
+  const events = beginCriticalContribution(states, metadata, clock);
+  events.push(...applyPeriodicConditionDamage(states, metadata, actorId => {
+    const source = periodicSources.get(actorId);
+    const record = source && records.get(source.key);
+    if (!record) return null;
+    return resolveCombatTargetProfile({ ...record, id: actorId, entityType: source.kind,
+      ...(source.persistent ? {} : { sourceCreatureId: source.recordId }) });
+  }, clock));
   function stage() {
     for (const event of events) {
-      const p = sources.get(event.actorId) || [...entries.values()].find(e => e.recordId === event.actorId && e.persistent !== false);
+      const p = (event.conditionDamage ? periodicSources.get(event.actorId) : sources.get(event.actorId))
+        || [...entries.values()].find(e => e.recordId === event.actorId && e.persistent !== false);
+      if (p?.persistent === false) continue;
       const record = p && records.get(p.key);
       if (!record) continue;
       const state = states.get(event.actorId);
@@ -44,7 +70,7 @@ export async function prepareCriticalCommentLifecycle({ database, transaction, s
   }
   stage();
   return { events, finish(comment) {
-    events.push(...expireCriticalTemporaryHitPoints(states, comment, previousIds), ...applyCriticalConsequencesForComment(states, comment));
+    events.push(...expireCriticalTemporaryHitPoints(states, comment, previousIds, clock), ...applyCriticalConsequencesForComment(states, comment));
     stage();
     return events;
   } };
