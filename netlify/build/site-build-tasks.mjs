@@ -13,6 +13,14 @@ const skellorFamilyInputs = [
   'AleriaAlmanach/modules/schwarze-zitteraale/skellor-people.mjs',
   'AleriaAlmanach/modules/schwarze-zitteraale/arvel-biography.mjs'
 ];
+const bwachFamilyInputs = [
+  'AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-people.mjs',
+  'AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-biography.mjs',
+  'AleriaAlmanach/modules/characters/character-save-guard.js',
+  'AleriaAlmanach/modules/characters/character-import-policy.js',
+  'AleriaAlmanach/modules/image-library/image-library-model.js',
+  'AleriaAlmanach/modules/house-armor/'
+];
 const gwynthorFamilyInputs = [
   'AleriaAlmanach/modules/gwynthor-heime/',
   'AleriaAlmanach/modules/gwynthor-troetzli/',
@@ -815,11 +823,9 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/modules/character-archive/character-archive-ability-icons.js',
       'Kontinente/modules/goldmund/goldmund-context.mjs',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
-      'AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-people.mjs',
-      'AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-biography.mjs',
-      'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs,
+      'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs, ...bwachFamilyInputs,
       ...['gwynthor-seven', 'character-development', 'character-health', 'character-trait-review', 'scene-time', 'biography', 'character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
-        'combat-status', 'combat-styles', 'combat-phase-counter', 'house-armor', 'creatures', 'herausforderung', 'image-library',
+        'combat-status', 'combat-styles', 'combat-phase-counter', 'creatures', 'herausforderung', 'image-library',
         'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'scene-regeneration', 'spell-catalog',
         'item-definitions', 'inventory-use', 'skill-checks']
         .map(feature => `AleriaAlmanach/modules/${feature}/`)],
@@ -973,7 +979,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/package.json', 'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
       'AleriaAlmanach/modules/gofrann-schmiede/', 'AleriaAlmanach/modules/letzte-rast/',
       'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
-      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs, ...skellorFamilyInputs],
+      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs, ...skellorFamilyInputs, ...bwachFamilyInputs],
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser'],
