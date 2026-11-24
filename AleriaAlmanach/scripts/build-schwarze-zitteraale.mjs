@@ -8,6 +8,8 @@ import { ZITTERAALE_LEADERS } from '../modules/schwarze-zitteraale/zitteraale-pe
 import { upgradeZitteraaleEntry } from '../modules/schwarze-zitteraale/zitteraale-migration.mjs';
 import { renderArchiveSectionRegistration } from '../modules/archive/archive-section-registration.mjs';
 import { importAuthoredCharacters } from '../../CharakterDatenbank/scripts/import-authored-characters.mjs';
+import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { createFamilyCandidates } from '../modules/character-genealogy/genealogy-mapping.js';
 
 const root = new URL('../../', import.meta.url);
 const check = process.argv.includes('--check');
@@ -74,6 +76,12 @@ for (const [file, text] of outputs) {
     await writeFile(target, text);
   }
 }
-const imported = await importAuthoredCharacters({ feature: 'schwarze-zitteraale', check, sources: [medrawdPath, cadwganPath] });
+const bwach = FAMILY_REGISTRY.find(record => record.id === 'haus-bwach');
+const imported = await importAuthoredCharacters({
+  feature: 'schwarze-zitteraale',
+  check,
+  sources: [medrawdPath, cadwganPath],
+  familyCandidates: createFamilyCandidates(bwach)
+});
 console.log(JSON.stringify({ module: entry.id, pages: entry.pages.length, groupModules: groups.length,
   groupPages: groups.reduce((sum, group) => sum + group.pages.length, 0), renamedPeople: selected.size, imported }));

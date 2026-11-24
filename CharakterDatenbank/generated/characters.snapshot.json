@@ -259593,20 +259593,16 @@
         }
       },
       "archived": false,
-      "identity": {
-        "worldPersonId": "person--haus-bwach--cadwgan-bwach"
-      },
+      "worldPersonId": "person--haus-bwach--cadwgan-bwach",
       "genealogy": {
         "worldPersonId": "person--haus-bwach--cadwgan-bwach",
         "sex": "male",
         "status": "alive",
-        "birth": "",
-        "death": "",
+        "familyId": "haus-bwach",
         "houseId": "house-bwach",
         "houseName": "Haus Bwach",
+        "personId": "cadwgan-bwach",
         "familyRole": "core",
-        "portraitPlaceholder": "",
-        "tags": [],
         "sources": [
           {
             "familyId": "haus-bwach",
@@ -259615,27 +259611,49 @@
           }
         ],
         "relationships": {
-          "parents": [],
+          "parents": [
+            {
+              "personId": "haus-bwach-gruender",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "unknown",
+              "worldPersonId": "person--haus-bwach--haus-bwach-gruender",
+              "name": "Unbekannter Gründer"
+            },
+            {
+              "personId": "haus-bwach-gruenderin",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "unknown",
+              "worldPersonId": "person--haus-bwach--haus-bwach-gruenderin",
+              "name": "Unbekannte Gründerin"
+            }
+          ],
           "partners": [],
           "children": []
         },
-        "familyId": "haus-bwach",
-        "personId": "cadwgan-bwach"
+        "birth": "",
+        "death": "",
+        "portraitPlaceholder": "auto",
+        "tags": []
       },
+      "identity": {
+        "worldPersonId": "person--haus-bwach--cadwgan-bwach"
+      },
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Herrschaft der Gafyr > Gwaulwyn",
       "localRecord": {
         "recordId": "character--zitteraale-gruppe-ii-fuehrer",
-        "path": "records/gruppen/schwarze-zitteraale/cadwgan-bwach--zitteraale-gruppe-ii-fuehrer/character.json",
+        "path": "records/familien/haus-bwach/cadwgan-bwach--zitteraale-gruppe-ii-fuehrer/character.json",
         "schemaVersion": 1,
-        "contentHash": "cef42ca8fe260a31227b283cde58244258c10fbc43ee9bd2ce0d6c3b47a3ffc8",
+        "contentHash": "fd90cefb862cd9ef08f0e3f3b34ce1fd6eb1bf146b84c683db784a0c3b517051",
         "firestoreDocumentIds": [
           "zitteraale-gruppe-ii-fuehrer"
         ],
         "classification": {
           "primary": {
-            "kind": "group",
-            "id": "schwarze-zitteraale",
-            "label": "Schwarze Zitteraale",
-            "source": "archive-tab"
+            "kind": "family",
+            "id": "haus-bwach",
+            "label": "Haus Bwach"
           },
           "familyStatus": "linked",
           "families": [
@@ -259669,8 +259687,7 @@
           "places": []
         },
         "authoredFeature": "schwarze-zitteraale"
-      },
-      "worldPersonId": "person--haus-bwach--cadwgan-bwach"
+      }
     },
     {
       "id": "person--haus-chamois--abaelor-chamois",
