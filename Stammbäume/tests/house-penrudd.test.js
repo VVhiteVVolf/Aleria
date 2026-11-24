@@ -84,7 +84,7 @@ test('existing map pins retain their positions and link the free farm to the inn
   assert.ok(farm.table.every(row => row.v.trim()), 'all farm details are filled');
   assert.ok(!farm.text.includes('?'), 'authored map text retains its Unicode characters');
   assert.equal(farm.crestLink, inn.crestLink);
-  assert.equal(map.state.pins.find(pin => pin.id === 'gwynthor-marking-058').house, 'Haus Gwerfil');
+  assert.equal(map.state.pins.find(pin => pin.id === 'gwynthor-marking-058').house, 'Familie Gwerfil');
   assert.equal(map.state.pins.find(pin => pin.id === 'gwynthor-marking-071').house, 'Familie Afelwyn');
 });
 
