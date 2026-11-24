@@ -13,13 +13,32 @@
   },
   "classification": {
     "primary": {
-      "kind": "group",
-      "id": "schwarze-zitteraale",
-      "label": "Schwarze Zitteraale",
-      "source": "archive-tab"
+      "kind": "family",
+      "id": "haus-bwach",
+      "label": "Haus Bwach"
     },
-    "familyStatus": "pending",
-    "families": [],
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-bwach",
+        "familyTitle": "Haus Bwach",
+        "personId": "cadwgan-bwach",
+        "worldPersonId": "person--haus-bwach--cadwgan-bwach",
+        "houseId": "house-bwach",
+        "houseName": "Haus Bwach",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Herrschaft der Gafyr",
+          "Gwaulwyn"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Cadwgan Bwach\",\"title\":\"Die Grüne Natter\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-bwach\",\"portrait\":\"/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-bwach-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-bwach--haus-bwach-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-bwach-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-bwach--haus-bwach-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
     "familyAlternatives": [],
     "groups": [
       {
@@ -53,7 +72,14 @@
         }
       ]
     },
-    "familyTree": [],
+    "familyTree": [
+      {
+        "familyId": "haus-bwach",
+        "personId": "cadwgan-bwach",
+        "worldPersonId": "person--haus-bwach--cadwgan-bwach",
+        "url": ""
+      }
+    ],
     "profile": ""
   },
   "sync": {
@@ -64,7 +90,7 @@
     "sourceDocumentIds": [
       "zitteraale-gruppe-ii-fuehrer"
     ],
-    "contentHash": "4934fb1a15dc0e53bb696cc773cceee813d64f8ccf322045cd322f16be2b4134"
+    "contentHash": "fd90cefb862cd9ef08f0e3f3b34ce1fd6eb1bf146b84c683db784a0c3b517051"
   },
   "local": {
     "notes": "",
@@ -463,17 +489,35 @@
         }
       ],
       "relationships": {
-        "parents": [],
+        "parents": [
+          {
+            "personId": "haus-bwach-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-bwach--haus-bwach-gruender",
+            "name": "Unbekannter Gründer"
+          },
+          {
+            "personId": "haus-bwach-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-bwach--haus-bwach-gruenderin",
+            "name": "Unbekannte Gründerin"
+          }
+        ],
         "partners": [],
         "children": []
       },
       "birth": "",
       "death": "",
-      "portraitPlaceholder": "",
+      "portraitPlaceholder": "auto",
       "tags": []
     },
     "identity": {
       "worldPersonId": "person--haus-bwach--cadwgan-bwach"
-    }
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Herrschaft der Gafyr > Gwaulwyn"
   }
 }
