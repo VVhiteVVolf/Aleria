@@ -12,10 +12,7 @@ export function projectNorthernFarmPin(pin, farm) {
   const house = `/Familien Häuser und Clans/kleinehaeuser.html?haus=${farm.familyId}`;
   return {
     ...pin,
-    house: farm.familyName,
     residentFamilyIds: [farm.familyId],
-    crest: `/Stammbäume/${farm.emblem}`,
-    crestLink: tree,
     table: [...table, { k: 'Dienstbindung', v: farm.liegeName }],
     text: [farm.overview, farm.holdings, farm.relations,
       `[URL=${house}]Familienakte[/URL] · [URL=${tree}]Stammbaum[/URL]`].filter(Boolean).join('\n\n')

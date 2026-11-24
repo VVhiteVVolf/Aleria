@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 import { getRegisteredFamily } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { NORTHERN_FARMS } from '../../shared/gwynthor-northern-farms/northern-farms.mjs';
 
 const root = new URL('../../', import.meta.url);
 const directory = new URL('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', import.meta.url);
@@ -13,7 +14,8 @@ for (const pair of [
   ['muoru8isnrnm', 'haus-arwydd'], ['muosoo81765w', 'haus-tlawd'],
   ['gwynthor-marking-003', 'haus-bradrhith'], ['gwynthor-marking-041', 'haus-penrudd'],
   ['gwynthor-marking-048', 'haus-draig'], ['gwynthor-marking-080', 'haus-penrudd'],
-  ['gwynthor-marking-141', 'haus-draig'], ['gwynthor-marking-138', 'haus-twyllod']
+  ['gwynthor-marking-141', 'haus-draig'], ['gwynthor-marking-138', 'haus-twyllod'],
+  ...NORTHERN_FARMS.map(farm => [farm.pinId, farm.familyId])
 ]) mapping.set(...pair);
 
 const houseWindow = {};
@@ -55,8 +57,8 @@ for (const [familyId, nodeId] of byFamily) {
 
 const reviewed = [];
 for (const pin of state.pins) {
-  if (pin.region || pin.house) pin.region = 'Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht';
   const familyId = mapping.get(pin.id);
+  if (pin.region || pin.house || familyId) pin.region = 'Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht';
   if (!familyId) continue;
   const record = getRegisteredFamily(familyId);
   if (!record) throw Error(`Missing existing house: ${familyId}`);
@@ -84,9 +86,10 @@ if (changed) {
   await writeFile(new URL('house-affiliation-review.json', directory), JSON.stringify({
     schemaVersion:1, reviewedAt:data.updatedAt, dataRevision:data.revision,
     policy:'Existing house records only; preserve pin IDs and positions. Distinguish family allegiance, local geography and land ownership. Unregistered families keep their existing proven local affiliation.',
-    sources:['house-seat-sources.json','Stammbäume/assets/js/data/families.registry.js','Familien Häuser und Clans/haeuser.registry.js'],
+    sources:['house-seat-sources.json','Stammbäume/assets/js/data/families.registry.js','Familien Häuser und Clans/haeuser.registry.js',
+      'shared/gwynthor-northern-farms/northern-farms.mjs'],
     pins:reviewed,
-    unreconciledFamilies:state.pins.filter(pin => pin.house && !mapping.has(pin.id)).map(pin => ({pinId:pin.id,house:pin.house,reason:'Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten.'}))
+    unreconciledFamilies:state.pins.filter(pin => pin.house && !mapping.has(pin.id)).map(pin => ({pinId:pin.id,house:pin.house,reason:'Der Abgleich über diese Hausquellen steht aus.'}))
   },null,2)+'\n');
 }
 console.log(JSON.stringify({reviewed:reviewed.length,changed,revision:data.revision}));

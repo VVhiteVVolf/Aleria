@@ -38,7 +38,8 @@ test('each northern farm has a distinct coat and a linked commoner family with t
   const pin = gwynthor.state.pins.find(pin => pin.id === farm.pinId);
   const { family, houseProfile } = getRegisteredFamily(farm.familyId);
   assert.deepEqual(pin.residentFamilyIds, [farm.familyId]);
-  assert.match(pin.crestLink, new RegExp(`family=${farm.familyId}&mode=view$`));
+  assert.match(pin.crestLink, new RegExp(`haus=${farm.familyId}$`));
+  assert.ok(pin.text.includes(`family=${farm.familyId}&mode=view`));
   assert.equal(pin.table.find(row => row.k === 'Dienstbindung').v, farm.liegeName);
   assert.equal(houseProfile.liegeHouseName, farm.liegeName);
   assert.equal(houseProfile.rankId, 'commoner');

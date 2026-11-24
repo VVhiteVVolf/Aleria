@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { getRegisteredFamily } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { NORTHERN_FARMS } from '../../shared/gwynthor-northern-farms/northern-farms.mjs';
 
 const directory = new URL('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', import.meta.url);
 const read = file => JSON.parse(readFileSync(new URL(file, directory), 'utf8'));
@@ -28,7 +29,7 @@ test('corrected source symbols retain unique IDs and their reviewed locations', 
 
 test('known house crests and allegiance chains follow existing family records', () => {
   const review = read('house-affiliation-review.json');
-  assert.equal(review.pins.length, 23);
+  assert.equal(review.pins.length, 23 + NORTHERN_FARMS.length);
   for (const item of review.pins) {
     const record = getRegisteredFamily(item.familyId), place = pin(item.pinId);
     assert.equal(place.crest, `/Stammbäume/${record.family.document.emblem}`);
@@ -36,6 +37,12 @@ test('known house crests and allegiance chains follow existing family records', 
     assert.match(place.region, /Llamreis Ankunft/);
     if (item.familyId === 'haus-arwydd') {
       assert.equal(place.dominionId, '');
+      continue;
+    }
+    const farm = NORTHERN_FARMS.find(farm => farm.pinId === item.pinId);
+    if (farm) {
+      assert.equal(item.liegeHouseId, `haus-${farm.liege.toLowerCase()}`);
+      assert.equal(item.dominionId, place.dominionId || '');
       continue;
     }
     const ownNode = node(place.dominionId);

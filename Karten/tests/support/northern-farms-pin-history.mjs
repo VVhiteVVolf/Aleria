@@ -14,7 +14,14 @@ export function projectNorthernFarmOriginalPins(pins,admission=source){
   const farm = NORTHERN_FARMS.find(item => item.pinId === pin.id);
   if (!farm) return pin;
   const prior = priorFarmPin(farm);
-  assert.deepEqual(pin, projectNorthernFarmPin(prior, farm), `${farm.seat}: reviewed farm projection`);
+  const affiliation = {
+   region: 'Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht',
+   house: farm.familyName,
+   crest: `/Stammbäume/${farm.emblem}`,
+   crestLink: `/Familien Häuser und Clans/kleinehaeuser.html?haus=${farm.familyId}`,
+   banner: '/Stammbäume/assets/images/regions/llamreis-ankunft.png'
+  };
+  assert.deepEqual(pin, projectNorthernFarmPin({ ...prior, ...affiliation }, farm), `${farm.seat}: reviewed farm projection`);
   return structuredClone(prior);
  });
  const current=restored.filter(pin=>pin.id===id);

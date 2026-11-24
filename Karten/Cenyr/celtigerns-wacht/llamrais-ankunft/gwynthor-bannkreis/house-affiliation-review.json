@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-04T05:50:21.173Z",
-  "dataRevision": 15,
+  "reviewedAt": "2026-11-24T00:42:48.909Z",
+  "dataRevision": 33,
   "policy": "Existing house records only; preserve pin IDs and positions. Distinguish family allegiance, local geography and land ownership. Unregistered families keep their existing proven local affiliation.",
   "sources": [
     "house-seat-sources.json",
     "Stammbäume/assets/js/data/families.registry.js",
-    "Familien Häuser und Clans/haeuser.registry.js"
+    "Familien Häuser und Clans/haeuser.registry.js",
+    "shared/gwynthor-northern-farms/northern-farms.mjs"
   ],
   "pins": [
     {
@@ -382,6 +383,31 @@
       "note": ""
     },
     {
+      "pinId": "gwynthor-marking-042",
+      "familyId": "haus-caehelyg",
+      "familyName": "Familie Caehelyg",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Hof Caehelyg",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
       "pinId": "gwynthor-marking-048",
       "familyId": "haus-draig",
       "familyName": "Haus Draig",
@@ -397,6 +423,56 @@
         "secondarySeats": [],
         "liegeHouseId": "",
         "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-058",
+      "familyId": "haus-gwerfil",
+      "familyName": "Familie Gwerfil",
+      "liegeHouseId": "haus-gafyr",
+      "dominionId": "cw-haus-tlawd",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Der Gwerfil-Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-071",
+      "familyId": "haus-afelwyn",
+      "familyName": "Familie Afelwyn",
+      "liegeHouseId": "haus-gafyr",
+      "dominionId": "cw-haus-tlawd",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Die Afelwyn-Obstplantage",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-gafyr",
+        "liegeHouseName": "Haus Gafyr",
         "regionEmblems": {
           "seat": "assets/images/regions/gwynthor.png",
           "barony": "assets/images/regions/llamreis-ankunft.png",
@@ -626,23 +702,83 @@
         }
       },
       "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-169",
+      "familyId": "haus-cyffiniau",
+      "familyName": "Familie Cyffiniau",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "msa3c53viyll7z",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Der Cyffiniau-Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
     }
   ],
   "unreconciledFamilies": [
     {
-      "pinId": "gwynthor-marking-058",
-      "house": "Haus Gwerfil",
-      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+      "pinId": "gwynthor-marking-063",
+      "house": "Familie Halenrhyd",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
     },
     {
-      "pinId": "gwynthor-marking-071",
-      "house": "Familie Afelwyn",
-      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+      "pinId": "gwynthor-marking-066",
+      "house": "Familie Halenrhyd",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
     },
     {
-      "pinId": "gwynthor-marking-169",
-      "house": "Familie Cyffiniau",
-      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+      "pinId": "gwynthor-marking-074",
+      "house": "Familien Bragwen und Eiddfer",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-086",
+      "house": "Familie Brynial",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-091",
+      "house": "Familie Ysgellfor",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-092",
+      "house": "Familie Marchwern",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-107",
+      "house": "Familie Tirfelyn",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-115",
+      "house": "Familie Helfaen",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-118",
+      "house": "Familie Dolweth",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
+    },
+    {
+      "pinId": "gwynthor-marking-157",
+      "house": "Familie Pert",
+      "reason": "Der Abgleich über diese Hausquellen steht aus."
     }
   ]
 }
