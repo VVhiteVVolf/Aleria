@@ -1,0 +1,2766 @@
+{
+  "schema": "aleria.reviewed-family-source-history",
+  "schemaVersion": 1,
+  "baselineCommit": "757e22d5a8c46ea459b855804adb6cc044ccb6e3",
+  "reason": "Gwynthor warrior family branches and matching Bronnor household.",
+  "reviews": [
+    {
+      "familyId": "haus-aelgorn",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Aelgorn: vorbereitete Familienakte mit unbekanntem Gründerpaar, Hauswappen und Überlieferungslücke vor den namentlich bekannten Angehörigen.",
+          "afterPresent": true,
+          "afterSha256": "77dfce10be6e67ae7d25284954d6916dd497e53366a9fc93e126377c5a66b953"
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-aelgorn-gruender",
+              "worldPersonId": "person--haus-aelgorn--haus-aelgorn-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-aelgorn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-aelgorn-gruenderin",
+              "worldPersonId": "person--haus-aelgorn--haus-aelgorn-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-aelgorn",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "angharad-aelgorn",
+              "worldPersonId": "person--haus-aelgorn--angharad-aelgorn",
+              "name": "Angharad Aelgorn",
+              "title": "Leibgardist",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-aelgorn/angharad-aelgorn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-aelgorn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Alterserscheinung: etwa 25–35 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.",
+                "ageEstimate": "etwa 25–35 Jahre"
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "49a1cd86db845868e27d03ae1554ff302ad89371b97607a3d26481b4a401ca77"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-aelgorn-founders",
+              "participantIds": [
+                "haus-aelgorn-gruender",
+                "haus-aelgorn-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "89f1d43a9e4373a0136f6586ae19366fecad7924975fe10834cf127fece7c79d"
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "da5719688840c8a9132b733b7ab8f5ce33fda51bad33cada98e38b69cc47513b"
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "598c37490926ff6526fcedd6836d77e0d0fdc4d2cde761fe46413f0fcf8ecf8b"
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "gap-aelgorn-unrecorded-generations",
+              "parentPartnershipId": "marriage-haus-aelgorn-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "angharad-aelgorn"
+              ],
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": "Nicht einzeln überlieferte Generationen",
+              "notes": "Reiner Darstellungsanker für die unvollständig überlieferte Hauslinie. Keine unmittelbare Elternschaft, Geschwisterschaft oder genaue Generationenzahl wird daraus abgeleitet.",
+              "extensions": {
+                "preparedPlaceholder": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "d53c1f916b99a4e378237ae956df8dd3bfad8d362a6635adc98bf74a21f0b8f1"
+        },
+        {
+          "path": [
+            "family",
+            "view",
+            "focusPersonId"
+          ],
+          "beforePresent": true,
+          "before": "haus-aelgorn-gruender",
+          "afterPresent": true,
+          "afterSha256": "0e693fd43cba3c699434230ce2f9e394c9f604c77cb75804439c8a406987d8a1"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 2,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": true,
+          "before": "2026-11-12",
+          "afterPresent": true,
+          "afterSha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartAlignLineageOriginOverPersonId"
+          ],
+          "beforePresent": true,
+          "before": "angharad-aelgorn",
+          "afterPresent": true,
+          "afterSha256": "0e693fd43cba3c699434230ce2f9e394c9f604c77cb75804439c8a406987d8a1"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet.",
+          "afterPresent": true,
+          "afterSha256": "f2a2a85a684be74ff03bacc0536098d7b513e82891818fa5d5a9f596e7641f8c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 2,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Aelgorn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Angharad Aelgorn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "6f1efa5dc33c9feb3541e17c1eec4383fa6414d9dd6d324d06a7d135b0068625"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "stats"
+          ],
+          "beforePresent": true,
+          "before": [
+            [
+              "Voller Name",
+              "Haus Aelgorn"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ],
+            [
+              "Ursprung",
+              "Gwynthor"
+            ]
+          ],
+          "afterPresent": true,
+          "afterSha256": "b602038a482963f4ddb3adc19e8b5b5dd6150aa17903c2df40a4f06acba9c512"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "biographyText"
+          ],
+          "beforePresent": true,
+          "before": "Haus Aelgorn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Angharad Aelgorn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "6f1efa5dc33c9feb3541e17c1eec4383fa6414d9dd6d324d06a7d135b0068625"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyTitle"
+          ],
+          "beforePresent": true,
+          "before": "Vorbereitete Familienakte",
+          "afterPresent": true,
+          "afterSha256": "835e4d91790ee4914a396f68795783230e4abd79cbf115f1c043bf72dbb13846"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "23dc0e06f9e0d6c8850cc010c2122495f3d7495198319fccb00015247dc76abd"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Ein goldener Erlenzweig mit fünf Blättern und zwei dunkelroten Fruchtständen auf tiefgrünem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "1a4a30634bdf1f59444729612bf728b5d625cdaa9a5191f044eb530b182c9031"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aelgorn/aelgorn-emblem.png",
+              "title": "Haus Aelgorn · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aelgorn"
+            },
+            {
+              "title": "Draig Leibgarde",
+              "text": "Die belegten Gardeämter der Angehörigen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde",
+              "icon": "../AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png"
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "e05a498bba42d0f3c1bfda3b1393f60d08f7a34c4012cd2fad596bfe2e0654e3"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "08d0dcbefe649aeffe271284fd46f7cb5c4c57a56cbe2b38a52c04a13553f78e"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "7765bfab347737b00484edf655546fd4dd0fa9aa071c0715fc5c2cfa51625234"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "f4d10f22f14d91ef30057b06e104230d23f5ef48bd6756209d55cf6c4599403a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "555987dd5a1033fcd549cf9aca0bf6ca4bfa4b11953a3b374cf3227441aee392"
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "preparedTimeJump",
+            "pendingDescendantReview",
+            "sourceRevision",
+            "chartLayoutPolicy",
+            "authoredOn",
+            "chartAlignLineageOriginOverPersonId",
+            "sourceNote",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "8fdc3f1764f92fcfbc51fd02974834bd8f66544a644a903ffb20caa411e59884",
+        "expectedHistoricalSha256": "65f9e620af87bc32e79b5057e2a19b156792a6d727e4a07fdc6cca8107ad142b"
+      }
+    },
+    {
+      "familyId": "haus-brandyddyn",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Brândyddyn: vorbereitete Familienakte mit unbekanntem Gründerpaar, Hauswappen und Überlieferungslücke vor den namentlich bekannten Angehörigen.",
+          "afterPresent": true,
+          "afterSha256": "413db272dd7542eb4f2dbc043688ace34d50d98983eca0329eb56d611aeb0a2f"
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-brandyddyn-gruender",
+              "worldPersonId": "person--haus-brandyddyn--haus-brandyddyn-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-brandyddyn-gruenderin",
+              "worldPersonId": "person--haus-brandyddyn--haus-brandyddyn-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "pellinard-brandyddyn",
+              "worldPersonId": "person--haus-brandyddyn--pellinard-brandyddyn",
+              "name": "Pellinard Brândyddyn",
+              "title": "Leutnant der Leibgarde",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Ehemann Ysabel Bronnors und Vater von drei Kindern. Eurgain ist ihre älteste Tochter. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Die Schreibweise Pellinard Brândyddyn folgt der beschrifteten Gardeübersicht; im Nutzertext auch Pelinard und Brandyddyn.",
+                "ageEstimate": "etwa 45–55 Jahre"
+              }
+            },
+            {
+              "id": "eurgain-brandyddyn",
+              "worldPersonId": "person--haus-brandyddyn--eurgain-brandyddyn",
+              "name": "Eurgain Brândyddyn",
+              "title": "Ritter der Leibgarde",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Tochter von Pellinard Brândyddyn und Ysabel Bronnor. Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Elternschaft gemäß ausdrücklicher Nutzerangabe; Lebensdaten und Familienstand sind nicht bekannt.",
+                "ageEstimate": "etwa 20–30 Jahre"
+              }
+            },
+            {
+              "id": "ysabel-bronnor",
+              "worldPersonId": "person--haus-bronnor--ysabel-bronnor",
+              "name": "Ysabel Bronnor",
+              "title": "Leutnant der Leibgarde",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1695",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Sie ist mit Pellinard Brândyddyn verheiratet und hat mit ihm drei Kinder. Eurgain ist ihre älteste Tochter.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht. Ehe mit Pellinard und drei gemeinsame Kinder gemäß der Nutzerbiografie vom 21. November 2026. Ysabel führt ihren Herkunftsnamen Bronnor. Ihr Jahrgang entspricht dem belegten Geburtsjahr 1695 von Gwendolyn Aderyn.",
+                "registryManagedFields": [
+                  "birth",
+                  "notes"
+                ],
+                "registryManagedFieldRevisions": {
+                  "birth": 3,
+                  "notes": 3
+                },
+                "registryManagedFieldPreviousValues": {
+                  "birth": [
+                    ""
+                  ],
+                  "notes": [
+                    "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten."
+                  ]
+                },
+                "registryManagedExtensionFields": [
+                  "ageEstimate",
+                  "sourceNote"
+                ],
+                "registryManagedExtensionFieldRevisions": {
+                  "ageEstimate": 3,
+                  "sourceNote": 3
+                }
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "79d5cdbaf8dac7fa41ad68a226659d37eae519a7442383464290fa0f900e833f"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-brandyddyn-founders",
+              "participantIds": [
+                "haus-brandyddyn-gruender",
+                "haus-brandyddyn-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            },
+            {
+              "id": "marriage-pellinard-brandyddyn-ysabel-bronnor",
+              "participantIds": [
+                "pellinard-brandyddyn",
+                "ysabel-bronnor"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Heirat vor der Hochzeit von Galahad Draig und Gwendolyn Aderyn.",
+              "extensions": {
+                "chartAlignParentPairOverChildPersonId": "eurgain-brandyddyn",
+                "chartAutomaticSingleChildAlignment": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "31a4cc7edfb88d0efdde78f775cf89b3381c7e141c15879077c142b18c3f4627"
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "parentage-eurgain-brandyddyn",
+              "childId": "eurgain-brandyddyn",
+              "parentIds": [
+                "pellinard-brandyddyn",
+                "ysabel-bronnor"
+              ],
+              "partnershipId": "marriage-pellinard-brandyddyn-ysabel-bronnor",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Bestätigte biologische Elternschaft. Eurgain ist die älteste Tochter von Ysabel Bronnor und Pellinard Brândyddyn.",
+              "extensions": {
+                "registryManagedFields": [
+                  "partnershipId",
+                  "notes"
+                ],
+                "registryManagedFieldRevisions": {
+                  "partnershipId": 3,
+                  "notes": 3
+                },
+                "registryManagedFieldPreviousValues": {
+                  "partnershipId": [
+                    ""
+                  ],
+                  "notes": [
+                    "Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen."
+                  ]
+                },
+                "chartPairParentsWithoutPartnership": false,
+                "registryManagedExtensionFields": [
+                  "chartPairParentsWithoutPartnership"
+                ],
+                "registryManagedExtensionFieldRevisions": {
+                  "chartPairParentsWithoutPartnership": 3
+                }
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "a14884501433e36a146efae6840fa89c44c0f6bf804e6f327ea9853ba3c44100"
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "78b824a5f715f6b4a2437cd255eab1d87ea2a721250d9f0ecfc8fb90efb6f9d8"
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "gap-brandyddyn-unrecorded-generations",
+              "parentPartnershipId": "marriage-haus-brandyddyn-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "pellinard-brandyddyn"
+              ],
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": "Nicht einzeln überlieferte Generationen",
+              "notes": "Reiner Darstellungsanker für die unvollständig überlieferte Hauslinie. Keine unmittelbare Elternschaft, Geschwisterschaft oder genaue Generationenzahl wird daraus abgeleitet.",
+              "extensions": {
+                "preparedPlaceholder": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "5c878382d57682c22d6e7b98cb73ab03d4b8d33b9e252dc7dd46841cc183c915"
+        },
+        {
+          "path": [
+            "family",
+            "view",
+            "focusPersonId"
+          ],
+          "beforePresent": true,
+          "before": "haus-brandyddyn-gruender",
+          "afterPresent": true,
+          "afterSha256": "8f334e769fb129d3de83760987f0e27ec76552f1b4d04638634c7e54e79af9e7"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 3,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": true,
+          "before": "2026-11-12",
+          "afterPresent": true,
+          "afterSha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartAlignLineageOriginOverPersonId"
+          ],
+          "beforePresent": true,
+          "before": "pellinard-brandyddyn",
+          "afterPresent": true,
+          "afterSha256": "8f334e769fb129d3de83760987f0e27ec76552f1b4d04638634c7e54e79af9e7"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet. Die Nutzerbiografie vom 21. November 2026 bestätigt die Ehe von Ysabel und Pellinard. Eurgain bleibt das einzige namentlich belegte ihrer drei Kinder.",
+          "afterPresent": true,
+          "afterSha256": "f2a2a85a684be74ff03bacc0536098d7b513e82891818fa5d5a9f596e7641f8c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 3,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "image"
+          ],
+          "beforePresent": true,
+          "before": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+          "afterPresent": true,
+          "afterSha256": "55e1c83cdb5c23f75203ad31ebdf6c407f1407e642d260a18756f2046bea7d0a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "0773cc8de1b4b8b959bad3e8196dc6702016d7f45b05b2ea052945e92eccc5ea"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "stats"
+          ],
+          "beforePresent": true,
+          "before": [
+            [
+              "Voller Name",
+              "Haus Brândyddyn"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ],
+            [
+              "Ursprung",
+              "Gwynthor"
+            ]
+          ],
+          "afterPresent": true,
+          "afterSha256": "42e8b108db99a269881edc6c071022a5b2a08854a48a6435682bc7ba07e9c324"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "biographyText"
+          ],
+          "beforePresent": true,
+          "before": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "0773cc8de1b4b8b959bad3e8196dc6702016d7f45b05b2ea052945e92eccc5ea"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyTitle"
+          ],
+          "beforePresent": true,
+          "before": "Vorbereitete Familienakte",
+          "afterPresent": true,
+          "afterSha256": "835e4d91790ee4914a396f68795783230e4abd79cbf115f1c043bf72dbb13846"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "61ea78d11104b35c6864597c1d41a44e6af4e68a8a08a87237062c91feab132f"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Zwei gekreuzte silberne Schwerter vor einer kupferroten Flamme auf nachtblauem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "fa977132c261790827e48c286fe07be16f0396234ae21ae835fc99049bb05a13"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png",
+              "title": "Haus Brândyddyn · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brandyddyn"
+            },
+            {
+              "title": "Draig Leibgarde",
+              "text": "Die belegten Gardeämter der Angehörigen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde",
+              "icon": "../AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png"
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "73fb4aeb069ae873a53ca5aa1d0d53263ff978a22be6bd8da2932872f6763807"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "08d0dcbefe649aeffe271284fd46f7cb5c4c57a56cbe2b38a52c04a13553f78e"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "7765bfab347737b00484edf655546fd4dd0fa9aa071c0715fc5c2cfa51625234"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "f4d10f22f14d91ef30057b06e104230d23f5ef48bd6756209d55cf6c4599403a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "555987dd5a1033fcd549cf9aca0bf6ca4bfa4b11953a3b374cf3227441aee392"
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "preparedTimeJump",
+            "pendingDescendantReview",
+            "sourceRevision",
+            "chartLayoutPolicy",
+            "authoredOn",
+            "chartAlignLineageOriginOverPersonId",
+            "sourceNote",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "a63bfd051a5f7a1cc7bd1f2a9e90077c91331c4220f8f3fd784e14fc0335e241",
+        "expectedHistoricalSha256": "17c11dcde80c9f0bef041d526eed6bd3f304d33601fe55329b8a4d649b35e704"
+      }
+    },
+    {
+      "familyId": "haus-bronnor",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-bronnor-gruender",
+              "worldPersonId": "person--haus-bronnor--haus-bronnor-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-bronnor-gruenderin",
+              "worldPersonId": "person--haus-bronnor--haus-bronnor-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "ysabel-bronnor",
+              "worldPersonId": "person--haus-bronnor--ysabel-bronnor",
+              "name": "Ysabel Bronnor",
+              "title": "Leutnant der Leibgarde",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1695",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Sie ist mit Pellinard Brândyddyn verheiratet und hat mit ihm drei Kinder. Eurgain ist ihre älteste Tochter.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht. Ehe mit Pellinard und drei gemeinsame Kinder gemäß der Nutzerbiografie vom 21. November 2026. Ysabel führt ihren Herkunftsnamen Bronnor. Ihr Jahrgang entspricht dem belegten Geburtsjahr 1695 von Gwendolyn Aderyn.",
+                "registryManagedFields": [
+                  "birth",
+                  "notes"
+                ],
+                "registryManagedFieldRevisions": {
+                  "birth": 3,
+                  "notes": 3
+                },
+                "registryManagedFieldPreviousValues": {
+                  "birth": [
+                    ""
+                  ],
+                  "notes": [
+                    "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten."
+                  ]
+                },
+                "registryManagedExtensionFields": [
+                  "ageEstimate",
+                  "sourceNote"
+                ],
+                "registryManagedExtensionFieldRevisions": {
+                  "ageEstimate": 3,
+                  "sourceNote": 3
+                }
+              }
+            },
+            {
+              "id": "pellinard-brandyddyn",
+              "worldPersonId": "person--haus-brandyddyn--pellinard-brandyddyn",
+              "name": "Pellinard Brândyddyn",
+              "title": "Leutnant der Leibgarde",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Ehemann Ysabel Bronnors und Vater von drei Kindern. Eurgain ist ihre älteste Tochter. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Die Schreibweise Pellinard Brândyddyn folgt der beschrifteten Gardeübersicht; im Nutzertext auch Pelinard und Brandyddyn.",
+                "ageEstimate": "etwa 45–55 Jahre"
+              }
+            },
+            {
+              "id": "eurgain-brandyddyn",
+              "worldPersonId": "person--haus-brandyddyn--eurgain-brandyddyn",
+              "name": "Eurgain Brândyddyn",
+              "title": "Ritter der Leibgarde",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Tochter von Pellinard Brândyddyn und Ysabel Bronnor. Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Elternschaft gemäß ausdrücklicher Nutzerangabe; Lebensdaten und Familienstand sind nicht bekannt.",
+                "ageEstimate": "etwa 20–30 Jahre"
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "495595192bf0427487fa3e66d98cc49cb3ccb89bb99138ca2628e22b9701a887"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-bronnor-founders",
+              "participantIds": [
+                "haus-bronnor-gruender",
+                "haus-bronnor-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            },
+            {
+              "id": "marriage-pellinard-brandyddyn-ysabel-bronnor",
+              "participantIds": [
+                "pellinard-brandyddyn",
+                "ysabel-bronnor"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Heirat vor der Hochzeit von Galahad Draig und Gwendolyn Aderyn.",
+              "extensions": {
+                "chartAlignParentPairOverChildPersonId": "eurgain-brandyddyn",
+                "chartAutomaticSingleChildAlignment": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "8219ab1d3c7f93d0cfbd11407aafca666cef2898c1d8127134e0d4332847aa73"
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "parentage-eurgain-brandyddyn",
+              "childId": "eurgain-brandyddyn",
+              "parentIds": [
+                "pellinard-brandyddyn",
+                "ysabel-bronnor"
+              ],
+              "partnershipId": "marriage-pellinard-brandyddyn-ysabel-bronnor",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Bestätigte biologische Elternschaft. Eurgain ist die älteste Tochter von Ysabel Bronnor und Pellinard Brândyddyn.",
+              "extensions": {
+                "registryManagedFields": [
+                  "partnershipId",
+                  "notes"
+                ],
+                "registryManagedFieldRevisions": {
+                  "partnershipId": 3,
+                  "notes": 3
+                },
+                "registryManagedFieldPreviousValues": {
+                  "partnershipId": [
+                    ""
+                  ],
+                  "notes": [
+                    "Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen."
+                  ]
+                },
+                "chartPairParentsWithoutPartnership": false,
+                "registryManagedExtensionFields": [
+                  "chartPairParentsWithoutPartnership"
+                ],
+                "registryManagedExtensionFieldRevisions": {
+                  "chartPairParentsWithoutPartnership": 3
+                }
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "ec20016997d22818c8dcc5488436e34c6f002fee7e8066fb448015360967760d"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 3,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": true,
+          "before": "2026-11-12",
+          "afterPresent": true,
+          "afterSha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet. Die Nutzerbiografie vom 21. November 2026 bestätigt die Ehe von Ysabel und Pellinard. Eurgain bleibt das einzige namentlich belegte ihrer drei Kinder.",
+          "afterPresent": true,
+          "afterSha256": "ba5bfe23a0661b0a8df228411b91a41e5a95c1717bdbe41645fbbee353e14254"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 3,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "495d65b86567065d03436e64560e32f8bac6d43f4a9d7a5adec055786c061a1d"
+        }
+      ],
+      "historicalObjectOrders": [],
+      "proof": {
+        "expectedCurrentSha256": "3d891a26dbd7e0487eccccdbc6c667daad8b4cb06a9374b38f53d6e43efa16dc",
+        "expectedHistoricalSha256": "f8490f4cd8b39912776d60dcaf745e78e3c800e7425671e7ef3ab748d57b554c"
+      }
+    },
+    {
+      "familyId": "haus-caelrith",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Caelrith: vorbereitete Familienakte mit unbekanntem Gründerpaar, Hauswappen und Überlieferungslücke vor den namentlich bekannten Angehörigen.",
+          "afterPresent": true,
+          "afterSha256": "b225bed16084443f1e9c63a978fafbc47f9e7575acb046fc5fcac5fc0aab2d97"
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-caelrith-gruender",
+              "worldPersonId": "person--haus-caelrith--haus-caelrith-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-caelrith",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-caelrith-gruenderin",
+              "worldPersonId": "person--haus-caelrith--haus-caelrith-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-caelrith",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urien-caelrith",
+              "worldPersonId": "person--haus-caelrith--urien-caelrith",
+              "name": "Urien Caelrith",
+              "title": "Ritter der Leibgarde",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-caelrith/urien-caelrith.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-caelrith",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Alterserscheinung: etwa 30–40 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.",
+                "ageEstimate": "etwa 30–40 Jahre"
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "688bf9e6284f96606c93681d66bd7fabc59539d80e557c51f9f0eceaa8fc8ae3"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-caelrith-founders",
+              "participantIds": [
+                "haus-caelrith-gruender",
+                "haus-caelrith-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "cd4d4edb2cca2fb593dc2fe475ddabe22ca8edf95c6e79c948662d1756ceb87e"
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "ac095da06124b8acb958adc49f21d900df7c6eeb222d826cf3df0a353a412df9"
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "8220dfe1d120d04c1e2c4ccf5b0919cb6a873c1a4823f0b4f2b4062680bba71b"
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "gap-caelrith-unrecorded-generations",
+              "parentPartnershipId": "marriage-haus-caelrith-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "urien-caelrith"
+              ],
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": "Nicht einzeln überlieferte Generationen",
+              "notes": "Reiner Darstellungsanker für die unvollständig überlieferte Hauslinie. Keine unmittelbare Elternschaft, Geschwisterschaft oder genaue Generationenzahl wird daraus abgeleitet.",
+              "extensions": {
+                "preparedPlaceholder": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "5e5e435e77e8301c75501635c75e34d754058a4453d1fbf50a44664796bb2bd3"
+        },
+        {
+          "path": [
+            "family",
+            "view",
+            "focusPersonId"
+          ],
+          "beforePresent": true,
+          "before": "haus-caelrith-gruender",
+          "afterPresent": true,
+          "afterSha256": "f9f849042fcb9f9b6c2bc6a5f0835b2e049eb66e169dde397ba30ec6a154abb3"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 2,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": true,
+          "before": "2026-11-12",
+          "afterPresent": true,
+          "afterSha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartAlignLineageOriginOverPersonId"
+          ],
+          "beforePresent": true,
+          "before": "urien-caelrith",
+          "afterPresent": true,
+          "afterSha256": "f9f849042fcb9f9b6c2bc6a5f0835b2e049eb66e169dde397ba30ec6a154abb3"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet.",
+          "afterPresent": true,
+          "afterSha256": "f2a2a85a684be74ff03bacc0536098d7b513e82891818fa5d5a9f596e7641f8c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 2,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Caelrith ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Urien Caelrith. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "135f421e683351e59632ae6760abb58791c2ea77c61cd2a3de3e1f881886ddea"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "stats"
+          ],
+          "beforePresent": true,
+          "before": [
+            [
+              "Voller Name",
+              "Haus Caelrith"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ],
+            [
+              "Ursprung",
+              "Gwynthor"
+            ]
+          ],
+          "afterPresent": true,
+          "afterSha256": "17c31fe8381cd0a976727de8f6551ca648033e23f95aa433026b9e35986bf022"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "biographyText"
+          ],
+          "beforePresent": true,
+          "before": "Haus Caelrith ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Urien Caelrith. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "135f421e683351e59632ae6760abb58791c2ea77c61cd2a3de3e1f881886ddea"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyTitle"
+          ],
+          "beforePresent": true,
+          "before": "Vorbereitete Familienakte",
+          "afterPresent": true,
+          "afterSha256": "835e4d91790ee4914a396f68795783230e4abd79cbf115f1c043bf72dbb13846"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "7c80debad8fadd446164dee2f5497e86fef89e6b0d6ce50738b3fa26f692fba6"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Ein silberner Reiher über drei silbernen Wellenlinien auf dunkelgrünem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "ea1e22a0369273c868353353719537f524eafb2a6f4641c5e9d14b0c4d0b72ac"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caelrith/caelrith-emblem.png",
+              "title": "Haus Caelrith · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caelrith"
+            },
+            {
+              "title": "Draig Leibgarde",
+              "text": "Die belegten Gardeämter der Angehörigen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde",
+              "icon": "../AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png"
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "91990783286679c1ff13033eaca6dcdbbfc104d9ab624af9c685f809b4fd760d"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "08d0dcbefe649aeffe271284fd46f7cb5c4c57a56cbe2b38a52c04a13553f78e"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "7765bfab347737b00484edf655546fd4dd0fa9aa071c0715fc5c2cfa51625234"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "f4d10f22f14d91ef30057b06e104230d23f5ef48bd6756209d55cf6c4599403a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "555987dd5a1033fcd549cf9aca0bf6ca4bfa4b11953a3b374cf3227441aee392"
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "preparedTimeJump",
+            "pendingDescendantReview",
+            "sourceRevision",
+            "chartLayoutPolicy",
+            "authoredOn",
+            "chartAlignLineageOriginOverPersonId",
+            "sourceNote",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "7fede05d58b63b01d5d163d0be8777f75fbccf231b3acb1ca10fdcd253de5dab",
+        "expectedHistoricalSha256": "a807337b7cfaaed792fdce09cabf88c7f685d8d7df40e3946975c271f97c03b7"
+      }
+    },
+    {
+      "familyId": "haus-curiad",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Curiad: vorbereitete Familienakte mit unbekanntem Gründerpaar, Hauswappen und Überlieferungslücke vor den namentlich bekannten Angehörigen.",
+          "afterPresent": true,
+          "afterSha256": "be6b512b12ad556ad4bf3b9a4631ec67883f0bd2a4c512a42b98e4ef3ab7d6bc"
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-curiad-gruender",
+              "worldPersonId": "person--haus-curiad--haus-curiad-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-curiad",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-curiad-gruenderin",
+              "worldPersonId": "person--haus-curiad--haus-curiad-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-curiad",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "marared-curiad",
+              "worldPersonId": "person--haus-curiad--marared-curiad",
+              "name": "Marared Curiad",
+              "title": "Hauptmann der Leibgarde",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-curiad/marared-curiad.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-curiad",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Alterserscheinung: etwa 60–70 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.",
+                "ageEstimate": "etwa 60–70 Jahre"
+              }
+            },
+            {
+              "id": "mathon-curiad",
+              "worldPersonId": "person--haus-curiad--mathon-curiad",
+              "name": "Mathon Curiad",
+              "title": "Ritter der Leibgarde",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-curiad/mathon-curiad.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-curiad",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Alterserscheinung: etwa 30–40 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Bereits vorhandene Almanachfigur. Der neue Garderang ersetzt nur die überholte Rollenangabe als Waffenknecht; bestehende Aktenidentität und übrige persönliche Daten bleiben erhalten.",
+                "ageEstimate": "etwa 30–40 Jahre",
+                "almanachCharacterId": "HWUuhs0eUIaWLQ5IwdE2"
+              }
+            },
+            {
+              "id": "morcant-curiad",
+              "worldPersonId": "person--haus-curiad--morcant-curiad",
+              "name": "Morcant Curiad",
+              "title": "Leibgardist",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-curiad/morcant-curiad.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-curiad",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.",
+                "ageEstimate": "etwa 20–30 Jahre"
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "861e12047153ef8237f1bc9c89c4e2826ac87fbc2e7910005e435c098b37b090"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-curiad-founders",
+              "participantIds": [
+                "haus-curiad-gruender",
+                "haus-curiad-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "66381f612cc542cf42ac5cd7d10bc0787b5e59185972f3745e8315f12a821540"
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "952985b6db67363e0f9fbf9131c2329fb86e20302dbea183117733e30634cb99"
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "0be3a57656b124152df219eae6685314055e7d7ca4127a25f5fde8be92c5f721"
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "gap-curiad-unrecorded-generations",
+              "parentPartnershipId": "marriage-haus-curiad-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "marared-curiad",
+                "mathon-curiad",
+                "morcant-curiad"
+              ],
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": "Nicht einzeln überlieferte Generationen",
+              "notes": "Reiner Darstellungsanker für die unvollständig überlieferte Hauslinie. Keine unmittelbare Elternschaft, Geschwisterschaft oder genaue Generationenzahl wird daraus abgeleitet.",
+              "extensions": {
+                "preparedPlaceholder": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "2cb8c307dd34c86c728b94c5253bb95a9e40f0c1bf6dd4447a49946494caff3d"
+        },
+        {
+          "path": [
+            "family",
+            "view",
+            "focusPersonId"
+          ],
+          "beforePresent": true,
+          "before": "haus-curiad-gruender",
+          "afterPresent": true,
+          "afterSha256": "05f76f4561eb285e05bcad6ee54344fc309aaa350824498516508f6318579c21"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 1,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": true,
+          "before": "2026-11-12",
+          "afterPresent": true,
+          "afterSha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet.",
+          "afterPresent": true,
+          "afterSha256": "f2a2a85a684be74ff03bacc0536098d7b513e82891818fa5d5a9f596e7641f8c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 1,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Curiad ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Marared Curiad, Mathon Curiad, Morcant Curiad. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "2466fa2d6193e8a114dba9054a2141fd84f744d25fb7fac70a6651c716383bd8"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "stats"
+          ],
+          "beforePresent": true,
+          "before": [
+            [
+              "Voller Name",
+              "Haus Curiad"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ],
+            [
+              "Ursprung",
+              "Gwynthor"
+            ]
+          ],
+          "afterPresent": true,
+          "afterSha256": "5cc8e57d2d6fc3102d0b6638775edb4741ee0e0dd9d7214d9396085de58af2da"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "biographyText"
+          ],
+          "beforePresent": true,
+          "before": "Haus Curiad ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Marared Curiad, Mathon Curiad, Morcant Curiad. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "2466fa2d6193e8a114dba9054a2141fd84f744d25fb7fac70a6651c716383bd8"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyTitle"
+          ],
+          "beforePresent": true,
+          "before": "Vorbereitete Familienakte",
+          "afterPresent": true,
+          "afterSha256": "835e4d91790ee4914a396f68795783230e4abd79cbf115f1c043bf72dbb13846"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "a3d84c840617c6635713a9e4a1e54de7d24030d3a845fc94d6cd8522e9020f89"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Eine silberne gepanzerte Faust mit aufrechter Streitkeule auf dunkelrotem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Marared Curiad führt die Leibgarde als Hauptmann, Mathon Curiad dient unter den Rittern und Morcant Curiad als Leibgardist. Ihre genaueren Verwandtschaftsgrade sind nicht belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "6fcffecaadbe7a1a15ab20cc7d6ed6a3d583655c36e86883c6248ea80f4d49f6"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Curiad/curiad-emblem.png",
+              "title": "Haus Curiad · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-curiad"
+            },
+            {
+              "title": "Draig Leibgarde",
+              "text": "Die belegten Gardeämter der Angehörigen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde",
+              "icon": "../AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png"
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "43110474b8e8404c51bc6b2c5e93f464e369323094edb4fdf629291a35911a61"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "08d0dcbefe649aeffe271284fd46f7cb5c4c57a56cbe2b38a52c04a13553f78e"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "7765bfab347737b00484edf655546fd4dd0fa9aa071c0715fc5c2cfa51625234"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "f4d10f22f14d91ef30057b06e104230d23f5ef48bd6756209d55cf6c4599403a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "555987dd5a1033fcd549cf9aca0bf6ca4bfa4b11953a3b374cf3227441aee392"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartAlignLineageOriginOverPersonId"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "05f76f4561eb285e05bcad6ee54344fc309aaa350824498516508f6318579c21"
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "preparedTimeJump",
+            "pendingDescendantReview",
+            "sourceRevision",
+            "chartLayoutPolicy",
+            "authoredOn",
+            "sourceNote",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "75ae696ecfb98fc4407eb1de7d45d8b0aa2b2d747568220607efb55ffc3e5261",
+        "expectedHistoricalSha256": "16ae64aa29604e7045cbb94289cb391b7a438c1083bebd7583f372b62c29b3d7"
+      }
+    },
+    {
+      "familyId": "haus-myrgath",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Myrgath: vorbereitete Familienakte mit unbekanntem Gründerpaar, Hauswappen und Überlieferungslücke vor den namentlich bekannten Angehörigen.",
+          "afterPresent": true,
+          "afterSha256": "e1f97b2951e75e5ab05499e46677494257ceae8f0406081fcb6f12e6f911cd81"
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-myrgath-gruender",
+              "worldPersonId": "person--haus-myrgath--haus-myrgath-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-myrgath",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-myrgath-gruenderin",
+              "worldPersonId": "person--haus-myrgath--haus-myrgath-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-myrgath",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "lleucu-myrgath",
+              "worldPersonId": "person--haus-myrgath--lleucu-myrgath",
+              "name": "Lleucu Myrgath",
+              "title": "Leibgardist",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-myrgath/lleucu-myrgath.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-myrgath",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.",
+                "ageEstimate": "etwa 20–30 Jahre"
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "9717fd6a173dd00f47e58de55b64ff85e898de3b2142f3c9803f1691a5200a6e"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-myrgath-founders",
+              "participantIds": [
+                "haus-myrgath-gruender",
+                "haus-myrgath-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "86feb24eecfe28e1a26f1a3ba3e1c49f65619b7c02b38078166f0d57fdf0e8d6"
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "4a2bd84313f511624dedda619db84d3977bdd4f3fba612f48c0a4e70d7bc65dc"
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "afterSha256": "f7e03dbab97fc73e14c960da6e6d7594cc3064d542748bf7a69e5f6a3da0da02"
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "gap-myrgath-unrecorded-generations",
+              "parentPartnershipId": "marriage-haus-myrgath-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "lleucu-myrgath"
+              ],
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": "Nicht einzeln überlieferte Generationen",
+              "notes": "Reiner Darstellungsanker für die unvollständig überlieferte Hauslinie. Keine unmittelbare Elternschaft, Geschwisterschaft oder genaue Generationenzahl wird daraus abgeleitet.",
+              "extensions": {
+                "preparedPlaceholder": true
+              }
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "3474c0b71f38f2204cecdb6c9350e7fe04110839037d7b13b81bec15c470bb64"
+        },
+        {
+          "path": [
+            "family",
+            "view",
+            "focusPersonId"
+          ],
+          "beforePresent": true,
+          "before": "haus-myrgath-gruender",
+          "afterPresent": true,
+          "afterSha256": "7c126793393ac4e3e62ef55aaea27dc33a009922ac3417b73e5b566f141949f9"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 2,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": true,
+          "before": "2026-11-12",
+          "afterPresent": true,
+          "afterSha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartAlignLineageOriginOverPersonId"
+          ],
+          "beforePresent": true,
+          "before": "lleucu-myrgath",
+          "afterPresent": true,
+          "afterSha256": "7c126793393ac4e3e62ef55aaea27dc33a009922ac3417b73e5b566f141949f9"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet.",
+          "afterPresent": true,
+          "afterSha256": "f2a2a85a684be74ff03bacc0536098d7b513e82891818fa5d5a9f596e7641f8c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 2,
+          "afterPresent": true,
+          "afterSha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Haus Myrgath ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Lleucu Myrgath. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "5a4ca4237efe586308c9a523936a13e6d86abbcb63076d70f6d18a2e9c725afd"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "stats"
+          ],
+          "beforePresent": true,
+          "before": [
+            [
+              "Voller Name",
+              "Haus Myrgath"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ],
+            [
+              "Ursprung",
+              "Gwynthor"
+            ]
+          ],
+          "afterPresent": true,
+          "afterSha256": "1c6a65c52fedfae78be000a29ed98943279d0f28db2c9ef70b6ad95abb25939a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "biographyText"
+          ],
+          "beforePresent": true,
+          "before": "Haus Myrgath ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Lleucu Myrgath. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+          "afterPresent": true,
+          "afterSha256": "5a4ca4237efe586308c9a523936a13e6d86abbcb63076d70f6d18a2e9c725afd"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyTitle"
+          ],
+          "beforePresent": true,
+          "before": "Vorbereitete Familienakte",
+          "afterPresent": true,
+          "afterSha256": "835e4d91790ee4914a396f68795783230e4abd79cbf115f1c043bf72dbb13846"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "0d1cba14f286b4d93d651ca758cc18039cb655a455186bba9c4907891e191542"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Ein silberner Luchskopf unter einem achtzackigen Stern auf nachtblauem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "a9aa2a88eb89cd70a32481502044ae071e91c2cc4a3584fb2b51ea20b151bdff"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Myrgath/myrgath-emblem.png",
+              "title": "Haus Myrgath · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-myrgath"
+            },
+            {
+              "title": "Draig Leibgarde",
+              "text": "Die belegten Gardeämter der Angehörigen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde",
+              "icon": "../AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png"
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "5928c2beb8dcaa4160ca5d99fd3f3dbcc77359e27a2705f194e1c923edc613cb"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "08d0dcbefe649aeffe271284fd46f7cb5c4c57a56cbe2b38a52c04a13553f78e"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "7765bfab347737b00484edf655546fd4dd0fa9aa071c0715fc5c2cfa51625234"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "f4d10f22f14d91ef30057b06e104230d23f5ef48bd6756209d55cf6c4599403a"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "afterSha256": "555987dd5a1033fcd549cf9aca0bf6ca4bfa4b11953a3b374cf3227441aee392"
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "preparedTimeJump",
+            "pendingDescendantReview",
+            "sourceRevision",
+            "chartLayoutPolicy",
+            "authoredOn",
+            "chartAlignLineageOriginOverPersonId",
+            "sourceNote",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "4b58536763005f370572c63e58ce465aa5a7d3963982392682f320c4e7703e53",
+        "expectedHistoricalSha256": "fb227ef5b79b020664a812f7f2bf6f4de29f89a6a8f069abebf9257bc14fa868"
+      }
+    }
+  ]
+}

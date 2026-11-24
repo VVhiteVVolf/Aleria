@@ -1,0 +1,59 @@
+{
+  "schema": "aleria.reviewed-parentage-source-successor",
+  "schemaVersion": 1,
+  "base": "757e22d5a8c46ea459b855804adb6cc044ccb6e3",
+  "path": "Stammbäume/assets/js/adapters/family-chart-adapter.js",
+  "predecessorSha256": "e19a6853729cfe30d9120027f253a3812bcde455d22fb4f84d77b84f8335c0bd",
+  "currentSha256": "e3cbfa23a1bb94685035f3257cf83bd5e9fc7b23ea8633a260900623603bf6d7",
+  "hunks": [
+    {
+      "before": "} from './family-chart-partner-alignment.js';\nimport {\n  createFamilyChartAlignedParentageGroupPlan,\n  createFamilyChartParentageGroupPlan\n} from './family-chart-parentage-group.js';\nimport { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';\n",
+      "after": "} from './family-chart-partner-alignment.js';\nimport {\n  createFamilyChartAlignedParentageGroupPlan,\n  createFamilyChartParentageGroupStyle,\n  createFamilyChartParentageGroupPlan\n} from './family-chart-parentage-group.js';\nimport { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';\n"
+    },
+    {
+      "before": "  });\n}\n\nexport function toFamilyChartData(input, options = {}) {\n  const family = normalizeFamily(input);\n  const diagnostics = [];\n  const houseById = createChartHouseIndex(family, options);\n",
+      "after": "  });\n}\n\nfunction prepareFamilyChart(input, options = {}) {\n  const family = normalizeFamily(input);\n  const diagnostics = [];\n  const houseById = createChartHouseIndex(family, options);\n"
+    },
+    {
+      "before": "  const visiblePartnerships = family.partnerships.filter(partnership => (\n    !options.publicOnly || partnership.visibility === 'public'\n  ));\n  const appearancePlan = createFamilyChartPersonAppearancePlan({ partnerships: visiblePartnerships, personById, parentages: [...selectedParentageByChild.values()] });\n  appearancePlan.appearances.forEach(appearance => {\n    const sourceNode = chartById.get(appearance.personId);\n    if (sourceNode) chartById.set(appearance.id, createChartPersonAppearance(sourceNode, appearance));\n",
+      "after": "  const visiblePartnerships = family.partnerships.filter(partnership => (\n    !options.publicOnly || partnership.visibility === 'public'\n  ));\n  const visiblePartnershipById = new Map(visiblePartnerships.map(partnership => [partnership.id, partnership]));\n  const appearancePlan = createFamilyChartPersonAppearancePlan({\n    partnerships: visiblePartnerships,\n    personById,\n    parentages: [...selectedParentageByChild.values()],\n    founderPartnershipId: family.lineage.founderPartnershipId\n  });\n  appearancePlan.appearances.forEach(appearance => {\n    const sourceNode = chartById.get(appearance.personId);\n    if (sourceNode) chartById.set(appearance.id, createChartPersonAppearance(sourceNode, appearance));\n"
+    },
+    {
+      "before": "    ))\n  }));\n  const parentageGroupPlan = createFamilyChartParentageGroupPlan(selectedParentageByChild);\n  const appearanceLayout = createFamilyChartAppearanceLayout(family, appearancePlan);\n  const conversionPartnerAlignmentPlan = createFamilyChartPartnerAlignmentPlan(appearanceLayout);\n  const conversionDescendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(appearanceLayout);\n  const alignedParentageGroupPlan = createFamilyChartAlignedParentageGroupPlan({\n",
+      "after": "    ))\n  }));\n  const parentageGroupPlan = createFamilyChartParentageGroupPlan(selectedParentageByChild);\n  const layoutSource = options.publicOnly ? {\n    ...family,\n    partnerships: visiblePartnerships,\n    parentages: [...parentagesByChild.values()].flat()\n  } : family;\n  const appearanceLayout = createFamilyChartAppearanceLayout(layoutSource, appearancePlan);\n  const conversionPartnerAlignmentPlan = createFamilyChartPartnerAlignmentPlan(appearanceLayout);\n  const conversionDescendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(appearanceLayout);\n  const alignedParentageGroupPlan = createFamilyChartAlignedParentageGroupPlan({\n"
+    },
+    {
+      "before": "    }\n  });\n\n  const visiblePartnershipById = new Map(visiblePartnerships.map(partnership => [partnership.id, partnership]));\n  appearancePlan.partnerMirrors.forEach(mirror => {\n    const partnership = visiblePartnershipById.get(mirror.partnershipId);\n    const mirrorNode = chartById.get(mirror.id);\n",
+      "after": "    }\n  });\n\n  appearancePlan.partnerMirrors.forEach(mirror => {\n    const partnership = visiblePartnershipById.get(mirror.partnershipId);\n    const mirrorNode = chartById.get(mirror.id);\n"
+    },
+    {
+      "before": "      addUnique(parent.rels.children, childId);\n    });\n    const childRole = personById.get(childId)?.familyRole;\n    parentageLines.set(childId, Object.freeze({\n      type: selected.type,\n      color: ROLE_LINE_COLORS[childRole] || relationColor(family, selected.type),\n      dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole]),\n      hidden: parentageGroupPlan.groupedChildIds.has(childId)\n        || alignedParentageGroupPlan.groupedChildIds.has(childId)\n    }));\n    if (selected.parentIds.length > 2) {\n      diagnostics.push(Object.freeze({\n        severity: 'warning',\n",
+      "after": "      addUnique(parent.rels.children, childId);\n    });\n    const childRole = personById.get(childId)?.familyRole;\n    const partnership = visiblePartnershipById.get(selected.partnershipId);\n    const unassigned = appearancePlan.hasRepeatedPair(selected.parentIds) && !selected.parentIds.every(id => (\n      partnership?.participantIds.includes(id)\n    ));\n    const metadata = {\n      type: selected.type,\n      partnershipId: unassigned ? '' : selected.partnershipId,\n      color: ROLE_LINE_COLORS[childRole] || relationColor(family, selected.type),\n      dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole])\n    };\n    parentageLines.set(childId, Object.freeze({\n      ...metadata,\n      hidden: unassigned || parentageGroupPlan.groupedChildIds.has(childId)\n        || alignedParentageGroupPlan.groupedChildIds.has(childId)\n    }));\n    if (unassigned && !parentageGroupPlan.groupedChildIds.has(childId)) {\n      selected.parentIds.forEach(parentId => extraParentageLines.push(Object.freeze({\n        kind: 'parentage', parentIds: [parentId], childId, ...metadata\n      })));\n    }\n    if (selected.parentIds.length > 2) {\n      diagnostics.push(Object.freeze({\n        severity: 'warning',\n"
+    },
+    {
+      "before": "  });\n\n  parentageGroupPlan.groups.forEach(group => {\n    const lineMetadata = parentageLines.get(group.childIds[0]) || Object.freeze({\n      type: 'biological',\n      color: relationColor(family, 'biological'),\n      dashed: false\n    });\n    extraParentageLines.push(Object.freeze({\n      kind: 'parentage-group',\n      parentId: group.anchorPersonId,\n      childIds: group.childIds,\n      type: lineMetadata.type,\n      color: lineMetadata.color,\n      dashed: lineMetadata.dashed\n    }));\n  });\n\n  alignedParentageGroupPlan.groups.forEach(group => {\n    const lineMetadata = parentageLines.get(group.childIds[0]) || Object.freeze({\n      type: 'biological',\n      color: relationColor(family, 'biological'),\n      dashed: false\n    });\n    extraParentageLines.push(Object.freeze({\n      kind: 'parentage-group',\n      ...(group.kind === 'parent-pair'\n        ? {\n            parentIds: group.parentIds.map(parentId => (\n",
+      "after": "  });\n\n  parentageGroupPlan.groups.forEach(group => {\n    extraParentageLines.push(Object.freeze({\n      kind: 'parentage-group',\n      parentId: group.anchorPersonId,\n      childIds: group.childIds,\n      ...createFamilyChartParentageGroupStyle(group.childIds, parentageLines, relationColor(family, 'biological'))\n    }));\n  });\n\n  alignedParentageGroupPlan.groups.forEach(group => {\n    extraParentageLines.push(Object.freeze({\n      kind: 'parentage-group',\n      partnershipId: group.partnershipId,\n      ...(group.kind === 'parent-pair'\n        ? {\n            parentIds: group.parentIds.map(parentId => (\n"
+    },
+    {
+      "before": "            )\n          }),\n      childIds: group.childIds,\n      type: lineMetadata.type,\n      color: lineMetadata.color,\n      dashed: lineMetadata.dashed\n    }));\n  });\n\n  return Object.freeze({\n    data: Object.freeze([...chartById.values()]),\n    diagnostics: Object.freeze(diagnostics),\n    houseOffshoots: Object.freeze(houseOffshoots),\n    extraCoupleLines: Object.freeze([...extraCoupleLines]),\n",
+      "after": "            )\n          }),\n      childIds: group.childIds,\n      ...createFamilyChartParentageGroupStyle(group.childIds, parentageLines, relationColor(family, 'biological'))\n    }));\n  });\n\n  return Object.freeze({\n    data: Object.freeze([...chartById.values()]),\n    preparedLayout: Object.freeze({\n      family: appearanceLayout,\n      appearancePlan,\n      partnerPlan: conversionPartnerAlignmentPlan,\n      descendantPlan: conversionDescendantAlignmentPlan\n    }),\n    diagnostics: Object.freeze(diagnostics),\n    houseOffshoots: Object.freeze(houseOffshoots),\n    extraCoupleLines: Object.freeze([...extraCoupleLines]),\n"
+    },
+    {
+      "before": "  });\n}\n\nfunction hierarchyNodeId(node) {\n  return node?.data?.id || node?.id || '';\n}\n",
+      "after": "  });\n}\n\nexport function toFamilyChartData(input, options = {}) {\n  const { preparedLayout, ...chartData } = prepareFamilyChart(input, options);\n  return Object.freeze(chartData);\n}\n\nfunction hierarchyNodeId(node) {\n  return node?.data?.id || node?.id || '';\n}\n"
+    },
+    {
+      "before": "\n  let family = normalizeFamily(config.family);\n  let view = completeFamilyChartView({ ...family.view, ...(config.view || {}) });\n  let converted = toFamilyChartData(family, config.options);\n  if (!converted.data.length) throw new Error('Der Stammbaum enthält keine darstellbare Person.');\n\n  let overview = createFamilyChartOverview(family, converted.data);\n",
+      "after": "\n  let family = normalizeFamily(config.family);\n  let view = completeFamilyChartView({ ...family.view, ...(config.view || {}) });\n  let converted = prepareFamilyChart(family, config.options);\n  if (!converted.data.length) throw new Error('Der Stammbaum enthält keine darstellbare Person.');\n\n  let overview = createFamilyChartOverview(family, converted.data);\n"
+    },
+    {
+      "before": "\n  function update(nextFamily, nextView = nextFamily?.view) {\n    ensureActive();\n    const nextConverted = toFamilyChartData(nextFamily, config.options);\n    if (!nextConverted.data.length) return false;\n    family = normalizeFamily(nextFamily);\n    view = completeFamilyChartView({ ...family.view, ...(nextView || {}) });\n",
+      "after": "\n  function update(nextFamily, nextView = nextFamily?.view) {\n    ensureActive();\n    const nextConverted = prepareFamilyChart(nextFamily, config.options);\n    if (!nextConverted.data.length) return false;\n    family = normalizeFamily(nextFamily);\n    view = completeFamilyChartView({ ...family.view, ...(nextView || {}) });\n"
+    },
+    {
+      "before": "    const layout = applyFamilyChartLayoutPipeline({\n      tree,\n      family,\n      orientation: view.orientation,\n      maximumSpacingScale: 1,\n      alignPersonAppearances: true\n",
+      "after": "    const layout = applyFamilyChartLayoutPipeline({\n      tree,\n      family,\n      preparedLayout: converted.preparedLayout,\n      orientation: view.orientation,\n      maximumSpacingScale: 1,\n      alignPersonAppearances: true\n"
+    }
+  ],
+  "purpose": "Distinct descendants per partnership, individual parentage styling and placement of separate branches."
+}

@@ -2,11 +2,13 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import review from './family-revision-review-20261112.json' with {type:'json'};
 import ysabelReview from './ysabel-family-revision-review-20261121.json' with {type:'json'};
+import warriorFamiliesReview from './gwynthor-warrior-family-review-20261124.json' with {type:'json'};
 import {applyFamilyMetadataReview} from './apply-family-metadata-review.mjs';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function projectReviewedFamilyRevisions(record) {
-  const predecessor=projectReviewedRevision(record,ysabelReview);
+  const householdPredecessor=projectReviewedRevision(record,warriorFamiliesReview);
+  const predecessor=projectReviewedRevision(householdPredecessor,ysabelReview);
   return projectReviewedRevision(predecessor,review);
 }
 
