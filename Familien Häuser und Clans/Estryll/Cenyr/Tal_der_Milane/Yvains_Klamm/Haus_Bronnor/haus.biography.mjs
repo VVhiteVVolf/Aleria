@@ -58,7 +58,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an."
+        "text": "Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. Ysabel Bronnor heiratete Pellinard Brândyddyn. Ihre drei Kinder sind Eurgain, Aelwryd und Gwrgant. Eurgain ist mit 25 Jahren die Älteste und dient als Ritter der Draig-Leibgarde. Ysabel entstammt dem Ritterhaus Bronnor aus dem Tal der Milane."
       }
     ],
     "triviaTitle": "Besonderheiten",

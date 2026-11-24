@@ -66,6 +66,7 @@
     const commitEditCombatEncounterTextCallable = httpsCallable(functions, 'commitEditCombatEncounterText', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitSceneElementCallable = httpsCallable(functions, 'commitSceneElement', { timeout: 60000 });
+    const commitCombatPhaseCounterCallable = httpsCallable(functions, 'commitCombatPhaseCounter', { timeout: 40000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitItemRecordCallable = httpsCallable(functions, 'commitItemRecord', { timeout: 30000 });
     const commitLootClaimCallable = httpsCallable(functions, 'commitLootClaim', { timeout: 30000 });
@@ -703,6 +704,10 @@
         await requireFirebaseUser();
         const result = await commitSceneElementCallable(cloneSerializableValue(payload));
         return result.data;
+      },
+      async combatPhaseCounter(payload) {
+        await requireFirebaseUser();
+        return (await commitCombatPhaseCounterCallable(cloneSerializableValue(payload))).data;
       },
       async addHerausforderung(entryId, text, deleteCode, metadata = {}) {
         await requireFirebaseUser();

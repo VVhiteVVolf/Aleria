@@ -75,6 +75,7 @@ function candidateRailCoordinates({
   cardPositions,
   orientation,
   clearance,
+  avoidRailCoordinates,
   parentHalfSize: configuredParentHalfSize
 }) {
   const cardHalfSize = orientation === 'horizontal'
@@ -89,6 +90,10 @@ function candidateRailCoordinates({
   const maximum = Math.max(parentEdge, childEdge);
   const midpoint = parentGeneration + ((childGeneration - parentGeneration) / 2);
   const candidates = new Set([midpoint, parentEdge, childEdge]);
+  for (const coordinate of avoidRailCoordinates) {
+    candidates.add(coordinate - clearance);
+    candidates.add(coordinate + clearance);
+  }
 
   (cardPositions || new Map()).forEach(point => {
     if (!finitePoint(point)) return;
@@ -118,6 +123,7 @@ export function selectCollisionAwareRail({
   orientation = 'vertical',
   buildRoutes,
   parentHalfSize,
+  avoidRailCoordinates = [],
   clearance = DEFAULT_ROUTE_CLEARANCE
 }) {
   if (typeof buildRoutes !== 'function') return null;
@@ -128,6 +134,7 @@ export function selectCollisionAwareRail({
     cardPositions,
     orientation,
     clearance,
+    avoidRailCoordinates,
     parentHalfSize
   });
   const evaluated = candidates.map(railCoordinate => {
@@ -138,11 +145,13 @@ export function selectCollisionAwareRail({
       relatedCardIds,
       clearance
     );
-    return { railCoordinate, routes, hitCardIds };
+    const nearbyRails = avoidRailCoordinates.filter(coordinate => Math.abs(railCoordinate - coordinate) < clearance - 0.001).length;
+    return { railCoordinate, routes, hitCardIds, nearbyRails };
   });
 
   const selected = evaluated.sort((first, second) => (
     first.hitCardIds.length - second.hitCardIds.length
+    || first.nearbyRails - second.nearbyRails
     || Math.abs(first.railCoordinate - midpoint) - Math.abs(second.railCoordinate - midpoint)
   ))[0];
   return selected ? Object.freeze({

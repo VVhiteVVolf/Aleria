@@ -93,18 +93,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
-    "history": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "overview": "Haus Brândyddyn ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Pellinard Brândyddyn, Eurgain Brândyddyn dienen in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
+    "history": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Rhychwyn Brândyddyn (1637–1725).",
     "traditions": "Eigene Hausbräuche sind noch nicht überliefert.",
-    "knighthood": "Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "knighthood": "Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "holdings": "Eine genaue Wohnstätte, weitere Besitzungen und Einnahmequellen sind nicht belegt.",
     "cultureReligion": "Besondere religiöse Bindungen sind noch nicht überliefert.",
-    "conflictsAlliances": "Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an.",
+    "conflictsAlliances": "Ysabel Bronnor heiratete Pellinard Brândyddyn. Ihre drei Kinder sind Eurgain, Aelwryd und Gwrgant. Eurgain ist mit 25 Jahren die Älteste und dient als Ritter der Draig-Leibgarde. Ysabel entstammt dem Ritterhaus Bronnor aus dem Tal der Milane.",
     "values": "Zwei gekreuzte silberne Schwerter vor einer kupferroten Flamme auf nachtblauem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet.",
-    "succession": "Ein Oberhaupt und eine Erbfolge sind nicht festgelegt.",
-    "court": "Pellinard Brândyddyn: Leutnant der Leibgarde. Eurgain Brândyddyn: Ritter der Leibgarde.",
-    "familyTree": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten. Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an.",
-    "historicalFigures": "Die folgenden Figuren sind namentlich bekannt. Altersangaben sind ausschließlich Schätzungen nach den aktuellen Portraits."
+    "succession": "Ceredryn Brândyddyn ist das Oberhaupt. Pellinard Brândyddyn ist der Erbe.",
+    "court": "Pellinard Brândyddyn · Leutnant der Leibgarde\nEurgain Brândyddyn · Ritter der Leibgarde\nDyfrayn Brândyddyn · Ehemaliger Kanzleischreiber der Draig\nTreforid Brândyddyn · Waffenknecht der Draig\nBrithwal Brândyddyn · Kanzleischreiber der Draig\nMaelweth Brândyddyn · Protokollführerin der Draig",
+    "familyTree": "Haus Brândyddyn ist eine Kriegerfamilie aus Gwynthor-Stadt. Von Rhychwyn stammen vier Geschwisterlinien ab. Ceredryn leitet die Familie. Sein Sohn Pellinard ist der Erbe. Eilwarths Zweig führt über Brithwal zu zwei Enkeln. Meirona heiratete in ein anderes Haus und Dyfrayn blieb ledig.",
+    "historicalFigures": "Die Karten führen zu den jeweiligen Personen im Stammbaum."
   },
   "sectionTitles": {
     "knighthood": "4. Beruf und Hausleben",
@@ -118,8 +118,8 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
-      "alt": "Pellinard Brândyddyn · Leutnant der Leibgarde",
+      "src": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-krieger-v1.png",
+      "alt": "Nachtblaue Hausrüstung der Brândyddyn mit ihrem Flammenwappen",
       "format": "portrait",
       "maxHeight": 580
     },
@@ -129,21 +129,235 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
-    "haus-figur-1": {
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/ceredryn-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=ceredryn-brandyddyn",
+      "alt": "Ceredryn Brândyddyn",
+      "format": "portrait"
+    },
+    "hof-heirs-1": {
       "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=pellinard-brandyddyn",
       "alt": "Pellinard Brândyddyn",
       "format": "portrait"
     },
-    "haus-figur-2": {
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=pellinard-brandyddyn",
+      "alt": "Pellinard Brândyddyn",
+      "format": "portrait"
+    },
+    "hof-offices-2": {
       "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=eurgain-brandyddyn",
       "alt": "Eurgain Brândyddyn",
       "format": "portrait"
+    },
+    "hof-offices-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/dyfrayn-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=dyfrayn-brandyddyn",
+      "alt": "Dyfrayn Brândyddyn",
+      "format": "portrait"
+    },
+    "hof-offices-4": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/treforid-brandyddyn-v2.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=treforid-brandyddyn",
+      "alt": "Treforid Brândyddyn",
+      "format": "portrait"
+    },
+    "hof-offices-5": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=brithwal-brandyddyn",
+      "alt": "Brithwal Brândyddyn",
+      "format": "portrait"
+    },
+    "hof-offices-6": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=maelweth-brandyddyn",
+      "alt": "Maelweth Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=haus-brandyddyn-gruender",
+      "alt": "Unbekannter Gründer",
+      "format": "portrait"
+    },
+    "haus-figur-2": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=haus-brandyddyn-gruenderin",
+      "alt": "Unbekannte Gründerin",
+      "format": "portrait"
+    },
+    "haus-figur-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=pellinard-brandyddyn",
+      "alt": "Pellinard Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-4": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=eurgain-brandyddyn",
+      "alt": "Eurgain Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-5": {
+      "src": "../Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=ysabel-bronnor",
+      "alt": "Ysabel Bronnor",
+      "format": "portrait"
+    },
+    "haus-figur-6": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/aelwryd-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=aelwryd-brandyddyn",
+      "alt": "Aelwryd Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-7": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/gwrgant-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=gwrgant-brandyddyn",
+      "alt": "Gwrgant Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-8": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/rhychwyn-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=rhychwyn-brandyddyn",
+      "alt": "Rhychwyn Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-9": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/ceredryn-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=ceredryn-brandyddyn",
+      "alt": "Ceredryn Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-10": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=eilwarth-brandyddyn",
+      "alt": "Eilwarth Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-11": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/dyfrayn-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=dyfrayn-brandyddyn",
+      "alt": "Dyfrayn Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-12": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/ffraidwen-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=ffraidwen-brandyddyn",
+      "alt": "Ffraidwen Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-13": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/treforid-brandyddyn-v2.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=treforid-brandyddyn",
+      "alt": "Treforid Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-14": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=brithwal-brandyddyn",
+      "alt": "Brithwal Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-15": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=maelweth-brandyddyn",
+      "alt": "Maelweth Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-16": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=gweirlun-brandyddyn",
+      "alt": "Gweirlun Brândyddyn",
+      "format": "portrait"
+    },
+    "haus-figur-17": {
+      "src": "../Stammbäume/assets/images/portraits/haus-brandyddyn/enfrydwen-brandyddyn-v1.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=enfrydwen-brandyddyn",
+      "alt": "Enfrydwen Brândyddyn",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Brândyddyn",
+        "note": "Überlieferte Amtszeiten; unbekannte Zeiträume bleiben offen.",
+        "entries": [
+          {
+            "name": "Ceredryn Brândyddyn",
+            "role": "Oberhaupt",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=ceredryn-brandyddyn",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "heirs",
+        "title": "Erbfolge",
+        "entries": [
+          {
+            "name": "Pellinard Brândyddyn",
+            "role": "Erbe",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=pellinard-brandyddyn",
+            "imageKey": "hof-heirs-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Dienst bei den Draig",
+        "entries": [
+          {
+            "name": "Pellinard Brândyddyn",
+            "role": "Leutnant der Leibgarde",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=pellinard-brandyddyn",
+            "imageKey": "hof-offices-1"
+          },
+          {
+            "name": "Eurgain Brândyddyn",
+            "role": "Ritter der Leibgarde",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=eurgain-brandyddyn",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Dyfrayn Brândyddyn",
+            "role": "Ehemaliger Kanzleischreiber der Draig",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=dyfrayn-brandyddyn",
+            "imageKey": "hof-offices-3"
+          },
+          {
+            "name": "Treforid Brândyddyn",
+            "role": "Waffenknecht der Draig",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=treforid-brandyddyn",
+            "imageKey": "hof-offices-4"
+          },
+          {
+            "name": "Brithwal Brândyddyn",
+            "role": "Kanzleischreiber der Draig",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=brithwal-brandyddyn",
+            "imageKey": "hof-offices-5"
+          },
+          {
+            "name": "Maelweth Brândyddyn",
+            "role": "Protokollführerin der Draig",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-brandyddyn&mode=view&person=maelweth-brandyddyn",
+            "imageKey": "hof-offices-6"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
@@ -152,17 +366,122 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Namentlich bekannte Angehörige",
-        "role": "Leutnant der Leibgarde",
+        "role": "Gründer des Hauses",
+        "name": "Unbekannter Gründer",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Gründerin des Hauses",
+        "name": "Unbekannte Gründerin",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-2"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Erbe",
         "name": "Pellinard Brândyddyn",
         "description": "Ehemann Ysabel Bronnors und Vater von drei Kindern. Eurgain ist ihre älteste Tochter. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-1"
+        "imageKey": "haus-figur-3"
       },
       {
         "group": "Namentlich bekannte Angehörige",
         "role": "Ritter der Leibgarde",
         "name": "Eurgain Brândyddyn",
-        "description": "Tochter von Pellinard Brândyddyn und Ysabel Bronnor. Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-2"
+        "description": "Ältestes Kind von Pellinard Brândyddyn und Ysabel Bronnor. Ihre jüngeren Brüder sind Aelwryd und Gwrgant.",
+        "imageKey": "haus-figur-4"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Leutnant der Leibgarde",
+        "name": "Ysabel Bronnor",
+        "description": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Sie ist mit Pellinard Brândyddyn verheiratet und hat mit ihm drei Kinder. Eurgain ist ihre älteste Tochter.",
+        "imageKey": "haus-figur-5"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Krieger der Brândyddyn",
+        "name": "Aelwryd Brândyddyn",
+        "description": "Der Ältere der beiden Söhne übt am liebsten vor dem Frühstück, wenn es im Hof noch still ist.",
+        "imageKey": "haus-figur-6"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "",
+        "name": "Gwrgant Brândyddyn",
+        "description": "Der jüngste Bruder Eurgains kennt die Dachgiebel der Altstadt am Umriss. Am liebsten zählt er sie von der Holzgalerie aus.",
+        "imageKey": "haus-figur-7"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "",
+        "name": "Rhychwyn Brândyddyn",
+        "description": "",
+        "imageKey": "haus-figur-8"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Oberhaupt",
+        "name": "Ceredryn Brândyddyn",
+        "description": "Ceredryn hört bei Familiengesprächen gern zuerst denjenigen zu, die am weitesten vom Kopfende sitzen.",
+        "imageKey": "haus-figur-9"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Waffenmeister der Brândyddyn",
+        "name": "Eilwarth Brândyddyn",
+        "description": "",
+        "imageKey": "haus-figur-10"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Ehemaliger Kanzleischreiber der Draig",
+        "name": "Dyfrayn Brândyddyn",
+        "description": "Der jüngste der vier Geschwister blieb ledig.",
+        "imageKey": "haus-figur-11"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "",
+        "name": "Ffraidwen Brândyddyn",
+        "description": "In ihren Briefen an die Geschwister stehen selbst zwischen ernsten Absätzen kleine Beobachtungen aus ihrem Alltag.",
+        "imageKey": "haus-figur-12"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Waffenknecht der Draig",
+        "name": "Treforid Brândyddyn",
+        "description": "",
+        "imageKey": "haus-figur-13"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Kanzleischreiber der Draig",
+        "name": "Brithwal Brândyddyn",
+        "description": "",
+        "imageKey": "haus-figur-14"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Protokollführerin der Draig",
+        "name": "Maelweth Brândyddyn",
+        "description": "",
+        "imageKey": "haus-figur-15"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Krieger der Brândyddyn",
+        "name": "Gweirlun Brândyddyn",
+        "description": "",
+        "imageKey": "haus-figur-16"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "",
+        "name": "Enfrydwen Brândyddyn",
+        "description": "Sie merkt sich Geschichten, indem sie einzelne Sätze in ein kleines Buch schreibt.",
+        "imageKey": "haus-figur-17"
       }
     ],
     "mobileLayout": "stacked"

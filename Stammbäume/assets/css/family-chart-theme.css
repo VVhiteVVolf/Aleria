@@ -196,6 +196,17 @@
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.36);
 }
 
+.aleria-person-card__appearance {
+  position: absolute;
+  z-index: 5;
+  top: 19%;
+  right: 10%;
+  color: var(--card-subtle);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
 .aleria-person-card__frame {
   position: absolute;
   z-index: 4;

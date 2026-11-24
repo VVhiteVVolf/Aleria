@@ -96,6 +96,7 @@ export function renderFamilyChartConnectionReferences(container, references) {
       button.dataset.action = 'open-relationship-reference';
       button.dataset.personId = badge.personId;
       button.dataset.targetPersonId = otherId;
+      button.dataset.partnershipId = reference.partnershipId || '';
       button.dataset.relatedCardIds = [reference.firstId, reference.secondId].join(',');
       button.dataset.referenceCode = reference.code;
       button.style.transform = `translate(${badge.center.x}px, ${badge.center.y}px) translate(-50%, -50%)`;

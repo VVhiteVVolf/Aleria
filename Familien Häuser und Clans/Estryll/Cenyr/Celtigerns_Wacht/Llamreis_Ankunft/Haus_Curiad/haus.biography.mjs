@@ -8,7 +8,7 @@ export const HOUSE_BIOGRAPHY = {
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
-  "description": "Haus Curiad ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Marared Curiad, Mathon Curiad, Morcant Curiad. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+  "description": "Haus Curiad ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Marared Curiad, Mathon Curiad, Morcant Curiad dienen in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,6 +30,14 @@ export const HOUSE_BIOGRAPHY = {
       "Celtigerns Wacht"
     ],
     [
+      "Oberhaupt",
+      "Marared Curiad"
+    ],
+    [
+      "Erbe",
+      "Rhudden Curiad"
+    ],
+    [
       "Lehnsherr",
       "Haus Draig"
     ],
@@ -44,11 +52,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Curiad ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Marared Curiad, Mathon Curiad, Morcant Curiad. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "biographyText": "Haus Curiad ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Marared Curiad, Mathon Curiad, Morcant Curiad dienen in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
-    "historyTitle": "Vorbereitete Familienakte",
-    "historyText": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "historyTitle": "Herkunft der Familie",
+    "historyText": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Gweryd Curiad (1640–1724).",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -62,7 +70,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Marared Curiad führt die Leibgarde als Hauptmann, Mathon Curiad dient unter den Rittern und Morcant Curiad als Leibgardist. Ihre genaueren Verwandtschaftsgrade sind nicht belegt."
+        "text": "Marared Curiad führt die Leibgarde als Hauptmann. Seine Söhne Mathon und Morcant dienen dort als Ritter und Leibgardist."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -76,7 +84,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Curiad/curiad-emblem.png",
         "title": "Haus Curiad · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-curiad"
       },
       {

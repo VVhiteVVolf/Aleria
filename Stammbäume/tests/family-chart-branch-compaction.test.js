@@ -50,6 +50,23 @@ test('a blocking sibling retains its order and required card spacing', () => {
   assert.ok(span(tree) < beforeWidth);
 });
 
+test('a free slot on the other side of an older sibling shortens a long branch', () => {
+  const personNode = (id, x, y, parents = []) => ({ x, y, data: { id, rels: { parents } } });
+  const parentIds = ['p', 'q'];
+  const tree = { data: [personNode('p', 0, 0), personNode('q', 352, 0),
+    personNode('older', 690, 326, parentIds), personNode('younger', 1760, 326, parentIds)] };
+  const family = { persons: tree.data.map(node => ({ id: node.data.id })),
+    partnerships: [{ id: 'parents', participantIds: parentIds }],
+    parentages: ['older', 'younger'].map(childId => ({ childId, parentIds, partnershipId: 'parents', type: 'biological' })) };
+  const before = structuredClone(family);
+  const { resolutions } = applyFamilyChartBranchCompaction({ tree, family });
+  assert.equal(resolutions.find(resolution => resolution.rootPersonId === 'younger').reordered, true);
+  assert.equal(tree.data.at(-1).x, 176);
+  assert.equal(tree.data.at(-2).x, 690);
+  assert.equal(collectFamilyChartCardCollisions(tree.data).length, 0);
+  assert.deepEqual(family, before);
+});
+
 test('a spouse with a separate ancestry keeps the cross-family branch intact', () => {
   const { tree, family } = fixture();
   tree.data.push({ x: -5000, y: 0, data: { id: 'outside' } });

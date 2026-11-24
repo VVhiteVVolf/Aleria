@@ -94,11 +94,11 @@ window.HAEUSER_DATA = {
     "knighthood": "Der Ritterstand des Hauses ist im Register festgehalten. Eine eigene Rüstungstradition oder besondere Ausbildung ist bisher nicht beschrieben.",
     "holdings": "Eigene Ländereien, Burgen und Einnahmequellen sind bislang nicht näher beschrieben.",
     "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bisher nicht ausgearbeitet.",
-    "conflictsAlliances": "Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an.",
+    "conflictsAlliances": "Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. Ysabel Bronnor heiratete Pellinard Brândyddyn. Ihre drei Kinder sind Eurgain, Aelwryd und Gwrgant. Eurgain ist mit 25 Jahren die Älteste und dient als Ritter der Draig-Leibgarde. Ysabel entstammt dem Ritterhaus Bronnor aus dem Tal der Milane.",
     "values": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet.",
     "succession": "Eine namentlich gesicherte Erbfolge ist noch nicht überliefert.",
     "court": "Ein namentliches Oberhaupt und eigene Hausämter sind bisher nicht belegt. Ysabel Bronnor dient als Leutnant in der Leibgarde des Hauses Draig.",
-    "familyTree": "Das unbekannte historische Gründerpaar steht vor dem Hauswappen und einem seriellen Überlieferungssprung zu Ysabel. Ihre Ehe mit Pellinard und die gemeinsame Tochter Eurgain sind in beiden Hausakten verzeichnet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
+    "familyTree": "Das unbekannte Gründerpaar steht vor dem Hauswappen und der Überlieferungslücke zu Ysabel. Ihre Ehe mit Pellinard und die drei gemeinsamen Kinder Eurgain, Aelwryd und Gwrgant sind in beiden Hausakten verzeichnet.",
     "historicalFigures": "Ysabel Bronnor wurde 1695 geboren. Sie und Gwendolyn Aderyn sind im selben Jahrgang."
   },
   "sectionTitles": {

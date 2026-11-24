@@ -14,18 +14,18 @@ import { createFamilyChartPersonAppearancePlan } from './family-chart-person-app
  * they belong. The plan makes that ownership explicit without connecting the
  * two pair views or duplicating their descendants.
  */
-export function createFamilyChartAppearanceAlignmentPlan(family) {
+export function createFamilyChartAppearanceAlignmentPlan(family, appearances = createFamilyChartPersonAppearancePlan({
+  partnerships: family?.partnerships || [],
+  personById: new Map((family?.persons || []).map(person => [person.id, person])),
+  parentages: family?.parentages || [],
+  founderPartnershipId: family?.lineage?.founderPartnershipId
+})) {
   const partnershipById = new Map((family?.partnerships || []).map(partnership => [
     partnership.id,
     partnership
   ]));
   const routes = [];
 
-  const appearances = createFamilyChartPersonAppearancePlan({
-    partnerships: family?.partnerships || [],
-    personById: new Map((family?.persons || []).map(person => [person.id, person])),
-    parentages: family?.parentages || []
-  });
   appearances.appearances.forEach(appearance => {
     const partnership = partnershipById.get(appearance.partnershipId);
     const anchorPersonId = (partnership?.participantIds || [])

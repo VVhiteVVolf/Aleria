@@ -93,18 +93,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Aelgorn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Angharad Aelgorn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
-    "history": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "overview": "Haus Aelgorn ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Angharad Aelgorn dient in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
+    "history": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Aerveth Aelgorn (1638–1721).",
     "traditions": "Eigene Hausbräuche sind noch nicht überliefert.",
-    "knighthood": "Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "knighthood": "Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "holdings": "Eine genaue Wohnstätte, weitere Besitzungen und Einnahmequellen sind nicht belegt.",
     "cultureReligion": "Besondere religiöse Bindungen sind noch nicht überliefert.",
-    "conflictsAlliances": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.",
+    "conflictsAlliances": "Angharad Aelgorn gehört zur Leibgarde des Hauses Draig.",
     "values": "Ein goldener Erlenzweig mit fünf Blättern und zwei dunkelroten Fruchtständen auf tiefgrünem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet.",
-    "succession": "Ein Oberhaupt und eine Erbfolge sind nicht festgelegt.",
-    "court": "Angharad Aelgorn: Leibgardist.",
-    "familyTree": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten. Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.",
-    "historicalFigures": "Die folgenden Figuren sind namentlich bekannt. Altersangaben sind ausschließlich Schätzungen nach den aktuellen Portraits."
+    "succession": "Gwalrhan Aelgorn ist das Oberhaupt. Lleithryn Aelgorn ist der Erbe.",
+    "court": "Angharad Aelgorn · Leibgardist",
+    "familyTree": "Haus Aelgorn ist eine Kriegerfamilie aus Gwynthor-Stadt. Angharad ist Gwalrhans jüngstes Kind. Ihre Schwestern und Tanten haben eigene Wegheiraten. Ihre Brüder und der Zweig ihres Onkels Mordrien verbinden zwei Altersgruppen von Vettern und Cousinen.",
+    "historicalFigures": "Die Karten führen zu den jeweiligen Personen im Stammbaum."
   },
   "sectionTitles": {
     "knighthood": "4. Beruf und Hausleben",
@@ -129,15 +129,98 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
-    "haus-figur-1": {
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=gwalrhan-aelgorn",
+      "alt": "Gwalrhan Aelgorn",
+      "format": "portrait"
+    },
+    "hof-heirs-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=lleithryn-aelgorn",
+      "alt": "Lleithryn Aelgorn",
+      "format": "portrait"
+    },
+    "hof-offices-1": {
       "src": "../Stammbäume/assets/images/portraits/haus-aelgorn/angharad-aelgorn.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=angharad-aelgorn",
       "alt": "Angharad Aelgorn",
       "format": "portrait"
+    },
+    "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=haus-aelgorn-gruender",
+      "alt": "Unbekannter Gründer",
+      "format": "portrait"
+    },
+    "haus-figur-2": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=haus-aelgorn-gruenderin",
+      "alt": "Unbekannte Gründerin",
+      "format": "portrait"
+    },
+    "haus-figur-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-aelgorn/angharad-aelgorn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=angharad-aelgorn",
+      "alt": "Angharad Aelgorn",
+      "format": "portrait"
+    },
+    "haus-figur-4": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=gwalrhan-aelgorn",
+      "alt": "Gwalrhan Aelgorn",
+      "format": "portrait"
+    },
+    "haus-figur-5": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=lleithryn-aelgorn",
+      "alt": "Lleithryn Aelgorn",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Aelgorn",
+        "note": "Überlieferte Amtszeiten; unbekannte Zeiträume bleiben offen.",
+        "entries": [
+          {
+            "name": "Gwalrhan Aelgorn",
+            "role": "Oberhaupt",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=gwalrhan-aelgorn",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "heirs",
+        "title": "Erbfolge",
+        "entries": [
+          {
+            "name": "Lleithryn Aelgorn",
+            "role": "Erbe",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=lleithryn-aelgorn",
+            "imageKey": "hof-heirs-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Dienst bei den Draig",
+        "entries": [
+          {
+            "name": "Angharad Aelgorn",
+            "role": "Leibgardist",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelgorn&mode=view&person=angharad-aelgorn",
+            "imageKey": "hof-offices-1"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
@@ -146,10 +229,38 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Namentlich bekannte Angehörige",
+        "role": "Gründer des Hauses",
+        "name": "Unbekannter Gründer",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Gründerin des Hauses",
+        "name": "Unbekannte Gründerin",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-2"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
         "role": "Leibgardist",
         "name": "Angharad Aelgorn",
         "description": "Alterserscheinung: etwa 25–35 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-1"
+        "imageKey": "haus-figur-3"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Oberhaupt",
+        "name": "Gwalrhan Aelgorn",
+        "description": "",
+        "imageKey": "haus-figur-4"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Erbe",
+        "name": "Lleithryn Aelgorn",
+        "description": "",
+        "imageKey": "haus-figur-5"
       }
     ],
     "mobileLayout": "stacked"

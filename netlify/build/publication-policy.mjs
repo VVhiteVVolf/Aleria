@@ -27,6 +27,7 @@ const SOURCE_ARCHIVE_ROOTS = [
   'AleriaAlmanach/assets/loading-screen/journey-v6-prompts.json',
   'AleriaAlmanach/docs/combat/WAFFENGATTUNGEN_SPIELTEST.md',
   'AleriaAlmanach/docs/art/tirfelyn-hof-20261115/',
+  'AleriaAlmanach/docs/art/gwynthor-warrior-families-20261124/',
   'AleriaAlmanach/docs/art/rheinallt-20261115/',
   'AleriaAlmanach/docs/art/ysabel-bronnor-20261121/',
   'AleriaAlmanach/docs/art/creature-card-scenes-20261121/',

@@ -66,8 +66,11 @@ function personCard(data) {
   const roleLabel = data.legitimacy === 'legitimized'
     ? LEGITIMACY_LABELS.legitimized
     : !['core', 'married'].includes(data.role || 'core') ? data.roleLabel : '';
+  const repeated = data.nodeKind === 'person-appearance';
+  const accessibleLabel = [data.name || 'Person', roleLabel, repeated ? 'Zweitansicht' : '', 'Beziehungen öffnen']
+    .filter(Boolean).join(' · ');
   return `
-    <div class="card-inner aleria-chart-card aleria-person-card role-${role} lineage-${lineageRole} frame-${frameVariant}" data-lineage-role="${lineageRole}" tabindex="0" role="button" aria-label="${escapeHtml(`${data.name || 'Person'}${roleLabel ? ` · ${roleLabel}` : ''} · Beziehungen öffnen`)}"${crestPositionStyle(data.crestPosition)}>
+    <div class="card-inner aleria-chart-card aleria-person-card role-${role} lineage-${lineageRole} frame-${frameVariant}" data-lineage-role="${lineageRole}" tabindex="0" role="button" aria-label="${escapeHtml(accessibleLabel)}"${crestPositionStyle(data.crestPosition)}>
       ${marker(data)}
       <div class="aleria-person-card__fill" aria-hidden="true"></div>
       <div class="aleria-person-card__portrait-backdrop" aria-hidden="true"></div>
@@ -80,6 +83,7 @@ function personCard(data) {
         ${data.life ? `<span class="family-card-life">${escapeHtml(data.life)}</span>` : ''}
       </div>
       ${optionalImage(data.frameAsset, 'aleria-person-card__frame')}
+      ${repeated ? '<span class="aleria-person-card__appearance" aria-hidden="true">Zweitansicht</span>' : ''}
       ${personCrest(data)}
     </div>`;
 }

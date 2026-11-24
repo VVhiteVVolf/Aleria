@@ -93,18 +93,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Caelrith ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Urien Caelrith. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
-    "history": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "overview": "Haus Caelrith ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Urien Caelrith dient in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
+    "history": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Tegwern Caelrith (1637–1720).",
     "traditions": "Eigene Hausbräuche sind noch nicht überliefert.",
-    "knighthood": "Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "knighthood": "Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "holdings": "Eine genaue Wohnstätte, weitere Besitzungen und Einnahmequellen sind nicht belegt.",
     "cultureReligion": "Besondere religiöse Bindungen sind noch nicht überliefert.",
-    "conflictsAlliances": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.",
+    "conflictsAlliances": "Urien Caelrith gehört zur Leibgarde des Hauses Draig.",
     "values": "Ein silberner Reiher über drei silbernen Wellenlinien auf dunkelgrünem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet.",
-    "succession": "Ein Oberhaupt und eine Erbfolge sind nicht festgelegt.",
-    "court": "Urien Caelrith: Ritter der Leibgarde.",
-    "familyTree": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten. Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.",
-    "historicalFigures": "Die folgenden Figuren sind namentlich bekannt. Altersangaben sind ausschließlich Schätzungen nach den aktuellen Portraits."
+    "succession": "Rhydwald Caelrith ist das Oberhaupt. Gwerddren Caelrith ist der Erbe.",
+    "court": "Urien Caelrith · Ritter der Leibgarde",
+    "familyTree": "Haus Caelrith ist eine Kriegerfamilie aus Gwynthor-Stadt. Urien gehört zu Rhydwalds sechs Kindern und hat eine Tochter. Sein Bruder Gwerddren ist Erbe. Die Familien von Mellgair und Aelhelyg führen den älteren Zweig weiter. Gwaenarrs Zweig reicht über Gwyndral bis zu dessen Kindern.",
+    "historicalFigures": "Die Karten führen zu den jeweiligen Personen im Stammbaum."
   },
   "sectionTitles": {
     "knighthood": "4. Beruf und Hausleben",
@@ -129,15 +129,98 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
-    "haus-figur-1": {
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=rhydwald-caelrith",
+      "alt": "Rhydwald Caelrith",
+      "format": "portrait"
+    },
+    "hof-heirs-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=gwerddren-caelrith",
+      "alt": "Gwerddren Caelrith",
+      "format": "portrait"
+    },
+    "hof-offices-1": {
       "src": "../Stammbäume/assets/images/portraits/haus-caelrith/urien-caelrith.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=urien-caelrith",
       "alt": "Urien Caelrith",
       "format": "portrait"
+    },
+    "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=haus-caelrith-gruender",
+      "alt": "Unbekannter Gründer",
+      "format": "portrait"
+    },
+    "haus-figur-2": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=haus-caelrith-gruenderin",
+      "alt": "Unbekannte Gründerin",
+      "format": "portrait"
+    },
+    "haus-figur-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-caelrith/urien-caelrith.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=urien-caelrith",
+      "alt": "Urien Caelrith",
+      "format": "portrait"
+    },
+    "haus-figur-4": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=rhydwald-caelrith",
+      "alt": "Rhydwald Caelrith",
+      "format": "portrait"
+    },
+    "haus-figur-5": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=gwerddren-caelrith",
+      "alt": "Gwerddren Caelrith",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Caelrith",
+        "note": "Überlieferte Amtszeiten; unbekannte Zeiträume bleiben offen.",
+        "entries": [
+          {
+            "name": "Rhydwald Caelrith",
+            "role": "Oberhaupt",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=rhydwald-caelrith",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "heirs",
+        "title": "Erbfolge",
+        "entries": [
+          {
+            "name": "Gwerddren Caelrith",
+            "role": "Erbe",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=gwerddren-caelrith",
+            "imageKey": "hof-heirs-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Dienst bei den Draig",
+        "entries": [
+          {
+            "name": "Urien Caelrith",
+            "role": "Ritter der Leibgarde",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caelrith&mode=view&person=urien-caelrith",
+            "imageKey": "hof-offices-1"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
@@ -146,10 +229,38 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Namentlich bekannte Angehörige",
+        "role": "Gründer des Hauses",
+        "name": "Unbekannter Gründer",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Gründerin des Hauses",
+        "name": "Unbekannte Gründerin",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-2"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
         "role": "Ritter der Leibgarde",
         "name": "Urien Caelrith",
         "description": "Alterserscheinung: etwa 30–40 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-1"
+        "imageKey": "haus-figur-3"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Oberhaupt",
+        "name": "Rhydwald Caelrith",
+        "description": "",
+        "imageKey": "haus-figur-4"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Erbe",
+        "name": "Gwerddren Caelrith",
+        "description": "",
+        "imageKey": "haus-figur-5"
       }
     ],
     "mobileLayout": "stacked"

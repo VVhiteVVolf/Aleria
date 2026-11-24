@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-24",
+  "chronologyYear": 1740,
+  "feature": "gwynthor-warrior-families-20261124",
+  "sourcePaths": [
+    "Stammbäume/assets/js/data/draig-garde-people.js",
+    "Stammbäume/tests/fixtures/gwynthor-warrior-families-before.json",
+    "AleriaAlmanach/modules/name-list/name-list-data.js",
+    "AleriaAlmanach/docs/art/gwynthor-warrior-families-20261124/generation.json"
+  ],
+  "sourceIdentity": [
+    {
+      "id": "marared-curiad",
+      "worldPersonId": "person--haus-curiad--marared-curiad",
+      "originalPortrait": "assets/images/portraits/haus-curiad/marared-curiad.png"
+    },
+    {
+      "id": "pellinard-brandyddyn",
+      "worldPersonId": "person--haus-brandyddyn--pellinard-brandyddyn",
+      "originalPortrait": "assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png"
+    },
+    {
+      "id": "ysabel-bronnor",
+      "worldPersonId": "person--haus-bronnor--ysabel-bronnor",
+      "originalPortrait": "assets/images/portraits/haus-bronnor/ysabel-bronnor.png"
+    },
+    {
+      "id": "eurgain-brandyddyn",
+      "worldPersonId": "person--haus-brandyddyn--eurgain-brandyddyn",
+      "originalPortrait": "assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png"
+    },
+    {
+      "id": "urien-caelrith",
+      "worldPersonId": "person--haus-caelrith--urien-caelrith",
+      "originalPortrait": "assets/images/portraits/haus-caelrith/urien-caelrith.png"
+    },
+    {
+      "id": "mathon-curiad",
+      "worldPersonId": "person--haus-curiad--mathon-curiad",
+      "originalPortrait": "assets/images/portraits/haus-curiad/mathon-curiad.png"
+    },
+    {
+      "id": "morcant-curiad",
+      "worldPersonId": "person--haus-curiad--morcant-curiad",
+      "originalPortrait": "assets/images/portraits/haus-curiad/morcant-curiad.png"
+    },
+    {
+      "id": "lleucu-myrgath",
+      "worldPersonId": "person--haus-myrgath--lleucu-myrgath",
+      "originalPortrait": "assets/images/portraits/haus-myrgath/lleucu-myrgath.png"
+    },
+    {
+      "id": "angharad-aelgorn",
+      "worldPersonId": "person--haus-aelgorn--angharad-aelgorn",
+      "originalPortrait": "assets/images/portraits/haus-aelgorn/angharad-aelgorn.png"
+    }
+  ],
+  "editorialNotes": [
+    "Die neun vorhandenen Weltpersonen und ihre Portraits wurden wiederverwendet. Altersschätzungen anderer Gardeangehöriger bleiben erhalten. Für Eurgain ist das Nutzeralter 25 auf 1715 abgebildet.",
+    "Die vorbestehende Ehe von Pellinard und Ysabel sowie Eurgains Elternschaft behalten ihre IDs. Die beiden neuen Söhne erscheinen über dieselben Weltpersonen und Elternschaften auch im Stammbaum Bronnors.",
+    "Die 108 neuen Vornamen verwenden das Rheunwaith-Namensarchiv als lautliche Vorlage. Vier bereits anderweitig geführte Entwurfsnamen wurden vor der Fertigstellung ersetzt.",
+    "Die Wegheiraten benennen weder Partner noch Zielhäuser. Der Rang aller fünf Familien bleibt bürgerlich, ihre Erhebung ist offen.",
+    "Für Treforid gilt Fassung v2 nach der lokalen Vorlage Haus_Draig/assets/draig-ritter.png. Die Garde-Rüstung bleibt ausschließlich historische Bildvariante im Originalbestand."
+  ],
+  "household": [
+    {
+      "id": "eurgain-brandyddyn",
+      "age": 25,
+      "worldPersonId": "person--haus-brandyddyn--eurgain-brandyddyn"
+    },
+    {
+      "id": "aelwryd-brandyddyn",
+      "age": 23,
+      "worldPersonId": "person--haus-brandyddyn--aelwryd-brandyddyn"
+    },
+    {
+      "id": "gwrgant-brandyddyn",
+      "age": 19,
+      "worldPersonId": "person--haus-brandyddyn--gwrgant-brandyddyn"
+    }
+  ],
+  "families": [
+    {
+      "id": "haus-brandyddyn",
+      "sourceRevision": 4,
+      "persons": 37,
+      "living": 23,
+      "unknownPartners": 11,
+      "ancestor": "rhychwyn-brandyddyn",
+      "marriagesOut": 5
+    },
+    {
+      "id": "haus-curiad",
+      "sourceRevision": 4,
+      "persons": 39,
+      "living": 24,
+      "unknownPartners": 12,
+      "ancestor": "gweryd-curiad",
+      "marriagesOut": 5
+    },
+    {
+      "id": "haus-caelrith",
+      "sourceRevision": 4,
+      "persons": 38,
+      "living": 22,
+      "unknownPartners": 13,
+      "ancestor": "tegwern-caelrith",
+      "marriagesOut": 5
+    },
+    {
+      "id": "haus-myrgath",
+      "sourceRevision": 4,
+      "persons": 35,
+      "living": 21,
+      "unknownPartners": 10,
+      "ancestor": "gwelfawr-myrgath",
+      "marriagesOut": 4
+    },
+    {
+      "id": "haus-aelgorn",
+      "sourceRevision": 4,
+      "persons": 36,
+      "living": 21,
+      "unknownPartners": 12,
+      "ancestor": "aerveth-aelgorn",
+      "marriagesOut": 6
+    }
+  ],
+  "curatedPortraits": [
+    "aelwryd-brandyddyn-v1",
+    "gwrgant-brandyddyn-v1",
+    "ceredryn-brandyddyn-v1",
+    "ffraidwen-brandyddyn-v1",
+    "rhychwyn-brandyddyn-v1",
+    "enfrydwen-brandyddyn-v1",
+    "dyfrayn-brandyddyn-v1",
+    "treforid-brandyddyn-v2"
+  ]
+}

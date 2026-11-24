@@ -1,6 +1,19 @@
 export const CHART_PARENTAGE_GROUP_ID_EXTENSION = 'chartParentageGroupId';
 export const CHART_PARENTAGE_GROUP_ANCHOR_EXTENSION = 'chartParentageGroupAnchorPersonId';
 
+export function createFamilyChartParentageGroupStyle(childIds, parentageLines, biologicalColor) {
+  const fallback = { type: 'biological', color: biologicalColor, dashed: false };
+  const childStyles = childIds.map(childId => {
+    const { type, color, dashed } = parentageLines.get(childId) || fallback;
+    return { type, color, dashed };
+  });
+  const first = childStyles[0] || fallback;
+  const uniform = childStyles.every(style => style.type === first.type
+    && style.color === first.color && style.dashed === first.dashed);
+  if (uniform) return first;
+  return { ...fallback, childStyles: Object.freeze(childStyles.map(style => Object.freeze(style))) };
+}
+
 function configuredValue(parentage, field) {
   const value = parentage?.extensions?.[field];
   return typeof value === 'string' ? value.trim() : '';
@@ -114,10 +127,17 @@ export function createFamilyChartAlignedParentageGroupPlan({
     });
     if (!childIds.length) return;
     childIds.forEach(childId => groupedChildIds.add(childId));
+    const parents = selectedParentageByChild.get(childIds[0]).parentIds;
+    const ownsPairJunction = route.source === 'automatic-multi-partner' && parents.length === 2
+      && childIds.every(childId => {
+        const otherParents = selectedParentageByChild.get(childId).parentIds;
+        return otherParents.length === 2 && parents.every(id => otherParents.includes(id));
+      });
     groups.push(Object.freeze({
-      kind: 'partner',
       partnershipId: route.partnershipId,
-      parentId: route.partnerPersonId,
+      ...(ownsPairJunction
+        ? { kind: 'parent-pair', parentIds: Object.freeze([...parents]) }
+        : { kind: 'partner', parentId: route.partnerPersonId }),
       childIds: Object.freeze(childIds)
     }));
   });

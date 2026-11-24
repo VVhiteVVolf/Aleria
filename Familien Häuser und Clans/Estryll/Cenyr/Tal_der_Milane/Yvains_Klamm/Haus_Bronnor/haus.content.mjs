@@ -19,8 +19,8 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "registerPage": true,
   "prepared": true,
-  "contentVersion": "20261121-ysabel-bronnor-v1",
-  "biographySourceRevision": 3,
+  "contentVersion": "20261124-bronnor-brandyddyn",
+  "biographySourceRevision": 4,
   "biographyPreviousDefaultFingerprints": ["3023:a23f08e8:63671e62"],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Bisherige Überlieferung",
@@ -107,7 +107,7 @@ export const HOUSE_CONTENT = {
     "values": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet.",
     "succession": "Eine namentlich gesicherte Erbfolge ist noch nicht überliefert.",
     "court": "Ein namentliches Oberhaupt und eigene Hausämter sind bisher nicht belegt. Ysabel Bronnor dient als Leutnant in der Leibgarde des Hauses Draig.",
-    "familyTree": "Das unbekannte historische Gründerpaar steht vor dem Hauswappen und einem seriellen Überlieferungssprung zu Ysabel. Ihre Ehe mit Pellinard und die gemeinsame Tochter Eurgain sind in beiden Hausakten verzeichnet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
+    "familyTree": "Das unbekannte Gründerpaar steht vor dem Hauswappen und der Überlieferungslücke zu Ysabel. Ihre Ehe mit Pellinard und die drei gemeinsamen Kinder Eurgain, Aelwryd und Gwrgant sind in beiden Hausakten verzeichnet.",
     "historicalFigures": `Ysabel Bronnor wurde ${ysabel.birth} geboren. Sie und Gwendolyn Aderyn sind im selben Jahrgang.`
   },
   "images": {

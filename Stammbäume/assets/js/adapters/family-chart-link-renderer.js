@@ -296,6 +296,7 @@ function registerRoute(routeRecords, {
     path,
     points: Object.freeze(compactPoints(points)),
     type: type || 'unknown',
+    partnershipId: path.dataset.partnershipId || '',
     relatedCardIds: Object.freeze(sortedRouteIds(relatedCardIds))
   }));
 }
@@ -434,7 +435,8 @@ export function createFamilyChartParentageGroupRoutes(
   cardPositions,
   orientation = 'vertical',
   references = [],
-  unions = []
+  unions = [],
+  otherParentageRails = []
 ) {
   const parentPoints = (extraLink.parentIds || [])
     .map(parentId => cardPositions.get(parentId))
@@ -467,6 +469,9 @@ export function createFamilyChartParentageGroupRoutes(
   // layout pass had shifted the child away from its parent.
   const firstCrossAxis = Math.min(parentCrossAxis, ...childAxisValues);
   const lastCrossAxis = Math.max(parentCrossAxis, ...childAxisValues);
+  const avoidRailCoordinates = otherParentageRails.filter(rail => (
+    firstCrossAxis <= rail.last && lastCrossAxis >= rail.first
+  )).map(rail => rail.generation);
 
   const buildRoutes = railGeneration => orientation === 'horizontal'
     ? [
@@ -487,6 +492,7 @@ export function createFamilyChartParentageGroupRoutes(
     relatedCardIds,
     orientation,
     parentHalfSize: parentPoints.length > 1 ? 0 : undefined,
+    avoidRailCoordinates,
     buildRoutes
   });
   const routes = selected?.routes || buildRoutes(
@@ -553,6 +559,7 @@ export function createFamilyChartLinkRenderer({
     path.style.strokeWidth = '1.65px';
     path.style.strokeDasharray = metadata.dashed ? '6 5' : '';
     path.dataset.relationshipType = metadata.type;
+    path.dataset.partnershipId = metadata.partnershipId || '';
   }
 
   function renderExtraLinks(routeRecords, references, extraLinks, unions) {
@@ -562,32 +569,52 @@ export function createFamilyChartLinkRenderer({
     if (!linksView) return;
     const cardPositions = collectFamilyChartCardPositions(container);
     const orientation = typeof resolveOrientation === 'function' ? resolveOrientation() : 'vertical';
+    const cross = orientation === 'horizontal' ? 'y' : 'x';
+    const generation = cross === 'x' ? 'y' : 'x';
+    const parentageRails = [];
     extraLinks.forEach((extraLink, extraLinkIndex) => {
       const groupId = extraRouteGroupId(extraLink, extraLinkIndex);
       if (extraLink.kind === 'parentage-group') {
+        const parents = extraLink.parentIds || [];
+        const relatedRails = parentageRails.filter(rail => rail.partnershipId !== extraLink.partnershipId
+          && parents.some(id => rail.parents.includes(id)));
         const routes = createFamilyChartParentageGroupRoutes(
           extraLink,
           cardPositions,
           orientation,
           references,
-          unions
+          unions,
+          relatedRails
         );
+        const hasSharedRail = routes.length === extraLink.childIds.length + 2;
+        if (parents.length === 2 && extraLink.partnershipId && hasSharedRail) {
+          const [start, end] = routes[1];
+          if (Math.abs(start[cross] - end[cross]) > 0.001) parentageRails.push({
+            parents,
+            partnershipId: extraLink.partnershipId,
+            first: Math.min(start[cross], end[cross]),
+            last: Math.max(start[cross], end[cross]),
+            generation: start[generation]
+          });
+        }
 
         routes.forEach((route, routeIndex) => {
+          const childStyle = extraLink.childStyles?.[routeIndex - (hasSharedRail ? 2 : 0)];
+          const metadata = childStyle ? { ...extraLink, ...childStyle } : extraLink;
           const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');
           path.setAttribute('class', 'link aleria-link--routed aleria-extra-link');
           path.setAttribute('fill', 'none');
           path.setAttribute('d', createRoundedOrthogonalPath(route, 0));
           path.dataset.extraLinkKind = extraLink.kind;
           setRelatedCardIds(path, relatedIdsForExtraLink(extraLink));
-          applyLineStyle(path, extraLink);
+          applyLineStyle(path, metadata);
           linksView.appendChild(path);
           registerRoute(routeRecords, {
             id: `${groupId}:segment:${routeIndex}`,
             groupId,
             path,
             points: route,
-            type: extraLink.type,
+            type: metadata.type,
             relatedCardIds: relatedIdsForExtraLink(extraLink),
             hidden: extraLink.hidden
           });

@@ -3,12 +3,18 @@ function personId(card) {
 }
 
 export function createFamilyChartRelationshipFocus({ container, onReferenceActivate }) {
-  let activeIds = [];
+  let selection = { ids: [], partnershipId: '' };
 
   function refresh() {
+    const { ids: activeIds, partnershipId } = selection;
     const routes = [...container.querySelectorAll('[data-related-card-ids]')];
     const relatedIds = new Set(activeIds);
-    const activeRoutes = new Set(routes.filter(route => (route.dataset.relatedCardIds || '').split(',').some(id => activeIds.includes(id))));
+    const activeRoutes = new Set(routes.filter(route => {
+      if (!activeIds.length) return false;
+      if (partnershipId && route.dataset.partnershipId) return route.dataset.partnershipId === partnershipId;
+      const ids = (route.dataset.relatedCardIds || '').split(',');
+      return activeIds.every(id => ids.includes(id));
+    }));
     activeRoutes.forEach(route => (route.dataset.relatedCardIds || '').split(',').forEach(id => relatedIds.add(id)));
     container.classList.toggle('has-relationship-focus', activeIds.length > 0);
     routes.forEach(route => {
@@ -31,26 +37,25 @@ export function createFamilyChartRelationshipFocus({ container, onReferenceActiv
     });
   }
 
-  function idsForTarget(target) {
+  function selectionForTarget(target) {
     const reference = target?.closest?.('.aleria-connection-reference, .aleria-partnership-node');
-    if (reference && container.contains(reference)) return (reference.dataset.relatedCardIds || '').split(',');
+    if (reference && container.contains(reference)) return {
+      ids: (reference.dataset.relatedCardIds || '').split(',').filter(Boolean),
+      partnershipId: reference.dataset.partnershipId || ''
+    };
     const card = target?.closest?.('.card_cont');
-    return card && container.contains(card) ? [personId(card)].filter(Boolean) : [];
+    return { ids: card && container.contains(card) ? [personId(card)].filter(Boolean) : [], partnershipId: '' };
   }
 
-  function enter(event) {
-    const ids = idsForTarget(event.target);
-    if (ids.join(',') === activeIds.join(',')) return;
-    activeIds = ids;
+  function selectTarget(target) {
+    const next = selectionForTarget(target);
+    if (next.partnershipId === selection.partnershipId && next.ids.join(',') === selection.ids.join(',')) return;
+    selection = next;
     refresh();
   }
 
-  function leave(event) {
-    const ids = idsForTarget(event.relatedTarget);
-    if (ids.join(',') === activeIds.join(',')) return;
-    activeIds = ids;
-    refresh();
-  }
+  const enter = event => selectTarget(event.target);
+  const leave = event => selectTarget(event.relatedTarget);
 
   function referenceEvent(event) {
     const trigger = event.target?.closest?.('[data-action="open-relationship-reference"]');
@@ -72,7 +77,7 @@ export function createFamilyChartRelationshipFocus({ container, onReferenceActiv
     refresh,
     destroy() {
       listeners.forEach(([event, listener]) => container.removeEventListener(event, listener));
-      activeIds = [];
+      selection = { ids: [], partnershipId: '' };
       refresh();
     }
   });

@@ -326,3 +326,17 @@ in einer Transaktion. Er übernimmt Text, die Trennposition eines Zwillingsdialo
 und die Aktivitätszeit. Zuordnung, Dauer, Auswertungen und Spielzustand bleiben
 in den bestehenden Daten. Der gleiche Textabgleich unterstützt ältere
 Online-Beiträge ohne Verfasserfeld.
+
+## Kampfdaten am Beitrag
+
+Das Kampfprofil öffnet sich am Porträt über den Knopf mit den gekreuzten
+Schwertern. Der Pfeil rechts erweitert die Karte. Auf schmalen Ansichten
+liegt die Karte in einem eigenen Dialog. Das Profil verwendet dieselben
+berechneten Szenenwerte und dieselbe Zustandsverwaltung wie der Kampfeditor.
+
+Die Rauten unter den Beiträgen folgen dem aktuellen Szenenverlauf.
+`comments-combat-status-strip.js` wertet den Verlauf einmal je Darstellung
+aus und zeigt je Figur im Beitrag eine eigene Zeile. Unterschiedliche
+Kreatureninstanzen behalten ihre Zustände auch bei derselben Vorlage.
+`combat-status/combat-condition-icons.js` ordnet wiedererkennbare Motive zu.
+Eigene Zustandsnamen erscheinen mit der neutralen Raute.

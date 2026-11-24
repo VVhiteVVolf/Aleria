@@ -3,6 +3,7 @@ import test from 'node:test';
 import { access } from 'node:fs/promises';
 import { createManualCombatCondition, buildCombatStatusChange, formatStatusDuration } from '../modules/combat-status/combat-status-model.js';
 import { COMBAT_STATUS_PRESETS, getStatusIcon } from '../modules/combat-status/combat-status-catalog.js';
+import { getCombatConditionIconId, getCombatConditionIconSource } from '../modules/combat-status/combat-condition-icons.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../modules/combat/combat-state-model.js';
 import { renderMiniCombatProfile, safeCombatImage } from '../modules/comments/comments-combat-mini-profile-view.js';
 
@@ -86,5 +87,35 @@ test('alle angebotenen Zustandsicons liegen lokal vor', async () => {
   for (const preset of COMBAT_STATUS_PRESETS) {
     const path = getStatusIcon({ presetId: preset.id }).replace(/^\/|^\.\.\//, '');
     await access(new URL(`../../${path}`, import.meta.url));
+    await access(new URL(`../..${getCombatConditionIconSource({ presetId: preset.id, name: preset.name })}`, import.meta.url));
   }
+});
+
+test('Frostbrand, Fesseln, Griffe und Kontrollverluste haben eigene Rauten', async () => {
+  const examples = [
+    [{ name: 'Frostbrandt' }, 'frostburn'], [{ name: 'Festgesetzt' }, 'restrained'], [{ name: 'Gehalten' }, 'held'],
+    [{ name: 'Tiefengriff', restraint: { dc: 13 } }, 'held'], [{ name: 'Gelähmt' }, 'paralyzed'],
+    [{ name: 'Gestunned' }, 'stunned'], [{ name: 'Benommen' }, 'dazed'], [{ name: 'Betrunken' }, 'drunk'],
+    [{ name: 'Gehaltene Speerlinie', damageGuard: { charges: 1 } }, 'protected'],
+    [{ name: 'Fremder Szeneneffekt' }, 'condition']
+  ];
+  for (const [effect, iconId] of examples) {
+    assert.equal(getCombatConditionIconId(effect), iconId);
+    await access(new URL(`../..${getCombatConditionIconSource(effect)}`, import.meta.url));
+  }
+});
+
+test('Breitbild zeigt Zauberplätze und Schutz, blockierte Aktionen erscheinen auch kompakt', () => {
+  const profile = { name: 'Prüffigur', maximumHitPoints: 20, currentHitPoints: 12, temporaryHitPoints: 4,
+    resources: [...resources, { id: 'spell-slot-1', name: 'Zaubergrad 1', current: 1, maximum: 3 }],
+    temporaryConditions: [condition({ presetId: 'stunned' })],
+    magic: { slotResourceIds: ['spell-slot-1'] }, armor: { name: 'Prüfrüstung' } };
+  const compact = renderMiniCombatProfile(profile, profile.name);
+  assert.match(compact, /Aktion<small>Gesperrt/);
+  assert.match(compact, /\+4 temporär/);
+  assert.doesNotMatch(compact, /Zauberplätze|Prüfrüstung/);
+  const wide = renderMiniCombatProfile(profile, profile.name, { wide: true });
+  assert.match(wide, /Zauberplätze \(1\)/);
+  assert.match(wide, /Zaubergrad 1<\/span><b>1\/3/);
+  assert.match(wide, /Prüfrüstung/);
 });

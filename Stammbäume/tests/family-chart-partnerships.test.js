@@ -4,6 +4,9 @@ import { createFamilyChartPersonAppearancePlan } from '../assets/js/adapters/fam
 import { createFamilyChartAppearanceLayout } from '../assets/js/adapters/family-chart-appearance-layout.js';
 import { planFamilyChartPartnershipNodes } from '../assets/js/adapters/family-chart-partnership-nodes.js';
 import { createFamilyChartNativeLinkRoute } from '../assets/js/adapters/family-chart-link-renderer.js';
+import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
+import { selectCollisionAwareRail } from '../assets/js/adapters/family-chart-route-geometry.js';
+import { collectFamilyChartLineCrossings } from '../assets/js/adapters/family-chart-line-crossings.js';
 import { presentPartnership } from '../assets/js/domain/partnership-presentation.js';
 
 function twoBranches() {
@@ -45,4 +48,86 @@ test('Zeitangaben und Status stammen aus der Partnerschaft; eine Ehereihenfolge 
   assert.deepEqual(presentPartnership({ type: 'marriage', status: 'ended', start: '1700', end: '1710' }), { label: 'Ehe', status: 'Beendet', period: '1700–1710' });
   assert.equal(presentPartnership({ type: 'affair', start: '????' }).period, '');
   assert.equal(presentPartnership({ type: 'marriage' }).label, 'Ehe');
+});
+
+test('Eine frühere Affäre und eine spätere Ehe behalten getrennte Verbindungen für dieselben Personen', () => {
+  const family = {
+    persons: [{ id: 'a', sex: 'male' }, { id: 'b', sex: 'female' },
+      { id: 'x', sex: 'female', familyRole: 'bastard' }, { id: 'y', sex: 'male' }],
+    partnerships: [{ id: 'affair', participantIds: ['a', 'b'], type: 'affair' },
+      { id: 'marriage', participantIds: ['a', 'b'], type: 'marriage' }],
+    parentages: [{ childId: 'x', parentIds: ['a', 'b'], partnershipId: 'affair' },
+      { childId: 'y', parentIds: ['a', 'b'], partnershipId: 'marriage' }]
+  };
+  const original = structuredClone(family);
+  const chart = toFamilyChartData(family);
+  const appearance = chart.data.find(card => card.data.nodeKind === 'person-appearance');
+  assert.equal(appearance.data.aleria.personId, 'b');
+  assert.equal(chart.getPartnershipLine('a', appearance.id).partnershipId, 'affair');
+  assert.equal(chart.getPartnershipLine('a', 'b').partnershipId, 'marriage');
+  assert.deepEqual(chart.data.find(card => card.id === 'x').rels.parents, ['a', appearance.id]);
+  assert.deepEqual(chart.data.find(card => card.id === 'y').rels.parents, ['a', 'b']);
+  assert.deepEqual(family, original);
+  family.partnerships[0].visibility = 'secret';
+  family.parentages[0].visibility = 'secret';
+  const publicChart = toFamilyChartData(family, { publicOnly: true });
+  assert.ok(!publicChart.data.some(card => card.data.nodeKind === 'person-appearance'));
+  assert.equal(publicChart.getPartnershipLine('a', 'b').partnershipId, 'marriage');
+  assert.ok(!Object.hasOwn(publicChart, 'preparedLayout'));
+});
+
+test('Automatische Mehrpartnergruppen haben je einen sichtbaren Elternanschluss pro Paar', () => {
+  const family = twoBranches();
+  family.parentages = family.parentages.slice(2);
+  const chart = toFamilyChartData(family);
+  const groups = chart.extraParentageLines.filter(route => route.kind === 'parentage-group');
+  assert.deepEqual(groups.map(group => [group.partnershipId, group.parentIds, group.childIds]), [
+    ['union-one', ['first', 'guest'], ['one']],
+    ['union-two', ['second', 'guest'], ['two']]
+  ]);
+});
+
+test('Bei mehreren Beziehungen bleibt eine nachgewiesene Elternschaft ohne zugeordnete Verbindung eigenständig', () => {
+  const family = { persons: ['a', 'b', 'c'].map(id => ({ id })),
+    partnerships: [{ id: 'affair', participantIds: ['a', 'b'], type: 'affair' },
+      { id: 'marriage', participantIds: ['a', 'b'], type: 'marriage' }],
+    parentages: [{ childId: 'c', parentIds: ['a', 'b'], type: 'biological' }] };
+  const chart = toFamilyChartData(family);
+  assert.equal(chart.getParentageLine('c').hidden, true);
+  assert.deepEqual(chart.extraParentageLines.filter(line => line.childId === 'c').map(line => line.parentIds), [['a'], ['b']]);
+  assert.deepEqual(chart.data.find(card => card.id === 'c').rels.parents, ['a', 'b']);
+});
+
+test('Benachbarte Kinderlinien können die Höhe einer bereits belegten Linie umgehen', () => {
+  const selected = selectCollisionAwareRail({ parentGeneration: 0, childGeneration: 326,
+    cardPositions: new Map(), parentHalfSize: 0, avoidRailCoordinates: [163],
+    buildRoutes: height => [[{ x: 0, y: height }, { x: 200, y: height }]] });
+  assert.ok(Math.abs(selected.railCoordinate - 163) >= 10);
+  assert.deepEqual(selected.hitCardIds, []);
+});
+
+test('Individuelle Abstammungsstile bleiben an den einzelnen Abzweigen erhalten', () => {
+  const family = twoBranches();
+  family.parentages = family.parentages.slice(2);
+  family.persons.push({ id: 'three', sex: 'female', familyRole: 'bastard' });
+  family.parentages.push({ childId: 'three', partnershipId: 'union-one', parentIds: ['first', 'guest'] });
+  const chart = toFamilyChartData(family);
+  const group = chart.extraParentageLines.find(route => route.partnershipId === 'union-one');
+  assert.deepEqual(group.childIds, ['one', 'three']);
+  assert.equal(group.dashed, false);
+  assert.equal(group.childStyles[0].dashed, false);
+  assert.equal(group.childStyles[1].dashed, true);
+  assert.equal(group.childStyles[1].color, chart.getParentageLine('three').color);
+});
+
+test('Ein gemeinsamer Elternteil macht Kreuzungen verschiedener Beziehungen nicht zu Abzweigungen', () => {
+  const routes = [
+    { id: 'a', partnershipId: 'main', type: 'biological', relatedCardIds: ['parent', 'older'],
+      points: [{ x: 50, y: 0 }, { x: 50, y: 140 }] },
+    { id: 'b', partnershipId: 'other', type: 'biological', relatedCardIds: ['parent', 'younger'],
+      points: [{ x: 0, y: 80 }, { x: 120, y: 80 }] }
+  ];
+  assert.equal(collectFamilyChartLineCrossings(routes).length, 1);
+  assert.equal(collectFamilyChartLineCrossings([routes[0], { ...routes[1],
+    points: [{ x: 50, y: 0 }, { x: 120, y: 0 }] }]).length, 0);
 });

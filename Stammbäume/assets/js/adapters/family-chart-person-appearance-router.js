@@ -17,34 +17,83 @@ function requestedPartnershipIds(person, extensionKey) {
     : [];
 }
 
-export function createFamilyChartPersonAppearancePlan({ partnerships, personById, parentages = [] }) {
-  const partnershipById = new Map((partnerships || []).map(partnership => [partnership.id, partnership]));
+function relationshipPairKey(participantIds) {
+  return [...participantIds].sort().join('\u001f');
+}
+
+function repeatedRelationships(partnerships, personById, originIds, founderPartnershipId) {
+  const byPair = new Map();
+  for (const partnership of partnerships) {
+    const [firstId, secondId] = partnership.participantIds;
+    if (partnership.participantIds.length !== 2 || firstId === secondId
+      || !personById.has(firstId) || !personById.has(secondId)) continue;
+    const pairId = relationshipPairKey(partnership.participantIds);
+    const relations = byPair.get(pairId) || [];
+    relations.push(partnership);
+    byPair.set(pairId, relations);
+  }
+  const repeatedByPerson = new Map();
+  const repeatedPairKeys = new Set();
+  for (const [pairId, relations] of byPair) {
+    if (relations.length < 2) continue;
+    repeatedPairKeys.add(pairId);
+    const base = relations.find(relation => relation.id === founderPartnershipId)
+      || relations.find(relation => relation.type === 'marriage') || relations[0];
+    const [firstId, secondId] = base.participantIds;
+    const personId = originIds.has(secondId) && !originIds.has(firstId) ? firstId : secondId;
+    const ids = repeatedByPerson.get(personId) || [];
+    for (const relation of relations) {
+      if (relation === base || relation.participantIds.some(id => (
+        requestedPartnershipIds(personById.get(id), 'chartRepeatForPartnershipIds').includes(relation.id)
+      ))) continue;
+      ids.push(relation.id);
+    }
+    repeatedByPerson.set(personId, ids);
+  }
+  return { repeatedByPerson, repeatedPairKeys };
+}
+
+export function createFamilyChartPersonAppearancePlan({ partnerships, personById, parentages = [], founderPartnershipId }) {
+  const relationships = partnerships || [];
+  const partnershipById = new Map(relationships.map(partnership => [partnership.id, partnership]));
+  const partnershipsByPerson = new Map();
+  for (const partnership of relationships) {
+    for (const id of partnership.participantIds) {
+      const relations = partnershipsByPerson.get(id) || [];
+      relations.push(partnership);
+      partnershipsByPerson.set(id, relations);
+    }
+  }
   const appearanceByPersonAndPartnership = new Map();
   const partnerMirrorByPersonAndPartnership = new Map();
   const appearances = [];
   const partnerMirrors = [];
   const invalidRequests = [];
   const originIds = new Set(parentages.filter(parentage => !parentage.extensions?.timeJumpId).map(parentage => parentage.childId));
+  const childBearingIds = new Set(parentages.map(parentage => parentage.partnershipId));
+  const { repeatedByPerson, repeatedPairKeys } = repeatedRelationships(relationships, personById, originIds, founderPartnershipId);
 
   personById.forEach((person, personId) => {
-    const repeatedIds = requestedPartnershipIds(person, 'chartRepeatForPartnershipIds');
+    const repeatedIds = new Set([
+      ...requestedPartnershipIds(person, 'chartRepeatForPartnershipIds'),
+      ...(repeatedByPerson.get(personId) || [])
+    ]);
     // An external partner with several families must not drag those families
     // away from their own parents. Give each additional anchored union its
     // own card, keeping the first union on the original card.
-    const anchoredUnions = (partnerships || []).filter(partnership => (
+    const anchoredUnions = (partnershipsByPerson.get(personId) || []).filter(partnership => (
       partnership.participantIds.length === 2
-      && partnership.participantIds.includes(personId)
       && partnership.participantIds.some(id => id !== personId && originIds.has(id))
-      && parentages.some(parentage => parentage.partnershipId === partnership.id)
+      && childBearingIds.has(partnership.id)
     ));
     const managedLayout = person?.extensions?.chartMultiPartnerLayoutReviewed
       || person?.extensions?.chartCenterBetweenPartnerPersonIds?.length
       || person?.extensions?.chartCenterBetweenSpousePersonIds?.length
       || anchoredUnions.some(partnership => partnership.extensions?.chartAlignPartnerOverChildrenPersonId);
     if (!managedLayout && !originIds.has(personId) && anchoredUnions.length > 1) {
-      const base = anchoredUnions.find(partnership => !repeatedIds.includes(partnership.id));
+      const base = anchoredUnions.find(partnership => !repeatedIds.has(partnership.id));
       anchoredUnions.filter(partnership => partnership !== base).forEach(partnership => {
-        if (!repeatedIds.includes(partnership.id)) repeatedIds.push(partnership.id);
+        repeatedIds.add(partnership.id);
       });
     }
     repeatedIds.forEach(partnershipId => {
@@ -88,6 +137,9 @@ export function createFamilyChartPersonAppearancePlan({ partnerships, personById
     appearances: Object.freeze(appearances),
     partnerMirrors: Object.freeze(partnerMirrors),
     invalidRequests: Object.freeze(invalidRequests),
+    hasRepeatedPair(parentIds) {
+      return repeatedPairKeys.size > 0 && parentIds.length === 2 && repeatedPairKeys.has(relationshipPairKey(parentIds));
+    },
     resolveParticipantId(personId, partnershipId) {
       return appearanceByPersonAndPartnership.get(appearanceKey(personId, partnershipId))?.id || personId;
     },

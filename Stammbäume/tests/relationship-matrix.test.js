@@ -39,3 +39,13 @@ test('Mehrdeutige Kinderzuordnung bleibt ausdrücklich offen', () => {
   assert.equal(matrix.partnerships.groups.every(group => group.children.length === 0), true);
   assert.deepEqual(matrix.partnerships.unassignedChildren.map(person => person.id), ['child']);
 });
+
+test('Die Beziehungsmatrix zeigt Lebensdaten einmal, wenn eine Person weder Haus noch Titel hat', () => {
+  const family = { document: { id: 'life-line' }, persons: [{ id: 'a', name: 'A' },
+    { id: 'b', name: 'B', birth: '1699', status: 'alive' }],
+  partnerships: [{ id: 'couple', participantIds: ['a', 'b'], type: 'affair' }] };
+  const html = renderRelationshipMatrix(buildRelationshipMatrix(family, 'a'));
+  const partnerCard = html.match(/data-matrix-person-id="b"[^]*?<\/button>/)?.[0];
+  assert.ok(partnerCard);
+  assert.equal(partnerCard.match(/1699/g).length, 1);
+});

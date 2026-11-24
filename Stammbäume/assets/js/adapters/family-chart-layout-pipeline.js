@@ -36,14 +36,15 @@ import { applyFamilyChartBranchCompaction } from './family-chart-branch-compacti
 export function applyFamilyChartLayoutPipeline({
   tree,
   family,
+  preparedLayout,
   orientation = 'vertical',
   maximumSpacingScale = 2,
   alignPersonAppearances = true
 }) {
-  const appearancePlan = createFamilyChartAppearanceAlignmentPlan(family);
-  const layoutFamily = createFamilyChartAppearanceLayout(family);
-  const partnerPlan = createFamilyChartPartnerAlignmentPlan(layoutFamily);
-  const descendantPlan = createFamilyChartDescendantAlignmentPlan(layoutFamily);
+  const appearancePlan = createFamilyChartAppearanceAlignmentPlan(family, preparedLayout?.appearancePlan);
+  const layoutFamily = preparedLayout?.family || createFamilyChartAppearanceLayout(family);
+  const partnerPlan = preparedLayout?.partnerPlan || createFamilyChartPartnerAlignmentPlan(layoutFamily);
+  const descendantPlan = preparedLayout?.descendantPlan || createFamilyChartDescendantAlignmentPlan(layoutFamily);
   const houseLinkPlan = createFamilyChartHouseLinkAlignmentPlan(layoutFamily);
   const pairPlacementPlan = createFamilyChartPairPlacementPlan(layoutFamily);
   // Kopierte Karten interner Ehen müssen vor allen Zweigverschiebungen an

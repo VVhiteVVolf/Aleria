@@ -4,11 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Brândyddyn",
   "housePage": true,
-  "image": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+  "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-krieger-v1.png",
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
-  "description": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+  "description": "Haus Brândyddyn ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Pellinard Brândyddyn, Eurgain Brândyddyn dienen in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,6 +30,14 @@ export const HOUSE_BIOGRAPHY = {
       "Celtigerns Wacht"
     ],
     [
+      "Oberhaupt",
+      "Ceredryn Brândyddyn"
+    ],
+    [
+      "Erbe",
+      "Pellinard Brândyddyn"
+    ],
+    [
       "Lehnsherr",
       "Haus Draig"
     ],
@@ -44,11 +52,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "biographyText": "Haus Brândyddyn ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Pellinard Brândyddyn, Eurgain Brândyddyn dienen in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
-    "historyTitle": "Vorbereitete Familienakte",
-    "historyText": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "historyTitle": "Herkunft der Familie",
+    "historyText": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Rhychwyn Brândyddyn (1637–1725).",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -62,7 +70,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an."
+        "text": "Ysabel Bronnor heiratete Pellinard Brândyddyn. Ihre drei Kinder sind Eurgain, Aelwryd und Gwrgant. Eurgain ist mit 25 Jahren die Älteste und dient als Ritter der Draig-Leibgarde. Ysabel entstammt dem Ritterhaus Bronnor aus dem Tal der Milane."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -76,7 +84,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png",
         "title": "Haus Brândyddyn · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brandyddyn"
       },
       {

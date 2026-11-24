@@ -4,7 +4,8 @@ import { createFamilyChartPersonAppearancePlan } from './family-chart-person-app
 export function createFamilyChartAppearanceLayout(family, appearancePlan = createFamilyChartPersonAppearancePlan({
   partnerships: family?.partnerships || [],
   personById: new Map((family?.persons || []).map(person => [person.id, person])),
-  parentages: family?.parentages || []
+  parentages: family?.parentages || [],
+  founderPartnershipId: family?.lineage?.founderPartnershipId
 })) {
   if (!appearancePlan.appearances.length) return family;
   const personById = new Map(family.persons.map(person => [person.id, person]));

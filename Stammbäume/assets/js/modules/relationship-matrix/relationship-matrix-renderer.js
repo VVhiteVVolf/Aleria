@@ -9,14 +9,16 @@ function portrait(person, className) {
 
 function relationshipCard(entry, houseById) {
   const house = houseById.get(entry.person.houseId);
+  const life = formatLifeLine(entry.person);
+  const detail = house?.name || entry.person.title;
   return `
     <button class="relationship-matrix-card" type="button" data-matrix-person-id="${escapeHtml(entry.person.id)}" title="${escapeHtml(entry.person.name)} ins Zentrum setzen">
       ${portrait(entry.person, 'relationship-matrix-card__portrait')}
       <span class="relationship-matrix-card__copy">
         <span class="relationship-matrix-card__relations">${entry.labels.map(escapeHtml).join(' · ')}</span>
         <strong>${escapeHtml(entry.person.name)}</strong>
-        <small>${escapeHtml(house?.name || entry.person.title || formatLifeLine(entry.person))}</small>
-        <small>${escapeHtml(formatLifeLine(entry.person))}</small>
+        ${detail && detail !== life ? `<small>${escapeHtml(detail)}</small>` : ''}
+        <small>${escapeHtml(life)}</small>
       </span>
     </button>`;
 }

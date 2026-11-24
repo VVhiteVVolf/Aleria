@@ -20631,7 +20631,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft der Gafyr",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/herrschaft.data.js?v=20261122-chamois",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/herrschaft.data.js?v=20261122-chamois-bwach",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },

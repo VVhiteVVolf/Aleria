@@ -93,18 +93,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Curiad ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Marared Curiad, Mathon Curiad, Morcant Curiad. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
-    "history": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "overview": "Haus Curiad ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Marared Curiad, Mathon Curiad, Morcant Curiad dienen in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
+    "history": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Gweryd Curiad (1640–1724).",
     "traditions": "Eigene Hausbräuche sind noch nicht überliefert.",
-    "knighthood": "Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "knighthood": "Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "holdings": "Eine genaue Wohnstätte, weitere Besitzungen und Einnahmequellen sind nicht belegt.",
     "cultureReligion": "Besondere religiöse Bindungen sind noch nicht überliefert.",
-    "conflictsAlliances": "Marared Curiad führt die Leibgarde als Hauptmann, Mathon Curiad dient unter den Rittern und Morcant Curiad als Leibgardist. Ihre genaueren Verwandtschaftsgrade sind nicht belegt.",
+    "conflictsAlliances": "Marared Curiad führt die Leibgarde als Hauptmann. Seine Söhne Mathon und Morcant dienen dort als Ritter und Leibgardist.",
     "values": "Eine silberne gepanzerte Faust mit aufrechter Streitkeule auf dunkelrotem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet.",
-    "succession": "Ein Oberhaupt und eine Erbfolge sind nicht festgelegt.",
-    "court": "Marared Curiad: Hauptmann der Leibgarde. Mathon Curiad: Ritter der Leibgarde. Morcant Curiad: Leibgardist.",
-    "familyTree": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten. Marared Curiad führt die Leibgarde als Hauptmann, Mathon Curiad dient unter den Rittern und Morcant Curiad als Leibgardist. Ihre genaueren Verwandtschaftsgrade sind nicht belegt.",
-    "historicalFigures": "Die folgenden Figuren sind namentlich bekannt. Altersangaben sind ausschließlich Schätzungen nach den aktuellen Portraits."
+    "succession": "Marared Curiad ist das Oberhaupt. Rhudden Curiad ist der Erbe.",
+    "court": "Marared Curiad · Hauptmann der Leibgarde\nMathon Curiad · Ritter der Leibgarde\nMorcant Curiad · Leibgardist",
+    "familyTree": "Haus Curiad ist eine Kriegerfamilie aus Gwynthor-Stadt. Marareds sechs Kinder verbinden die Gardelinie um Mathon und Morcant mit den jüngeren Zweigen von Rhudden und Cadfaen. Erwains Sohn Maelgris hat zwei Kinder. Clydwen heiratete fort und Tudraig blieb ledig.",
+    "historicalFigures": "Die Karten führen zu den jeweiligen Personen im Stammbaum."
   },
   "sectionTitles": {
     "knighthood": "4. Beruf und Hausleben",
@@ -129,27 +129,130 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
-    "haus-figur-1": {
+    "hof-heads-1": {
       "src": "../Stammbäume/assets/images/portraits/haus-curiad/marared-curiad.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=marared-curiad",
       "alt": "Marared Curiad",
       "format": "portrait"
     },
-    "haus-figur-2": {
+    "hof-heirs-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=rhudden-curiad",
+      "alt": "Rhudden Curiad",
+      "format": "portrait"
+    },
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-curiad/marared-curiad.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=marared-curiad",
+      "alt": "Marared Curiad",
+      "format": "portrait"
+    },
+    "hof-offices-2": {
       "src": "../Stammbäume/assets/images/portraits/haus-curiad/mathon-curiad.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=mathon-curiad",
       "alt": "Mathon Curiad",
       "format": "portrait"
     },
-    "haus-figur-3": {
+    "hof-offices-3": {
       "src": "../Stammbäume/assets/images/portraits/haus-curiad/morcant-curiad.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=morcant-curiad",
       "alt": "Morcant Curiad",
       "format": "portrait"
+    },
+    "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=haus-curiad-gruender",
+      "alt": "Unbekannter Gründer",
+      "format": "portrait"
+    },
+    "haus-figur-2": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=haus-curiad-gruenderin",
+      "alt": "Unbekannte Gründerin",
+      "format": "portrait"
+    },
+    "haus-figur-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-curiad/marared-curiad.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=marared-curiad",
+      "alt": "Marared Curiad",
+      "format": "portrait"
+    },
+    "haus-figur-4": {
+      "src": "../Stammbäume/assets/images/portraits/haus-curiad/mathon-curiad.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=mathon-curiad",
+      "alt": "Mathon Curiad",
+      "format": "portrait"
+    },
+    "haus-figur-5": {
+      "src": "../Stammbäume/assets/images/portraits/haus-curiad/morcant-curiad.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=morcant-curiad",
+      "alt": "Morcant Curiad",
+      "format": "portrait"
+    },
+    "haus-figur-6": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=rhudden-curiad",
+      "alt": "Rhudden Curiad",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Curiad",
+        "note": "Überlieferte Amtszeiten; unbekannte Zeiträume bleiben offen.",
+        "entries": [
+          {
+            "name": "Marared Curiad",
+            "role": "Oberhaupt",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=marared-curiad",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "heirs",
+        "title": "Erbfolge",
+        "entries": [
+          {
+            "name": "Rhudden Curiad",
+            "role": "Erbe",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=rhudden-curiad",
+            "imageKey": "hof-heirs-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Dienst bei den Draig",
+        "entries": [
+          {
+            "name": "Marared Curiad",
+            "role": "Hauptmann der Leibgarde",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=marared-curiad",
+            "imageKey": "hof-offices-1"
+          },
+          {
+            "name": "Mathon Curiad",
+            "role": "Ritter der Leibgarde",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=mathon-curiad",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Morcant Curiad",
+            "role": "Leibgardist",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-curiad&mode=view&person=morcant-curiad",
+            "imageKey": "hof-offices-3"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
@@ -158,24 +261,45 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Namentlich bekannte Angehörige",
-        "role": "Hauptmann der Leibgarde",
+        "role": "Gründer des Hauses",
+        "name": "Unbekannter Gründer",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Gründerin des Hauses",
+        "name": "Unbekannte Gründerin",
+        "description": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+        "imageKey": "haus-figur-2"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Oberhaupt",
         "name": "Marared Curiad",
         "description": "Alterserscheinung: etwa 60–70 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-1"
+        "imageKey": "haus-figur-3"
       },
       {
         "group": "Namentlich bekannte Angehörige",
         "role": "Ritter der Leibgarde",
         "name": "Mathon Curiad",
         "description": "Alterserscheinung: etwa 30–40 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-2"
+        "imageKey": "haus-figur-4"
       },
       {
         "group": "Namentlich bekannte Angehörige",
         "role": "Leibgardist",
         "name": "Morcant Curiad",
         "description": "Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
-        "imageKey": "haus-figur-3"
+        "imageKey": "haus-figur-5"
+      },
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Erbe",
+        "name": "Rhudden Curiad",
+        "description": "",
+        "imageKey": "haus-figur-6"
       }
     ],
     "mobileLayout": "stacked"

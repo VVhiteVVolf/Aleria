@@ -103,6 +103,11 @@ function sameRouteGroup(first, second) {
   return Boolean(first.groupId && second.groupId && first.groupId === second.groupId);
 }
 
+function touchesRouteEndpoint(point, route) {
+  const endpoints = [route.segments[0]?.first, route.segments.at(-1)?.second];
+  return endpoints.some(endpoint => endpoint && Math.hypot(point.x - endpoint.x, point.y - endpoint.y) <= AXIS_EPSILON);
+}
+
 /**
  * Finds only perpendicular line-to-line crossings. Collinear overlaps need a
  * different lane and are intentionally reported separately instead of being
@@ -125,11 +130,12 @@ export function collectFamilyChartLineCrossings(routes) {
           const point = perpendicularIntersection(firstSegment, secondSegment);
           if (!point) return;
           const sharedIds = sharedCardIds(firstRoute, secondRoute);
-          // Routes touching the same person/house card belong to one semantic
-          // relationship junction. Their intersection is intentional even if
-          // one route meets the middle of the other (pair midpoint -> child).
-          // Crossing markers are reserved for independent routes only.
-          if (sharedIds.length > 0) return;
+          // Different unions can share a person while their child lines remain
+          // independent. Only their actual common endpoint is a junction.
+          const differentUnions = firstRoute.partnershipId && secondRoute.partnershipId
+            && firstRoute.partnershipId !== secondRoute.partnershipId;
+          if (sharedIds.length && (!differentUnions
+            || (touchesRouteEndpoint(point, firstRoute) && touchesRouteEndpoint(point, secondRoute)))) return;
 
           const firstWins = routeWinsCrossing(
             firstRoute,

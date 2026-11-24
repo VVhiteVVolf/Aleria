@@ -3,6 +3,9 @@ import { createFamilyPerson, createMarriage, createParentages } from './family-r
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_EMBLEMS, TAL_DER_MILANE_HOUSE_PROFILES } from './tal-der-milane-house-profiles.js';
 import { DRAIG_GARDE_PEOPLE_BY_ID as people, DRAIG_GARDE_EURGAIN_PARENTAGE } from './draig-garde-people.js';
+import { BRANDYDDYN_LINE } from './gwynthor-warrior-families/brandyddyn.js';
+import { expandWarriorFamily, extendBrandyddynHousehold } from './gwynthor-warrior-families/family-expansion.js';
+import { OTHER_WARRIOR_FAMILY_LINES } from './gwynthor-warrior-families/other-lines.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
 const PELLINARD_YSABEL_MARRIAGE_ID = 'marriage-pellinard-brandyddyn-ysabel-bronnor';
@@ -132,19 +135,25 @@ function buildFamily({ id, title, emblem, houseProfile, roots, members, martial 
 }
 
 export const DRAIG_GARDE_COMMONER_HOUSE_FAMILIES = Object.freeze(
-  DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS.map(record => buildFamily({
-    id: `haus-${record.slug}`, title: `Haus ${record.name}`, emblem: record.emblem,
-    houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES[record.slug], martial: record.martial,
-    sourceRevision: record.slug === 'brandyddyn' ? YSABEL_SOURCE_REVISION : record.sourceRevision,
-    roots: record.members.filter(id => id !== 'eurgain-brandyddyn'),
-    members: record.slug === 'brandyddyn' ? [...record.members, 'ysabel-bronnor'] : record.members
-  }))
+  DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS.map(record => {
+    const brandyddyn = record.slug === 'brandyddyn';
+    const base = buildFamily({
+      id: `haus-${record.slug}`, title: `Haus ${record.name}`, emblem: record.emblem,
+      houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES[record.slug], martial: record.martial,
+      sourceRevision: brandyddyn ? YSABEL_SOURCE_REVISION : record.sourceRevision,
+      roots: record.members.filter(id => id !== 'eurgain-brandyddyn'),
+      members: brandyddyn ? [...record.members, 'ysabel-bronnor'] : record.members
+    });
+    return brandyddyn
+      ? expandWarriorFamily(extendBrandyddynHousehold(base, { incomingYsabel: true }), record, BRANDYDDYN_LINE)
+      : expandWarriorFamily(base, record, OTHER_WARRIOR_FAMILY_LINES[record.slug]);
+  })
 );
 
-export const HOUSE_BRONNOR_FAMILY = buildFamily({
+export const HOUSE_BRONNOR_FAMILY = Object.freeze(extendBrandyddynHousehold(buildFamily({
   id: 'haus-bronnor', title: 'Haus Bronnor',
   emblem: TAL_DER_MILANE_HOUSE_EMBLEMS.bronnor,
   houseProfile: TAL_DER_MILANE_HOUSE_PROFILES.bronnor, sourceRevision: YSABEL_SOURCE_REVISION,
   roots: ['ysabel-bronnor'],
   members: ['ysabel-bronnor', 'pellinard-brandyddyn', 'eurgain-brandyddyn']
-});
+})));

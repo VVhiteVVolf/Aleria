@@ -8,7 +8,7 @@ export const HOUSE_BIOGRAPHY = {
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
-  "description": "Haus Aelgorn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Angharad Aelgorn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+  "description": "Haus Aelgorn ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Angharad Aelgorn dient in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,6 +30,14 @@ export const HOUSE_BIOGRAPHY = {
       "Celtigerns Wacht"
     ],
     [
+      "Oberhaupt",
+      "Gwalrhan Aelgorn"
+    ],
+    [
+      "Erbe",
+      "Lleithryn Aelgorn"
+    ],
+    [
       "Lehnsherr",
       "Haus Draig"
     ],
@@ -44,11 +52,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Aelgorn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Angharad Aelgorn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+    "biographyText": "Haus Aelgorn ist eine bürgerliche Kriegerfamilie aus Gwynthor-Stadt. Angharad Aelgorn dient in der Draig-Leibgarde. Das Haus wartet noch auf seine Erhebung. Einzelne Angehörige führen bereits persönliche Rittertitel.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
-    "historyTitle": "Vorbereitete Familienakte",
-    "historyText": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+    "historyTitle": "Herkunft der Familie",
+    "historyText": "Auf das unbekannte Gründerpaar und das Hauswappen folgt eine Überlieferungslücke. Die namentlich bekannte Linie beginnt mit Aerveth Aelgorn (1638–1721).",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -62,7 +70,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert."
+        "text": "Angharad Aelgorn gehört zur Leibgarde des Hauses Draig."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -76,7 +84,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aelgorn/aelgorn-emblem.png",
         "title": "Haus Aelgorn · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aelgorn"
       },
       {

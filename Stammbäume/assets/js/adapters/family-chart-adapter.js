@@ -35,6 +35,7 @@ import {
 } from './family-chart-partner-alignment.js';
 import {
   createFamilyChartAlignedParentageGroupPlan,
+  createFamilyChartParentageGroupStyle,
   createFamilyChartParentageGroupPlan
 } from './family-chart-parentage-group.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
@@ -747,7 +748,7 @@ function applyTimeJumps({
   });
 }
 
-export function toFamilyChartData(input, options = {}) {
+function prepareFamilyChart(input, options = {}) {
   const family = normalizeFamily(input);
   const diagnostics = [];
   const houseById = createChartHouseIndex(family, options);
@@ -780,7 +781,13 @@ export function toFamilyChartData(input, options = {}) {
   const visiblePartnerships = family.partnerships.filter(partnership => (
     !options.publicOnly || partnership.visibility === 'public'
   ));
-  const appearancePlan = createFamilyChartPersonAppearancePlan({ partnerships: visiblePartnerships, personById, parentages: [...selectedParentageByChild.values()] });
+  const visiblePartnershipById = new Map(visiblePartnerships.map(partnership => [partnership.id, partnership]));
+  const appearancePlan = createFamilyChartPersonAppearancePlan({
+    partnerships: visiblePartnerships,
+    personById,
+    parentages: [...selectedParentageByChild.values()],
+    founderPartnershipId: family.lineage.founderPartnershipId
+  });
   appearancePlan.appearances.forEach(appearance => {
     const sourceNode = chartById.get(appearance.personId);
     if (sourceNode) chartById.set(appearance.id, createChartPersonAppearance(sourceNode, appearance));
@@ -805,7 +812,12 @@ export function toFamilyChartData(input, options = {}) {
     ))
   }));
   const parentageGroupPlan = createFamilyChartParentageGroupPlan(selectedParentageByChild);
-  const appearanceLayout = createFamilyChartAppearanceLayout(family, appearancePlan);
+  const layoutSource = options.publicOnly ? {
+    ...family,
+    partnerships: visiblePartnerships,
+    parentages: [...parentagesByChild.values()].flat()
+  } : family;
+  const appearanceLayout = createFamilyChartAppearanceLayout(layoutSource, appearancePlan);
   const conversionPartnerAlignmentPlan = createFamilyChartPartnerAlignmentPlan(appearanceLayout);
   const conversionDescendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(appearanceLayout);
   const alignedParentageGroupPlan = createFamilyChartAlignedParentageGroupPlan({
@@ -913,7 +925,6 @@ export function toFamilyChartData(input, options = {}) {
     }
   });
 
-  const visiblePartnershipById = new Map(visiblePartnerships.map(partnership => [partnership.id, partnership]));
   appearancePlan.partnerMirrors.forEach(mirror => {
     const partnership = visiblePartnershipById.get(mirror.partnershipId);
     const mirrorNode = chartById.get(mirror.id);
@@ -973,13 +984,26 @@ export function toFamilyChartData(input, options = {}) {
       addUnique(parent.rels.children, childId);
     });
     const childRole = personById.get(childId)?.familyRole;
-    parentageLines.set(childId, Object.freeze({
+    const partnership = visiblePartnershipById.get(selected.partnershipId);
+    const unassigned = appearancePlan.hasRepeatedPair(selected.parentIds) && !selected.parentIds.every(id => (
+      partnership?.participantIds.includes(id)
+    ));
+    const metadata = {
       type: selected.type,
+      partnershipId: unassigned ? '' : selected.partnershipId,
       color: ROLE_LINE_COLORS[childRole] || relationColor(family, selected.type),
-      dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole]),
-      hidden: parentageGroupPlan.groupedChildIds.has(childId)
+      dashed: ['claimed', 'foster', 'step'].includes(selected.type) || Boolean(ROLE_LINE_COLORS[childRole])
+    };
+    parentageLines.set(childId, Object.freeze({
+      ...metadata,
+      hidden: unassigned || parentageGroupPlan.groupedChildIds.has(childId)
         || alignedParentageGroupPlan.groupedChildIds.has(childId)
     }));
+    if (unassigned && !parentageGroupPlan.groupedChildIds.has(childId)) {
+      selected.parentIds.forEach(parentId => extraParentageLines.push(Object.freeze({
+        kind: 'parentage', parentIds: [parentId], childId, ...metadata
+      })));
+    }
     if (selected.parentIds.length > 2) {
       diagnostics.push(Object.freeze({
         severity: 'warning',
@@ -1059,29 +1083,18 @@ export function toFamilyChartData(input, options = {}) {
   });
 
   parentageGroupPlan.groups.forEach(group => {
-    const lineMetadata = parentageLines.get(group.childIds[0]) || Object.freeze({
-      type: 'biological',
-      color: relationColor(family, 'biological'),
-      dashed: false
-    });
     extraParentageLines.push(Object.freeze({
       kind: 'parentage-group',
       parentId: group.anchorPersonId,
       childIds: group.childIds,
-      type: lineMetadata.type,
-      color: lineMetadata.color,
-      dashed: lineMetadata.dashed
+      ...createFamilyChartParentageGroupStyle(group.childIds, parentageLines, relationColor(family, 'biological'))
     }));
   });
 
   alignedParentageGroupPlan.groups.forEach(group => {
-    const lineMetadata = parentageLines.get(group.childIds[0]) || Object.freeze({
-      type: 'biological',
-      color: relationColor(family, 'biological'),
-      dashed: false
-    });
     extraParentageLines.push(Object.freeze({
       kind: 'parentage-group',
+      partnershipId: group.partnershipId,
       ...(group.kind === 'parent-pair'
         ? {
             parentIds: group.parentIds.map(parentId => (
@@ -1095,14 +1108,18 @@ export function toFamilyChartData(input, options = {}) {
             )
           }),
       childIds: group.childIds,
-      type: lineMetadata.type,
-      color: lineMetadata.color,
-      dashed: lineMetadata.dashed
+      ...createFamilyChartParentageGroupStyle(group.childIds, parentageLines, relationColor(family, 'biological'))
     }));
   });
 
   return Object.freeze({
     data: Object.freeze([...chartById.values()]),
+    preparedLayout: Object.freeze({
+      family: appearanceLayout,
+      appearancePlan,
+      partnerPlan: conversionPartnerAlignmentPlan,
+      descendantPlan: conversionDescendantAlignmentPlan
+    }),
     diagnostics: Object.freeze(diagnostics),
     houseOffshoots: Object.freeze(houseOffshoots),
     extraCoupleLines: Object.freeze([...extraCoupleLines]),
@@ -1114,6 +1131,11 @@ export function toFamilyChartData(input, options = {}) {
       return parentageLines.get(childId) || null;
     }
   });
+}
+
+export function toFamilyChartData(input, options = {}) {
+  const { preparedLayout, ...chartData } = prepareFamilyChart(input, options);
+  return Object.freeze(chartData);
 }
 
 function hierarchyNodeId(node) {
@@ -1147,7 +1169,7 @@ export function createFamilyChartSession(config) {
 
   let family = normalizeFamily(config.family);
   let view = completeFamilyChartView({ ...family.view, ...(config.view || {}) });
-  let converted = toFamilyChartData(family, config.options);
+  let converted = prepareFamilyChart(family, config.options);
   if (!converted.data.length) throw new Error('Der Stammbaum enthält keine darstellbare Person.');
 
   let overview = createFamilyChartOverview(family, converted.data);
@@ -1279,7 +1301,7 @@ export function createFamilyChartSession(config) {
 
   function update(nextFamily, nextView = nextFamily?.view) {
     ensureActive();
-    const nextConverted = toFamilyChartData(nextFamily, config.options);
+    const nextConverted = prepareFamilyChart(nextFamily, config.options);
     if (!nextConverted.data.length) return false;
     family = normalizeFamily(nextFamily);
     view = completeFamilyChartView({ ...family.view, ...(nextView || {}) });
@@ -1343,6 +1365,7 @@ export function createFamilyChartSession(config) {
     const layout = applyFamilyChartLayoutPipeline({
       tree,
       family,
+      preparedLayout: converted.preparedLayout,
       orientation: view.orientation,
       maximumSpacingScale: 1,
       alignPersonAppearances: true
