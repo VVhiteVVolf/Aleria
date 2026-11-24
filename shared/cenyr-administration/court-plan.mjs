@@ -6,7 +6,7 @@ import { CENYR_HOUSE_COMMAND } from './military-organization.mjs';
 const leadershipIds = ['vogt', 'schatzmeister', 'hausmacht'];
 const courtGroups = [
   ['Hausverwaltung und Kanzlei', 'coordination', ['archiv']],
-  ['Schutzdienst', 'watch', ['waffen', 'kerker']],
+  ['Schutzdienst', 'watch', ['kerker']],
   ['Tafel, Empfänge und Hofkultur', 'hospitality', ['zeremonien', 'mundschenk', 'kueche', 'brot', 'narr']],
   ['Persönlicher Dienst und Hofkapelle', 'faith', ['hofdame', 'kaplan']],
   ['Stall, Jagd und Liegenschaften', 'horse', ['stall', 'jagd', 'hafen', 'falkner', 'zwinger', 'handwerk', 'garten']],
@@ -44,6 +44,7 @@ export function buildCourtPlan(house) {
     { id: 'kammerdiener', title: 'Kammerdiener', icon: 'secrecy', description: 'Betreut die persönlichen Räume und hält die zugewiesenen Dienste bereit.' },
   );
   const head = entries.find(slot => slot.id === 'hofmeister');
+  const weaponMasters = entries.filter(slot => slot.type === 'waffen');
   const guard = entries.find(slot => slot.id === 'garde') || {
     id: 'garde', title: 'Hauptmann der Leibgarde', icon: 'command',
   };
@@ -54,12 +55,14 @@ export function buildCourtPlan(house) {
     leadership: true,
     slots: leadershipIds.map(id => entries.find(slot => slot.id === id)),
   };
-  const remaining = entries.filter(slot => slot !== head && slot !== guard && !household.includes(slot) && !leadershipIds.includes(slot.id));
+  const remaining = entries.filter(slot => slot !== head && slot !== guard && !weaponMasters.includes(slot)
+    && !household.includes(slot) && !leadershipIds.includes(slot.id));
   const sections = courtGroups.map(([title, icon, ids]) => ({
     title, icon, slots: remaining.filter(slot => ids.includes(slot.type)),
   }));
   sections.unshift({ title: 'Lehre und Mentorat', icon: 'learning', slots: [
     { ...head, key: 'hof/leitung', titleVariants: ['Hofmeister', 'Hofmeisterin'] },
+    ...weaponMasters,
   ] });
   const extras = remaining.filter(slot => !courtGroups.some(([, , ids]) => ids.includes(slot.type)));
   if (extras.length) sections.push({ title: 'Weitere Hofämter', icon: 'coordination', slots: extras });

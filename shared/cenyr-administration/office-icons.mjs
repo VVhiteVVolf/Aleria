@@ -1,4 +1,5 @@
 import { dutyIcon } from '../../Kontinente/modules/administration/office-duty-icons.mjs';
+import { LEHENSWARTE_ID } from './lehenswarte-plan.mjs';
 
 const artwork = {
   arcane: '/IconOrdner/Organisationsicons/Magie.png',
@@ -14,10 +15,11 @@ const artwork = {
 export const officeIcon = key => artwork[key] || dutyIcon(key);
 export const COURT_AREA = { id: 'hof', name: 'Hofämter', imageSrc: officeIcon('court') };
 export const REGENCY_AREA = { id: 'regentschaft', name: 'Regentschaft', imageSrc: officeIcon('diplomacy') };
+export const LEHENSWARTE_AREA = { id: LEHENSWARTE_ID, name: 'Ortsämter und Lehen', imageSrc: officeIcon('diplomacy') };
 
 const postIcons = {
   militaer: {
-    seefuehrung: 'sailing', seeadjutant: 'sailing',
+    admiral: 'sailing', seefuehrung: 'sailing', seeadjutant: 'sailing',
     'kriegswart-sicherheit': 'watch', 'kriegswart-logistik': 'supplies', 'kriegswart-ausbildung': 'learning',
     'kriegswart-aufklaerung': 'scouting', 'kriegswart-disziplin': 'judgment',
     wachkommandant: 'command', wachstellvertretung: 'coordination', bannerfuehrer: 'command',

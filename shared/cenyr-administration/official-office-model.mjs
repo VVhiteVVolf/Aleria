@@ -4,25 +4,37 @@ import { buildCourtPlans, buildOfficePlans } from './office-plans.mjs';
 import { LOWER_ROLE_KINDS, ROLE_KINDS } from './office-roles.mjs';
 import { scopeForHouse, scopeForTerritory } from './scopes.mjs';
 import { indexCourtEntries } from './court-plan.mjs';
+import { indexAppointments, locateOfficePosts, otherAppointmentLinks, preparationHref } from './office-appointments.mjs';
 
 const households = new Map(OFFICE_CAST.houses.map(house => [house.id, house]));
 const people = new Map(OFFICE_CAST.people.map(person => [person.id, person]));
+const plansByHouse = new Map();
+let sourceAppointments;
 
-export function preparationHref(scopeId, area, department) {
-  const params = new URLSearchParams({ haus: scopeId, amt: area });
-  if (department) params.set('abteilung', department);
-  return `/Vorschau/Herrschaftsverwaltung/index.html?${params}`;
+export { preparationHref };
+
+function sourcePlans(house) {
+  if (!plansByHouse.has(house.id)) plansByHouse.set(house.id, buildOfficePlans(house));
+  return plansByHouse.get(house.id);
 }
 
-export function officialRole(slot, source = {}, cast = true) {
+function relatedOffices(scopeId, slot) {
+  if (!sourceAppointments) {
+    const scopes = OFFICE_CAST.houses.map(house => {
+      const plans = sourcePlans(house);
+      return { id: house.id, name: house.name, plans, locations: locateOfficePosts(plans) };
+    });
+    sourceAppointments = indexAppointments(scopes);
+  }
+  return otherAppointmentLinks(sourceAppointments.get(slot.holder) || [], scopeId, slot.key, post => post.title);
+}
+
+export function officialRole(slot, source = {}, cast = true, scopeId) {
   const person = people.get(slot.holder);
   const station = slot.locality?.type === 'station' ? slot.locality.name : '';
   const links = [...(source.links || [])];
-  for (const href of [person?.href, person?.almanacHref].filter(Boolean)) {
-    const label = href.includes('AleriaAlmanach.html?entry=') ? 'Almanachmodul öffnen'
-      : href.includes('AleriaAlmanach.html?character=') ? 'Almanachfigur öffnen' : 'Person im Stammbaum';
-    links.push({ label, href });
-  }
+  if (person?.href) links.push({ label: person.href.includes('AleriaAlmanach') ? 'Almanachfigur öffnen' : 'Person im Stammbaum', href: person.href });
+  if (person?.almanacHref) links.push({ label: 'Almanachfigur öffnen', href: person.almanacHref });
   return {
     ...source, id: source.id || slot.id || slot.key.replace('/', '-'), title: slot.title,
     name: person?.name || (!cast ? source.name : '') || '',
@@ -31,6 +43,7 @@ export function officialRole(slot, source = {}, cast = true) {
     note: slot.note,
     reportsTo: (station ? '' : slot.locality?.title) || source.reportsTo || slot.reportsTo,
     ...(station ? { station } : {}),
+    ...(scopeId && person ? { appointmentLinks: relatedOffices(scopeId, slot) } : {}),
     links: [...new Map(links.map(link => [link.href, link])).values()],
   };
 }
@@ -58,14 +71,19 @@ export function officialCouncil(scopeId, areaId, source) {
   const scope = scopeForTerritory(scopeId);
   const house = households.get(scope?.id);
   if (!house?.offices[areaId]) return null;
-  const plan = buildOfficePlans(house)[areaId];
+  const plan = sourcePlans(house)[areaId];
   const [originalLead, ...originalGroups] = source?.groups || [];
-  const head = officialRole(plan.head, originalLead?.roles[0]);
+  const roleFor = (slot, original) => {
+    const role = officialRole(slot, original, true, house.id);
+    if (slot.previousKey) role.planningHref = preparationHref(house.id, areaId, undefined, slot.key);
+    return role;
+  };
+  const head = roleFor(plan.head, originalLead?.roles[0]);
   head.planningHref = preparationHref(house.id, areaId);
   return { house, scope, groups: [{
     id: originalLead?.id || `${areaId}-leitung`, kind: 'leadership', title: originalLead?.title || 'Amtsleitung',
     description: originalLead?.description, roles: [head],
-  }, ...officialGroups(plan, originalGroups)] };
+  }, ...officialGroups(plan, originalGroups, roleFor)] };
 }
 
 export function officialCourt(houseId, entries) {

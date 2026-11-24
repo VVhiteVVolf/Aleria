@@ -11,6 +11,11 @@ import { countyAreas, countyLeadershipRole } from '../../shared/cenyr-administra
 import { officialCouncil, officialCourt, officialRole } from '../../shared/cenyr-administration/official-office-model.mjs';
 import { rulerSuffix, scopeForTerritory } from '../../shared/cenyr-administration/scopes.mjs';
 import { CENYR_FORCES } from '../../shared/cenyr-administration/military-organization.mjs';
+import { lehenswartKey } from '../../shared/cenyr-administration/lehenswarte-plan.mjs';
+import { classifyLocalAuthority, localAuthorityChoices } from '../../shared/cenyr-administration/local-authority.mjs';
+import { officeTitleKey, postTitleKey, titleKeyForTemplate } from '../Herrschaftsverwaltung/draft-office-titles.mjs';
+import { vacancyEntries, filterVacancies } from '../Herrschaftsverwaltung/vacancy-search.mjs';
+import { COURT_AREA, LEHENSWARTE_AREA } from '../../shared/cenyr-administration/office-icons.mjs';
 
 const roster = JSON.parse(await readFile(new URL('../Herrschaftsverwaltung/roster.generated.json', import.meta.url), 'utf8'));
 const houses = roster.houses.map(house => ({ ...house, plans: buildOfficePlans(house) }));
@@ -171,18 +176,32 @@ test('the five kinds of Cenyr forces keep the Ortswachen with the marshal and th
   assert.equal(officialRole(kevan).reportsTo, 'dem zuständigen Hauptmann der Hausmacht');
 });
 
-test('documented dual roles round-trip and transfers vacate the affected appointments', () => {
+test('documented dual roles link to their exact posts and survive new appointments and round-trips', () => {
   const draft = createAssemblyState(houses, roster.free);
+  const odyar = idFor('Odyar Draig');
+  const finance = officialCouncil(draig.territoryId, 'finanzen', countyAreas.finanzen).groups[0].roles[0];
+  const treasury = officialCourt('haus-draig', []).plans['hof-schatzmeister'].head;
+  assert.deepEqual(finance.appointmentLinks, [{ label: 'Schatzmeister · Haus Draig',
+    href: '/Vorschau/Herrschaftsverwaltung/index.html?haus=draig&amt=hof&abteilung=hof-schatzmeister&posten=hof%2Fschatzmeister' }]);
+  assert.deepEqual(officialRole(treasury, {}, true, 'draig').appointmentLinks, [{ label: 'Kämmerer des Grafen',
+    href: '/Vorschau/Herrschaftsverwaltung/index.html?haus=draig&amt=finanzen&posten=finanzen%2Fleitung' }]);
+  const slotIds = state => state.appointments(odyar).map(entry => entry.post.key).sort();
+  assert.deepEqual(slotIds(draft), ['finanzen/leitung', 'hof/schatzmeister']);
+  draft.assign('draig', 'spionage/leitung', odyar);
   const restored = createAssemblyState(houses, roster.free);
   restored.importDraft(draft.serialize());
-  const current = restored.positions('draig');
-  const odyar = current.get('finanzen/leitung').occupant;
-  assert.equal(current.get('hof/schatzmeister').occupant, odyar);
-  const change = restored.assign('draig', 'spionage/leitung', odyar);
-  assert.deepEqual(new Set(change.formerPosts.map(slot => slot.key)), new Set(['finanzen/leitung', 'hof/schatzmeister']));
-  assert.equal(restored.positions('draig').get('hof/schatzmeister').occupant, null);
+  assert.deepEqual(slotIds(restored), ['finanzen/leitung', 'hof/schatzmeister', 'spionage/leitung']);
+  restored.assign('draig', 'hof/schatzmeister', null);
+  assert.deepEqual(slotIds(restored), ['finanzen/leitung', 'spionage/leitung']);
   restored.undo();
-  assert.equal(restored.positions('draig').get('hof/schatzmeister').occupant, odyar);
+  assert.deepEqual(slotIds(restored), ['finanzen/leitung', 'hof/schatzmeister', 'spionage/leitung']);
+
+  const v7 = JSON.parse(draft.serialize());
+  v7.version = 7;
+  v7.houses.draig.assignments['finanzen/leitung'] = null;
+  v7.houses.draig.assignments['hof/schatzmeister'] = null;
+  restored.importDraft(JSON.stringify(v7));
+  assert.deepEqual(slotIds(restored), ['spionage/leitung']);
 });
 
 test('the Saethwyr pool contains their living house members and keeps other liege obligations separate', () => {
@@ -203,16 +222,21 @@ test('the Saethwyr pool contains their living house members and keeps other lieg
   assert(roster.free.every(person => houses.every(house => house.candidates.every(candidate => candidate.id !== person.id))));
 });
 
-test('moving a known councillor vacates the old lead and supports undo and voluntary release', () => {
+test('appointing a councillor changes only the chosen post and supports undo and voluntary release', () => {
   const draft = createAssemblyState(houses, roster.free);
-  const result = draft.assign('saethwyr', 'spionage/leitung', imogen);
-  assert.equal(result.former.key, 'finanzen/leitung');
-  assert.equal(result.post.occupant, shadow);
+  const previous = draft.assign('saethwyr', 'spionage/leitung', imogen);
+  assert.equal(previous.occupant, shadow);
   assert.equal(draft.positions('saethwyr').get('spionage/leitung').occupant, imogen);
-  assert.equal(draft.positions('saethwyr').get('finanzen/leitung').occupant, null);
+  assert.equal(draft.positions('saethwyr').get('finanzen/leitung').occupant, imogen);
+  const newTreasurer = idFor('Anwyll Saethwyr');
+  draft.assign('saethwyr', 'finanzen/leitung', newTreasurer);
+  assert.equal(draft.positions('saethwyr').get('finanzen/leitung').occupant, newTreasurer);
+  assert.equal(draft.positions('saethwyr').get('spionage/leitung').occupant, imogen);
+  draft.undo();
   assert.throws(() => draft.assign('gafyr', 'spionage/leitung', imogen), /gehört nicht/);
   draft.assign('saethwyr', 'spionage/leitung', null);
   assert.equal(draft.positions('saethwyr').get('spionage/leitung').occupant, null);
+  assert.equal(draft.positions('saethwyr').get('finanzen/leitung').occupant, imogen);
   draft.undo();
   draft.undo();
   assert.equal(draft.positions('saethwyr').get('spionage/leitung').occupant, shadow);
@@ -228,6 +252,7 @@ test('additional posts and cross-house drafts survive storage, export and valida
   const ordinary = draft.addPost('saethwyr', { area: 'hof', title: 'Rechnungsgehilfe', kind: 'service', description: '' });
   const free = roster.free[0].id;
   draft.assign('saethwyr', extra, free);
+  draft.assign('saethwyr', ordinary, free);
   assert(!draft.freeFor('wyrm').some(person => person.id === free));
   assert.throws(() => draft.assign('wyrm', 'magie/leitung', free), /anderen Herrschaft/);
   draft.assign('gafyr', 'spionage/leitung', idFor('Kelyddon Gafyr'));
@@ -236,16 +261,21 @@ test('additional posts and cross-house drafts survive storage, export and valida
   assert.equal(restored.serialize(), exported);
   assert.equal(restored.positions('saethwyr').get(extra).occupant, free);
   assert.equal(restored.positions('saethwyr').get(ordinary).kind, 'service');
-  assert.equal(restored.positions('gafyr').get('finanzen/leitung').occupant, null);
+  assert.equal(restored.positions('saethwyr').get(ordinary).occupant, free);
+  assert.equal(restored.appointments(free).find(entry => entry.post.key === ordinary).area, 'hof');
+  assert.equal(restored.positions('gafyr').get('finanzen/leitung').occupant, idFor('Kelyddon Gafyr'));
   const loaded = createAssemblyState(houses, roster.free);
   loaded.importDraft(exported);
   assert.equal(loaded.serialize(), exported);
   const broken = JSON.parse(exported);
   broken.houses.wyrm.assignments['magie/leitung'] = free;
-  assert.throws(() => loaded.importDraft(JSON.stringify(broken)), /mehrfach/);
+  assert.throws(() => loaded.importDraft(JSON.stringify(broken)), /mehreren Herrschaften/);
   assert.equal(loaded.serialize(), exported);
   assert(loaded.removePost('saethwyr', extra));
+  assert(!loaded.freeFor('wyrm').some(person => person.id === free));
+  assert(loaded.removePost('saethwyr', ordinary));
   assert(loaded.freeFor('wyrm').some(person => person.id === free));
+  loaded.undo();
   loaded.undo();
   assert.equal(loaded.serialize(), exported);
   loaded.reset('saethwyr');
@@ -309,9 +339,322 @@ test('v4 military drafts keep house appointments and stationing while freeing th
   assert.equal(guard.title, 'Waffenknecht der Hausmacht');
   assert.equal(guard.locality.name, 'Morfaen');
   const currentExport = draft.serialize();
-  assert.equal(JSON.parse(currentExport).version, 5);
+  assert.equal(JSON.parse(currentExport).version, 9);
   draft.importDraft(currentExport);
   assert.equal(draft.serialize(), currentExport);
+});
+
+test('local offices include settlements and documented seats, with previous assignments retained', () => {
+  assert.deepEqual(houses.map(house => house.plans.lehenswarte.slots.length), [5, 5, 5, 7, 13, 13, 15]);
+  const aberllan = draig.plans.lehenswarte.slots.find(slot => slot.place === 'Aberllan');
+  assert.equal(people.get(aberllan.holder).name, 'Lyonnel Garrael');
+  const gafyr = houses.find(house => house.id === 'gafyr');
+  const eifion = gafyr.plans.lehenswarte.slots.find(slot => slot.place === 'Bronfelen');
+  assert.equal(people.get(eifion.holder).name, 'Eifion Gostyn');
+  assert(gafyr.candidates.some(candidate => candidate.id === eifion.holder));
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates });
+  const old = JSON.parse(draft.serialize());
+  old.version = 5;
+  old.houses.gafyr.assignments['spionage/ermittler'] = eifion.holder;
+  draft.importDraft(JSON.stringify(old));
+  assert.equal(draft.positions('gafyr').get(eifion.key).occupant, null);
+  assert.equal(draft.positions('gafyr').get('spionage/ermittler').occupant, eifion.holder);
+  const morfaen = lehenswartKey('Morfaen');
+  draft.assign('saethwyr', morfaen, imogen);
+  assert.equal(draft.positions('saethwyr').get(morfaen).occupant, imogen);
+  assert.equal(draft.positions('saethwyr').get('finanzen/leitung').occupant, imogen);
+});
+
+test('settlement types present the applicable offices while documented titles keep their source holder', () => {
+  const choices = type => localAuthorityChoices({ kind: classifyLocalAuthority(type) });
+  for (const type of ['Klostersiedlung', 'Kirchensiedlung', 'Abtei']) {
+    assert.deepEqual(choices(type), ['oberer', 'prior', 'abt', 'gildenpacht']);
+  }
+  for (const type of ['Burg', 'Inselburg · neu an Merek vergeben', 'Grenzfestung', 'Turm']) {
+    assert.deepEqual(choices(type), ['kommandant', 'hauptmann', 'burgverwalter', 'gildenpacht']);
+  }
+  for (const type of ['Waldsiedlung', 'Landsiedlung', 'Handelssiedlung', 'Bergbausiedlung']) {
+    assert.deepEqual(choices(type), ['buergermeister', 'lehenswart', 'gildenpacht']);
+  }
+  for (const type of ['Siedlung', 'Befestigte Siedlung']) {
+    assert.deepEqual(choices(type), ['buergermeister', 'lehenswart', 'kommandant', 'hauptmann', 'burgverwalter', 'gildenpacht']);
+  }
+  assert.deepEqual(choices('Pachtsiedlung'), ['gildenpacht']);
+  const plans = houses.find(house => house.id === 'gwendolyns-ufer').plans.lehenswarte;
+  const check = (name, title, holder) => {
+    const slot = plans.slots.find(post => post.place === name);
+    assert.equal(slot.title, title);
+    assert.equal(people.get(slot.holder).name, holder);
+  };
+  check('Côr Mynyddfaen', 'Oberin von Côr Mynyddfaen', 'Gwenydd Anghof');
+  check('Tŵr Morlan', 'Hauptmann und Verwalter von Tŵr Morlan', 'Cadfan Trydar');
+  check('Castell Rhewglyn', 'Lehenswart von Castell Rhewglyn', 'Brendan Taranvyr');
+  assert(!plans.slots.some(slot => slot.place === 'Morddyn'));
+});
+
+test('Tŵr Morlan shares one watch and locality appointment while old keys and both draft choices are preserved', () => {
+  const house = houses.find(house => house.id === 'gwendolyns-ufer');
+  const key = lehenswartKey('Tŵr Morlan');
+  const previousKey = 'militaer/wacht-morlan';
+  const cadfan = idFor('Cadfan Trydar');
+  const second = idFor('Rhunlas Llon');
+  assert.equal(house.plans.militaer.slots.find(post => post.id === 'wacht-morlan').key, key);
+  assert.equal(house.plans.lehenswarte.slots.find(post => post.place === 'Tŵr Morlan').key, key);
+  const official = officialCouncil(house.territoryId, 'militaer').groups.flatMap(group => group.roles).find(role => role.name === 'Cadfan Trydar');
+  assert.equal(official.title, 'Hauptmann und Verwalter von Tŵr Morlan');
+  assert.deepEqual(official.appointmentLinks, []);
+  const state = createAssemblyState(houses, roster.free, { treeCandidates, people });
+  assert.equal(state.appointments(cadfan).filter(entry => entry.scopeId === house.id).length, 1);
+  const old = JSON.parse(state.serialize());
+  old.version = 8;
+  const source = old.houses[house.id];
+  source.assignments[previousKey] = second;
+  source.titles[postTitleKey(previousKey)] = 'Hauptmann der Turmsiedlung';
+  source.posts.push({ id: 'dienst', area: 'militaer', kind: 'service', templateId: 'r-wachmann', site: previousKey,
+    title: 'Wachmann der Ortswache', description: '' });
+  state.importDraft(JSON.stringify(old));
+  assert.equal(state.positions(house.id).get(key).occupant, second);
+  assert.equal(state.positions(house.id).get(key).title, 'Hauptmann der Turmsiedlung');
+  assert.equal(state.positions(house.id).get('militaer/extra-dienst').locality.key, key);
+  source.assignments[key] = cadfan;
+  state.importDraft(JSON.stringify(old));
+  assert.equal(state.positions(house.id).get(key).previousOccupantName, 'Rhunlas Llon');
+  assert(state.positions(house.id).get(key).needsReplacement);
+  state.importDraft(state.serialize());
+  assert.equal(state.positions(house.id).get(key).previousOccupantName, 'Rhunlas Llon');
+  state.assign(house.id, key, cadfan);
+  assert(!state.positions(house.id).get(key).needsReplacement);
+  assert.equal(state.positions(house.id).get(key).occupant, cadfan);
+  state.assign(house.id, state.postKey(house.id, previousKey), null);
+  assert.equal(state.positions(house.id).get(key).occupant, null);
+});
+
+test('missing and no longer eligible holders survive old drafts and stay out of the candidate pool', () => {
+  const state = createAssemblyState(houses, roster.free, { treeCandidates, people });
+  const old = JSON.parse(state.serialize());
+  old.version = 8;
+  const former = 'person--haus-nachbesetzung--varn-alde';
+  const offices = old.houses.saethwyr;
+  offices.applicants.push(former);
+  offices.assignments['spionage/leitung'] = former;
+  offices.assignments['magie/leitung'] = idFor('Kelyddon Gafyr');
+  state.importDraft(JSON.stringify(old));
+  const posts = () => state.positions('saethwyr');
+  assert.equal(posts().get('spionage/leitung').occupantName, 'Varn Alde');
+  assert.equal(posts().get('magie/leitung').occupantName, 'Kelyddon Gafyr');
+  assert(posts().get('spionage/leitung').needsReplacement);
+  assert(posts().get('magie/leitung').needsReplacement);
+  assert.equal(posts().get('finanzen/leitung').occupant, imogen);
+  assert.deepEqual(state.applicants('saethwyr'), []);
+  assert.throws(() => state.assign('saethwyr', 'gerichtsbarkeit/leitung', former), /gehört nicht/);
+  const snapshot = JSON.parse(state.serialize());
+  snapshot.houses.saethwyr.assignmentNames[former] = 'Vârn Alde';
+  state.importDraft(JSON.stringify(snapshot));
+  state.importDraft(state.serialize());
+  assert.equal(posts().get('spionage/leitung').occupantName, 'Vârn Alde');
+  state.assign('saethwyr', 'spionage/leitung', imogen);
+  assert(!posts().get('spionage/leitung').needsReplacement);
+  state.assign('saethwyr', 'magie/leitung', null);
+  assert.equal(posts().get('magie/leitung').occupant, null);
+  state.undo();
+  assert(posts().get('magie/leitung').needsReplacement);
+});
+
+test('vacancy search works across houses, with draft titles, localities and one entry per shared post', () => {
+  const state = createAssemblyState(houses, roster.free, { treeCandidates, people });
+  const areas = [COURT_AREA, LEHENSWARTE_AREA, { id: 'militaer', name: 'Militär' }];
+  const all = () => vacancyEntries(houses, areas, state, people);
+  assert.equal(filterVacancies(all(), 'twr morlan hauptmann und verwalter').length, 0);
+  const matches = filterVacancies(all(), 'hauptmann arwydd', 'rhonwens-traenen');
+  assert(matches.some(row => row.area === 'hof' && row.href.includes('abteilung=hof-hausmacht')));
+  assert(matches.some(row => row.area === 'militaer' && row.href.includes('posten=militaer%2F')));
+  const scope = 'gwendolyns-ufer';
+  const key = lehenswartKey('Tŵr Morlan');
+  state.assign(scope, key, null);
+  state.renameTitle(scope, postTitleKey(key), 'Hauptmann am Leuchtfeuer');
+  const vacancy = filterVacancies(all(), 'twr morlan leuchtfeuer', scope, 'militaer');
+  assert.equal(vacancy.length, 1);
+  assert.equal(new URL(vacancy[0].href, 'https://aleria.invalid').searchParams.get('posten'), key);
+  assert.match(filterVacancies(all(), 'twr morlan leuchtfeuer', scope, 'lehenswarte')[0].href, /amt=lehenswarte/);
+});
+
+test('a guild lease stores its own title, keeps its seat and supports restoration and export', () => {
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates, makeId: () => 'test-staff' });
+  const scope = 'gwendolyns-ufer';
+  const key = lehenswartKey('Glasdraeth');
+  const former = draft.positions(scope).get(key);
+  const clerk = draft.addPost(scope, { area: 'lehenswarte', kind: 'service', title: 'Ortsschreiber', description: '', site: key });
+  draft.setAuthority(scope, key, { role: 'gildenpacht', guild: '  Klingende Münze  ', title: 'Gildenvogt' });
+  const after = draft.positions(scope).get(key);
+  assert.equal(after.occupant, former.occupant);
+  assert.equal(after.title, 'Gildenvogt');
+  assert.equal(after.authority.type, 'Hafensiedlung');
+  assert.equal(after.reportsTo, 'der Gilde Klingende Münze');
+  assert.equal(draft.positions(scope).get(clerk).locality.title, 'Gildenvogt');
+  const exportText = draft.serialize();
+  const restored = createAssemblyState(houses, roster.free, { treeCandidates });
+  restored.importDraft(exportText);
+  assert.equal(restored.serialize(), exportText);
+  restored.setAuthority(scope, key, { role: 'buergermeister' });
+  assert.equal(restored.positions(scope).get(key).title, 'Bürgermeister von Glasdraeth');
+  assert.deepEqual(JSON.parse(restored.serialize()).houses[scope].authorities[key], { role: 'buergermeister' });
+  restored.undo();
+  assert.equal(restored.serialize(), exportText);
+  restored.setAuthority(scope, key, null);
+  assert.equal(restored.positions(scope).get(key).title, former.title);
+  assert.throws(() => restored.setAuthority(scope, lehenswartKey('Tŵr Morlan'), { role: 'buergermeister' }), /Amtsform/);
+  assert.throws(() => restored.setAuthority(scope, key, { role: 'gildenpacht', guild: 'a\nb' }), /Gildenname/);
+  const invalid = JSON.parse(exportText);
+  invalid.houses[scope].authorities['finanzen/leitung'] = { role: 'gildenpacht' };
+  assert.throws(() => restored.importDraft(JSON.stringify(invalid)), /Amtsform/);
+});
+
+test('v6 drafts can transfer a figure whose documented locality is now editable', () => {
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates });
+  const v6 = JSON.parse(draft.serialize());
+  v6.version = 6;
+  for (const house of Object.values(v6.houses)) delete house.authorities;
+  const hywel = idFor('Hywel Tynged');
+  v6.houses.wyrm.assignments['spionage/ermittler'] = hywel;
+  draft.importDraft(JSON.stringify(v6));
+  assert.equal(draft.positions('wyrm').get('spionage/ermittler').occupant, hywel);
+  assert.equal(draft.positions('wyrm').get(lehenswartKey('Craithglyn')).occupant, null);
+});
+
+test('draft titles follow the office, repeated role and individual post across export and undo', () => {
+  let nextId = 0;
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates, makeId: () => `title-${++nextId}` });
+  const role = saethwyr.plans.spionage.templates.find(template => template.title === 'Ermittler');
+  const roleKey = titleKeyForTemplate('spionage', role);
+  const head = 'spionage/leitung';
+  const originalPost = 'spionage/ermittler';
+  draft.renameTitle('saethwyr', postTitleKey(head), '  Schild der Nacht  ');
+  draft.renameTitle('saethwyr', officeTitleKey('hof'), 'Haushof');
+  draft.renameTitle('saethwyr', roleKey, 'Kundige der Nacht');
+  draft.renameTitle('saethwyr', postTitleKey(originalPost), 'Erste Kundige');
+  const [next] = draft.addPosts('saethwyr', { area: 'spionage', kind: role.kind, title: role.title, description: '', templateId: role.id }, 1);
+  draft.assign('saethwyr', head, imogen);
+  const posts = draft.positions('saethwyr');
+  assert.equal(posts.get(head).title, 'Schild der Nacht');
+  assert.equal(posts.get(head).titleVariants, undefined);
+  assert.equal(posts.get(head).occupant, imogen);
+  assert.equal(posts.get(originalPost).title, 'Erste Kundige');
+  assert.equal(posts.get(originalPost).roleTitle, posts.get(next).title);
+  assert.equal(posts.get(originalPost).roleKey, posts.get(next).roleKey);
+  assert.equal(draft.title('saethwyr', officeTitleKey('hof')), 'Haushof');
+  assert.equal(draft.title('gafyr', officeTitleKey('hof')), undefined);
+  const maids = [...draft.positions('gafyr').values()].filter(post => post.placement === 'zofen');
+  assert.equal(maids.length, 8);
+  assert.equal(new Set(maids.map(post => post.roleKey)).size, 1);
+  const exported = draft.serialize();
+  const restored = createAssemblyState(houses, roster.free, { treeCandidates });
+  restored.importDraft(exported);
+  assert.equal(restored.serialize(), exported);
+  restored.renameTitle('saethwyr', postTitleKey(originalPost), null);
+  assert.equal(restored.positions('saethwyr').get(originalPost).title, 'Kundige der Nacht');
+  restored.undo();
+  assert.equal(restored.serialize(), exported);
+  const invalid = JSON.parse(exported);
+  invalid.houses.saethwyr.titles['amt/unbekannt'] = 'Fremd';
+  assert.throws(() => restored.importDraft(JSON.stringify(invalid)), /kein verfügbares Amt/);
+  assert.throws(() => restored.renameTitle('saethwyr', postTitleKey(head), '   '), /Titel muss/);
+  assert.equal(restored.serialize(), exported);
+});
+
+test('the shared court plans provide the requested teaching, smithy and chapel posts', () => {
+  for (const house of houses) {
+    const { hof, 'hof-waffen': weapons, 'hof-handwerk': crafts, 'hof-kaplan': chapel, 'hof-hofdame': lady } = house.plans;
+    assert(hof.sections[0].slots.some(slot => slot.key === 'hof/waffen'));
+    assert.deepEqual(weapons.sections.flatMap(section => section.slots.map(slot => slot.title)), [
+      'Stellvertreter und Nachfolger', 'Lehrmeister', 'Lehrmeister', 'Lehrmeister', 'Lehrmeister', 'Rüst- und Waffenwart',
+    ]);
+    const smithy = crafts.sections[0].slots;
+    assert.equal(smithy[0].title, 'Schmiedemeister');
+    assert.equal(smithy.filter(slot => slot.title === 'Schmiedegeselle' && slot.kind).length, 4);
+    assert.equal(smithy.filter(slot => slot.title === 'Schmiedelehrling' && slot.kind).length, 2);
+    assert(crafts.sections[1].slots.some(slot => slot.title === 'Hofhandwerker'));
+    assert.deepEqual(chapel.sections[0].slots.map(slot => slot.title), ['Stellvertretung', 'Schreiber des Hofkaplans']);
+    assert.equal(chapel.slots.filter(slot => slot.title === 'Heiler').length, { prince: 1, barony: 2, county: 4 }[house.rank]);
+    assert.equal(chapel.slots.filter(slot => slot.title === 'Akolyth').length, { prince: 2, barony: 3, county: 4 }[house.rank]);
+    assert(chapel.slots.some(slot => slot.title === 'Sakristan'));
+    assert(![...lady.slots, ...lady.templates].some(slot => slot.title === 'Page der Hofdame'));
+  }
+});
+
+test('v5 imports preserve former armory assignments and release the removed lady-in-waiting pages', () => {
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates });
+  const old = JSON.parse(draft.serialize());
+  old.version = 5;
+  const saved = old.houses.saethwyr;
+  saved.posts.push({ area: 'hof-hofdame', id: 'old-page', kind: 'service', title: 'Page der Hofdame', description: '', templateId: 'r-gehilfe' });
+  Object.assign(saved.assignments, { 'hof-waffen/gehilfe': imogen,
+    'hof-hofdame/gehilfe-2': shadow, 'hof-hofdame/extra-old-page': idFor('Arian Saethwyr') });
+  draft.importDraft(JSON.stringify(old));
+  const positions = draft.positions('saethwyr');
+  assert.equal(positions.get('hof-waffen/extra-alt-gehilfe').occupant, imogen);
+  assert.equal(positions.get('spionage/leitung').occupant, shadow);
+  assert(!positions.has('hof-hofdame/extra-old-page'));
+  assert(!positions.has('hof-hofdame/gehilfe-2'));
+});
+
+test('sea commands follow rank and Arwydd retains the previous coastal posts', () => {
+  const forScope = id => houses.find(house => house.id === id).plans.militaer;
+  const flotillas = id => forScope(id).sections.find(section => /Flottillenadmiräle/u.test(section.title)).slots;
+  assert.deepEqual(['draig', 'gwendolyns-ufer', 'saethwyr', 'rhonwens-traenen'].map(id => flotillas(id).length), [5, 3, 2, 2]);
+  assert.deepEqual(flotillas('rhonwens-traenen').map(slot => slot.title), ['Flottillenadmiral von Tân Gwaelon', 'Flottillenadmiral von Talheli']);
+  const arwydd = forScope('rhonwens-traenen');
+  assert.equal(arwydd.slots.find(slot => slot.key === 'militaer/admiral').title, 'Seemarschall und Admiral');
+  assert.equal(arwydd.slots.find(slot => slot.key === 'militaer/seefuehrung').title, 'See- und Küstenkommandant');
+  assert.equal(arwydd.slots.find(slot => slot.key === 'militaer/seeadjutant').title, 'Adjutant des Küstenkommandanten');
+  const official = officialCouncil('herrschaft-rhonwens-traenen', 'militaer');
+  assert(official.groups.some(group => group.title === 'Admiralität' && group.roles[0].title === 'Vizeadmiral'));
+  assert(!arwydd.slots.some(slot => slot.id === 'seekommandant'));
+  assert(!forScope('gafyr').sections.some(section => section.title === 'Admiralität'));
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates });
+  const old = JSON.parse(draft.serialize());
+  old.version = 5;
+  const coastalCommander = idFor('Ianto Arwydd');
+  const flotillaCommander = idFor('Gwynnan Gwyvern');
+  old.houses['rhonwens-traenen'].assignments['militaer/seefuehrung'] = coastalCommander;
+  old.houses['gwendolyns-ufer'].assignments['militaer/flottille-traethgorn'] = flotillaCommander;
+  draft.importDraft(JSON.stringify(old));
+  assert.equal(draft.positions('rhonwens-traenen').get('militaer/seefuehrung').occupant, coastalCommander);
+  assert.equal(draft.positions('rhonwens-traenen').get('militaer/admiral').occupant, null);
+  assert.equal(draft.positions('gwendolyns-ufer').get('militaer/extra-alt-flottille-traethgorn').occupant, flotillaCommander);
+});
+
+test('flotilla and ship roles can be reduced or added in batches with an optional station', () => {
+  let nextId = 0;
+  const draft = createAssemblyState(houses, roster.free, { treeCandidates, makeId: () => `see-${++nextId}` });
+  for (const scope of ['draig', 'gwendolyns-ufer', 'saethwyr', 'rhonwens-traenen']) {
+    const plan = houses.find(house => house.id === scope).plans.militaer;
+    const captain = plan.templates.find(role => role.id === 'r-kapitaen');
+    const flotilla = plan.templates.find(role => role.id === 'r-flottillenadmiral');
+    assert.equal(captain.title, 'Kapitän zur See');
+    assert.equal(flotilla.title, 'Flottillenadmiral');
+    assert.equal(plan.templates.filter(role => role.id === flotilla.id).length, 1);
+    assert(plan.slots.filter(slot => slot.templateId === flotilla.id).every(slot => slot.removable));
+  }
+  const scope = 'rhonwens-traenen';
+  const plan = houses.find(house => house.id === scope).plans.militaer;
+  const add = (id, count, site) => {
+    const { kind, title, description } = plan.templates.find(role => role.id === id);
+    return draft.addPosts(scope, { area: 'militaer', kind, title, description, templateId: id, site }, count);
+  };
+  const original = plan.slots.filter(slot => slot.templateId === 'r-flottillenadmiral');
+  for (const slot of original) assert(draft.removePost(scope, slot.key));
+  const site = plan.localities.find(place => place.name === 'Tân Gwaelon');
+  const fleet = add('r-flottillenadmiral', 3, site.key);
+  const captains = add('r-kapitaen', 12, site.key);
+  const deck = add('r-seedienst-bootsmann', 8, site.key);
+  const posts = draft.positions(scope);
+  assert.equal(posts.get(fleet[0]).reportsTo, 'dem Vizeadmiral');
+  assert.deepEqual(posts.get(fleet[0]).locality, { key:site.key, name: 'Tân Gwaelon', type:'station' });
+  assert.equal(posts.get(captains.at(-1)).placement, 'kapitaene-zur-see');
+  assert.equal(posts.get(deck.at(-1)).locality.type, 'station');
+  draft.importDraft(draft.serialize());
+  assert(!draft.positions(scope).has(original[0].key));
+  assert(draft.positions(scope).has(fleet[2]));
 });
 
 test('the two Baronies and Rhonwens Tränen have their own ranks, identified officers and territorial posts', () => {
@@ -413,26 +756,37 @@ test('a figure from a remote family enters only the explicitly chosen applicant 
   assert.equal(draft.applicants('saethwyr')[0].id, id);
   assert.equal(draft.applicants('gafyr').length, 0);
   draft.assign('saethwyr', 'spionage/leitung', id);
+  draft.assign('saethwyr', 'magie/leitung', id);
+  assert(draft.addApplicant('gafyr', id));
+  draft.assign('gafyr', 'spionage/leitung', id);
   assert.throws(() => draft.removeApplicant('saethwyr', id), /Posten/);
   const restored = createAssemblyState(houses, roster.free, { treeCandidates });
   restored.importDraft(draft.serialize());
   assert.equal(restored.positions('saethwyr').get('spionage/leitung').occupant, id);
+  assert.deepEqual(restored.appointments(id).map(entry => [entry.scopeId, entry.post.key]), [
+    ['saethwyr', 'spionage/leitung'], ['saethwyr', 'magie/leitung'], ['gafyr', 'spionage/leitung'],
+  ]);
   assert.equal(restored.applicants('saethwyr')[0].id, id);
   restored.assign('saethwyr', 'spionage/leitung', null);
+  assert.throws(() => restored.removeApplicant('saethwyr', id), /Posten/);
+  restored.assign('saethwyr', 'magie/leitung', null);
   assert(restored.removeApplicant('saethwyr', id));
+  assert.equal(restored.positions('gafyr').get('spionage/leitung').occupant, id);
   const older = JSON.parse(draft.serialize());
   older.version = 2;
   for (const source of Object.values(older.houses)) delete source.applicants;
-  delete older.houses.saethwyr.assignments['spionage/leitung'];
+  older.houses.saethwyr.assignments = {};
+  older.houses.gafyr.assignments = {};
   restored.importDraft(JSON.stringify(older));
   assert.deepEqual(restored.applicants('saethwyr'), []);
 });
 
 test('candidate filters compose and treat unknown dates as unknown', () => {
   const all = saethwyr.candidates.map(info => ({ ...people.get(info.id), ...info,
-    position: info.id === imogen ? saethwyr.plans.finanzen.head : null }));
+    appointments: info.id === imogen ? [saethwyr.plans.finanzen.head, saethwyr.plans.spionage.head] : [] }));
   const filtered = conditions => filterCandidates(all, { minAge: null, maxAge: null, ...conditions });
   assert.deepEqual(filtered({ query: 'imogen arwydd', sex: 'female', relationship: 'widowed', minAge: 60, maxAge: 70, availability: 'assigned' }).map(person => person.id), [imogen]);
+  assert.deepEqual(filtered({ query: 'imogen schatten', availability: 'assigned' }).map(person => person.id), [imogen]);
   assert.equal(filtered({ query: 'anwyll', sex: 'male', relationship: 'married', minAge: 40, maxAge: 50 }).length, 1);
   assert.deepEqual(filtered({ query: 'imogen', relationship: 'single' }), []);
   assert(filtered({ query: 'nia saethwyr' }).some(person => person.name === 'Nia Saethwyr'));

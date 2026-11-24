@@ -52,6 +52,7 @@ function renderGroup(documentRef, group, crest = false) {
 function renderOffices(group, data) {
   const { scope, house, plans } = officialCourt(data.meta?.id, group.entries);
   const sources = new Map(indexCourtEntries(group.entries).map(({ id, entry }) => [id, entry]));
+  const roleForDepartment = slot => officialRole(slot, undefined, true, scope?.id);
   const roleForSlot = slot => {
     const base = sources.get(slot.id) || { role: slot.title };
     const source = houseOfficeRole(base, plans.hof.slots.indexOf(slot), data);
@@ -59,9 +60,9 @@ function renderOffices(group, data) {
       source.description = [slot.description, base.detail].filter(Boolean);
       source.reportsTo = house.offices.militaer.title;
     }
-    const role = officialRole(slot, source, Boolean(house && slot.holder));
+    const role = officialRole(slot, source, Boolean(house && slot.holder), scope?.id);
     const department = plans[slot.department];
-    role.hierarchy = department && officialGroups(department);
+    role.hierarchy = department && officialGroups(department, [], roleForDepartment);
     if (scope && department) role.planningHref = preparationHref(scope.id, 'hof', slot.department);
     if (scope?.id === 'draig' && slot.id === 'hausmacht') role.links.push({
       label: 'Draig-Leibgarde im Almanach öffnen ↗',

@@ -12,13 +12,15 @@ export function filterCandidates(candidates, filters) {
   const terms = normalizePersonName(filters.query).split(' ').filter(Boolean);
   const { sex, relationship, kind, availability, hideMinors, minAge, maxAge } = filters;
   return candidates.filter(person => {
+    const assigned = person.appointments.length > 0;
     if ((sex && person.sex !== sex) || (relationship && person.relationship !== relationship)
-      || (kind && person.kind !== kind) || (availability === 'unassigned' && person.position)
-      || (availability === 'assigned' && !person.position)) return false;
+      || (kind && person.kind !== kind) || (availability === 'unassigned' && assigned)
+      || (availability === 'assigned' && !assigned)) return false;
     if (hideMinors && person.age !== null && person.age < MIN_ADULT_AGE) return false;
     if (minAge !== null && (person.age === null || person.age < minAge)) return false;
     if (maxAge !== null && (person.age === null || person.age > maxAge)) return false;
-    const searchable = normalizePersonName([person.name, person.alias, person.family, person.detail, person.position?.title].filter(Boolean).join(' '));
+    const titles = person.appointments.map(post => post.title);
+    const searchable = normalizePersonName([person.name, person.alias, person.family, person.detail, ...titles].filter(Boolean).join(' '));
     return terms.every(term => searchable.includes(term));
   });
 }

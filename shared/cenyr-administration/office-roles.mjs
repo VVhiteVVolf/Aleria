@@ -118,8 +118,9 @@ export function officeRoleTemplates(area, slots, suggestions = []) {
   for (const slot of slots) {
     if (!slot.kind) continue;
     add({
-      id: slot.templateId, kind: slot.kind, title: slot.title, description: slot.description,
+      id: slot.templateId, kind: slot.kind, title: slot.templateTitle || slot.title, description: slot.templateDescription || slot.description,
       image: slot.image, placement: slot.placement, reportsTo: slot.reportsTo,
+      ...(slot.stationed ? { stationed: true } : {}),
     });
   }
   const external = Object.entries(ROLE_EXAMPLES[ownArea] || {}).flatMap(([kind, roles]) =>

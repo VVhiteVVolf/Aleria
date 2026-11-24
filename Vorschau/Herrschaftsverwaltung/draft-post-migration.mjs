@@ -22,7 +22,7 @@ export function migrateFormerPost(scope, key, posts, occupiedKeys) {
   return customKey(previous);
 }
 
-export function migrateMilitaryPosts(scope, posts) {
+function migrateMilitaryPosts(scope, posts) {
   const moved = new Map();
   const formerTroop = scope.retired.get('militaer/waffenknecht');
   if (!formerTroop) return { posts, moved };
@@ -38,4 +38,12 @@ export function migrateMilitaryPosts(scope, posts) {
     return replacement;
   });
   return { posts: updated, moved };
+}
+
+export function migrateStoredPosts(scope, posts, military) {
+  const retired = post => typeof post?.templateId === 'string' && post.templateId.startsWith('r-')
+    && scope.retired.get(`${post.area}/${post.templateId.slice(2)}`) === null;
+  const obsolete = new Set(posts.filter(retired).map(customKey));
+  const remaining = posts.filter(post => !retired(post));
+  return { ...(military ? migrateMilitaryPosts(scope, remaining) : { posts: remaining, moved: new Map() }), obsolete };
 }

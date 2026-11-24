@@ -1,4 +1,4 @@
-import { element, pin, portraitImage } from './administration-cards.mjs';
+import { element, pin, portraitImage, renderAppointmentLinks } from './administration-cards.mjs';
 import { dutyIcon } from './office-duty-icons.mjs';
 
 function renderHierarchy(groups) {
@@ -23,11 +23,12 @@ function renderHierarchy(groups) {
       item.append(portraitImage(role.portrait, role.name));
       const details = element('div');
       const link = role.links?.find(entry => entry.href.includes('AleriaAlmanach.html?character='))
-        || role.links?.find(entry => entry.href.includes('Stammbaum.html'))
-        || role.links?.find(entry => entry.href.includes('AleriaAlmanach.html?entry='));
+        || role.links?.find(entry => entry.href.includes('Stammbaum.html'));
       const name = element(link ? 'a' : 'strong', '', role.name || 'Unbesetzt');
       if (link) name.href = link.href;
       details.append(element('span', '', role.title), name);
+      const appointments = renderAppointmentLinks(role);
+      if (appointments) details.append(appointments);
       if (role.reportsTo) details.append(element('small', '', `Unterstellt ${role.reportsTo}`));
       if (role.station) details.append(element('small', '', `Stationiert in ${role.station}`));
       if (role.note) details.append(element('small', '', role.note));
@@ -70,7 +71,10 @@ function personFor(role, group, area, tier) {
   const label = element(previous?.href ? 'a' : 'span', '', previous?.name ? `Vorgänger · ${previous.name}` : 'Vorgänger');
   if (previous?.href) label.href = previous.href;
   predecessor.append(label);
-  aside.append(identity, factsFor(role, group, area), predecessor);
+  aside.append(identity);
+  const appointments = renderAppointmentLinks(role);
+  if (appointments) aside.append(appointments);
+  aside.append(factsFor(role, group, area), predecessor);
   return aside;
 }
 

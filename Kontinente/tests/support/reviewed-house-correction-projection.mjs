@@ -4,6 +4,18 @@ import lifeStatus from '../../../Stammbäume/assets/data/source-inventories/hous
 import sourceAnnotations from './house-lore-source-annotations-review-20261104.json' with { type: 'json' };
 import { applyFamilyMetadataReview } from './apply-family-metadata-review.mjs';
 
+const morlanTitle = {
+  familyId: 'haus-trydar',
+  fields: [
+    { path: ['family', 'persons', '@cadfan-trydar', 'title'], beforePresent: true, afterPresent: true,
+      before: 'Sir · Festungskommandant von Twr Morlan', after: 'Sir · Hauptmann und Verwalter von Tŵr Morlan' },
+    { path: ['family', 'persons', '@cadfan-trydar', 'extensions', 'registryManagedFields'],
+      beforePresent: false, afterPresent: true, after: ['title'] },
+    { path: ['family', 'persons', '@cadfan-trydar', 'extensions', 'registryManagedFieldRevisions'],
+      beforePresent: false, afterPresent: true, after: { title: 4 } },
+  ],
+};
+
 /** Reverse only the user's exact approved leaves for the older content proof. */
 export function projectReviewedHouseCorrections(record) {
   for (const inventory of [lifeStatus, lore]) {
@@ -20,5 +32,6 @@ export function projectReviewedHouseCorrections(record) {
   }
   const annotations = sourceAnnotations.reviews.find(review => review.familyId === record.id);
   if (annotations) applyFamilyMetadataReview(record, annotations);
+  if (record.id === morlanTitle.familyId) applyFamilyMetadataReview(record, morlanTitle);
   return record;
 }

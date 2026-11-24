@@ -5,7 +5,8 @@ export const CENYR_ADMINISTRATION_SCOPES = Object.freeze([
   { id: 'draig', territoryId: 'grafschaft-celtigerns-wacht', houseId: 'haus-draig', rank: 'county' },
   { id: 'arthus-streben', territoryId: 'baronie-arthus-streben', houseId: 'haus-gwefrydd', rank: 'barony', preparation: true },
   { id: 'gwendolyns-ufer', territoryId: 'baronie-gwendolyns-ufer', houseId: 'haus-gwyvern', rank: 'barony', preparation: true, fleet: true, legacyCouncil: true },
-  { id: 'rhonwens-traenen', territoryId: 'herrschaft-rhonwens-traenen', houseId: 'haus-arwydd', rank: 'prince', preparation: true },
+  { id: 'rhonwens-traenen', territoryId: 'herrschaft-rhonwens-traenen', houseId: 'haus-arwydd', rank: 'prince', preparation: true,
+    fleet: true, separateCoastalCommand: true },
 ].map(Object.freeze));
 
 const ranks = {

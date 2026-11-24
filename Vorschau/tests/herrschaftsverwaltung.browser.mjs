@@ -4,6 +4,8 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from '../../Stammbäume/node_modules/playwright-core/index.mjs';
 import { startChartQualityServer } from '../../Stammbäume/tools/chart-quality-server.mjs';
+import { lehenswartKey } from '../../shared/cenyr-administration/lehenswarte-plan.mjs';
+import { LEHENSWARTE_AREA } from '../../shared/cenyr-administration/office-icons.mjs';
 
 const workspace = fileURLToPath(new URL('../../', import.meta.url));
 const output = await mkdtemp(join(workspace, 'diagnostics', 'herrschaftsverwaltung-20261124-'));
@@ -11,7 +13,7 @@ const serve = await startChartQualityServer(workspace);
 const report = { status: 'running', screenshots: [], viewports: [], errors: [], httpErrors: [], blocked: [], checks: [] };
 const pagePath = '/Vorschau/Herrschaftsverwaltung/index.html';
 const districts = ['saethwyr', 'gafyr', 'wyrm', 'draig', 'arthus-streben', 'gwendolyns-ufer', 'rhonwens-traenen'];
-const areas = ['militaer', 'klerus', 'gerichtsbarkeit', 'finanzen', 'spionage', 'diplomatie', 'magie', 'unterhaltung', 'hof'];
+const areas = ['militaer', 'klerus', 'gerichtsbarkeit', 'finanzen', 'spionage', 'diplomatie', 'magie', 'unterhaltung', 'hof', 'lehenswarte'];
 let browser;
 
 async function screenshot(page, name) {
@@ -124,8 +126,8 @@ async function checkCourtOrder(page, width) {
   } else {
     assert(leadingBoxes[0].bottom < leadingBoxes[1].top && leadingBoxes[1].bottom < leadingBoxes[2].top);
   }
-  const order = await page.locator('[data-drop-post]').evaluateAll(cards => cards.slice(0, 5).map(card => card.dataset.dropPost));
-  assert.deepEqual(order, ['hof/vogt', 'hof/schatzmeister', 'hof/hausmacht', 'hof/leitung', 'hof/archiv']);
+  const order = await page.locator('[data-drop-post]').evaluateAll(cards => cards.slice(0, 6).map(card => card.dataset.dropPost));
+  assert.deepEqual(order, ['hof/vogt', 'hof/schatzmeister', 'hof/hausmacht', 'hof/leitung', 'hof/waffen', 'hof/archiv']);
 }
 
 async function auditOffices(page, width) {
@@ -137,18 +139,38 @@ async function auditOffices(page, width) {
     assert.equal(await page.locator('.council-card').count(), 8);
     for (const area of areas) {
       await openOffice(page, area);
-      assert.equal(await upperPost(page).count(), area === 'hof' ? 0 : 1);
-      assert(await page.locator('[data-drop-post]').count() >= (scope === 'draig' ? 10 : 17), `${scope}/${area}`);
+      const withoutLead = ['hof', 'lehenswarte'].includes(area);
+      assert.equal(await upperPost(page).count(), withoutLead ? 0 : 1);
+      assert(await page.locator('[data-drop-post]').count() >= (area === 'lehenswarte' ? 1 : scope === 'draig' ? 10 : 17), `${scope}/${area}`);
       const core = page.locator('.post-group.is-core [data-drop-post]');
-      const expected = area === 'hof' ? 0 : area === 'klerus' ? (scope === 'draig' ? 9 : 0) : (scope === 'draig' && area === 'magie' ? 0 : 5);
+      const expected = withoutLead ? 0 : area === 'klerus' ? (scope === 'draig' ? 9 : 0) : (scope === 'draig' && area === 'magie' ? 0 : 5);
       assert.equal(await core.count(), expected);
       if (area === 'hof') {
         await checkCourtOrder(page, width);
         hofDepartments += await auditCourtDepartments(page, width);
       }
+      if (area === 'militaer' && scope === 'rhonwens-traenen') {
+        const admiralty = page.getByRole('heading', { name: 'Admiralität', exact: true });
+        assert.equal(await admiralty.count(), 1);
+        const flotillas = roleGroup(page, 'Flottillenadmiral');
+        assert.equal(await flotillas.locator('[data-drop-post]').count(), 2);
+        assert.equal(await page.getByRole('heading', { name: 'Seekommandant eines Geschwaders', exact: true }).count(), 0);
+        await admiralty.scrollIntoViewIfNeeded();
+        await screenshot(page, `arwydd-admiralitaet-${width}`);
+        if (width === 1440) {
+          await addExistingRole(page, 'Flottillenadmiral', 2);
+          assert.equal(await flotillas.locator('[data-drop-post]').count(), 4);
+          const original = flotillas.locator('[data-drop-post^="militaer/flottille-"]').first();
+          await original.locator('[data-action="remove-post"]').click();
+          assert.equal(await flotillas.locator('[data-drop-post]').count(), 3);
+          await addExistingRole(page, 'Kapitän zur See', 4);
+          assert.equal(await roleGroup(page, 'Kapitän zur See').locator('[data-drop-post]').count(), 5);
+          await screenshot(page, 'arwydd-kapitaene-1440');
+        }
+      }
       await geometry(page);
       await closeOffice(page);
-      assert.equal(await page.locator(`[data-area="${area}"]`).evaluate(element => element === document.activeElement), true);
+      await page.locator(`[data-area="${area}"]:focus`).waitFor();
       count++;
     }
   }
@@ -305,9 +327,11 @@ async function desktop() {
     await vogt.locator('summary').click();
     await dragMouse(page, vogt.locator('[data-drag-person]'), treasurer);
     assert.match(await treasurer.innerText(), /Emlyn Glynmor/);
-    assert.match(await vogt.innerText(), /Unbesetzt/);
+    assert.match(await vogt.innerText(), /Emlyn Glynmor/);
+    assert.equal(await vogt.locator('.office-appointments a').count(), 1);
     await page.locator('dialog [data-action="undo"]').click();
     assert.match(await vogt.innerText(), /Emlyn Glynmor/);
+    assert.equal(await vogt.locator('.office-appointments a').count(), 0);
     report.checks.push('Oberste Hofämter, alle Unterfenster, Aufgabenaufklappung und Umbesetzung mit Rückgängig');
     await screenshot(page, 'wyrm-hofaemter-1440');
     await closeOffice(page);
@@ -338,7 +362,10 @@ async function desktop() {
     await search(page).fill('imogen');
     await dragMouse(page, candidate(page, 'Imogen Saethwyr'), upperPost(page));
     assert.match(await upperPost(page).innerText(), /Imogen Saethwyr/);
-    assert.match(await page.locator('[data-role="office-status"]').innerText(), /Frei geworden.*Kämmererin/);
+    assert.match(await page.locator('[data-role="office-status"]').innerText(), /Arawn wurde in diesem Amt abgelöst/);
+    assert.equal(await upperPost(page).getByRole('link', { name: /Kämmererin/ }).count(), 1);
+    await search(page).fill('imogen kämmererin');
+    assert.match(await candidate(page, 'Imogen Saethwyr').innerText(), /2 Ämter/);
     await addExistingRole(page, 'Ermittler', 4);
     const investigators = roleGroup(page, 'Ermittler');
     assert.equal(await investigators.locator('[data-drop-post]').count(), 5);
@@ -352,7 +379,7 @@ async function desktop() {
     await screenshot(page, 'saethwyr-sonderamt-1440');
     await closeOffice(page);
     await openOffice(page, 'finanzen');
-    assert.match(await upperPost(page).innerText(), /Unbesetzt/);
+    assert.match(await upperPost(page).innerText(), /Imogen Saethwyr/);
     await closeOffice(page);
     await openOffice(page, 'hof');
     await addPost(page, 'service', 'Gehilfe der Hofkanzlei');
@@ -416,7 +443,7 @@ async function desktop() {
     assert.match(await upperPost(page).innerText(), /Aegir Frostauge/);
     await search(page).fill('aegir frostauge');
     await page.getByRole('button', { name: 'Aegir Frostauge aus der Bewerberliste entfernen' }).click();
-    assert.match(await page.locator('[data-role="office-status"]').innerText(), /zuerst den Posten/);
+    assert.match(await page.locator('[data-role="office-status"]').innerText(), /zuerst alle Posten/);
     await upperPost(page).getByRole('button', { name: /Posten freigeben/ }).click();
     await page.getByRole('button', { name: 'Aegir Frostauge aus der Bewerberliste entfernen' }).click();
     assert.equal(await candidate(page, 'Aegir Frostauge').count(), 0);
@@ -467,6 +494,7 @@ async function mobile(width, height) {
     await search(page).fill('imogen');
     await dragTouch(page, candidate(page, 'Imogen Saethwyr').locator('[data-drag-handle]'), upperPost(page));
     await upperPost(page).getByText('Imogen Saethwyr', { exact: true }).waitFor();
+    assert.equal(await upperPost(page).getByRole('link', { name: /Kämmererin/ }).count(), 1);
     await screenshot(page, `saethwyr-schatten-${width}`);
     // Chromium's touch emulation suppresses a tap directly after a CDP drag.
     await page.waitForTimeout(750);
@@ -517,11 +545,329 @@ async function aldingen() {
   } finally { await context.close(); }
 }
 
+async function auditOfficialCourt(page, width) {
+  await page.goto(serve.origin + '/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gafyr');
+  const court = page.locator('.house-court-offices');
+  const detail = page.locator('.administration-office-dialog[open]');
+  const offices = [
+    ['Waffenmeister', [['waffenlehre', 5], ['ruestkammer', 1]]],
+    ['Handwerksmeister', [['schmiede', 7]]],
+    ['Hofkaplan', [['kaplanei', 2], ['kaplan-heilkunde', 1], ['kapellendienst', 5]]],
+    ['Hofdame', []],
+  ];
+  for (const [title, branches] of offices) {
+    await court.getByRole('button', { name: new RegExp(`^${title} ·`) }).first().click();
+    await detail.waitFor();
+    for (const [id, slots] of branches) {
+      const branch = detail.locator(`[data-office-branch="${id}"]`);
+      assert.equal(await branch.locator('li').count(), slots);
+      await branch.locator('summary').click();
+    }
+    if (title === 'Hofdame') assert.doesNotMatch(await detail.textContent(), /Page der Hofdame/);
+    if (title === 'Waffenmeister' && width === 1440) await screenshot(page, 'waffenmeister-offiziell-1440');
+    await page.keyboard.press('Escape');
+    await detail.waitFor({ state: 'hidden' });
+  }
+}
+
+async function reviseOfficeTitles(width, height) {
+  const { context, page } = await contextAt(width, height, width < 400);
+  try {
+    await page.goto(serve.origin + pagePath + '?haus=gafyr');
+    await openOffice(page, 'lehenswarte');
+    const office = page.locator('[data-role="office-dialog"]');
+    const edit = page.locator('[data-role="office-title-editor"]');
+    const input = edit.getByLabel('Neuer Titel');
+    const heading = page.locator('#office-title');
+    const pen = office.locator('[data-role="rename-office"] button');
+    const existing = page.locator('[data-drop-post="lehenswarte/lehenswart-bronfelen"]');
+    const destination = page.locator('[data-drop-post="lehenswarte/lehenswart-morddwr"]');
+    assert.match(await existing.innerText(), /Eifion Gostyn/);
+    await search(page).fill('eifion gostyn');
+    if (width > 1000) await dragMouse(page, candidate(page, 'Eifion Gostyn'), destination);
+    else {
+      await candidate(page, 'Eifion Gostyn').tap();
+      await destination.locator('[data-action="choose-post"]').tap();
+    }
+    assert.match(await destination.innerText(), /Eifion Gostyn/);
+    assert.match(await existing.innerText(), /Eifion Gostyn/);
+    assert.equal(await existing.locator('.office-appointments a').count(), 1);
+    await pen.click();
+    await edit.waitFor();
+    assert.equal(await input.inputValue(), LEHENSWARTE_AREA.name);
+    assert(await input.evaluate(node => document.activeElement === node));
+    await input.fill('Amtsregister der Lehen');
+    await screenshot(page, `federkiel-${width}`);
+    await page.keyboard.press('Escape');
+    await edit.waitFor({ state: 'hidden' });
+    assert.equal(await heading.innerText(), LEHENSWARTE_AREA.name);
+    assert(await office.evaluate(node => node.open));
+    await pen.click();
+    await input.fill('Amtsregister der Lehen');
+    await input.press('Enter');
+    await edit.waitFor({ state: 'hidden' });
+    assert.equal(await heading.innerText(), 'Amtsregister der Lehen');
+    assert(await pen.evaluate(button => button === document.activeElement));
+    await geometry(page);
+    await screenshot(page, `lehenswarte-${width}`);
+    await closeOffice(page);
+    assert.match(await page.locator('[data-area="lehenswarte"]').innerText(), /Amtsregister der Lehen/);
+    await openOffice(page, 'hof');
+    await openDepartment(page, 'waffen');
+    assert.match(await upperPost(page).innerText(), /jungen Angehörigen/);
+    assert.equal(await roleGroup(page, 'Lehrmeister').locator('[data-drop-post]').count(), 4);
+    assert.equal(await page.getByRole('heading', { name: 'Rüst- und Waffenwart', exact: true }).count(), 1);
+    if (width === 1440) await screenshot(page, 'waffenmeister-1440');
+    await page.keyboard.press('Escape');
+    await openDepartment(page, 'handwerk');
+    const role = name => roleGroup(page, name);
+    await role('Schmiedegeselle').locator('..').locator('[data-action="rename-title"]').last().click();
+    await input.fill('Hofschmiedegeselle');
+    await input.press('Enter');
+    await edit.waitFor({ state: 'hidden' });
+    assert.equal(await role('Hofschmiedegeselle').locator('[data-drop-post]').count(), 4);
+    await role('Hofschmiedegeselle').locator(':scope > summary').click();
+    const first = role('Hofschmiedegeselle').locator('[data-drop-post]').first();
+    await first.locator('[data-action="rename-title"]').click();
+    await input.fill('Erster Hofschmiedegeselle');
+    await input.press('Enter');
+    await edit.waitFor({ state: 'hidden' });
+    assert.match(await first.innerText(), /Erster Hofschmiedegeselle/);
+    assert.equal(await role('Hofschmiedegeselle').locator('[data-drop-post]').count(), 4);
+    assert.equal(await role('Schmiedelehrling').locator('[data-drop-post]').count(), 2);
+    if (width === 1440) await screenshot(page, 'schmiede-1440');
+    await role('Hofschmiedegeselle').locator(':scope > summary').click();
+    await addExistingRole(page, 'Hofschmiedegeselle', 2);
+    assert.equal(await role('Hofschmiedegeselle').locator('[data-drop-post]').count(), 6);
+    await addExistingRole(page, 'Schmiedelehrling', 2);
+    assert.equal(await role('Schmiedelehrling').locator('[data-drop-post]').count(), 4);
+    await page.keyboard.press('Escape');
+    await openDepartment(page, 'kaplan');
+    assert(await page.getByRole('heading', { name: 'Schreiber des Hofkaplans', exact: true }).count());
+    assert(await page.getByRole('heading', { name: 'Seelsorger', exact: true }).count());
+    assert.equal(await role('Heiler').locator('[data-drop-post]').count(), 1);
+    assert.equal(await role('Akolyth').locator('[data-drop-post]').count(), 2);
+    if (width === 1440) await screenshot(page, 'hofkaplan-1440');
+    await page.keyboard.press('Escape');
+    await openDepartment(page, 'hofdame');
+    assert.doesNotMatch(await page.locator('[data-role="posts"]').textContent(), /Page der Hofdame/);
+    await page.keyboard.press('Escape');
+    await closeOffice(page);
+    await page.reload();
+    await openOffice(page, 'lehenswarte');
+    assert.equal(await heading.innerText(), 'Amtsregister der Lehen');
+    assert.match(await destination.innerText(), /Eifion Gostyn/);
+    await pen.click();
+    await edit.getByRole('button', { name: 'Standardtitel verwenden' }).click();
+    await edit.waitFor({ state: 'hidden' });
+    assert.equal(await heading.innerText(), LEHENSWARTE_AREA.name);
+    await auditOfficialCourt(page, width);
+    report.checks.push(`Lehenswart besetzt, Amts-, Rollen- und Einzeltitel geändert, Escape, Reload und Standardtitel bei ${width} px`);
+  } finally { await context.close(); }
+}
+
+async function checkLocalAuthorities(width, height) {
+  const { context, page } = await contextAt(width, height, width < 400);
+  try {
+    await page.goto(serve.origin + pagePath + '?haus=gwendolyns-ufer');
+    await openOffice(page, 'lehenswarte');
+    const editor = page.getByRole('dialog', { name: 'Ortsamt festlegen' });
+    const role = editor.getByLabel('Amtsform');
+    const seat = name => page.locator(`[data-drop-post="${lehenswartKey(name)}"]`);
+    const trigger = name => seat(name).locator('[data-action="configure-authority"]');
+    async function inspect(name, type, options) {
+      assert.match(await seat(name).locator('.post-place-type').innerText(), new RegExp(type));
+      await trigger(name).click();
+      assert.match(await editor.locator('[data-role="authority-site"]').innerText(), new RegExp(type));
+      assert.deepEqual(await role.locator('option').evaluateAll(elements => elements.map(option => option.value)), ['', ...options]);
+    }
+    await inspect('Côr Mynyddfaen', 'Klostersiedlung', ['oberer', 'prior', 'abt', 'gildenpacht']);
+    assert.match(await role.locator('option').first().innerText(), /Oberin/);
+    await page.keyboard.press('Escape');
+    await editor.waitFor({ state: 'hidden' });
+    assert.match(await seat('Côr Mynyddfaen').innerText(), /Gwenydd Anghof/);
+    await inspect('Tŵr Morlan', 'Turm', ['hauptmann-verwaltung', 'kommandant', 'hauptmann', 'burgverwalter', 'gildenpacht']);
+    await role.selectOption('burgverwalter');
+    await editor.getByRole('button', { name: 'Übernehmen' }).click();
+    await editor.waitFor({ state: 'hidden' });
+    assert.match(await seat('Tŵr Morlan').innerText(), /Burgverwalter/);
+    assert.match(await seat('Tŵr Morlan').innerText(), /Cadfan Trydar\s+Entwurf/);
+    const port = 'Morcarryn';
+    await inspect(port, 'Hafensiedlung', ['buergermeister', 'lehenswart', 'gildenpacht']);
+    await role.selectOption('gildenpacht');
+    await editor.getByLabel('Gilde', { exact: true }).fill('Klingende Münze');
+    await editor.getByLabel('Amtstitel der Gilde').fill('Hafenfaktor');
+    await screenshot(page, `gildenpacht-${width}`);
+    await editor.getByRole('button', { name: 'Übernehmen' }).click();
+    await editor.waitFor({ state: 'hidden' });
+    assert(await trigger(port).evaluate(button => button === document.activeElement));
+    assert.match(await seat(port).innerText(), /Hafenfaktor/);
+    assert.match(await seat(port).locator('.post-place-type').innerText(), /Hafensiedlung · Gildenpacht · Klingende Münze/);
+    await search(page).fill('Rhunlas Llon');
+    await candidate(page, 'Rhunlas Llon').click();
+    await seat(port).locator('[data-action="choose-post"]').click();
+    assert.match(await seat(port).innerText(), /Rhunlas Llon/);
+    assert.match(await seat('Traethgorn').innerText(), /Rhunlas Llon/);
+    await geometry(page);
+    await screenshot(page, `ortsamt-${width}`);
+    await closeOffice(page);
+    await page.reload();
+    await openOffice(page, 'lehenswarte');
+    assert.match(await seat(port).innerText(), /Hafenfaktor/);
+    assert.match(await seat(port).innerText(), /Rhunlas Llon/);
+    await trigger(port).click();
+    assert.equal(await editor.getByLabel('Gilde', { exact: true }).inputValue(), 'Klingende Münze');
+    await role.selectOption('');
+    await editor.getByRole('button', { name: 'Übernehmen' }).click();
+    await editor.waitFor({ state: 'hidden' });
+    assert.match(await seat(port).innerText(), /Bürgermeister von Morcarryn/);
+    assert.match(await seat(port).innerText(), /Rhunlas Llon/);
+    await closeOffice(page);
+    await openOffice(page, 'militaer');
+    assert.match(await seat('Tŵr Morlan').innerText(), /Burgverwalter von Tŵr Morlan[\s\S]*Cadfan Trydar/);
+    await seat('Tŵr Morlan').getByRole('button', { name: /Posten freigeben/ }).click();
+    await closeOffice(page);
+    await openOffice(page, 'lehenswarte');
+    assert.match(await seat('Tŵr Morlan').innerText(), /Unbesetzt/);
+    report.checks.push(`Ortsämter und Gildenpacht bei ${width} px gewählt, besetzt, neu geladen und zurückgesetzt`);
+  } finally { await context.close(); }
+}
+
+async function checkAppointments(width, height) {
+  const { context, page } = await contextAt(width, height, width < 400);
+  const workbench = '[data-role="office-dialog"][open]';
+  const financeKey = 'finanzen/leitung';
+  const treasuryKey = 'hof/schatzmeister';
+  const otherOffice = (card, name) => card.locator('.office-appointments').getByRole('link', { name, exact: true });
+  const financeTitle = 'Kämmerer des Grafen';
+  const treasuryTitle = 'Schatzmeister · Haus Draig';
+
+  async function checkFocusedPost(key) {
+    const target = page.locator(`${workbench} [data-action="choose-post"][data-post="${key}"]`);
+    await target.waitFor();
+    assert.match(await target.innerText(), /Odyar Draig/);
+    assert(await target.evaluate(button => document.activeElement === button));
+    assert.equal(new URL(page.url()).searchParams.get('posten'), key);
+  }
+
+  try {
+    const county = '/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html';
+    await page.goto(serve.origin + encodeURI(county), { waitUntil: 'domcontentloaded' });
+    await page.locator('.administration-grid [data-administration-key="finanzen"]').click();
+    const countyDialog = page.locator('.administration-dialog[open]');
+    const countyCard = countyDialog.locator('.administration-role-card').filter({ hasText: 'Odyar Draig' });
+    const countyLink = otherOffice(countyCard, treasuryTitle);
+    await countyLink.scrollIntoViewIfNeeded();
+    await screenshot(page, `doppelamt-ratsamt-offiziell-${width}`);
+    await countyCard.locator('.administration-role-open').click();
+    const details = page.locator('.administration-office-dialog[open]');
+    await otherOffice(details, treasuryTitle).waitFor();
+    await page.keyboard.press('Escape');
+    await countyLink.click();
+    await checkFocusedPost(treasuryKey);
+
+    const timeOrigin = await page.evaluate(() => performance.timeOrigin);
+    await otherOffice(upperPost(page), financeTitle).press('Enter');
+    await checkFocusedPost(financeKey);
+    assert.equal(await page.evaluate(() => performance.timeOrigin), timeOrigin);
+    await geometry(page);
+    await screenshot(page, `doppelamt-kaemmerei-werkstatt-${width}`);
+    await otherOffice(upperPost(page), treasuryTitle).click();
+    await checkFocusedPost(treasuryKey);
+    await screenshot(page, `doppelamt-schatzmeister-werkstatt-${width}`);
+    await page.reload();
+    await checkFocusedPost(treasuryKey);
+    await upperPost(page).getByRole('button', { name: /Posten freigeben/ }).click();
+    assert.match(await upperPost(page).innerText(), /Unbesetzt/);
+    await page.keyboard.press('Escape');
+    await closeOffice(page);
+    const councilCard = page.locator('.council-card-shell').filter({ has: page.locator('[data-area="finanzen"]') });
+    assert.match(await councilCard.innerText(), /Odyar Draig/);
+    assert.equal(await otherOffice(councilCard, treasuryTitle).count(), 0);
+    await page.locator('[data-action="undo"]').first().click();
+    const councilLink = otherOffice(councilCard, treasuryTitle);
+    await councilCard.scrollIntoViewIfNeeded();
+    await screenshot(page, `doppelamt-uebersicht-werkstatt-${width}`);
+    await councilLink.click();
+    await checkFocusedPost(treasuryKey);
+
+    await page.goto(serve.origin + '/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-draig');
+    const courtCard = page.locator('.house-court-offices .administration-role-card').filter({
+      has: page.getByRole('button', { name: /^Schatzmeister · Odyar Draig/ }),
+    });
+    const courtLink = otherOffice(courtCard, financeTitle);
+    await courtCard.scrollIntoViewIfNeeded();
+    await screenshot(page, `doppelamt-hofamt-offiziell-${width}`);
+    await courtLink.click();
+    await checkFocusedPost(financeKey);
+    report.checks.push(`Doppelamt bei ${width} px aus Rat und Hof verlinkt, Fokus und Reload im Ziel, einzeln freigegeben und zurückgenommen`);
+  } finally { await context.close(); }
+}
+
+async function checkVacancyFinder(width, height) {
+  const { context, page } = await contextAt(width, height, width < 400);
+  try {
+    await page.goto(serve.origin + pagePath);
+    await page.locator('[data-action="import"]:enabled').waitFor();
+    const old = { schema: 'aleria.herrschaftsplanung', version: 8, houses: Object.fromEntries(districts.map(id => [id, {
+      posts: [], removed: [], applicants: [], assignments: {}, titles: {}, authorities: {},
+    }])) };
+    const vacancyKey = 'spionage/leitung';
+    old.houses.saethwyr.assignments[vacancyKey] = 'person--haus-nachbesetzung--varn-alde';
+    await page.locator('input[type="file"]').setInputFiles({
+      name: 'alter-entwurf.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(old)),
+    });
+    await page.getByText(/Gesamtentwurf geladen/).waitFor();
+    const finder = page.locator('[data-role="vacancy-finder"]');
+    await finder.locator('summary').click();
+    const query = finder.getByRole('searchbox');
+    await query.fill('Hauptmann Arwydd');
+    await finder.getByRole('combobox', { name: 'Herrschaft' }).selectOption('rhonwens-traenen');
+    await finder.getByRole('combobox', { name: 'Amtsbereich' }).selectOption('militaer');
+    const hits = finder.locator('[data-role="vacancy-results"] a');
+    assert(await hits.count() > 0);
+    assert((await hits.allTextContents()).every(text => text.includes('Haus Arwydd') && text.includes('Militär')));
+    await finder.scrollIntoViewIfNeeded();
+    await geometry(page);
+    await screenshot(page, `freie-posten-${width}`);
+    await finder.getByRole('combobox', { name: 'Herrschaft' }).selectOption('');
+    await finder.getByRole('combobox', { name: 'Amtsbereich' }).selectOption('');
+    await query.fill('Schatten Haus Saethwyr');
+    const result = hits.filter({ hasText: 'Nachbesetzung nötig' });
+    await result.press('Enter');
+    const target = upperPost(page).locator('[data-action="choose-post"]');
+    await target.waitFor();
+    assert.equal(await target.getAttribute('data-post'), vacancyKey);
+    assert.match(await target.innerText(), /Varn Alde\s+Nachbesetzung nötig/);
+    assert.equal(await target.getAttribute('data-drag-person'), null);
+    assert(await target.evaluate(node => document.activeElement === node));
+    await screenshot(page, `nachbesetzung-${width}`);
+    await search(page).fill('Imogen Saethwyr');
+    await candidate(page, 'Imogen Saethwyr').click();
+    await target.click();
+    assert.match(await target.innerText(), /Imogen Saethwyr/);
+    await closeOffice(page);
+    await finder.locator('input:focus').waitFor();
+    assert.equal(await result.count(), 0);
+    await page.locator('[data-action="undo"]').first().click();
+    await result.waitFor();
+    await page.goto(serve.origin + pagePath + '?haus=gwendolyns-ufer&amt=militaer&posten=militaer%2Fwacht-morlan');
+    const morlan = page.locator(`[data-drop-post="${lehenswartKey('Tŵr Morlan')}"]`);
+    assert.match(await morlan.innerText(), /Hauptmann und Verwalter von Tŵr Morlan[\s\S]*Cadfan Trydar/);
+    assert(await morlan.locator('[data-action="choose-post"]').evaluate(node => document.activeElement === node));
+    report.checks.push(`Freie Posten, direkte Treffer, Altimport, Nachbesetzung und alter Morlan-Link bei ${width} px`);
+  } finally { await context.close(); }
+}
+
 try {
   browser = await chromium.launch({
     executablePath: process.env.PLAYWRIGHT_EXECUTABLE || 'C:/Program Files/Google/Chrome/Application/chrome.exe',
     headless: true,
   });
+  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkVacancyFinder(width, height);
+  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkAppointments(width, height);
+  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkLocalAuthorities(width, height);
+  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await reviseOfficeTitles(width, height);
   await desktop();
   await mobile(390, 844);
   await mobile(320, 700);

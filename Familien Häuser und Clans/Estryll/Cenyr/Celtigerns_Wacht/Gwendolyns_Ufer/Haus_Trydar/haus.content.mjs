@@ -227,7 +227,7 @@ export const HOUSE_CONTENT = {
       "silhouette": "male",
       "detail": "",
       "role": "Sir Cadfan",
-      "description": "Sir Cadfan ist der Festungskommandant von Tŵr Morlan, einer kleinen, abgelegenen Leuchtturmbefestigung, die er im Namen der Gwyvern hält. Der Posten ist unscheinbar, aber strategisch: Seewege, Signalfeuer und Frühwarnung liegen in seiner Verantwortung. Er führt die Anlage gemeinsam mit seinen beiden bereits erwachsenen Kindern – ein stiller, familiärer Kommandostand fern von Hof und Politik. Cadfan gilt als verlässlich und genügsam: kein Ehrgeiz nach oben, sondern ein Mann, der bleibt, wo er gebraucht wird."
+      "description": "Sir Cadfan ist Hauptmann und Verwalter von Tŵr Morlan. Im Namen der Gwyvern führt er die Wache und verwaltet die kleine militärische Siedlung an der abgelegenen Leuchtturmbefestigung. Seewege, Signalfeuer und Frühwarnung liegen in seiner Verantwortung. Er führt die Anlage gemeinsam mit seinen beiden erwachsenen Kindern. Cadfan gilt als verlässlich und genügsam und bleibt auf Tŵr Morlan, wo er gebraucht wird."
     },
     {
       "id": "pryce-trydar",

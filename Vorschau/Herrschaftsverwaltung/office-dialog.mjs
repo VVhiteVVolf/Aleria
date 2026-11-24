@@ -3,13 +3,17 @@ import { filterCandidates } from './candidate-filters.mjs';
 import { MAX_ROLE_BATCH, LOWER_ROLE_KINDS, ROLE_KINDS } from '../../shared/cenyr-administration/office-roles.mjs';
 import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { openRoleGroups, renderLowerRoles, renderRoleGroups, renderRoleOptions } from './repeatable-posts-view.mjs';
-import { postTitle, renderCandidate, renderContacts, renderFilterFields, renderMilitaryForces, renderPost, renderPostSection } from './workbench-view.mjs';
+import { appointmentLinksFor, postTitle, renderCandidate, renderContacts, renderFilterFields, renderMilitaryForces, renderPost, renderPostSection } from './workbench-view.mjs';
 import { shadowTradition } from './cenyr-office-notes.mjs';
 import { bindTreeCandidatePicker } from './tree-candidate-picker.mjs';
 import { suitableLocalities } from '../../shared/cenyr-administration/local-offices.mjs';
 import { rankOf } from '../../shared/cenyr-administration/scopes.mjs';
+import { officeTitleKey, postTitleKey, titleKeyForTemplate } from './draft-office-titles.mjs';
+import { bindOfficeTitleEditor, renameButton } from './office-title-editor.mjs';
+import { bindLocalAuthorityEditor } from './local-authority-editor.mjs';
+import { needsFilling, postOccupant } from './draft-assignment-references.mjs';
 
-export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChange, onClose }) {
+export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleEditor, authorityEditor, onChange, onClose }) {
   const role = name => dialog.querySelector(`[data-role="${name}"]`);
   const filters = role('filters');
   const list = role('candidate-list');
@@ -25,6 +29,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
   const status = role('office-status');
   const vacanciesOnly = role('vacancies-only');
   const title = dialog.querySelector('#office-title');
+  const renameOffice = role('rename-office');
   const backButton = dialog.querySelector('[data-action="back-office"]');
   const fields = filters.elements;
   const postFields = postForm.elements;
@@ -34,6 +39,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
   let rootArea;
   const parentViews = [];
   let selectedId = null;
+  let copiedRole;
   const preferences = new Map();
   const writeStatus = message => { status.textContent = message; };
 
@@ -49,12 +55,15 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
   }
 
   function candidateOptions() {
-    const assignments = new Map([...state.positions(house.id).values()].filter(slot => slot.occupant).map(slot => [slot.occupant, slot]));
     const applicants = state.applicants(house.id).map(person => ({ ...person, kind: 'tree', detail: 'Aus einem Stammbaum ergänzt' }));
     const free = fields.free.checked ? state.freeFor(house.id) : [];
     const available = new Map([...free, ...applicants, ...house.candidates].map(person => [person.id, person]));
-    return [...available.values()].map(info => ({ ...people.get(info.id), ...info, position: assignments.get(info.id) }))
-      .sort((a, b) => a.name.localeCompare(b.name, 'de'));
+    return [...available.values()].map(info => {
+      const person = { ...people.get(info.id), ...info };
+      const appointments = state.appointments(info.id).filter(entry => entry.scopeId === house.id)
+        .map(({ post }) => ({ post, title: postTitle(post, person) }));
+      return { ...person, appointments };
+    }).sort((a, b) => a.name.localeCompare(b.name, 'de'));
   }
 
   function drawCandidates(resetScroll = false) {
@@ -79,34 +88,43 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
     const scroll = postScroll.scrollTop;
     const expanded = openRoleGroups(postScroll);
     const positions = state.positions(house.id);
+    const appointmentLinks = appointmentLinksFor(house.id, state);
+    const view = { people, appointmentLinks };
     const head = plan.head && positions.get(plan.head.key);
-    title.textContent = head ? postTitle(head, people.get(head.occupant)) : area.name;
+    const titleKey = head ? postTitleKey(head.key) : officeTitleKey(area.id);
+    title.textContent = head ? postTitle(head, postOccupant(head, people)) : state.title(house.id, titleKey, area.name);
+    renameOffice.innerHTML = renameButton(titleKey, title.textContent, 'Amt');
+    for (const link of connections.querySelectorAll('[data-action="open-department"]')) {
+      const target = positions.get(link.dataset.post);
+      if (target) link.textContent = `${postTitle(target, postOccupant(target, people))} ↗`;
+    }
     leadingPosts.hidden = !plan.leadership;
     leadingPosts.innerHTML = plan.leadership
-      ? renderPostSection(plan.leadership, plan.leadership.slots.map(slot => positions.get(slot.key)), people)
+      ? renderPostSection(plan.leadership, plan.leadership.slots.map(slot => positions.get(slot.key)), view)
       : '';
     // Leadership posts stay available when the list is filtered to vacancies.
     headPost.hidden = !head;
-    headPost.innerHTML = head ? renderPost(head, people.get(head.occupant), {
+    headPost.innerHTML = head ? renderPost(head, postOccupant(head, people), {
       headLabel: area.id === 'regentschaft' ? 'Sonderamt unter dem Oberhaupt' : parentViews.length ? 'Hofamt'
         : house.county ? 'Amtsleitung der Grafschaft' : `Amtsleitung unter dem ${rankOf(house).ruler}`,
       image: area.imageSrc,
       showDepartment: !parentViews.length,
+      appointmentLinks,
     }) : '';
     const custom = [...positions.values()].filter(slot => slot.custom && slot.area === area.id);
     const slots = [...plan.slots.map(slot => positions.get(slot.key)).filter(Boolean), ...custom];
-    const free = slots.filter(slot => !slot.occupant).length;
+    const free = slots.filter(needsFilling).length;
     role('office-count').textContent = `${slots.length} Posten · ${free} frei`;
-    const visible = entries => entries.filter(slot => !vacanciesOnly.checked || !slot.occupant);
+    const visible = entries => entries.filter(slot => !vacanciesOnly.checked || needsFilling(slot));
     role('posts').innerHTML = plan.sections.map(group => {
       const support = group.id ? custom.filter(slot => slot.placement === group.id) : [];
       const active = visible([...group.slots.map(slot => positions.get(slot.key)).filter(Boolean), ...support]);
       const fixed = active.filter(slot => !slot.kind);
       const repeated = active.filter(slot => slot.kind);
       return active.length || group.repeatableHere || group.staff
-        ? renderPostSection(group, fixed, people, renderRoleGroups(repeated, people, expanded, revealOccupied === true)) : '';
+        ? renderPostSection(group, fixed, view, renderRoleGroups(repeated, view, expanded, revealOccupied === true)) : '';
     }).join('');
-    role('role-groups').innerHTML = renderLowerRoles(visible(slots.filter(slot => slot.kind && !slot.placement)), people, expanded, revealOccupied === true);
+    role('role-groups').innerHTML = renderLowerRoles(visible(slots.filter(slot => slot.kind && !slot.placement)), view, expanded, revealOccupied === true);
     dialog.querySelector('[data-action="undo"]').disabled = !state.canUndo();
     postScroll.scrollTop = scroll;
   }
@@ -127,18 +145,43 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
     writeStatus(message);
   }
 
+  function drawRoleOptions() {
+    const selected = postFields.template.value;
+    postFields.template.innerHTML = renderRoleOptions(plan.templates.map(template => ({
+      ...template, title: state.title(house.id, titleKeyForTemplate(area.id, template), template.title),
+    })));
+    if (plan.templates.some(template => template.id === selected)) postFields.template.value = selected;
+  }
+
+  const editor = bindOfficeTitleEditor(titleEditor, {
+    hasOverride: key => Boolean(state.title(house.id, key)),
+    findTrigger: anchor => dialog.querySelector(`[data-title-anchor="${CSS.escape(anchor)}"]`),
+    onRename(key, name) {
+      if (!state.renameTitle(house.id, key, name)) return;
+      drawRoleOptions();
+      update(name === null ? 'Standardtitel wiederhergestellt.' : `Titel im Entwurf geändert zu „${name.trim()}“.`);
+    },
+  });
+  const localEditor = bindLocalAuthorityEditor(authorityEditor, {
+    findTrigger: key => dialog.querySelector(`[data-action="configure-authority"][data-post="${CSS.escape(key)}"]`),
+    onApply(key, choice) {
+      if (state.setAuthority(house.id, key, choice)) {
+        update(choice ? 'Ortsamt im Entwurf geändert.' : 'Vorgabe für das Ortsamt wiederhergestellt.');
+      }
+    },
+  });
+
   function assign(key, id, focus) {
     try {
-      const change = state.assign(house.id, key, id);
-      if (!change) return;
+      const previous = state.assign(house.id, key, id);
+      if (!previous) return;
       select(null);
-      const previousName = people.get(change.post.occupant)?.name;
+      const previousPerson = postOccupant(previous, people);
       const person = people.get(id);
-      const destination = postTitle({ ...change.post, occupant: id }, person);
-      const prior = change.formerPosts.map(slot => `„${postTitle(slot, person)}“`);
+      const destination = postTitle({ ...previous, occupant: id }, person);
       const message = id
-        ? `${person.name} ist für „${destination}“ eingeplant.${prior.length ? ` Frei geworden ${prior.join(', ')}.` : ''}${previousName ? ` ${previousName} wurde abgelöst.` : ''}`
-        : `„${change.post.title}“ ist jetzt frei.`;
+        ? `${person.name} ist für „${destination}“ eingeplant.${previousPerson && previousPerson.id !== id ? ` ${previousPerson.name} wurde in diesem Amt abgelöst.` : ''}`
+        : `„${postTitle(previous, previousPerson)}“ ist jetzt frei.`;
       update(message, focus ? key : '');
     } catch (error) { writeStatus(error.message); }
   }
@@ -197,7 +240,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
     const places = suitableLocalities(plan, template);
     const previous = postFields.site.value;
     siteField.hidden = !places.length || (template?.kind || postFields.kind.value) === 'staff';
-    const station = places.some(place => place.type === 'station');
+    const station = template?.stationed || places.some(place => place.type === 'station');
     siteLabel.textContent = station ? 'Standort' : 'Dienstort';
     postFields.site.innerHTML = `<option value="">${station ? 'Standort offen' : 'Ganze Herrschaft'}</option>` + places.map(place =>
       `<option value="${e(place.key)}">${e(place.name)}</option>`).join('');
@@ -205,13 +248,15 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
   }
   function openRoleEditor(post) {
     postForm.reset();
+    copiedRole = null;
     if (post) {
       const template = plan.templates.find(entry => entry.id === post.templateId)
-        || plan.templates.find(entry => entry.title === post.title && entry.kind === post.kind && entry.placement === post.placement);
+        || plan.templates.find(entry => entry.title === post.originalTitle && entry.kind === post.kind && entry.placement === post.placement);
       if (template) postFields.template.value = template.id;
       else {
+        copiedRole = post;
         postFields.kind.value = post.kind;
-        postFields.title.value = post.title;
+        postFields.title.value = post.roleTitle;
         postFields.description.value = post.description;
       }
     }
@@ -226,13 +271,15 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
     event.preventDefault();
     const { kind, title, description, count, site, template: selection } = postFields;
     const template = plan.templates.find(entry => entry.id === selection.value);
+    const copy = copiedRole && copiedRole.kind === kind.value && copiedRole.roleTitle === title.value.trim();
     try {
       const keys = state.addPosts(house.id, {
-        area: area.id, kind: template?.kind || kind.value, title: template?.title || title.value,
-        description: template?.description ?? description.value, templateId: template?.id,
+        area: area.id, kind: template?.kind || kind.value, title: template?.title ?? (copy ? copiedRole.originalTitle : title.value),
+        description: template?.description ?? description.value, templateId: template?.id || (copy ? copiedRole.templateId : undefined),
         site: siteField.hidden ? '' : site.value,
       }, count.valueAsNumber);
       postForm.reset();
+      copiedRole = null;
       updatePostFields();
       newPost.open = false;
       update(keys.length === 1 ? 'Zusätzlicher Posten angelegt.' : `${keys.length} Posten angelegt.`, keys[0], keys.length > 1);
@@ -248,7 +295,8 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
     backButton.setAttribute('aria-label', `Zurück zu ${parentViews.at(-1)?.category.name || 'den Hofämtern'}`);
     newPost.open = false;
     postForm.reset();
-    postFields.template.innerHTML = renderRoleOptions(plan.templates);
+    copiedRole = null;
+    drawRoleOptions();
     const kinds = plan.sections.some(section => section.staff) ? [...LOWER_ROLE_KINDS, 'staff'] : LOWER_ROLE_KINDS;
     postFields.kind.innerHTML = kinds.map(kind => `<option value="${kind}">${e(ROLE_KINDS[kind].title)}</option>`).join('');
     updatePostFields();
@@ -259,7 +307,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
         ${plan.connections.map(({ key, department, title: name }) => `<button type="button" data-action="open-department"
           data-department="${e(department)}" data-post="${e(key)}">${e(name)} ↗</button>`).join('')}
       </nav>` : ''}
-      ${plan.references.length ? renderContacts(plan.references, people, 'Vikariate der Lehnsherrschaften', state) : ''}
+      ${plan.references.length ? renderContacts(plan.references, people, 'Vikariate der Lehnsherrschaften', { state }) : ''}
       ${area.id === 'militaer' ? renderMilitaryForces(house) : ''}
       ${area.id === 'spionage' ? `<details class="reference-panel shadow-notes"><summary>Vertrauliche Amtsüberlieferung</summary>
         <p>${e(shadowTradition)}</p></details>` : ''}`;
@@ -294,6 +342,12 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
       case 'back-office': back(); break;
       case 'manage-roles': openRoleEditor(); break;
       case 'add-role-like': openRoleEditor(state.positions(house.id).get(post)); break;
+      case 'rename-title': editor.open(button); break;
+      case 'configure-authority': {
+        const slot = state.positions(house.id).get(post);
+        if (slot?.authority) localEditor.open(slot);
+        break;
+      }
       case 'open-department': {
         openDepartment(button.dataset.department, post);
         break;
@@ -301,6 +355,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
       case 'undo':
         if (state.undo()) {
           select(null);
+          drawRoleOptions();
           update('Letzte Änderung zurückgenommen.');
           if (button.disabled) title.focus();
         }
@@ -363,7 +418,8 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
   });
 
   return {
-    open(scope, category, department) {
+    open(scope, category, department, postKey) {
+      if (dialog.open) preferences.set(house.id, { free: fields.free.checked });
       house = scope;
       rootArea = category;
       parentViews.length = 0;
@@ -374,12 +430,13 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, onChan
       vacanciesOnly.checked = false;
       select(null);
       activate(category);
-      dialog.showModal();
+      if (!dialog.open) dialog.showModal();
       title.focus({ preventScroll: true });
       postScroll.scrollTop = 0;
       list.scrollTop = 0;
       const direct = plan.slots.find(slot => department && slot.department === department);
       if (direct) openDepartment(department, direct.key);
+      if (postKey) focusPost(state.postKey(house.id, postKey));
     },
   };
 }

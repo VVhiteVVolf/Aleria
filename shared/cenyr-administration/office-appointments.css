@@ -1,0 +1,17 @@
+.office-appointments {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 550 .76rem/1.35 system-ui, sans-serif;
+}
+
+.office-appointments a {
+  display: inline-block;
+  min-block-size: 24px;
+  max-inline-size: 100%;
+  padding-block: .2rem;
+  color: #315545;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}

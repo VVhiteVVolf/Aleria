@@ -13,14 +13,33 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
 - Rats- und Hofämter öffnen jeweils ihre eigene Hierarchie. Die Amtsleitung
   lässt sich ebenso besetzen wie ein Unterposten. Figuren können per Maus
   oder Touch am Griff gezogen oder anschließend auf einen Posten gewählt
-  werden. Eine Versetzung gibt die bisherigen Stellen frei. Gemeinsam
-  belegte Doppelämter wie Odyars Kämmerei und Schatzmeisteramt können als
-  Quellenbesetzung erhalten bleiben.
+  werden. Beim Besetzen ändert sich nur der gewählte Posten. Bisherige
+  Stellen bleiben besetzt, bis sie neu besetzt oder über „Freigeben“ geleert
+  werden. Kleine Links führen von der Amtskarte zu den weiteren Posten
+  derselben Figur, etwa von Odyars Kämmerei zu seinem Schatzmeisteramt.
+- „Ortsämter und Lehen“ zeigt den erfassten Ortstyp und eine Leitungsstelle je
+  Siedlung, befestigtem Ort oder überliefertem Lehenssitz. Die Amtsform lässt
+  sich passend zum Ort wählen. Für Kirchen und Klöster gibt es geistliche
+  Leitungen, für Burgen und Festungen Kommandant, Hauptmann und Burgverwalter.
+  Bürgerlich geprägte Siedlungen führen Bürgermeister oder Lehenswarte. Eine
+  allgemein oder als befestigt bezeichnete Siedlung bietet beide Gruppen.
+  Belegte Amtsinhaber und ihre Quellentitel bilden den Ausgangsstand.
+  Hauptmann und Verwalter von Tŵr Morlan ist eine gemeinsame Stelle in
+  den Ortsämtern und bei den Ortswachen des Marschalls.
+  Gildenpachten werden am jeweiligen Ort geplant. Gilde und Amtsbezeichnung
+  können frei eingetragen werden.
+- Über den Federkiel lässt sich ein Amt, eine wiederholbare Rolle oder ein
+  einzelner Posten im Entwurf umbenennen. Der Rollenname gilt für alle
+  zugehörigen und später hinzugefügten Stellen. Ein eigener Postentitel
+  hat Vorrang. „Standardtitel verwenden“ setzt die jeweilige Änderung zurück.
 - Die Kandidatenliste zeigt den direkten Dienstkreis. Freie Bürgerliche sind
   optional. Unter „+ Aus Stammbäumen“ kann jede erfasste lebende Figur anhand
   von Name, Familie und Region gesucht und der gerade gewählten Herrschaft
   hinzugefügt werden. Suchbegriffe, Geschlecht, Familienstand, Alter und
   Besetzungsstatus lassen sich in der Bewerberliste kombinieren.
+  „Freie Posten finden“ durchsucht alle Herrschaften nach Stelle, Haus und
+  Standort und verlinkt jeden Treffer direkt. Stellen mit ausstehender
+  Nachbesetzung erscheinen ebenfalls in der Suche.
 - Wiederholbare Dienste haben ihre eigene Gruppe und die Schaltfläche
   „+ Weitere Posten“. Je Vorgang können bis zu 1.000 Stellen angelegt werden.
   Weitere Vorgänge ergänzen die Gruppe. Jeder wiederholbare Posten lässt
@@ -28,13 +47,20 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   örtlichen Amt zu. Eigene Titel und Aufgaben sind ebenfalls möglich.
 - Die Werkstatt speichert browserlokal unter `aleria.herrschaftsverwaltung.v1`.
   Der JSON-Gesamtentwurf enthält alle sieben Verwaltungen, Umbesetzungen,
-  entfernte und neue Stellen und ergänzte Bewerber. Der Import akzeptiert
+  entfernte und neue Stellen, Ortsämter, Titeländerungen und ergänzte Bewerber. Der Import akzeptiert
   auch frühere Versionen. Eine damals ausdrücklich geplante Umbesetzung hat
-  beim Einlesen Vorrang vor neu erfassten Ausgangsbesetzungen. Eine bekannte
-  Stammbaumfigur aus einem inzwischen korrigierten Dienstkreis erscheint in so
-  einem Entwurf als hinzugefügter Bewerber. Bei älteren Militärentwürfen
+  beim Einlesen Vorrang vor neu erfassten Ausgangsbesetzungen. Frühere
+  Amtsinhaber, die aus dem Kandidatenkreis gefallen sind, bleiben unter
+  „Nachbesetzung nötig“ mit ihrer bisherigen Kennung sichtbar. Version 9
+  speichert beim Export auch bekannte Namen. Verschiedene alte Besetzungen
+  für Wache und Ortsamt von Tŵr Morlan erscheinen am gemeinsamen Posten.
+  In Entwürfen bis Version 6 können bekannte Stammbaumfiguren aus einem
+  später korrigierten Dienstkreis wieder als Bewerber erscheinen. Bei älteren Militärentwürfen
   werden Hausmacht-Besetzungen mit ihren Standorten übernommen.
-  Eine Besetzung des aufgehobenen Amts Wachtmarschall wird freigegeben. Import,
+  Besetzungen des aufgehobenen Wachtmarschalls oder der Pagen der Hofdame
+  werden freigegeben. Besetzte frühere Rüstkammerdienste erscheinen bei den
+  niederen und sonstigen Stellen des Waffenmeisters. Besetzte überzählige
+  Flottenkommandos aus alten Entwürfen bleiben als übrige Rollen erhalten. Import,
   Zurücksetzen und einzelne Änderungen lassen sich rückgängig machen.
 
 ## Aufbau und Quellen
@@ -62,9 +88,7 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   vier persönlichen Zofen und drei Kammerdiener stehen unter dem Vogt.
   Die elf belegten aktiven Gardefiguren folgen der bestehenden Gardeübersicht
   und dem gemeinsamen Personenregister unter
-  `Stammbäume/assets/js/data/draig-garde-people.js`. Eine belegte Garde-
-  besetzung ohne Einzelakte verweist auf die öffentliche Gardeübersicht.
-  Brona ist zusätzlich als
+  `Stammbäume/assets/js/data/draig-garde-people.js`. Brona ist zusätzlich als
   Hofdame belegt. Gwerfyl leitet die Hofküche, Rhiain Pert die Brotvorräte.
   Kevan Pert dient in der Hausmacht auf Castell Draig, Cai Taflu direkt im
   Gefolge des Marschalls. Rhydric und Perwyn Argall bilden die belegte Wache
@@ -97,7 +121,16 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   Hauptleute der Hausmacht. Hauptleute führen Abteilungen ihres Adelshauses.
   Für Hausmacht-Posten kann ein Standort eingetragen werden. Die Hauptleute
   der Ortswachen stehen beim zuständigen Marschall.
-- **Ergänzende Ämterquelle.** Redaktionelle Überlieferung „Ämter in Cenyr“.
+- **Fachzweige am Hof.** Der Waffenmeister gehört zu „Lehre und Mentorat“.
+  Er leitet den Unterricht der Hauskinder, seinen Stellvertreter und Nachfolger,
+  vier Lehrmeister sowie den Rüst- und Waffenwart. Beim Handwerksmeister
+  steht die Schmiede mit einem Schmiedemeister, vier Gesellen und zwei
+  Lehrlingsstellen vor den allgemeinen Handwerksdiensten. Die Kaplanei
+  enthält je nach Herrschaft einen bis vier Heiler und zwei bis vier Akolythen
+  sowie Stellvertretung, Schreiber, Seelsorger, Sakristan und Kapellendienst.
+- **Ergänzende Ämterquelle.** „Ämter in Cenyr“, Nutzeranlage
+  `94fbc30f-3130-4510-a7ba-fdb70ef5eddd/Eingefügter Text.txt`, SHA-256
+  `D827D211F43DF9980D45AC492E33593B5AA571AD7FD1CEA1A4B7AA45401B3CC0`.
   Übernommen wurden Amtszeichen, ergänzende Aufgaben und Unterrollen,
   die königlichen und magischen Titeltraditionen,
   Ratskanzler, Regentschaft sowie die seltenen Hofämter. Die jüngeren
@@ -111,6 +144,16 @@ befehligt die Wachen seiner Herrschaft und führt das Heer mit den ihm nach
 Lehnsrang unterstellten Hausmachtkommandanten. Bei Banneraufgeboten stellen
 die Vasallen eigene Hausmächte. Kirchliche und externe Aufgebote folgen
 ihrer jeweiligen kirchlichen oder vertraglichen Leitung.
+
+Die Grafschaft beginnt mit fünf Flottillenkommandos. Die Admiralität einer
+Baronie beginnt mit bis zu drei Flottillen, die eines Ritterfürstentums mit bis zu zwei.
+Explizite Häfen haben bei der Standortwahl Vorrang vor Hafensiedlungen.
+Für Rhonwens Tränen sind Tân Gwaelon und Talheli vorgesehen. Arwydds bestehendes
+Küstenkommando mit seiner Adjutantur ist der Admiralität untergeordnet. Die
+Ritterfürsten führen ihre Flottillen direkt über den Vizeadmiral.
+Flottillenadmiräle, Schiffskapitäne und wiederholbare Borddienste können
+in Gruppen ergänzt und einzeln entfernt werden. Ein Standort lässt sich
+bei diesen Rollen unabhängig vom Kommando eintragen.
 
 Die Amtsmodelle, Ränge und Hofpläne liegen unter `shared/cenyr-administration/`.
 `official-office-model.mjs` führt sie mit vorhandenen Amtsprofilen und

@@ -1595,7 +1595,7 @@ export const OFFICE_CAST = {
         },
         {
           "id": "person--haus-trydar--cadfan-trydar",
-          "title": "Kommandant",
+          "title": "Hauptmann und Verwalter",
           "seat": "Tŵr Morlan",
           "note": ""
         },
@@ -1691,13 +1691,6 @@ export const OFFICE_CAST = {
           "holder": "person--haus-caerlaen--trayvon-caerlaen"
         },
         {
-          "area": "militaer",
-          "slot": "wacht-morlan",
-          "holder": "person--haus-trydar--cadfan-trydar",
-          "title": "Kommandant von Tŵr Morlan",
-          "note": "Belegte Kommandantur laut Ortsregister."
-        },
-        {
           "area": "klerus",
           "slot": "diakon-morcarryn",
           "holder": "almanach/j4fZKrXkARcP9oDAUSeb",
@@ -1770,6 +1763,8 @@ export const OFFICE_CAST = {
       "houseId": "haus-arwydd",
       "rank": "prince",
       "preparation": true,
+      "fleet": true,
+      "separateCoastalCommand": true,
       "name": "Haus Arwydd",
       "title": "Herrschaft Rhonwens Tränen",
       "crest": "/Stammbäume/assets/images/houses/Rhonwens Tränen/haus-arwydd.png",

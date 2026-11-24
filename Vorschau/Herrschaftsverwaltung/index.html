@@ -8,6 +8,7 @@
   <title>Verwaltung von Celtigerns Wacht · Aleria</title>
   <link rel="stylesheet" href="administration.css">
   <link rel="stylesheet" href="office-dialog.css">
+  <link rel="stylesheet" href="vacancy-search.css">
   <script defer src="../../Kontinente/modules/administration/administration-content.js"></script>
   <script type="module" src="app.mjs"></script>
 </head>
@@ -43,6 +44,19 @@
         <div class="house-switch" data-role="houses"></div>
       </section>
       <p class="page-notice" data-role="status" role="status" hidden></p>
+      <details class="vacancy-finder" data-role="vacancy-finder">
+        <summary>Freie Posten finden</summary>
+        <div>
+          <form class="vacancy-filters" role="search" aria-label="Freie Posten finden">
+            <label>Posten, Haus oder Ort <input type="search" name="query" placeholder="z. B. Hauptmann Arwydd"></label>
+            <label>Herrschaft <select name="scope"><option value="">Alle Herrschaften</option></select></label>
+            <label>Amtsbereich <select name="area"><option value="">Alle Bereiche</option></select></label>
+          </form>
+          <p class="vacancy-count" data-role="vacancy-count" role="status"></p>
+          <ul class="vacancy-results" data-role="vacancy-results"></ul>
+          <button class="vacancy-more" type="button" data-role="vacancy-more" hidden>Weitere Treffer</button>
+        </div>
+      </details>
       <section class="council" aria-labelledby="council-title" data-role="council"></section>
     </div>
   </main>
@@ -53,7 +67,7 @@
         <img data-role="area-icon" alt="" width="48" height="48">
         <div>
           <p class="territory-label" data-role="scope-label"></p>
-          <h2 id="office-title" tabindex="-1"></h2>
+          <div class="title-with-rename"><h2 id="office-title" tabindex="-1"></h2><span data-role="rename-office"></span></div>
         </div>
       </div>
       <div class="button-row">
@@ -141,6 +155,36 @@
       <p data-role="office-status" role="status">Figur wählen, um einen Posten zu besetzen.</p>
       <button type="button" data-action="clear-selection" hidden>Auswahl lösen</button>
     </footer>
+  </dialog>
+  <dialog class="office-title-editor" data-role="office-title-editor" aria-labelledby="rename-office-title">
+    <form>
+      <h2 id="rename-office-title">Amt umbenennen</h2>
+      <p data-role="rename-hint" hidden>Der Titel gilt für alle Posten dieser Rolle im Amt.</p>
+      <label>Neuer Titel <input type="text" name="name" autocomplete="off" required autofocus></label>
+      <p class="rename-error" data-role="rename-error" role="alert"></p>
+      <div class="button-row">
+        <button type="button" data-action="reset-title" hidden>Standardtitel verwenden</button>
+        <button type="button" data-action="cancel-rename">Abbrechen</button>
+        <button type="submit" class="button-primary">Übernehmen</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="office-title-editor" data-role="local-authority-editor" aria-labelledby="local-authority-title">
+    <form>
+      <h2 id="local-authority-title">Ortsamt festlegen</h2>
+      <p data-role="authority-site"></p>
+      <label>Amtsform <select name="role"></select></label>
+      <fieldset class="authority-guild-fields" data-role="authority-guild-fields" disabled hidden>
+        <legend class="visually-hidden">Gildenpacht</legend>
+        <label>Gilde <input type="text" name="guild" autocomplete="off"></label>
+        <label>Amtstitel der Gilde <input type="text" name="title" autocomplete="off"></label>
+      </fieldset>
+      <p class="rename-error" data-role="authority-error" role="alert"></p>
+      <div class="button-row">
+        <button type="button" data-action="cancel-authority">Abbrechen</button>
+        <button type="submit" class="button-primary">Übernehmen</button>
+      </div>
+    </form>
   </dialog>
   <noscript><p class="page-width">Die Vorbereitungsseite benötigt JavaScript.</p></noscript>
 </body>

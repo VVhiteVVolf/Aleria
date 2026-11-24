@@ -2838,6 +2838,15 @@
           "scope": "rhonwens-traenen"
         }
       ],
+      "fiefContacts": [
+        {
+          "id": "person--haus-garrael--lyonnel-garrael",
+          "title": "Lehenswart Aberllans",
+          "seat": "Aberllan",
+          "note": "Der Lehenswart vertritt Aberllan im nördlichen Camruisge unter der administrativen Gewalt der Grafschaft Celtigerns Wacht. Für die örtlichen Fachämter sind noch keine einzelnen Zuständigkeiten oder Amtsinhaber belegt. Der südliche Inselteil Oilean untersteht Leitheach beziehungsweise Tír na Sleagh und gehört nicht zu dieser Grafschaftsverbindung.",
+          "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/Insel Camruisge.html"
+        }
+      ],
       "enrolled": [
         {
           "id": "haus-aelgorn",
@@ -5637,7 +5646,7 @@
         },
         {
           "id": "person--haus-trydar--cadfan-trydar",
-          "title": "Kommandant",
+          "title": "Hauptmann und Verwalter",
           "seat": "Tŵr Morlan",
           "note": ""
         },
@@ -5731,13 +5740,6 @@
           "area": "hof",
           "slot": "archiv",
           "holder": "person--haus-caerlaen--trayvon-caerlaen"
-        },
-        {
-          "area": "militaer",
-          "slot": "wacht-morlan",
-          "holder": "person--haus-trydar--cadfan-trydar",
-          "title": "Kommandant von Tŵr Morlan",
-          "note": "Belegte Kommandantur laut Ortsregister."
         },
         {
           "area": "klerus",
@@ -7432,6 +7434,8 @@
       "houseId": "haus-arwydd",
       "rank": "prince",
       "preparation": true,
+      "fleet": true,
+      "separateCoastalCommand": true,
       "name": "Haus Arwydd",
       "title": "Herrschaft Rhonwens Tränen",
       "crest": "/Stammbäume/assets/images/houses/Rhonwens Tränen/haus-arwydd.png",

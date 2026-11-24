@@ -2,7 +2,7 @@ import { buildCathedralHierarchy } from '../../AleriaAlmanach/modules/gwynthor-c
 import { countyAreas, countyLeadershipRole } from './county-reference.mjs';
 import { deaconSection, localOfficeSection } from './local-offices.mjs';
 import { repeatableKind } from './office-roles.mjs';
-import { RETIRED_WATCH_MARSHAL, watchSection, watchServiceSection } from './military-organization.mjs';
+import { FLOTILLA_ROLE, RETIRED_WATCH_MARSHAL, SEA_CAPTAIN_ROLE, repeatableNavalPost, watchSection, watchServiceSection } from './military-organization.mjs';
 
 const icons = {
   militaer: 'command', klerus: 'faith', gerichtsbarkeit: 'justice', finanzen: 'money',
@@ -15,6 +15,9 @@ const groupIcons = {
   'militaer-cochllamwyr-hauptmaenner': 'watch', 'militaer-hauptleute': 'watch',
   schattenadjutantur: 'records', vertragsstube: 'records', 'klerus-adjutantur': 'records',
 };
+const navalTemplates = { 'militaer-flottillen': FLOTILLA_ROLE, 'militaer-kapitaene': SEA_CAPTAIN_ROLE };
+const repeatableCrew = new Set(['seedienst-steuermann', 'seedienst-bootsmann', 'seedienst-artilleriemeister',
+  'seedienst-schiffszimmermeister', 'seedienst-schiffsarzt']);
 
 const localDepartments = {
   gerichtsbarkeit: { replace: 'rechtsweg', omit: ['landrichter', 'dienste'], repeat: ['gerichtsvogt', 'schultheiss', 'dorfvogt'] },
@@ -88,6 +91,15 @@ function countySections(house, source) {
   return source.groups.slice(1).flatMap(group => {
     const roles = group.roles.filter(role => !local?.omit.includes(role.id));
     const section = mapGroup(source.id, group, roles);
+    const navalTemplate = navalTemplates[group.id];
+    if (navalTemplate) {
+      return [{ ...section, repeatableHere: true, slots: section.slots.map(slot => repeatableNavalPost(slot, navalTemplate)),
+        ...(group.id === 'militaer-flottillen' ? { title: 'Flottillenadmiräle' } : {}) }];
+    }
+    if (group.id === 'militaer-seedienste') {
+      return [{ ...section, repeatableHere: true, slots: section.slots.map(slot => repeatableCrew.has(slot.id)
+        ? { ...slot, kind: slot.kind || 'other', stationed: true } : slot) }];
+    }
     if (group.id === 'militaer-landdienste') {
       section.slots.push({
         id: 'marschall-gefolgswaffenknecht', title: 'Waffenknecht im Gefolge des Marschalls', icon: 'arms', kind: 'service',

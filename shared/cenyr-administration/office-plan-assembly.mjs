@@ -15,7 +15,7 @@ export function prepareOfficePlan(house, area, definition, appointments) {
       ...(assigned?.note ? { note: assigned.note } : {}),
       ...(assigned?.site ? { site: assigned.site } : {}),
       ...(assigned?.title ? { title: assigned.title } : {}),
-      ...(kind ? { kind, placement, templateId: slot.templateId || `r-${slot.id}`, removable: true } : {}),
+      ...(kind ? { area, kind, placement, templateId: slot.templateId || `r-${slot.id}`, removable: true } : {}),
     };
   }
 

@@ -6,6 +6,7 @@ import { houseOfficeFor } from '../../../Familien Häuser und Clans/modules/cour
 import { HOUSE_CONTENT } from '../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.content.mjs';
 import { EUDDOGWY } from '../../../AleriaAlmanach/modules/gwynthor-cathedral/patriarch-adjutant.mjs';
 import { countyAreas, countyLeadershipRole, countyVikars } from '../../../shared/cenyr-administration/county-reference.mjs';
+import { territorialContacts } from '../../../Kontinente/modules/administration/data/celtigerns-vassals.generated.mjs';
 
 const countyId = 'grafschaft-celtigerns-wacht';
 const familyId = 'haus-draig';
@@ -125,9 +126,13 @@ export async function buildCountyRoster({ territories, families, registry, house
       title, seat, note: role.description, href: role.links?.[0]?.href, scope: scope?.id,
     };
   });
+  const fiefContacts = territorialContacts.map(contact => ({
+    id: addRole(contact, `lehenswarte/${contact.id}`),
+    title: contact.title, seat: contact.jurisdiction.split(' · ', 1)[0], note: contact.description, href: contact.href,
+  }));
   return {
     id: 'draig', county: true, name: own.name, title: territory.content.name, crest: own.emblem,
-    href: encodeURI(`/Kontinente/${territory.page}`), ruler, offices, staff, court, contacts, enrolled,
+    href: encodeURI(`/Kontinente/${territory.page}`), ruler, offices, staff, court, contacts, fiefContacts, enrolled,
     places: await countyPlaces(), candidates: [...candidates.values()],
   };
 }

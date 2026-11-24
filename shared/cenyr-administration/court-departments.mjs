@@ -10,6 +10,13 @@ const houseCaptain = {
   kind: 'other', title: 'Hauptmann der Hausmacht', templateId: 'r-hauptmann-hausmacht',
   description: 'Führt eine Abteilung des Adelshauses mit seinen Leutnanten und Unteroffizieren.',
 };
+const formerArmoryAssistant = { title: 'Waffenknecht der Rüstkammer', kind: 'service', templateId: 'r-gehilfe' };
+const formerAssistantIds = ['gehilfe', 'gehilfe-2', 'gehilfe-3', 'gehilfe-4'];
+const formerArmoryPosts = {
+  ...Object.fromEntries(formerAssistantIds.map(id => [id, formerArmoryAssistant])),
+  sonderdienst: { title: 'Schleifer', kind: 'special', templateId: 'r-sonderdienst' },
+};
+const formerLadyPages = Object.fromEntries(formerAssistantIds.map(id => [id, null]));
 
 function militaryGroups(guard) {
   const [captains, officers, troops] = troopGroups;
@@ -96,6 +103,40 @@ const major = {
       ['lehrpage', 'Page in höfischer Ausbildung', 'Lernt Hofsitte und erprobt sie unter Anleitung in alltäglichen Aufgaben.', 'learning', 'service', 3],
     ]),
   ],
+  waffen: [
+    group('waffenlehre', 'Waffenlehre des Hauses', 'learning', [
+      ['stellvertretung', 'Stellvertreter und Nachfolger', 'Vertritt den Waffenmeister im Unterricht und bereitet sich unter seiner Anleitung auf die Nachfolge vor.', 'coordination'],
+      ['lehrmeister', 'Lehrmeister', 'Unterrichtet die jungen Angehörigen des Hauses und begleitet ihre Ausbildung unter dem Waffenmeister.', 'learning', 'other', { prince: 4, barony: 4, county: 4 }],
+    ]),
+    group('ruestkammer', 'Rüstkammer', 'arms', [
+      { id: 'fachdienst', title: 'Rüst- und Waffenwart', icon: 'arms', removable: true,
+        description: 'Verwahrt Waffen und Rüstzeug, stellt die Ausrüstung für den Unterricht bereit und meldet Reparaturbedarf.' },
+    ]),
+  ],
+  handwerk: [
+    group('schmiede', 'Schmiede des Hauses', 'works', [
+      { id: 'schmiedemeister', title: 'Schmiedemeister', icon: 'works', reportsTo: 'dem Handwerksmeister',
+        description: 'Leitet die Schmiede im Auftrag des Handwerksmeisters, verteilt die Arbeit und begleitet die Ausbildung in der Werkstatt.' },
+      ['schmiedegeselle', 'Schmiedegeselle', 'Fertigt und repariert Metallarbeiten für den Hof und leitet Lehrlinge bei zugeteilten Arbeiten an.', 'works', 'service', { prince: 4, barony: 4, county: 4 }],
+      ['schmiedelehrling', 'Schmiedelehrling', 'Lernt das Schmiedehandwerk und arbeitet unter Aufsicht in der Werkstatt mit.', 'learning', 'service', { prince: 2, barony: 2, county: 2 }],
+    ]),
+  ],
+  kaplan: [
+    group('kaplanei', 'Kaplanei des Hofes', 'faith', [
+      ['stellvertretung', 'Stellvertretung', 'Vertritt den Hofkaplan in den übertragenen Kapellendiensten und teilt die Bediensteten ein.', 'coordination'],
+      { id: 'fachdienst', title: 'Schreiber des Hofkaplans', icon: 'records', removable: true,
+        description: 'Führt das Kapellenbuch, den Schriftverkehr und die Verzeichnisse der Stiftungen.' },
+    ]),
+    group('kaplan-heilkunde', 'Heilkundlicher Dienst', 'care', [
+      ['heiler', 'Heiler', 'Betreut Kranke und Verletzte des Hofes und stimmt die Versorgung mit dem Hofkaplan ab.', 'care', 'other', { prince: 1, barony: 2, county: 4 }],
+    ]),
+    group('kapellendienst', 'Seelsorge und Kapellendienst', 'faith', [
+      ['seelsorger', 'Seelsorger', 'Begleitet Angehörige und Bedienstete des Hofes in geistlichen und persönlichen Anliegen.', 'faith'],
+      ['gehilfe', 'Akolyth', 'Assistiert beim Gottesdienst und lernt die Aufgaben des Kapellendiensts.', 'learning', 'service', { prince: 2, barony: 3, county: 4 }],
+      ['sonderdienst', 'Sakristan', 'Verwahrt liturgisches Gerät, Gewänder und Bücher und bereitet die Kapelle vor.', 'faith', 'special'],
+      ['kapellendiener', 'Kapellendiener', 'Hält Kapelle und Nebenräume bereit und hilft bei den praktischen Vorbereitungen.', 'hospitality', 'service'],
+    ]),
+  ],
 };
 
 function householdGroups(household, house) {
@@ -120,15 +161,13 @@ function householdGroups(household, house) {
 
 const subordinate = {
   archiv: ['records', 'Urkundenschreiber', 'Registraturgehilfe', 'Siegelprüfer'],
-  waffen: ['arms', 'Rüstwart', 'Waffenknecht der Rüstkammer', 'Schleifer'],
   kerker: ['watch', 'Kerkeraufseher', 'Schlüsselgehilfe', 'Versorgungsdiener'],
   zeremonien: ['hospitality', 'Zeremonienschreiber', 'Empfangsgehilfe', 'Protokollkundiger'],
   mundschenk: ['hospitality', 'Schenkgehilfe', 'Kellerdiener', 'Kellerwart'],
   kueche: ['supplies', 'Koch', 'Küchengehilfe', 'Vorratswart'],
   brot: ['supplies', 'Hofbäcker', 'Backgehilfe', 'Mehlwart'],
   narr: ['music', 'Spielleute', 'Requisitengehilfe', 'Schauspieler'],
-  kaplan: ['faith', 'Kirchenschreiber', 'Akolyth', 'Sakristan'],
-  hofdame: ['hospitality', 'Gesellschafter', 'Page der Hofdame', 'Begleiter bei Empfängen'],
+  hofdame: ['hospitality', 'Gesellschafter', null, 'Begleiter bei Empfängen'],
   stall: ['horse', 'Stallknecht', 'Pferdepfleger', 'Hufschmied'],
   jagd: ['scouting', 'Jagdgehilfe', 'Treiber', 'Fährtenleser'],
   hafen: ['sailing', 'Hafenaufseher', 'Kaidiener', 'Lotse'],
@@ -145,7 +184,7 @@ function minorGroup(office) {
   return group('hofdienst', 'Untergeordnete Hofdienste', icon, [
     ['stellvertretung', 'Stellvertretung', `Vertritt das Amt „${office.title}“ bei übertragenen Aufgaben.`, icon],
     ['fachdienst', first, `Übernimmt die fachlichen Dienste im Aufgabenbereich „${office.title}“.`, icon, 'other', 1],
-    ['gehilfe', second, 'Unterstützt den laufenden Dienst und meldet seinen Bedarf an die Leitung.', icon, 'service', 2],
+    ...(second ? [['gehilfe', second, 'Unterstützt den laufenden Dienst und meldet seinen Bedarf an die Leitung.', icon, 'service', 2]] : []),
     ['sonderdienst', third, 'Übernimmt besondere Aufträge im Rahmen des Hofamts.', icon, 'special', 1],
     ...(office.id === 'hofdame' ? [['weitere-hofdame', 'Weitere Hofdame', 'Begleitet die Herrin und ihre Töchter bei höfischen Pflichten.', 'hospitality', 'other', 2]] : []),
   ]);
@@ -164,8 +203,10 @@ function expandGroup(source, house) {
     }));
   });
   const { id, title, icon, description } = source;
-  const reportsTo = { leibgarde: 'dem Hauptmann der Leibgarde', hausaufgebot: 'dem Kommandanten der Hausmacht',
-    'hausaufgebot-offiziere': 'dem zuständigen Hauptmann der Hausmacht', 'hausaufgebot-mannschaft': 'dem zuständigen Hauptmann der Hausmacht' }[id];
+  const reportsTo = { leibgarde: 'dem Hauptmann der Leibgarde', hausaufgebot: 'dem Kommandanten der Hausmacht', schmiede: 'dem Schmiedemeister',
+    'hausaufgebot-offiziere': 'dem zuständigen Hauptmann der Hausmacht', 'hausaufgebot-mannschaft': 'dem zuständigen Hauptmann der Hausmacht',
+    waffenlehre: 'dem Waffenmeister', ruestkammer: 'dem Waffenmeister', kaplanei: 'dem Hofkaplan',
+    'kaplan-heilkunde': 'dem Hofkaplan', kapellendienst: 'dem Hofkaplan' }[id];
   if (reportsTo) for (const slot of slots) slot.reportsTo ||= reportsTo;
   return { id, title, icon, description, slots, repeatableHere: true };
 }
@@ -175,16 +216,20 @@ export function buildCourtDepartments(house, court, courtDefinition, appointment
     const id = `hof-${office.id}`;
     let groups = major[office.type];
     const isHouseCommand = office.id === 'hausmacht';
+    const isWeaponMaster = office.type === 'waffen';
+    const isLadyInWaiting = office.type === 'hofdame';
     const sites = isHouseCommand ? houseMusterSites(house.places) : [];
     if (isHouseCommand) groups = militaryGroups(courtDefinition.guard);
     if (office.id === 'vogt') groups = [...groups, ...householdGroups(courtDefinition.household, house)];
+    if (office.type === 'handwerk') groups = [...groups, minorGroup(office)];
     groups ||= [minorGroup(office)];
     office.department = id;
     const plan = prepareOfficePlan(house, id, {
       head: office, sections: groups.map(source => expandGroup(source, house)),
       sites,
-      retired: isHouseCommand ? { hauptmann: houseCaptain, ...formerHouseCaptains(sites) } : {},
-      suggestions: [
+      retired: isHouseCommand ? { hauptmann: houseCaptain, ...formerHouseCaptains(sites) }
+        : isWeaponMaster ? formerArmoryPosts : isLadyInWaiting ? formerLadyPages : {},
+      suggestions: isWeaponMaster ? [] : [
         ['service', 'Dienstgehilfe', 'Unterstützt die ihm zugeteilten Aufgaben des Hofamts.'],
         ['special', 'Sonderdienst', 'Übernimmt einen einzelnen besonderen Auftrag des Hofamts.'],
         ['other', 'Hofdienst', 'Versieht laufende Aufgaben im Bereich dieses Hofamts.'],

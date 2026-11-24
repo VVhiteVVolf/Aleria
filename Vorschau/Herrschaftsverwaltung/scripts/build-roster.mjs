@@ -216,10 +216,6 @@ function addHouse(profile) {
     }
     return { role, ...((note || detail) ? { note: note || detail } : {}) };
   });
-  if (scope === 'gwendolyns-ufer') {
-    const holder = exactPerson('haus-trydar', 'cadfan-trydar', 'Cadfan Trydar');
-    staff.push({ area: 'militaer', slot: 'wacht-morlan', holder, title: 'Kommandant von Tŵr Morlan', note: 'Belegte Kommandantur laut Ortsregister.' });
-  }
   return {
     ...profile, name: own.name, title: territory.name, crest: own.emblem, href: council.href, ruler: rulerId,
     offices, court, contacts, staff, enrolled: enrolled.filter(item => item.id !== ownId).sort(byName),
@@ -280,7 +276,7 @@ const free = [...FREE_HOUSES].flatMap(id => {
 const tree = buildTreeCandidateIndex(FAMILY_REGISTRY, { isLiving, addFamilyPerson });
 const projection = { year: ALERIA_CURRENT_YEAR, houses, free, tree, people: [...people.values()].sort(byName) };
 const serialized = JSON.stringify(projection, null, 2) + '\n';
-const nativeHouses = houses.map(({ candidates, enrolled, ...house }) => house);
+const nativeHouses = houses.map(({ candidates, enrolled, fiefContacts, ...house }) => house);
 const nativeIds = new Set(houses.flatMap(house => [house.ruler, ...house.staff.map(slot => slot.holder),
   ...Object.values(house.offices).map(office => office.holder), ...house.contacts.map(contact => contact.id)]).filter(Boolean));
 const nativePeople = [...nativeIds].sort().map(id => {

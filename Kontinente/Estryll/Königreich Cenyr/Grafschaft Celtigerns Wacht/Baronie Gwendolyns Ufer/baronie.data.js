@@ -118,7 +118,7 @@
       members: Object.freeze([
         person("Oberin", "Gwenydd Anghof", "https://i.imgur.com/yEiU1My.png", { seat: "Côr Mynyddfaen" }),
         person("Lehenswart", "Rhon Taranvyr", `${portraitRoot}/haus-taranvyr/rhon-taranvyr.jpg`, { familyId: "haus-taranvyr", seat: "Glasdraeth" }),
-        person("Kommandant", "Cadfan Trydar", `${portraitRoot}/haus-trydar/cadfan-trydar.png`, { familyId: "haus-trydar", seat: "Tŵr Morlan" }),
+        person("Hauptmann und Verwalter", "Cadfan Trydar", `${portraitRoot}/haus-trydar/cadfan-trydar.png`, { familyId: "haus-trydar", seat: "Tŵr Morlan" }),
         person("Lehenswart", "Brendan Taranvyr", `${portraitRoot}/haus-taranvyr/brendan-taranvyr.jpg`, { familyId: "haus-taranvyr", seat: "Castell Rhewglyn" }),
         person("Bürgermeister", "...", "", { seat: "Lysbryn" }),
         person("Lehenswart", "Caderyn Rhuddgar", `${portraitRoot}/haus-rhuddgar/caderyn-rhuddgar.jpg`, { familyId: "haus-rhuddgar", seat: "Garwfaen" }),

@@ -38,6 +38,23 @@ export function pin(areaId, tier) {
 
 export function roleFor(button) { return roleByButton.get(button); }
 
+export function renderAppointmentLinks(role) {
+  if (!role.appointmentLinks?.length) return null;
+  const list = element('ul', 'office-appointments');
+  list.setAttribute('aria-label', `Weitere Ämter von ${role.name}`);
+  for (const { label, href } of role.appointmentLinks) {
+    const item = element('li');
+    const link = element('a', '', `${label}\u00a0`);
+    const arrow = element('span', '', '↗');
+    arrow.setAttribute('aria-hidden', 'true');
+    link.href = href;
+    link.append(arrow);
+    item.append(link);
+    list.append(item);
+  }
+  return list;
+}
+
 export function renderRoleGroup(group, area) {
   const section = element('section', `administration-role-group is-${group.kind}`);
   section.dataset.groupId = group.id;
@@ -83,6 +100,8 @@ function renderRoleCard(role, group, area) {
   copy.append(element('span', 'administration-role-hint', 'Amt & Aufgaben ↗'));
   button.append(frame, pin(role.areaId || area.id, tier), copy);
   card.append(button);
+  const appointments = renderAppointmentLinks(role);
+  if (appointments) card.append(appointments);
   if (role.crew) {
     const crew = element(role.crew.href ? 'a' : 'button', 'administration-crew-link');
     if (role.crew.href) crew.href = role.crew.href;

@@ -107,7 +107,8 @@ export const HOUSE_TRYDAR_FAMILY = Object.freeze({
     }),
     spouse('dolena-rhuddgar', 'Dolena Rhuddgar', 'female', '1674', '', 'house-rhuddgar'),
     person('cadfan-trydar', 'Cadfan Trydar', 'male', '1668', '', TRYDAR_HOUSE_ID, {
-      title: 'Sir · Festungskommandant von Twr Morlan'
+      title: 'Sir · Hauptmann und Verwalter von Tŵr Morlan',
+      extensions: { registryManagedFields: ['title'], registryManagedFieldRevisions: { title: 4 } },
     }),
     unknownSpouse('unknown-spouse-cadfan-trydar', 'female', 'Ehefrau Cadfans.'),
 
@@ -283,6 +284,6 @@ export const HOUSE_TRYDAR_FAMILY = Object.freeze({
       tradition: 'Ritterlicher Dienst, Disziplin und praktische Bewährung stehen über höfischer Selbstdarstellung.'
     },
     blankFamily: false,
-    sourceRevision: 3
+    sourceRevision: 4
   }
 });

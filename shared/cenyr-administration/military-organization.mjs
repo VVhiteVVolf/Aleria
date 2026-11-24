@@ -14,19 +14,30 @@ export const CENYR_FORCES = [
 
 export const RETIRED_WATCH_MARSHAL = { wachtmarschall: null };
 
+export const FLOTILLA_ROLE = {
+  id: 'r-flottillenadmiral', title: 'Flottillenadmiral', description: 'Führt eine zugeteilte Flottille und berichtet über ihre Bereitschaft.',
+};
+export const SEA_CAPTAIN_ROLE = {
+  id: 'r-kapitaen', title: 'Kapitän zur See', description: 'Führt ein zugeteiltes Schiff und seine Besatzung.',
+};
+
+export function repeatableNavalPost(slot, template) {
+  return { ...slot, kind: 'other', stationed: true,
+    templateId: template.id, templateTitle: template.title, templateDescription: template.description };
+}
+
+export const watchOfficeId = name => 'wacht-' + geographicKey(name).replace(/^twr/u, '');
+
 export function watchSection(places, reportsTo, overrides = {}) {
   return {
     id: 'militaer-ortswachen', title: 'Ortswachen', icon: 'watch',
     description: 'Die Wachen gehören zu ihren Orten. Ihre Hauptleute führen den örtlichen Dienst unter dem zuständigen Marschall.',
-    slots: places.map(({ name }) => {
-      const local = geographicKey(name);
-      return {
-        id: 'wacht-' + local.replace(/^twr/, ''), place: name, icon: 'watch',
-        title: 'Hauptmann der Wache von ' + name, reportsTo,
-        description: 'Führt die Wache des Ortes, teilt den Dienst ein und meldet Vorfälle an die Marschallführung.',
-        ...overrides[name],
-      };
-    }),
+    slots: places.map(({ name }) => ({
+      id: watchOfficeId(name), place: name, icon: 'watch',
+      title: 'Hauptmann der Wache von ' + name, reportsTo,
+      description: 'Führt die Wache des Ortes, teilt den Dienst ein und meldet Vorfälle an die Marschallführung.',
+      ...overrides[name],
+    })),
   };
 }
 

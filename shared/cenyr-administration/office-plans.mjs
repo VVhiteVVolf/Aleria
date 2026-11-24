@@ -11,7 +11,9 @@ import { prepareOfficePlan } from './office-plan-assembly.mjs';
 import { buildVicariatePlan } from './vicariate-plan.mjs';
 import { countyOfficeDefinition } from './county-office-plans.mjs';
 import { localOfficeSection } from './local-offices.mjs';
-import { CENYR_MARSHAL_DUTY, RETIRED_WATCH_MARSHAL, watchSection, watchServiceSection } from './military-organization.mjs';
+import { buildLehenswartePlan, LEHENSWARTE_ID } from './lehenswarte-plan.mjs';
+import { CENYR_MARSHAL_DUTY, FLOTILLA_ROLE, RETIRED_WATCH_MARSHAL, SEA_CAPTAIN_ROLE,
+  repeatableNavalPost, watchSection, watchServiceSection } from './military-organization.mjs';
 import { rankOf, rulerSuffix } from './scopes.mjs';
 
 const section = (title, icon, description, slots) => ({
@@ -40,14 +42,34 @@ const duties = {
   unterhaltung: 'Leitet Hofkultur und musische Bildung und koordiniert Spielleute, Feste und öffentliche Auftritte.',
 };
 
-function militarySections(house) {
-  const coastal = house.places.filter(place => ['Hafensiedlung', 'Hafen'].includes(place.type)).map(place => place.name);
+function militaryPlan(house, localPosts) {
+  const ports = house.places.filter(place => ['Hafensiedlung', 'Hafen'].includes(place.type));
+  const coastal = ports.map(port => port.name);
   const navy = house.fleet || house.id === 'saethwyr';
+  const barony = house.rank === 'barony';
+  const coastalCommand = navy && house.separateCoastalCommand;
+  const flotillaLimit = barony ? 3 : 2;
+  const flotillaId = name => `flottille-${geographicKey(name)}`;
+  const flotillas = navy ? [...ports].sort((a, b) => Number(b.type === 'Hafen') - Number(a.type === 'Hafen'))
+    .slice(0, flotillaLimit).map(port => port.name) : [];
+  const coastDuty = 'Führt die Küstenposten und Patrouillen und stimmt den Dienst mit der Grafschaft ab.';
+  const coastalAdjutant = ['seeadjutant', 'Adjutant des Küstenkommandanten', 'Sammelt Meldungen der Küstenposten und Häfen.'];
+  const squadron = ['seekommandant', 'Seekommandant eines Geschwaders', 'Koordiniert die ihm zugeteilten Schiffe im beauftragten Bereich.'];
+  const retired = {
+    ...RETIRED_WATCH_MARSHAL,
+    wachkommandant: 'Kommandodienst beim Marschall',
+    wachstellvertretung: 'Stellvertretung im Marschalldienst',
+    waffenknecht: { area: 'hof-hausmacht', kind: 'service', templateId: 'r-waffenknecht', title: 'Waffenknecht der Hausmacht' },
+  };
+  if (navy) {
+    for (const name of coastal.filter(name => !flotillas.includes(name))) retired[flotillaId(name)] = `Flottillenadmiral von ${name}`;
+    if (!barony) retired[squadron[0]] = squadron[1];
+  }
   const suffix = rulerSuffix(house);
   const marshals = [
     ['feldfuehrung', 'Feldmarschall', `Koordiniert das landgebundene Wehrwesen und das örtliche Aufgebot unter dem Marschall ${suffix}.`],
-    ...(coastal.length ? [['seefuehrung', navy ? 'Seemarschall und Admiral' : 'See- und Küstenkommandant',
-      'Führt den örtlichen Dienst zur See und stimmt ihn mit den Kommandanten und der Grafschaft ab.']] : []),
+    ...(coastal.length ? [[coastalCommand ? 'admiral' : 'seefuehrung', navy ? 'Seemarschall und Admiral' : 'See- und Küstenkommandant',
+      navy ? `Führt die Flotte unter dem Marschall ${suffix} und stimmt den Dienst zur See mit der Grafschaft ab.` : coastDuty]] : []),
   ];
   const onTheWater = [
     ...coastal.map(name => [`hafen-${geographicKey(name)}`, `Hafenmeister von ${name}`, 'Ordnet Liegeplätze, Ausrüstung am Kai und Anlaufmeldungen.']),
@@ -60,12 +82,13 @@ function militarySections(house) {
     ['leuchtturmwart', 'Leuchtfeuerwart', 'Betreut Küstenfeuer und sichtbare Warnzeichen.'],
     ['reedenwacht', 'Reedenwachtmeister', 'Plant Wachfahrten und meldet auffällige Schiffsbewegungen.'],
   ];
-  return [
+  const sections = [
     section('Marschallführung', 'command', `Operative Führung unter dem Marschall ${suffix}.`, marshals),
     section('Adjutanten', 'records', 'Meldungen, Abschriften und geregelte Vertretung in der Marschallskanzlei.', [
       ['adjutant', 'Adjutant des Marschalls', 'Bereitet Befehlsübergaben und Lagebesprechungen vor.'],
       ['feldadjutant', 'Adjutant des Feldmarschalls', 'Koordiniert die Berichte der Landwacht und der Hauptleute.'],
-      ...(coastal.length ? [['seeadjutant', navy ? 'Adjutant des Seemarschalls' : 'Adjutant des Küstenkommandanten', 'Sammelt Hafen- und Küstenmeldungen.']] : []),
+      ...(coastal.length && !coastalCommand ? [navy
+        ? ['seeadjutant', 'Adjutant des Seemarschalls', 'Sammelt Hafen- und Küstenmeldungen.'] : coastalAdjutant] : []),
       ['marschallschreiber', 'Marschallsschreiber', 'Führt Aufgebots-, Wach- und Befehlslisten.'],
     ]),
     core('Die fünf Kriegswarte', 'command', 'Gleichrangige Fachaufsicht. Das unmittelbare Kommando liegt bei den örtlichen Befehlshabern.', reference(military, 'militaer-kriegswarte', [
@@ -79,7 +102,7 @@ function militarySections(house) {
       ['wachkommandant', 'Kommandantin der Saethwyr-Truppen', 'Führt die ihr vom Marschall zugeteilten Truppen.'],
       ['wachstellvertretung', 'Stellvertreter des Kommandanten', 'Vertritt das Kommando bei ausdrücklicher Beauftragung.'],
     ])] : []),
-    watchSection(house.places, `dem Marschall ${suffix}`),
+    watchSection(house.places, `dem Marschall ${suffix}`, Object.fromEntries(localPosts.map(post => [post.place, post]))),
     watchServiceSection(),
     section('Dienst im Heeresaufgebot', 'command', '', [
       ['bannerfuehrer', 'Bannerführer im Heer', 'Führt die ihm bei einem Aufgebot anvertraute Einheit unter ihrem Banner.'],
@@ -91,23 +114,29 @@ function militarySections(house) {
       ['landdienst-feldkaplan'], ['landdienst-feldscher'], ['landdienst-militaerherold'],
     ])),
     ...(navy ? [
-      section('Operative Flottenführung', 'sailing', 'Ordnet den Dienst der Schiffe unter dem Seemarschall.', [
-        ['flottenstab', 'Vizeadmiral', 'Hält Meldungen und Bereitschaft der Flottillen zusammen.'],
+      section('Admiralität', 'sailing', 'Ordnet den Dienst der Schiffe unter dem Seemarschall.', [
+        { id: 'flottenstab', title: 'Vizeadmiral', description: 'Hält Meldungen und Bereitschaft der Flottillen zusammen.', reportsTo: 'dem Seemarschall' },
       ]),
-      section('Flottillenadmiräle', 'sailing', 'Führen die für die Herrschaft geplanten Flottillen.', coastal.map(name => [
-        `flottille-${geographicKey(name)}`, `Flottillenadmiral von ${name}`, 'Führt die dem Hafen zugeteilten Wachschiffe.',
-      ])),
-      section('See- und Küstenkommandanten', 'watch', 'Örtliche Zuständigkeiten des Küstenaufgebots.', [
-        ['seekommandant', 'Seekommandant eines Geschwaders', 'Koordiniert die ihm zugeteilten Schiffe im beauftragten Bereich.'],
-        ['kuestenkommandant', house.id === 'saethwyr' ? 'Küstenkommandant von Glastraeth' : 'Küstenkommandant der Baronie', 'Koordiniert die Küstenposten und Patrouillen.'],
+      { ...section('Flottillenadmiräle', 'sailing', `${flotillas.length} Ausgangsstellen unter der Admiralität. Weitere Flottillen lassen sich im Entwurf ergänzen.`,
+        flotillas.map(name => repeatableNavalPost({ id: flotillaId(name), title: `Flottillenadmiral von ${name}`, place: name,
+          description: 'Führt die dem Hafen zugeteilten Wachschiffe.', reportsTo: 'dem Vizeadmiral' }, FLOTILLA_ROLE))),
+        id: 'flottillen', repeatableHere: true },
+      section('Küstenkommando', 'watch', 'Örtliche Zuständigkeiten des Küstenaufgebots.', [
+        ...(barony ? [squadron] : []),
+        { id: coastalCommand ? 'seefuehrung' : 'kuestenkommandant',
+          title: coastalCommand ? 'See- und Küstenkommandant'
+            : house.id === 'saethwyr' ? 'Küstenkommandant von Glastraeth' : `Küstenkommandant der ${barony ? 'Baronie' : 'Herrschaft'}`,
+          description: coastDuty, reportsTo: 'dem Seemarschall' },
+        ...(coastalCommand ? [coastalAdjutant] : []),
       ]),
-      section('Kapitäne zur See', 'sailing', 'Schiffskommando und unmittelbarer Borddienst.', [
-        ['kapitaen', 'Kapitän zur See', 'Führt ein zugeteiltes Schiff und seine Besatzung.'],
+      { ...section('Kapitäne und Borddienst', 'sailing', 'Schiffskommando und unmittelbarer Borddienst.', [
+        repeatableNavalPost({ id: 'kapitaen', title: SEA_CAPTAIN_ROLE.title, description: SEA_CAPTAIN_ROLE.description,
+          reportsTo: 'dem zuständigen Flottillenkommando' }, SEA_CAPTAIN_ROLE),
         ...reference(military, 'militaer-seedienste', [
           ['seedienst-bootsmann'], ['seedienst-schiffszimmermeister'],
           ['seedienst-schiffsarzt', 'schiffsheiler', 'Schiffsarzt', 'Betreut die Besatzung bei Krankheit und Verletzung.'],
-        ]),
-      ]),
+        ]).map(([id, title, description]) => ({ id, title, description, stationed: true, reportsTo: 'dem Kapitän des Schiffes' })),
+      ]), id: 'kapitaene-zur-see', repeatableHere: true },
     ] : []),
     coastal.length
       ? section('Bordämter, Häfen und Dienste zur See', 'sailing', 'Liegeplätze, Navigationshilfe und Versorgung.', onTheWater)
@@ -117,6 +146,7 @@ function militarySections(house) {
         ['reitboten', 'Meister der Reitboten', 'Hält Pferde und Übergaben auf den Meldestrecken bereit.'],
       ]),
   ];
+  return { sections, retired };
 }
 
 const civilSections = {
@@ -297,7 +327,6 @@ const civilSections = {
   ],
 };
 
-const planSections = { militaer: militarySections, ...civilSections };
 const retiredRoles = {
   gerichtsbarkeit: { landrichter: 'Gerichtsdienst · Ort offen' },
   finanzen: { rentmeister: 'Rentamtsdienst · Ort offen' },
@@ -322,21 +351,19 @@ export function buildCourtPlans(house, appointments = appointmentMap(house)) {
 
 export function buildOfficePlans(house) {
   const appointments = appointmentMap(house);
+  const localPlan = buildLehenswartePlan(house);
+  const sharedWatchPosts = localPlan.sections.flatMap(section => section.slots).filter(post => post.previousKey);
   const definitions = Object.entries(house.offices).map(([id, office]) => {
     if (house.county) return [id, countyOfficeDefinition(house, id, office)];
-    const definition = id === 'klerus' ? buildVicariatePlan(house) : { sections: planSections[id](house), retired: retiredRoles[id] };
-    if (id === 'militaer') definition.retired = {
-      ...RETIRED_WATCH_MARSHAL,
-      wachkommandant: 'Kommandodienst beim Marschall',
-      wachstellvertretung: 'Stellvertretung im Marschalldienst',
-      waffenknecht: { area: 'hof-hausmacht', kind: 'service', templateId: 'r-waffenknecht', title: 'Waffenknecht der Hausmacht' },
-    };
+    const definition = id === 'militaer' ? militaryPlan(house, sharedWatchPosts) : id === 'klerus' ? buildVicariatePlan(house)
+      : { sections: civilSections[id](house), retired: retiredRoles[id] };
     const titleVariants = headTitles[id].map(title => `${title} ${rulerSuffix(house)}`);
     return [id, { ...definition, head: {
       title: office.title, description: duties[id], holder: office.holder, titleVariants,
       reportsTo: `dem ${rankOf(house).ruler}`,
     } }];
   });
+  definitions.push([LEHENSWARTE_ID, localPlan]);
   definitions.push(['regentschaft', {
     head: {
       title: 'Regent', titleVariants: ['Regent', 'Regentin'],
