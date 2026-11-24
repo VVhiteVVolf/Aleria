@@ -33,7 +33,10 @@ for (const record of families) {
 }
 
 const newGuardHouseIds = new Set(['haus-brandyddyn', 'haus-curiad', 'haus-caelrith', 'haus-myrgath', 'haus-aelgorn']);
-const newReleaseHouseIds = new Set([...newGuardHouseIds, 'haus-aurdden', 'haus-halenrhyd', 'haus-caeffyn', 'haus-ruddgraen', 'glynmor', 'haus-chamois']);
+const newReleaseHouseIds = new Set([
+  ...newGuardHouseIds, 'haus-aurdden', 'haus-halenrhyd', 'haus-caeffyn', 'haus-ruddgraen', 'glynmor', 'haus-chamois',
+  'haus-bwach', 'haus-afelwyn', 'haus-caehelyg', 'haus-cyffiniau', 'haus-gwerfil'
+]);
 
 test('Die bisherigen Hausseiten samt historischer ID-Prüfsumme und die hinzugekommenen Häuser bleiben erreichbar', async () => {
   const completedPageIds = [
@@ -67,8 +70,8 @@ test('Die bisherigen Hausseiten samt historischer ID-Prüfsumme und die hinzugek
     const text = Object.values(sources.get(record.id).biographySummary).join(' ');
     assert.ok(text.split(/\s+/).length < 1000, record.id);
     if (!sources.get(record.id).biographyManagedExternally) {
-      assert.equal(biography.house.abilities.length, 0);
-      assert.equal(biography.house.works.length, 0);
+      assert.deepEqual(biography.house.abilities ?? [], []);
+      assert.deepEqual(biography.house.works ?? [], []);
     }
   }
 });
