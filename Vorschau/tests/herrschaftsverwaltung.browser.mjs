@@ -830,6 +830,15 @@ async function checkVacancyFinder(width, height) {
     await finder.scrollIntoViewIfNeeded();
     await geometry(page);
     await screenshot(page, `freie-posten-${width}`);
+    const arwyddLink = hits.first();
+    const arwyddKey = new URL(await arwyddLink.getAttribute('href'), serve.origin).searchParams.get('posten');
+    await arwyddLink.click();
+    const arwyddPost = page.locator(`[data-action="choose-post"][data-post="${arwyddKey}"]`);
+    await arwyddPost.waitFor();
+    assert(await arwyddPost.evaluate(node => document.activeElement === node));
+    assert.match(await page.locator('[data-role="scope-label"]').innerText(), /Haus Arwydd/i);
+    await closeOffice(page);
+    await finder.locator('a:focus').waitFor();
     await finder.getByRole('combobox', { name: 'Herrschaft' }).selectOption('');
     await finder.getByRole('combobox', { name: 'Amtsbereich' }).selectOption('');
     await query.fill('Schatten Haus Saethwyr');
@@ -847,14 +856,16 @@ async function checkVacancyFinder(width, height) {
     await target.click();
     assert.match(await target.innerText(), /Imogen Saethwyr/);
     await closeOffice(page);
-    await finder.locator('input:focus').waitFor();
     assert.equal(await result.count(), 0);
+    const focus = await query.evaluate(node => (document.activeElement === node ? null : document.activeElement?.outerHTML.slice(0, 250)));
+    assert.equal(focus, null, `Focus after replacing a vacancy at ${width} px`);
     await page.locator('[data-action="undo"]').first().click();
     await result.waitFor();
     await page.goto(serve.origin + pagePath + '?haus=gwendolyns-ufer&amt=militaer&posten=militaer%2Fwacht-morlan');
     const morlan = page.locator(`[data-drop-post="${lehenswartKey('Tŵr Morlan')}"]`);
     assert.match(await morlan.innerText(), /Hauptmann und Verwalter von Tŵr Morlan[\s\S]*Cadfan Trydar/);
     assert(await morlan.locator('[data-action="choose-post"]').evaluate(node => document.activeElement === node));
+    await screenshot(page, `hauptmann-und-verwalter-${width}`);
     report.checks.push(`Freie Posten, direkte Treffer, Altimport, Nachbesetzung und alter Morlan-Link bei ${width} px`);
   } finally { await context.close(); }
 }

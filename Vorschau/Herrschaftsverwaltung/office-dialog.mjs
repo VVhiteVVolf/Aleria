@@ -40,6 +40,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   const parentViews = [];
   let selectedId = null;
   let copiedRole;
+  let pendingClose = false;
   const preferences = new Map();
   const writeStatus = message => { status.textContent = message; };
 
@@ -333,12 +334,25 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     title.focus({ preventScroll: true });
   }
 
+  function finishClose() {
+    if (dialog.open || !pendingClose) return;
+    pendingClose = false;
+    drag.cancel();
+    preferences.set(house.id, { free: fields.free.checked });
+    onClose(rootArea.id);
+  }
+
+  function close() {
+    dialog.close();
+    finishClose();
+  }
+
   dialog.addEventListener('click', event => {
     const button = event.target.closest('button[data-action]');
     if (!button) return;
     const { action, dragPerson, post } = button.dataset;
     switch (action) {
-      case 'close': dialog.close(); break;
+      case 'close': close(); break;
       case 'back-office': back(); break;
       case 'manage-roles': openRoleEditor(); break;
       case 'add-role-like': openRoleEditor(state.positions(house.id).get(post)); break;
@@ -398,24 +412,20 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     }
   });
   dialog.addEventListener('cancel', event => {
-    if (treePicker.isOpen() || parentViews.length) {
-      event.preventDefault();
-      if (treePicker.isOpen()) treePicker.close(true);
-      else back();
-    }
+    event.preventDefault();
+    dismiss();
   });
+  function dismiss() {
+    if (treePicker.isOpen()) treePicker.close(true);
+    else if (parentViews.length) back();
+    else close();
+  }
   dialog.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
     event.preventDefault();
-    if (treePicker.isOpen()) treePicker.close(true);
-    else if (parentViews.length) back();
-    else dialog.close();
+    dismiss();
   });
-  dialog.addEventListener('close', () => {
-    drag.cancel();
-    preferences.set(house.id, { free: fields.free.checked });
-    onClose(rootArea.id);
-  });
+  dialog.addEventListener('close', finishClose);
 
   return {
     open(scope, category, department, postKey) {
@@ -430,7 +440,10 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
       vacanciesOnly.checked = false;
       select(null);
       activate(category);
-      if (!dialog.open) dialog.showModal();
+      if (!dialog.open) {
+        dialog.showModal();
+        pendingClose = true;
+      }
       title.focus({ preventScroll: true });
       postScroll.scrollTop = 0;
       list.scrollTop = 0;

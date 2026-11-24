@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { access, readFile } from 'node:fs/promises';
 import councils from '../../Kontinente/modules/administration/data/celtigerns-vassals.generated.mjs';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
 import { createAssemblyState } from '../Herrschaftsverwaltung/assembly-state.mjs';
 import { filterCandidates } from '../Herrschaftsverwaltung/candidate-filters.mjs';
 import { buildOfficePlans } from '../../shared/cenyr-administration/office-plans.mjs';
@@ -458,6 +459,22 @@ test('missing and no longer eligible holders survive old drafts and stay out of 
   assert.equal(posts().get('magie/leitung').occupant, null);
   state.undo();
   assert(posts().get('magie/leitung').needsReplacement);
+});
+
+test('the Trydar source upgrade changes Cadfan’s old official title while retaining local edits', () => {
+  const family = FAMILY_REGISTRY.find(entry => entry.id === 'haus-trydar').family;
+  const cadfan = record => record.persons.find(person => person.id === 'cadfan-trydar');
+  const saved = structuredClone(family);
+  saved.extensions.sourceRevision = 6;
+  cadfan(saved).title = 'Sir · Festungskommandant von Twr Morlan';
+  cadfan(saved).notes = 'Eigene Familiennotiz';
+  const upgraded = resolveRegisteredFamilyUpgrade(family, saved);
+  assert.equal(cadfan(upgraded).title, 'Sir · Hauptmann und Verwalter von Tŵr Morlan');
+  assert.equal(cadfan(upgraded).notes, 'Eigene Familiennotiz');
+  assert.equal(cadfan(upgraded).worldPersonId, cadfan(saved).worldPersonId);
+  assert.deepEqual(upgraded.parentages, saved.parentages);
+  cadfan(saved).title = 'Eigener Chroniktitel';
+  assert.equal(cadfan(resolveRegisteredFamilyUpgrade(family, saved)).title, 'Eigener Chroniktitel');
 });
 
 test('vacancy search works across houses, with draft titles, localities and one entry per shared post', () => {

@@ -12,7 +12,9 @@ const morlanTitle = {
     { path: ['family', 'persons', '@cadfan-trydar', 'extensions', 'registryManagedFields'],
       beforePresent: false, afterPresent: true, after: ['title'] },
     { path: ['family', 'persons', '@cadfan-trydar', 'extensions', 'registryManagedFieldRevisions'],
-      beforePresent: false, afterPresent: true, after: { title: 4 } },
+      beforePresent: false, afterPresent: true, after: { title: 7 } },
+    { path: ['family', 'persons', '@cadfan-trydar', 'extensions', 'registryManagedFieldPreviousValues'],
+      beforePresent: false, afterPresent: true, after: { title: ['Sir · Festungskommandant von Twr Morlan'] } },
   ],
 };
 
