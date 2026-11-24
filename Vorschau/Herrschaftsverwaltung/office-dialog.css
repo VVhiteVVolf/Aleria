@@ -71,7 +71,7 @@
 [data-role="candidate-count"] { color: var(--muted); white-space: nowrap; }
 .candidate-help { font-size: .77rem; color: var(--muted); margin: 5px 0 8px; }
 .candidate-filters { display: grid; gap: 7px; }
-.candidate-filters :is(input:not([type="checkbox"]), select), .tree-candidate-header input, .new-post :is(input, select, textarea) {
+.candidate-filters :is(input:not([type="checkbox"]), select), .tree-candidate-header input[type="search"], .new-post :is(input, select, textarea) {
   display: block; min-width: 0; width: 100%; min-height: 35px;
   border: 1px solid var(--line); border-radius: 6px; background: var(--panel); padding: 5px 8px;
 }

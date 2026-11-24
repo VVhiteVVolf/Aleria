@@ -286,6 +286,8 @@ async function addForeignApplicant(page, width) {
   assert.equal(await candidate(page, name).count(), 0);
   await openPicker.click();
   assert.equal(await includeOther.isChecked(), false);
+  const checkbox = await includeOther.boundingBox();
+  assert(checkbox.width >= 16 && checkbox.width <= 24 && checkbox.height <= 24);
   await treeSearch.fill('Imogen Saethwyr');
   await page.getByRole('button', { name: 'Imogen Saethwyr in der Bewerberliste auswählen' }).click();
   assert.match(await receipt.innerText(), /Imogen Saethwyr ist bereits in der Bewerberliste und jetzt ausgewählt/);
