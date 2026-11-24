@@ -4,7 +4,7 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Brândyddyn",
   "housePage": true,
-  "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-krieger-v1.png",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Brandyddyn/assets/brandyddyn-krieger-v1.png",
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,

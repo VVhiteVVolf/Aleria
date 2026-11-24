@@ -118,7 +118,7 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-krieger-v1.png",
+      "src": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Brandyddyn/assets/brandyddyn-krieger-v1.png",
       "alt": "Nachtblaue Hausrüstung der Brândyddyn mit ihrem Flammenwappen",
       "format": "portrait",
       "maxHeight": 580

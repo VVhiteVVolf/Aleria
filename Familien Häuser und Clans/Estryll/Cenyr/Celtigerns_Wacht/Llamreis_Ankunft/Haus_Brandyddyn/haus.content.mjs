@@ -7,7 +7,7 @@ export const HOUSE_CONTENT = {
   contentVersion: '20261124-brandyddyn-v2',
   images: {
     ...content.images,
-    scene: '../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-krieger-v1.png',
+    scene: '../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Brandyddyn/assets/brandyddyn-krieger-v1.png',
     sceneAlt: 'Nachtblaue Hausrüstung der Brândyddyn mit ihrem Flammenwappen'
   },
   illustrationCategory: 'Krieger des Hauses Brândyddyn'
