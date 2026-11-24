@@ -87,9 +87,18 @@ test('Ritterfürsten zeigen ihre belegten Vasallen direkt auf der eigenen Herrsc
     ['saethwyr', ['chwedlonol','eneiniog','saethwyr']],
     ['wyrm', ['argall','blevis','brogar','cludwyr','crewe','glyn','jernigan','loer','rhyddid','talfryn','tarw','tynged','wyrm']],
   ]) {
-    const cards = territories[key].flatMap(section => section.cards);
+    const cards = territories[key].filter(section => section.title !== 'Ausgestoßene Häuser').flatMap(section => section.cards);
     assert.deepEqual(ids(cards).filter(id => id.startsWith('haus-')), expected.map(id => 'haus-' + id), key);
   }
+});
+
+test('Haus Bwach erscheint als ausgestoßenes ehemaliges Haus von Gwaulwyn', () => {
+  const section = territories.gafyr.find(group => group.title === 'Ausgestoßene Häuser');
+  assert.deepEqual(ids(section.cards), ['haus-bwach']);
+  const [bwach] = section.cards;
+  assert.equal(bwach.seat, 'Ehemals über Gwaulwyn');
+  assert.equal(bwach.rank, 'Ausgestoßen');
+  assert.ok(!bwach.liege);
 });
 
 test('Wyrms bürgerliche Familien behalten ihren Wohnort unabhängig von ihrer Dienstbindung', () => {

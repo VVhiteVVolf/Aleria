@@ -40,6 +40,14 @@
         rank: "Einfache Ritterfamilie",
       }),
     ]),
+    data.familySection("Ausgestoßene Häuser", [
+      data.family("Bwach", {
+        familyId: "haus-bwach", housePage: "kleinehaeuser.html",
+        imageSrc: "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+        seat: "Ehemals über Gwaulwyn",
+        rank: "Ausgestoßen",
+      }),
+    ]),
   ]);
 
   const councilGroups = Object.freeze([
@@ -84,7 +92,7 @@
   const vassalGroups = Object.freeze([
     data.personGroup("Vasallen und Amtsträger", [
       data.person("Vasall", "...", { seat: "Morddwr" }),
-      data.person("Vasall", "...", { seat: "Gwaulwyn" }),
+      data.person("Vasall", "...", { seat: "Gwaulwyn", note: "Ehemals Haus Bwach. Das Haus gilt als ausgestoßen." }),
       data.person("Lehenswart", "Eifion Gostyn", {
         imageSrc: `${portraitRoot}/haus-gostyn/eifion-gostyn.jpg`,
         familyId: "haus-gostyn",
