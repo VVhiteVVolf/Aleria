@@ -119,7 +119,7 @@ test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus 
   assert.deepEqual(resolveServerCombatProfile(legacyGawain).resources, resolved.resources);
   // Historical balances must not resurrect counters absent from the current sheet.
   const live = overlayCombatHitPointState(resolved, { resources: legacyGawain.combatProfile.resources });
-  const html = renderMiniCombatProfile(live, 'Gawain');
+  const html = renderMiniCombatProfile(live, 'Gawain', { wide: true });
   for (const name of ['Klaue des Drachen', 'Tanz der Silbernen Schuppe', 'Schweif des Drachen']) {
     assert.ok(!html.includes(name));
   }

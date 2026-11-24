@@ -127,129 +127,153 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=glynmor-gruender",
+      "alt": "Cynfal Glynmor",
+      "format": "portrait"
+    },
+    "haus-figur-2": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c8d56880.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-c8d56880",
       "alt": "Tudur Glynmor",
       "format": "portrait"
     },
-    "haus-figur-2": {
+    "haus-figur-3": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-e9652261",
       "alt": "Iestyn Glynmor",
       "format": "portrait"
     },
-    "haus-figur-3": {
+    "haus-figur-4": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d5104764.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-d5104764",
       "alt": "Gwerfyl",
       "format": "portrait"
     },
-    "haus-figur-4": {
+    "haus-figur-5": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-3ccbd57f",
       "alt": "Iorwerth Glynmor",
       "format": "portrait"
     },
-    "haus-figur-5": {
+    "haus-figur-6": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-2a5e7890.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-2a5e7890",
       "alt": "Emlyn Glynmor",
       "format": "portrait"
     },
-    "haus-figur-6": {
+    "haus-figur-7": {
       "src": "../Stammbäume/assets/images/placeholders/female.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-62ba96a8",
       "alt": "Llinos Glynmor",
       "format": "portrait"
     },
-    "haus-figur-7": {
+    "haus-figur-8": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-587736d0",
       "alt": "Tewdwr Glynmor",
       "format": "portrait"
     },
-    "haus-figur-8": {
+    "haus-figur-9": {
       "src": "../Stammbäume/assets/images/placeholders/female.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-a8c037f7",
       "alt": "Eirlys Glynmor",
       "format": "portrait"
     },
-    "haus-figur-9": {
+    "haus-figur-10": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-64064dfd",
       "alt": "Eleri",
       "format": "portrait"
     },
-    "haus-figur-10": {
+    "haus-figur-11": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-f1b4fd4f",
       "alt": "Ilar Glynmor",
       "format": "portrait"
     },
-    "haus-figur-11": {
+    "haus-figur-12": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-8615e1f2.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-8615e1f2",
       "alt": "Ffraid Glynmor",
       "format": "portrait"
     },
-    "haus-figur-12": {
+    "haus-figur-13": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d665a54d.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-d665a54d",
       "alt": "Meera Glynmor",
       "format": "portrait"
     },
-    "haus-figur-13": {
+    "haus-figur-14": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-a6d5aa55.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-a6d5aa55",
       "alt": "Steffan Glynmor",
       "format": "portrait"
     },
-    "haus-figur-14": {
+    "haus-figur-15": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-0b1973c0",
       "alt": "Meilyr Glynmor",
       "format": "portrait"
     },
-    "haus-figur-15": {
+    "haus-figur-16": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-6acfc5a4",
       "alt": "Gwyndaf Glynmor",
       "format": "portrait"
     },
-    "haus-figur-16": {
+    "haus-figur-17": {
       "src": "../Stammbäume/assets/images/placeholders/female.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-317d5918",
       "alt": "Tegid Glynmor",
       "format": "portrait"
     },
-    "haus-figur-17": {
+    "haus-figur-18": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-fd713153",
       "alt": "Aled Glynmor",
       "format": "portrait"
     },
-    "haus-figur-18": {
+    "haus-figur-19": {
       "src": "../Stammbäume/assets/images/placeholders/female.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-0040586f",
       "alt": "Tesni Glynmor",
       "format": "portrait"
     },
-    "haus-figur-19": {
+    "haus-figur-20": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-9176e0d0",
+      "alt": "Lleirwg Glynmor",
+      "format": "portrait"
+    },
+    "haus-figur-21": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f8371211.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-f8371211",
       "alt": "Lleucu",
       "format": "portrait"
     },
-    "haus-figur-20": {
+    "haus-figur-22": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c33023ce.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-c33023ce",
       "alt": "Bleddyn Glynmor",
       "format": "portrait"
     },
-    "haus-figur-21": {
+    "haus-figur-23": {
       "src": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-c149f692",
       "alt": "Nefyn Glynmor",
+      "format": "portrait"
+    },
+    "haus-figur-24": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-0289ab3e",
+      "alt": "Euron Glynmor",
+      "format": "portrait"
+    },
+    "haus-figur-25": {
+      "src": "../Stammbäume/assets/images/placeholders/male.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=glynmor&mode=view&person=person-e2cc718f",
+      "alt": "Tathan Glynmor",
       "format": "portrait"
     }
   },
@@ -291,129 +315,153 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Belegte Angehörige",
-        "role": "Oberhaupt / Handwerksmeister",
-        "name": "Tudur Glynmor",
+        "role": "Gründer des Hauses",
+        "name": "Cynfal Glynmor",
         "imageKey": "haus-figur-1"
       },
       {
         "group": "Belegte Angehörige",
-        "role": "Familienangehörige",
-        "name": "Iestyn Glynmor",
+        "role": "Oberhaupt / Handwerksmeister",
+        "name": "Tudur Glynmor",
         "imageKey": "haus-figur-2"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Gwerfyl",
+        "name": "Iestyn Glynmor",
         "imageKey": "haus-figur-3"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Iorwerth Glynmor",
+        "name": "Gwerfyl",
         "imageKey": "haus-figur-4"
+      },
+      {
+        "group": "Belegte Angehörige",
+        "role": "Familienangehörige",
+        "name": "Iorwerth Glynmor",
+        "imageKey": "haus-figur-5"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Vogt von Haus Wyrm",
         "name": "Emlyn Glynmor",
-        "imageKey": "haus-figur-5"
-      },
-      {
-        "group": "Belegte Angehörige",
-        "role": "Familienangehörige",
-        "name": "Llinos Glynmor",
         "imageKey": "haus-figur-6"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Tewdwr Glynmor",
+        "name": "Llinos Glynmor",
         "imageKey": "haus-figur-7"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Eirlys Glynmor",
+        "name": "Tewdwr Glynmor",
         "imageKey": "haus-figur-8"
+      },
+      {
+        "group": "Belegte Angehörige",
+        "role": "Familienangehörige",
+        "name": "Eirlys Glynmor",
+        "imageKey": "haus-figur-9"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Küchenmeisterin Haus Wyrm",
         "name": "Eleri",
-        "imageKey": "haus-figur-9"
+        "imageKey": "haus-figur-10"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Stadtwache",
         "name": "Ilar Glynmor",
-        "imageKey": "haus-figur-10"
+        "imageKey": "haus-figur-11"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
         "name": "Ffraid Glynmor",
-        "imageKey": "haus-figur-11"
+        "imageKey": "haus-figur-12"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Zofe von Rianna Wyrm",
         "name": "Meera Glynmor",
-        "imageKey": "haus-figur-12"
-      },
-      {
-        "group": "Belegte Angehörige",
-        "role": "Familienangehörige",
-        "name": "Steffan Glynmor",
         "imageKey": "haus-figur-13"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Meilyr Glynmor",
+        "name": "Steffan Glynmor",
         "imageKey": "haus-figur-14"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Gwyndaf Glynmor",
+        "name": "Meilyr Glynmor",
         "imageKey": "haus-figur-15"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Tegid Glynmor",
+        "name": "Gwyndaf Glynmor",
         "imageKey": "haus-figur-16"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Aled Glynmor",
+        "name": "Tegid Glynmor",
         "imageKey": "haus-figur-17"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Tesni Glynmor",
+        "name": "Aled Glynmor",
         "imageKey": "haus-figur-18"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Lleucu",
+        "name": "Tesni Glynmor",
         "imageKey": "haus-figur-19"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Bleddyn Glynmor",
+        "name": "Lleirwg Glynmor",
         "imageKey": "haus-figur-20"
       },
       {
         "group": "Belegte Angehörige",
         "role": "Familienangehörige",
-        "name": "Nefyn Glynmor",
+        "name": "Lleucu",
         "imageKey": "haus-figur-21"
+      },
+      {
+        "group": "Belegte Angehörige",
+        "role": "Familienangehörige",
+        "name": "Bleddyn Glynmor",
+        "imageKey": "haus-figur-22"
+      },
+      {
+        "group": "Belegte Angehörige",
+        "role": "Familienangehörige",
+        "name": "Nefyn Glynmor",
+        "imageKey": "haus-figur-23"
+      },
+      {
+        "group": "Belegte Angehörige",
+        "role": "Familienangehörige",
+        "name": "Euron Glynmor",
+        "imageKey": "haus-figur-24"
+      },
+      {
+        "group": "Belegte Angehörige",
+        "role": "Familienangehörige",
+        "name": "Tathan Glynmor",
+        "imageKey": "haus-figur-25"
       }
     ]
   },

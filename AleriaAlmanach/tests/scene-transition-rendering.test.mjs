@@ -58,6 +58,7 @@ test('local storage preserves two complete linked scene copies without altering 
   const values = new Map([['aleria-local-comments-v1', JSON.stringify({ [transition.source.threadId]: [previous] })]]);
   const context = createContext({
     localStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) },
+    document: { addEventListener() {} }, addEventListener() {},
     sortCommentsByTimeline: comments => comments
   });
   vm.runInContext(readModule('modules/comments/comments-backend.js'), context);
