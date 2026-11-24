@@ -20527,7 +20527,7 @@ window.KONTINENTE_REGISTRY = [
     type: "Grafschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
     data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=20261106-gwernant-v1",
-    contentSource: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json?v=coeddu-craigddu-20260927",
+    contentSource: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json?v=camruisge-20261124",
     contentPolicy: {
       blockedLinkHosts: ["animexx.de"],
       linkReplacements: {
@@ -20599,7 +20599,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Insel Camruisge – Aberllan und Oilean",
     type: "Diarchie",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/Insel Camruisge.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js?v=panels-20260911a",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js?v=camruisge-dyarchie-20261124",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },

@@ -93,6 +93,12 @@ h1 { font-size: clamp(2.15rem, 4vw, 3.45rem); line-height: 1.06; letter-spacing:
 
 .workspace { padding-block: 25px 36px; }
 .workspace h2 { font-size: 1.55rem; line-height: 1.2; }
+.workbench-chooser { display: flex; align-items: end; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.workbench-chooser label { display: grid; gap: 3px; font-size: .78rem; font-weight: 650; }
+.workbench-chooser select {
+  min-height: 39px; width: min(225px, 100%); padding: 5px 9px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+}
 .house-switch { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
 .house-choice {
   display: flex; align-items: center; gap: 14px; min-height: 82px;
@@ -104,6 +110,14 @@ h1 { font-size: clamp(2.15rem, 4vw, 3.45rem); line-height: 1.06; letter-spacing:
 .house-choice strong { font: 600 1.16rem/1.25 var(--serif); }
 .house-choice small { font-size: .78rem; color: var(--muted); margin-top: 4px; }
 .page-notice { border: 1px solid #c6d3c3; border-radius: 7px; background: var(--accent-soft); padding: 9px 12px; margin-top: 16px; }
+.dyarchy-branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.dyarchy-branch { display: grid; align-content: start; gap: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.dyarchy-branch p { font-size: .83rem; color: var(--muted); }
+.dyarchy-cooperation { margin-top: 14px; }
+.delegated-offices { background: var(--paper); border: 1px solid var(--line); padding: 8px 12px; border-radius: 7px; }
+.delegated-offices a { font-size: .85rem; }
+.court-entry-link { text-decoration: none; }
+.court-entry-link:hover { text-decoration: underline; }
 .council { margin-top: 26px; }
 .council-heading { display: flex; align-items: end; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
 .council-heading p { font-size: .83rem; margin-top: 3px; }
@@ -187,6 +201,7 @@ h1 { font-size: clamp(2.15rem, 4vw, 3.45rem); line-height: 1.06; letter-spacing:
   .house-switch { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
+  .dyarchy-branches { grid-template-columns: 1fr; }
   .page-width { width: calc(100% - 28px); }
   .masthead-inner { min-height: 51px; }
   .intro-inner { padding-block: 22px; }

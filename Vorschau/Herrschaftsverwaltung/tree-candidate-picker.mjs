@@ -4,9 +4,9 @@ import { portrait } from './workbench-view.mjs';
 
 const RESULT_LIMIT = 40;
 const COUNTY = 'Celtigerns Wacht';
-const countyName = normalizePersonName(COUNTY);
 
-export function createTreeCandidateSearch(candidates, people) {
+export function createTreeCandidateSearch(candidates, people, region = COUNTY) {
+  const countyName = normalizePersonName(region);
   const index = [...candidates.values()].map(({ id, family, families, regions }) => {
     const person = people.get(id);
     const name = normalizePersonName(person.name);
@@ -42,7 +42,7 @@ function renderResult({ person, family, regions }, listed) {
     <small class="tree-result-action">${listed ? 'Bereits in der Bewerberliste · Auswählen' : 'Zur Bewerberliste hinzufügen'}</small></span></button></li>`;
 }
 
-export function bindTreeCandidatePicker(panel, { candidates, people, listed, onChoose }) {
+export function bindTreeCandidatePicker(panel, { candidates, people, listed, homeRegion, onChoose }) {
   const header = panel.querySelector('[data-role="current-candidate-header"]');
   const list = panel.querySelector('[data-role="candidate-list"]');
   const treeHeader = panel.querySelector('[data-role="tree-candidate-header"]');
@@ -54,6 +54,7 @@ export function bindTreeCandidatePicker(panel, { candidates, people, listed, onC
   const receipt = header.querySelector('[data-role="tree-selection-status"]');
   const trigger = panel.querySelector('[data-tree-action="open"]');
   let find;
+  let currentRegion;
 
   function showReceipt(message = '') {
     receipt.textContent = message;
@@ -68,16 +69,20 @@ export function bindTreeCandidatePicker(panel, { candidates, people, listed, onC
   }
 
   function draw() {
-    find ||= createTreeCandidateSearch(candidates, people);
+    const region = homeRegion?.() || COUNTY;
+    if (currentRegion !== region) {
+      find = createTreeCandidateSearch(candidates, people, region);
+      currentRegion = region;
+    }
     const query = input.value;
     const all = includeOtherRegions.checked;
-    title.textContent = all ? 'Alle Stammbäume' : COUNTY;
+    title.textContent = all ? 'Alle Stammbäume' : region;
     input.placeholder = all ? 'Name, Familie oder Region' : 'Name oder Familie';
     const { matches, total } = find(query, { includeOtherRegions: all });
     status.textContent = total > RESULT_LIMIT ? `${RESULT_LIMIT} von ${total} Treffern` : total ? `${total} Treffer` : '';
     treeList.innerHTML = matches.length ? matches.map(entry => renderResult(entry, listed(entry.person.id))).join('')
       : `<li class="no-candidates">${normalizePersonName(query).length < 2 ? 'Name oder Familie eingeben.'
-        : all ? 'Keine lebende Figur gefunden.' : `Keine passende Figur aus ${COUNTY} gefunden.`}</li>`;
+        : all ? 'Keine lebende Figur gefunden.' : `Keine passende Figur aus ${e(region)} gefunden.`}</li>`;
     treeList.scrollTop = 0;
   }
 

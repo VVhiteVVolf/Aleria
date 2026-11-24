@@ -1,15 +1,16 @@
 import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { AFFILIATIONS, RELATIONSHIPS, SEXES, MIN_ADULT_AGE } from './candidate-filters.mjs';
-import { COURT_AREA, LEHENSWARTE_AREA, officeIcon } from '../../shared/cenyr-administration/office-icons.mjs';
+import { CAMRUISGE_AREAS, COURT_AREA, LEHENSWARTE_AREA, officeIcon } from '../../shared/cenyr-administration/office-icons.mjs';
 import { rankOf } from '../../shared/cenyr-administration/scopes.mjs';
 import { lehenswartKey, LEHENSWARTE_ID } from '../../shared/cenyr-administration/lehenswarte-plan.mjs';
 import { GUILD_LEASE } from '../../shared/cenyr-administration/local-authority.mjs';
 import { CENYR_FORCES } from '../../shared/cenyr-administration/military-organization.mjs';
-import { otherAppointmentLinks } from '../../shared/cenyr-administration/office-appointments.mjs';
+import { otherAppointmentLinks, preparationHref } from '../../shared/cenyr-administration/office-appointments.mjs';
 import { councilNotes, councilSpecialNotes, officeBadges } from './cenyr-office-notes.mjs';
 import { officeTitleKey, postTitleKey } from './draft-office-titles.mjs';
 import { renameButton } from './office-title-editor.mjs';
 import { needsFilling, postOccupant } from './draft-assignment-references.mjs';
+import { ABERLLAN_PREVIEW } from './territorial-navigation.mjs';
 
 const placeholders = '/Stammbäume/assets/images/placeholders/';
 
@@ -41,7 +42,8 @@ export function officeArtwork(src, size) {
 export function renderHouses(houses, people) {
   return houses.map(house => `<button type="button" class="house-choice" data-action="choose-house" data-house="${e(house.id)}" aria-pressed="false">
     <img src="${e(house.crest)}" width="56" height="56" alt="">
-    <span><strong>${e(house.name)}</strong><small>${house.preparation ? e(house.title) : `${house.county ? 'Grafschaft · ' : ''}${e(people.get(house.ruler)?.name)}`}</small></span>
+    <span><strong>${e(house.regional ? house.title : house.name)}</strong><small>${house.regional ? e(house.name)
+      : house.preparation ? e(house.title) : `${house.county ? 'Grafschaft · ' : ''}${e(people.get(house.ruler)?.name)}`}</small></span>
   </button>`).join('');
 }
 
@@ -85,7 +87,12 @@ export function renderContacts(contacts, people, heading = 'Ortsämter und Lehen
   </details>`;
 }
 
-function renderCenyrNotes(regent) {
+export function renderDelegatedOffices(entries) {
+  return entries?.length ? `<div class="delegated-offices"><h4>Eigenständige Verwaltungen</h4>
+    ${entries.map(({ title, href }) => `<a href="${e(href)}" data-action="open-appointment">${e(title)} ↗</a>`).join('')}</div>` : '';
+}
+
+function renderCenyrNotes(regent, showRegent) {
   return `<details class="reference-panel cenyr-office-notes">
     <summary>Amtszeichen und Ämterordnung von Cenyr</summary>
     <div class="office-notes-content">
@@ -94,7 +101,7 @@ function renderCenyrNotes(regent) {
       ${councilNotes.map(note => `<p>${e(note)}</p>`).join('')}
       <h3>Sonderämter</h3>
       ${councilSpecialNotes.map(note => `<p>${e(note)}</p>`).join('')}
-      <button type="button" data-action="open-office" data-area="regentschaft" aria-haspopup="dialog">${e(regent)} vorbereiten ↗</button>
+      ${showRegent ? `<button type="button" data-action="open-office" data-area="regentschaft" aria-haspopup="dialog">${e(regent)} vorbereiten ↗</button>` : ''}
     </div>
   </details>`;
 }
@@ -108,7 +115,37 @@ function renderOfficeEntry(area, title, subtitle, slots) {
   </button>`;
 }
 
+function renderRevisionTools(house, state) {
+  return `<div class="revision-tools">
+    <button type="button" data-action="undo" ${state.canUndo() ? '' : 'disabled'}>Letzte Änderung rückgängig</button>
+    <button type="button" data-action="reset" ${state.hasDraft(house.id) ? '' : 'disabled'}>Herrschaftsentwurf zurücksetzen</button>
+  </div>`;
+}
+
+function renderCamruisge(house, positions, people, state) {
+  const appointmentLinks = appointmentLinksFor(house.id, state);
+  return `<div class="council-heading">
+    <div><h2 id="council-title">${e(house.title)}</h2><p class="muted">Zwei örtliche Verwaltungen auf einer Insel</p></div>
+    <a class="text-link" href="${e(house.href)}">Inselakte ↗</a>
+  </div>
+  <div class="dyarchy-branches">${house.branches.map(branch => {
+    const area = CAMRUISGE_AREAS.find(item => item.id === branch.id);
+    const head = positions.get(house.plans[branch.id].head.key);
+    return `<section class="dyarchy-branch">
+      <h3>${e(branch.name)}</h3>
+      <p>${e(branch.authority)} · ${branch.familyHref ? `<a href="${e(branch.familyHref)}">${e(branch.familyName)}</a>` : e(branch.familyName)}</p>
+      ${renderCouncillor(area, house, positions, people, appointmentLinks)}
+      ${head.place === 'Aberllan' ? `<a class="text-link" href="${ABERLLAN_PREVIEW}">Ortsvorbereitung Aberllan ↗</a>` : ''}
+    </section>`;
+  }).join('')}</div>
+  <div class="council-entries dyarchy-cooperation">
+    ${renderOfficeEntry(CAMRUISGE_AREAS[2], state.title(house.id, officeTitleKey('inselabstimmung'), CAMRUISGE_AREAS[2].name),
+      'Abstimmung zwischen Aberllan und Oilean', house.plans.inselabstimmung.slots.map(slot => positions.get(slot.key)))}
+  </div>${renderRevisionTools(house, state)}`;
+}
+
 export function renderCouncil(house, areas, positions, people, state) {
+  if (house.branches) return renderCamruisge(house, positions, people, state);
   const knights = house.enrolled.filter(family => family.kind === 'knight');
   const civilians = house.enrolled.filter(family => family.kind === 'service');
   const links = entries => entries.map(family => `<a href="${e(family.href)}">${e(family.name)}</a>`).join('');
@@ -117,14 +154,17 @@ export function renderCouncil(house, areas, positions, people, state) {
   const fiefs = slots.filter(slot => slot.key.startsWith(`${LEHENSWARTE_ID}/`));
   const title = area => state.title(house.id, officeTitleKey(area.id), area.name);
   const appointmentLinks = appointmentLinksFor(house.id, state);
+  const sourcedRegent = Object.hasOwn(house.offices, 'regentschaft');
   return `<div class="council-heading">
     <div><h2 id="council-title">Ratsämter · ${e(house.name)}</h2>
       <p class="muted">${house.preparation ? `${e(rankOf(house).label)} · ` : ''}${house.candidates.length} Kandidaten aus Haus, Ritterhäusern und direktem Dienst</p></div>
     <a class="text-link" href="${e(house.href)}">Herrschaftsakte ↗</a>
   </div>
   <div class="council-entries">
-    ${renderOfficeEntry(COURT_AREA, title(COURT_AREA), 'Hausverwaltung und Hofdienste', court)}
-    ${renderOfficeEntry(LEHENSWARTE_AREA, title(LEHENSWARTE_AREA), 'Ortsleitungen und Gildenpacht', fiefs)}
+    ${house.courtScope ? `<a class="court-entry court-entry-link" href="${e(preparationHref(house.courtScope, 'hof'))}" data-action="open-appointment">
+      ${officeArtwork(COURT_AREA.imageSrc, 32)}<span><strong>Hofämter von Haus Pendrag</strong><small>Gemeinsamer Haushalt am Königshof</small></span><span aria-hidden="true">↗</span>
+    </a>` : renderOfficeEntry(COURT_AREA, title(COURT_AREA), 'Hausverwaltung und Hofdienste', court)}
+    ${house.plans[LEHENSWARTE_ID] ? renderOfficeEntry(LEHENSWARTE_AREA, title(LEHENSWARTE_AREA), 'Ortsleitungen und Gildenpacht', fiefs) : ''}
   </div>
   <div class="council-grid">${areas.filter(area => Object.hasOwn(house.offices, area.id)).map(area => renderCouncillor(area, house, positions, people, appointmentLinks)).join('')}</div>
   <div class="references">
@@ -133,13 +173,10 @@ export function renderCouncil(house, areas, positions, people, state) {
       <dl class="affiliation-list"><div><dt>Ritterhäuser</dt><dd>${links(knights) || 'Keine belegt'}</dd></div>
       <div><dt>Bürgerliche Familien</dt><dd>${links(civilians) || 'Keine Hausbindung belegt'}</dd></div></dl>
     </details>
-    ${renderContacts(house.contacts, people, house.county ? 'Vikariate der Lehnsherrschaften' : undefined, { state, positions })}
+    ${house.contacts.length ? renderContacts(house.contacts, people, house.county ? 'Vikariate der Lehnsherrschaften' : undefined, { state, positions }) : ''}
   </div>
-  ${renderCenyrNotes(state.title(house.id, postTitleKey('regentschaft/leitung'), 'Regentschaft'))}
-  <div class="revision-tools">
-    <button type="button" data-action="undo" ${state.canUndo() ? '' : 'disabled'}>Letzte Änderung rückgängig</button>
-    <button type="button" data-action="reset" ${state.hasDraft(house.id) ? '' : 'disabled'}>Hausentwurf zurücksetzen</button>
-  </div>`;
+  ${renderCenyrNotes(state.title(house.id, postTitleKey('regentschaft/leitung'), 'Regentschaft'), !sourcedRegent)}
+  ${renderRevisionTools(house, state)}`;
 }
 
 export function renderFilterFields() {
@@ -233,7 +270,8 @@ export function renderMilitaryForces(house) {
     <dl class="affiliation-list">${CENYR_FORCES.map(force => {
       const target = force.id === 'hausmacht' ? 'hof' : force.id === 'kirche' ? 'klerus' : '';
       return `<div><dt>${e(force.title)}</dt><dd>${e(force.text)}
-        ${target ? `<a href="${e(href(target))}">${target === 'hof' ? 'Hausmacht öffnen' : 'Kirchliche Ämter öffnen'} ↗</a>` : ''}</dd></div>`;
+      ${target === 'hof' && house.courtScope ? `<a href="${preparationHref(house.courtScope, 'hof', 'hof-hausmacht')}">Hausmacht öffnen ↗</a>`
+        : target ? `<a href="${e(href(target))}">${target === 'hof' ? 'Hausmacht öffnen' : 'Kirchliche Ämter öffnen'} ↗</a>` : ''}</dd></div>`;
     }).join('')}</dl>
   </details>`;
 }

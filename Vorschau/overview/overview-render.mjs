@@ -1,7 +1,7 @@
 import {escapeHtml as e} from '../shared/country-workbench/render.mjs';
 
 function preparationCard(entry){
-  const scopes=entry.scopeLinks?.map(link=>`<li><a href="${e(entry.href)}index.html?haus=${encodeURIComponent(link.id)}">${e(link.name)} ↗</a></li>`).join('');
+  const scopes=entry.scopeLinks?.map(link=>`<li><a href="./${e(entry.folder)}/index.html?haus=${encodeURIComponent(link.id)}">${e(link.name)} ↗</a></li>`).join('');
   return `<article class="preparation-card" data-preparation="${e(entry.id)}"><a class="preparation-card-link" href="${e(entry.href)}"><figure><img src="${e(entry.image)}" alt="Wappen ${e(entry.name)}" width="180" height="180" loading="lazy"></figure><div class="preparation-card-copy"><p class="eyebrow">${e(entry.kind)}</p><h3>${e(entry.name)}</h3><p>${e(entry.summary)}</p><span class="preparation-open">Vorbereitung öffnen <span aria-hidden="true">↗</span></span></div></a>${scopes?`<ul class="preparation-scope-links">${scopes}</ul>`:''}</article>`;
 }
 

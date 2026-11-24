@@ -5,9 +5,12 @@ import { customKey, migrateFormerPost, migrateStoredPosts } from './draft-post-m
 import { applyPostTitles, importTitleOverrides, MAX_TITLE_LENGTH, updateTitleOverrides, validTitleKeys } from './draft-office-titles.mjs';
 import { applyDraftAuthority, importAuthorityChoices, validateAuthorityChoice } from './draft-local-authority.mjs';
 import { isPersonReference, migrateSharedAssignments, readAssignmentNames, readPreviousOccupants, rememberedPerson, serializeAssignmentNames } from './draft-assignment-references.mjs';
+import { CAMRUISGE_SCOPE } from '../../shared/cenyr-administration/camruisge-plan.mjs';
+import { migrateAberllan } from './draft-camruisge.mjs';
 
 const SCHEMA = 'aleria.herrschaftsplanung';
-const VERSION = 9;
+const VERSION = 10;
+const KINGDOM_VERSION = 10;
 const LOCAL_AUTHORITIES_VERSION = 7;
 const MILITARY_VERSION = 5;
 export const STORAGE_KEY = 'aleria.herrschaftsverwaltung.v1';
@@ -38,6 +41,7 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       id: house.id, name: house.name, plans: house.plans,
       county: house.county,
       newScope: house.preparation,
+      regional: house.regional,
       locations,
       aliases: new Map([...locations.values()].flatMap(({ post }) => post.previousKey ? [[post.previousKey, post.key]] : [])),
       posts: new Map([...locations].map(([key, { post }]) => [key, post])),
@@ -110,15 +114,20 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       || Object.keys(data.houses).some(id => !scopes.has(id))) {
       throw new Error('Die Datei gehört zu keinem unterstützten Entwurf dieser Verwaltung.');
     }
+    const formerlyLocal = data.version < KINGDOM_VERSION;
+    const inputs = formerlyLocal && scopes.has(CAMRUISGE_SCOPE)
+      ? migrateAberllan(data.houses, draft[CAMRUISGE_SCOPE]) : data.houses;
     const assignedFree = new Set();
     return Object.fromEntries([...scopes].map(([scopeId, scope]) => {
-      let input = data.houses[scopeId];
+      let input = inputs[scopeId];
+      const version = formerlyLocal && scope.regional ? KINGDOM_VERSION : data.version;
+      if (input === undefined && formerlyLocal && scope.regional) input = draft[scopeId];
       if (input === undefined && data.version === 1 && scope.county) return [scopeId, emptyHouse()];
       if (input === undefined && data.version < MILITARY_VERSION && scope.newScope) return [scopeId, emptyHouse()];
       if (!Array.isArray(input?.posts) || !plainObject(input.assignments)) throw new Error(`Ungültiger Entwurf für ${scopeId}.`);
       input = migrateSharedAssignments(input, scope.aliases);
-      const older = data.version < LOCAL_AUTHORITIES_VERSION;
-      const olderMilitary = data.version < MILITARY_VERSION;
+      const older = version < LOCAL_AUTHORITIES_VERSION;
+      const olderMilitary = version < MILITARY_VERSION;
       const { posts: storedPosts, moved, obsolete } = older ? migrateStoredPosts(scope, input.posts, olderMilitary)
         : { posts: input.posts, moved: new Map(), obsolete: new Set() };
       const posts = storedPosts.map(post => validatePost(post, scope.plans));

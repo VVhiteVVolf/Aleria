@@ -3,7 +3,7 @@ import { filterCandidates } from './candidate-filters.mjs';
 import { MAX_ROLE_BATCH, LOWER_ROLE_KINDS, ROLE_KINDS } from '../../shared/cenyr-administration/office-roles.mjs';
 import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { openRoleGroups, renderLowerRoles, renderRoleGroups, renderRoleOptions } from './repeatable-posts-view.mjs';
-import { appointmentLinksFor, postTitle, renderCandidate, renderContacts, renderFilterFields, renderMilitaryForces, renderPost, renderPostSection } from './workbench-view.mjs';
+import { appointmentLinksFor, postTitle, renderCandidate, renderContacts, renderDelegatedOffices, renderFilterFields, renderMilitaryForces, renderPost, renderPostSection } from './workbench-view.mjs';
 import { shadowTradition } from './cenyr-office-notes.mjs';
 import { bindTreeCandidatePicker } from './tree-candidate-picker.mjs';
 import { suitableLocalities } from '../../shared/cenyr-administration/local-offices.mjs';
@@ -43,6 +43,8 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   let pendingClose = false;
   const preferences = new Map();
   const writeStatus = message => { status.textContent = message; };
+  const branch = () => house.branches?.find(entry => entry.id === area.id);
+  const directCandidates = () => house.candidates.filter(person => !branch() || !person.branch || person.branch === branch().id);
 
   function focusPost(key, groupOnly = false) {
     const button = dialog.querySelector(`[data-action="choose-post"][data-post="${CSS.escape(key)}"]`);
@@ -58,7 +60,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   function candidateOptions() {
     const applicants = state.applicants(house.id).map(person => ({ ...person, kind: 'tree', detail: 'Aus einem Stammbaum ergänzt' }));
     const free = fields.free.checked ? state.freeFor(house.id) : [];
-    const available = new Map([...free, ...applicants, ...house.candidates].map(person => [person.id, person]));
+    const available = new Map([...free, ...applicants, ...directCandidates()].map(person => [person.id, person]));
     return [...available.values()].map(info => {
       const person = { ...people.get(info.id), ...info };
       const appointments = state.appointments(info.id).filter(entry => entry.scopeId === house.id)
@@ -107,7 +109,8 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     headPost.hidden = !head;
     headPost.innerHTML = head ? renderPost(head, postOccupant(head, people), {
       headLabel: area.id === 'regentschaft' ? 'Sonderamt unter dem Oberhaupt' : parentViews.length ? 'Hofamt'
-        : house.county ? 'Amtsleitung der Grafschaft' : `Amtsleitung unter dem ${rankOf(house).ruler}`,
+        : branch() ? `Leitung · ${branch().name}` : house.county || house.rank === 'county'
+          ? 'Amtsleitung der Grafschaft' : `Amtsleitung unter dem ${rankOf(house).ruler}`,
       image: area.imageSrc,
       showDepartment: !parentViews.length,
       appointmentLinks,
@@ -205,15 +208,19 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   });
 
   function updateFilters() {
-    if (!fields.free.checked && selectedId && !house.candidates.some(candidate => candidate.id === selectedId)
+    if (!fields.free.checked && selectedId && !directCandidates().some(candidate => candidate.id === selectedId)
       && !state.applicants(house.id).some(candidate => candidate.id === selectedId)) select(null);
     drawCandidates(true);
   }
 
-  const listed = id => house.candidates.some(candidate => candidate.id === id) || state.applicants(house.id).some(candidate => candidate.id === id);
+  const listed = id => directCandidates().some(candidate => candidate.id === id) || state.applicants(house.id).some(candidate => candidate.id === id);
   const treePicker = bindTreeCandidatePicker(role('candidate-panel'), {
     candidates: treeCandidates, people, listed,
+    homeRegion: () => branch()?.treeRegion || house.candidateRegion,
     onChoose(id) {
+      if (!listed(id) && house.candidates.some(candidate => candidate.id === id)) {
+        throw new Error('Diese Figur ist der anderen Verwaltung Camruisges zugeordnet.');
+      }
       const added = !listed(id) && state.addApplicant(house.id, id);
       const includeFree = fields.free.checked;
       const name = people.get(id).name;
@@ -309,6 +316,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
           data-department="${e(department)}" data-post="${e(key)}">${e(name)} ↗</button>`).join('')}
       </nav>` : ''}
       ${plan.references.length ? renderContacts(plan.references, people, 'Vikariate der Lehnsherrschaften', { state }) : ''}
+      ${area.id === 'lehenswarte' ? renderDelegatedOffices(house.delegatedOffices) : ''}
       ${area.id === 'militaer' ? renderMilitaryForces(house) : ''}
       ${area.id === 'spionage' ? `<details class="reference-panel shadow-notes"><summary>Vertrauliche Amtsüberlieferung</summary>
         <p>${e(shadowTradition)}</p></details>` : ''}`;

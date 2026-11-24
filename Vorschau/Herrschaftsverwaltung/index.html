@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="Rats- und Hofämter von Celtigerns Wacht und seiner sechs Herrschaften.">
-  <title>Verwaltung von Celtigerns Wacht · Aleria</title>
+  <meta name="description" content="Ratsämter, Hofämter und Ortsleitungen in den Grafschaften Cenyrs vorbereiten.">
+  <title>Herrschaftswerkstatt von Cenyr · Aleria</title>
   <link rel="stylesheet" href="administration.css">
   <link rel="stylesheet" href="office-dialog.css">
   <link rel="stylesheet" href="vacancy-search.css">
@@ -17,16 +17,16 @@
   <header class="masthead">
     <div class="page-width masthead-inner">
       <a class="wordmark" href="../index.html">Aleria <span>Werkstatt</span></a>
-      <a class="back-link" href="../index.html">← Vorbereitungen</a>
+      <a class="back-link" href="./Cenyr/">← Königreichsübersicht</a>
     </div>
   </header>
   <main>
     <section class="page-intro">
       <div class="page-width intro-inner">
         <div>
-          <p class="territory-label">Celtigerns Wacht</p>
-          <h1>Rats- und Hofämter</h1>
-          <p class="intro-text">Besetzungsentwürfe für die Grafschaft, ihre Baronien und Ritterfürstentümer.</p>
+          <p class="territory-label" data-role="county-heading">Königreich Cenyr</p>
+          <h1 data-role="workbench-title">Rats- und Hofämter</h1>
+          <p class="intro-text" data-role="county-summary">Besetzungsentwürfe für die Herrschaften Cenyrs.</p>
         </div>
         <div class="draft-tools">
           <div class="button-row">
@@ -40,7 +40,10 @@
     </section>
     <div class="page-width workspace" id="herrschaften">
       <section aria-labelledby="house-select-title">
-        <h2 id="house-select-title">Herrschaft auswählen</h2>
+        <div class="workbench-chooser">
+          <h2 id="house-select-title">Herrschaft auswählen</h2>
+          <label>Grafschaft wechseln <select data-role="county-select" disabled></select></label>
+        </div>
         <div class="house-switch" data-role="houses"></div>
       </section>
       <p class="page-notice" data-role="status" role="status" hidden></p>
@@ -49,6 +52,7 @@
         <div>
           <form class="vacancy-filters" role="search" aria-label="Freie Posten finden">
             <label>Posten, Haus oder Ort <input type="search" name="query" placeholder="z. B. Hauptmann Arwydd"></label>
+            <label>Gebiet <select name="county" aria-label="Gebiet der Postensuche"></select></label>
             <label>Herrschaft <select name="scope"><option value="">Alle Herrschaften</option></select></label>
             <label>Amtsbereich <select name="area"><option value="">Alle Bereiche</option></select></label>
           </form>

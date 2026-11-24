@@ -8,13 +8,14 @@ import { geographicKey } from '../world-directory/geographic-key.mjs';
 import { buildCourtPlan } from './court-plan.mjs';
 import { buildCourtDepartments } from './court-departments.mjs';
 import { prepareOfficePlan } from './office-plan-assembly.mjs';
-import { buildVicariatePlan } from './vicariate-plan.mjs';
+import { buildRegionalChurchPlan } from './regional-church-plan.mjs';
 import { countyOfficeDefinition } from './county-office-plans.mjs';
 import { localOfficeSection } from './local-offices.mjs';
 import { buildLehenswartePlan, LEHENSWARTE_ID } from './lehenswarte-plan.mjs';
 import { CENYR_MARSHAL_DUTY, FLOTILLA_ROLE, RETIRED_WATCH_MARSHAL, SEA_CAPTAIN_ROLE,
   repeatableNavalPost, watchSection, watchServiceSection } from './military-organization.mjs';
 import { rankOf, rulerSuffix } from './scopes.mjs';
+import { buildCamruisgePlans } from './camruisge-plan.mjs';
 
 const section = (title, icon, description, slots) => ({
   title, icon, description, slots: slots.map(slot => {
@@ -48,7 +49,7 @@ function militaryPlan(house, localPosts) {
   const navy = house.fleet || house.id === 'saethwyr';
   const barony = house.rank === 'barony';
   const coastalCommand = navy && house.separateCoastalCommand;
-  const flotillaLimit = barony ? 3 : 2;
+  const flotillaLimit = rankOf(house).flotillas;
   const flotillaId = name => `flottille-${geographicKey(name)}`;
   const flotillas = navy ? [...ports].sort((a, b) => Number(b.type === 'Hafen') - Number(a.type === 'Hafen'))
     .slice(0, flotillaLimit).map(port => port.name) : [];
@@ -68,7 +69,7 @@ function militaryPlan(house, localPosts) {
   const suffix = rulerSuffix(house);
   const marshals = [
     ['feldfuehrung', 'Feldmarschall', `Koordiniert das landgebundene Wehrwesen und das örtliche Aufgebot unter dem Marschall ${suffix}.`],
-    ...(coastal.length ? [[coastalCommand ? 'admiral' : 'seefuehrung', navy ? 'Seemarschall und Admiral' : 'See- und Küstenkommandant',
+    ...(coastal.length || navy ? [[coastalCommand ? 'admiral' : 'seefuehrung', navy ? 'Seemarschall und Admiral' : 'See- und Küstenkommandant',
       navy ? `Führt die Flotte unter dem Marschall ${suffix} und stimmt den Dienst zur See mit der Grafschaft ab.` : coastDuty]] : []),
   ];
   const onTheWater = [
@@ -87,7 +88,7 @@ function militaryPlan(house, localPosts) {
     section('Adjutanten', 'records', 'Meldungen, Abschriften und geregelte Vertretung in der Marschallskanzlei.', [
       ['adjutant', 'Adjutant des Marschalls', 'Bereitet Befehlsübergaben und Lagebesprechungen vor.'],
       ['feldadjutant', 'Adjutant des Feldmarschalls', 'Koordiniert die Berichte der Landwacht und der Hauptleute.'],
-      ...(coastal.length && !coastalCommand ? [navy
+      ...((coastal.length || navy) && !coastalCommand ? [navy
         ? ['seeadjutant', 'Adjutant des Seemarschalls', 'Sammelt Hafen- und Küstenmeldungen.'] : coastalAdjutant] : []),
       ['marschallschreiber', 'Marschallsschreiber', 'Führt Aufgebots-, Wach- und Befehlslisten.'],
     ]),
@@ -257,7 +258,7 @@ const civilSections = {
     ])),
     section('Gesandtschaft und Kanzleidienste', 'diplomacy', 'Persönliche Vertretung im erteilten Mandat.', [
       ['gesandter', `Gesandter ${rulerSuffix(house)}`, 'Vertritt die Herrschaft bei beauftragten Gesprächen.'],
-      ['grafschaftsgesandter', 'Verbindung zur Grafschaft', 'Führt die regelmäßige Korrespondenz mit Celtigerns Wacht.'],
+      ['grafschaftsgesandter', 'Verbindung zur Grafschaft', 'Führt die regelmäßige Korrespondenz mit der zuständigen Grafschaft.'],
       ['grenzgesandter', 'Grenzgesandter', 'Bespricht örtliche Grenz-, Wege- und Nutzungsfragen.'],
       ['dolmetscher', 'Dolmetscher', 'Sichert die Verständigung bei Besuchen und Verhandlungen.'],
       ['geleitmeister', 'Geleitmeister', 'Organisiert Ankunft, Unterkunft und Geleit von Gesandten.'],
@@ -350,29 +351,42 @@ export function buildCourtPlans(house, appointments = appointmentMap(house)) {
 }
 
 export function buildOfficePlans(house) {
+  if (house.rank === 'diarchy') return buildCamruisgePlans(house);
   const appointments = appointmentMap(house);
-  const localPlan = buildLehenswartePlan(house);
-  const sharedWatchPosts = localPlan.sections.flatMap(section => section.slots).filter(post => post.previousKey);
-  const definitions = Object.entries(house.offices).map(([id, office]) => {
+  const localPlan = house.rank === 'royal' ? null : buildLehenswartePlan(house);
+  const sharedWatchPosts = (localPlan?.sections || []).flatMap(section => section.slots).filter(post => post.previousKey);
+  const definitions = Object.entries(house.offices).filter(([id]) => id !== 'regentschaft').map(([id, office]) => {
     if (house.county) return [id, countyOfficeDefinition(house, id, office)];
-    const definition = id === 'militaer' ? militaryPlan(house, sharedWatchPosts) : id === 'klerus' ? buildVicariatePlan(house)
+    if (id === 'ratskanzlei' || id === 'ratsberatung') {
+      return [id, { head: { ...office, reportsTo: `dem ${rankOf(house).ruler}`,
+        description: id === 'ratskanzlei' ? 'Leitet die Beratungen des königlichen Rates. Führt die Kanzlei und ist oberster Berater des Königs.'
+          : 'Berät das Oberhaupt in den ihm anvertrauten Angelegenheiten.' },
+      sections: id === 'ratskanzlei' ? [section('Kanzleidienst', 'records', '', [
+        ['kanzleischreiber', 'Schreiber der Ratskanzlei', 'Führt Protokolle, Beschlüsse und die Amtsschreiben.'],
+        ['siegelwart', 'Siegelwart der Ratskanzlei', 'Verwahrt die Siegel und hält ihre Verwendung fest.'],
+      ])] : [],
+      }];
+    }
+    const definition = id === 'militaer' ? militaryPlan(house, sharedWatchPosts) : id === 'klerus' ? buildRegionalChurchPlan(house, office)
       : { sections: civilSections[id](house), retired: retiredRoles[id] };
-    const titleVariants = headTitles[id].map(title => `${title} ${rulerSuffix(house)}`);
+    const titles = id === 'klerus' && house.regional && !/^vikar/iu.test(office.title) ? null : headTitles[id];
+    const titleVariants = titles?.map(title => `${title} ${rulerSuffix(house)}`);
     return [id, { ...definition, head: {
       title: office.title, description: duties[id], holder: office.holder, titleVariants,
       reportsTo: `dem ${rankOf(house).ruler}`,
     } }];
   });
-  definitions.push([LEHENSWARTE_ID, localPlan]);
+  if (localPlan) definitions.push([LEHENSWARTE_ID, localPlan]);
   definitions.push(['regentschaft', {
     head: {
-      title: 'Regent', titleVariants: ['Regent', 'Regentin'],
+      title: house.offices.regentschaft?.title || 'Regent', holder: house.offices.regentschaft?.holder,
+      titleVariants: house.offices.regentschaft ? ['Regent', 'Regentin'].map(title => `${title} ${rulerSuffix(house)}`) : ['Regent', 'Regentin'],
       description: 'Führt bei besonderer Ernennung die Regierung während der Abwesenheit des Oberhaupts oder bis zur geregelten Nachfolge.',
     },
     sections: [],
   }]);
   const plans = Object.fromEntries(definitions.map(([id, plan]) => [id, prepareOfficePlan(house, id, plan, appointments)]));
-  Object.assign(plans, buildCourtPlans(house, appointments));
+  if (!house.courtScope) Object.assign(plans, buildCourtPlans(house, appointments));
   if (appointments.size) throw new Error(`Posten für belegte Dienste fehlen: ${[...appointments.keys()].join(', ')}`);
   return plans;
 }

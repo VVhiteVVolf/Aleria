@@ -24,7 +24,7 @@ export function vacancyEntries(houses, areas, state, people) {
       const departmentName = head ? postTitle(head, postOccupant(head, people)) : '';
       const title = postTitle(post, postOccupant(post, people));
       const place = post.locality?.name || post.place || '';
-      const context = [house.name, areaName, alternateName, departmentName, place].filter(Boolean).join(' · ');
+      const context = [house.name, areaName, alternateName, departmentName, place, house.countyName].filter(Boolean).join(' · ');
       entries.push({ title, context, scope: house.id, area, review: post.needsReplacement,
         alternateArea, ...(alternateArea ? { alternateHref: preparationHref(house.id, alternateArea, undefined, post.key) } : {}),
         searchable: normalizePersonName(`${title} ${context} ${house.title}`), href: preparationHref(house.id, area, department, post.key) });
@@ -48,23 +48,34 @@ export function filterVacancies(entries, query, house, area) {
     .map(row => area && row.alternateArea === area ? { ...row, href: row.alternateHref } : row);
 }
 
-export function bindVacancyFinder(panel, { houses, areas, state, people }) {
+export function bindVacancyFinder(panel, { houses, areas, state, people, counties }) {
   const form = panel.querySelector('form');
-  const { query, scope, area } = form.elements;
+  const { query, scope, area, county } = form.elements;
   const results = panel.querySelector('[data-role="vacancy-results"]');
   const count = panel.querySelector('[data-role="vacancy-count"]');
   const more = panel.querySelector('[data-role="vacancy-more"]');
   const addOptions = (select, source) => {
     for (const item of source) select.add(new Option(item.name, item.id));
   };
-  addOptions(scope, houses);
+  county.add(new Option('Ganz Cenyr', ''));
+  addOptions(county, counties);
   addOptions(area, areas);
   let entries;
   let limit = PAGE_SIZE;
+  let visibleHouses;
+
+  function updateScopes() {
+    const selected = scope.value;
+    visibleHouses = county.value ? houses.filter(house => house.countyId === county.value) : houses;
+    scope.length = 1;
+    addOptions(scope, visibleHouses.map(house => ({ id: house.id, name: house.name === house.title ? house.name : `${house.name} · ${house.title}` })));
+    scope.value = visibleHouses.some(house => house.id === selected) ? selected : '';
+    entries = undefined;
+  }
 
   function show() {
     if (!panel.open) return;
-    entries ??= vacancyEntries(houses, areas, state, people);
+    entries ??= vacancyEntries(visibleHouses, areas, state, people);
     const hits = filterVacancies(entries, query.value, scope.value, area.value);
     count.textContent = hits.length ? `${hits.length} offene Stellen` : 'Keine offenen Stellen passen zur Suche.';
     results.innerHTML = hits.slice(0, limit).map(row => `<li><a href="${e(row.href)}" data-action="open-appointment">
@@ -74,7 +85,11 @@ export function bindVacancyFinder(panel, { houses, areas, state, people }) {
     more.hidden = hits.length <= limit;
   }
 
-  form.addEventListener('input', () => { limit = PAGE_SIZE; show(); });
+  form.addEventListener('input', event => {
+    if (event.target === county) updateScopes();
+    limit = PAGE_SIZE;
+    show();
+  });
   form.addEventListener('submit', event => { event.preventDefault(); results.querySelector('a')?.focus(); });
   panel.addEventListener('toggle', show);
   more.addEventListener('click', () => {
@@ -84,6 +99,12 @@ export function bindVacancyFinder(panel, { houses, areas, state, people }) {
     results.children[start]?.querySelector('a').focus();
   });
   return {
+    setCounty(id) {
+      county.value = id;
+      updateScopes();
+      limit = PAGE_SIZE;
+      show();
+    },
     refresh() { entries = undefined; show(); },
     focus(href) {
       const link = [...results.querySelectorAll('a')].find(item => item.getAttribute('href') === href);

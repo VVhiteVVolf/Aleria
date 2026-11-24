@@ -1,4 +1,36 @@
-# Rats- und Hofämter von Celtigerns Wacht
+# Herrschaftswerkstatt von Cenyr
+
+Die [Königreichsübersicht](./Cenyr/) führt zum Königlichen Rat, den neun
+Grafschaften und den erfassten Baronien und Ritterfürstentümern.
+Die Suche findet auch Hausnamen. In der Werkstatt bestimmt `grafschaft`
+den Einstieg und `haus` die konkrete Herrschaft. Links mit einer bestehenden
+Haus- und Amtskennung bleiben gültig. Der Königliche Rat und die
+Grafschaftsverwaltung von Vortigerns Ruh führen getrennte Ämter. Haus
+Pendrag hat einen gemeinsamen Hof unter der Krone.
+
+Die neuen Vorbereitungen verwenden die Ratsgruppen, territorialen Ortslisten,
+Hausämter und Dienstbindungen aus den bestehenden Registern. Am Grafenhof
+werden die Orte seiner direkten Domäne verwendet. Belegte Personen bilden
+den Ausgangsstand. Die Stammbaumsuche startet in der ausgewählten Grafschaft.
+Die Suche nach freien Posten kann über „Gebiet“ auf ganz Cenyr erweitert
+werden. Version 10 speichert und exportiert den Gesamtentwurf. Der Import
+einer früheren lokalen Fassung lässt inzwischen angelegte Entwürfe der
+weiteren Herrschaften bestehen.
+
+## Dyarchie von Camruisge
+
+Eine eigenständige Vorbereitung in der Übersicht von Celtigerns Wacht
+führt zu den beiden Leitungen. Aberllan steht unter Celtigerns Wacht,
+Oilean unter Tír na Sleagh in Leitheach. Beide Seiten haben eigene
+besetzbare Amtsfenster, wiederholbare Amts- und Hofposten sowie einen
+gemeinsamen Bereich für Absprachen. In Aberllan sind die Stadtwache und
+das Aufgebot des Hauses Garrael getrennt. Die
+[Ortsvorbereitung Aberllan](./Cenyr/aberllan.html) verlinkt die Leitungsstelle
+und beide Aufgebote. Die bisherige Draig-Verknüpfung zum Lehenswart führt
+in diese eigenständige Verwaltung. Gespeicherte Besetzungen und auf
+Aberllan bezogene Zusatzposten werden mit übernommen.
+
+## Rats- und Hofämter von Celtigerns Wacht
 
 Die Werkstatt steht unter „Verwaltung und Ratsämter“ in der
 [Vorbereitungsübersicht](../index.html). Die Baronien Arthus Streben und
@@ -170,12 +202,15 @@ Maus- und Touchbedienung aus `Vorschau/shared/placement-drag.mjs`.
 node Vorschau/Herrschaftsverwaltung/scripts/build-roster.mjs
 node Vorschau/Herrschaftsverwaltung/scripts/build-roster.mjs --check
 node --test --experimental-test-isolation=none Vorschau/tests/herrschaftsverwaltung.test.mjs Vorschau/tests/preparation-overview.test.mjs Vorschau/tests/placement-controls.test.mjs
+node --test Vorschau/tests/cenyr-territories.test.mjs
 node Vorschau/tests/herrschaftsverwaltung.browser.mjs
 ```
 
 Der Generator schreibt `roster.generated.json` für die Werkstatt und
 `shared/cenyr-administration/office-cast.generated.mjs` für die regulären
-Amtsseiten. Die Amtsprojektion enthält nur die relevanten Namen, Porträts
+Amtsseiten. `kingdom.generated.json` ergänzt die Vorbereitung mit den
+weiteren Grafschaften, Herrschaften und Amtsträgern. Die Amtsprojektion
+enthält nur die relevanten Namen, Porträts
 und Verweise. Die Generatorquellen bleiben im Repository, die Oberflächen
 verwenden ihre erzeugten Projektionen. Der Browserlauf
 verwendet einen eigenen Loopback-Server und erstellt Aufnahmen und

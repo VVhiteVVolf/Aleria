@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Königlicher Rat, neun Grafschaften und ihre Herrschaften in der Vorbereitungsübersicht für Cenyr.">
+  <title>Königreich Cenyr · Herrschaften vorbereiten · Aleria</title>
+  <link rel="stylesheet" href="../administration.css">
+  <link rel="stylesheet" href="./kingdom.css">
+  <script type="module" src="./kingdom-overview.mjs"></script>
+</head>
+<body data-kingdom-overview>
+  <a class="skip-link" href="#grafschaften">Zu den Grafschaften</a>
+  <header class="masthead">
+    <div class="page-width masthead-inner">
+      <a class="wordmark" href="../../index.html">Aleria <span>Werkstatt</span></a>
+      <a class="back-link" href="../../index.html">← Vorbereitungen</a>
+    </div>
+  </header>
+  <main>
+    <section class="kingdom-intro">
+      <div class="page-width kingdom-hero">
+        <img src="/Stammbäume/assets/images/regions/koenigreich-cenyr.png" width="144" height="166" alt="">
+        <div>
+          <p class="territory-label">Herrschaften vorbereiten</p>
+          <h1>Königreich Cenyr</h1>
+          <p>Ratsämter, Hofämter und Ortsleitungen der Grafschaften besetzen.</p>
+          <p class="kingdom-totals" data-role="kingdom-totals"></p>
+        </div>
+      </div>
+    </section>
+    <div class="page-width kingdom-content">
+      <section class="crown-entry" aria-labelledby="crown-title">
+        <div>
+          <p class="territory-label">Königssitz Mathragon</p>
+          <h2 id="crown-title">Königlicher Rat und Hof</h2>
+          <p data-role="crown-holder"></p>
+        </div>
+        <div class="kingdom-actions">
+          <a class="kingdom-button" href="../index.html?grafschaft=cenyr">Königlichen Rat und Hof bearbeiten <span aria-hidden="true">↗</span></a>
+          <a class="text-link" data-role="kingdom-record" href="/Kontinente/Estryll/Königreich%20Cenyr/Königreich%20von%20Cenyr.html">Königreichsakte <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+      <section id="grafschaften" aria-labelledby="county-title">
+        <div class="county-toolbar">
+          <h2 id="county-title">Grafschaften</h2>
+          <label>Grafschaft, Herrschaft oder Haus suchen
+            <input type="search" autocomplete="off" data-role="county-search" disabled>
+          </label>
+        </div>
+        <p class="county-results" data-role="county-status" role="status">Grafschaften werden geladen …</p>
+        <div class="county-grid" data-role="county-grid"></div>
+      </section>
+    </div>
+  </main>
+  <noscript><p class="page-width">Die Grafschaftsübersicht benötigt JavaScript.</p></noscript>
+</body>
+</html>

@@ -16,6 +16,15 @@ export const officeIcon = key => artwork[key] || dutyIcon(key);
 export const COURT_AREA = { id: 'hof', name: 'Hofämter', imageSrc: officeIcon('court') };
 export const REGENCY_AREA = { id: 'regentschaft', name: 'Regentschaft', imageSrc: officeIcon('diplomacy') };
 export const LEHENSWARTE_AREA = { id: LEHENSWARTE_ID, name: 'Ortsämter und Lehen', imageSrc: officeIcon('diplomacy') };
+export const ADDITIONAL_COUNCIL_AREAS = [
+  { id: 'ratskanzlei', name: 'Ratskanzlei', imageSrc: officeIcon('records') },
+  { id: 'ratsberatung', name: 'Ratsberatung', imageSrc: officeIcon('learning') },
+];
+export const CAMRUISGE_AREAS = [
+  { id: 'aberllan', name: 'Aberllan', imageSrc: officeIcon('court') },
+  { id: 'oilean', name: 'Oilean', imageSrc: officeIcon('coordination') },
+  { id: 'inselabstimmung', name: 'Gemeinsame Angelegenheiten', imageSrc: officeIcon('diplomacy') },
+];
 
 const postIcons = {
   militaer: {

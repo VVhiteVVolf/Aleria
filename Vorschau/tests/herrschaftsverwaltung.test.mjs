@@ -340,7 +340,7 @@ test('v4 military drafts keep house appointments and stationing while freeing th
   assert.equal(guard.title, 'Waffenknecht der Hausmacht');
   assert.equal(guard.locality.name, 'Morfaen');
   const currentExport = draft.serialize();
-  assert.equal(JSON.parse(currentExport).version, 9);
+  assert.equal(JSON.parse(currentExport).version, 10);
   draft.importDraft(currentExport);
   assert.equal(draft.serialize(), currentExport);
 });

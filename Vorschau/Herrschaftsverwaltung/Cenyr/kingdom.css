@@ -1,0 +1,78 @@
+.kingdom-intro {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(105deg, #efe4cc, var(--panel) 72%);
+}
+.kingdom-hero {
+  display: grid; grid-template-columns: 144px minmax(0, 1fr); align-items: center; gap: clamp(16px, 4vw, 42px);
+  padding-block: 33px;
+}
+.kingdom-hero img, .county-card img, .place-house img { object-fit: contain; }
+.kingdom-hero img { width: 100%; height: auto; max-height: 166px; }
+.kingdom-totals { margin-top: 10px; font-size: .86rem; color: var(--muted); }
+.kingdom-content { padding-block: 23px 48px; }
+.crown-entry {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+  border: 1px solid var(--line); border-left: 4px solid #947544; border-radius: 8px;
+  background: var(--panel); padding: 16px 20px; margin-bottom: 29px;
+}
+.crown-entry h2, .county-toolbar h2 { font-size: clamp(1.38rem, 2.5vw, 1.8rem); line-height: 1.2; }
+.crown-entry h2 + p { margin-top: 4px; color: var(--muted); }
+.kingdom-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.kingdom-button {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 7px 11px;
+  text-decoration: none; border-radius: 6px; background: var(--accent); color: #fffdf6; font-weight: 650; font-size: .88rem;
+}
+.kingdom-button:hover { background: var(--accent-dark); }
+.county-toolbar {
+  display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px;
+  border-bottom: 1px solid var(--line); padding-bottom: 10px;
+}
+.county-toolbar label { display: grid; gap: 3px; font-size: .82rem; }
+.county-toolbar input {
+  width: min(300px, 100%); min-height: 39px; padding: 6px 10px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+}
+.county-results { margin-top: 8px; color: var(--muted); font-size: .82rem; }
+.county-results:empty { margin: 0; }
+.county-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 13px; margin-top: 12px; }
+.county-card {
+  padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+  min-width: 0; overflow-wrap: anywhere;
+}
+.county-card header { display: grid; grid-template-columns: 60px minmax(0, 1fr); align-items: center; gap: 12px; }
+.county-card h3 { font-size: 1.3rem; line-height: 1.12; }
+.county-card p, .county-territory small { color: var(--muted); font-size: .82rem; }
+.county-card header p { margin-top: 4px; }
+.county-demesne { margin: 8px 0 4px; }
+.county-workbench {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-height: 39px; margin-top: 8px; padding: 6px 9px; border-radius: 5px;
+  background: var(--accent-soft); font-size: .88rem; font-weight: 650; text-decoration: none;
+}
+.county-workbench:hover { text-decoration: underline; }
+.county-list { margin-top: 5px; }
+.county-list summary { padding-block: 8px 4px; font-size: .84rem; color: var(--accent-dark); }
+.county-list ul { list-style: none; padding: 0; margin: 4px 0 0; }
+.county-list li { border-top: 1px solid var(--line); }
+.county-territory {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; align-items: center; gap: 8px;
+  min-height: 47px; padding: 5px 2px; font-size: .85rem; text-decoration: none;
+}
+.county-territory:hover strong { text-decoration: underline; }
+.county-territory small { display: block; }
+.county-place-link { display: block; margin: 0 0 7px 42px; font-size: .79rem; }
+.place-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.place-details section { padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.place-details h2 { font-size: 1.42rem; line-height: 1.15; }
+.place-details h2 + p, .place-details h2 + dl { margin-top: 8px; }
+.place-details dt { font-weight: 650; margin-top: 7px; }
+.place-details dd { color: var(--muted); }
+.place-details .kingdom-actions { margin-top: 13px; }
+.place-house { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+@media (max-width: 900px) { .county-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) {
+  .county-grid, .place-details { grid-template-columns: 1fr; }
+  .kingdom-hero { grid-template-columns: 68px minmax(0, 1fr); padding-block: 22px; }
+  .kingdom-hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .crown-entry { padding: 12px 14px; margin-bottom: 22px; }
+}

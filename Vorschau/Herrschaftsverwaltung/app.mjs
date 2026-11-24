@@ -3,7 +3,8 @@ import { buildOfficePlans } from '../../shared/cenyr-administration/office-plans
 import { bindOfficeDialog } from './office-dialog.mjs';
 import { renderCouncil, renderHouses } from './workbench-view.mjs';
 import { bindVacancyFinder } from './vacancy-search.mjs';
-import { COURT_AREA, LEHENSWARTE_AREA, REGENCY_AREA } from '../../shared/cenyr-administration/office-icons.mjs';
+import { ADDITIONAL_COUNCIL_AREAS, CAMRUISGE_AREAS, COURT_AREA, LEHENSWARTE_AREA, REGENCY_AREA } from '../../shared/cenyr-administration/office-icons.mjs';
+import { DEFAULT_COUNTY, officeDestination, prepareTerritorialHouses, territorialGroups } from './territorial-navigation.mjs';
 
 function storageFor(window) {
   try { return window.localStorage; }
@@ -14,25 +15,29 @@ function downloadDraft(window, serialized) {
   const url = window.URL.createObjectURL(new Blob([serialized], { type: 'application/json' }));
   const link = window.document.createElement('a');
   link.href = url;
-  link.download = 'herrschaftsverwaltung-entwurf.json';
+  link.download = 'cenyr-herrschaftsplanung-entwurf.json';
   link.click();
   window.setTimeout(() => window.URL.revokeObjectURL(url), 1000);
 }
 
-function mountWorkbench(root, roster, areas) {
+function mountWorkbench(root, roster, directory, areas) {
   const role = name => root.querySelector(`[data-role="${name}"]`);
   const window = root.ownerDocument.defaultView;
-  const people = new Map(roster.people.map(person => [person.id, person]));
+  const people = new Map([...roster.people, ...directory.people].map(person => [person.id, person]));
   const treeCandidates = new Map(roster.tree.map(candidate => [candidate.id, candidate]));
-  const houses = new Map(roster.houses.map(house => [house.id, { ...house, plans: buildOfficePlans(house) }]));
-  const state = createAssemblyState([...houses.values()], roster.free, { storage: storageFor(window), treeCandidates, people });
+  const houses = new Map(prepareTerritorialHouses(roster.houses, directory).map(house => [house.id, { ...house, plans: buildOfficePlans(house) }]));
+  const groups = new Map(territorialGroups(directory).map(county => [county.id, county]));
+  const state = createAssemblyState([...houses.values()], [...roster.free, ...directory.free], { storage: storageFor(window), treeCandidates, people });
   const address = new URL(window.location.href);
-  let house = houses.get(address.searchParams.get('haus')) ?? houses.values().next().value;
+  const firstHouse = county => houses.get(groups.get(county)?.scopes[0].id);
+  let house = houses.get(officeDestination(address.searchParams).id) ?? firstHouse(address.searchParams.get('grafschaft'))
+    ?? houses.values().next().value;
   const chooser = role('houses');
+  const countySelect = role('county-select');
   const council = role('council');
   const fileInput = role('import-file');
   const finder = role('vacancy-finder');
-  const vacancies = bindVacancyFinder(finder, { houses: [...houses.values()], areas, state, people });
+  const vacancies = bindVacancyFinder(finder, { houses: [...houses.values()], areas, state, people, counties: [...groups.values()] });
   let vacancyReturnLink;
   let importNumber = 0;
 
@@ -48,6 +53,19 @@ function mountWorkbench(root, roster, areas) {
     role('persistence').textContent = state.persisted()
       ? 'Entwürfe werden in diesem Browser gespeichert.'
       : 'Entwürfe bleiben in diesem Fenster. Zum Behalten exportieren.';
+  }
+
+  function renderCounty(resetVacancies = true) {
+    const county = groups.get(house.countyId || DEFAULT_COUNTY);
+    const royal = county.id === directory.kingdom.id;
+    const heading = royal ? 'Königlicher Rat und Hof' : 'Rats- und Hofämter';
+    root.ownerDocument.title = `${royal ? heading : county.name} · Herrschaftswerkstatt · Aleria`;
+    role('county-heading').textContent = royal ? county.name : `Grafschaft ${county.name}`;
+    role('workbench-title').textContent = heading;
+    role('county-summary').textContent = royal ? `Sitz der Krone in ${county.seat}` : `Sitz der Grafschaft in ${county.seat}`;
+    countySelect.value = county.id;
+    chooser.innerHTML = renderHouses(county.scopes.map(scope => houses.get(scope.id)), people);
+    if (resetVacancies) vacancies.setCounty(county.id);
   }
 
   function updateDraftView() {
@@ -68,20 +86,39 @@ function mountWorkbench(root, roster, areas) {
       if (vacancyReturnLink && finder.open) vacancies.focus(vacancyReturnLink);
       else council.querySelector(`[data-area="${CSS.escape(key)}"]`)?.focus({ preventScroll: true });
       vacancyReturnLink = undefined;
-      if (clearOfficeAddress()) window.history.replaceState(null, '', address);
+      if (clearOfficeAddress()) {
+        address.searchParams.set('haus', house.id);
+        address.searchParams.set('grafschaft', house.countyId);
+        window.history.replaceState(null, '', address);
+      }
     },
   });
 
   function openAddress(params) {
-    const scope = houses.get(params.get('haus')) ?? house;
-    const area = areas.find(item => item.id === params.get('amt'));
+    const destination = officeDestination(params);
+    const scope = houses.get(destination.id) ?? house;
+    const area = areas.find(item => item.id === destination.area);
     if (!area || !scope.plans[area.id]) return false;
     if (scope !== house) {
+      const changedCounty = scope.countyId !== house.countyId;
       house = scope;
+      if (changedCounty) renderCounty(false);
       render();
     }
-    office.open(house, area, params.get('abteilung'), params.get('posten'));
+    office.open(house, area, destination.department, destination.post);
     return true;
+  }
+
+  function selectHouse(scope) {
+    const changedCounty = scope.countyId !== house.countyId;
+    house = scope;
+    if (changedCounty) renderCounty();
+    address.searchParams.set('grafschaft', house.countyId);
+    address.searchParams.set('haus', house.id);
+    clearOfficeAddress();
+    window.history.replaceState(null, '', address);
+    notify('');
+    render();
   }
 
   root.addEventListener('error', event => {
@@ -106,6 +143,7 @@ function mountWorkbench(root, roster, areas) {
         if (finder.contains(link)) vacancyReturnLink = link.getAttribute('href');
         clearOfficeAddress();
         for (const [key, value] of target) address.searchParams.set(key, value);
+        address.searchParams.set('grafschaft', house.countyId);
         window.history.replaceState(null, '', address);
       }
       return;
@@ -114,19 +152,14 @@ function mountWorkbench(root, roster, areas) {
     if (!button || button.closest('dialog')) return;
     switch (button.dataset.action) {
       case 'choose-house':
-        house = houses.get(button.dataset.house);
-        address.searchParams.set('haus', house.id);
-        clearOfficeAddress();
-        window.history.replaceState(null, '', address);
-        notify('');
-        render();
+        selectHouse(houses.get(button.dataset.house));
         break;
       case 'open-office':
         office.open(house, areas.find(area => area.id === button.dataset.area));
         break;
       case 'export':
         downloadDraft(window, state.serialize());
-        notify('Gesamtentwurf exportiert.');
+        notify('Gesamtentwurf für Cenyr exportiert.');
         break;
       case 'import': fileInput.click(); break;
       case 'undo':
@@ -154,7 +187,10 @@ function mountWorkbench(root, roster, areas) {
     }
   });
 
-  chooser.innerHTML = renderHouses([...houses.values()], people);
+  for (const county of groups.values()) countySelect.add(new Option(county.name, county.id));
+  countySelect.disabled = false;
+  countySelect.addEventListener('change', () => selectHouse(firstHouse(countySelect.value)));
+  renderCounty();
   root.querySelectorAll('[data-action="import"], [data-action="export"]').forEach(button => { button.disabled = false; });
   render();
   if (state.loadError()) notify(`Gespeicherter Entwurf konnte nicht geladen werden. ${state.loadError()}`);
@@ -162,10 +198,17 @@ function mountWorkbench(root, roster, areas) {
 }
 
 const root = document.querySelector('[data-administration-workbench]');
+async function fetchRoster(file) {
+  const response = await fetch(new URL(file, import.meta.url));
+  if (!response.ok) throw new Error('Das Personen- oder Territorialverzeichnis konnte nicht geladen werden.');
+  return response.json();
+}
 try {
-  const response = await fetch(new URL('./roster.generated.json', import.meta.url));
-  if (!response.ok) throw new Error('Das Personenverzeichnis konnte nicht geladen werden.');
-  mountWorkbench(root, await response.json(), [...window.ALERIA_ADMINISTRATION_CONTENT.areas, COURT_AREA, LEHENSWARTE_AREA, REGENCY_AREA]);
+  const [roster, directory] = await Promise.all([fetchRoster('./roster.generated.json'), fetchRoster('./kingdom.generated.json')]);
+  mountWorkbench(root, roster, directory, [
+    ...window.ALERIA_ADMINISTRATION_CONTENT.areas, ...ADDITIONAL_COUNCIL_AREAS,
+    COURT_AREA, LEHENSWARTE_AREA, REGENCY_AREA, ...CAMRUISGE_AREAS,
+  ]);
 } catch (error) {
   const status = root.querySelector('[data-role="status"]');
   status.textContent = error.message;

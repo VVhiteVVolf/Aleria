@@ -194,9 +194,10 @@ function expandGroup(source, house) {
   const slots = source.posts.flatMap(post => {
     if (!Array.isArray(post)) return [post];
     const [id, title, description, icon, kind, count = 1] = post;
+    const rank = house.rank || (house.county ? 'county' : 'prince');
     const copies = typeof count === 'number'
       ? (count === 1 ? count : Math.ceil(count * rankOf(house).courtSize))
-      : count[house.rank || (house.county ? 'county' : 'prince')];
+      : count[rank] ?? (rank === 'royal' ? count.county : 0);
     return Array.from({ length: copies }, (_, index) => ({
       id: index ? `${id}-${index + 1}` : id, title, description, icon,
       ...(kind ? { kind, templateId: `r-${id}` } : {}),

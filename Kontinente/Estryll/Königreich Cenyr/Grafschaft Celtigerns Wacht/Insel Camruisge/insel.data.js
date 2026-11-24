@@ -5,7 +5,7 @@
   if (!data) throw new Error("Herrschafts-Datenhelfer wurde nicht geladen.");
 
   const familyTreePage = data.familyTreePage;
-  const banner = "/Stammbäume/assets/images/regions/camruisge.png";
+  const banner = "/Stammbäume/assets/images/placeholders/neutral-crest.png";
   const mapImage = "/Kontinente/assets/images/celtigerns-wacht-map-preview.jpg";
   const mapHref = "/Karten/karte.html?map=cenyr-celtigerns-wacht";
   const parentHref = "../Grafschaft%20Celtigerns%20Wacht.html";
@@ -27,13 +27,13 @@
   ]);
 
   const councilGroups = Object.freeze([
-    data.personGroup("Obrigkeit der Diarchie", [
+    data.personGroup("Obrigkeit der Dyarchie", [
       data.person("Lehenswart Aberllans", "Lyonnel Garrael", {
         imageSrc: "/Stammbäume/assets/images/portraits/haus-garrael/lyonnel-garrael.jpg",
         familyId: "haus-garrael",
         seat: "Aberllan",
       }),
-      data.person("Triath von Oilean", "...", { seat: "Oilean" }),
+      data.person("Triath / Bürgermeister von Oilean", "...", { seat: "Oilean" }),
     ]),
     data.personGroup("Ämter Aberllans", [
       data.person("Amtsträger", "..."),
@@ -66,10 +66,10 @@
       href: mapHref,
     }),
     domain: Object.freeze({
-      title: "Diarchie von Camruisge",
+      title: "Dyarchie von Camruisge",
       center: "Aberllan und Oilean",
       crestSrc: banner,
-      crestAlt: "Banner der Insel Camruisge",
+      crestAlt: "Wappenplatzhalter für Camruisge",
       sections: Object.freeze([
         Object.freeze({
           title: "Nördliche Orte",
@@ -133,7 +133,7 @@
         title: "Insel Camruisge – Aberllan und Oilean",
         shortTitle: "Insel Camruisge",
         crestSrc: banner,
-        crestAlt: "Banner der Insel Camruisge",
+        crestAlt: "Wappenplatzhalter für Camruisge",
         kicker: "Zwei Ufer, ein gemeinsames Eiland",
         parentHref,
         parentLabel: "Celtigerns Wacht",
@@ -145,7 +145,7 @@
         infobox: [
           { title: "Allgemein", rows: [
             { label: "Name", value: "Insel Camruisge" },
-            { label: "Typ", value: "Diarchie" },
+            { label: "Typ", value: "Dyarchie" },
             { label: "Lehenswart", value: "Lyonnel Garrael", href: `${familyTreePage}?family=haus-garrael&mode=view` },
             { label: "Triath", value: "..." },
             { label: "Hauptorte", value: "Aberllan und Oilean" },

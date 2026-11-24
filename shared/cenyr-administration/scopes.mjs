@@ -10,12 +10,14 @@ export const CENYR_ADMINISTRATION_SCOPES = Object.freeze([
 ].map(Object.freeze));
 
 const ranks = {
-  county: { label: 'Grafschaft', ruler: 'Grafen', courtSize: 2 },
-  barony: { label: 'Baronie', ruler: 'Baron', courtSize: 1.5 },
-  prince: { label: 'Ritterfürstentum', ruler: 'Ritterfürsten', courtSize: 1 },
+  royal: { label: 'Königreich', ruler: 'König', genitive: 'Königs', courtSize: 2.5, flotillas: 5 },
+  county: { label: 'Grafschaft', ruler: 'Grafen', genitive: 'Grafen', courtSize: 2, flotillas: 5 },
+  barony: { label: 'Baronie', ruler: 'Baron', genitive: 'Barons', courtSize: 1.5, flotillas: 3 },
+  prince: { label: 'Ritterfürstentum', ruler: 'Ritterfürsten', genitive: 'Ritterfürsten', courtSize: 1, flotillas: 2 },
+  diarchy: { label: 'Dyarchie', ruler: 'jeweiligen Oberhaupt', courtSize: 1, flotillas: 0 },
 };
 
 export const rankOf = house => ranks[house.rank || (house.county ? 'county' : 'prince')];
-export const rulerSuffix = house => `des ${rankOf(house).ruler}${house.rank === 'barony' ? 's' : ''}`;
+export const rulerSuffix = house => `des ${rankOf(house).genitive}`;
 export const scopeForTerritory = id => CENYR_ADMINISTRATION_SCOPES.find(scope => scope.territoryId === id);
 export const scopeForHouse = id => CENYR_ADMINISTRATION_SCOPES.find(scope => scope.houseId === id);

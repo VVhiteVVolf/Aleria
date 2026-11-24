@@ -52,8 +52,8 @@ async function contextAt(width, height, touch = false) {
       report.blocked.push(url.href);
       return route.abort('blockedbyclient');
     }
-    if (url.pathname === '/Vorschau/Herrschaftsverwaltung/') {
-      url.pathname = pagePath;
+    if (['/Vorschau/Herrschaftsverwaltung/', '/Vorschau/Herrschaftsverwaltung/Cenyr/'].includes(url.pathname)) {
+      url.pathname += 'index.html';
       return route.continue({ url: url.href });
     }
     return route.continue();
@@ -317,6 +317,8 @@ async function desktop() {
     await page.getByRole('searchbox').fill('Saethwyr');
     const entry = page.locator('[data-preparation="herrschaftsverwaltung"] .preparation-card-link');
     await entry.click();
+    await page.locator('[data-county="celtigerns-wacht"] .county-list > summary').click();
+    await page.getByRole('link', { name: /Herrschaft der Saethwyr/ }).click();
     await page.locator('button[data-house="saethwyr"][aria-pressed="true"]').waitFor();
     await screenshot(page, 'saethwyr-rat-1440');
     report.viewports.push(await auditOffices(page, 1440));
@@ -439,7 +441,7 @@ async function desktop() {
     await page.getByRole('button', { name: 'Entwurf exportieren' }).click();
     const download = await downloadPromise;
     const exported = await readFile(await download.path());
-    assert.equal(download.suggestedFilename(), 'herrschaftsverwaltung-entwurf.json');
+    assert.equal(download.suggestedFilename(), 'cenyr-herrschaftsplanung-entwurf.json');
     const data = JSON.parse(exported);
     assert.equal(data.houses.saethwyr.posts.length, 8);
     assert.deepEqual(data.houses.saethwyr.applicants, ['person--haus-frostauge--aegir-frostauge']);
@@ -448,7 +450,7 @@ async function desktop() {
 
     await page.reload();
     assert.match(await page.locator('[data-area="magie"]').innerText(), /Kelyddon Gafyr/);
-    await page.getByRole('button', { name: 'Hausentwurf zurücksetzen' }).click();
+    await page.getByRole('button', { name: 'Herrschaftsentwurf zurücksetzen' }).click();
     assert.match(await page.locator('[data-area="magie"]').innerText(), /Unbesetzt/);
     const file = page.locator('input[type="file"]');
     await file.setInputFiles({ name: 'entwurf.json', mimeType: 'application/json', buffer: exported });
@@ -889,20 +891,115 @@ async function checkVacancyFinder(width, height) {
   } finally { await context.close(); }
 }
 
+async function checkCenyrTerritories(width, height) {
+  const { context, page } = await contextAt(width, height, width < 600);
+  try {
+    await page.goto(serve.origin + '/Vorschau/Herrschaftsverwaltung/Cenyr/index.html');
+    const counties = page.locator('[data-county]');
+    await counties.last().waitFor();
+    assert.equal(await counties.count(), 9);
+    assert.match(await page.locator('[data-role="kingdom-totals"]').innerText(), /9 Grafschaften.*18 Baronien.*44 Ritterfürstentümer.*1 Dyarchie/);
+    await geometry(page);
+    await screenshot(page, `cenyr-uebersicht-${width}`);
+
+    const filter = page.getByRole('searchbox', { name: 'Grafschaft, Herrschaft oder Haus suchen' });
+    await filter.fill('dinefwr');
+    assert.equal(await counties.count(), 1);
+    assert.equal(await counties.first().getAttribute('data-county'), 'weidebucht');
+    await page.getByRole('link', { name: /Herrschaft der Dinefwr/ }).click();
+    await page.locator('[data-house="herrschaft-dinefwr"][aria-pressed="true"]').waitFor();
+    assert.match(await page.locator('[data-area="finanzen"]').innerText(), /Garselid Dinefwr/);
+    await openOffice(page, 'finanzen');
+    await page.locator('[data-tree-action="open"]').click();
+    assert.equal(await page.locator('#tree-candidates-title').innerText(), 'Weidebucht');
+    await page.getByRole('searchbox', { name: 'Stammbäume durchsuchen' }).fill('Trevelyan Dinefwr');
+    await page.locator('[data-tree-person]').first().waitFor();
+    await page.keyboard.press('Escape');
+    await closeOffice(page);
+    await geometry(page);
+    await screenshot(page, `weidebucht-dinefwr-${width}`);
+
+    const county = page.locator('[data-role="county-select"]');
+    if (width === 1440) {
+      const intercounty = page.locator('[data-role="vacancy-finder"]');
+      await intercounty.locator('summary').click();
+      await intercounty.getByLabel('Gebiet der Postensuche').selectOption('');
+      await intercounty.getByRole('searchbox').fill('Hauptmann der Stadtwache Aberllan');
+      const hit = intercounty.getByRole('link', { name: /Hauptmann der Stadtwache/ });
+      await hit.click();
+      assert.equal(await county.inputValue(), 'celtigerns-wacht');
+      assert.match(await upperPost(page).innerText(), /Lehenswart Aberllans/);
+      await closeOffice(page);
+      assert(await hit.evaluate(node => node === document.activeElement));
+      await intercounty.locator('summary').click();
+    }
+    await county.selectOption('cenyr');
+    await page.locator('[data-house="krone"][aria-pressed="true"]').waitFor();
+    assert.match(await page.locator('[data-area="militaer"]').innerText(), /Galahad Draig/);
+    assert.match(await page.locator('[data-area="ratskanzlei"]').innerText(), /Griflet Pysgod/);
+    await openOffice(page, 'klerus');
+    assert.match(await page.locator('[data-role="post-scroll"]').innerText(), /Die fünf Ämter der Kirchenleitung/);
+    await closeOffice(page);
+    await county.selectOption('vortigerns-ruh');
+    await page.locator('[data-house="grafschaft-vortigerns-ruh"][aria-pressed="true"]').waitFor();
+    assert.match(await page.locator('[data-area="militaer"]').innerText(), /Unbesetzt/);
+    await page.getByRole('link', { name: /Hofämter von Haus Pendrag/ }).click();
+    await page.getByRole('dialog').waitFor();
+    await closeOffice(page);
+
+    await county.selectOption('celtigerns-wacht');
+    await chooseHouse(page, 'camruisge');
+    const diarchy = page.locator('.dyarchy-branches');
+    assert.match(await diarchy.innerText(), /Aberllan[\s\S]*Lyonnel Garrael[\s\S]*Oilean[\s\S]*Tír na Sleagh[\s\S]*Unbesetzt/);
+    assert.match(await page.locator('[data-house="camruisge"] img').getAttribute('src'), /placeholders\/neutral-crest\.png$/);
+    await geometry(page);
+    await screenshot(page, `camruisge-dyarchie-${width}`);
+    await openOffice(page, 'oilean');
+    assert.match(await upperPost(page).innerText(), /Triath \/ Bürgermeister von Oilean/);
+    assert.equal(await candidate(page, 'Lyonnel Garrael').count(), 0);
+    await closeOffice(page);
+    await page.getByRole('link', { name: /Ortsvorbereitung Aberllan/ }).click();
+    await page.getByRole('heading', { name: 'Aberllan', exact: true }).waitFor();
+    await geometry(page);
+    await screenshot(page, `aberllan-ort-${width}`);
+    await page.getByRole('link', { name: /Stadtwache besetzen/ }).click();
+    const watch = page.locator('[data-action="choose-post"][data-post="aberllan/wachhauptmann"]');
+    await watch.waitFor();
+    assert(await watch.evaluate(node => node === document.activeElement));
+    await candidate(page, 'Lyonnel Garrael').click();
+    await watch.click();
+    assert.match(await watch.innerText(), /Lyonnel Garrael/);
+    await geometry(page);
+    await screenshot(page, `aberllan-stadtwache-${width}`);
+    await closeOffice(page);
+
+    await page.goto(serve.origin + pagePath + '?haus=draig&amt=lehenswarte&posten=lehenswarte%2Flehenswart-aberllan');
+    const lead = page.locator('[data-action="choose-post"][data-post="aberllan/leitung"]');
+    await lead.waitFor();
+    assert.match(await lead.innerText(), /Lyonnel Garrael/);
+    assert.match(await watch.innerText(), /Lyonnel Garrael/);
+    assert(await lead.evaluate(node => node === document.activeElement));
+    report.checks.push(`Cenyr, Grafschaftsfilter, Königshof, regionale Stammbäume, Dyarchie und Aberllans Stadtwache bei ${width} px`);
+  } finally { await context.close(); }
+}
+
 try {
   browser = await chromium.launch({
     executablePath: process.env.PLAYWRIGHT_EXECUTABLE || 'C:/Program Files/Google/Chrome/Application/chrome.exe',
     headless: true,
   });
-  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkVacancyFinder(width, height);
-  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkAppointments(width, height);
-  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkLocalAuthorities(width, height);
-  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await reviseOfficeTitles(width, height);
-  await desktop();
-  await mobile(390, 844);
-  await mobile(320, 700);
-  report.checks.push('Stammbäume prüfen den regionalen Einstieg, explizites Einblenden und sichtbare Auswahlbestätigung.');
-  await aldingen();
+  for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkCenyrTerritories(width, height);
+  if (!process.argv.includes('--cenyr')) {
+    for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkVacancyFinder(width, height);
+    for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkAppointments(width, height);
+    for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await checkLocalAuthorities(width, height);
+    for (const [width, height] of [[1440, 940], [390, 844], [320, 700]]) await reviseOfficeTitles(width, height);
+    await desktop();
+    await mobile(390, 844);
+    await mobile(320, 700);
+    report.checks.push('Stammbäume prüfen den regionalen Einstieg, explizites Einblenden und sichtbare Auswahlbestätigung.');
+    await aldingen();
+  }
   assert.deepEqual(report.errors, []);
   assert.deepEqual(report.httpErrors, []);
   report.status = 'passed';

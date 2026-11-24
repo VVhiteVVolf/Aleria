@@ -21,7 +21,7 @@ export const CELTIGERNS_WACHT_REGION_EMBLEMS = Object.freeze({
   }),
   baronies: Object.freeze({
     'Artus Streben': 'assets/images/regions/artus-streben.png',
-    'Camruisge': 'assets/images/regions/camruisge.png',
+    'Camruisge': 'assets/images/placeholders/neutral-crest.png',
     'Gwendolyns Ufer': 'assets/images/regions/gwendolyns-ufer.png',
     'Llamreis Ankunft': 'assets/images/regions/llamreis-ankunft.png',
     'Rhonwens Tränen': 'assets/images/regions/rhonwens-traenen.png',

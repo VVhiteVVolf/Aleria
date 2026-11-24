@@ -1,9 +1,10 @@
 # Gemeinsame Vorbereitungsübersicht
 
 `Vorschau/index.html` zeigt offene Länder- und Provinzvorbereitungen sowie die
-[Verwaltung von Celtigerns Wacht](../Herrschaftsverwaltung/). Die drei
-Argentum-Provinzen besitzen eine eigene Gruppe. Die Besetzungsentwürfe für
-Saethwyr, Gafyr, Wyrm und Haus Draig stehen unter „Verwaltung und Ratsämter“.
+[Herrschaftswerkstatt von Cenyr](../Herrschaftsverwaltung/Cenyr/). Die drei
+Argentum-Provinzen besitzen eine eigene Gruppe. Der Einstieg „Verwaltung und
+Ratsämter“ führt zur königlichen Übersicht und zu den neun Grafschaften.
+Die Direkteinstiege für Celtigerns Wacht und seine Baronien bleiben darunter.
 Die sichtbare Bezeichnung Vardentia verwendet weiterhin den bestehenden Pfad
 `Sylvarant/` und die stabile Entwurfskennung.
 Die Adharath werden als nomadisches Volk mit dem Erbe Dúinreachs vorbereitet,
