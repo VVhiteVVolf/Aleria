@@ -11,6 +11,8 @@ import { officeTitleKey, postTitleKey } from './draft-office-titles.mjs';
 import { renameButton } from './office-title-editor.mjs';
 import { needsFilling, postOccupant } from './draft-assignment-references.mjs';
 import { ABERLLAN_PREVIEW } from './territorial-navigation.mjs';
+import { courtServiceTitle } from './court-service.mjs';
+import { previewAttribute } from './preview-url.mjs';
 
 const placeholders = '/Stammbäume/assets/images/placeholders/';
 
@@ -25,23 +27,23 @@ export function appointmentLinksFor(scopeId, state) {
     if (!person || slot.needsReplacement) return '';
     const links = otherAppointmentLinks(state.appointments(person.id), scopeId, slot.key, post => postTitle(post, person));
     return links.length ? `<ul class="office-appointments" aria-label="${e(`Weitere Ämter von ${person.name}`)}">${links.map(({ label, href }) =>
-      `<li><a href="${e(href)}" data-action="open-appointment">${e(label)}&nbsp;<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>` : '';
+      `<li><a href="${previewAttribute(href)}" data-action="open-appointment">${e(label)}&nbsp;<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>` : '';
   };
 }
 
 export function portrait(person, size = 42) {
   const fallback = `${placeholders}${person?.sex === 'female' || person?.sex === 'male' ? person.sex : 'unknown'}.png`;
-  return `<img class="person-portrait" src="${e(person?.portrait || fallback)}" data-fallback="${e(fallback)}"
+  return `<img class="person-portrait" src="${previewAttribute(person?.portrait || fallback)}" data-fallback="${previewAttribute(fallback)}"
     width="${size}" height="${size}" alt="" loading="lazy" draggable="false">`;
 }
 
 export function officeArtwork(src, size) {
-  return `<img class="office-art" src="${e(src)}" width="${size}" height="${size}" alt="" loading="lazy" draggable="false" data-office-art>`;
+  return `<img class="office-art" src="${previewAttribute(src)}" width="${size}" height="${size}" alt="" loading="lazy" draggable="false" data-office-art>`;
 }
 
 export function renderHouses(houses, people) {
   return houses.map(house => `<button type="button" class="house-choice" data-action="choose-house" data-house="${e(house.id)}" aria-pressed="false">
-    <img src="${e(house.crest)}" width="56" height="56" alt="">
+    <img src="${previewAttribute(house.crest)}" width="56" height="56" alt="">
     <span><strong>${e(house.regional ? house.title : house.name)}</strong><small>${house.regional ? e(house.name)
       : house.preparation ? e(house.title) : `${house.county ? 'Grafschaft · ' : ''}${e(people.get(house.ruler)?.name)}`}</small></span>
   </button>`).join('');
@@ -55,12 +57,12 @@ function renderCouncillor(area, house, positions, people, appointmentLinks) {
     + [...positions.values()].filter(slot => slot.custom && slot.area === area.id && needsFilling(slot)).length;
   const changed = head.occupant !== head.holder;
   return `<article class="council-card-shell"><button type="button" class="council-card" data-action="open-office" data-area="${e(area.id)}" aria-haspopup="dialog">
-    <span class="council-category"><img src="${e(area.imageSrc)}" alt="" width="27" height="27"><span>${e(area.name)}</span></span>
-    <strong class="council-title">${e(postTitle(head, person))}</strong>
+    ${officeArtwork(area.imageSrc, 36)}
+    <span class="council-office-name"><strong class="council-title">${e(postTitle(head, person))}</strong><small class="council-category">${e(area.name)}</small></span>
     <span class="council-holder">${portrait(person, 38)}<span>${e(person?.name || 'Unbesetzt')}
       ${head.needsReplacement ? '<small class="replacement-status">Nachbesetzung nötig</small>' : ''}</span></span>
     <span class="council-meta"><span class="muted">${changed ? '<span class="draft-badge">Entwurf</span> ' : ''}
-      ${vacant} ${vacant === 1 ? 'freier Posten' : 'freie Posten'}</span><span aria-hidden="true">↗</span></span>
+      <span aria-label="${vacant} ${vacant === 1 ? 'freier Posten' : 'freie Posten'}">${vacant}</span></span><span aria-hidden="true">›</span></span>
   </button>${appointmentLinks(head, person)}</article>`;
 }
 
@@ -78,10 +80,10 @@ export function renderContacts(contacts, people, heading = 'Ortsämter und Lehen
       const title = fief ? postTitle(fief, person) : contact.title;
       const location = fief && title.includes(fief.authority.seat) ? '' : ` · ${contact.seat}`;
       return `<li>${portrait(person, 35)}<div><span>${e(title + location)}</span>
-        <strong>${person?.href ? `<a href="${e(person.href)}">${name}</a>` : name}</strong>
+        <strong>${person?.href ? `<a href="${previewAttribute(person.href)}">${name}</a>` : name}</strong>
         ${appointment?.needsReplacement ? '<small class="replacement-status">Nachbesetzung nötig</small>' : ''}
         ${drafted ? `<small>${fief ? 'Ortsamt' : 'Besetzung'} im Entwurf</small>` : ''}
-        ${href ? `<a class="contact-link" href="${e(href)}">${contact.scope ? 'Vikariat bearbeiten' : 'Herrschaft öffnen'} ↗</a>` : ''}
+        ${href ? `<a class="contact-link" href="${previewAttribute(href)}">${contact.scope ? 'Vikariat bearbeiten' : 'Herrschaft öffnen'} ↗</a>` : ''}
         ${contact.note ? `<small>${drafted ? 'Quellenstand · ' : ''}${e(contact.note)}</small>` : ''}</div></li>`;
     }).join('')}</ul>
   </details>`;
@@ -89,7 +91,7 @@ export function renderContacts(contacts, people, heading = 'Ortsämter und Lehen
 
 export function renderDelegatedOffices(entries) {
   return entries?.length ? `<div class="delegated-offices"><h4>Eigenständige Verwaltungen</h4>
-    ${entries.map(({ title, href }) => `<a href="${e(href)}" data-action="open-appointment">${e(title)} ↗</a>`).join('')}</div>` : '';
+    ${entries.map(({ title, href }) => `<a href="${previewAttribute(href)}" data-action="open-appointment">${e(title)} ↗</a>`).join('')}</div>` : '';
 }
 
 function renderCenyrNotes(regent, showRegent) {
@@ -115,6 +117,18 @@ function renderOfficeEntry(area, title, subtitle, slots) {
   </button>`;
 }
 
+function renderScopePortrait(house, people) {
+  const ruler = people.get(house.ruler);
+  return `<aside class="scope-profile" aria-label="${e(house.name)}">
+    <div class="scope-profile-portrait">${portrait(ruler, 220)}${house.crest ? officeArtwork(house.crest, 50) : ''}</div>
+    <div class="scope-profile-caption">
+      <p>${e(house.title)}</p>
+      ${ruler ? `<h3>${e(ruler.name)}</h3>` : ''}
+      <a class="text-link" href="${previewAttribute(house.href)}">Herrschaftsakte</a>
+    </div>
+  </aside>`;
+}
+
 function renderRevisionTools(house, state) {
   return `<div class="revision-tools">
     <button type="button" data-action="undo" ${state.canUndo() ? '' : 'disabled'}>Letzte Änderung rückgängig</button>
@@ -126,16 +140,16 @@ function renderCamruisge(house, positions, people, state) {
   const appointmentLinks = appointmentLinksFor(house.id, state);
   return `<div class="council-heading">
     <div><h2 id="council-title">${e(house.title)}</h2><p class="muted">Zwei örtliche Verwaltungen auf einer Insel</p></div>
-    <a class="text-link" href="${e(house.href)}">Inselakte ↗</a>
+    <a class="text-link" href="${previewAttribute(house.href)}">Inselakte ↗</a>
   </div>
   <div class="dyarchy-branches">${house.branches.map(branch => {
     const area = CAMRUISGE_AREAS.find(item => item.id === branch.id);
     const head = positions.get(house.plans[branch.id].head.key);
     return `<section class="dyarchy-branch">
       <h3>${e(branch.name)}</h3>
-      <p>${e(branch.authority)} · ${branch.familyHref ? `<a href="${e(branch.familyHref)}">${e(branch.familyName)}</a>` : e(branch.familyName)}</p>
+      <p>${e(branch.authority)} · ${branch.familyHref ? `<a href="${previewAttribute(branch.familyHref)}">${e(branch.familyName)}</a>` : e(branch.familyName)}</p>
       ${renderCouncillor(area, house, positions, people, appointmentLinks)}
-      ${head.place === 'Aberllan' ? `<a class="text-link" href="${ABERLLAN_PREVIEW}">Ortsvorbereitung Aberllan ↗</a>` : ''}
+      ${head.place === 'Aberllan' ? `<a class="text-link" href="${previewAttribute(ABERLLAN_PREVIEW)}">Ortsvorbereitung Aberllan ↗</a>` : ''}
     </section>`;
   }).join('')}</div>
   <div class="council-entries dyarchy-cooperation">
@@ -148,25 +162,28 @@ export function renderCouncil(house, areas, positions, people, state) {
   if (house.branches) return renderCamruisge(house, positions, people, state);
   const knights = house.enrolled.filter(family => family.kind === 'knight');
   const civilians = house.enrolled.filter(family => family.kind === 'service');
-  const links = entries => entries.map(family => `<a href="${e(family.href)}">${e(family.name)}</a>`).join('');
+  const links = entries => entries.map(family => `<a href="${previewAttribute(family.href)}">${e(family.name)}</a>`).join('');
   const slots = [...positions.values()];
   const court = slots.filter(slot => /^hof(?:\/|-)/u.test(slot.key));
-  const fiefs = slots.filter(slot => slot.key.startsWith(`${LEHENSWARTE_ID}/`));
+  const dependencies = new Set(Object.values(house.plans).filter(plan => plan.parentArea === LEHENSWARTE_ID)
+    .flatMap(plan => plan.slots.map(slot => slot.key)));
+  const fiefs = slots.filter(slot => slot.key.startsWith(`${LEHENSWARTE_ID}/`) || dependencies.has(slot.key)
+    || (slot.custom && house.plans[slot.area]?.parentArea === LEHENSWARTE_ID));
   const title = area => state.title(house.id, officeTitleKey(area.id), area.name);
   const appointmentLinks = appointmentLinksFor(house.id, state);
   const sourcedRegent = Object.hasOwn(house.offices, 'regentschaft');
-  return `<div class="council-heading">
-    <div><h2 id="council-title">Ratsämter · ${e(house.name)}</h2>
-      <p class="muted">${house.preparation ? `${e(rankOf(house).label)} · ` : ''}${house.candidates.length} Kandidaten aus Haus, Ritterhäusern und direktem Dienst</p></div>
-    <a class="text-link" href="${e(house.href)}">Herrschaftsakte ↗</a>
-  </div>
-  <div class="council-entries">
-    ${house.courtScope ? `<a class="court-entry court-entry-link" href="${e(preparationHref(house.courtScope, 'hof'))}" data-action="open-appointment">
+  return `<div class="register-spread"><div class="office-register">
+  <div class="council-heading"><div><h2 id="council-title">Ratsämter · ${e(house.name)}</h2>
+    <p class="muted">${house.candidates.length} Kandidaten aus Haus, Ritterhäusern und direktem Dienst</p></div></div>
+  <div class="council-entries" aria-label="Weitere Register">
+    ${house.courtScope ? `<a class="court-entry court-entry-link" href="${previewAttribute(preparationHref(house.courtScope, 'hof'))}" data-action="open-appointment">
       ${officeArtwork(COURT_AREA.imageSrc, 32)}<span><strong>Hofämter von Haus Pendrag</strong><small>Gemeinsamer Haushalt am Königshof</small></span><span aria-hidden="true">↗</span>
     </a>` : renderOfficeEntry(COURT_AREA, title(COURT_AREA), 'Hausverwaltung und Hofdienste', court)}
-    ${house.plans[LEHENSWARTE_ID] ? renderOfficeEntry(LEHENSWARTE_AREA, title(LEHENSWARTE_AREA), 'Ortsleitungen und Gildenpacht', fiefs) : ''}
+    ${house.plans[LEHENSWARTE_ID] ? renderOfficeEntry(LEHENSWARTE_AREA, title(LEHENSWARTE_AREA), 'Ortsleitungen, Räte und Gildenpacht', fiefs) : ''}
   </div>
+  <div class="registry-columns" aria-hidden="true"><span>Amt</span><span>Besetzung</span><span>Frei</span></div>
   <div class="council-grid">${areas.filter(area => Object.hasOwn(house.offices, area.id)).map(area => renderCouncillor(area, house, positions, people, appointmentLinks)).join('')}</div>
+  </div>${renderScopePortrait(house, people)}</div>
   <div class="references">
     <details class="reference-panel">
       <summary>Direkt zugeordnete Häuser</summary>
@@ -211,7 +228,7 @@ export function renderCandidate(person, selected) {
   </li>`;
 }
 
-export function renderPost(slot, person, { headLabel = '', image = slot.image, collapseDescription = false, ordinal = 0, showDepartment = true, appointmentLinks } = {}) {
+export function renderPost(slot, person, { headLabel = '', renameHead = false, image = slot.image, collapseDescription = false, ordinal = 0, showDepartment = true, appointmentLinks, ownerFor, serviceRecipient } = {}) {
   const source = slot.occupant === slot.holder && !slot.authorityChoice;
   const status = slot.needsReplacement ? 'Nachbesetzung nötig'
     : source ? (person ? 'Belegte Besetzung' : 'Offen') : (person ? 'Entwurf' : 'Im Entwurf frei');
@@ -225,20 +242,25 @@ export function renderPost(slot, person, { headLabel = '', image = slot.image, c
     ...(!title.includes(slot.authority.seat) ? [slot.authority.seat] : []),
     slot.authority.type || 'Ortstyp offen', ...(lease ? ['Gildenpacht', slot.authorityChoice?.guild] : []),
   ].filter(Boolean).join(' · ') : '';
+  const serviceTitle = courtServiceTitle(slot);
+  const invited = serviceTitle && serviceRecipient?.(slot);
+  const opensSettlement = slot.department?.startsWith('ortsrat-');
   return `<article class="office-post${headLabel ? ' is-head' : ''}" data-drop-post="${e(slot.key)}">
     <div class="post-copy">
       ${officeArtwork(art, headLabel ? 34 : 28)}
       <div>
         ${headLabel ? `<p class="territory-label">${e(headLabel)}</p>` : ''}
         <div class="title-with-rename"><${heading}>${e(name)}</${heading}>
-          ${headLabel ? '' : renameButton(postTitleKey(slot.key), title, slot.department ? 'Amt' : 'Posten')}</div>
+          ${!headLabel || renameHead ? renameButton(postTitleKey(slot.key), title, slot.department ? 'Amt' : 'Posten') : ''}</div>
         ${context ? `<p class="post-place-type">${e(context)}</p>` : ''}
+        ${ownerFor?.(slot) || ''}
+        ${invited ? `<p class="personal-service">${portrait(invited, 22)}<span>${e(serviceTitle + ' von ' + invited.name)}</span></p>` : ''}
         ${duty && collapseDescription ? `<details class="post-duties"><summary>Aufgaben</summary>${duty}</details>` : duty}
         ${slot.reportsTo ? `<p class="post-reports">Untersteht ${e(slot.reportsTo)}</p>` : ''}
         ${slot.place && !slot.authority && slot.title !== slot.originalTitle ? `<p class="post-reports">Ort ${e(slot.place)}</p>` : ''}
         ${slot.locality?.type === 'station' ? `<p class="post-reports">Stationiert in ${e(slot.locality.name)}</p>` : ''}
-        ${slot.note ? `<p class="source-note">${e(slot.note)}</p>` : ''}
-        ${slot.href ? `<a class="contact-link" href="${e(slot.href)}">Lehen ansehen ↗</a>` : ''}
+        ${slot.note ? `<p class="source-note">${e((serviceTitle ? 'Quellenstand · ' : '') + slot.note)}</p>` : ''}
+        ${slot.href ? `<a class="contact-link" href="${previewAttribute(slot.href)}">Lehen ansehen ↗</a>` : ''}
       </div>
     </div>
     <div class="post-assignment">
@@ -250,11 +272,12 @@ export function renderPost(slot, person, { headLabel = '', image = slot.image, c
       </button>
       ${slot.previousOccupantName ? `<p class="former-assignment">Andere Besetzung im früheren Entwurf · ${e(slot.previousOccupantName)}</p>` : ''}
       ${appointmentLinks?.(slot, person) || ''}
-      ${person || slot.needsReplacement || slot.authority || slot.removable || (showDepartment && slot.department) ? `<div class="post-actions">
+      ${person || slot.needsReplacement || slot.authority || slot.removable || serviceTitle || (showDepartment && slot.department) ? `<div class="post-actions">
         ${slot.authority ? `<button type="button" data-action="configure-authority" data-post="${e(slot.key)}" aria-haspopup="dialog"
           aria-label="${e(`Amtsform für ${slot.authority.seat} wählen`)}">Amtsform wählen</button>` : ''}
         ${showDepartment && slot.department ? `<button type="button" data-action="open-department" data-department="${e(slot.department)}"
-          data-post="${e(slot.key)}" aria-label="${e(`Hierarchie öffnen: ${name}`)}">Hierarchie öffnen</button>` : ''}
+          data-post="${e(slot.key)}" aria-label="${e(opensSettlement ? 'Ortsrat öffnen: ' + slot.place : 'Hierarchie öffnen: ' + name)}">${opensSettlement ? 'Ortsrat öffnen' : 'Hierarchie öffnen'}</button>` : ''}
+        ${serviceTitle ? `<button type="button" data-action="configure-service" data-post="${e(slot.key)}" aria-haspopup="dialog">Dienst zuteilen</button>` : ''}
         ${person || slot.needsReplacement ? `<button type="button" data-action="clear-post" data-post="${e(slot.key)}" aria-label="${e(`Posten freigeben: ${title}`)}">Freigeben</button>` : ''}
         ${slot.removable ? `<button type="button" data-action="remove-post" data-post="${e(slot.key)}" aria-label="${e(`Posten entfernen: ${name}`)}">Entfernen</button>` : ''}
       </div>` : ''}
@@ -270,18 +293,18 @@ export function renderMilitaryForces(house) {
     <dl class="affiliation-list">${CENYR_FORCES.map(force => {
       const target = force.id === 'hausmacht' ? 'hof' : force.id === 'kirche' ? 'klerus' : '';
       return `<div><dt>${e(force.title)}</dt><dd>${e(force.text)}
-      ${target === 'hof' && house.courtScope ? `<a href="${preparationHref(house.courtScope, 'hof', 'hof-hausmacht')}">Hausmacht öffnen ↗</a>`
+      ${target === 'hof' && house.courtScope ? `<a href="${previewAttribute(preparationHref(house.courtScope, 'hof', 'hof-hausmacht'))}">Hausmacht öffnen ↗</a>`
         : target ? `<a href="${e(href(target))}">${target === 'hof' ? 'Hausmacht öffnen' : 'Kirchliche Ämter öffnen'} ↗</a>` : ''}</dd></div>`;
     }).join('')}</dl>
   </details>`;
 }
 
-export function renderPostSection(group, slots, { people, appointmentLinks }, repeated = '') {
-  return `<section class="post-group${group.core ? ' is-core' : ''}${group.leadership ? ' is-leadership' : ''}"><header>
+export function renderPostSection(group, slots, { people, appointmentLinks, ownerFor, serviceRecipient }, repeated = '') {
+  return `<section class="post-group${group.core ? ' is-core' : ''}${group.leadership ? ' is-leadership' : ''}" data-office-section="${e(group.title)}" data-office-group="${e(group.id || '')}"><header>
     ${officeArtwork(group.icon, 32)}
     <div><h4>${e(group.title)}</h4>
     ${group.description ? `<p>${e(group.description)}</p>` : ''}</div>
   </header>${slots.length ? `<div class="post-grid">${slots.map(slot => renderPost(slot, postOccupant(slot, people), {
-    collapseDescription: group.leadership, appointmentLinks,
+    collapseDescription: group.leadership, appointmentLinks, ownerFor, serviceRecipient,
   })).join('')}</div>` : ''}${repeated}</section>`;
 }

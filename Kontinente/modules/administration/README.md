@@ -13,6 +13,13 @@ Gemeinsame Ansicht für bestehende und künftige Herrschaften. Gestaltung und Zu
 - `administration-renderer.mjs` und `administration-hierarchy.mjs` erhalten die älteren HTML-Quellen anderer Herrschaften einschließlich Aufgaben-Tabellen. Erkannte Hierarchien verwenden dieselben Amtskarten; unbekannte Tabellenformen bleiben erhalten.
 - `administration.css` besitzt ausschließlich die einzeilige äußere Kachelauswahl. Hauptfenster, Amtskarten und Amtsdetails besitzen eigene CSS-Dateien. Keine Überschreibungen in `herrschaft.css`.
 
+Die gemalten Pergament-, Leder- und Messingflächen liegen gemeinsam mit ihren
+CSS-Variablen in [`shared/cenyr-administration/`](../../../shared/cenyr-administration/administration-materials.css).
+Die Renderer bestimmen die Anordnung ihrer Ansichten. In den regulären
+Verwaltungsfenstern steht die Amtsleitung vor der Einführung. Das Amtsdetail
+nennt oben die amtsführende Herrschaft, den Bereich und die Abteilung. Die
+Hofämter und Ortsräte übernehmen ihre Symbole aus dem gemeinsamen Amtsplan.
+
 ## Redaktionelle Daten und Dienstwege
 
 `data/celtigerns-{bereich}.mjs` liefern die ausführlichen Amtsprofile der Grafschaft. `shared/cenyr-administration/` besitzt die gemeinsame Hierarchie und übernimmt die belegten Besetzungen aus den territorialen Räten, Hausakten und dem Almanach. Die Werkstatt speichert Umbesetzungen browserlokal.

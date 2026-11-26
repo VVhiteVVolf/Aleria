@@ -20,7 +20,7 @@ function checkedTitle(value) {
 
 export function validTitleKeys(plans, posts) {
   const keys = new Set(Object.entries(plans).flatMap(([area, plan]) => [
-    ...(plan.head ? [] : [officeTitleKey(area)]),
+    ...(plan.head && !plan.settlement ? [] : [officeTitleKey(area)]),
     ...plan.templates.map(template => titleKeyForTemplate(area, template)),
   ]));
   for (const post of posts.values()) {

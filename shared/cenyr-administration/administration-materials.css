@@ -1,0 +1,60 @@
+/* Resolve the image URLs against this stylesheet, including in file previews. */
+@property --administration-vellum-image {
+  syntax: '<url> | none';
+  inherits: true;
+  initial-value: none;
+}
+@property --administration-leather-image {
+  syntax: '<url> | none';
+  inherits: true;
+  initial-value: none;
+}
+@property --administration-frame-image {
+  syntax: '<url> | none';
+  inherits: true;
+  initial-value: none;
+}
+@property --administration-button-image {
+  syntax: '<url> | none';
+  inherits: true;
+  initial-value: none;
+}
+
+:root {
+  --administration-vellum-image: url('assets/ui/vellum-v2.webp');
+  --administration-leather-image: url('assets/ui/leather-v2.webp');
+  --administration-frame-image: url('assets/ui/brass-frame-v2.webp');
+  --administration-button-image: url('assets/ui/brass-button-v2.webp');
+  --administration-ink: #38271e;
+  --administration-muted: #65503c;
+  --administration-accent: #6b352d;
+  --administration-line: #b79a69;
+  --administration-cream: #f8e8bf;
+  --administration-muted-cream: #dec798;
+  --administration-paper: linear-gradient(#f7ebd09e, #f6e8c78f), var(--administration-vellum-image, none) center top / 980px auto, #f0e0bc;
+  --administration-paper-light: linear-gradient(120deg, #fff6dfa8, #f3e5c1a3), var(--administration-vellum-image, none) center / 710px auto, #f5e8c8;
+  --administration-paper-dark: linear-gradient(#e9cf9d6e, #dfbf8d7d), var(--administration-vellum-image, none) center / 710px auto, #e3cca1;
+  --administration-cover: linear-gradient(#271c25a8, #251923c2), var(--administration-leather-image, none) center / 720px auto, #32242d;
+  --administration-backdrop: linear-gradient(#1b1118c7, #211219dd), var(--administration-leather-image, none) center / 720px auto, #231822;
+  --administration-frame: var(--administration-frame-image, none) 14% / 14px stretch;
+  --administration-plaque: var(--administration-button-image, none) 21% 9% fill / 7px 12px stretch;
+}
+
+.administration-planning-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  max-width: 100%;
+  padding: .35rem .9rem;
+  border: 1px solid var(--administration-line);
+  border-image: var(--administration-plaque);
+  background: #ddc28e;
+  color: var(--administration-ink);
+  font: 700 .88rem/1.3 Georgia, 'Times New Roman', serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+.administration-planning-link:hover { filter: brightness(1.06); }
+.administration-planning-link:focus-visible { outline: 2px solid var(--administration-accent); outline-offset: 3px; }

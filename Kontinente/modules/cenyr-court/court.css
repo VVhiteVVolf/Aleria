@@ -1,1 +1,56 @@
 @import url("../kingdom-court/court.css?v=20261020");
+@import url('../../../shared/cenyr-administration/administration-materials.css');
+
+@media screen {
+  .cenyr-court:has([data-court-directory]) {
+    --court-ink: var(--administration-ink);
+    --court-muted: var(--administration-muted);
+    --court-wine: var(--administration-accent);
+    --court-line: var(--administration-line);
+    background: var(--administration-cover);
+  }
+  :where(.cenyr-court:has([data-court-directory])) .court-book {
+    border: 6px solid var(--administration-line);
+    border-image: var(--administration-frame);
+    border-image-width: 18px;
+    background: var(--administration-paper);
+  }
+  :where(.cenyr-court:has([data-court-directory])) .court-hero {
+    color: var(--administration-cream);
+    background: var(--administration-cover);
+  }
+  :where(.cenyr-court:has([data-court-directory])) .court-hero :is(.court-eyebrow, .court-lead) { color: var(--administration-muted-cream); }
+  :where(.cenyr-court:has([data-court-directory])) .court-hero-icon { background: var(--administration-paper-light); mix-blend-mode: normal; }
+  :where(.cenyr-court:has([data-court-directory])) .court-tabs {
+    gap: .35rem .55rem;
+    padding-block: .6rem;
+    background: var(--administration-paper-dark);
+  }
+  :where(.cenyr-court:has([data-court-directory])) :is(.court-tabs a, .court-search button) {
+    min-height: 40px;
+    padding: .5rem .85rem;
+    border: 1px solid var(--administration-line);
+    border-image: var(--administration-plaque);
+    color: var(--administration-ink);
+    background: #ddc28e;
+  }
+  :where(.cenyr-court:has([data-court-directory])) .court-tabs a[aria-current] {
+    border-image: var(--administration-frame);
+    border-image-width: 8px;
+    color: var(--administration-cream);
+    background: var(--administration-cover);
+  }
+  :where(.cenyr-court:has([data-court-directory])) :is(.court-tabs a, .court-search button):hover { filter: brightness(1.07); }
+  :where(.cenyr-court:has([data-court-directory])) :is(.court-search, .court-office) {
+    border-image: var(--administration-frame);
+    border-image-width: 8px;
+    background: var(--administration-paper-light);
+  }
+  :where(.cenyr-court:has([data-court-directory])) :is(.court-sidebar, .court-office:target) { background: var(--administration-paper-dark); }
+  :where(.cenyr-court:has([data-court-directory])) .court-search input { background: var(--administration-paper-light); }
+  :where(.cenyr-court:has([data-court-directory])) .court-section-number { display: none; }
+}
+
+@media screen and (max-width: 720px) {
+  :where(.cenyr-court:has([data-court-directory])) .court-book { border-width: 3px; border-image-width: 9px; }
+}

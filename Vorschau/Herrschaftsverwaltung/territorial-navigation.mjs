@@ -23,7 +23,7 @@ export function prepareTerritorialHouses(legacyHouses, directory) {
     if (house.id !== 'draig') return territorial;
     return {
       ...territorial,
-      fiefContacts: house.fiefContacts.filter(contact => contact.seat !== 'Aberllan'),
+      fiefContacts: (house.fiefContacts || []).filter(contact => contact.seat !== 'Aberllan'),
       delegatedOffices: [{ title: 'Lehenswart Aberllans', href: aberllanOfficeHref }],
     };
   });

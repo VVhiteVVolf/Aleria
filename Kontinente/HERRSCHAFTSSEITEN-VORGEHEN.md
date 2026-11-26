@@ -65,7 +65,7 @@ Geprüft auf den acht Herrschaftsseiten und der Grafschaftsvorlage bei 1440, 102
 
 ### Verwaltungsfenster
 
-Seit dem 28. Oktober 2026 verwenden die Verwaltungsfenster große maximierbare Pergamentflächen und gemeinsame Amtskarten. Portraits stehen im 2:3-Format mit goldenen, silbernen oder bronzenen Rahmen; bereichsspezifische SVG-Stecknadeln zeigen den Rang zusätzlich zum ausgeschriebenen Amt. Der helle Kopf und die Bereichsnavigation bleiben sichtbar. Nur der Inhalt scrollt vertikal.
+Die Verwaltungsfenster verwenden große maximierbare Pergamentflächen und gemeinsame Amtskarten. Der Lederkopf, die Messingrahmen und die Knopfplatten kommen aus denselben Bilddateien wie in der Herrschaftswerkstatt. Porträts stehen im 2:3-Format. Goldene, silberne und bronzene Abzeichen mit Amtssymbolen kennzeichnen die Ränge. Kopf und Bereichsnavigation bleiben sichtbar, während der Inhalt scrollt.
 
 Ein Klick auf eine Amtskarte öffnet die Beschreibung: links größeres Portrait, Name und kleiner ausgegrauter Vorgänger; rechts kompakte Angaben, Aufgaben, Vollmacht und Verbindungen zu anderen Bereichen. Fehlt ein belegter Vorgänger, erscheinen Silhouette und ausschließlich „Vorgänger“. Das Detailfenster passt seine Höhe dem Inhalt an und besitzt eine begrenzte Scrollfläche.
 

@@ -6,6 +6,8 @@ export function createOfficeDialog({ owner, onNavigate } = {}) {
   const dialog = element('dialog', 'administration-office-dialog');
   const shell = element('div', 'administration-office-shell');
   const header = element('header', 'administration-office-header');
+  const title = element('div');
+  const path = element('p', 'administration-office-path');
   const heading = element('h2');
   heading.id = owner ? 'administration-office-title' : 'house-court-office-title';
   dialog.setAttribute('aria-labelledby', heading.id);
@@ -14,7 +16,8 @@ export function createOfficeDialog({ owner, onNavigate } = {}) {
   close.type = 'button';
   close.setAttribute('aria-label', 'Amtsbeschreibung schließen');
   close.addEventListener('click', () => dialog.close());
-  header.append(heading, close);
+  title.append(path, heading);
+  header.append(title, close);
   const body = element('div', 'administration-office-body');
   shell.append(header, body); dialog.append(shell); document.body.append(dialog);
   let trigger;
@@ -28,6 +31,8 @@ export function createOfficeDialog({ owner, onNavigate } = {}) {
     open(data, button) {
       trigger = button;
       heading.textContent = data.role.title;
+      path.textContent = [data.role.jurisdiction || data.area.jurisdiction, data.area.title, data.group.title]
+        .filter(Boolean).join(' → ');
       dialog.dataset.tier = data.tier;
       const text = renderOfficeView(body, data, onNavigate ? areaId => { dialog.close(); onNavigate(areaId); } : null);
       if (!dialog.open) dialog.showModal();

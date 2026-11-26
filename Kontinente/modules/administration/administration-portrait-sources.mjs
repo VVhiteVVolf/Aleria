@@ -10,6 +10,23 @@ export const ADMINISTRATION_PORTRAIT_ARCHIVE = Object.freeze([
   { source: 'https://i.imgur.com/yTbQ4Mq.png', local: '/Kontinente/modules/administration/assets/portraits/ceridwen-lhuyd.png' },
   { source: 'https://i.imgur.com/YdNY8rx.png', local: '/Kontinente/modules/administration/assets/portraits/jinell-harddwch.png' },
   { source: 'https://i.imgur.com/QrGSnzO.png', local: '/Kontinente/modules/administration/assets/portraits/gwydion-seon.png' },
+  { source: 'https://i.imgur.com/dscN0iz.png', local: '/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/assets/hywel-tynged.png' },
+  { source: 'https://i.imgur.com/yu4DXTn.png', local: '/Kontinente/modules/administration/assets/portraits/afan-draenmelyn.webp' },
+  { source: 'https://i.imgur.com/yEPvXLm.png', local: '/Kontinente/modules/administration/assets/portraits/brona-eisenherz.webp' },
+  { source: 'https://i.imgur.com/sMslhgn.png', local: '/Kontinente/modules/administration/assets/portraits/bryn-rhydderch.webp' },
+  { source: 'https://i.imgur.com/SaDQCjc.png', local: '/Kontinente/modules/administration/assets/portraits/cadell-ysgrif.webp' },
+  { source: 'https://i.imgur.com/t2AWKNw.png', local: '/Kontinente/modules/administration/assets/portraits/cadog-morwyn.webp' },
+  { source: 'https://i.imgur.com/UtW0UZD.png', local: '/Kontinente/modules/administration/assets/portraits/cai-taflu.webp' },
+  { source: 'https://i.imgur.com/LK3q0UI.png', local: '/Kontinente/modules/administration/assets/portraits/caradog-tonnarth.webp' },
+  { source: 'https://i.imgur.com/y5aRhJb.png', local: '/Kontinente/modules/administration/assets/portraits/emrys-porthan.webp' },
+  { source: 'https://i.imgur.com/IEHF8TV.png', local: '/Kontinente/modules/administration/assets/portraits/gethin-draenmelyn.webp' },
+  { source: 'https://i.imgur.com/vSRYHg1.png', local: '/Kontinente/modules/administration/assets/portraits/glendower-o-cenyr.webp' },
+  { source: 'https://i.imgur.com/cy3TS2x.png', local: '/Kontinente/modules/administration/assets/portraits/gwenllian-lyswen.webp' },
+  { source: 'https://i.imgur.com/mqnDamN.png', local: '/Kontinente/modules/administration/assets/portraits/iddon-haearn.webp' },
+  { source: 'https://i.imgur.com/6YW06jU.png', local: '/Kontinente/modules/administration/assets/portraits/ifor-draenmelyn.webp' },
+  { source: 'https://i.imgur.com/RE5WMSF.png', local: '/Kontinente/modules/administration/assets/portraits/rhodri-aelmor.webp' },
+  { source: 'https://i.imgur.com/cAfLe9b.png', local: '/Kontinente/modules/administration/assets/portraits/rhunlas-llon.webp' },
+  { source: 'https://i.imgur.com/NR8HKxj.png', local: '/Kontinente/modules/administration/assets/portraits/rhydwen-swyll.webp' },
 ]);
 
 const localBySource = new Map(ADMINISTRATION_PORTRAIT_ARCHIVE.map(entry => [entry.source, entry.local]));

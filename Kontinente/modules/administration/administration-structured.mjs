@@ -50,6 +50,8 @@ export async function renderStructuredAdministration(scopeId, areaId) {
   const view = element('div', 'administration-structured');
   view.dataset.areaId = area.id;
   if (scope.legacyCouncil) view.dataset.legacyCouncil = 'true';
+  const [leadership, ...groups] = area.groups;
+  view.append(renderRoleGroup(leadership, area));
   const intro = element('div', 'administration-area-intro');
   intro.append(element('p', '', area.intro || official.house.title));
   const legend = element('div', 'administration-rank-legend');
@@ -59,13 +61,13 @@ export async function renderStructuredAdministration(scopeId, areaId) {
     legend.append(item);
   });
   intro.append(legend);
-  const planning = element('a', 'administration-module-link', 'Besetzung in der Werkstatt bearbeiten ↗');
+  const planning = element('a', 'administration-planning-link', 'Besetzung in der Werkstatt bearbeiten ↗');
   planning.href = preparationHref(scope.id, areaId);
   intro.append(planning);
   view.append(intro);
   if (areaId === 'militaer') view.append(militaryForces(scope.id));
-  const recurring = area.groups.filter(group => group.collapsible);
-  area.groups.filter(group => !group.collapsible).forEach(group => view.append(renderRoleGroup(group, area)));
+  const recurring = groups.filter(group => group.collapsible);
+  groups.filter(group => !group.collapsible).forEach(group => view.append(renderRoleGroup(group, area)));
   if (recurring.length) {
     const heading = element('h3', 'administration-recurring-heading', 'Niedere, Sonder- und übrige Rollen');
     view.append(heading);

@@ -12,8 +12,11 @@ import { officeTitleKey, postTitleKey, titleKeyForTemplate } from './draft-offic
 import { bindOfficeTitleEditor, renameButton } from './office-title-editor.mjs';
 import { bindLocalAuthorityEditor } from './local-authority-editor.mjs';
 import { needsFilling, postOccupant } from './draft-assignment-references.mjs';
+import { bindCourtServiceEditor } from './court-service-editor.mjs';
+import { officePath, officeResponsibility } from './office-context.mjs';
+import { previewUrl } from './preview-url.mjs';
 
-export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleEditor, authorityEditor, onChange, onClose }) {
+export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleEditor, authorityEditor, serviceEditor, onChange, onClose, onTransfer }) {
   const role = name => dialog.querySelector(`[data-role="${name}"]`);
   const filters = role('filters');
   const list = role('candidate-list');
@@ -30,6 +33,9 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   const vacanciesOnly = role('vacancies-only');
   const title = dialog.querySelector('#office-title');
   const renameOffice = role('rename-office');
+  const path = role('office-path');
+  const owner = role('office-owner');
+  const sectionNav = role('section-nav');
   const backButton = dialog.querySelector('[data-action="back-office"]');
   const fields = filters.elements;
   const postFields = postForm.elements;
@@ -38,6 +44,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   let house, area, plan;
   let rootArea;
   const parentViews = [];
+  let currentSection = '';
   let selectedId = null;
   let copiedRole;
   let pendingClose = false;
@@ -45,6 +52,28 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   const writeStatus = message => { status.textContent = message; };
   const branch = () => house.branches?.find(entry => entry.id === area.id);
   const directCandidates = () => house.candidates.filter(person => !branch() || !person.branch || person.branch === branch().id);
+
+  function drawPath() {
+    path.innerHTML = officePath(house, parentViews.map(view => view.name), title.textContent, currentSection);
+  }
+  function setSection(section) {
+    if (section === currentSection) return;
+    currentSection = section;
+    sectionNav.value = [...sectionNav.options].some(option => option.value === section) ? section : '';
+    drawPath();
+  }
+  function followSection(event) { setSection(event.target.closest('[data-office-section]')?.dataset.officeSection || ''); }
+  postScroll.addEventListener('focusin', event => {
+    // Pointer focus happens before the click. Leave its target in place until the click arrives.
+    if (event.target.matches(':focus-visible')) followSection(event);
+  });
+  postScroll.addEventListener('click', followSection);
+  sectionNav.addEventListener('change', () => {
+    const section = [...postScroll.querySelectorAll('[data-office-section]')].find(node => node.dataset.officeSection === sectionNav.value);
+    if (section) postScroll.scrollTop += section.getBoundingClientRect().top - postScroll.getBoundingClientRect().top;
+    else postScroll.scrollTop = 0;
+    setSection(section?.dataset.officeSection || '');
+  });
 
   function focusPost(key, groupOnly = false) {
     const button = dialog.querySelector(`[data-action="choose-post"][data-post="${CSS.escape(key)}"]`);
@@ -55,6 +84,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
       if (group) group.open = true;
       button.focus();
     }
+    setSection(button.closest('[data-office-section]')?.dataset.officeSection || '');
   }
 
   function candidateOptions() {
@@ -92,10 +122,15 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     const expanded = openRoleGroups(postScroll);
     const positions = state.positions(house.id);
     const appointmentLinks = appointmentLinksFor(house.id, state);
-    const view = { people, appointmentLinks };
+    const ownerFor = slot => officeResponsibility(house, area.id, plan, slot);
+    const serviceRecipient = slot => state.serviceRecipient(house.id, slot);
+    const view = { people, appointmentLinks, ownerFor, serviceRecipient };
     const head = plan.head && positions.get(plan.head.key);
-    const titleKey = head ? postTitleKey(head.key) : officeTitleKey(area.id);
-    title.textContent = head ? postTitle(head, postOccupant(head, people)) : state.title(house.id, titleKey, area.name);
+    const namedHead = head && !plan.settlement;
+    const titleKey = namedHead ? postTitleKey(head.key) : officeTitleKey(area.id);
+    title.textContent = namedHead ? postTitle(head, postOccupant(head, people)) : state.title(house.id, titleKey, area.name);
+    owner.innerHTML = ownerFor(head ?? {});
+    drawPath();
     renameOffice.innerHTML = renameButton(titleKey, title.textContent, 'Amt');
     for (const link of connections.querySelectorAll('[data-action="open-department"]')) {
       const target = positions.get(link.dataset.post);
@@ -108,12 +143,13 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     // Leadership posts stay available when the list is filtered to vacancies.
     headPost.hidden = !head;
     headPost.innerHTML = head ? renderPost(head, postOccupant(head, people), {
-      headLabel: area.id === 'regentschaft' ? 'Sonderamt unter dem Oberhaupt' : parentViews.length ? 'Hofamt'
+      headLabel: plan.settlement ? 'Ortsleitung' : area.id === 'regentschaft' ? 'Sonderamt unter dem Oberhaupt' : parentViews.length ? 'Hofamt'
         : branch() ? `Leitung · ${branch().name}` : house.county || house.rank === 'county'
           ? 'Amtsleitung der Grafschaft' : `Amtsleitung unter dem ${rankOf(house).ruler}`,
       image: area.imageSrc,
+      renameHead: Boolean(plan.settlement),
       showDepartment: !parentViews.length,
-      appointmentLinks,
+      appointmentLinks, ownerFor, serviceRecipient,
     }) : '';
     const custom = [...positions.values()].filter(slot => slot.custom && slot.area === area.id);
     const slots = [...plan.slots.map(slot => positions.get(slot.key)).filter(Boolean), ...custom];
@@ -128,6 +164,10 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
       return active.length || group.repeatableHere || group.staff
         ? renderPostSection(group, fixed, view, renderRoleGroups(repeated, view, expanded, revealOccupied === true)) : '';
     }).join('');
+    const sections = [...postScroll.querySelectorAll('[data-office-section]')].map(group => group.dataset.officeSection);
+    sectionNav.hidden = sections.length < 2;
+    sectionNav.replaceChildren(new Option('Abschnitt', ''), ...sections.map(section => new Option(section, section)));
+    if (sections.includes(currentSection)) sectionNav.value = currentSection;
     role('role-groups').innerHTML = renderLowerRoles(visible(slots.filter(slot => slot.kind && !slot.placement)), view, expanded, revealOccupied === true);
     dialog.querySelector('[data-action="undo"]').disabled = !state.canUndo();
     postScroll.scrollTop = scroll;
@@ -172,6 +212,14 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
       if (state.setAuthority(house.id, key, choice)) {
         update(choice ? 'Ortsamt im Entwurf geändert.' : 'Vorgabe für das Ortsamt wiederhergestellt.');
       }
+    },
+  });
+  const editService = bindCourtServiceEditor(serviceEditor, {
+    choices: () => state.serviceRecipientChoices(house.id),
+    recipient: post => state.serviceRecipient(house.id, post),
+    findTrigger: key => dialog.querySelector(`[data-action="configure-service"][data-post="${CSS.escape(key)}"]`),
+    onChange(key, target) {
+      if (state.setServiceRecipient(house.id, key, target)) update('Persönliche Dienstzuteilung im Entwurf gespeichert.');
     },
   });
 
@@ -296,9 +344,11 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   function activate(category) {
     area = category;
     plan = house.plans[area.id];
+    dialog.dataset.officeView = plan.settlement ? 'settlement' : 'office';
+    currentSection = '';
     treePicker.clearReceipt();
     treePicker.close();
-    role('area-icon').src = area.imageSrc;
+    role('area-icon').src = previewUrl(area.imageSrc);
     backButton.hidden = !parentViews.length;
     backButton.setAttribute('aria-label', `Zurück zu ${parentViews.at(-1)?.category.name || 'den Hofämtern'}`);
     newPost.open = false;
@@ -326,9 +376,10 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     postScroll.scrollTop = 0;
   }
 
-  function back() {
-    const parent = parentViews.pop();
+  function back(depth = parentViews.length - 1) {
+    const parent = parentViews[depth];
     if (!parent) return;
+    parentViews.splice(depth);
     activate(parent.category);
     postScroll.scrollTop = parent.scroll;
     dialog.querySelector(`[data-action="open-department"][data-post="${CSS.escape(parent.post)}"]`)?.focus();
@@ -337,7 +388,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   function openDepartment(id, post) {
     const child = house.plans[id]?.department;
     if (!child) return;
-    parentViews.push({ category: area, post, scroll: postScroll.scrollTop });
+    parentViews.push({ category: area, name: title.textContent, post, scroll: postScroll.scrollTop });
     activate(child);
     title.focus({ preventScroll: true });
   }
@@ -362,12 +413,21 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     switch (action) {
       case 'close': close(); break;
       case 'back-office': back(); break;
+      case 'office-ancestor': back(Number(button.dataset.depth)); break;
+      case 'transfer-draft': onTransfer(house, [
+        { id: area.id, name: title.textContent }, ...parentViews.slice().reverse().map(view => ({ id: view.category.id, name: view.name })),
+      ], message => { drawRoleOptions(); update(message); }); break;
       case 'manage-roles': openRoleEditor(); break;
       case 'add-role-like': openRoleEditor(state.positions(house.id).get(post)); break;
       case 'rename-title': editor.open(button); break;
       case 'configure-authority': {
         const slot = state.positions(house.id).get(post);
         if (slot?.authority) localEditor.open(slot);
+        break;
+      }
+      case 'configure-service': {
+        const slot = state.positions(house.id).get(post);
+        if (slot) editService(slot);
         break;
       }
       case 'open-department': {
@@ -443,15 +503,18 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
 
   return {
     open(scope, category, department, postKey) {
+      const keepFilters = dialog.open && house.id === scope.id;
       if (dialog.open) preferences.set(house.id, { free: fields.free.checked });
       house = scope;
       rootArea = category;
       parentViews.length = 0;
       role('scope-label').textContent = house.name;
-      filters.reset();
-      fields.free.checked = preferences.get(house.id)?.free || false;
-      role('options').open = false;
-      vacanciesOnly.checked = false;
+      if (!keepFilters) {
+        filters.reset();
+        fields.free.checked = preferences.get(house.id)?.free || false;
+        role('options').open = false;
+        vacanciesOnly.checked = false;
+      }
       select(null);
       activate(category);
       if (!dialog.open) {

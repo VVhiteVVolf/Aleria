@@ -23,9 +23,17 @@ export function portraitImage(src, name = '') {
   return image;
 }
 
-export function pin(areaId, tier) {
+export function pin(areaId, tier, artwork) {
   const badge = element('span', `administration-pin is-${tier}`);
   badge.setAttribute('aria-label', { gold: 'Goldrang', silver: 'Silberrang', bronze: 'Bronzerang' }[tier]);
+  if (artwork) {
+    const image = element('img', 'administration-pin-artwork');
+    image.src = artwork;
+    image.alt = '';
+    image.loading = 'lazy';
+    badge.append(image);
+    return badge;
+  }
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('viewBox', '0 0 64 64');
   svg.setAttribute('aria-hidden', 'true');
@@ -98,7 +106,7 @@ function renderRoleCard(role, group, area) {
   copy.append(element('strong', 'administration-role-name', role.name || 'Noch nicht benannt'));
   if (role.jurisdiction) copy.append(element('span', 'administration-role-jurisdiction', role.jurisdiction));
   copy.append(element('span', 'administration-role-hint', 'Amt & Aufgaben ↗'));
-  button.append(frame, pin(role.areaId || area.id, tier), copy);
+  button.append(frame, pin(role.areaId || area.id, tier, role.officeIcon), copy);
   card.append(button);
   const appointments = renderAppointmentLinks(role);
   if (appointments) card.append(appointments);

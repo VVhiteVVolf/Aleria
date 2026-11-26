@@ -41,7 +41,8 @@ body.world-codex {
   outline: 2px solid var(--codex-rubric);
   outline-offset: 4px;
 }
-.world-codex :is(.kingdom-frame, .grossstadt-template-frame) :is(h2, .kingdom-section-heading, .codex-section-heading) {
+/* Eingebettete Komponenten können ihre Überschriften selbst gestalten. */
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) :is(h2, .kingdom-section-heading, .codex-section-heading):not(:where([data-codex-own-headings] *)) {
   position: relative;
   margin: 1.65rem 0 1rem !important;
   padding: 0 0 0.55rem !important;
@@ -54,7 +55,7 @@ body.world-codex {
   scroll-margin-top: 85px;
   text-align: left;
 }
-.world-codex :is(.kingdom-frame, .grossstadt-template-frame) :is(h2, .kingdom-section-heading, .codex-section-heading)::after {
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) :is(h2, .kingdom-section-heading, .codex-section-heading):not(:where([data-codex-own-headings] *))::after {
   content: '◆';
   position: absolute;
   right: 0;
@@ -64,7 +65,7 @@ body.world-codex {
   background: var(--codex-paper);
   font-size: 10px;
 }
-.world-codex :is(.kingdom-frame, .grossstadt-template-frame) h3 {
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) h3:not(:where([data-codex-own-headings] *)) {
   padding: 0;
   border: 0;
   background: none;

@@ -4,6 +4,7 @@ import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { needsFilling, postOccupant } from './draft-assignment-references.mjs';
 import { officeTitleKey } from './draft-office-titles.mjs';
 import { postTitle } from './workbench-view.mjs';
+import { previewAttribute } from './preview-url.mjs';
 
 const PAGE_SIZE = 24;
 const alphabetical = new Intl.Collator('de', { numeric: true });
@@ -16,17 +17,18 @@ export function vacancyEntries(houses, areas, state, people) {
     const posts = state.positions(house.id);
     for (const post of posts.values()) {
       if (!needsFilling(post)) continue;
-      const { area, department, alternateArea } = officePostRoute(scope, post);
+      const { area, department, alternateArea, alternateDepartment } = officePostRoute(scope, post);
       const areaName = state.title(house.id, officeTitleKey(area), names.get(area));
       const alternateName = alternateArea && state.title(house.id, officeTitleKey(alternateArea), names.get(alternateArea));
       const plan = house.plans[department];
-      const head = plan && posts.get(plan.head.key);
-      const departmentName = head ? postTitle(head, postOccupant(head, people)) : '';
+      const head = plan?.head && posts.get(plan.head.key);
+      const departmentName = plan?.settlement ? plan.department.name : head ? postTitle(head, postOccupant(head, people)) : '';
       const title = postTitle(post, postOccupant(post, people));
-      const place = post.locality?.name || post.place || '';
-      const context = [house.name, areaName, alternateName, departmentName, place, house.countyName].filter(Boolean).join(' · ');
+      const place = post.locality?.name || post.place || post.settlement || '';
+      const context = [house.name, areaName, alternateName, departmentName, departmentName.includes(place) ? '' : place, house.countyName]
+        .filter(Boolean).join(' · ');
       entries.push({ title, context, scope: house.id, area, review: post.needsReplacement,
-        alternateArea, ...(alternateArea ? { alternateHref: preparationHref(house.id, alternateArea, undefined, post.key) } : {}),
+        alternateArea, ...(alternateArea ? { alternateHref: preparationHref(house.id, alternateArea, alternateDepartment, post.key) } : {}),
         searchable: normalizePersonName(`${title} ${context} ${house.title}`), href: preparationHref(house.id, area, department, post.key) });
     }
   }
@@ -78,7 +80,7 @@ export function bindVacancyFinder(panel, { houses, areas, state, people, countie
     entries ??= vacancyEntries(visibleHouses, areas, state, people);
     const hits = filterVacancies(entries, query.value, scope.value, area.value);
     count.textContent = hits.length ? `${hits.length} offene Stellen` : 'Keine offenen Stellen passen zur Suche.';
-    results.innerHTML = hits.slice(0, limit).map(row => `<li><a href="${e(row.href)}" data-action="open-appointment">
+    results.innerHTML = hits.slice(0, limit).map(row => `<li><a href="${previewAttribute(row.href)}" data-action="open-appointment">
       <strong>${e(row.title)}${row.ordinal ? ` · Posten ${row.ordinal}` : ''}</strong>
       <span>${e(row.context)}${row.review ? ' · Nachbesetzung nötig' : ''}</span>
     </a></li>`).join('');

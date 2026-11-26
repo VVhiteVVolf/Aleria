@@ -7,14 +7,46 @@
   container-type: inline-size;
 }
 .house-court .is-bronze { --metal: #bd8b65; --metal-light: #e9c6a0; --metal-edge: #956440; --metal-dark: #6a442b; }
+.house-court-offices {
+  --court-inset: clamp(.65rem, 2vw, 1.25rem);
+  margin-block: 1.5rem;
+  padding: 0 var(--court-inset) .25rem;
+  border: 5px solid var(--administration-line);
+  border-image: var(--administration-frame);
+  color: var(--administration-ink);
+  background: var(--administration-paper);
+  background-clip: padding-box;
+}
+.house-court-offices-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .6rem .8rem;
+  margin-inline: calc(-1 * var(--court-inset));
+  padding: .75rem var(--court-inset);
+  border-bottom: 1px solid var(--administration-line);
+  color: var(--administration-cream);
+  background: var(--administration-cover);
+}
+.house-court-offices-header .house-court-offices-title {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: none;
+  font: 700 clamp(1.3rem, 2.7vw, 1.7rem)/1.2 Georgia, serif;
+}
+.house-court-title-icon { padding: 3px; object-fit: contain; background: var(--administration-paper-light); }
+.house-court-offices-header .administration-planning-link { margin-inline-start: auto; }
 .house-court-offices .administration-role-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.house-court-offices .is-court-leadership .administration-role-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.house-court-offices .is-court-leadership .administration-role-card { background: var(--administration-paper-dark); }
 .house-court-offices .administration-role-open { grid-template-columns: 1fr; justify-items: center; align-content: start; text-align: center; }
-.house-court-offices .administration-portrait-frame { width: 140px; max-width: 100%; }
+.house-court-offices .administration-portrait-frame { box-sizing: border-box; width: 140px; max-width: 100%; }
 .house-court-offices .administration-role-copy { align-items: center; }
 .house-court-offices .administration-role-title { min-height: 3em; }
 .house-court-offices .administration-role-open > .administration-pin { left: auto; right: calc(50% - 82px); }
 .house-court-offices .administration-role-jurisdiction { display: none; }
-.house-court-offices .administration-role-open:focus-visible { outline: 3px solid #804737; outline-offset: -4px; }
 .house-court-group { margin-block: 1.5rem; }
 .house-court-heading {
   padding: .65rem 1rem;
@@ -63,14 +95,17 @@
   .house-court-offices .administration-role-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @container (max-width: 520px) {
-  .house-court-offices .administration-role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .house-court-offices-header .administration-planning-link { margin-inline-start: 0; }
+  .house-court-offices .administration-role-grid,
+  .house-court-offices .is-court-leadership .administration-role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .house-court-offices .administration-portrait-frame { width: 112px; }
   .house-court-offices .administration-role-open > .administration-pin { right: calc(50% - 64px); }
   .house-court-grid,
   .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
 }
 @container (max-width: 310px) {
-  .house-court-offices .administration-role-grid { grid-template-columns: 1fr; }
+  .house-court-offices .administration-role-grid,
+  .house-court-offices .is-court-leadership .administration-role-grid { grid-template-columns: 1fr; }
   .house-court-grid,
   .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: 1fr; }
 }

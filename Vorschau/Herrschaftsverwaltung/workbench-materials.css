@@ -1,0 +1,137 @@
+@import url('../../shared/cenyr-administration/administration-materials.css');
+
+:is([data-administration-workbench], [data-administration-atlas]) {
+  --vellum-image: var(--administration-vellum-image, none);
+  --leather-image: var(--administration-leather-image, none);
+  --frame-image: var(--administration-frame-image, none);
+  --button-image: var(--administration-button-image, none);
+  --soft-vellum: linear-gradient(#faf1d5ad, #f5e6c4b0), var(--vellum-image) center / 100% 100% no-repeat;
+  --leather-cover: linear-gradient(#271b2388, #20171db3), var(--leather-image) center 47% / 700px auto;
+}
+[data-administration-workbench] { background: radial-gradient(ellipse at top, #291d2388, #1e171aed), var(--leather-image) center / 720px auto, var(--canvas); }
+.masthead { background: var(--leather-cover), var(--dark); }
+
+.workbench-volume {
+  border-width: 10px;
+  border-image: var(--frame-image) 14% / 23px stretch;
+  background: var(--leather-cover), #302020;
+}
+.page-intro {
+  background: linear-gradient(108deg, #281c24bb, #2a1b2233 65%, #24191d70), var(--leather-image) center 44% / 720px auto, var(--dark);
+}
+.workbench-sidebar, .scope-profile {
+  background: linear-gradient(#241a21b0, #21181bc9), var(--leather-image) center top / 620px auto, var(--dark);
+}
+[data-administration-workbench] .workbench-layout {
+  background: linear-gradient(90deg, #e9d8ab35, #f4ebcb33 74%), var(--vellum-image) center / 100% 100% no-repeat, #ecdbb4;
+}
+.scope-profile {
+  border-width: 6px;
+  border-image: var(--frame-image) 14% / 14px stretch;
+  box-shadow: none;
+}
+
+:is([data-administration-workbench], [data-administration-atlas]) :where(button, .kingdom-button, .county-workbench),
+.workbench-ledger .court-entry {
+  color: #291a11;
+  background: #d6b275;
+  background-clip: padding-box;
+  border: 1px solid #865f34;
+  border-image: var(--button-image) 21% 9% fill / 7px 12px stretch;
+}
+.workbench-ledger .court-entry, [data-administration-workbench] .button-primary {
+  border-image-width: 9px 19px;
+  padding-inline: 17px;
+}
+.workbench-ledger .court-entry:hover, :is([data-administration-workbench], [data-administration-atlas]) .button-primary:not(:disabled):hover { filter: brightness(1.07); }
+.workbench-ledger .court-entry:active, :is([data-administration-workbench], [data-administration-atlas]) .button-primary:not(:disabled):active { filter: brightness(.94); }
+.draft-tools button:not(.button-primary), .office-header .button-row button, .office-header .rename-title-button,
+.office-header .office-back, .office-footer button {
+  color: var(--light-ink);
+  border-image: var(--frame-image) 14% / 8px stretch;
+  background: var(--leather-cover), #3b292d;
+}
+.office-header .office-path button { border-image: none; background: var(--leather-cover), var(--dark); }
+.workbench-sidebar .house-choice {
+  border-image: none;
+  background: var(--leather-cover), var(--dark);
+  color: var(--light-ink);
+}
+.workbench-sidebar .house-choice:is(:hover, [aria-pressed="true"]) {
+  background: linear-gradient(#49323bd9, #523344c4), var(--leather-image) center / 620px auto, #4b3039;
+}
+.workbench-ledger .council-card, .candidate-panel .candidate {
+  border-image: none;
+  background: var(--soft-vellum), #f0dbad;
+}
+.council-card-shell:nth-child(even) .council-card {
+  background: linear-gradient(#f4e4bf70, #e7c88b70), var(--vellum-image) center / 820px auto, #edd6a4;
+}
+.workbench-ledger .council-card:is(:hover, :focus-visible), .candidate-panel .candidate:is(:hover, [aria-pressed="true"]) {
+  background: linear-gradient(#d6ad6da6, #d0a76b87), var(--vellum-image) center / 720px auto, #d4ba86;
+}
+
+.office-dialog {
+  border-width: 8px;
+  border-image: var(--frame-image) 14% / 18px stretch;
+  background: var(--vellum-image) center / cover no-repeat, var(--paper);
+  background-clip: padding-box;
+}
+.office-header, .office-footer {
+  background: var(--leather-cover), var(--dark);
+}
+.office-title-editor {
+  border-width: 7px;
+  border-image: var(--frame-image) 14% / 14px stretch;
+  background: var(--vellum-image) center / 100% 100% no-repeat, var(--paper);
+  background-clip: padding-box;
+}
+.candidate-panel {
+  background: linear-gradient(#d2ad7366, #e2c18b73), var(--vellum-image) center / cover no-repeat, #e4d1ab;
+}
+.candidate-header, .structure-header, .registry-columns {
+  background: linear-gradient(#cdac75b0, #e7ce9a9e), var(--vellum-image) center / 100% auto, #dbc18c;
+}
+.workbench-search .vacancy-finder, .workbench-ledger .reference-panel, .office-search-person,
+.role-group, .office-post, .office-post.is-head, .post-group.is-leadership, .new-post, .delegated-offices,
+.dyarchy-branch, .page-notice, .tree-selection-status:not(:empty), .personal-service, .draft-badge,
+.kingdom-intro, .crown-entry, .county-card, .place-details section {
+  background: var(--soft-vellum), var(--paper);
+}
+.workbench-search summary, .reference-panel summary, .office-dialog summary, [data-administration-atlas] summary {
+  background: linear-gradient(#ecd8ac80, #f3e5c38c), var(--vellum-image) center / 680px auto, #ebd3a2;
+}
+.post-target, .post-actions button, .rename-title-button, .post-copy .office-art, .open-post-symbol,
+.office-art-fallback, .office-drag-ghost, .person-portrait {
+  background: var(--soft-vellum), #e9d8b7;
+}
+.post-actions button, .rename-title-button {
+  border-image: var(--frame-image) 14% / 6px stretch;
+}
+.has-selected-person .post-target:hover, .office-post.is-drop-target {
+  background: linear-gradient(#eac9848c, #dcb6767d), var(--vellum-image) center / cover, #f0d5a2;
+}
+:is([data-administration-workbench], [data-administration-atlas]) :is(input:not([type="checkbox"], [type="file"]), select, textarea) {
+  background: var(--soft-vellum), var(--panel);
+}
+[data-administration-workbench] .draft-scope select,
+.workbench-sidebar .workbench-chooser select { background: var(--leather-cover), var(--dark-panel); }
+.office-dialog::backdrop, .office-title-editor::backdrop {
+  background: linear-gradient(#1b1118cf, #211219ec), var(--leather-image) center / 720px auto, #1e171a;
+  opacity: .86;
+}
+.office-title-editor::backdrop { opacity: .62; }
+
+[data-administration-atlas] { background: var(--soft-vellum), #e0cc9f; }
+[data-administration-atlas] :is(.kingdom-intro, .crown-entry, .county-card, .place-details section) {
+  border-width: 4px;
+  border-image: var(--frame-image) 14% / 10px stretch;
+}
+
+@media (max-width: 740px) {
+  .office-dialog { border-width: 4px; border-image-width: 9px; }
+}
+@media (max-width: 560px) {
+  .workbench-volume { border-width: 4px; border-image-width: 12px; }
+  .workbench-ledger .court-entry, [data-administration-workbench] .button-primary { padding-inline: 10px; border-image-width: 8px 11px; }
+}

@@ -10,18 +10,20 @@
   max-height: calc(100dvh - 2rem);
   padding: 0;
   overflow: hidden;
-  border: 1px solid #c2ac87;
-  border-radius: 12px;
-  color: #30281f;
-  background: #fffbf3;
-  box-shadow: 0 18px 70px #211a1266;
+  border: 7px solid var(--administration-line);
+  border-image: var(--administration-frame);
+  border-image-width: 18px;
+  color: var(--administration-ink);
+  background: var(--administration-paper);
+  background-clip: padding-box;
+  box-shadow: 0 18px 70px #23161bb3;
 }
 .administration-dialog *,
 .administration-dialog *::before,
 .administration-dialog *::after { box-sizing: border-box; }
 .administration-dialog::backdrop {
-  background: #211b146b;
-  backdrop-filter: blur(3px);
+  background: var(--administration-backdrop);
+  opacity: .78;
 }
 .administration-dialog-shell {
   display: grid;
@@ -35,52 +37,82 @@
   align-items: center;
   gap: .8rem;
   padding: .85rem 1.4rem;
-  border-bottom: 1px solid #d9cbb0;
-  background: #f3ead9;
+  border-bottom: 1px solid var(--administration-line);
+  color: var(--administration-cream);
+  background: var(--administration-cover);
 }
 .administration-dialog-icon {
   width: 42px;
   height: 42px;
+  padding: 4px;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  border: 1px solid var(--administration-line);
+  border-image: var(--administration-frame);
+  border-image-width: 6px;
+  background: var(--administration-paper-light);
 }
 .administration-dialog-header h2 {
   margin: .15rem 0 0;
-  color: #493327;
+  color: inherit;
   font: 700 clamp(1.4rem, 3vw, 1.8rem)/1.2 Georgia, serif;
+  overflow-wrap: anywhere;
 }
 .administration-dialog-kicker {
   display: block;
-  color: #79664f;
+  color: var(--administration-muted-cream);
   font: 600 .64rem/1.4 Verdana, sans-serif;
   letter-spacing: .07em;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
-.administration-dialog-close {
+.administration-dialog-header :is(.administration-dialog-close, .administration-dialog-maximize) {
   width: 36px;
   height: 36px;
   padding: 0;
-  border: 1px solid #caba9e;
-  border-radius: 50%;
-  color: #69503c;
-  background: #fffbf3;
-  font: 400 1.6rem/1 Georgia, serif;
+  border: 1px solid var(--administration-line);
+  border-image: var(--administration-plaque);
+  border-image-width: 6px 8px;
+  color: var(--administration-ink);
+  background: #ddc28e;
+  font: 400 1.45rem/1 Georgia, serif;
   cursor: pointer;
 }
-.administration-dialog-close:hover { background: #eadcc4; }
-.administration-dialog.is-maximized { width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; }
-.administration-dialog-maximize {
-  width: 36px; height: 36px; border: 1px solid #caba9e; border-radius: 6px;
-  color: #69503c; background: #fffbf3; font-size: 1.4rem; cursor: pointer;
+.administration-dialog-header button:hover { filter: brightness(1.1); }
+.administration-dialog.is-maximized { width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-width: 0; border-image: none; }
+.administration-area-tabs {
+  display: flex;
+  gap: .3rem;
+  padding: .45rem 1.4rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--administration-line);
+  background: var(--administration-paper-dark);
+  scrollbar-width: thin;
+  scrollbar-color: var(--administration-line) #e6d1a3;
 }
-.administration-dialog-maximize:hover { background: #eadcc4; }
-.administration-area-tabs { display: flex; gap: .25rem; padding: .5rem 1.4rem; overflow-x: auto; border-bottom: 1px solid #ded2bd; background: #faf4e8; scrollbar-width: thin; }
 .administration-area-tabs button {
-  flex: 1 0 auto; border: 1px solid transparent; border-radius: 5px; padding: .5rem .7rem;
-  color: #74634e; background: transparent; cursor: pointer; font: 600 .85rem Georgia, serif;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  min-height: 37px;
+  padding: .25rem .65rem;
+  border: 1px solid var(--administration-line);
+  border-image: var(--administration-plaque);
+  color: var(--administration-ink);
+  background: #ddc28e;
+  cursor: pointer;
+  font: 700 .85rem Georgia, serif;
 }
-.administration-area-tabs button:hover { background: #ede3d0; }
-.administration-area-tabs button[aria-current] { border-color: #bfaa84; color: #483521; background: #eee0c5; }
+.administration-area-tab-icon { display: block; width: 21px; height: 21px; object-fit: contain; }
+.administration-area-tabs button:hover { filter: brightness(1.07); }
+.administration-area-tabs button[aria-current] {
+  border-image: var(--administration-frame);
+  border-image-width: 8px;
+  color: var(--administration-cream);
+  background: var(--administration-cover);
+}
+.administration-area-tabs button[aria-current] img { background: #dec493; border-radius: 2px; }
 .administration-dialog-body {
   min-width: 0;
   min-height: 0;
@@ -88,20 +120,20 @@
   overflow: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: #b6a17c #f7f0e2;
+  scrollbar-color: var(--administration-line) #f2e2bd;
   font: .85rem/1.65 Verdana, Arial, sans-serif;
 }
 .administration-dialog-body p { margin: .4rem 0 .75rem; }
-.administration-dialog-body a { color: #794b39; text-underline-offset: 3px; }
+.administration-dialog-body a:not(.administration-planning-link) { color: var(--administration-accent); text-underline-offset: 3px; }
 .administration-dialog-facts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 1.5rem;
   margin: 0 0 1rem;
   padding: .45rem .8rem;
-  border: 1px solid #ded2bd;
-  border-radius: 3px;
-  background: #f7f0e2;
+  border: 1px solid var(--administration-line);
+  border-radius: 2px;
+  background: var(--administration-paper-light);
 }
 .administration-dialog-facts > div {
   display: grid;
@@ -143,19 +175,20 @@
 .administration-dialog-section.is-pending p { margin: 0; }
 .administration-dialog-details {
   margin: .8rem 0;
-  border: 1px solid #ded2bd;
-  border-radius: 3px;
-  background: #f7f0e2;
+  border: 1px solid var(--administration-line);
+  border-radius: 2px;
+  background: var(--administration-paper-light);
 }
 .administration-dialog-details > summary {
   padding: .55rem .75rem;
-  color: #69503c;
+  color: var(--administration-ink);
+  background: var(--administration-paper-dark);
   font: 600 .9rem/1.4 Georgia, serif;
   cursor: pointer;
 }
 .administration-dialog-details > summary::marker { color: #9b7952; font-size: .8em; }
-.administration-dialog-details > summary:hover { background: #f0e5d1; }
-.administration-dialog-details[open] > summary { border-bottom: 1px solid #ded2bd; }
+.administration-dialog-details > summary:hover { filter: brightness(1.06); }
+.administration-dialog-details[open] > summary { border-bottom: 1px solid var(--administration-line); }
 .administration-dialog-table-scroll {
   max-width: 100%;
   margin: .65rem 0;
@@ -166,7 +199,7 @@
 .administration-dialog-table {
   width: 100%;
   border-collapse: collapse;
-  background: #fffbf3;
+  background: var(--administration-paper-light);
   font-size: .78rem;
 }
 .administration-dialog-table th,
@@ -179,11 +212,11 @@
 }
 .administration-dialog-table th,
 .administration-dialog-table td[colspan] {
-  background: #f1e7d5;
-  color: #69503c;
+  background: var(--administration-paper-dark);
+  color: var(--administration-ink);
   font-weight: 600;
 }
-.administration-dialog-table tbody tr:nth-child(even) > td:not([colspan]) { background: #f9f4ea; }
+.administration-dialog-table tbody tr:nth-child(even) > td:not([colspan]) { background: #8f603511; }
 .administration-dialog-table.is-office-table { min-width: 700px; table-layout: fixed; }
 .administration-dialog-table.is-office-table th:nth-child(1) { width: 23%; }
 .administration-dialog-table.is-office-table th:nth-child(2) { width: 30%; }
@@ -208,18 +241,20 @@
   border-top: 1px solid #ded2bd;
 }
 .administration-dialog-navigation button {
+  min-height: 37px;
   padding: .35rem .6rem;
-  border: 1px solid #ded2bd;
-  border-radius: 3px;
-  color: #69503c;
-  background: #f7f0e2;
+  border: 1px solid var(--administration-line);
+  border-image: var(--administration-plaque);
+  color: var(--administration-ink);
+  background: #ddc28e;
   font: 600 .9rem/1.3 Georgia, serif;
   cursor: pointer;
 }
-.administration-dialog-navigation button:hover { background: #eadcc4; }
-.administration-dialog :is(button, a, summary, [tabindex]):focus-visible { outline: 2px solid #804737; outline-offset: 2px; }
+.administration-dialog-navigation button:hover { filter: brightness(1.08); }
+.administration-dialog :is(button, a, summary, [tabindex]):focus-visible { outline: 2px solid var(--administration-accent); outline-offset: 2px; }
+.administration-dialog-header :is(button, h2):focus-visible { outline-color: var(--administration-cream); }
 @media (max-width: 680px) {
-  .administration-dialog { width: calc(100vw - 1rem); height: calc(100dvh - 1rem); max-height: calc(100dvh - 1rem); }
+  .administration-dialog { width: calc(100vw - 1rem); height: calc(100dvh - 1rem); max-height: calc(100dvh - 1rem); border-width: 4px; border-image-width: 11px; }
   .administration-dialog-header { padding: .7rem; gap: .55rem; }
   .administration-dialog-body { padding: .8rem; }
   .administration-dialog-facts { grid-template-columns: 1fr; padding: .3rem .6rem; }

@@ -2,6 +2,7 @@ import { geographicKey } from '../world-directory/geographic-key.mjs';
 import { OFFICE_CAST } from './office-cast.generated.mjs';
 import { buildCourtPlans, buildOfficePlans } from './office-plans.mjs';
 import { LOWER_ROLE_KINDS, ROLE_KINDS } from './office-roles.mjs';
+import { officeIcon } from './office-icons.mjs';
 import { scopeForHouse, scopeForTerritory } from './scopes.mjs';
 import { indexCourtEntries } from './court-plan.mjs';
 import { indexAppointments, locateOfficePosts, otherAppointmentLinks, preparationHref } from './office-appointments.mjs';
@@ -39,6 +40,7 @@ export function officialRole(slot, source = {}, cast = true, scopeId) {
     ...source, id: source.id || slot.id || slot.key.replace('/', '-'), title: slot.title,
     name: person?.name || (!cast ? source.name : '') || '',
     portrait: person?.portrait || (person || !cast ? source.portrait : '') || '',
+    ...(slot.image ? { officeIcon: slot.image } : {}),
     description: [source.description || slot.description, slot.note].flat().filter(Boolean),
     note: slot.note,
     reportsTo: (station ? '' : slot.locality?.title) || source.reportsTo || slot.reportsTo,
@@ -61,7 +63,7 @@ export function officialGroups(plan, originalGroups = [], roleFor = officialRole
   return mapped.concat(LOWER_ROLE_KINDS.flatMap(kind => {
     const slots = remaining.filter(slot => slot.kind === kind);
     return slots.length ? [{
-      id: `repeatable-${kind}`, title: ROLE_KINDS[kind].heading, kind, collapsible: true,
+      id: `repeatable-${kind}`, title: ROLE_KINDS[kind].heading, icon: officeIcon(ROLE_KINDS[kind].icon), kind, collapsible: true,
       roles: slots.map(slot => roleFor(slot, roles.get(slot.id))),
     }] : [];
   }));

@@ -10,13 +10,14 @@ const offices = {
   [WATCH_AND_LOCAL_ADMINISTRATION]: ['Hauptmann und Verwalter', 'Hauptmann und Verwalterin', 'Führt die Ortswache und verwaltet die militärische Siedlung im Auftrag der Herrschaft.'],
   hauptmann: ['Hauptmann', 'Hauptmann', 'Führt die örtliche Besatzung und regelt den Dienst am Standort.'],
   burgverwalter: ['Burgverwalter', 'Burgverwalterin', 'Betreut Burg, Vorräte, Bedienstete und zugehörige Besitzangelegenheiten.'],
+  diakon: ['Diakon', 'Diakonin', 'Leitet die geistliche Gemeinde und die ihr anvertraute Siedlung.'],
   oberer: ['Oberer', 'Oberin', 'Leitet die geistliche Gemeinschaft und die ihr anvertraute Siedlung.'],
   prior: ['Prior', 'Priorin', 'Leitet die örtliche geistliche Gemeinschaft und ihren laufenden Dienst.'],
   abt: ['Abt', 'Äbtissin', 'Leitet die Abtei, ihre Gemeinschaft und die ihr anvertrauten Güter.'],
 };
 const civic = ['buergermeister', 'lehenswart'];
 const stronghold = ['kommandant', 'hauptmann', 'burgverwalter'];
-const church = ['oberer', 'prior', 'abt'];
+const church = ['diakon', 'oberer', 'prior', 'abt'];
 const secular = [...civic, ...stronghold];
 const feudalContact = /^(?:vasall(?:in)?$|ritterhaus\b.*\bbelehnt\b)/iu;
 
@@ -34,9 +35,9 @@ export function classifyLocalAuthority(placeType = '') {
   const label = String(placeType ?? '');
   if (/gildenpacht|pachtsiedlung/iu.test(label)) return 'lease';
   const type = label.split('·', 1)[0].trim();
-  if (/kirch(?:en)?siedlung|kloster|abtei|kathedrale|^kirche$/iu.test(type)) return 'church';
+  if (/kirch(?:en)?siedlung|kloster|abtei|priorei|kathedrale|^kirche$/iu.test(type)) return 'church';
   if (/^befestigt\w*\s/iu.test(type)) return 'fortified';
-  if (/(?:burg|festung|turm|kastell)(?:s?siedlung)?$/iu.test(type)) return 'stronghold';
+  if (/^militärisch\w*\s|^garnison|(?:burg|festung|turm|kastell)(?:s?siedlung)?$/iu.test(type)) return 'stronghold';
   if (/^(?:weltliche )?siedlung$/iu.test(type)) return 'secular';
   return isSettlement({ type }) || /(?:dorf|weiler)$/iu.test(type) ? 'civic' : 'open';
 }
@@ -81,8 +82,13 @@ export function createLocalAuthority(place, contact, liege) {
   let role = recorded || LOCAL_AUTHORITY_GROUPS[kind].offices[0] || GUILD_LEASE;
   if (!recorded && feudalSeat && LOCAL_AUTHORITY_GROUPS[kind].offices.includes('lehenswart')) role = 'lehenswart';
   if (!recorded && kind === 'stronghold') {
-    if (/turm/iu.test(type)) role = 'hauptmann';
+    if (/turm|militärisch|garnison/iu.test(type)) role = 'hauptmann';
     else if (/burg/iu.test(type)) role = 'burgverwalter';
+  }
+  if (!recorded && kind === 'church') {
+    if (/priorei/iu.test(type)) role = 'prior';
+    else if (/abtei/iu.test(type)) role = 'abt';
+    else if (/kloster/iu.test(type)) role = 'oberer';
   }
   const source = recorded && contact.title.trim();
   const bareTitle = source && offices[recorded].slice(0, 2).includes(source);

@@ -64,7 +64,7 @@ function personFor(role, group, area, tier) {
   const identity = element('div', 'administration-office-identity');
   const frame = element('div', 'administration-portrait-frame');
   frame.append(portraitImage(role.portrait, role.name));
-  identity.append(frame, pin(role.areaId || area.id, tier), element('h3', '', role.name || 'Nicht benannt'));
+  identity.append(frame, pin(role.areaId || area.id, tier, role.officeIcon), element('h3', '', role.name || 'Nicht benannt'));
   const predecessor = element('div', 'administration-predecessor');
   const previous = role.predecessor;
   predecessor.append(portraitImage(previous?.portrait, previous?.name));
@@ -99,7 +99,7 @@ export function renderOfficeView(body, { role, group, area, tier }, onNavigate) 
   text.append(element('span', 'administration-eyebrow', area.title), element('h3', '', 'Aufgabe und Verantwortung'));
   for (const paragraph of [role.description, role.practice].flat().filter(Boolean)) text.append(element('p', '', paragraph));
   if (role.planningHref) {
-    const link = element('a', 'administration-module-link', 'Besetzung in der Werkstatt bearbeiten ↗');
+    const link = element('a', 'administration-planning-link', 'Besetzung in der Werkstatt bearbeiten ↗');
     link.href = role.planningHref;
     text.append(link);
   }

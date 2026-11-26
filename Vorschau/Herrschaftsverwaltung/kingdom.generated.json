@@ -1444,6 +1444,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Penbryn",
       "fleet": false
     },
     {
@@ -1758,6 +1759,7 @@
           "family": "Haus Gaeth O'Penllyn"
         }
       ],
+      "governmentSeat": "Penllyn",
       "fleet": true
     },
     {
@@ -2051,6 +2053,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Talwyn",
       "fleet": false
     },
     {
@@ -2325,6 +2328,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Caer Gwennol",
       "fleet": false
     },
     {
@@ -2567,6 +2571,7 @@
           "family": "Haus Tylluan O'Penbryn"
         }
       ],
+      "governmentSeat": "Penbryn",
       "fleet": false
     },
     {
@@ -2851,6 +2856,7 @@
           "family": "Haus Mwyalchen O'Penbryn"
         }
       ],
+      "governmentSeat": "Penbryn",
       "fleet": false
     },
     {
@@ -3071,6 +3077,7 @@
           "family": "Haus Eryr O'Penbryn"
         }
       ],
+      "governmentSeat": "Penbryn",
       "fleet": false
     },
     {
@@ -3307,6 +3314,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Tredegar",
       "fleet": false
     },
     {
@@ -3401,6 +3409,16 @@
         {
           "title": "Bürgermeister",
           "seat": "Brynwylln",
+          "id": null
+        },
+        {
+          "title": "Diakon",
+          "seat": "Cefnmor",
+          "id": null
+        },
+        {
+          "title": "Diakon",
+          "seat": "Myrddow",
           "id": null
         }
       ],
@@ -3552,6 +3570,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Talsarn",
       "fleet": true
     },
     {
@@ -3813,6 +3832,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Coedlyn",
       "fleet": true
     },
     {
@@ -3864,6 +3884,21 @@
       "court": [],
       "staff": [],
       "contacts": [
+        {
+          "title": "Diakon",
+          "seat": "Lethor",
+          "id": null
+        },
+        {
+          "title": "Diakon",
+          "seat": "Erynd",
+          "id": null
+        },
+        {
+          "title": "Diakon",
+          "seat": "Caelor",
+          "id": null
+        },
         {
           "title": "Bürgermeister",
           "seat": "Melyn",
@@ -4089,6 +4124,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Llanforwyn",
       "fleet": false
     },
     {
@@ -4246,6 +4282,7 @@
           "family": "Haus Lyfant O'Caer Asgwrn"
         }
       ],
+      "governmentSeat": "Caer Asgwrn",
       "fleet": true
     },
     {
@@ -4549,6 +4586,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Llanfyn",
       "fleet": false
     },
     {
@@ -4608,6 +4646,11 @@
         {
           "title": "Bürgermeister",
           "seat": "Crydd",
+          "id": null
+        },
+        {
+          "title": "Diakon",
+          "seat": "Llanth",
           "id": null
         },
         {
@@ -4692,6 +4735,7 @@
           "family": "Haus Blaidd O'Tredegar"
         }
       ],
+      "governmentSeat": "Tredegar",
       "fleet": true
     },
     {
@@ -4822,6 +4866,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Tredegar",
       "fleet": true
     },
     {
@@ -4981,6 +5026,7 @@
           "family": "Haus Illygoden O'Tredegar"
         }
       ],
+      "governmentSeat": "Tredegar",
       "fleet": false
     },
     {
@@ -5180,6 +5226,7 @@
           "family": "Haus Gwialen O'Tredegar"
         }
       ],
+      "governmentSeat": "Tredegar",
       "fleet": true
     },
     {
@@ -5231,6 +5278,11 @@
       "court": [],
       "staff": [],
       "contacts": [
+        {
+          "title": "Diakon",
+          "seat": "Trennar",
+          "id": null
+        },
         {
           "title": "Bürgermeister",
           "seat": "Draeth",
@@ -5417,6 +5469,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Tredegar",
       "fleet": true
     },
     {
@@ -5984,6 +6037,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Talgarth",
       "fleet": false
     },
     {
@@ -6204,6 +6258,7 @@
           "family": "Haus Pawen O'Talgarth"
         }
       ],
+      "governmentSeat": "Talgarth",
       "fleet": false
     },
     {
@@ -6423,6 +6478,7 @@
           "family": "Haus Crafanc O'Talgarth"
         }
       ],
+      "governmentSeat": "Talgarth",
       "fleet": true
     },
     {
@@ -6604,6 +6660,7 @@
           "family": "Haus Diafol O'Talgarth"
         }
       ],
+      "governmentSeat": "Talgarth",
       "fleet": false
     },
     {
@@ -6831,6 +6888,7 @@
           "family": "Haus Cwingod O'Morea"
         }
       ],
+      "governmentSeat": "Morea",
       "fleet": true
     },
     {
@@ -7052,6 +7110,7 @@
           "family": "Haus Llafnfor"
         }
       ],
+      "governmentSeat": "Caer Cryftlawd",
       "fleet": true
     },
     {
@@ -7215,6 +7274,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Aberdail",
       "fleet": false
     },
     {
@@ -7385,6 +7445,7 @@
           "family": "Haus Dianc O'Aberdail"
         }
       ],
+      "governmentSeat": "Aberdail",
       "fleet": false
     },
     {
@@ -7580,6 +7641,7 @@
           "family": "Haus Arfordir O'Aberdail"
         }
       ],
+      "governmentSeat": "Aberdail",
       "fleet": true
     },
     {
@@ -7775,6 +7837,7 @@
           "family": "Haus Walwrs O'Caer Deheuol"
         }
       ],
+      "governmentSeat": "Caer Deheuol",
       "fleet": true
     },
     {
@@ -7966,6 +8029,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Caer Marwor",
       "fleet": true
     },
     {
@@ -8169,6 +8233,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Caer Ebirth",
       "fleet": true
     },
     {
@@ -8378,6 +8443,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Caer Glaslyn",
       "fleet": true
     },
     {
@@ -8556,6 +8622,7 @@
           "family": "Haus Morthwyl O'Caer Morben"
         }
       ],
+      "governmentSeat": "Caer Morben",
       "fleet": true
     },
     {
@@ -8949,6 +9016,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Llanvane",
       "fleet": false
     },
     {
@@ -9192,6 +9260,7 @@
           "family": "Haus Saith O'Llanvane"
         }
       ],
+      "governmentSeat": "Llanvane",
       "fleet": true
     },
     {
@@ -9450,6 +9519,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Llanvane",
       "fleet": true
     },
     {
@@ -9736,6 +9806,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Llanvane",
       "fleet": true
     },
     {
@@ -9968,6 +10039,7 @@
           "family": "Haus Pyrth O'Caer Clwyd"
         }
       ],
+      "governmentSeat": "Caer Clwyd",
       "fleet": false
     },
     {
@@ -10240,6 +10312,7 @@
           "family": "Haus Tiwna O'Eiddon"
         }
       ],
+      "governmentSeat": "Eiddon",
       "fleet": true
     },
     {
@@ -10545,6 +10618,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Cerrigarth",
       "fleet": false
     },
     {
@@ -10742,6 +10816,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Trefyddin",
       "fleet": false
     },
     {
@@ -10933,6 +11008,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Glyndale",
       "fleet": true
     },
     {
@@ -11120,6 +11196,7 @@
           "family": "Haus Créyr O'Esgairmor"
         }
       ],
+      "governmentSeat": "Esgairmor",
       "fleet": true
     },
     {
@@ -11248,6 +11325,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Cerrigarth",
       "fleet": false
     },
     {
@@ -11447,6 +11525,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Cerrigarth",
       "fleet": true
     },
     {
@@ -11764,6 +11843,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Glyndraith",
       "fleet": false
     },
     {
@@ -12010,6 +12090,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Glyndraith",
       "fleet": true
     },
     {
@@ -12159,6 +12240,7 @@
           "family": "Haus Morcanhuc O'Glyndraith"
         }
       ],
+      "governmentSeat": "Glyndraith",
       "fleet": true
     },
     {
@@ -12317,6 +12399,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Caer Diwedd",
       "fleet": false
     },
     {
@@ -12478,6 +12561,7 @@
           "family": "Haus Baedd O'Eirwyn"
         }
       ],
+      "governmentSeat": "Eirwyn",
       "fleet": false
     },
     {
@@ -12668,6 +12752,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Aldwynd",
       "fleet": false
     },
     {
@@ -13102,6 +13187,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Aberon",
       "fleet": false
     },
     {
@@ -13458,6 +13544,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Carngol",
       "fleet": false
     },
     {
@@ -13701,6 +13788,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Caer Llew",
       "fleet": false
     },
     {
@@ -13984,6 +14072,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Aberon",
       "fleet": false
     },
     {
@@ -14248,6 +14337,7 @@
           "family": "Haus Blach O'Aberon"
         }
       ],
+      "governmentSeat": "Aberon",
       "fleet": true
     },
     {
@@ -14540,6 +14630,7 @@
           "family": "Haus Teyrngarch O'Aberon"
         }
       ],
+      "governmentSeat": "Aberon",
       "fleet": true
     },
     {
@@ -14713,6 +14804,7 @@
           "family": "Haus Pendrag"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": false,
       "courtScope": "krone"
     },
@@ -14946,6 +15038,7 @@
           "family": "Haus Ceirwyn O'Calon"
         }
       ],
+      "governmentSeat": "Calon",
       "fleet": true
     },
     {
@@ -15081,6 +15174,7 @@
           "family": "Haus Cath O'Mathragon"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": false
     },
     {
@@ -15202,6 +15296,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": false
     },
     {
@@ -15375,6 +15470,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": false
     },
     {
@@ -15559,6 +15655,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": true
     },
     {
@@ -15808,6 +15905,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": false
     },
     {
@@ -15992,6 +16090,7 @@
           "detail": "Belegte Besetzung"
         }
       ],
+      "governmentSeat": "Mathragon",
       "fleet": false
     },
     {
@@ -17451,7 +17550,7 @@
     {
       "id": "territory/baronie-falkenhoeh/hof/hofmagier",
       "name": "Lasairfhiona Ó Flaithbertaigh",
-      "portrait": "",
+      "portrait": "/Familien Häuser und Clans/Estryll/Cenyr/Tal_der_Milane/Falkenhoeh/Haus_Hebog/assets/lasairfhiona-flaithbertaigh.png",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -17658,7 +17757,7 @@
     {
       "id": "territory/herrschaft-schwalbenhort/hof/kaplan",
       "name": "Reese",
-      "portrait": "",
+      "portrait": "/Familien Häuser und Clans/Estryll/Cenyr/Tal_der_Milane/Schwalbenhort/Haus_Ilyuncu/assets/hofkaplan-reese-original.png",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -17793,7 +17892,7 @@
     {
       "id": "territory/grafschaft-sonnenkueste/hof/garde",
       "name": "Ulfrik",
-      "portrait": "",
+      "portrait": "/Familien Häuser und Clans/Estryll/Cenyr/Sonnenkueste/Gerstekueste/Haus_Illewod/assets/ulfrik-original.png",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",

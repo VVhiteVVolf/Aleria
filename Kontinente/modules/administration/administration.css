@@ -16,7 +16,7 @@
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
   scrollbar-width: thin;
-  scrollbar-color: #b6a17c #f7f0e2;
+  scrollbar-color: var(--administration-line) #f2e2bd;
 }
 
 .administration-card,
@@ -27,28 +27,32 @@
   place-items: center;
   gap: 0.2rem;
   min-width: 0;
-  padding: 0.55rem 0.4rem;
-  border: 1px solid #d9cbb0;
-  border-radius: 3px;
-  color: #30281f;
-  background: #fffbf3;
+  padding: .65rem .5rem;
+  border: 3px solid var(--administration-line);
+  border-image: var(--administration-frame);
+  border-image-width: 10px;
+  color: var(--administration-ink);
+  background: var(--administration-paper-light);
   font: 0.8rem/1.3 Verdana, Arial, sans-serif;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
   scroll-snap-align: start;
-  transition: background-color 150ms ease, border-color 150ms ease;
+  transition: filter 150ms ease;
 }
 
 .administration-card:hover,
 .herrschaft-administration-card:hover {
-  border-color: #a58963;
-  background: #f3e7d1;
+  background: var(--administration-paper-dark);
 }
+
+.administration-card:active,
+.herrschaft-administration-card:active { filter: brightness(.94); }
 
 .administration-card:focus-visible,
 .herrschaft-administration-card:focus-visible,
 .administration-dialog-close:focus-visible {
-  outline: 2px solid #804737;
+  outline: 2px solid var(--administration-accent);
   outline-offset: 3px;
 }
 
@@ -62,7 +66,7 @@
 
 .administration-card strong,
 .herrschaft-administration-card strong {
-  color: #30281f;
+  color: var(--administration-ink);
   font: 700 0.92rem/1.2 Georgia, 'Times New Roman', serif;
   overflow-wrap: normal;
   hyphens: auto;
@@ -70,7 +74,7 @@
 
 .administration-card > span,
 .herrschaft-administration-card > span {
-  color: #786c5c;
+  color: var(--administration-muted);
   font-size: 0.68rem;
 }
 

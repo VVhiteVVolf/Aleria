@@ -17,7 +17,7 @@ export function openRoleGroups(root) {
   return new Set([...root.querySelectorAll('details[data-role-group][open]')].map(group => group.dataset.roleGroup));
 }
 
-export function renderRoleGroups(slots, { people, appointmentLinks }, expanded, revealOccupied = false) {
+export function renderRoleGroups(slots, { people, appointmentLinks, ownerFor, serviceRecipient }, expanded, revealOccupied = false) {
   const sets = new Map();
   for (const slot of slots) {
     const id = `${slot.roleKey}/${slot.site || ''}`;
@@ -29,7 +29,7 @@ export function renderRoleGroups(slots, { people, appointmentLinks }, expanded, 
     const size = posts.length;
     const vacant = posts.filter(needsFilling).length;
     const icon = first.image || officeIcon(ROLE_KINDS[first.kind].icon);
-    return `<div class="role-group-shell"><details class="role-group" data-role-group="${e(id)}" ${expanded.has(id) || (revealOccupied && vacant < size) ? 'open' : ''}>
+    return `<div class="role-group-shell"><details class="role-group" data-role-group="${e(id)}" ${expanded.has(id) || (revealOccupied && (vacant < size || first.templateId === 'r-ortsrat')) ? 'open' : ''}>
       <summary>${officeArtwork(icon, 24)}
         <strong>${e(first.roleTitle)}${first.locality ? ` · ${e(first.locality.name)}` : ''}</strong>
         <span>${size} Posten · ${vacant} frei</span>
@@ -38,7 +38,7 @@ export function renderRoleGroups(slots, { people, appointmentLinks }, expanded, 
       <button type="button" class="add-role-button" data-action="add-role-like" data-post="${e(first.key)}"
         aria-label="${e(`Weitere Posten hinzufügen: ${first.roleTitle}`)}">+ Weitere Posten</button>
       <div class="post-grid">${posts.map((slot, index) => renderPost(slot, postOccupant(slot, people), {
-        ordinal: size > 1 ? index + 1 : 0, collapseDescription: true, appointmentLinks,
+        ordinal: size > 1 ? index + 1 : 0, collapseDescription: true, appointmentLinks, ownerFor, serviceRecipient,
       })).join('')}</div>
     </details>${renameButton(first.roleKey, first.roleTitle, 'Rolle', id)}</div>`;
   }).join('');

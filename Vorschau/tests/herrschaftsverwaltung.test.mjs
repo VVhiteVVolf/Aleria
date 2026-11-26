@@ -17,6 +17,7 @@ import { classifyLocalAuthority, localAuthorityChoices } from '../../shared/ceny
 import { officeTitleKey, postTitleKey, titleKeyForTemplate } from '../Herrschaftsverwaltung/draft-office-titles.mjs';
 import { vacancyEntries, filterVacancies } from '../Herrschaftsverwaltung/vacancy-search.mjs';
 import { COURT_AREA, LEHENSWARTE_AREA } from '../../shared/cenyr-administration/office-icons.mjs';
+import { OFFICE_CAST } from '../../shared/cenyr-administration/office-cast.generated.mjs';
 
 const roster = JSON.parse(await readFile(new URL('../Herrschaftsverwaltung/roster.generated.json', import.meta.url), 'utf8'));
 const houses = roster.houses.map(house => ({ ...house, plans: buildOfficePlans(house) }));
@@ -27,6 +28,21 @@ const draig = houses.find(house => house.id === 'draig');
 const imogen = saethwyr.offices.finanzen.holder;
 const shadow = saethwyr.offices.spionage.holder;
 const idFor = name => roster.people.find(person => person.name === name)?.id;
+
+test('the workbench and public office plans use the same available portrait', async () => {
+  const portraits = [
+    ['person--haus-draig--odyar-draig', '/Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg'],
+    ['person--haus-gafyr--duncan-gafyr', '/Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg'],
+    ['person--haus-argall--perwyn-argall', '/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png'],
+    ['person--haus-eisenherz--brona-eisenherz', '/Kontinente/modules/administration/assets/portraits/brona-eisenherz.webp'],
+    ['almanach/micIJWlN8CkuedMo490X', '/Kontinente/modules/administration/assets/portraits/gwenllian-lyswen.webp'],
+  ];
+  for (const [id, image] of portraits) {
+    assert.equal(people.get(id)?.portrait, image, id);
+    assert.equal(OFFICE_CAST.people.find(person => person.id === id)?.portrait, image, id);
+    await access(new URL('../..' + image, import.meta.url));
+  }
+});
 
 test('all three territorial councils have eight appointable leaders and their own service branches', () => {
   assert.equal(houses.length, 7);
@@ -340,7 +356,7 @@ test('v4 military drafts keep house appointments and stationing while freeing th
   assert.equal(guard.title, 'Waffenknecht der Hausmacht');
   assert.equal(guard.locality.name, 'Morfaen');
   const currentExport = draft.serialize();
-  assert.equal(JSON.parse(currentExport).version, 10);
+  assert.equal(JSON.parse(currentExport).version, 11);
   draft.importDraft(currentExport);
   assert.equal(draft.serialize(), currentExport);
 });
@@ -369,7 +385,7 @@ test('local offices include settlements and documented seats, with previous assi
 test('settlement types present the applicable offices while documented titles keep their source holder', () => {
   const choices = type => localAuthorityChoices({ kind: classifyLocalAuthority(type) });
   for (const type of ['Klostersiedlung', 'Kirchensiedlung', 'Abtei']) {
-    assert.deepEqual(choices(type), ['oberer', 'prior', 'abt', 'gildenpacht']);
+    assert.deepEqual(choices(type), ['diakon', 'oberer', 'prior', 'abt', 'gildenpacht']);
   }
   for (const type of ['Burg', 'Inselburg · neu an Merek vergeben', 'Grenzfestung', 'Turm']) {
     assert.deepEqual(choices(type), ['kommandant', 'hauptmann', 'burgverwalter', 'gildenpacht']);

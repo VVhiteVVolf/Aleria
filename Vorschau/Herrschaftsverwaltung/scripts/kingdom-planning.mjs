@@ -102,6 +102,7 @@ async function regionalRoster(territory, county, context, { royal = false } = {}
     href: hrefFor(territory), crest: localCrest(own?.emblem, view.article?.crestSrc, domains[0]?.crestSrc),
     ruler: ruler ? admit(ruler, 'oberhaupt', houseId) : null,
     offices, court, staff, contacts, places, enrolled, candidates: [...candidates.values()],
+    ...(domains[0]?.center ? { governmentSeat: domains[0].center } : {}),
     fleet: royal || places.some(isPort), ...(courtScope ? { courtScope } : {}),
   };
 }

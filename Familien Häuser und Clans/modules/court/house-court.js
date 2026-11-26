@@ -3,6 +3,7 @@ import { createOfficeDialog } from '../../../Kontinente/modules/administration/a
 import { hasNobleCourt, houseOfficeRole, partitionHouseCourtEntries } from './house-court-model.mjs?v=kingdoms-20261101';
 import { legacyCourtOffices } from './house-court-legacy.mjs?v=20261028-office-body-v2';
 import { indexCourtEntries } from '../../../shared/cenyr-administration/court-plan.mjs';
+import { COURT_AREA } from '../../../shared/cenyr-administration/office-icons.mjs';
 import { officialCourt, officialGroups, officialRole, preparationHref } from '../../../shared/cenyr-administration/official-office-model.mjs';
 
 const controllers = new WeakMap();
@@ -70,18 +71,27 @@ function renderOffices(group, data) {
     });
     return role;
   };
-  const area = { id: 'unterhaltung', title: 'Hofämter', jurisdiction: data.name };
+  const area = { id: 'unterhaltung', title: COURT_AREA.name, jurisdiction: data.name };
   const section = officeElement('section', 'house-court-offices');
   section.dataset.courtGroup = 'offices';
-  section.append(officeElement('h3', 'house-court-heading', group.title || 'Hofämter'));
-  if (group.note) section.append(officeElement('p', 'house-court-note', group.note));
+  section.dataset.codexOwnHeadings = '';
+  const heading = officeElement('header', 'house-court-offices-header');
+  const icon = officeElement('img', 'house-court-title-icon');
+  icon.src = COURT_AREA.imageSrc;
+  icon.alt = '';
+  icon.width = 40;
+  icon.height = 40;
+  icon.loading = 'lazy';
+  heading.append(icon, officeElement('h3', 'house-court-offices-title', group.title || area.title));
   if (scope) {
-    const link = officeElement('a', 'administration-module-link', 'Hofbesetzung in der Werkstatt bearbeiten ↗');
+    const link = officeElement('a', 'administration-planning-link', 'Hofbesetzung in der Werkstatt bearbeiten ↗');
     link.href = preparationHref(scope.id, 'hof');
-    section.append(link);
+    heading.append(link);
   }
+  section.append(heading);
+  if (group.note) section.append(officeElement('p', 'house-court-note', group.note));
   const top = plans.hof.leadership;
-  section.append(renderRoleGroup({ ...top, id: 'court-leadership', kind: 'court', roles: top.slots.map(roleForSlot) }, area));
+  section.append(renderRoleGroup({ ...top, id: 'court-leadership', kind: 'court-leadership', roles: top.slots.map(roleForSlot) }, area));
   officialGroups(plans.hof, [], roleForSlot).forEach(branch => section.append(renderRoleGroup({ ...branch, kind: 'court' }, area)));
   return section;
 }

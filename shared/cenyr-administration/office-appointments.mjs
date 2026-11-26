@@ -1,7 +1,7 @@
 import { LEHENSWARTE_AREA } from './office-icons.mjs';
 
 function officeRoute(area, plan) {
-  return plan.department ? { area: 'hof', department: area } : { area };
+  return plan.department ? { area: plan.parentArea || 'hof', department: area } : { area };
 }
 
 export function locateOfficePosts(plans) {
@@ -9,10 +9,15 @@ export function locateOfficePosts(plans) {
   for (const [area, plan] of Object.entries(plans)) {
     const route = officeRoute(area, plan);
     for (const post of plan.slots) {
-      // A Hofamt can appear in the overview and as the head of its own hierarchy.
       const previous = locations.get(post.key);
-      if (plan.department || !previous) locations.set(post.key, { post, ...route });
-      else if (previous.area !== route.area) locations.set(post.key, { ...previous, alternateArea: route.area });
+      // The settlement projects standing offices from its parent and the other ministries.
+      if (!previous || (plan.department && !plan.settlement)) locations.set(post.key, { post, ...route });
+      else if (plan.settlement && post.key === plan.head.key && previous.area === route.area) {
+        locations.set(post.key, { ...previous, ...route, post });
+      } else if (plan.settlement && post.key === plan.head.key && previous.alternateArea === route.area) {
+        locations.set(post.key, { ...previous, alternateDepartment: route.department });
+      }
+      else if (!plan.settlement && previous.area !== route.area) locations.set(post.key, { ...previous, alternateArea: route.area });
     }
   }
   return locations;

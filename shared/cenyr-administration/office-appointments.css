@@ -10,7 +10,7 @@
   min-block-size: 24px;
   max-inline-size: 100%;
   padding-block: .2rem;
-  color: #315545;
+  color: var(--administration-accent, #6b352d);
   overflow-wrap: anywhere;
   text-decoration: underline;
   text-underline-offset: .18em;

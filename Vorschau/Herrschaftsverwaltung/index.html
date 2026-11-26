@@ -8,7 +8,10 @@
   <title>Herrschaftswerkstatt von Cenyr · Aleria</title>
   <link rel="stylesheet" href="administration.css">
   <link rel="stylesheet" href="office-dialog.css">
+  <link rel="stylesheet" href="office-context.css">
   <link rel="stylesheet" href="vacancy-search.css">
+  <link rel="stylesheet" href="workbench.css">
+  <link rel="stylesheet" href="workbench-materials.css">
   <script defer src="../../Kontinente/modules/administration/administration-content.js"></script>
   <script type="module" src="app.mjs"></script>
 </head>
@@ -16,39 +19,43 @@
   <a class="skip-link" href="#herrschaften">Zu den Herrschaften</a>
   <header class="masthead">
     <div class="page-width masthead-inner">
-      <a class="wordmark" href="../index.html">Aleria <span>Werkstatt</span></a>
-      <a class="back-link" href="./Cenyr/">← Königreichsübersicht</a>
+      <a class="wordmark" href="../index.html">Aleria <span>Verwaltung</span></a>
+      <a class="back-link" href="./Cenyr/index.html">← Königreichsübersicht</a>
     </div>
   </header>
-  <main>
+  <main class="workbench-volume">
     <section class="page-intro">
+      <img class="realm-watermark" data-role="county-crest" alt="" width="270" height="270" hidden>
       <div class="page-width intro-inner">
         <div>
-          <p class="territory-label" data-role="county-heading">Königreich Cenyr</p>
-          <h1 data-role="workbench-title">Rats- und Hofämter</h1>
-          <p class="intro-text" data-role="county-summary">Besetzungsentwürfe für die Herrschaften Cenyrs.</p>
+          <h1 data-role="workbench-title">Herrschaftswerkstatt</h1>
+          <p class="intro-text" data-role="county-heading">Königreich Cenyr</p>
+          <p class="visually-hidden" data-role="county-summary">Besetzungsentwürfe für die Herrschaften Cenyrs.</p>
         </div>
         <div class="draft-tools">
+          <label class="draft-scope">Entwurfsbereich <select data-role="draft-scope" disabled></select></label>
           <div class="button-row">
-            <button type="button" data-action="import" disabled>Entwurf importieren</button>
-            <button type="button" class="button-primary" data-action="export" disabled>Entwurf exportieren</button>
+            <button type="button" data-action="import" aria-label="Entwurf importieren" disabled><img src="../../IconOrdner/Fazit%20Icons/Schriftrolle.png" alt="" width="21" height="21"><span><span class="draft-label-prefix">Entwurf </span>importieren</span></button>
+            <button type="button" class="button-primary" data-action="export" aria-label="Entwurf exportieren" disabled><img src="../../IconOrdner/Fazit%20Icons/Abschrift.png" alt="" width="21" height="21"><span><span class="draft-label-prefix">Entwurf </span>exportieren</span></button>
           </div>
           <input type="file" accept="application/json,.json" data-role="import-file" hidden>
           <p data-role="persistence">Entwürfe werden in diesem Browser gespeichert.</p>
         </div>
       </div>
     </section>
-    <div class="page-width workspace" id="herrschaften">
-      <section aria-labelledby="house-select-title">
+    <div class="page-width workspace workbench-layout" id="herrschaften">
+      <aside class="workbench-sidebar" aria-labelledby="house-select-title">
         <div class="workbench-chooser">
-          <h2 id="house-select-title">Herrschaft auswählen</h2>
-          <label>Grafschaft wechseln <select data-role="county-select" disabled></select></label>
+          <h2 id="house-select-title">Herrschaften</h2>
+          <label>Grafschaft <select data-role="county-select" disabled></select></label>
         </div>
         <div class="house-switch" data-role="houses"></div>
-      </section>
-      <p class="page-notice" data-role="status" role="status" hidden></p>
+      </aside>
+      <div class="workbench-ledger">
+        <p class="page-notice" data-role="status" role="status" hidden></p>
+        <div class="workbench-search">
       <details class="vacancy-finder" data-role="vacancy-finder">
-        <summary>Freie Posten finden</summary>
+        <summary><img src="../../IconOrdner/Cktraits/Trait_inspector.png" alt="" width="24" height="24">Freie Posten finden</summary>
         <div>
           <form class="vacancy-filters" role="search" aria-label="Freie Posten finden">
             <label>Posten, Haus oder Ort <input type="search" name="query" placeholder="z. B. Hauptmann Arwydd"></label>
@@ -61,7 +68,20 @@
           <button class="vacancy-more" type="button" data-role="vacancy-more" hidden>Weitere Treffer</button>
         </div>
       </details>
-      <section class="council" aria-labelledby="council-title" data-role="council"></section>
+      <details class="vacancy-finder" data-role="office-search">
+        <summary><img src="../../IconOrdner/Cktraits/Trait_administrator.png" alt="" width="24" height="24">Ämter nach Personen finden</summary>
+        <div>
+          <form role="search" aria-label="Ämter nach Personen finden">
+            <label class="office-search-query">Name <input type="search" name="person" placeholder="z. B. Odyar Draig" autocomplete="off"></label>
+          </form>
+          <p class="office-search-count" data-role="office-search-count" role="status"></p>
+          <ul class="office-search-results" data-role="office-search-results"></ul>
+          <button class="vacancy-more" type="button" data-role="office-search-more" hidden>Weitere Treffer</button>
+        </div>
+      </details>
+        </div>
+        <section class="council" aria-labelledby="council-title" data-role="council"></section>
+      </div>
     </div>
   </main>
   <dialog class="office-dialog" data-role="office-dialog" aria-labelledby="office-title">
@@ -70,12 +90,17 @@
         <button class="office-back" type="button" data-action="back-office" aria-label="Zurück zur übergeordneten Struktur" title="Zurück" hidden>←</button>
         <img data-role="area-icon" alt="" width="48" height="48">
         <div>
-          <p class="territory-label" data-role="scope-label"></p>
+          <p class="visually-hidden" data-role="scope-label"></p>
+          <nav class="office-path" data-role="office-path" aria-label="Amtslinie"></nav>
           <div class="title-with-rename"><h2 id="office-title" tabindex="-1"></h2><span data-role="rename-office"></span></div>
+          <div data-role="office-owner"></div>
         </div>
       </div>
       <div class="button-row">
-        <button type="button" data-action="undo" disabled>Rückgängig</button>
+        <button type="button" class="office-transfer-button" data-action="transfer-draft" aria-haspopup="dialog" aria-label="Entwurf übertragen" title="Entwurf importieren oder exportieren">
+          <img src="../../IconOrdner/Fazit%20Icons/Schriftrolle.png" alt="" width="22" height="22">
+        </button>
+        <button type="button" data-action="undo" aria-label="Rückgängig" title="Letzte Änderung rückgängig machen" disabled><span class="undo-label">Rückgängig</span></button>
         <button type="button" class="close-button" data-action="close" aria-label="Ratsamt schließen" title="Schließen">×</button>
       </div>
     </header>
@@ -125,7 +150,9 @@
             <span class="muted" data-role="office-count"></span>
           </div>
           <div class="structure-tools">
-            <label class="checkbox-label"><input type="checkbox" data-role="vacancies-only"> Nur freie Unterposten</label>
+            <select data-role="section-nav" aria-label="Zum Abschnitt springen" hidden></select>
+            <label class="checkbox-label"><input type="checkbox" data-role="vacancies-only" aria-label="Nur freie Unterposten">
+              <span class="full-label">Nur freie Unterposten</span><span class="compact-label" aria-hidden="true">Nur freie</span></label>
             <button type="button" data-action="manage-roles">Rollen verwalten</button>
           </div>
         </div>
@@ -189,6 +216,29 @@
       <div class="button-row">
         <button type="button" data-action="cancel-authority">Abbrechen</button>
         <button type="submit" class="button-primary">Übernehmen</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="office-title-editor" data-role="court-service-editor" aria-labelledby="court-service-title">
+    <form>
+      <h2 id="court-service-title">Persönlichen Dienst zuteilen</h2>
+      <label>Hofangehörige <select name="recipient"></select></label>
+      <p class="rename-error" role="status"></p>
+      <div class="button-row">
+        <button type="button" data-action="cancel-service">Abbrechen</button>
+        <button type="submit" class="button-primary">Übernehmen</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="office-title-editor" data-role="draft-transfer" aria-labelledby="draft-transfer-title">
+    <form>
+      <h2 id="draft-transfer-title">Entwurf übertragen</h2>
+      <label>Bereich <select name="scope"></select></label>
+      <p role="status"></p>
+      <div class="button-row">
+        <button type="button" data-action="close-transfer">Schließen</button>
+        <button type="submit" value="import">Importieren</button>
+        <button type="submit" class="button-primary" value="export">Exportieren</button>
       </div>
     </form>
   </dialog>

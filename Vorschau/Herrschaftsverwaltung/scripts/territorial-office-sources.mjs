@@ -42,7 +42,8 @@ export function readCouncilOffices(rank, members, admit) {
     }));
 }
 
-const familyBase = new URL('../../../Familien Häuser und Clans/', import.meta.url);
+const familyRoot = '/Familien Häuser und Clans/';
+const familyBase = new URL(`../../..${familyRoot}`, import.meta.url);
 
 export async function readHouseContent(house) {
   if (!house?.data) return null;
@@ -56,7 +57,9 @@ export function readCourtOffices(content, admit) {
   const indexed = indexCourtEntries(completeHouseOffices(authored, true));
   const staff = indexed.flatMap(({ entry, id, type }) => {
     const slot = type === 'hofmeister' ? 'leitung' : id;
-    const holder = admit(entry, `hof/${slot}`, content?.id);
+    const image = entry.imageSrc || entry.portrait || entry.image;
+    const imageSrc = image?.startsWith('Estryll/') ? familyRoot + image : image;
+    const holder = admit({ ...entry, imageSrc }, `hof/${slot}`, content?.id);
     return holder ? [{ area: 'hof', slot, holder }] : [];
   });
   return { court: authored.map(({ role, detail }) => ({ role, ...(detail ? { note: detail } : {}) })), staff };
@@ -103,7 +106,7 @@ export function createTerritorialPersonReader({ registry, isLiving, addFamilyPer
       const { record, person } = resolved;
       return { id: addFamilyPerson(record, person, undefined, undefined, stableId(resolved)), familyId: record.id, eligible: true };
     }
-    const id = addNamedMember(scope, { name: member.name, imageSrc, href: member.href }, key);
+    const id = addNamedMember(scope, { name: member.name, imageSrc: imageSrc || rawPortrait, href: member.href }, key);
     return id ? { id, familyId: explicitFamily || authorFamily, eligible: !resolved || !isPersonRecordedDead(resolved.person) } : null;
   };
 }

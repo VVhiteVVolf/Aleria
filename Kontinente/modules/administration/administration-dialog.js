@@ -60,7 +60,13 @@
       button.type = 'button';
       button.dataset.action = 'navigate-administration';
       button.dataset.administrationKey = area.id;
-      button.textContent = area.name;
+      const icon = document.createElement('img');
+      icon.className = 'administration-area-tab-icon';
+      icon.src = area.imageSrc;
+      icon.alt = '';
+      icon.width = 21;
+      icon.height = 21;
+      button.append(icon, area.name);
       element.querySelector('.administration-area-tabs').append(button);
     });
     element.addEventListener('administration:navigate', event => openDialog(event.detail.areaId, null, activeScopeId));

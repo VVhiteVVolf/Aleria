@@ -41,6 +41,7 @@ export const STAFF = {
   wyrm: [
     ['militaer', 'wacht-brynmawr', 'haus-wyrm', 'sion-wyrm', 'Sion Wyrm'],
     ['militaer', 'wacht-craithglyn', 'haus-loer', 'dwynarth-loer', 'Dwynarth Loer'],
+    ['militaer', 'wacht-llysfaen', 'haus-rhyddid', 'gwydion-rhyddid', 'Gwydion Rhyddid'],
     ['hof', 'vogt', 'glynmor', 'person-2a5e7890', 'Emlyn Glynmor'],
     ['hof', 'kueche', 'glynmor', 'person-64064dfd', 'Eleri Glynmor'],
     ['hof', 'zofe', 'glynmor', 'person-d665a54d', 'Meera Glynmor'],
@@ -53,4 +54,13 @@ export const TERRITORIAL_NAME_NOTES = {
 
 export const COURT_NAME_NOTES = {
   'saethwyr/Kommandant der Garde': 'Die Hofliste nennt Melyn Saethwyr mit offener Identitätszuordnung. Ihre Personenakte belegt den Truppenbefehl unter dem Marschall.',
+};
+
+// The public town records identify these additional local officeholders.
+export const SETTLEMENT_APPOINTMENT_SOURCES = {
+  wyrm: [
+    { placeId: 'bronhir', name: 'Trachmyr Trevandir', area: 'ortsrat-bronhir', slot: 'buergermeister', role: /^Bürgermeister/u },
+    { placeId: 'craithglyn', name: 'Rhun Tynged', area: 'finanzen', slot: 'rentmeister-craithglyn',
+      role: /^Steuermeister/u, title: 'Steuermeister von Craithglyn' },
+  ],
 };

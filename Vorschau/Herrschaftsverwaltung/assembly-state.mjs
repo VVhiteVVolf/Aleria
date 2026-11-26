@@ -7,15 +7,28 @@ import { applyDraftAuthority, importAuthorityChoices, validateAuthorityChoice } 
 import { isPersonReference, migrateSharedAssignments, readAssignmentNames, readPreviousOccupants, rememberedPerson, serializeAssignmentNames } from './draft-assignment-references.mjs';
 import { CAMRUISGE_SCOPE } from '../../shared/cenyr-administration/camruisge-plan.mjs';
 import { migrateAberllan } from './draft-camruisge.mjs';
+import { courtServiceTitle, indexCourtRetinues, readServiceRecipients, sourceServiceRecipient } from './court-service.mjs';
+import { describeHouseDraft, draftCoverage, importCoverage, projectHouseDraft, replaceHouseDraft } from './draft-transfer.mjs';
 
 const SCHEMA = 'aleria.herrschaftsplanung';
-const VERSION = 10;
+const VERSION = 11;
 const KINGDOM_VERSION = 10;
 const LOCAL_AUTHORITIES_VERSION = 7;
 const MILITARY_VERSION = 5;
 export const STORAGE_KEY = 'aleria.herrschaftsverwaltung.v1';
-const emptyHouse = () => ({ posts: [], removed: [], applicants: [], assignments: {}, titles: {}, authorities: {}, previousOccupants: {}, assignmentNames: {} });
+const emptyHouse = () => ({ posts: [], removed: [], applicants: [], assignments: {}, titles: {}, authorities: {}, previousOccupants: {}, assignmentNames: {}, serviceRecipients: {} });
 const plainObject = value => value && typeof value === 'object' && !Array.isArray(value);
+
+function readDraft(serialized) {
+  let data;
+  try { data = JSON.parse(serialized); }
+  catch { throw new Error('Die Datei enthält keinen lesbaren JSON-Entwurf.'); }
+  if (data?.schema !== SCHEMA || !Number.isInteger(data.version) || data.version < 1 || data.version > VERSION
+    || !plainObject(data.houses) || (Object.hasOwn(data, 'scope') && (!data.scope || data.version < VERSION))) {
+    throw new Error('Die Datei gehört zu keinem unterstützten Entwurf dieser Verwaltung.');
+  }
+  return data;
+}
 
 function validatePost(post, plans) {
   const plan = post && Object.hasOwn(plans, post.area) ? plans[post.area] : null;
@@ -38,7 +51,7 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
   const scopes = new Map(houses.map(house => {
     const locations = locateOfficePosts(house.plans);
     return [house.id, {
-      id: house.id, name: house.name, plans: house.plans,
+      id: house.id, name: house.name, plans: house.plans, countyId: house.countyId,
       county: house.county,
       newScope: house.preparation,
       regional: house.regional,
@@ -46,6 +59,7 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       aliases: new Map([...locations.values()].flatMap(({ post }) => post.previousKey ? [[post.previousKey, post.key]] : [])),
       posts: new Map([...locations].map(([key, { post }]) => [key, post])),
       direct: new Set(house.candidates.map(candidate => candidate.id)),
+      household: new Set(house.candidates.filter(candidate => candidate.kind === 'house').map(candidate => candidate.id)),
       templates: new Map(Object.entries(house.plans).flatMap(([area, plan]) =>
         plan.templates.map(template => [`${area}/${template.id}`, template]))),
       retired: new Map(Object.entries(house.plans).flatMap(([area, plan]) =>
@@ -72,6 +86,7 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       const locality = site && template?.stationed ? { key: site.key, name: site.name, type: 'station' } : site;
       posts.set(key, {
         ...post, key, holder: null, custom: true, removable: true, placement, image: template?.image, reportsTo: template?.reportsTo, locality,
+        settlement: scope.plans[post.area].settlement?.name,
       });
     }
     return posts;
@@ -93,25 +108,22 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       }];
     }));
   }
-  function appointments(personId) {
+  function currentAppointments() {
     if (indexedDraft !== draft) {
       appointmentIndex = indexAppointments(scopes.values(), ({ id }) => positions(id).values());
       indexedDraft = draft;
     }
-    return appointmentIndex.get(personId) || [];
+    return appointmentIndex;
   }
+  const appointments = personId => currentAppointments().get(personId) || [];
 
   const eligible = (scope, source, id) => scope.direct.has(id) || freeIds.has(id)
     || (treeCandidates.has(id) && source.applicants.includes(id));
   const isFreeElsewhere = (personId, scopeId) => freeIds.has(personId)
     && appointments(personId).some(entry => entry.scopeId !== scopeId);
 
-  function parse(serialized) {
-    let data;
-    try { data = JSON.parse(serialized); }
-    catch { throw new Error('Die Datei enthält keinen lesbaren JSON-Entwurf.'); }
-    if (data?.schema !== SCHEMA || !Number.isInteger(data.version) || data.version < 1 || data.version > VERSION || !plainObject(data.houses)
-      || Object.keys(data.houses).some(id => !scopes.has(id))) {
+  function parse(data) {
+    if (Object.keys(data.houses).some(id => !scopes.has(id))) {
       throw new Error('Die Datei gehört zu keinem unterstützten Entwurf dieser Verwaltung.');
     }
     const formerlyLocal = data.version < KINGDOM_VERSION;
@@ -160,6 +172,7 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       source.assignmentNames = readAssignmentNames(input.assignmentNames);
       source.previousOccupants = readPreviousOccupants(input.previousOccupants, source.assignments, available);
       source.authorities = importAuthorityChoices(input.authorities, available);
+      source.serviceRecipients = readServiceRecipients(input.serviceRecipients, available);
       if (input.titles !== undefined) source.titles = importTitleOverrides(input.titles, validTitleKeys(scope.plans, available));
       for (const [key, id] of assignments) {
         if (older && treeCandidates.has(id) && !eligible(scope, source, id)) {
@@ -189,11 +202,17 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
     }));
   }
 
-  const serialize = () => JSON.stringify({ schema: SCHEMA, version: VERSION,
-    houses: Object.fromEntries(Object.entries(draft).map(([id, source]) => [id, {
-      ...source, assignmentNames: serializeAssignmentNames(source, people),
-    }])),
-  }, null, 2);
+  function serialize(selection) {
+    const coverage = draftCoverage(scopes, selection);
+    const houses = Object.fromEntries([...coverage].map(([id, areas]) => {
+      const source = projectHouseDraft(draft[id], areas, scopes.get(id).plans);
+      return [id, { ...source, assignmentNames: serializeAssignmentNames(source, people) }];
+    }));
+    const structure = selection && Object.fromEntries([...coverage].map(([id, areas]) => [id,
+      describeHouseDraft(scopes.get(id), areas, positions(id), post => post.occupantName || people.get(post.occupant)?.name || post.occupant),
+    ]));
+    return JSON.stringify({ schema: SCHEMA, version: VERSION, ...(selection ? { scope: selection, structure } : {}), houses }, null, 2);
+  }
 
   function save() {
     if (!storage) return;
@@ -203,7 +222,7 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
 
   try {
     const stored = storage?.getItem(STORAGE_KEY);
-    if (stored) draft = parse(stored);
+    if (stored) draft = parse(readDraft(stored));
   } catch (error) {
     loadError = error.message;
     persisted = false;
@@ -221,7 +240,8 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
   }
   const hasDraft = scopeId => draft[scopeId].posts.length > 0 || draft[scopeId].removed.length > 0
     || draft[scopeId].applicants.length > 0 || Object.keys(draft[scopeId].assignments).length > 0
-    || Object.keys(draft[scopeId].titles).length > 0 || Object.keys(draft[scopeId].authorities).length > 0;
+    || Object.keys(draft[scopeId].titles).length > 0 || Object.keys(draft[scopeId].authorities).length > 0
+    || Object.keys(draft[scopeId].serviceRecipients).length > 0;
 
   function addPosts(scopeId, fields, count) {
     if (!Number.isInteger(count) || count < 1 || count > MAX_ROLE_BATCH) {
@@ -241,8 +261,32 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
     return additions.map(customKey);
   }
 
+  function serviceRecipient(scopeId, post) {
+    const recipients = draft[scopeId].serviceRecipients;
+    return Object.hasOwn(recipients, post.key)
+      ? people.get(recipients[post.key]) || null : sourceServiceRecipient(scopeId, post, people);
+  }
+
   return {
-    positions, appointments, serialize,
+    positions, appointments, serialize, serviceRecipient,
+    appointedPeople: () => currentAppointments().keys(),
+    retinues: () => indexCourtRetinues(currentAppointments(), serviceRecipient),
+    serviceRecipientChoices: scopeId => [...scopes.get(scopeId).household].map(id => people.get(id)).filter(Boolean),
+    setServiceRecipient(scopeId, key, id) {
+      const scope = scopes.get(scopeId);
+      const source = draft[scopeId];
+      const post = allPosts(scope, source).get(key);
+      if (!post || !courtServiceTitle(post) || (id !== null && !scope.household.has(id))) {
+        throw new Error('Der Dienst lässt sich einem Mitglied dieses Hauses zuteilen.');
+      }
+      const recorded = sourceServiceRecipient(scopeId, post, people);
+      const current = Object.hasOwn(source.serviceRecipients, key) ? source.serviceRecipients[key] : recorded?.id;
+      if (id === current || (id === null && current === undefined && !recorded)) return false;
+      const serviceRecipients = { ...source.serviceRecipients, [key]: id };
+      if (id && id === recorded?.id) delete serviceRecipients[key];
+      changeHouse(scopeId, { ...source, serviceRecipients });
+      return true;
+    },
     postKey: (scopeId, key) => scopes.get(scopeId).aliases.get(key) ?? key,
     title: (scopeId, key, fallback) => draft[scopeId].titles[key] ?? fallback,
     loadError: () => loadError,
@@ -317,7 +361,9 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       const removed = slot.custom ? source.removed : [...source.removed, key];
       const assignments = { ...source.assignments };
       delete assignments[key];
-      const next = { ...source, posts, removed, assignments };
+      const serviceRecipients = { ...source.serviceRecipients };
+      delete serviceRecipients[key];
+      const next = { ...source, posts, removed, assignments, serviceRecipients };
       if (Object.keys(source.titles).length) {
         const keys = validTitleKeys(scope.plans, allPosts(scope, next));
         next.titles = Object.fromEntries(Object.entries(source.titles).filter(([target]) => keys.has(target)));
@@ -325,8 +371,15 @@ export function createAssemblyState(houses, free, { storage, treeCandidates = ne
       changeHouse(scopeId, next);
       return true;
     },
-    importDraft(serialized) {
-      commit(parse(serialized));
+    importDraft(serialized, selection) {
+      const data = readDraft(serialized);
+      if (!selection && !data.scope) { commit(parse(data)); return false; }
+      const coverage = importCoverage(scopes, data.scope, selection, data.houses);
+      const incoming = data.scope ? data.houses : parse(data);
+      const next = { ...draft };
+      for (const [id, areas] of coverage) next[id] = replaceHouseDraft(draft[id], incoming[id], areas, scopes.get(id).plans);
+      commit(parse({ version: VERSION, houses: next }));
+      return true;
     },
     undo() {
       if (!history.length) return false;

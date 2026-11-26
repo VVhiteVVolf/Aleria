@@ -148,6 +148,7 @@ export const OFFICE_CAST = {
           "holder": "person--haus-arth--melyn-arth"
         }
       ],
+      "governmentSeat": "Gwynthor",
       "places": [
         {
           "name": "Tŵr Gwaunhir",
@@ -326,6 +327,7 @@ export const OFFICE_CAST = {
           "holder": "person--haus-chamois--lleirys-chamois"
         }
       ],
+      "governmentSeat": "Gwynthor",
       "places": [
         {
           "name": "Morddwr",
@@ -499,6 +501,11 @@ export const OFFICE_CAST = {
           "holder": "person--haus-loer--dwynarth-loer"
         },
         {
+          "area": "militaer",
+          "slot": "wacht-llysfaen",
+          "holder": "person--haus-rhyddid--gwydion-rhyddid"
+        },
+        {
           "area": "hof",
           "slot": "vogt",
           "holder": "person--glynmor--person-2a5e7890"
@@ -514,6 +521,17 @@ export const OFFICE_CAST = {
           "holder": "person--glynmor--person-d665a54d"
         },
         {
+          "area": "ortsrat-bronhir",
+          "slot": "buergermeister",
+          "holder": "territory/wyrm/ort/bronhir/buergermeister"
+        },
+        {
+          "area": "finanzen",
+          "slot": "rentmeister-craithglyn",
+          "holder": "territory/wyrm/ort/craithglyn/rentmeister-craithglyn",
+          "title": "Steuermeister von Craithglyn"
+        },
+        {
           "area": "klerus",
           "slot": "diakon-llysfaen",
           "holder": "almanach/micIJWlN8CkuedMo490X",
@@ -521,6 +539,7 @@ export const OFFICE_CAST = {
           "title": "Diakonin von Llysfaen"
         }
       ],
+      "governmentSeat": "Gwynthor",
       "places": [
         {
           "name": "Tŵr Brynmawr",
@@ -1416,6 +1435,7 @@ export const OFFICE_CAST = {
           "title": "Diakonin von Gwaulhir"
         }
       ],
+      "governmentSeat": "Rhosmere",
       "places": [
         {
           "name": "Rhosmere",
@@ -1698,6 +1718,7 @@ export const OFFICE_CAST = {
           "title": "Diakon von Morcarryn"
         }
       ],
+      "governmentSeat": "Abergwint",
       "places": [
         {
           "name": "Abergwint",
@@ -1943,6 +1964,7 @@ export const OFFICE_CAST = {
           "title": "Diakon von Traethgwen"
         }
       ],
+      "governmentSeat": "Castellbryn",
       "places": [
         {
           "name": "Castellbryn",
@@ -2011,37 +2033,37 @@ export const OFFICE_CAST = {
     {
       "id": "almanach/Hx23IAHjVHeuFUJGZPAj",
       "name": "Bryn Rhydderch",
-      "portrait": "https://i.imgur.com/sMslhgn.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/bryn-rhydderch.webp",
       "href": "/AleriaAlmanach/AleriaAlmanach.html?character=Hx23IAHjVHeuFUJGZPAj"
     },
     {
       "id": "almanach/NfpyXayG4KoYqp5xQZd5",
       "name": "Cai Taflu",
-      "portrait": "https://i.imgur.com/UtW0UZD.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/cai-taflu.webp",
       "href": "/AleriaAlmanach/AleriaAlmanach.html?character=NfpyXayG4KoYqp5xQZd5"
     },
     {
       "id": "almanach/Yj5xREgJtjrAs8JOpOLe",
       "name": "Cadog Môrwyn",
-      "portrait": "https://i.imgur.com/t2AWKNw.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/cadog-morwyn.webp",
       "href": "/AleriaAlmanach/AleriaAlmanach.html?character=Yj5xREgJtjrAs8JOpOLe"
     },
     {
       "id": "almanach/glendower-o-cenyr",
       "name": "Glendower O'Cenyr",
-      "portrait": "https://i.imgur.com/vSRYHg1.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/glendower-o-cenyr.webp",
       "href": "/AleriaAlmanach/AleriaAlmanach.html?character=glendower-o-cenyr"
     },
     {
       "id": "almanach/j4fZKrXkARcP9oDAUSeb",
       "name": "Emrys Porthan",
-      "portrait": "https://i.imgur.com/y5aRhJb.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/emrys-porthan.webp",
       "href": "/AleriaAlmanach/AleriaAlmanach.html?character=j4fZKrXkARcP9oDAUSeb"
     },
     {
       "id": "almanach/micIJWlN8CkuedMo490X",
       "name": "Gwenllian Lyswen",
-      "portrait": "https://i.imgur.com/cy3TS2x.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/gwenllian-lyswen.webp",
       "href": "/AleriaAlmanach/AleriaAlmanach.html?character=micIJWlN8CkuedMo490X"
     },
     {
@@ -2073,7 +2095,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--family-tree--ruarc-balguen",
       "name": "Ruarc Balguen",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/ruarc-balguen.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-awenydd&mode=view&person=ruarc-balguen"
     },
     {
@@ -2122,14 +2144,14 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-argall--perwyn-argall",
       "name": "Perwyn Argall",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
       "href": "/Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=perwyn-argall",
       "almanacHref": "/AleriaAlmanach/AleriaAlmanach.html?character=person--haus-argall--perwyn-argall"
     },
     {
       "id": "person--haus-argall--rhydric-argall",
       "name": "Rhydric Argall",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
       "href": "/Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=rhydric-argall",
       "almanacHref": "/AleriaAlmanach/AleriaAlmanach.html?character=person--haus-argall--rhydric-argall"
     },
@@ -2226,7 +2248,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-balchder--dalvin-balchder",
       "name": "Dalvin Balchder",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-balchder/dalvin-balchder.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=dalvin-balchder"
     },
     {
@@ -2458,13 +2480,13 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-draig--galahad-draig",
       "name": "Galahad Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=galahad-draig"
     },
     {
       "id": "person--haus-draig--gawain-draig",
       "name": "Gawain Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gawain-draig"
     },
     {
@@ -2512,7 +2534,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-draig--odyar-draig",
       "name": "Odyar Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=odyar-draig"
     },
     {
@@ -2530,7 +2552,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-draig--steffan-draig",
       "name": "Steffan Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=steffan-draig"
     },
     {
@@ -2542,7 +2564,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-draig--trahern-draig",
       "name": "Trahaern Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig"
     },
     {
@@ -2560,7 +2582,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-eisenherz--brona-eisenherz",
       "name": "Brona Eisenherz",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/brona-eisenherz.webp",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=brona-eisenherz",
       "almanacHref": "/AleriaAlmanach/AleriaAlmanach.html?character=XTL39e7WjIwUtoT9Gxml"
     },
@@ -2585,7 +2607,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-gafyr--duncan-gafyr",
       "name": "Duncan Gafyr",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=duncan-gafyr"
     },
     {
@@ -2621,7 +2643,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-gelyn--dehlia-gelyn",
       "name": "Dehlia Gelyn",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gelyn/dehlia-gelyn.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-gelyn&mode=view&person=dehlia-gelyn"
     },
     {
@@ -2645,7 +2667,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-gwefrydd--stennis-gwefrydd",
       "name": "Stennis Gwefrydd",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd"
     },
     {
@@ -2717,7 +2739,7 @@ export const OFFICE_CAST = {
     {
       "id": "person--haus-gwyvern--heledd-gwyvern",
       "name": "Heledd Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/heledd-gwyvern.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=heledd-gwyvern"
     },
     {
@@ -2788,6 +2810,12 @@ export const OFFICE_CAST = {
       "name": "Caderyn Rhuddgar",
       "portrait": "/Stammbäume/assets/images/portraits/haus-rhuddgar/caderyn-rhuddgar.jpg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-rhuddgar&mode=view&person=caderyn-rhuddgar"
+    },
+    {
+      "id": "person--haus-rhyddid--gwydion-rhyddid",
+      "name": "Gwydion Rhyddid",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-rhyddid/gwydion-rhyddid.jpg",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-rhyddid&mode=view&person=gwydion-rhyddid"
     },
     {
       "id": "person--haus-rosenblueht--anouk-rosenblueht",
@@ -2989,7 +3017,7 @@ export const OFFICE_CAST = {
     {
       "id": "territory/gwendolyns-ufer/hof/kueche",
       "name": "Brevan Caerthwyn",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caerthwyn/breven.jpg",
       "href": ""
     },
     {
@@ -3007,13 +3035,13 @@ export const OFFICE_CAST = {
     {
       "id": "territory/gwendolyns-ufer/ort/craithfael",
       "name": "Iddon Haearn",
-      "portrait": "https://i.imgur.com/mqnDamN.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/iddon-haearn.webp",
       "href": ""
     },
     {
       "id": "territory/gwendolyns-ufer/ort/traethgorn",
       "name": "Rhunlas Llon",
-      "portrait": "https://i.imgur.com/cAfLe9b.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/rhunlas-llon.webp",
       "href": ""
     },
     {
@@ -3035,10 +3063,22 @@ export const OFFICE_CAST = {
       "href": ""
     },
     {
+      "id": "territory/wyrm/ort/bronhir/buergermeister",
+      "name": "Trachmyr Trevandir",
+      "portrait": "",
+      "href": "/Orte/grossstadt.html?id=bronhir"
+    },
+    {
       "id": "territory/wyrm/ort/craithglyn",
       "name": "Hywel Tynged",
-      "portrait": "https://i.imgur.com/dscN0iz.png",
+      "portrait": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/assets/hywel-tynged.png",
       "href": ""
+    },
+    {
+      "id": "territory/wyrm/ort/craithglyn/rentmeister-craithglyn",
+      "name": "Rhun Tynged",
+      "portrait": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/assets/rhun-tynged.png",
+      "href": "/Orte/grossstadt.html?id=craithglyn"
     },
     {
       "id": "territory/wyrm/ort/mwyncreig",

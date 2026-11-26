@@ -36,6 +36,20 @@ test('all canonically registered counties lead to distinct preparations with sta
   }
 });
 
+test('regional court appointments keep portraits from their authored house assets', async () => {
+  for (const [scope, slot, file] of [
+    ['herrschaft-schwalbenhort', 'kaplan', 'Haus_Ilyuncu/assets/hofkaplan-reese-original.png'],
+    ['baronie-falkenhoeh', 'hofmagier', 'Haus_Hebog/assets/lasairfhiona-flaithbertaigh.png'],
+    ['grafschaft-sonnenkueste', 'garde', 'Haus_Illewod/assets/ulfrik-original.png'],
+  ]) {
+    const appointment = scopes.get(scope).staff.find(post => post.area === 'hof' && post.slot === slot);
+    const portrait = people.get(appointment.holder).portrait;
+    assert(portrait.startsWith('/Familien Häuser und Clans/Estryll/Cenyr/'), portrait);
+    assert(portrait.endsWith(`/${file}`), portrait);
+    await access(new URL(`../..${portrait}`, import.meta.url));
+  }
+});
+
 test('the royal council and household are separate from the county offices of Vortigerns Ruh', () => {
   const royal = scopes.get('krone');
   const county = scopes.get('grafschaft-vortigerns-ruh');

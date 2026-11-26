@@ -702,7 +702,7 @@ async function checkLocalAuthorities(width, height) {
       assert.match(await editor.locator('[data-role="authority-site"]').innerText(), new RegExp(type));
       assert.deepEqual(await role.locator('option').evaluateAll(elements => elements.map(option => option.value)), ['', ...options]);
     }
-    await inspect('Côr Mynyddfaen', 'Klostersiedlung', ['oberer', 'prior', 'abt', 'gildenpacht']);
+    await inspect('Côr Mynyddfaen', 'Klostersiedlung', ['diakon', 'oberer', 'prior', 'abt', 'gildenpacht']);
     assert.match(await role.locator('option').first().innerText(), /Oberin/);
     await page.keyboard.press('Escape');
     await editor.waitFor({ state: 'hidden' });

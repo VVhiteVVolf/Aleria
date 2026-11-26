@@ -13,7 +13,7 @@ Hausämter und Dienstbindungen aus den bestehenden Registern. Am Grafenhof
 werden die Orte seiner direkten Domäne verwendet. Belegte Personen bilden
 den Ausgangsstand. Die Stammbaumsuche startet in der ausgewählten Grafschaft.
 Die Suche nach freien Posten kann über „Gebiet“ auf ganz Cenyr erweitert
-werden. Version 10 speichert und exportiert den Gesamtentwurf. Der Import
+werden. Version 11 speichert den Gesamtentwurf und persönliche Hofdienste. Der Import
 einer früheren lokalen Fassung lässt inzwischen angelegte Entwürfe der
 weiteren Herrschaften bestehen.
 
@@ -40,6 +40,23 @@ Die regulären Rats- und Hofansichten nutzen dieselben Amtspläne. Über
 „Besetzung in der Werkstatt bearbeiten“ gelangt man vom offiziellen Amtsfenster
 direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichbar.
 
+## Ortsregierungen und Räte
+
+„Ortsämter und Lehen“ führt von der Ortsleitung in das Amtsfenster des Ortes.
+Die Ortsseite und die Werkstatt verwenden `settlement-government.mjs` als
+gemeinsame Vorlage. Militär, Glaube, Justiz, Finanzen, Geheimdienst, Diplomatie
+und Unterhaltung sind die sieben Bereiche der weltlichen Siedlungen.
+Hauptmann, Diakon, Landrichter, Rentmeister und Zellenführer erscheinen mit
+derselben Besetzung wie in der zuständigen Herrschaft, wenn es dort bereits
+eine entsprechende Stelle gibt. Eine Garnison, eine geistliche Gemeinschaft
+und eine Gildenpacht haben eigene, kürzere Strukturen und jeweils einen Rat.
+
+Die Orts- und Stadträte stehen unter den regierenden Ämtern. Acht Plätze sind
+die Vorgabe für weltliche Orte. Llysfaen behält die fünf belegten Familiensitze,
+Brinthan Argall als Bürgermeister und Gwydion Rhyddid als Hauptmann. Ratssitze
+lassen sich hinzufügen, besetzen und entfernen. Herrschaftssitze mit eigener
+Verwaltung und die Dyarchie von Camruisge verwenden ihre eigenen Einstiege.
+
 ## Besetzung und Entwurf
 
 - Rats- und Hofämter öffnen jeweils ihre eigene Hierarchie. Die Amtsleitung
@@ -49,6 +66,10 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   Stellen bleiben besetzt, bis sie neu besetzt oder über „Freigeben“ geleert
   werden. Kleine Links führen von der Amtskarte zu den weiteren Posten
   derselben Figur, etwa von Odyars Kämmerei zu seinem Schatzmeisteramt.
+  „Ämter nach Personen finden“ zeigt die aktuellen Ämter und das persönliche
+  Gefolge einer Figur über die Herrschaften hinweg. Links öffnen die Amtskarte.
+  Im Amtsfenster bleiben Kandidatensuche und Filter beim Wechsel in eine
+  Unterstruktur erhalten. Amtslinie und Abschnittsauswahl zeigen den Weg.
 - „Ortsämter und Lehen“ zeigt den erfassten Ortstyp und eine Leitungsstelle je
   Siedlung, befestigtem Ort oder überliefertem Lehenssitz. Die Amtsform lässt
   sich passend zum Ort wählen. Für Kirchen und Klöster gibt es geistliche
@@ -96,6 +117,39 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   Flottenkommandos aus alten Entwürfen bleiben als übrige Rollen erhalten. Import,
   Zurücksetzen und einzelne Änderungen lassen sich rückgängig machen.
 
+## Teilentwürfe
+
+Die Auswahl „Entwurfsbereich“ am Kopf der Werkstatt umfasst ganz Cenyr,
+die ausgewählte Grafschaft und die ausgewählte Herrschaft. Über die Schriftrolle
+im Amtsfenster lassen sich zusätzlich das offene Amt und seine übergeordneten
+Amtsbereiche übertragen. Ein Hofexport enthält die Hofämter und deren
+Unterstrukturen. Ein Ortsratexport enthält den ausgewählten Ort, seine
+Postenliste und die dortigen Entwurfsänderungen.
+
+Die Datei enthält die Auswahl und kann auch über den allgemeinen Import geladen
+werden. Für einen Import in eine engere Auswahl werden nur deren Stellen
+übernommen. Weitere Entwürfe bleiben erhalten. Gemeinsame Stellen wie die
+Ortswache von Llysfaen behalten in beiden Ansichten dieselbe Besetzung.
+Das persönliche Gefolge wird über „Dienst zuteilen“ an den Dienstposten
+beim Vogt erfasst und im Entwurf mitgespeichert.
+
+## Gestaltung
+
+`workbench.css` ordnet Häuser, Amtsregister und Porträts. `workbench-materials.css`
+verwendet die Texturen und Einfassungen aus
+[`shared/cenyr-administration/administration-materials.css`](../../shared/cenyr-administration/administration-materials.css).
+Dieselben Bilder gehören auch zu den regulären Verwaltungsfenstern,
+Hofämtern, Ortsräten und zum Cenyr-Ämterverzeichnis. Der Bildrahmen skaliert
+die vier Seiten getrennt, damit seine Eckornamente bei schmalen Fenstern
+erhalten bleiben.
+
+Die gemeinsame CSS-Datei verankert ihre Bildpfade am eigenen Ordner. Die
+Dateivorschau löst Bild- und Seitenpfade aus den Amtsdaten über
+preview-url.mjs zum Projektordner auf. Statische Links zwischen den
+Vorbereitungsseiten verwenden relative Dateipfade.
+
+[Bildoriginale, Prompts und Webfassungen](../../AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/manifest.json)
+
 ## Aufbau und Quellen
 
 - **Räte und Kandidaten.** `scripts/build-roster.mjs` projiziert die
@@ -104,8 +158,11 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   Der Stammbaumindex führt Weltpersonen zusammen, die in mehreren
   Familienakten vorkommen. Die Suche erhält diese Akten als Suchwege.
   Für jeden Eintrag enthält der Index Name, Porträt, Alter, öffentlich
-  belegten Familienstand und die vorhandene Stammbaumverknüpfung. Arawn,
-  Tegyr und Torri sind als Amtsfiguren belegt. Ihre Familienzuordnung
+  belegten Familienstand und die vorhandene Stammbaumverknüpfung. Der Generator
+  prüft Amtsporträts und nutzt verfügbare Bilder derselben Weltpersonenkennung
+  aus dem Stammbaum oder Almanach. Archivierte Bildadressen führen zu lokalen
+  Webfassungen. Die Originale sind im Bildmanifest des Verwaltungskatalogs belegt.
+  Arawn, Tegyr und Torri sind als Amtsfiguren belegt. Ihre Familienzuordnung
   bleibt offen.
 - **Grafschaft.** `shared/cenyr-administration/county-reference.mjs` bindet die acht redaktionellen
   Quellen aus `Kontinente/modules/administration/data/celtigerns-*.mjs` ein.

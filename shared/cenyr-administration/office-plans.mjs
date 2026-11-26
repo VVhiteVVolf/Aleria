@@ -16,6 +16,7 @@ import { CENYR_MARSHAL_DUTY, FLOTILLA_ROLE, RETIRED_WATCH_MARSHAL, SEA_CAPTAIN_R
   repeatableNavalPost, watchSection, watchServiceSection } from './military-organization.mjs';
 import { rankOf, rulerSuffix } from './scopes.mjs';
 import { buildCamruisgePlans } from './camruisge-plan.mjs';
+import { buildSettlementPlans } from './settlement-plans.mjs';
 
 const section = (title, icon, description, slots) => ({
   title, icon, description, slots: slots.map(slot => {
@@ -387,6 +388,7 @@ export function buildOfficePlans(house) {
   }]);
   const plans = Object.fromEntries(definitions.map(([id, plan]) => [id, prepareOfficePlan(house, id, plan, appointments)]));
   if (!house.courtScope) Object.assign(plans, buildCourtPlans(house, appointments));
+  Object.assign(plans, buildSettlementPlans(house, plans, appointments));
   if (appointments.size) throw new Error(`Posten für belegte Dienste fehlen: ${[...appointments.keys()].join(', ')}`);
   return plans;
 }

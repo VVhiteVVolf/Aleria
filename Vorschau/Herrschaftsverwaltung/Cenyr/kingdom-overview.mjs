@@ -2,6 +2,7 @@ import { escapeHtml as e } from '../../shared/country-workbench/render.mjs';
 import { normalizePersonName } from '../../../js/world-identity/person-identity.js';
 import { rankOf } from '../../../shared/cenyr-administration/scopes.mjs';
 import { ABERLLAN_PREVIEW, administrationHref } from '../territorial-navigation.mjs';
+import { previewAttribute, previewUrl } from '../preview-url.mjs';
 
 const contains = (terms, values) => {
   const searchable = normalizePersonName(values.filter(Boolean).join(' '));
@@ -10,12 +11,12 @@ const contains = (terms, values) => {
 
 function territoryRow(county, scope) {
   return `<li>
-    <a class="county-territory" href="${e(administrationHref(county.id, scope.id))}">
-      <img src="${e(scope.crest)}" width="32" height="35" alt="" loading="lazy">
+    <a class="county-territory" href="${previewAttribute(administrationHref(county.id, scope.id))}">
+      <img src="${previewAttribute(scope.crest)}" width="32" height="35" alt="" loading="lazy">
       <span><strong>${e(scope.title)}</strong><small>${e(rankOf(scope).label)} · ${e(scope.name)}</small></span>
       <span aria-hidden="true">↗</span>
     </a>
-    ${scope.rank === 'diarchy' ? `<a class="county-place-link" href="${ABERLLAN_PREVIEW}">Ortsvorbereitung Aberllan ↗</a>` : ''}
+    ${scope.rank === 'diarchy' ? `<a class="county-place-link" href="${previewAttribute(ABERLLAN_PREVIEW)}">Ortsvorbereitung Aberllan ↗</a>` : ''}
   </li>`;
 }
 
@@ -26,11 +27,11 @@ function countyCard(county, list, searching) {
   const action = count === 1 ? '1 Herrschaft ansehen' : `${count} Herrschaften ansehen`;
   return `<article class="county-card" data-county="${e(county.id)}">
     <header>
-      <img src="${e(county.crest)}" width="60" height="68" alt="" loading="lazy">
+      <img src="${previewAttribute(county.crest)}" width="60" height="68" alt="" loading="lazy">
       <div><h3>${e(county.name)}</h3><p>${e(head.name)} · ${e(county.seat)}</p></div>
     </header>
     ${county.demesne ? `<p class="county-demesne">Direkte Domäne · ${e(county.demesne.replace(/^Gräfische Baronie /u, ''))}</p>` : ''}
-    <a class="county-workbench" href="${e(administrationHref(county.id, head.id))}" aria-label="${e(`Grafschaft ${county.name} bearbeiten`)}">Grafschaft bearbeiten <span aria-hidden="true">↗</span></a>
+    <a class="county-workbench" href="${previewAttribute(administrationHref(county.id, head.id))}" aria-label="${e(`Grafschaft ${county.name} bearbeiten`)}">Grafschaft bearbeiten <span aria-hidden="true">↗</span></a>
     ${visible.length ? `<details class="county-list"${searching ? ' open' : ''}>
       <summary>${e(searching ? `${visible.length} passende Herrschaften` : action)}</summary>
       <ul>${visible.map(scope => territoryRow(county, scope)).join('')}</ul>
@@ -44,7 +45,7 @@ function init(root, { kingdom, counties }) {
   const status = role('county-status');
   const grid = role('county-grid');
   const [crown] = kingdom.scopes;
-  role('kingdom-record').href = kingdom.href;
+  role('kingdom-record').href = previewUrl(kingdom.href);
   role('crown-holder').textContent = crown.ruler ? `König ${crown.ruler} · ${crown.name}` : crown.name;
   const counts = counties.flatMap(county => county.scopes).reduce((counts, scope) => {
     counts[scope.rank] = (counts[scope.rank] || 0) + 1;

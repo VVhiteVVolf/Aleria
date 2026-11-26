@@ -2,17 +2,23 @@
 
 :root {
   color-scheme: light;
-  --ink: #252b23;
-  --muted: #63665b;
-  --paper: #faf7ef;
-  --panel: #fffdf7;
+  --ink: #31271b;
+  --muted: #65533e;
+  --paper: #f0e4c8;
+  --panel: #f8efd9;
   --canvas: #f0ece2;
-  --line: #d9d1bf;
-  --accent: #2f5948;
-  --accent-dark: #1d3c30;
-  --accent-soft: #e5ede4;
-  --gold: #855b27;
-  --serif: Georgia, 'Times New Roman', serif;
+  --line: #b9a17a;
+  --accent: #805041;
+  --accent-dark: #634035;
+  --accent-soft: #edddc8;
+  --gold: #785019;
+  --brass: #ae9159;
+  --dark: #21191c;
+  --dark-panel: #35282b;
+  --dark-line: #74605c;
+  --light-ink: #f3e6c8;
+  --light-muted: #c8b999;
+  --serif: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
   --sans: system-ui, sans-serif;
   font: 15px/1.5 var(--sans);
   color: var(--ink);
@@ -57,7 +63,7 @@ summary { cursor: pointer; }
 .checkbox-label { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; cursor: pointer; }
 
 .masthead {
-  background: #20372d;
+  background: var(--dark);
   color: #fbf3e0;
   border-bottom: 2px solid #947544;
 }
@@ -109,7 +115,7 @@ h1 { font-size: clamp(2.15rem, 4vw, 3.45rem); line-height: 1.06; letter-spacing:
 .house-choice strong, .house-choice small { display: block; }
 .house-choice strong { font: 600 1.16rem/1.25 var(--serif); }
 .house-choice small { font-size: .78rem; color: var(--muted); margin-top: 4px; }
-.page-notice { border: 1px solid #c6d3c3; border-radius: 7px; background: var(--accent-soft); padding: 9px 12px; margin-top: 16px; }
+.page-notice { border: 1px solid var(--line); border-radius: 7px; background: var(--accent-soft); padding: 9px 12px; margin-top: 16px; }
 .dyarchy-branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .dyarchy-branch { display: grid; align-content: start; gap: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
 .dyarchy-branch p { font-size: .83rem; color: var(--muted); }

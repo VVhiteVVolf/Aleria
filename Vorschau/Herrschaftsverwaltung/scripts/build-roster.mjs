@@ -8,7 +8,6 @@ import { buildFamilyPersonDisplayName, getHouseSurname } from '../../../js/world
 import { normalizePersonName } from '../../../js/world-identity/person-identity.js';
 import { readWorldDirectorySources } from '../../../shared/world-directory/source-reader.mjs';
 import councils from '../../../Kontinente/modules/administration/data/celtigerns-vassals.generated.mjs';
-import { resolveAdministrationPortrait } from '../../../Kontinente/modules/administration/administration-portrait-sources.mjs';
 import { HOUSE_CONTENT as saethwyrCourt } from '../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/haus.content.mjs';
 import { HOUSE_CONTENT as gafyrCourt } from '../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/haus.content.mjs';
 import { HOUSE_CONTENT as wyrmCourt } from '../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/haus.content.mjs';
@@ -18,20 +17,23 @@ import { HOUSE_CONTENT as arwyddCourt } from '../../../Familien Häuser und Clan
 import { houseOfficeFor } from '../../../Familien Häuser und Clans/modules/court/house-office-catalog.mjs';
 import { geographicKey } from '../../../shared/world-directory/geographic-key.mjs';
 import { CENYR_ADMINISTRATION_SCOPES } from '../../../shared/cenyr-administration/scopes.mjs';
-import { PERSONAL_SERVICE, SERVICE_HOUSES, FREE_HOUSES, OTHER_SERVICE, STAFF, TERRITORIAL_NAME_NOTES, COURT_NAME_NOTES } from './roster-sources.mjs';
+import { PERSONAL_SERVICE, SERVICE_HOUSES, FREE_HOUSES, OTHER_SERVICE, STAFF, TERRITORIAL_NAME_NOTES, COURT_NAME_NOTES,
+  SETTLEMENT_APPOINTMENT_SOURCES } from './roster-sources.mjs';
 import { buildCountyRoster } from './county-roster.mjs';
 import { buildTreeCandidateIndex } from './tree-candidate-index.mjs';
 import { readAlmanacAppointments } from './almanac-appointments.mjs';
 import { buildKingdomPlanning } from './kingdom-planning.mjs';
+import { createRosterPortraitSources } from './roster-portrait-sources.mjs';
 
 const root = new URL('../../../', import.meta.url);
 const output = new URL('../roster.generated.json', import.meta.url);
 const kingdomOutput = new URL('../kingdom.generated.json', import.meta.url);
 const nativeOutput = new URL('../../../shared/cenyr-administration/office-cast.generated.mjs', import.meta.url);
-const { territories, families, houses: houseEntries } = await readWorldDirectorySources();
+const { territories, families, places: placeSources, houses: houseEntries } = await readWorldDirectorySources();
 const almanac = await readAlmanacAppointments();
 const directory = new Map(families.map(family => [family.id, family]));
 const registry = new Map(FAMILY_REGISTRY.map(family => [family.id, family]));
+const { declaredPath: portraitUrl, bestFor: portraitFor } = createRosterPortraitSources(root, FAMILY_REGISTRY, almanac.index);
 const courts = {
   saethwyr: saethwyrCourt, gafyr: gafyrCourt, wyrm: wyrmCourt,
   'arthus-streben': gwefryddCourt, 'gwendolyns-ufer': gwyvernCourt, 'rhonwens-traenen': arwyddCourt,
@@ -42,16 +44,6 @@ const isNamed = name => typeof name === 'string' && /\p{L}/u.test(name)
   && !/^(?:unbekannt|unbenannt|nicht benannt|offen|folgt)/i.test(name.trim());
 const isLiving = person => person.status === 'alive' && !isPersonRecordedDead(person) && isNamed(person.name);
 const personHref = (family, id) => `/Stammbäume/Stammbaum.html?family=${encodeURIComponent(family)}&mode=view&person=${encodeURIComponent(id)}`;
-
-function portraitUrl(raw = '') {
-  const path = resolveAdministrationPortrait(raw);
-  const local = path.startsWith('assets/') ? `/Stammbäume/${path}` : path;
-  if (/^\/(?!\/)/u.test(local)) {
-    const file = new URL(`.${local}`, root);
-    return file.href.startsWith(root.href) && existsSync(file) ? local : '';
-  }
-  return /^https:\/\//u.test(local) ? local : '';
-}
 
 function publicMarriages(family, person) {
   return family.partnerships.filter(link => link.type === 'marriage'
@@ -86,7 +78,11 @@ function addFamilyPerson(record, person, currentName, portrait, localId) {
   const id = person.worldPersonId || localId;
   if (!id) throw new Error(`Fehlende Weltpersonen-ID: ${record.id}/${person.id}`);
   const previous = people.get(id);
-  if (previous && (!currentName || previous.alias)) return id;
+  if (previous && (!currentName || previous.alias)) {
+    const image = portraitFor(id, previous.portrait, portrait, person.portrait);
+    if (image !== previous.portrait) people.set(id, { ...previous, portrait: image });
+    return id;
+  }
   const familyName = buildFamilyPersonDisplayName(record.family, person);
   const birth = String(person.birth || '');
   const approximate = /^\d{4}\s*\?$/.test(birth);
@@ -94,7 +90,7 @@ function addFamilyPerson(record, person, currentName, portrait, localId) {
   const name = currentName || familyName;
   people.set(id, {
     id, name, ...(name !== familyName ? { alias: familyName } : {}),
-    portrait: portraitUrl(portrait || person.portrait),
+    portrait: portraitFor(id, portrait, person.portrait, previous?.portrait),
     sex: person.sex, age, ...(age !== null && approximate ? { approximate: true } : {}),
     relationship: relationship(record.family, person),
     href: personHref(record.id, person.id),
@@ -117,7 +113,7 @@ function addNamedMember(scope, member, key) {
   // pedigree entry cannot supply their family, gender, age or relationship.
   const id = member.worldPersonId || `territory/${scope}/${key}`;
   people.set(id, {
-    id, name: member.name, portrait: portraitUrl(member.imageSrc),
+    id, name: member.name, portrait: portraitFor(id, member.imageSrc, member.portrait, member.image, people.get(id)?.portrait),
     sex: member.sex || 'unknown', age: member.age ?? null, relationship: 'unknown', href: member.href || '',
   });
   return id;
@@ -207,6 +203,17 @@ function addHouse(profile) {
     if (!candidates.has(holder)) throw new Error(`Fehlende Dienstbindung: ${scope}/${slot}`);
     return { area, slot, holder };
   });
+  for (const { placeId, name, area, slot, role, title } of SETTLEMENT_APPOINTMENT_SOURCES[scope] || []) {
+    const place = placeSources.find(entry => entry.id === placeId);
+    const personalities = place?.content?.personalities?.flatMap(group => group.items || []) || [];
+    const matches = personalities.filter(person => person.name === name && role.test(person.role));
+    if (matches.length !== 1) throw new Error('Ortsamt in der Quellenakte abgleichen: ' + placeId + ' · ' + name);
+    const [person] = matches;
+    const holder = addNamedMember(scope, { name, imageSrc: person.portrait, href: '/Orte/grossstadt.html?id=' + placeId },
+      'ort/' + placeId + '/' + slot);
+    admit(holder, 'service', '', 'Belegtes Ortsamt in ' + place.name);
+    staff.push({ area, slot, holder, ...(title ? { title } : {}) });
+  }
   const court = courts[scope].offices.map(({ role, name, id, familyId, image, detail }) => {
     const note = COURT_NAME_NOTES[`${scope}/${role}`];
     if (isNamed(name) && !note) {
@@ -220,7 +227,7 @@ function addHouse(profile) {
   });
   return {
     ...profile, name: own.name, title: territory.name, crest: own.emblem, href: council.href, ruler: rulerId,
-    offices, court, contacts, staff, enrolled: enrolled.filter(item => item.id !== ownId).sort(byName),
+    offices, court, contacts, staff, governmentSeat: geography.domain.center, enrolled: enrolled.filter(item => item.id !== ownId).sort(byName),
     places: localPlaces(geography.domain, profile.preparation),
     candidates: [...candidates.values()],
   };

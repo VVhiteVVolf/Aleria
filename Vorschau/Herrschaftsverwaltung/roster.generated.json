@@ -148,6 +148,7 @@
           "holder": "person--haus-arth--melyn-arth"
         }
       ],
+      "governmentSeat": "Gwynthor",
       "enrolled": [
         {
           "id": "haus-aelmor",
@@ -729,6 +730,7 @@
           "holder": "person--haus-chamois--lleirys-chamois"
         }
       ],
+      "governmentSeat": "Gwynthor",
       "enrolled": [
         {
           "id": "haus-afelwyn",
@@ -1324,6 +1326,11 @@
           "holder": "person--haus-loer--dwynarth-loer"
         },
         {
+          "area": "militaer",
+          "slot": "wacht-llysfaen",
+          "holder": "person--haus-rhyddid--gwydion-rhyddid"
+        },
+        {
           "area": "hof",
           "slot": "vogt",
           "holder": "person--glynmor--person-2a5e7890"
@@ -1339,6 +1346,17 @@
           "holder": "person--glynmor--person-d665a54d"
         },
         {
+          "area": "ortsrat-bronhir",
+          "slot": "buergermeister",
+          "holder": "territory/wyrm/ort/bronhir/buergermeister"
+        },
+        {
+          "area": "finanzen",
+          "slot": "rentmeister-craithglyn",
+          "holder": "territory/wyrm/ort/craithglyn/rentmeister-craithglyn",
+          "title": "Steuermeister von Craithglyn"
+        },
+        {
           "area": "klerus",
           "slot": "diakon-llysfaen",
           "holder": "almanach/micIJWlN8CkuedMo490X",
@@ -1346,6 +1364,7 @@
           "title": "Diakonin von Llysfaen"
         }
       ],
+      "governmentSeat": "Gwynthor",
       "enrolled": [
         {
           "id": "haus-blevis",
@@ -2168,6 +2187,18 @@
           "kind": "service",
           "family": "",
           "detail": "Bürgermeister · Mwyncreig"
+        },
+        {
+          "id": "territory/wyrm/ort/bronhir/buergermeister",
+          "kind": "service",
+          "family": "",
+          "detail": "Belegtes Ortsamt in Bronhir"
+        },
+        {
+          "id": "territory/wyrm/ort/craithglyn/rentmeister-craithglyn",
+          "kind": "service",
+          "family": "",
+          "detail": "Belegtes Ortsamt in Craithglyn"
         },
         {
           "id": "almanach/micIJWlN8CkuedMo490X",
@@ -5817,6 +5848,7 @@
           "title": "Diakonin von Gwaulhir"
         }
       ],
+      "governmentSeat": "Rhosmere",
       "enrolled": [
         {
           "id": "haus-almarch",
@@ -6259,6 +6291,7 @@
           "title": "Diakon von Morcarryn"
         }
       ],
+      "governmentSeat": "Abergwint",
       "enrolled": [
         {
           "id": "haus-annwyl",
@@ -8124,6 +8157,7 @@
           "title": "Diakon von Traethgwen"
         }
       ],
+      "governmentSeat": "Castellbryn",
       "enrolled": [
         {
           "id": "haus-gwared",
@@ -79582,7 +79616,7 @@
     {
       "id": "person--haus-sonnenfels--adelheid-sonnenfels",
       "name": "Adelheid Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/adelheid.png",
       "sex": "female",
       "age": 57,
       "relationship": "married",
@@ -79645,7 +79679,7 @@
     {
       "id": "person--krumme-kanne--aedan-dubhdarach-kanne",
       "name": "Aedan Dubhdarach",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
       "sex": "male",
       "age": 45,
       "relationship": "married",
@@ -79843,7 +79877,7 @@
     {
       "id": "person--rote-klaue--aerwen",
       "name": "Aerwen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rote-klaue/portraits/aerwen.png",
       "sex": "female",
       "age": 28,
       "relationship": "married",
@@ -79888,7 +79922,7 @@
     {
       "id": "person--haus-estmere--aethelbeth-estmere",
       "name": "Æthelbeth Hadley",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-pysgod/aethelbeth-estmere.jpg",
       "sex": "unknown",
       "age": 52,
       "relationship": "widowed",
@@ -80365,7 +80399,7 @@
     {
       "id": "person--haus-draenmelyn--afan-draenmelyn",
       "name": "Afan Draenmelyn",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/afan-draenmelyn.webp",
       "sex": "male",
       "age": 46,
       "relationship": "married",
@@ -80996,7 +81030,7 @@
     {
       "id": "person--sept-cneacail--alasdair-cneacail",
       "name": "Alasdair Cneacail",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png",
       "sex": "male",
       "age": 44,
       "relationship": "unknown",
@@ -81176,7 +81210,7 @@
     {
       "id": "person--haus-sonnenfels--albrecht-sonnenfels",
       "name": "Albrecht Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/references/albrecht.png",
       "sex": "male",
       "age": 63,
       "relationship": "married",
@@ -81284,7 +81318,7 @@
     {
       "id": "person--haus-penrudd--aled-penrudd",
       "name": "Aled Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/aled.png",
       "sex": "male",
       "age": 24,
       "relationship": "married",
@@ -81807,7 +81841,7 @@
     {
       "id": "person--haus-gofrann--aneira-gofrann",
       "name": "Aneira Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/aneira.png",
       "sex": "female",
       "age": 32,
       "relationship": "married",
@@ -81843,7 +81877,7 @@
     {
       "id": "person--haus-vann--aneirin-vann",
       "name": "Aneirin Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/aneirin.png",
       "sex": "male",
       "age": 21,
       "relationship": "married",
@@ -81942,7 +81976,7 @@
     {
       "id": "person--haus-vann--angharad-vann",
       "name": "Angharad",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/angharad.png",
       "sex": "female",
       "age": 41,
       "relationship": "married",
@@ -82015,7 +82049,7 @@
     {
       "id": "person--haus-morglan--angharad-morglan",
       "name": "Angharad Morglan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/angharad-morglan.png",
       "sex": "female",
       "age": 58,
       "relationship": "widowed",
@@ -82295,7 +82329,7 @@
     {
       "id": "person--sept-cneacail--aodhan-cneacail",
       "name": "Aodhan Cneacail",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/klingende-krone/portraits/aodhan.png",
       "sex": "male",
       "age": 6,
       "relationship": "single",
@@ -83564,7 +83598,7 @@
     {
       "id": "person--haus-raves--aurelio-raves",
       "name": "Aurelio Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/aurelio.png",
       "sex": "male",
       "age": 15,
       "relationship": "single",
@@ -83681,7 +83715,7 @@
     {
       "id": "person--haus-dyger--awen-dyger",
       "name": "Awen Dyger",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/awen-dyger.png",
       "sex": "female",
       "age": 25,
       "relationship": "single",
@@ -84140,7 +84174,7 @@
     {
       "id": "person--haus-ruddgraen--bedryn-ruddgraen",
       "name": "Bedryn Ruddgraen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-resale/portraits/bedryn-ruddgraen-v1.png",
       "sex": "male",
       "age": 17,
       "relationship": "single",
@@ -84402,7 +84436,7 @@
     {
       "id": "person--haus-penrudd--bethan-penrudd",
       "name": "Bethan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/bethan.png",
       "sex": "female",
       "age": 64,
       "relationship": "married",
@@ -84411,7 +84445,7 @@
     {
       "id": "person--haus-gwregysdu--bethan-gwregysdu",
       "name": "Bethan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/bethan.png",
       "sex": "female",
       "age": 68,
       "relationship": "married",
@@ -84438,7 +84472,7 @@
     {
       "id": "person--haus-prys--bethan-prys",
       "name": "Bethan Prys",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/bethan-prys.png",
       "sex": "female",
       "age": 39,
       "relationship": "single",
@@ -84780,7 +84814,7 @@
     {
       "id": "person--haus-gofrann--bleddyn-gofrann",
       "name": "Bleddyn Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/bleddyn.png",
       "sex": "male",
       "age": 68,
       "relationship": "married",
@@ -84798,7 +84832,7 @@
     {
       "id": "person--haus-gwregysdu--bleddyn-gwregysdu",
       "name": "Bleddyn Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/bleddyn.png",
       "sex": "male",
       "age": 71,
       "relationship": "married",
@@ -85293,7 +85327,7 @@
     {
       "id": "person--haus-ruddgraen--brannoc-ruddgraen",
       "name": "Brannoc Ruddgraen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png",
       "sex": "male",
       "age": 57,
       "relationship": "married",
@@ -85573,7 +85607,7 @@
     {
       "id": "person--haus-vann--brenn-vann",
       "name": "Brenn Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/references/brenn.png",
       "sex": "male",
       "age": 67,
       "relationship": "married",
@@ -85618,7 +85652,7 @@
     {
       "id": "territory/gwendolyns-ufer/hof/kueche",
       "name": "Brevan Caerthwyn",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caerthwyn/breven.jpg",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -86023,7 +86057,7 @@
     {
       "id": "person--haus-eisenherz--brona-eisenherz",
       "name": "Brona Eisenherz",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/brona-eisenherz.webp",
       "sex": "female",
       "age": 39,
       "relationship": "married",
@@ -86123,7 +86157,7 @@
     {
       "id": "person--haus-sonnenfels--brunhild-sonnenfels",
       "name": "Brunhild",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/brunhild.png",
       "sex": "female",
       "age": 60,
       "relationship": "married",
@@ -86168,7 +86202,7 @@
     {
       "id": "person--haus-beryn--brychan-beryn",
       "name": "Brychan Beryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/brychan-beryn.png",
       "sex": "male",
       "age": 54,
       "relationship": "married",
@@ -86222,7 +86256,7 @@
     {
       "id": "almanach/Hx23IAHjVHeuFUJGZPAj",
       "name": "Bryn Rhydderch",
-      "portrait": "https://i.imgur.com/sMslhgn.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/bryn-rhydderch.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -86465,7 +86499,7 @@
     {
       "id": "person--haus-morgwynt--cadell-morgwynt",
       "name": "Cadell Morgwynt",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/cadell-morgwynt.png",
       "sex": "male",
       "age": 49,
       "relationship": "married",
@@ -86510,7 +86544,7 @@
     {
       "id": "person--haus-ysgrif--cadell-ysgrif",
       "name": "Cadell Ysgrif",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/cadell-ysgrif.webp",
       "sex": "male",
       "age": 22,
       "relationship": "single",
@@ -86537,7 +86571,7 @@
     {
       "id": "person--haus-vann--cadeyrn-vann",
       "name": "Cadeyrn Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/references/cadeyrn.png",
       "sex": "male",
       "age": 43,
       "relationship": "married",
@@ -86708,7 +86742,7 @@
     {
       "id": "almanach/Yj5xREgJtjrAs8JOpOLe",
       "name": "Cadog Môrwyn",
-      "portrait": "https://i.imgur.com/t2AWKNw.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/cadog-morwyn.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -86744,7 +86778,7 @@
     {
       "id": "person--krumme-kanne--cadri-trevoryn-kanne",
       "name": "Cadri Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/cadri.png",
       "sex": "male",
       "age": 12,
       "relationship": "single",
@@ -86798,7 +86832,7 @@
     {
       "id": "person--haus-pendrwn--cadwgan-pendrwn",
       "name": "Cadwgan Pendrwn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/pendrwn-general-store/portraits/cadwgan.png",
       "sex": "male",
       "age": 56,
       "relationship": "married",
@@ -86843,7 +86877,7 @@
     {
       "id": "person--haus-morgwynt--cadyn-morgwynt",
       "name": "Cadyn Morgwynt",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cadyn-morgwynt-v2.png",
       "sex": "male",
       "age": 14,
       "relationship": "single",
@@ -86852,7 +86886,7 @@
     {
       "id": "person--haus-dyger--tudur-dyger",
       "name": "Caedmon Dyger",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/caedmon-dyger.jpg",
       "sex": "male",
       "age": 49,
       "relationship": "married",
@@ -87005,7 +87039,7 @@
     {
       "id": "almanach/NfpyXayG4KoYqp5xQZd5",
       "name": "Cai Taflu",
-      "portrait": "https://i.imgur.com/UtW0UZD.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/cai-taflu.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -87311,7 +87345,7 @@
     {
       "id": "person--rote-klaue--camilla",
       "name": "Camilla Valerus",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rote-klaue/portraits/camilla.png",
       "sex": "female",
       "age": 33,
       "relationship": "single",
@@ -87437,7 +87471,7 @@
     {
       "id": "person--haus-tonnarth--caradog-bastard-tonnarth",
       "name": "Caradog Tonnarth",
-      "portrait": "https://i.imgur.com/LK3q0UI.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/caradog-tonnarth.webp",
       "sex": "male",
       "age": 22,
       "relationship": "single",
@@ -87743,7 +87777,7 @@
     {
       "id": "person--haus-penrudd--carwyn-penrudd",
       "name": "Carwyn Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/carwyn.png",
       "sex": "male",
       "age": 46,
       "relationship": "married",
@@ -87896,7 +87930,7 @@
     {
       "id": "person--haus-raves--cassian-raves",
       "name": "Cassian Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/cassian.png",
       "sex": "male",
       "age": 7,
       "relationship": "single",
@@ -87905,7 +87939,7 @@
     {
       "id": "person--haus-fontani--cassiano-fontani",
       "name": "Cassiano Lucius Fontani",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png",
       "sex": "male",
       "age": 49,
       "relationship": "married",
@@ -88211,7 +88245,7 @@
     {
       "id": "person--sept-cneacail--catriona-cneacail",
       "name": "Catriona Cneacail",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/klingende-krone/portraits/catriona.png",
       "sex": "female",
       "age": 18,
       "relationship": "single",
@@ -88472,7 +88506,7 @@
     {
       "id": "person--krumme-kanne--celyn-trevoryn-kanne",
       "name": "Celyn Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/celyn.png",
       "sex": "female",
       "age": 41,
       "relationship": "married",
@@ -88481,7 +88515,7 @@
     {
       "id": "person--haus-vann--celyn-vann",
       "name": "Celyn Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/celyn.png",
       "sex": "female",
       "age": 5,
       "relationship": "single",
@@ -88716,7 +88750,7 @@
     {
       "id": "person--haus-penrudd--cerys-penrudd",
       "name": "Cerys",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/cerys.png",
       "sex": "female",
       "age": 22,
       "relationship": "married",
@@ -88752,7 +88786,7 @@
     {
       "id": "person--haus-gofrann--ceryth-gofrann",
       "name": "Ceryth Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/ceryth.png",
       "sex": "female",
       "age": 35,
       "relationship": "married",
@@ -89949,7 +89983,7 @@
     {
       "id": "person--haus-gwregysdu--cynan-gwregysdu",
       "name": "Cynan Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/cynan.png",
       "sex": "male",
       "age": 46,
       "relationship": "married",
@@ -89985,7 +90019,7 @@
     {
       "id": "person--haus-llythfor--cynddelw-llythfor",
       "name": "Cynddelw Llythfor",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
       "sex": "male",
       "age": 42,
       "relationship": "married",
@@ -90030,7 +90064,7 @@
     {
       "id": "person--haus-llafnfor--cynfarch-llafnfor",
       "name": "Cynfarch Llafnfor",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-erbstreit/portraits/cynfarch-llafnfor.png",
       "sex": "male",
       "age": 46,
       "relationship": "single",
@@ -90066,7 +90100,7 @@
     {
       "id": "person--haus-gofrann--cynlas-gofrann",
       "name": "Cynlas Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/cynlas.png",
       "sex": "male",
       "age": 20,
       "relationship": "single",
@@ -90570,7 +90604,7 @@
     {
       "id": "person--haus-balchder--dalvin-balchder",
       "name": "Dalvin Balchder",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-balchder/dalvin-balchder.jpg",
       "sex": "male",
       "age": 70,
       "relationship": "married",
@@ -90705,7 +90739,7 @@
     {
       "id": "person--haus-sonnenfels--david-sonnenfels",
       "name": "David Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/references/david.png",
       "sex": "male",
       "age": 27,
       "relationship": "single",
@@ -90831,7 +90865,7 @@
     {
       "id": "person--haus-gelyn--dehlia-gelyn",
       "name": "Dehlia Gelyn",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gelyn/dehlia-gelyn.jpg",
       "sex": "female",
       "age": 70,
       "relationship": "single",
@@ -90876,7 +90910,7 @@
     {
       "id": "person--haus-gwyllt--deiniol-gwyllt",
       "name": "Deiniol Gwyllt",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/corrected-2026-10-06/deiniol-gwyllt.png",
       "sex": "male",
       "age": 58,
       "relationship": "single",
@@ -91263,7 +91297,7 @@
     {
       "id": "person--haus-penrudd--dewi-penrudd",
       "name": "Dewi Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/dewi.png",
       "sex": "male",
       "age": 13,
       "relationship": "single",
@@ -91281,7 +91315,7 @@
     {
       "id": "person--haus-rhwyd--dewi-rhwyd",
       "name": "Dewi Rhwyd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/kleiner-durst/portraits/dewi.png",
       "sex": "male",
       "age": 14,
       "relationship": "single",
@@ -91371,7 +91405,7 @@
     {
       "id": "person--haus-sonnenfels--dietmar-sonnenfels",
       "name": "Dietmar Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/dietmar.png",
       "sex": "male",
       "age": 33,
       "relationship": "married",
@@ -92091,7 +92125,7 @@
     {
       "id": "person--haus-gafyr--duncan-gafyr",
       "name": "Duncan Gafyr",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg",
       "sex": "male",
       "age": 70,
       "relationship": "married",
@@ -92775,7 +92809,7 @@
     {
       "id": "person--haus-morgwynt--edern-morgwynt",
       "name": "Edern Morgwynt",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/edern-morgwynt.png",
       "sex": "male",
       "age": 57,
       "relationship": "married",
@@ -92811,7 +92845,7 @@
     {
       "id": "person--haus-vann--edern-vann",
       "name": "Edern Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/references/edern.png",
       "sex": "male",
       "age": 35,
       "relationship": "married",
@@ -92847,7 +92881,7 @@
     {
       "id": "person--haus-ruddgraen--edryssa-ruddgraen",
       "name": "Edryssa Ruddgraen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-resale/portraits/edryssa-ruddgraen-v1.png",
       "sex": "female",
       "age": 46,
       "relationship": "married",
@@ -92919,7 +92953,7 @@
     {
       "id": "person--haus-rhwyd--efa-rhwyd",
       "name": "Efa",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/kleiner-durst/portraits/efa.png",
       "sex": "female",
       "age": 70,
       "relationship": "unknown",
@@ -93243,7 +93277,7 @@
     {
       "id": "person--haus-twyllod--eifion-twyllod",
       "name": "Eifion Twyllod",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-erbstreit/portraits/eifion-twyllod.png",
       "sex": "male",
       "age": 44,
       "relationship": "married",
@@ -93594,7 +93628,7 @@
     {
       "id": "person--family-tree--einion",
       "name": "Einion Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/einion.png",
       "sex": "male",
       "age": 44,
       "relationship": "married",
@@ -93621,7 +93655,7 @@
     {
       "id": "person--haus-beryn--eirlys-beryn",
       "name": "Eira Beryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
       "sex": "female",
       "age": 14,
       "relationship": "single",
@@ -93720,7 +93754,7 @@
     {
       "id": "person--haus-halenrhyd--eirfena-halenrhyd",
       "name": "Eirfena",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-studs/portraits/eirfena-halenrhyd-v1.png",
       "sex": "female",
       "age": 47,
       "relationship": "married",
@@ -93729,7 +93763,7 @@
     {
       "id": "person--krumme-kanne--eirian-trevoryn-kanne",
       "name": "Eirian Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png",
       "sex": "female",
       "age": 42,
       "relationship": "married",
@@ -93783,7 +93817,7 @@
     {
       "id": "person--krumme-kanne--eirlys-dubhdarach-kanne",
       "name": "Eirlys Dubhdarach",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/eirlys.png",
       "sex": "female",
       "age": 9,
       "relationship": "single",
@@ -93819,7 +93853,7 @@
     {
       "id": "person--haus-llythfor--eirlys-llythfor",
       "name": "Eirlys Llythfor",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
       "sex": "female",
       "age": 10,
       "relationship": "single",
@@ -93864,7 +93898,7 @@
     {
       "id": "person--haus-vann--eirlys-vann",
       "name": "Eirlys Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/references/eirlys.png",
       "sex": "female",
       "age": 30,
       "relationship": "married",
@@ -94035,7 +94069,7 @@
     {
       "id": "person--sept-cneacail--eithne-cneacail",
       "name": "Eithne Cneacail",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/klingende-krone/portraits/eithne.png",
       "sex": "female",
       "age": 19,
       "relationship": "single",
@@ -94053,7 +94087,7 @@
     {
       "id": "person--haus-fearnan--eithne",
       "name": "Eithne Fearnan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/fearnan/eithne.png",
       "sex": "female",
       "age": 9,
       "relationship": "single",
@@ -94260,7 +94294,7 @@
     {
       "id": "person--haus-raves--elena-raves",
       "name": "Elena Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/elena.png",
       "sex": "female",
       "age": 4,
       "relationship": "single",
@@ -94287,7 +94321,7 @@
     {
       "id": "person--haus-gwregysdu--elenwen-gwregysdu",
       "name": "Elenwen Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/elenwen.png",
       "sex": "female",
       "age": 18,
       "relationship": "single",
@@ -94296,7 +94330,7 @@
     {
       "id": "person--haus-raves--eleonora-raves",
       "name": "Eleonora Cassia Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/eleonora.png",
       "sex": "female",
       "age": 39,
       "relationship": "married",
@@ -94379,7 +94413,7 @@
     {
       "id": "person--haus-penrudd--eleri-penrudd",
       "name": "Eleri Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/eleri.png",
       "sex": "female",
       "age": 6,
       "relationship": "single",
@@ -94505,7 +94539,7 @@
     {
       "id": "person--krumme-kanne--elidyr-trevoryn-kanne",
       "name": "Elidyr Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/elidyr.png",
       "sex": "male",
       "age": 35,
       "relationship": "single",
@@ -94730,7 +94764,7 @@
     {
       "id": "person--haus-maerllys--elowen-maerllys",
       "name": "Elowen Maerllys",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
       "sex": "female",
       "age": 27,
       "relationship": "married",
@@ -94811,7 +94845,7 @@
     {
       "id": "person--haus-gofrann--eluned-gofrann",
       "name": "Eluned Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/eluned.png",
       "sex": "female",
       "age": 15,
       "relationship": "single",
@@ -94829,7 +94863,7 @@
     {
       "id": "person--haus-penrudd--eluned-penrudd",
       "name": "Eluned Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/eluned.png",
       "sex": "female",
       "age": 36,
       "relationship": "single",
@@ -94856,7 +94890,7 @@
     {
       "id": "person--haus-ruddgraen--elvynna-ruddgraen",
       "name": "Elvynna Ruddgraen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-resale/portraits/elvynna-ruddgraen-v1.png",
       "sex": "female",
       "age": 19,
       "relationship": "single",
@@ -94991,7 +95025,7 @@
     {
       "id": "person--haus-gofrann--emrys-gofrann",
       "name": "Emrys Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/emrys.png",
       "sex": "male",
       "age": 12,
       "relationship": "single",
@@ -95009,7 +95043,7 @@
     {
       "id": "almanach/j4fZKrXkARcP9oDAUSeb",
       "name": "Emrys Porthan",
-      "portrait": "https://i.imgur.com/y5aRhJb.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/emrys-porthan.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -95289,7 +95323,7 @@
     {
       "id": "person--haus-penrudd--enid-penrudd",
       "name": "Enid",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/enid.png",
       "sex": "female",
       "age": 68,
       "relationship": "married",
@@ -95325,7 +95359,7 @@
     {
       "id": "person--haus-pendrwn--enid-pendrwn",
       "name": "Enid Pendrwn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/enid.png",
       "sex": "female",
       "age": 20,
       "relationship": "married",
@@ -95334,7 +95368,7 @@
     {
       "id": "person--haus-pluen--enid-pluen",
       "name": "Enid Pluen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/enid-pluen.png",
       "sex": "female",
       "age": 36,
       "relationship": "single",
@@ -95352,7 +95386,7 @@
     {
       "id": "person--krumme-kanne--enlli-trevoryn-kanne",
       "name": "Enlli Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/enlli.png",
       "sex": "female",
       "age": 6,
       "relationship": "single",
@@ -95505,7 +95539,7 @@
     {
       "id": "person--haus-fearnan--eoghan",
       "name": "Eoghan Fearnan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/fearnan/eoghan.png",
       "sex": "male",
       "age": 36,
       "relationship": "married",
@@ -95820,7 +95854,7 @@
     {
       "id": "person--haus-penrudd--esyllt-penrudd",
       "name": "Esyllt Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
       "sex": "female",
       "age": 34,
       "relationship": "married",
@@ -96811,7 +96845,7 @@
     {
       "id": "person--haus-penrudd--ffion-penrudd",
       "name": "Ffion",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/ffion.png",
       "sex": "female",
       "age": 36,
       "relationship": "married",
@@ -96820,7 +96854,7 @@
     {
       "id": "person--haus-bowen--ffion-bowen",
       "name": "Ffion Bowen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/ffion-bowen.png",
       "sex": "female",
       "age": null,
       "relationship": "single",
@@ -97225,7 +97259,7 @@
     {
       "id": "person--sept-cneacail--finlay-cneacail",
       "name": "Finlay Cneacail",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/klingende-krone/portraits/finlay-v2.png",
       "sex": "male",
       "age": 41,
       "relationship": "married",
@@ -97774,7 +97808,7 @@
     {
       "id": "person--haus-raves--flavia-raves",
       "name": "Flavia Marina Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/flavia.png",
       "sex": "female",
       "age": 66,
       "relationship": "married",
@@ -98046,7 +98080,7 @@
     {
       "id": "person--haus-freiwinter--freydis-freiwinter",
       "name": "Freydis Freiwinter",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-freiwinter/freydis-freiwinter.png",
       "sex": "female",
       "age": 67,
       "relationship": "married",
@@ -98370,7 +98404,7 @@
     {
       "id": "person--haus-draig--galahad-draig",
       "name": "Galahad Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
       "sex": "male",
       "age": 45,
       "relationship": "married",
@@ -98730,7 +98764,7 @@
     {
       "id": "person--haus-draig--gawain-draig",
       "name": "Gawain Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg",
       "sex": "male",
       "age": 18,
       "relationship": "engaged",
@@ -99018,7 +99052,7 @@
     {
       "id": "person--haus-mathgraig--gereint-mathgraig",
       "name": "Gereint Mathgraig",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gereint-mathgraig.jpg",
       "sex": "male",
       "age": 46,
       "relationship": "married",
@@ -99072,7 +99106,7 @@
     {
       "id": "person--haus-draenmelyn--gethin-draenmelyn",
       "name": "Gethin Draenmelyn",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/gethin-draenmelyn.webp",
       "sex": "male",
       "age": 15,
       "relationship": "single",
@@ -99099,7 +99133,7 @@
     {
       "id": "person--haus-falchdyn--gethin-falchdyn",
       "name": "Gethin Falchdyn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-erbstreit/portraits/gethin-falchdyn.png",
       "sex": "male",
       "age": 26,
       "relationship": "single",
@@ -99108,7 +99142,7 @@
     {
       "id": "person--haus-gofrann--gethin-gofrann",
       "name": "Gethin Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
       "sex": "male",
       "age": 71,
       "relationship": "married",
@@ -99126,7 +99160,7 @@
     {
       "id": "person--haus-gwregysdu--gethin-gwregysdu",
       "name": "Gethin Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/gethin.png",
       "sex": "male",
       "age": 22,
       "relationship": "single",
@@ -99144,7 +99178,7 @@
     {
       "id": "person--haus-penrudd--gethin-penrudd",
       "name": "Gethin Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/gethin.png",
       "sex": "male",
       "age": 21,
       "relationship": "single",
@@ -99576,7 +99610,7 @@
     {
       "id": "almanach/glendower-o-cenyr",
       "name": "Glendower O'Cenyr",
-      "portrait": "https://i.imgur.com/vSRYHg1.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/glendower-o-cenyr.webp",
       "sex": "male",
       "age": null,
       "relationship": "unknown",
@@ -99585,7 +99619,7 @@
     {
       "id": "person--glendower-o-cenyr",
       "name": "Glendower O'Cenyr",
-      "portrait": "https://i.imgur.com/vSRYHg1.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/glendower-o-cenyr.webp",
       "sex": "male",
       "age": 27,
       "relationship": "single",
@@ -100197,7 +100231,7 @@
     {
       "id": "person--haus-halenrhyd--gorweth-halenrhyd",
       "name": "Gorweth Halenrhyd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-studs/portraits/gorweth-halenrhyd-v1.png",
       "sex": "male",
       "age": 49,
       "relationship": "married",
@@ -100971,7 +101005,7 @@
     {
       "id": "person--haus-beryn--gwaeden-beryn",
       "name": "Gwaeden Beryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaeden-beryn.png",
       "sex": "male",
       "age": 26,
       "relationship": "single",
@@ -101124,7 +101158,7 @@
     {
       "id": "person--family-tree--gwelda",
       "name": "Gwelda",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-frostgeborene/gwelda.png",
       "sex": "female",
       "age": 66,
       "relationship": "unknown",
@@ -101196,7 +101230,7 @@
     {
       "id": "person--family-tree--unknown-cadogan-spouse",
       "name": "Gwen Hamnett",
-      "portrait": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
+      "portrait": "/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
       "sex": "female",
       "age": 46,
       "relationship": "single",
@@ -101403,7 +101437,7 @@
     {
       "id": "person--family-tree--gwenella-spouse-rhydric-argall",
       "name": "Gwenella",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png",
       "sex": "female",
       "age": 38,
       "relationship": "divorced",
@@ -101511,7 +101545,7 @@
     {
       "id": "person--haus-torawg--gwenfron-torawg",
       "name": "Gwenfron Torawg",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gwenfron-torawg.png",
       "sex": "female",
       "age": 49,
       "relationship": "single",
@@ -101700,7 +101734,7 @@
     {
       "id": "almanach/micIJWlN8CkuedMo490X",
       "name": "Gwenllian Lyswen",
-      "portrait": "https://i.imgur.com/cy3TS2x.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/gwenllian-lyswen.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -101808,7 +101842,7 @@
     {
       "id": "person--haus-vann--gwenna-vann",
       "name": "Gwenna Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/gwenna.png",
       "sex": "female",
       "age": 16,
       "relationship": "single",
@@ -102124,7 +102158,7 @@
     {
       "id": "person--haus-penrudd--gwilym-penrudd",
       "name": "Gwilym Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
       "sex": "male",
       "age": 70,
       "relationship": "married",
@@ -102223,7 +102257,7 @@
     {
       "id": "person--haus-cochdon--gwrgan-cochdon",
       "name": "Gwrgan Cochdon",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-erbstreit/portraits/gwrgan-cochdon.png",
       "sex": "male",
       "age": 43,
       "relationship": "unknown",
@@ -102277,7 +102311,7 @@
     {
       "id": "person--haus-celynfor--gwydan",
       "name": "Gwydan Celynfor",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/celynfor/gwydan.png",
       "sex": "male",
       "age": 31,
       "relationship": "married",
@@ -102835,7 +102869,7 @@
     {
       "id": "person--haus-torvik--haldor",
       "name": "Haldor Torvik",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/torvik/haldor.png",
       "sex": "male",
       "age": 32,
       "relationship": "married",
@@ -102979,7 +103013,7 @@
     {
       "id": "person--haus-hirschhorn--halvard-hirschhorn",
       "name": "Halvard Hirschhorn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/halvard-hirschhorn.jpg",
       "sex": "male",
       "age": 50,
       "relationship": "married",
@@ -103240,7 +103274,7 @@
     {
       "id": "person--haus-sonnenfels--hartwig-sonnenfels",
       "name": "Hartwig Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/hartwig.png",
       "sex": "male",
       "age": 36,
       "relationship": "single",
@@ -103564,7 +103598,7 @@
     {
       "id": "person--haus-morgwynt--helban-morgwynt",
       "name": "Helban Morgwynt",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/helban-morgwynt.png",
       "sex": "male",
       "age": 36,
       "relationship": "married",
@@ -103637,7 +103671,7 @@
       "id": "person--haus-gwyvern--heledd-gwyvern",
       "name": "Heledd Draig",
       "alias": "Heledd Gwyvern",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/heledd-gwyvern.jpg",
       "sex": "female",
       "age": 70,
       "relationship": "married",
@@ -103664,7 +103698,7 @@
     {
       "id": "person--krumme-kanne--heledd-svathamar-kanne",
       "name": "Heledd Svathamar",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png",
       "sex": "female",
       "age": 10,
       "relationship": "single",
@@ -103754,7 +103788,7 @@
     {
       "id": "person--haus-desele--helviane-desele",
       "name": "Helviane Desele",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png",
       "sex": "female",
       "age": 72,
       "relationship": "unknown",
@@ -103871,7 +103905,7 @@
     {
       "id": "person--haus-lothaire--herluin-lothaire",
       "name": "Herluin Lothaire",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
       "sex": "male",
       "age": 163,
       "relationship": "single",
@@ -103988,7 +104022,7 @@
     {
       "id": "person--haus-gwregysdu--heulwen-gwregysdu",
       "name": "Heulwen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/heulwen.png",
       "sex": "female",
       "age": 37,
       "relationship": "married",
@@ -104636,7 +104670,7 @@
     {
       "id": "person--krumme-kanne--hrolf-svathamar-kanne",
       "name": "Hrolf Svathamar",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
       "sex": "male",
       "age": 46,
       "relationship": "married",
@@ -104789,7 +104823,7 @@
     {
       "id": "person--haus-morglan--huw-morglan",
       "name": "Huw Morglan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/huw-morglan.png",
       "sex": "male",
       "age": 50,
       "relationship": "married",
@@ -104889,7 +104923,7 @@
     {
       "id": "person--haus-penrudd--hywel-penrudd",
       "name": "Hywel Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/hywel.png",
       "sex": "male",
       "age": 39,
       "relationship": "married",
@@ -104916,7 +104950,7 @@
     {
       "id": "territory/wyrm/ort/craithglyn",
       "name": "Hywel Tynged",
-      "portrait": "https://i.imgur.com/dscN0iz.png",
+      "portrait": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/assets/hywel-tynged.png",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -105141,7 +105175,7 @@
     {
       "id": "territory/gwendolyns-ufer/ort/craithfael",
       "name": "Iddon Haearn",
-      "portrait": "https://i.imgur.com/mqnDamN.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/iddon-haearn.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -105240,7 +105274,7 @@
     {
       "id": "person--haus-gofrann--idnerth-gofrann",
       "name": "Idnerth Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/idnerth.png",
       "sex": "male",
       "age": 38,
       "relationship": "married",
@@ -105483,7 +105517,7 @@
     {
       "id": "person--haus-ddraenen--iestyn-ddraenen",
       "name": "Iestyn Ddraenen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/corrected-2026-10-06/iestyn-ddraenen.png",
       "sex": "male",
       "age": 40,
       "relationship": "married",
@@ -105636,7 +105670,7 @@
     {
       "id": "person--haus-draenmelyn--ifor-draenmelyn",
       "name": "Ifor Draenmelyn",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/ifor-draenmelyn.webp",
       "sex": "male",
       "age": 75,
       "relationship": "married",
@@ -106222,7 +106256,7 @@
     {
       "id": "person--haus-vann--iolo-vann",
       "name": "Iolo Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/iolo.png",
       "sex": "male",
       "age": 2,
       "relationship": "single",
@@ -106303,7 +106337,7 @@
     {
       "id": "person--haus-gwregysdu--iorath-gwregysdu",
       "name": "Iorath Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/iorath.png",
       "sex": "male",
       "age": 15,
       "relationship": "single",
@@ -106393,7 +106427,7 @@
     {
       "id": "person--haus-penry--iorwerth-penry",
       "name": "Iorwerth Penry",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/iorwerth-penry.png",
       "sex": "male",
       "age": 52,
       "relationship": "married",
@@ -106402,7 +106436,7 @@
     {
       "id": "person--haus-rhwyd--iorwerth-rhwyd",
       "name": "Iorwerth Rhwyd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/kleiner-durst/portraits/iorwerth.png",
       "sex": "male",
       "age": 35,
       "relationship": "married",
@@ -106492,7 +106526,7 @@
     {
       "id": "person--haus-sonnenfels--irmelin-sonnenfels",
       "name": "Irmelin Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/irmelin.png",
       "sex": "female",
       "age": 5,
       "relationship": "single",
@@ -106897,7 +106931,7 @@
     {
       "id": "person--haus-torvik--iver",
       "name": "Iver Torvik",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/torvik/iver.png",
       "sex": "male",
       "age": 11,
       "relationship": "single",
@@ -106960,7 +106994,7 @@
     {
       "id": "person--haus-penrudd--iwan-penrudd",
       "name": "Iwan Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/iwan.png",
       "sex": "male",
       "age": 10,
       "relationship": "single",
@@ -106996,7 +107030,7 @@
     {
       "id": "person--haus-dyger--iwrban-dyger",
       "name": "Iwrban Dyger",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/iwrban-dyger.png",
       "sex": "male",
       "age": 23,
       "relationship": "single",
@@ -107682,7 +107716,7 @@
     {
       "id": "person--haus-falkenhayn--johanna-falkenhayn",
       "name": "Johanna Falkenhayn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/references/johanna.png",
       "sex": "female",
       "age": 58,
       "relationship": "married",
@@ -108240,7 +108274,7 @@
     {
       "id": "person--haus-sonnenfels--kaspar-sonnenfels",
       "name": "Kaspar Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/kaspar.png",
       "sex": "male",
       "age": 25,
       "relationship": "single",
@@ -108825,7 +108859,7 @@
     {
       "id": "person--krumme-kanne--ketil-svathamar-kanne",
       "name": "Ketil Svathamar",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/ketil.png",
       "sex": "male",
       "age": 38,
       "relationship": "single",
@@ -109294,7 +109328,7 @@
     {
       "id": "person--haus-sonnenfels--konrad-sonnenfels",
       "name": "Konrad Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/konrad.png",
       "sex": "male",
       "age": 65,
       "relationship": "married",
@@ -109456,7 +109490,7 @@
     {
       "id": "person--haus-aurdden--kyria-aurdden",
       "name": "Kyria Aurdden",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-studs/portraits/kyria-aurdden-v1.png",
       "sex": "female",
       "age": 19,
       "relationship": "married",
@@ -110041,7 +110075,7 @@
     {
       "id": "person--haus-raves--lavinia-raves",
       "name": "Lavinia Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/lavinia.png",
       "sex": "female",
       "age": 9,
       "relationship": "single",
@@ -110716,7 +110750,7 @@
     {
       "id": "person--haus-fontani--livia-fontani",
       "name": "Livia",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/livia.png",
       "sex": "female",
       "age": 46,
       "relationship": "married",
@@ -110725,7 +110759,7 @@
     {
       "id": "person--haus-raves--livia-raves",
       "name": "Livia Aurelia Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/livia.png",
       "sex": "female",
       "age": 71,
       "relationship": "married",
@@ -110897,7 +110931,7 @@
     {
       "id": "person--haus-swyll--lleucu-swyll",
       "name": "Lleucu Swyll",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-erbstreit/portraits/lleucu-swyll.png",
       "sex": "female",
       "age": 38,
       "relationship": "married",
@@ -111050,7 +111084,7 @@
     {
       "id": "person--krumme-kanne--llinos",
       "name": "Llinos Celynfor",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/llinos.png",
       "sex": "female",
       "age": 21,
       "relationship": "married",
@@ -111573,7 +111607,7 @@
     {
       "id": "person--haus-vann--lowri-vann",
       "name": "Lowri",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/lowri.png",
       "sex": "female",
       "age": 60,
       "relationship": "married",
@@ -111627,7 +111661,7 @@
     {
       "id": "person--haus-arian--lowri-arian",
       "name": "Lowri Arian",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/lowri-arian.png",
       "sex": "female",
       "age": null,
       "relationship": "single",
@@ -111690,7 +111724,7 @@
     {
       "id": "person--haus-penrudd--lowri-penrudd",
       "name": "Lowri Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/lowri.png",
       "sex": "female",
       "age": 16,
       "relationship": "single",
@@ -111771,7 +111805,7 @@
     {
       "id": "person--rote-klaue--lucan",
       "name": "Lucan Valerus",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rote-klaue/portraits/lucan.png",
       "sex": "male",
       "age": 33,
       "relationship": "married",
@@ -111789,7 +111823,7 @@
     {
       "id": "person--haus-veltrane--luciano-veltrane",
       "name": "Luciano Marcellus Veltrane",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/luciano.png",
       "sex": "male",
       "age": 42,
       "relationship": "married",
@@ -112212,7 +112246,7 @@
     {
       "id": "person--sept-cneacail--lysiane-cneacail",
       "name": "Lysiane Cneacail",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/klingende-krone/portraits/lysiane.png",
       "sex": "female",
       "age": 30,
       "relationship": "married",
@@ -112275,7 +112309,7 @@
     {
       "id": "person--haus-pendrwn--mabli-spouse-pendrwn",
       "name": "Mabli",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/pendrwn-general-store/portraits/mabli.png",
       "sex": "female",
       "age": 53,
       "relationship": "married",
@@ -112311,7 +112345,7 @@
     {
       "id": "person--haus-morgwynt--mabli-morgwynt",
       "name": "Mabli Morgwynt",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png",
       "sex": "female",
       "age": null,
       "relationship": "single",
@@ -112500,7 +112534,7 @@
     {
       "id": "person--haus-gofrann--madoc-gofrann",
       "name": "Madoc Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/madoc.png",
       "sex": "male",
       "age": 36,
       "relationship": "married",
@@ -112527,7 +112561,7 @@
     {
       "id": "person--haus-vann--madoc-vann",
       "name": "Madoc Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/references/madoc.png",
       "sex": "male",
       "age": 63,
       "relationship": "married",
@@ -112680,7 +112714,7 @@
     {
       "id": "person--haus-penry--maelban-penry",
       "name": "Maelban Penry",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/maelban-penry.png",
       "sex": "male",
       "age": 27,
       "relationship": "single",
@@ -112771,7 +112805,7 @@
     {
       "id": "person--family-tree--maelor-ffionydd",
       "name": "Maelor Ffionydd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png",
       "sex": "male",
       "age": 35,
       "relationship": "single",
@@ -112807,7 +112841,7 @@
     {
       "id": "person--haus-caeffyn--maelrig-caeffyn",
       "name": "Maelrig Caeffyn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-studs/portraits/maelrig-caeffyn-v3.png",
       "sex": "male",
       "age": 62,
       "relationship": "married",
@@ -112843,7 +112877,7 @@
     {
       "id": "person--haus-coeddu--maelwen-coeddu",
       "name": "Maelwen Coeddu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
       "sex": "female",
       "age": 27,
       "relationship": "married",
@@ -112870,7 +112904,7 @@
     {
       "id": "person--haus-lothaire--maelwyn-o-cenyr",
       "name": "Maelwyn O'Cenyr",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/herluin-lothaire/cast/portraits/maelwyn-o-cenyr.png",
       "sex": "male",
       "age": 43,
       "relationship": "single",
@@ -113079,7 +113113,7 @@
     {
       "id": "person--family-tree--mair-affair-tonnarth",
       "name": "Mair",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/mair.png",
       "sex": "female",
       "age": 43,
       "relationship": "married",
@@ -113538,7 +113572,7 @@
     {
       "id": "person--haus-torvik--maonaid",
       "name": "Maonaid",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
       "sex": "female",
       "age": 30,
       "relationship": "married",
@@ -113683,7 +113717,7 @@
     {
       "id": "person--haus-gwregysdu--mared-gwregysdu",
       "name": "Mared Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/mared.png",
       "sex": "female",
       "age": 12,
       "relationship": "single",
@@ -113719,7 +113753,7 @@
     {
       "id": "person--haus-penrudd--mared-penrudd",
       "name": "Mared Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/mared.png",
       "sex": "female",
       "age": 20,
       "relationship": "single",
@@ -113728,7 +113762,7 @@
     {
       "id": "person--haus-gofrann--mareda-gofrann",
       "name": "Mareda Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/mareda.png",
       "sex": "female",
       "age": 64,
       "relationship": "married",
@@ -114638,7 +114672,7 @@
     {
       "id": "person--haus-vann--meleri-vann",
       "name": "Meleri",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/meleri.png",
       "sex": "female",
       "age": 34,
       "relationship": "married",
@@ -114656,7 +114690,7 @@
     {
       "id": "person--haus-penry--meleri-penry",
       "name": "Meleri Penry",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/meleri-penry.png",
       "sex": "female",
       "age": 28,
       "relationship": "single",
@@ -114665,7 +114699,7 @@
     {
       "id": "person--haus-rhwyd--meleri-rhwyd",
       "name": "Meleri Rhwyd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/kleiner-durst/portraits/meleri.png",
       "sex": "female",
       "age": 30,
       "relationship": "single",
@@ -115028,7 +115062,7 @@
     {
       "id": "person--krumme-kanne--merrik-trevoryn-kanne",
       "name": "Merrik Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
       "sex": "male",
       "age": 44,
       "relationship": "married",
@@ -115190,7 +115224,7 @@
     {
       "id": "person--haus-penrudd--meurig-penrudd",
       "name": "Meurig Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/meurig.png",
       "sex": "male",
       "age": 42,
       "relationship": "married",
@@ -116065,7 +116099,7 @@
     {
       "id": "person--haus-fearnan--muireann",
       "name": "Muireann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
       "sex": "female",
       "age": 34,
       "relationship": "married",
@@ -116940,7 +116974,7 @@
     {
       "id": "person--krumme-kanne--neifion-dubhdarach-kanne",
       "name": "Neifion Dubhdarach",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/neifion.png",
       "sex": "male",
       "age": 14,
       "relationship": "single",
@@ -117093,7 +117127,7 @@
     {
       "id": "person--haus-gofrann--neryn-gofrann",
       "name": "Neryn Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/neryn.png",
       "sex": "female",
       "age": 6,
       "relationship": "single",
@@ -117138,7 +117172,7 @@
     {
       "id": "person--haus-bevan--nerys-bevan",
       "name": "Nerys Bevan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nerys-bevan.png",
       "sex": "female",
       "age": null,
       "relationship": "single",
@@ -117228,7 +117262,7 @@
     {
       "id": "person--sept-cneacail--nessa-cneacail",
       "name": "Nessa",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/klingende-krone/portraits/nessa.png",
       "sex": "female",
       "age": 42,
       "relationship": "unknown",
@@ -117264,7 +117298,7 @@
     {
       "id": "person--haus-fearnan--nessa",
       "name": "Nessa Fearnan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-heime/fearnan/nessa.png",
       "sex": "female",
       "age": 7,
       "relationship": "single",
@@ -117336,7 +117370,7 @@
     {
       "id": "person--haus-mathgraig--nest-mathgraig",
       "name": "Nest Mathgraig",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nest-mathgraig.png",
       "sex": "female",
       "age": null,
       "relationship": "single",
@@ -117417,7 +117451,7 @@
     {
       "id": "person--krumme-kanne--nestwen-trevoryn-kanne",
       "name": "Nestwen Trevoryn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/nestwen.png",
       "sex": "female",
       "age": 68,
       "relationship": "unknown",
@@ -117426,7 +117460,7 @@
     {
       "id": "person--haus-rhwyd--nia-rhwyd",
       "name": "Nia",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/kleiner-durst/portraits/nia.png",
       "sex": "female",
       "age": 33,
       "relationship": "married",
@@ -117435,7 +117469,7 @@
     {
       "id": "person--haus-penrudd--nia-penrudd",
       "name": "Nia",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/nia.png",
       "sex": "female",
       "age": 40,
       "relationship": "married",
@@ -118165,7 +118199,7 @@
     {
       "id": "person--haus-goldglanz--nvjar-goldglanz",
       "name": "Nvjar Goldglanz",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-goldglanz/nvjar-goldglanz.png",
       "sex": "male",
       "age": 63,
       "relationship": "unknown",
@@ -118345,7 +118379,7 @@
     {
       "id": "person--haus-draig--odyar-draig",
       "name": "Odyar Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
       "sex": "male",
       "age": 72,
       "relationship": "married",
@@ -118381,7 +118415,7 @@
     {
       "id": "person--haus-prys--oenric-prys",
       "name": "Oenric Prys",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/oenric-prys.png",
       "sex": "male",
       "age": 24,
       "relationship": "single",
@@ -118786,7 +118820,7 @@
     {
       "id": "person--haus-penrudd--olwen-penrudd",
       "name": "Olwen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/olwen.png",
       "sex": "female",
       "age": 43,
       "relationship": "married",
@@ -119102,7 +119136,7 @@
     {
       "id": "person--haus-raves--orestian-raves",
       "name": "Orestian Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/orestian.png",
       "sex": "male",
       "age": 36,
       "relationship": "married",
@@ -119273,7 +119307,7 @@
     {
       "id": "person--haus-penrudd--osian-penrudd",
       "name": "Osian Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/osian.png",
       "sex": "male",
       "age": 11,
       "relationship": "single",
@@ -119318,7 +119352,7 @@
     {
       "id": "person--haus-sonnenfels--oswald-sonnenfels",
       "name": "Oswald Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/oswald.png",
       "sex": "male",
       "age": 55,
       "relationship": "single",
@@ -119399,7 +119433,7 @@
     {
       "id": "person--haus-sonnenfels--ottilie-sonnenfels",
       "name": "Ottilie",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/ottilie.png",
       "sex": "female",
       "age": 31,
       "relationship": "married",
@@ -119534,7 +119568,7 @@
     {
       "id": "person--haus-vann--owain-vann",
       "name": "Owain Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/references/owain.png",
       "sex": "male",
       "age": 39,
       "relationship": "married",
@@ -120291,7 +120325,7 @@
     {
       "id": "person--haus-argall--perwyn-argall",
       "name": "Perwyn Argall",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
       "sex": "male",
       "age": 17,
       "relationship": "single",
@@ -120985,7 +121019,7 @@
     {
       "id": "person--haus-sonnenfels--raban-sonnenfels",
       "name": "Raban Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/raban.png",
       "sex": "male",
       "age": 10,
       "relationship": "single",
@@ -121741,7 +121775,7 @@
     {
       "id": "person--haus-raves--rhiain-raves",
       "name": "Rhiain",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/rhiain.png",
       "sex": "female",
       "age": 66,
       "relationship": "unknown",
@@ -122067,7 +122101,7 @@
     {
       "id": "person--haus-aelmor--rhodri-aelmor",
       "name": "Rhodri Aelmor",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/rhodri-aelmor.webp",
       "sex": "male",
       "age": 20,
       "relationship": "single",
@@ -122211,7 +122245,7 @@
     {
       "id": "person--haus-ruddgraen--rhonessa-ruddgraen",
       "name": "Rhonessa Ruddgraen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-resale/portraits/rhonessa-ruddgraen-v1.png",
       "sex": "female",
       "age": 21,
       "relationship": "single",
@@ -122257,7 +122291,7 @@
     {
       "id": "person--haus-gofrann--rhoswen-gofrann",
       "name": "Rhoswen Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/rhoswen.png",
       "sex": "female",
       "age": 9,
       "relationship": "single",
@@ -122285,7 +122319,7 @@
     {
       "id": "person--haus-gwregysdu--rhosyn-gwregysdu",
       "name": "Rhosyn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/rhosyn.png",
       "sex": "female",
       "age": 43,
       "relationship": "married",
@@ -122366,7 +122400,7 @@
     {
       "id": "person--haus-penrudd--rhosyn-penrudd",
       "name": "Rhosyn Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/rhosyn.png",
       "sex": "female",
       "age": 35,
       "relationship": "single",
@@ -122474,7 +122508,7 @@
     {
       "id": "person--haus-pendrwn--rhun-pendrwn",
       "name": "Rhun Pendrwn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/pendrwn-general-store/portraits/rhun.png",
       "sex": "male",
       "age": 30,
       "relationship": "single",
@@ -122517,6 +122551,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-torawg&mode=view&person=rhun-torawg"
     },
     {
+      "id": "territory/wyrm/ort/craithglyn/rentmeister-craithglyn",
+      "name": "Rhun Tynged",
+      "portrait": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/assets/rhun-tynged.png",
+      "sex": "unknown",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Orte/grossstadt.html?id=craithglyn"
+    },
+    {
       "id": "person--haus-marchwern--rhunedd-marchwern",
       "name": "Rhunedd Marchwern",
       "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
@@ -122528,7 +122571,7 @@
     {
       "id": "territory/gwendolyns-ufer/ort/traethgorn",
       "name": "Rhunlas Llon",
-      "portrait": "https://i.imgur.com/cAfLe9b.png",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/rhunlas-llon.webp",
       "sex": "unknown",
       "age": null,
       "relationship": "unknown",
@@ -122672,7 +122715,7 @@
     {
       "id": "person--haus-lothaire--rhydian-o-cenyr",
       "name": "Rhydian O'Cenyr",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/herluin-lothaire/cast/portraits/rhydian-o-cenyr.png",
       "sex": "male",
       "age": 72,
       "relationship": "unknown",
@@ -122699,7 +122742,7 @@
     {
       "id": "person--haus-argall--rhydric-argall",
       "name": "Rhydric Argall",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
       "sex": "male",
       "age": 40,
       "relationship": "divorced",
@@ -122727,7 +122770,7 @@
     {
       "id": "person--haus-swyll--rhydwen-swyll",
       "name": "Rhydwen Swyll",
-      "portrait": "",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/rhydwen-swyll.webp",
       "sex": "female",
       "age": 15,
       "relationship": "single",
@@ -122835,7 +122878,7 @@
     {
       "id": "person--haus-maerllys--rhys-maerllys",
       "name": "Rhys Maerllys",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/rhys-maerllys.png",
       "sex": "male",
       "age": 21,
       "relationship": "single",
@@ -122853,7 +122896,7 @@
     {
       "id": "person--haus-penrudd--rhys-penrudd",
       "name": "Rhys Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/rhys.png",
       "sex": "male",
       "age": 2,
       "relationship": "single",
@@ -122898,7 +122941,7 @@
     {
       "id": "person--haus-vann--rhys-vann",
       "name": "Rhys Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/rhys.png",
       "sex": "male",
       "age": 12,
       "relationship": "single",
@@ -123511,7 +123554,7 @@
     {
       "id": "person--haus-sonnenfels--rosalinde-sonnenfels",
       "name": "Rosalinde Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/portraits/rosalinde.png",
       "sex": "female",
       "age": 19,
       "relationship": "single",
@@ -123700,7 +123743,7 @@
     {
       "id": "person--family-tree--ruarc-balguen",
       "name": "Ruarc Balguen",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/ruarc-balguen.jpg",
       "sex": "male",
       "age": null,
       "relationship": "married",
@@ -123799,7 +123842,7 @@
     {
       "id": "person--krumme-kanne--runa-svathamar-kanne",
       "name": "Runa Svathamar",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/runa.png",
       "sex": "female",
       "age": 34,
       "relationship": "single",
@@ -124051,7 +124094,7 @@
     {
       "id": "person--haus-morglan--saithar-morglan",
       "name": "Saithar Morglan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithar-morglan-v2.png",
       "sex": "male",
       "age": 25,
       "relationship": "single",
@@ -124546,7 +124589,7 @@
     {
       "id": "person--haus-mathgraig--seithen-mathgraig",
       "name": "Seithen Mathgraig",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/seithen-mathgraig.png",
       "sex": "male",
       "age": 48,
       "relationship": "married",
@@ -124717,7 +124760,7 @@
     {
       "id": "person--haus-raves--serafina-raves",
       "name": "Serafina Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png",
       "sex": "female",
       "age": 6,
       "relationship": "single",
@@ -124735,7 +124778,7 @@
     {
       "id": "person--haus-vann--seren-vann",
       "name": "Seren",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/seren.png",
       "sex": "female",
       "age": 63,
       "relationship": "married",
@@ -125167,7 +125210,7 @@
     {
       "id": "person--haus-skogg--siglif-skogg",
       "name": "Siglíf Skogg",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-skogg/siglif-skogg.png",
       "sex": "female",
       "age": 66,
       "relationship": "unknown",
@@ -125266,7 +125309,7 @@
     {
       "id": "person--haus-hirschhorn--sigrid-hirschhorn",
       "name": "Sigrid Hirschhorn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/sigrid-hirschhorn.png",
       "sex": "female",
       "age": 28,
       "relationship": "single",
@@ -125446,7 +125489,7 @@
     {
       "id": "person--haus-sonnenfels--simon-sonnenfels",
       "name": "Simon Sonnenfels",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/lachende-nixe/references/simon.png",
       "sex": "male",
       "age": 30,
       "relationship": "single",
@@ -126510,7 +126553,7 @@
     {
       "id": "person--haus-draig--steffan-draig",
       "name": "Steffan Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg",
       "sex": "male",
       "age": 44,
       "relationship": "married",
@@ -126591,7 +126634,7 @@
     {
       "id": "person--haus-gwefrydd--stennis-gwefrydd",
       "name": "Stennis Gwefrydd",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
       "sex": "male",
       "age": 73,
       "relationship": "married",
@@ -126663,7 +126706,7 @@
     {
       "id": "person--krumme-kanne--styr-svathamar-kanne",
       "name": "Styr Svathamar",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/krumme-kanne/portraits/styr.png",
       "sex": "male",
       "age": 15,
       "relationship": "single",
@@ -127942,7 +127985,7 @@
     {
       "id": "person--haus-cwningod--tegid-cwningod",
       "name": "Tegid Cwingod",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/corrected-2026-10-06/tegid-cwingod.png",
       "sex": "male",
       "age": 45,
       "relationship": "married",
@@ -128050,7 +128093,7 @@
     {
       "id": "person--haus-gofrann--tegwyn-gofrann",
       "name": "Tegwyn Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/tegwyn.png",
       "sex": "male",
       "age": 14,
       "relationship": "single",
@@ -128095,7 +128138,7 @@
     {
       "id": "person--haus-gofrann--teleri-gofrann",
       "name": "Teleri Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/teleri.png",
       "sex": "female",
       "age": 67,
       "relationship": "married",
@@ -128122,7 +128165,7 @@
     {
       "id": "person--haus-vann--teleri-vann",
       "name": "Teleri Vann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/letzte-rast/portraits/teleri.png",
       "sex": "female",
       "age": 6,
       "relationship": "single",
@@ -128194,7 +128237,7 @@
     {
       "id": "person--haus-ruddgraen--telynna-ruddgraen",
       "name": "Telynna Ruddgraen",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-horse-resale/portraits/telynna-ruddgraen-v1.png",
       "sex": "female",
       "age": 23,
       "relationship": "single",
@@ -128221,7 +128264,7 @@
     {
       "id": "person--haus-fontani--terenzio-fontani",
       "name": "Terenzio Fontani",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/terenzio.png",
       "sex": "male",
       "age": 24,
       "relationship": "single",
@@ -128257,7 +128300,7 @@
     {
       "id": "person--haus-parry--tesni-parry",
       "name": "Tesni Parry",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/tesni-parry.png",
       "sex": "female",
       "age": null,
       "relationship": "single",
@@ -128266,7 +128309,7 @@
     {
       "id": "person--haus-pendrwn--tesni-pendrwn",
       "name": "Tesni Pendrwn",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/pendrwn-general-store/portraits/tesni.png",
       "sex": "female",
       "age": 25,
       "relationship": "single",
@@ -128788,7 +128831,7 @@
     {
       "id": "person--haus-raves--tiberian-raves",
       "name": "Tiberian Raves",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png",
       "sex": "male",
       "age": 37,
       "relationship": "married",
@@ -129533,6 +129576,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-silberblut&mode=view&person=tova-silberblut"
     },
     {
+      "id": "territory/wyrm/ort/bronhir/buergermeister",
+      "name": "Trachmyr Trevandir",
+      "portrait": "",
+      "sex": "unknown",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Orte/grossstadt.html?id=bronhir"
+    },
+    {
       "id": "person--haus-coedwig--trahaern-coedwig",
       "name": "Trahaearn Coedwig",
       "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/trahaern-coedwig.jpg",
@@ -129545,7 +129597,7 @@
       "id": "person--haus-draig--trahern-draig",
       "name": "Trahaern Draig",
       "alias": "Trahern Draig",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg",
       "sex": "male",
       "age": 95,
       "relationship": "widowed",
@@ -130013,7 +130065,7 @@
     {
       "id": "person--haus-gwregysdu--tudur-gwregysdu",
       "name": "Tudur Gwregysdu",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/tudur.png",
       "sex": "male",
       "age": 40,
       "relationship": "married",
@@ -130022,7 +130074,7 @@
     {
       "id": "person--haus-morlan--tudur-morlan",
       "name": "Tudur Morlan",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/tudur-morlan.png",
       "sex": "male",
       "age": 72,
       "relationship": "widowed",
@@ -130031,7 +130083,7 @@
     {
       "id": "person--haus-penrudd--tudur-penrudd",
       "name": "Tudur Penrudd",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
       "sex": "male",
       "age": 66,
       "relationship": "married",
@@ -130562,7 +130614,7 @@
     {
       "id": "person--family-tree--ulaena",
       "name": "Ulaena Gofrann",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gofrann-schmiede/portraits/ulaena.png",
       "sex": "female",
       "age": 41,
       "relationship": "married",
@@ -131220,7 +131272,7 @@
     {
       "id": "person--haus-mathgraig--uwchric-mathgraig",
       "name": "Uwchric Mathgraig",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/uwchric-mathgraig-v2.png",
       "sex": "male",
       "age": 54,
       "relationship": "married",
@@ -131382,7 +131434,7 @@
     {
       "id": "person--haus-falto--valeriano-falto",
       "name": "Valeriano Falto",
-      "portrait": "",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-erbstreit/portraits/valeriano-falto.png",
       "sex": "male",
       "age": 38,
       "relationship": "single",
@@ -131895,7 +131947,7 @@
     {
       "id": "person--family-tree--vigdis",
       "name": "Vigdis",
-      "portrait": "",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-kampfgeborene/vigdis.png",
       "sex": "female",
       "age": 49,
       "relationship": "single",

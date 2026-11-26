@@ -1,0 +1,197 @@
+{
+  "created": "2026-11-26",
+  "generator": "OpenAI ImageGen, built-in",
+  "designReferences": [
+    "https://cdn.akamai.steamstatic.com/steam/apps/22330/manuals/obliv_goty_pc_man-v2.pdf",
+    "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+    "https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/112"
+  ],
+  "generation": [
+    {
+      "id": "vellum",
+      "version": 1,
+      "selected": false,
+      "original": "exec-a84c34ac-6fcb-438b-a8c1-c005ac1a3e7b.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/vellum-v1.png",
+      "prompt": "Use case: ui-mockup. Create an original, full-bleed raster background material for the open pages of a medieval fantasy ledger in a PC RPG. Warm honey-cream calf vellum, lightly mottled and naturally fibrous, with very subtle areas of fading and uneven antique color. Reproduction-quality handmade material, close-up, exactly face on, soft even illumination. Horizontal landscape. Entire image is flat paper texture edge to edge, generous even light middle and no dark stains so small deep brown web text can be laid across it. No writing, ruling, ink strokes, lines, ornaments, book, perspective, folded edges, hands, objects, graphics or logos.",
+      "imageInputs": [],
+      "transparentBackground": false,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/vellum-v1.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "93f0e208315f5a7dbd13796bd487789f4a89ccd8481a08b7e3f0d0f26acc9c6e",
+      "bytes": 2872985,
+      "alpha": false
+    },
+    {
+      "id": "leather",
+      "version": 1,
+      "selected": false,
+      "original": "exec-c98185fa-9a25-434f-a11c-cc99ad34bc33.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/leather-v1.png",
+      "prompt": "Use case: ui-mockup. Create a full-bleed material texture image of antique bookbinding leather for an original classic medieval fantasy RPG interface. Dark muted blackened burgundy and oxblood, close to #2c2026, with rich tiny pebbled grain, dappled scuffing and subtly irregular luster. Leather pattern should be visible but quiet and evenly lit enough for cream text laid over it. Orthographic flat macro, unlit-looking, texture runs seamlessly across all edges. No bevel, no objects, no borders, no tooling, no text, no rivets, no cording, no patterns of symbols, no green. Square.",
+      "imageInputs": [],
+      "transparentBackground": false,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/leather-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "0d5150509d39e2c311e03c062275dc3dcb24f90354814e0db12d014e2df236c3",
+      "bytes": 3178015,
+      "alpha": false
+    },
+    {
+      "id": "brass-frame",
+      "version": 1,
+      "selected": false,
+      "original": "exec-b0e88f2e-5bee-4706-bb76-9f6bba2e69b2.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-frame-v1.png",
+      "prompt": "Use case: ui-mockup. Generate one original, empty, orthographic two-dimensional rectangular aged-brass frame sprite for a classic fantasy RPG ledger UI. True transparent PNG background; the large central hole and the entire outside must be real transparency. Canvas landscape 3:2. A thin, dignified frame in dark patinated bronze and burnished gold, two incised parallel rails per side and four finely carved squared corner pieces with subtle hand-engraved knots or linear flourishes. Exact left/right and top/bottom symmetry, very flat head-on view, no skew, no perspective, no drop shadow outside. Outer rectangle almost fills the canvas with a slight transparent safety margin, all 4 corners visible. Material takes only 6 to 9 percent of the canvas dimension at each edge, with particularly long unbroken straight thin runs in the middle of all four sides to enable CSS 9-slice stretching. This is the frame asset alone. No content, no background, no writing, no logos, no seal, no green.",
+      "imageInputs": [],
+      "transparentBackground": true,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-frame-v1.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7a5a4bdd87c36cda7db62940ce9e58abc9ab0113411caa288c64cc776f32d4df",
+      "bytes": 1266332,
+      "alpha": true
+    },
+    {
+      "id": "brass-button",
+      "version": 1,
+      "selected": false,
+      "original": "exec-97c1c8fa-e8bc-4340-b0d0-3fb7742d0a0e.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-button-v1.png",
+      "prompt": "Use case: ui-mockup. Generate a single original horizontal unlettered brass button plate sprite for a dark burgundy fantasy ledger UI. The brass plaque itself is about four times as wide as it is high, straight-edged with softly beveled tiny clipped corners, a single narrow engraved border and two tiny shallow inset end details, muted golden honey-brass center light enough to overlay a dark text label. Aged rubbed brass with real surface grain and tiny scratches, high-end old-school RPG interface asset. Flat exact orthographic top down or front view with perfectly horizontal edges. One plaque filling the width, fully in frame, vertically centered. The area around the plaque is genuinely transparent. Keep the center broad, empty and visually quiet. No glyph, letters, numbers, insignia, decorative symbol, shadows outside or other objects; no scene, no background. Transparent PNG.",
+      "imageInputs": [],
+      "transparentBackground": true,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-button-v1.png",
+      "width": 2172,
+      "height": 724,
+      "sha256": "d2f4e1abcbe7f95131f8c5eefd9b9f4749098a73152267201aa6375aae53a7fc",
+      "bytes": 2268839,
+      "alpha": true
+    },
+    {
+      "id": "vellum",
+      "version": 2,
+      "selected": true,
+      "original": "exec-7d55dd27-b762-4406-992a-b9e5cbf1984f.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/vellum-v2.png",
+      "prompt": "Use case: ui-mockup. Create one original production texture for pages of an illustrated medieval fantasy RPG ledger, with the look of a hand-painted 2000s PC game interface sprite. Horizontal landscape, totally flat, all-over matte warm cream and muted ochre parchment. Light translucent ink-wash mottling in broad patches, a few expressive but quiet little strokes near the edges, clear restful pale ivory middle, no repeated lines. Deliberately simplified two-dimensional game art with a restrained tonal range; lightly worn at the outside, evenly soft across the tabular text area. Not a photograph, no macro grain, no hyperrealism, no folds and no book in view. Edge to edge texture, no lettering, no marks, no layout, no heraldry, no watermark.",
+      "imageInputs": [],
+      "transparentBackground": false,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/vellum-v2.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2a3f2a56ceacb0cfb3926b819b82bcf5a9755b0f83aa0259cc6726dd64ddbc10",
+      "bytes": 2226496,
+      "alpha": false
+    },
+    {
+      "id": "leather",
+      "version": 2,
+      "selected": true,
+      "original": "exec-0b6d93c8-af31-43bc-ac7e-21c05b36db24.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/leather-v2.png",
+      "prompt": "Use case: ui-mockup. One original opaque square texture for a medieval fantasy ledger cover in the style of traditional hand-painted classic PC RPG interface materials. Flat 2D illustrated matte old oxblood-brown tinted leather field, very dark red plum ground, subtle broad irregular tonal washes and a few delicate painted flecks. Suggest leather with silhouette-free brushwork, not photography, not braiding, no fine repeating pebbled pattern, no bright reflections, no deeply etched areas, no perspective. Even surface, controlled dark-to-darker range so cream titles and crests remain legible. Edge-to-edge texture only. Empty of calligraphy, objects, frames, text, letters and logos. No green.",
+      "imageInputs": [],
+      "transparentBackground": false,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/leather-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "6b12b379cf26d4476db9576e3ecef3521ead104a6c305c4f49d1cc9887017df3",
+      "bytes": 2009710,
+      "alpha": false
+    },
+    {
+      "id": "brass-frame",
+      "version": 2,
+      "selected": true,
+      "original": "exec-638bc849-977e-40a6-89ad-3fde1e2c7709.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-frame-v2.png",
+      "prompt": "Use case: ui-mockup. One original 2D illustrated fantasy inventory frame sprite. A flat square rectangular picture border drawn in fine warm dark-sepia contours with matte, muted ochre burnished brass color; tiny hand-drawn angular tendril engravings in the four corners. The look is a crisp late-2000s hand-painted RPG interface ornament, restrained and readable, no realistic metal, no photoreal reflections, no perspective, no 3D shadow. Two narrow parallel rails at the edges and a little elaboration in each of the four corners. Long straight clean edges designed for 9-slice scaling. All four corners fully visible with a few pixels of safety margin, exact front-on alignment and symmetry, frame fills almost the entire square canvas. Genuine transparency in the large open middle and around the outside, no background or inner content. No heraldry, text, items, lettering, characters or logo.",
+      "imageInputs": [],
+      "transparentBackground": true,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-frame-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "704ece8106813e8f32faef8163e29cbbc0f52635af0c860ecf030582cbc2b9d1",
+      "bytes": 489645,
+      "alpha": true
+    },
+    {
+      "id": "brass-button",
+      "version": 2,
+      "selected": true,
+      "original": "exec-50765f0c-0404-409c-bbb5-63e2b55c053f.png",
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-button-v2.png",
+      "prompt": "Use case: ui-mockup. A single original unlabelled wide horizontal button plate sprite for a hand-drawn medieval fantasy RPG inventory, with a crafted late-2000s PC game look. Shape is a straight slim plaque about 4:1 with a warm matte cream-ochre center, rounded-beveled clipped little corners, a dark sepia ink contour, and one shallow fine engraved border with a tiny flourish at either end. Deliberately 2D painted materials, two or three tones, softly irregular wash in the middle; no glossy metallic sheen, no photoreal scratches, no clutter. Front-facing with perfectly horizontal edges. Transparent beyond the plate, no cast shadow. The plaque should be one uninterrupted shape centered in the canvas so dark editable text can go across its middle. No glyphs, numbers, letters, labels, symbols, logo or scenes.",
+      "imageInputs": [],
+      "transparentBackground": true,
+      "path": "AleriaAlmanach/docs/art/cenyr-administration-textures-20261126/originals/brass-button-v2.png",
+      "width": 2172,
+      "height": 724,
+      "sha256": "b33b7bb918c85b183425f53960c193d2294171ed65550c5861ece100c83e0382",
+      "bytes": 1743285,
+      "alpha": true
+    }
+  ],
+  "production": {
+    "vellum": {
+      "path": "shared/cenyr-administration/assets/ui/vellum-v2.webp",
+      "width": 1152,
+      "height": 768,
+      "sha256": "baec234234447c43ca1a9b39c4c9f976eeca75ffa27196810649ea22cf2c115f",
+      "bytes": 57218,
+      "alpha": false,
+      "origin": "originals/vellum-v2.png",
+      "ffmpeg": {
+        "filter": "scale=1152:-1:flags=lanczos",
+        "codec": "libwebp",
+        "options": "-lossless 0 -quality 88"
+      }
+    },
+    "leather": {
+      "path": "shared/cenyr-administration/assets/ui/leather-v2.webp",
+      "width": 720,
+      "height": 720,
+      "sha256": "ade87864f3621f6b1872bccff11079b753dbaed5379eac0e9aabf56e344571cc",
+      "bytes": 7486,
+      "alpha": false,
+      "origin": "originals/leather-v2.png",
+      "ffmpeg": {
+        "filter": "scale=720:-1:flags=lanczos",
+        "codec": "libwebp",
+        "options": "-lossless 0 -quality 85"
+      }
+    },
+    "brass-frame": {
+      "path": "shared/cenyr-administration/assets/ui/brass-frame-v2.webp",
+      "width": 640,
+      "height": 639,
+      "sha256": "ed538b8266cd4542c6b2ca990dfe9900bd096eb615909b0fb36189e7596a6aa1",
+      "bytes": 98028,
+      "alpha": true,
+      "origin": "originals/brass-frame-v2.png",
+      "ffmpeg": {
+        "filter": "crop=1228:1226:13:12:exact=1,scale=640:-1:flags=lanczos",
+        "codec": "libwebp",
+        "options": "-lossless 1 -pix_fmt bgra"
+      }
+    },
+    "brass-button": {
+      "path": "shared/cenyr-administration/assets/ui/brass-button-v2.webp",
+      "width": 720,
+      "height": 133,
+      "sha256": "e9d6acc52de8389ce2786d5163137c68628c9c6c362d263789a7004381b93e09",
+      "bytes": 122852,
+      "alpha": true,
+      "origin": "originals/brass-button-v2.png",
+      "ffmpeg": {
+        "filter": "crop=2114:390:28:164:exact=1,scale=720:-1:flags=lanczos",
+        "codec": "libwebp",
+        "options": "-lossless 1 -pix_fmt bgra"
+      }
+    }
+  }
+}
