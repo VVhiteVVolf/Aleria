@@ -1,5 +1,6 @@
 import { PORTRAIT_PLACEHOLDER, tierFor } from './administration-model.mjs';
 import { resolveAdministrationPortrait } from './administration-portrait-sources.mjs';
+import { administrationAreaIcon } from '../../../shared/cenyr-administration/office-icons.mjs';
 
 const roleByButton = new WeakMap();
 const assets = '/Kontinente/modules/administration/assets';
@@ -26,21 +27,11 @@ export function portraitImage(src, name = '') {
 export function pin(areaId, tier, artwork) {
   const badge = element('span', `administration-pin is-${tier}`);
   badge.setAttribute('aria-label', { gold: 'Goldrang', silver: 'Silberrang', bronze: 'Bronzerang' }[tier]);
-  if (artwork) {
-    const image = element('img', 'administration-pin-artwork');
-    image.src = artwork;
-    image.alt = '';
-    image.loading = 'lazy';
-    badge.append(image);
-    return badge;
-  }
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 64 64');
-  svg.setAttribute('aria-hidden', 'true');
-  const use = document.createElementNS(svg.namespaceURI, 'use');
-  use.setAttribute('href', `${assets}/role-pins.svg#${areaId}`);
-  svg.append(use);
-  badge.append(svg);
+  const image = element('img', 'administration-pin-artwork');
+  image.src = artwork || administrationAreaIcon(areaId);
+  image.alt = '';
+  image.loading = 'lazy';
+  badge.append(image);
   return badge;
 }
 

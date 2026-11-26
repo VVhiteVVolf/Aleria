@@ -24,12 +24,17 @@ export function settlementProfile(place, authority, { template = false } = {}) {
 
 const office = (id, title, description, extra) => ({ id, title, description, ...extra });
 const landrichter = office('gericht', 'Landrichter', 'Leitet die örtliche Gerichtsbarkeit und nimmt Streitfälle auf.');
-const rentmeister = office('kasse', 'Rentmeister', 'Führt die örtliche Kasse und legt dem zuständigen Kämmerer Rechnung.');
+const rentmeister = office('kasse', 'Rentmeister', 'Verwaltet die örtlichen Finanzen und berät die Ortsleitung in Abgabenfragen. Führt Rechnung über Leistungen, Erträge, Zölle und Steuern und liefert die fälligen Beträge und Naturalabgaben mit ihrer Abrechnung an die zuständige Kämmerei ab.');
 const zellenfuehrer = office('meldestelle', 'Zellenführer', 'Leitet die örtliche Meldestelle und berichtet an den zuständigen Netzmeister.');
+const captain = office('wache', 'Hauptmann der Ortswache', 'Führt die Wachverteidigung und die Garnison der Siedlung und berichtet dem zuständigen Marschall.');
+const garrisonPosts = [
+  office('stellvertretung', 'Leutnant der Garnison', 'Vertritt den Hauptmann der Garnison im Wachdienst.',
+    { icon: 'command', kind: 'service', templateId: 'r-leutnant' }),
+  office('versorgung', 'Zeugwart', 'Verwaltet Ausrüstung und Vorräte der Garnison.', { icon: 'supplies' }),
+];
 const governmentAreas = [
   { id: 'militaer', title: 'Militär', icon: 'watch', roles: {
-    civic: [office('wache', 'Hauptmann der Ortswache', 'Leitet den Wachdienst und berichtet dem zuständigen Marschall.')],
-    military: [office('stellvertretung', 'Leutnant der Garnison', 'Vertritt die Ortsleitung im Wachdienst.')],
+    civic: [captain],
   } },
   { id: 'klerus', title: 'Glaube', icon: 'faith', jurisdiction: 'church', roles: {
     civic: [office('diakon', 'Diakon', 'Leitet die Ortskirche und berichtet der zuständigen geistlichen Leitung.')],
@@ -41,11 +46,11 @@ const governmentAreas = [
   } },
   { id: 'finanzen', title: 'Finanzen', icon: 'money', roles: {
     civic: [rentmeister],
-    military: [rentmeister, office('versorgung', 'Zeugwart', 'Verwaltet Ausrüstung und Vorräte des Standortes.', { icon: 'supplies' })],
+    military: [rentmeister],
     church: [rentmeister],
     guild: [office('rechnung', 'Rechnungsführer der Pacht', 'Führt die Rechnung der Pachtsiedlung.')],
   } },
-  { id: 'spionage', title: 'Geheimdienst', icon: 'scouting', roles: {
+  { id: 'spionage', title: 'Geheimdienst', icon: 'secrecy', roles: {
     civic: [zellenfuehrer], military: [zellenfuehrer],
   } },
   { id: 'diplomatie', title: 'Diplomatie', icon: 'diplomacy', roles: {
@@ -82,6 +87,7 @@ export function settlementDefinition(place, { authority, template = false } = {}
   const office = authority || createLocalAuthority(normalized, null, 'der zuständigen Herrschaft');
   if (!authority && profile.kind === 'military' && !militaryLeaders.has(office.role)) office.role = 'hauptmann';
   if (!authority && profile.kind === 'civic' && office.kind === 'open') office.role = 'buergermeister';
+  const separateWatch = profile.kind === 'military' && office.role === 'burgverwalter';
   const [council, member, count, duty] = councilDefaults[profile.kind];
   const families = recordedCouncils[key];
   const councilTitle = council === 'Ortsrat' && profile.label === 'Stadtherrschaft' ? 'Stadtrat' : council;
@@ -94,6 +100,7 @@ export function settlementDefinition(place, { authority, template = false } = {}
   };
   const government = governmentAreas.flatMap(({ id, title, icon, roles, jurisdiction }) => {
     const slots = [...(additionalOffices[key]?.[id] || []), ...(roles[profile.kind] || [])];
+    if (id === 'militaer' && separateWatch) slots.push(captain);
     if (!slots.length) return [];
     return [{ id: `ortsregierung-${id}`, title, icon, slots: slots.map(slot => ({
       icon, ...slot, jurisdiction, canonicalKey: references[slot.id],
@@ -102,13 +109,14 @@ export function settlementDefinition(place, { authority, template = false } = {}
   return {
     id: settlementDepartmentId(name), ...profile, place: name, type: normalized.type,
     head: { id: 'leitung', ...localAuthorityTitle(office), authority: office,
-      icon: { military: 'watch', church: 'faith', guild: 'money' }[profile.kind] || 'coordination' },
+      icon: { military: separateWatch ? 'mayor' : 'watch', church: 'faith', guild: 'guild' }[profile.kind] || 'mayor' },
     government,
+    ...(profile.kind === 'military' ? { garrison: { commander: separateWatch ? 'wache' : 'leitung', posts: garrisonPosts } } : {}),
     council: {
       title: councilTitle, description: duty,
       seats: (families || Array.from({ length: count }, () => '')).map((family, index) => ({
         id: family ? 'rat-' + geographicKey(family) : 'rat-' + (index + 1),
-        title: family ? 'Sitz des Hauses ' + family : member, kind: 'other', icon: 'records',
+        title: family ? 'Sitz des Hauses ' + family : member, kind: 'other', icon: 'council',
         templateId: 'r-ortsrat', templateTitle: member, templateDescription: duty, description: duty,
       })),
     },

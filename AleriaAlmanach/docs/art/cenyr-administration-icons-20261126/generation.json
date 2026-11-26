@@ -1,0 +1,181 @@
+{
+  "styleReference": "https://store.steampowered.com/manual/22330",
+  "records": [
+    {
+      "id": "ratszeichen",
+      "version": 1,
+      "selected": false,
+      "icons": [
+        "command",
+        "faith",
+        "justice",
+        "money",
+        "secrecy",
+        "diplomacy",
+        "arcane",
+        "music",
+        "court"
+      ],
+      "original": "originals/ratszeichen-v1.png",
+      "generatorFilename": "exec-439a1526-04cb-4668-a9f1-d6148be0a19c.png",
+      "imageInputs": [],
+      "prompt": "Create a production sprite atlas for Aleria, an original illustrated medieval fantasy setting. Output a square PNG with genuine transparent space behind and between all sprites. Exactly 9 individual UI icons arranged in a precise 3-column by 3-row grid, equally spaced at the centers of nine equal square cells. Read the specified cells from left to right, top to bottom. Keep all marks of each sprite inside the centered 65 percent of its cell with very wide clear transparent gutters. Each cell contains exactly one compact coherent icon, with a distinctive silhouette that reads at 22 by 22 pixels. Beautiful hand-painted 2D illumination, a late-medieval manuscript workshop meets a classic fantasy PC ledger UI, carefully simplified ink outlines, warm patinated brass, parchment highlights, restrained oxblood and indigo accents, strong value contrast against both parchment and dark leather. Consistent scale, light from top left, subtle raised highlights. No circular badge bases, no card or enclosing frame, no letter labels, no numbering, no layout lines, no text, no white or checkerboard behind the objects, no neon, no realistic rendering, no imitation of game UI or game assets.\nCell motifs:\nRow 1: column 1 marshal's grounded upright command standard with a wine-red swallowtail; column 2 worn brass altar lantern with a clear little flame; column 3 a set of level bronze judicial scales.\nRow 2: column 1 three gold coins stacked in front of a maroon drawstring bag; column 2 a hooded silhouette with one narrow golden eye glint; column 3 two clasped hands with wine-red and blue cuffs.\nRow 3: column 1 an upright faceted blue crystal in a bronze setting with one gold spark; column 2 a small wooden lyre with prominent golden strings; column 3 a low medieval golden coronet with three broad trefoil points.",
+      "transparentBackground": true
+    },
+    {
+      "id": "ratszeichen",
+      "version": 2,
+      "selected": true,
+      "icons": [
+        "command",
+        "faith",
+        "justice",
+        "money",
+        "secrecy",
+        "diplomacy",
+        "arcane",
+        "music",
+        "court"
+      ],
+      "original": "originals/ratszeichen-v2.png",
+      "generatorFilename": "exec-8f76f028-456e-40f4-ade0-6c09fb0d2388.png",
+      "imageInputs": [
+        "originals/ratszeichen-v1.png"
+      ],
+      "prompt": "Redraw this original nine-icon sheet as antiquarian pen-and-ink handbook illustrations for the world of Aleria. Keep the exact 3 by 3 order and recognizable subject in each cell, each centering and clear gutters. The style is a classic early-2000s fantasy RPG printed handbook, with old woodcut and illustrated grimoire ink marks: bold, lightly wobbly dark sepia dip-pen contours, blocks of warm creamy parchment wash, simple decisive black shadow and just a little cross-hatching. Flat like illustrations printed onto a pale page, ornament very restrained. Use selectively muted brick-red pigment or muted ink-blue touches on just a few motifs across the sheet, with deep warm umber and ivory as the main palette. Matte ink, only three or four tonal values per symbol. All metallic objects should look drawn in ink with ocher wash, with zero metallic shine, specular glitter, dimensional embossing or photography. Remove all generic fleur-de-lis ornament from all objects and replace it with plain surface. Small handmade engraved icon silhouettes readable at 24 pixels. Both negative space inside each object and the paper-colored areas distinguish the form. The space around each separate full silhouette is genuinely transparent RGBA. Keep each full graphic inside its cell with plenty of empty padding. No letters, captions, numbers, backdrop, border, shadow outside or watermark. Use only the first image's original Aleria motifs as content reference.",
+      "transparentBackground": true
+    },
+    {
+      "id": "amtsdienste",
+      "version": 1,
+      "selected": false,
+      "icons": [
+        "records",
+        "coordination",
+        "supplies",
+        "arms",
+        "scouting",
+        "learning",
+        "care",
+        "inquiry",
+        "proclamation"
+      ],
+      "original": "originals/amtsdienste-v1.png",
+      "generatorFilename": "exec-3fff0333-3bc4-4392-a194-d19a270bc909.png",
+      "imageInputs": [],
+      "prompt": "Create a production sprite atlas for Aleria, an original illustrated medieval fantasy setting. Output a square PNG with genuine transparent space behind and between all sprites. Exactly 9 individual UI icons arranged in a precise 3-column by 3-row grid, equally spaced at the centers of nine equal square cells. Read the specified cells from left to right, top to bottom. Keep all marks of each sprite inside the centered 65 percent of its cell with very wide clear transparent gutters. Each cell contains exactly one compact coherent icon, with a distinctive silhouette that reads at 22 by 22 pixels. Beautiful hand-painted 2D illumination, a late-medieval manuscript workshop meets a classic fantasy PC ledger UI, carefully simplified ink outlines, warm patinated brass, parchment highlights, restrained oxblood and indigo accents, strong value contrast against both parchment and dark leather. Consistent scale, light from top left, subtle raised highlights. No circular badge bases, no card or enclosing frame, no letter labels, no numbering, no layout lines, no text, no white or checkerboard behind the objects, no neon, no realistic rendering, no imitation of game UI or game assets.\nCell motifs:\nRow 1: column 1 a closed brown ledger with a horizontal gilt clasp; column 2 three interlocking brass rings held as a symmetrical trefoil; column 3 a wooden provision chest with a pale cloth bundle perched on top.\nRow 2: column 1 a straight sword crossed with a short iron hammer; column 2 a capped bronze spyglass angled diagonally; column 3 an open cream book with a navy bookmark and no readable text.\nRow 3: column 1 a white linen bandage and a broad mortar and pestle; column 2 a round bronze magnifying lens with a short wooden handle; column 3 a single brass herald's horn with a wine-red ribbon.",
+      "transparentBackground": true
+    },
+    {
+      "id": "amtsdienste",
+      "version": 2,
+      "selected": true,
+      "icons": [
+        "records",
+        "coordination",
+        "supplies",
+        "arms",
+        "scouting",
+        "learning",
+        "care",
+        "inquiry",
+        "proclamation"
+      ],
+      "original": "originals/amtsdienste-v2.png",
+      "generatorFilename": "exec-f1f62e91-bce3-41c0-a52c-34af9dfa76e7.png",
+      "imageInputs": [
+        "originals/amtsdienste-v1.png"
+      ],
+      "prompt": "Redraw this original nine-icon sheet as antiquarian pen-and-ink handbook illustrations for the world of Aleria. Keep the exact 3 by 3 order and recognizable subject in each cell, each centering and clear gutters. The style is a classic early-2000s fantasy RPG printed handbook, with old woodcut and illustrated grimoire ink marks: bold, lightly wobbly dark sepia dip-pen contours, blocks of warm creamy parchment wash, simple decisive black shadow and just a little cross-hatching. Flat like illustrations printed onto a pale page, ornament very restrained. Use selectively muted brick-red pigment or muted ink-blue touches on just a few motifs across the sheet, with deep warm umber and ivory as the main palette. Matte ink, only three or four tonal values per symbol. All metallic objects should look drawn in ink with ocher wash, with zero metallic shine, specular glitter, dimensional embossing or photography. Remove all generic fleur-de-lis ornament from all objects and replace it with plain surface. Small handmade engraved icon silhouettes readable at 24 pixels. Both negative space inside each object and the paper-colored areas distinguish the form. The space around each separate full silhouette is genuinely transparent RGBA. Keep each full graphic inside its cell with plenty of empty padding. No letters, captions, numbers, backdrop, border, shadow outside or watermark. Use only the first image's original Aleria motifs as content reference.",
+      "transparentBackground": true
+    },
+    {
+      "id": "ortsdienste",
+      "version": 1,
+      "selected": false,
+      "icons": [
+        "hospitality",
+        "works",
+        "garden",
+        "judgment",
+        "horse",
+        "sailing",
+        "courier",
+        "watch",
+        "council"
+      ],
+      "original": "originals/ortsdienste-v1.png",
+      "generatorFilename": "exec-17401f45-05c2-4b4f-bca5-efb506b0f63c.png",
+      "imageInputs": [],
+      "prompt": "Create a production sprite atlas for Aleria, an original illustrated medieval fantasy setting. Output a square PNG with genuine transparent space behind and between all sprites. Exactly 9 individual UI icons arranged in a precise 3-column by 3-row grid, equally spaced at the centers of nine equal square cells. Read the specified cells from left to right, top to bottom. Keep all marks of each sprite inside the centered 65 percent of its cell with very wide clear transparent gutters. Each cell contains exactly one compact coherent icon, with a distinctive silhouette that reads at 22 by 22 pixels. Beautiful hand-painted 2D illumination, a late-medieval manuscript workshop meets a classic fantasy PC ledger UI, carefully simplified ink outlines, warm patinated brass, parchment highlights, restrained oxblood and indigo accents, strong value contrast against both parchment and dark leather. Consistent scale, light from top left, subtle raised highlights. No circular badge bases, no card or enclosing frame, no letter labels, no numbering, no layout lines, no text, no white or checkerboard behind the objects, no neon, no realistic rendering, no imitation of game UI or game assets.\nCell motifs:\nRow 1: column 1 a squat clay pitcher and a single rounded golden cup; column 2 a short iron mason's hammer across a pale squared stone; column 3 a single brown trowel and a dark sage sprig.\nRow 2: column 1 a squat head-on dark wooden judge's gavel angled across its sound block; column 2 a saddled bay horse head in a clear side profile; column 3 a single painted cream ship sail above a black hull with a little wave.\nRow 3: column 1 a small sealed cream envelope over a leather dispatch satchel; column 2 a broad watchman's iron helmet in front of an oxblood shield; column 3 four tall wooden council seats arranged in a compact semicircle.",
+      "transparentBackground": true
+    },
+    {
+      "id": "ortsdienste",
+      "version": 2,
+      "selected": true,
+      "icons": [
+        "hospitality",
+        "works",
+        "garden",
+        "judgment",
+        "horse",
+        "sailing",
+        "courier",
+        "watch",
+        "council"
+      ],
+      "original": "originals/ortsdienste-v2.png",
+      "generatorFilename": "exec-a9869a39-1502-4a20-b456-6b08712f5e9d.png",
+      "imageInputs": [
+        "originals/ortsdienste-v1.png"
+      ],
+      "prompt": "Redraw this original nine-icon sheet as antiquarian pen-and-ink handbook illustrations for the world of Aleria. Keep the exact 3 by 3 order and recognizable subject in each cell, each centering and clear gutters. The style is a classic early-2000s fantasy RPG printed handbook, with old woodcut and illustrated grimoire ink marks: bold, lightly wobbly dark sepia dip-pen contours, blocks of warm creamy parchment wash, simple decisive black shadow and just a little cross-hatching. Flat like illustrations printed onto a pale page, ornament very restrained. Use selectively muted brick-red pigment or muted ink-blue touches on just a few motifs across the sheet, with deep warm umber and ivory as the main palette. Matte ink, only three or four tonal values per symbol. All metallic objects should look drawn in ink with ocher wash, with zero metallic shine, specular glitter, dimensional embossing or photography. Remove all generic fleur-de-lis ornament from all objects and replace it with plain surface. Small handmade engraved icon silhouettes readable at 24 pixels. Both negative space inside each object and the paper-colored areas distinguish the form. The space around each separate full silhouette is genuinely transparent RGBA. Keep each full graphic inside its cell with plenty of empty padding. No letters, captions, numbers, backdrop, border, shadow outside or watermark. Use only the first image's original Aleria motifs as content reference.",
+      "transparentBackground": true
+    },
+    {
+      "id": "ort-und-werkstatt",
+      "version": 1,
+      "selected": false,
+      "icons": [
+        "mayor",
+        "toll",
+        "quill",
+        "territory",
+        "guild",
+        "import",
+        "export",
+        "search",
+        "ancestry"
+      ],
+      "original": "originals/ort-und-werkstatt-v1.png",
+      "generatorFilename": "exec-0b40aaa1-e90e-4612-9c83-236f45891951.png",
+      "imageInputs": [],
+      "prompt": "Create a production sprite atlas for Aleria, an original illustrated medieval fantasy setting. Output a square PNG with genuine transparent space behind and between all sprites. Exactly 9 individual UI icons arranged in a precise 3-column by 3-row grid, equally spaced at the centers of nine equal square cells. Read the specified cells from left to right, top to bottom. Keep all marks of each sprite inside the centered 65 percent of its cell with very wide clear transparent gutters. Each cell contains exactly one compact coherent icon, with a distinctive silhouette that reads at 22 by 22 pixels. Beautiful hand-painted 2D illumination, a late-medieval manuscript workshop meets a classic fantasy PC ledger UI, carefully simplified ink outlines, warm patinated brass, parchment highlights, restrained oxblood and indigo accents, strong value contrast against both parchment and dark leather. Consistent scale, light from top left, subtle raised highlights. No circular badge bases, no card or enclosing frame, no letter labels, no numbering, no layout lines, no text, no white or checkerboard behind the objects, no neon, no realistic rendering, no imitation of game UI or game assets.\nCell motifs:\nRow 1: column 1 a small stone town hall facade with a red roof and central arch; column 2 a closed red and white timber toll-gate bar over one broad coin; column 3 a pale feather quill slanting right above a dark bronze inkwell.\nRow 2: column 1 a small unfolding parchment territory map with an inked boundary and red marker; column 2 a merchant guild hand scale above a small indigo cloth bale; column 3 a manuscript scroll directed into a dark leather folio with a prominent downward amber arrow.\nRow 3: column 1 a manuscript scroll emerging above a dark leather folio with a prominent upward amber arrow; column 2 a round inspection lens over a rolled parchment list; column 3 a bronze branching family tree with three small wine-red wax seals.",
+      "transparentBackground": true
+    },
+    {
+      "id": "ort-und-werkstatt",
+      "version": 2,
+      "selected": true,
+      "icons": [
+        "mayor",
+        "toll",
+        "quill",
+        "territory",
+        "guild",
+        "import",
+        "export",
+        "search",
+        "ancestry"
+      ],
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "generatorFilename": "exec-aad09122-8ea1-4833-87f0-ea8d52eefa62.png",
+      "imageInputs": [
+        "originals/ort-und-werkstatt-v1.png"
+      ],
+      "prompt": "Redraw this original nine-icon sheet as antiquarian pen-and-ink handbook illustrations for the world of Aleria. Keep the exact 3 by 3 order and recognizable subject in each cell, each centering and clear gutters. The style is a classic early-2000s fantasy RPG printed handbook, with old woodcut and illustrated grimoire ink marks: bold, lightly wobbly dark sepia dip-pen contours, blocks of warm creamy parchment wash, simple decisive black shadow and just a little cross-hatching. Flat like illustrations printed onto a pale page, ornament very restrained. Use selectively muted brick-red pigment or muted ink-blue touches on just a few motifs across the sheet, with deep warm umber and ivory as the main palette. Matte ink, only three or four tonal values per symbol. All metallic objects should look drawn in ink with ocher wash, with zero metallic shine, specular glitter, dimensional embossing or photography. Remove all generic fleur-de-lis ornament from all objects and replace it with plain surface. Small handmade engraved icon silhouettes readable at 24 pixels. Both negative space inside each object and the paper-colored areas distinguish the form. The space around each separate full silhouette is genuinely transparent RGBA. Keep each full graphic inside its cell with plenty of empty padding. No letters, captions, numbers, backdrop, border, shadow outside or watermark. Use only the first image's original Aleria motifs as content reference.",
+      "transparentBackground": true
+    }
+  ]
+}

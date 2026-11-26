@@ -1,17 +1,13 @@
 import { escapeHtml as e } from '../shared/country-workbench/render.mjs';
 import { MAX_TITLE_LENGTH } from './draft-office-titles.mjs';
-
-const quill = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65"
-  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-  <path d="M20.8 3.2c-3.3-.7-7.3.5-10.1 3.4-2.4 2.4-3 5.3-2.3 8.9 3.6.7 6.5.1 8.9-2.3 2.8-2.8 4.1-6.8 3.5-10Z"/>
-  <path d="m3.5 20.5 12-12m-4 4 .3-3.7m2.8.6 3.5-.2"/>
-</svg>`;
+import { officeIcon } from '../../shared/cenyr-administration/office-icons.mjs';
+import { previewAttribute } from './preview-url.mjs';
 
 export function renameButton(key, name, kind, anchor = key) {
   const label = `${kind} „${name}“ umbenennen`;
   return `<button type="button" class="rename-title-button" data-action="rename-title"
     data-title-key="${e(key)}" data-title-anchor="${e(anchor)}"
-    data-title-name="${e(name)}" data-title-kind="${e(kind)}" aria-label="${e(label)}" title="${e(label)}">${quill}</button>`;
+    data-title-name="${e(name)}" data-title-kind="${e(kind)}" aria-label="${e(label)}" title="${e(label)}"><img alt="" width="18" height="18" src="${previewAttribute(officeIcon('quill'))}"></button>`;
 }
 
 export function bindOfficeTitleEditor(dialog, { onRename, hasOverride, findTrigger }) {

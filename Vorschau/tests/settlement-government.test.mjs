@@ -65,7 +65,8 @@ test('Llysfaens Ortsrat übernimmt die belegten Ämter und teilt den Wachposten 
   assert.equal(plan.sections[0].slots.find(post => post.key === watch).holder, posts.get(watch).occupant);
   assert.equal(people.get(posts.get(watch).occupant).name, 'Gwydion Rhyddid');
   assert.equal(state.appointments(posts.get(watch).occupant).filter(entry => entry.post.key === watch).length, 1);
-  assert.equal(state.appointments(plan.head.holder).find(entry => entry.post.key === plan.head.key).department, 'ortsrat-llysfaen');
+  const mayor = state.appointments(plan.head.holder).find(entry => entry.post.key === plan.head.key);
+  assert.equal(mayor.department, 'ortsamt-llysfaen--leitung');
   assert.ok(!wyrm.plans['ortsrat-gwynthor']);
   assert.equal(wyrm.plans['ortsrat-mwyncreig'].sections.at(-1).slots.length, 8);
 });
@@ -121,7 +122,10 @@ test('Austausch von Ortsräten übernimmt gemeinsame Ämter und lässt andere En
   const payload = JSON.parse(source.serialize(selection));
   assert.deepEqual(Object.keys(payload.houses), [wyrm.id]);
   assert.deepEqual(Object.keys(payload.houses.wyrm.assignments), [postKey]);
-  assert.deepEqual(payload.structure.wyrm.offices.map(office => office.id), [area]);
+  const departments = city.slots.flatMap(post => post.department ? [post.department] : []);
+  assert.equal(departments.length, 8);
+  assert.deepEqual(payload.structure.wyrm.offices.map(office => office.id), [area, ...departments]);
+  assert.equal(payload.structure.wyrm.offices.find(office => office.id === 'ortsamt-llysfaen--wache').head, postKey);
   assert(payload.structure.wyrm.offices[0].posts.some(post => post.key === city.head.key));
 
   const destination = makeState();

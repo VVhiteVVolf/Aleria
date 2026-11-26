@@ -33,7 +33,7 @@
   width: 28px; min-height: 28px; padding: 3px;
   color: var(--accent-dark); border-color: #d4c4a8; background: #f7efdf;
 }
-.rename-title-button svg { width: 16px; height: 16px; }
+.rename-title-button img { display: block; width: 18px; height: 18px; }
 .office-header .rename-title-button { width: 32px; min-height: 32px; }
 .office-title-editor {
   width: min(420px, calc(100% - 24px)); max-height: calc(100dvh - 24px);

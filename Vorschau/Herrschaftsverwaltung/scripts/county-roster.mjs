@@ -38,6 +38,11 @@ const officeDisplayNames = { 'militaer/niniane-chwedlonol': 'Niniane Chwedonol' 
 const vicarScopes = {
   'klerus-arthus': 'arthus-streben', 'klerus-gwendolyn': 'gwendolyns-ufer', 'klerus-rhonwen': 'rhonwens-traenen',
 };
+const localWatchOffices = [
+  // Rhovan names the current authority in the Celtigerns Wacht hearing.
+  { id: 'uthyr-argall', familyId: 'haus-argall', name: 'Uthyr Argall', seat: 'Tŵr Rhewgorn',
+    title: 'Hauptmann und Verwalter', note: 'Hauptmann der Wache und örtliche Obrigkeit laut Anhörung von Celtigerns Wacht.' },
+];
 
 async function countyPlaces() {
   const context = { window: {} };
@@ -129,7 +134,9 @@ export async function buildCountyRoster({ territories, families, registry, house
   const fiefContacts = territorialContacts.map(contact => ({
     id: addRole(contact, `lehenswarte/${contact.id}`),
     title: contact.title, seat: contact.jurisdiction.split(' · ', 1)[0], note: contact.description, href: contact.href,
-  }));
+  })).concat(localWatchOffices.map(({ id, familyId, name, seat, title, note }) => ({
+    id: addRole({ id, familyId, name }, `lehenswarte/${id}`), seat, title, note,
+  })));
   return {
     id: 'draig', county: true, name: own.name, title: territory.content.name, crest: own.emblem,
     href: encodeURI(`/Kontinente/${territory.page}`), ruler, offices, staff, court, contacts, fiefContacts, enrolled,

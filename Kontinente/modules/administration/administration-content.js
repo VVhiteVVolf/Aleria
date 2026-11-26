@@ -4,16 +4,16 @@
   const sourceRoot = "/Kontinente/modules/administration/content";
 
   const areas = [
-    ["militaer", "Militär", "militaer.html", "Militär.png"],
-    ["klerus", "Klerus", "klerus.html", "Klerus.png"],
-    ["gerichtsbarkeit", "Gerichtsbarkeit", "gerichtsbarkeit.html", "Justiz.png"],
-    ["finanzen", "Finanzen", "finanzen.html", "Administration.png"],
-    ["spionage", "Spionage", "spionage.html", "Spionage.png"],
-    ["diplomatie", "Diplomatie", "diplomatie.html", "Diplomatie.png"],
-    ["magie", "Magie", "magie.html", "Magie.png"],
-    ["unterhaltung", "Unterhaltung", "unterhaltung.html", "Unterhaltung.png"],
+    ["militaer", "Militär", "militaer.html", "command"],
+    ["klerus", "Klerus", "klerus.html", "faith"],
+    ["gerichtsbarkeit", "Gerichtsbarkeit", "gerichtsbarkeit.html", "justice"],
+    ["finanzen", "Finanzen", "finanzen.html", "money"],
+    ["spionage", "Spionage", "spionage.html", "secrecy"],
+    ["diplomatie", "Diplomatie", "diplomatie.html", "diplomacy"],
+    ["magie", "Magie", "magie.html", "arcane"],
+    ["unterhaltung", "Unterhaltung", "unterhaltung.html", "music"],
   ].map(([id, name, file, icon]) => Object.freeze({
-    id, name, file, imageSrc: `/IconOrdner/Organisationsicons/${encodeURIComponent(icon)}`,
+    id, name, file, imageSrc: `/shared/cenyr-administration/assets/icons/${icon}.webp`,
   }));
 
   function sourcesAt(root) {

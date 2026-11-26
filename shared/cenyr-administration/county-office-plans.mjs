@@ -85,7 +85,7 @@ function countyClergySections(house, source) {
   ];
 }
 
-function countySections(house, source) {
+function countySections(house, source, sharedWatchPosts) {
   if (source.id === 'klerus') return countyClergySections(house, source);
   const local = localDepartments[source.id];
   return source.groups.slice(1).flatMap(group => {
@@ -114,6 +114,7 @@ function countySections(house, source) {
       const places = house.places.filter(place => place.name !== 'Gwynthor');
       places.push({ name: 'Caer Ysgellfor' });
       return [watchSection(places, 'dem Marschall der Grafschaft', {
+        ...Object.fromEntries(sharedWatchPosts.map(post => [post.place, post])),
         'Caer Ysgellfor': { id: 'hauptmann-caerysgellfor', title: 'Hauptmann von Caer Ysgellfor',
           description: 'Verwaltet die Festung und führt den Wachdienst zum Schutz der umliegenden Höfe und der Hauptstraße nach Gwynthor.' },
       }), watchServiceSection([
@@ -126,7 +127,7 @@ function countySections(house, source) {
   });
 }
 
-export function countyOfficeDefinition(house, id, office) {
+export function countyOfficeDefinition(house, id, office, sharedWatchPosts = []) {
   const source = countyAreas[id];
   const leadership = countyLeadershipRole(source);
   return {
@@ -134,7 +135,7 @@ export function countyOfficeDefinition(house, id, office) {
       title: leadership.title, description: leadership.description, reportsTo: leadership.reportsTo,
       holder: office.holder, titleVariants: titleVariants[id],
     },
-    sections: countySections(house, source),
+    sections: countySections(house, source, sharedWatchPosts),
     retired: id === 'militaer' ? RETIRED_WATCH_MARSHAL : undefined,
     references: id === 'klerus' ? house.contacts : [],
   };

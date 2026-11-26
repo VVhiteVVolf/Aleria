@@ -1,21 +1,26 @@
-import { dutyIcon } from '../../Kontinente/modules/administration/office-duty-icons.mjs';
 import { LEHENSWARTE_ID } from './lehenswarte-plan.mjs';
 
-const artwork = {
-  arcane: '/IconOrdner/Organisationsicons/Magie.png',
-  court: '/IconOrdner/Icons%20f%C3%BCr%20Stand/Ritterf%C3%BCrst.PNG',
-  justice: '/IconOrdner/Organisationsicons/Justiz.png',
-  horse: '/IconOrdner/Traits%20Icon/Horse.png',
-  sailing: '/IconOrdner/Traits%20Icon/Sea_King.png',
-  music: '/IconOrdner/Buttom%20Icons/Singen.PNG',
-  courier: '/IconOrdner/Cktraits/Trait_traveler.png',
-  watch: '/IconOrdner/Cktraits/Trait_education_martial_prowess_4.png',
-};
+const artwork = new Set([
+  'command', 'faith', 'justice', 'money', 'secrecy', 'diplomacy', 'arcane', 'music', 'court',
+  'records', 'coordination', 'supplies', 'arms', 'scouting', 'learning', 'care', 'inquiry', 'proclamation',
+  'hospitality', 'works', 'garden', 'judgment', 'horse', 'sailing', 'courier', 'watch', 'council',
+  'mayor', 'toll', 'quill', 'territory', 'guild', 'import', 'export', 'search', 'ancestry',
+]);
 
-export const officeIcon = key => artwork[key] || dutyIcon(key);
+export function officeIcon(key) {
+  if (!artwork.has(key)) throw new Error(`Unknown administration icon: ${key}`);
+  return `/shared/cenyr-administration/assets/icons/${key}.webp`;
+}
+
+const areaIcons = {
+  militaer: 'command', klerus: 'faith', gerichtsbarkeit: 'justice', finanzen: 'money',
+  spionage: 'secrecy', diplomatie: 'diplomacy', magie: 'arcane', unterhaltung: 'music',
+};
+export const administrationAreaIcon = id => officeIcon(areaIcons[id] || 'court');
+
 export const COURT_AREA = { id: 'hof', name: 'Hofämter', imageSrc: officeIcon('court') };
 export const REGENCY_AREA = { id: 'regentschaft', name: 'Regentschaft', imageSrc: officeIcon('diplomacy') };
-export const LEHENSWARTE_AREA = { id: LEHENSWARTE_ID, name: 'Ortsämter und Lehen', imageSrc: officeIcon('diplomacy') };
+export const LEHENSWARTE_AREA = { id: LEHENSWARTE_ID, name: 'Ortsämter und Lehen', imageSrc: officeIcon('territory') };
 export const ADDITIONAL_COUNCIL_AREAS = [
   { id: 'ratskanzlei', name: 'Ratskanzlei', imageSrc: officeIcon('records') },
   { id: 'ratsberatung', name: 'Ratsberatung', imageSrc: officeIcon('learning') },

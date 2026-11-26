@@ -22,14 +22,16 @@ export function vacancyEntries(houses, areas, state, people) {
       const alternateName = alternateArea && state.title(house.id, officeTitleKey(alternateArea), names.get(alternateArea));
       const plan = house.plans[department];
       const head = plan?.head && posts.get(plan.head.key);
-      const departmentName = plan?.settlement ? plan.department.name : head ? postTitle(head, postOccupant(head, people)) : '';
+      const departmentName = plan?.settlement && !plan.settlementOffice ? plan.department.name
+        : head ? postTitle(head, postOccupant(head, people)) : '';
       const title = postTitle(post, postOccupant(post, people));
-      const place = post.locality?.name || post.place || post.settlement || '';
-      const context = [house.name, areaName, alternateName, departmentName, departmentName.includes(place) ? '' : place, house.countyName]
-        .filter(Boolean).join(' · ');
+      const place = post.locality?.name || post.place || post.settlement || plan?.settlement?.name || '';
+      const contextParts = [house.name, areaName, alternateName, house.countyName];
+      const context = [...contextParts, departmentName, departmentName.includes(place) ? '' : place].filter(Boolean).join(' · ');
+      const searchContext = plan?.settlementOffice ? [...contextParts, place].filter(Boolean).join(' ') : context;
       entries.push({ title, context, scope: house.id, area, review: post.needsReplacement,
         alternateArea, ...(alternateArea ? { alternateHref: preparationHref(house.id, alternateArea, alternateDepartment, post.key) } : {}),
-        searchable: normalizePersonName(`${title} ${context} ${house.title}`), href: preparationHref(house.id, area, department, post.key) });
+        searchable: normalizePersonName(`${title} ${searchContext} ${house.title}`), href: preparationHref(house.id, area, department, post.key) });
     }
   }
   entries.sort((a, b) => alphabetical.compare(a.title, b.title) || alphabetical.compare(a.context, b.context));

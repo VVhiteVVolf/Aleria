@@ -2,7 +2,7 @@
 
 Gemeinsame Ansicht für bestehende und künftige Herrschaften. Gestaltung und Zuständigkeiten: [Herrschaftsseiten-Vorgehen](../../HERRSCHAFTSSEITEN-VORGEHEN.md).
 
-- `administration-content.js` besitzt die acht Bereiche, lokalen Organisationsicons und territoriale Zuordnung der Altquellen. Unbekannte Herrschaften erhalten keine fremden Inhalte.
+- `administration-content.js` besitzt die acht Bereiche, ihre Zuordnung zu den eigenen Amtszeichen und die territoriale Zuordnung der Altquellen.
 - `administration-dialog.js` besitzt Hauptfenster, Maximierung, Bereichsnavigation, Ladezustand und Fokusrückkehr. Späte Ladeergebnisse überschreiben keinen anderen Bereich. Die Bereichsnavigation verändert nicht den ursprünglichen Auslöser auf der Seite.
 - `administration-structured.mjs` verbindet die redaktionellen Bereichsmodule mit den gemeinsamen Cenyr-Amtsplänen. Die sieben Herrschaften verwenden dieselben Stellen wie die Werkstatt. Das Fenster von Gwendolyns Ufer enthält außerdem seine überlieferten Ämtertafeln mit den vorhandenen Dialogfunktionen.
 - `administration-role-examples.mjs` ergänzt am Inhaltsende jedes Bereichs eine Tabelle aus `data/role-examples.mjs`: reguläre Rollen, Nebenrollen und Sonderrollen mit Kurzbeschreibungen und den gemeinsamen Bronze-Abzeichen. Die Beispiele gelten als Anregung für alle Herrschaften, unabhängig von deren konkreten Amtsbesetzungen und vom strukturierten oder älteren Quellenformat. Die Darstellung besitzt eigene Styles in `administration-role-examples.css`.
@@ -19,6 +19,14 @@ Die Renderer bestimmen die Anordnung ihrer Ansichten. In den regulären
 Verwaltungsfenstern steht die Amtsleitung vor der Einführung. Das Amtsdetail
 nennt oben die amtsführende Herrschaft, den Bereich und die Abteilung. Die
 Hofämter und Ortsräte übernehmen ihre Symbole aus dem gemeinsamen Amtsplan.
+Die 36 gezeichneten Amtszeichen liegen unter `shared/cenyr-administration/assets/icons/`.
+Motivzuordnung, Bildoriginale und Aufbereitung sind gemeinsam dokumentiert.
+[Amtszeichen](../../../AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/README.md)
+
+Die Ortsseite öffnet die Hierarchie eines Amts im gemeinsamen Dialograhmen.
+`settlement-office-staff.mjs` definiert Kanzlei und Dienste für Ortsleitung,
+Fachämter und Garnison. Ortsseite und Werkstatt lesen denselben Amtsplan.
+Die Sitze des Ortsrats öffnen die gemeinsame Ratsansicht.
 
 ## Redaktionelle Daten und Dienstwege
 

@@ -17,6 +17,7 @@ import { HOUSE_CONTENT as arwyddCourt } from '../../../Familien Häuser und Clan
 import { houseOfficeFor } from '../../../Familien Häuser und Clans/modules/court/house-office-catalog.mjs';
 import { geographicKey } from '../../../shared/world-directory/geographic-key.mjs';
 import { CENYR_ADMINISTRATION_SCOPES } from '../../../shared/cenyr-administration/scopes.mjs';
+import { recordedLocalOffice, WATCH_AND_LOCAL_ADMINISTRATION } from '../../../shared/cenyr-administration/local-authority.mjs';
 import { PERSONAL_SERVICE, SERVICE_HOUSES, FREE_HOUSES, OTHER_SERVICE, STAFF, TERRITORIAL_NAME_NOTES, COURT_NAME_NOTES,
   SETTLEMENT_APPOINTMENT_SOURCES } from './roster-sources.mjs';
 import { buildCountyRoster } from './county-roster.mjs';
@@ -285,9 +286,13 @@ const free = [...FREE_HOUSES].flatMap(id => {
 const tree = buildTreeCandidateIndex(FAMILY_REGISTRY, { isLiving, addFamilyPerson });
 const projection = { year: ALERIA_CURRENT_YEAR, houses, free, tree, people: [...people.values()].sort(byName) };
 const serialized = JSON.stringify(projection, null, 2) + '\n';
-const nativeHouses = houses.map(({ candidates, enrolled, fiefContacts, ...house }) => house);
-const nativeIds = new Set(houses.flatMap(house => [house.ruler, ...house.staff.map(slot => slot.holder),
-  ...Object.values(house.offices).map(office => office.holder), ...house.contacts.map(contact => contact.id)]).filter(Boolean));
+const nativeHouses = houses.map(({ candidates, enrolled, fiefContacts = [], ...house }) => {
+  const watchOffices = fiefContacts.filter(contact => recordedLocalOffice(contact.title) === WATCH_AND_LOCAL_ADMINISTRATION);
+  return watchOffices.length ? { ...house, fiefContacts: watchOffices } : house;
+});
+const nativeIds = new Set(nativeHouses.flatMap(house => [house.ruler, ...house.staff.map(slot => slot.holder),
+  ...Object.values(house.offices).map(office => office.holder), ...house.contacts.map(contact => contact.id),
+  ...(house.fiefContacts || []).map(contact => contact.id)]).filter(Boolean));
 const nativePeople = [...nativeIds].sort().map(id => {
   const { name, portrait, href, almanacHref } = people.get(id);
   return { id, name, portrait, href, ...(almanacHref ? { almanacHref } : {}) };

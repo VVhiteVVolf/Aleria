@@ -2,19 +2,20 @@ import { element, roleFor } from './administration-cards.mjs';
 import { renderOfficeView } from './administration-office-view.mjs?v=20261028-office-body-v2';
 
 // One local controller per owning feature; the same view also serves house courts.
-export function createOfficeDialog({ owner, onNavigate } = {}) {
-  const dialog = element('dialog', 'administration-office-dialog');
+export function createOfficeDialog({ owner, onNavigate, renderView = renderOfficeView, viewClass = '', titleId,
+  closeLabel = 'Amtsbeschreibung schließen' } = {}) {
+  const dialog = element('dialog', ['administration-office-dialog', viewClass].filter(Boolean).join(' '));
   const shell = element('div', 'administration-office-shell');
   const header = element('header', 'administration-office-header');
   const title = element('div');
   const path = element('p', 'administration-office-path');
   const heading = element('h2');
-  heading.id = owner ? 'administration-office-title' : 'house-court-office-title';
+  heading.id = titleId || (owner ? 'administration-office-title' : 'house-court-office-title');
   dialog.setAttribute('aria-labelledby', heading.id);
   heading.tabIndex = -1;
   const close = element('button', 'administration-dialog-close', '×');
   close.type = 'button';
-  close.setAttribute('aria-label', 'Amtsbeschreibung schließen');
+  close.setAttribute('aria-label', closeLabel);
   close.addEventListener('click', () => dialog.close());
   title.append(path, heading);
   header.append(title, close);
@@ -34,9 +35,10 @@ export function createOfficeDialog({ owner, onNavigate } = {}) {
       path.textContent = [data.role.jurisdiction || data.area.jurisdiction, data.area.title, data.group.title]
         .filter(Boolean).join(' → ');
       dialog.dataset.tier = data.tier;
-      const text = renderOfficeView(body, data, onNavigate ? areaId => { dialog.close(); onNavigate(areaId); } : null);
+      const text = renderView(body, data, onNavigate ? areaId => { dialog.close(); onNavigate(areaId); } : null);
       if (!dialog.open) dialog.showModal();
-      body.scrollTop = 0; text.scrollTop = 0;
+      body.scrollTop = 0;
+      if (text) text.scrollTop = 0;
       heading.focus({ preventScroll: true });
       if (button?.dataset.showCrew) text.querySelector('.administration-office-crew')?.scrollIntoView({ block: 'nearest' });
     },

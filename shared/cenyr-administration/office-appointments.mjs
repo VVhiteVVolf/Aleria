@@ -1,20 +1,31 @@
 import { LEHENSWARTE_AREA } from './office-icons.mjs';
 
-function officeRoute(area, plan) {
-  return plan.department ? { area: plan.parentArea || 'hof', department: area } : { area };
+export function officePlanPath(plans, id) {
+  const path = [];
+  while (Object.hasOwn(plans, id) && !path.includes(id)) {
+    path.unshift(id);
+    if (!plans[id].department) return path;
+    id = plans[id].parentArea || 'hof';
+  }
+  return [];
+}
+
+function officeRoute(plans, id) {
+  const [area = id, ...departments] = officePlanPath(plans, id);
+  return departments.length ? { area, department: departments.at(-1) } : { area };
 }
 
 export function locateOfficePosts(plans) {
   const locations = new Map();
   for (const [area, plan] of Object.entries(plans)) {
-    const route = officeRoute(area, plan);
+    const route = officeRoute(plans, area);
     for (const post of plan.slots) {
       const previous = locations.get(post.key);
       // The settlement projects standing offices from its parent and the other ministries.
       if (!previous || (plan.department && !plan.settlement)) locations.set(post.key, { post, ...route });
-      else if (plan.settlement && post.key === plan.head.key && previous.area === route.area) {
+      else if (plan.settlement && post.key === plan.head?.key && previous.area === route.area) {
         locations.set(post.key, { ...previous, ...route, post });
-      } else if (plan.settlement && post.key === plan.head.key && previous.alternateArea === route.area) {
+      } else if (plan.settlement && post.key === plan.head?.key && previous.alternateArea === route.area) {
         locations.set(post.key, { ...previous, alternateDepartment: route.department });
       }
       else if (!plan.settlement && previous.area !== route.area) locations.set(post.key, { ...previous, alternateArea: route.area });
@@ -24,7 +35,7 @@ export function locateOfficePosts(plans) {
 }
 
 export function officePostRoute(scope, post) {
-  return scope.locations.get(post.key) ?? officeRoute(post.area, scope.plans[post.area]);
+  return scope.locations.get(post.key) ?? officeRoute(scope.plans, post.area);
 }
 
 export function indexAppointments(scopes, postsFor = scope => Array.from(scope.locations.values(), ({ post }) => post)) {

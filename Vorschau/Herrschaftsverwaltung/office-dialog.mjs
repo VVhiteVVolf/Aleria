@@ -14,6 +14,7 @@ import { bindLocalAuthorityEditor } from './local-authority-editor.mjs';
 import { needsFilling, postOccupant } from './draft-assignment-references.mjs';
 import { bindCourtServiceEditor } from './court-service-editor.mjs';
 import { officePath, officeResponsibility } from './office-context.mjs';
+import { officePlanPath } from '../../shared/cenyr-administration/office-appointments.mjs';
 import { previewUrl } from './preview-url.mjs';
 
 export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleEditor, authorityEditor, serviceEditor, onChange, onClose, onTransfer }) {
@@ -125,8 +126,15 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     const ownerFor = slot => officeResponsibility(house, area.id, plan, slot);
     const serviceRecipient = slot => state.serviceRecipient(house.id, slot);
     const view = { people, appointmentLinks, ownerFor, serviceRecipient };
-    const head = plan.head && positions.get(plan.head.key);
-    const namedHead = head && !plan.settlement;
+    function inView(slot) {
+      const position = positions.get(slot.key);
+      if (!position) return position;
+      return { ...position, department: slot.department, ...(plan.settlement ? {
+        image: slot.image || position.image, description: slot.authority ? position.description : slot.description,
+      } : {}) };
+    }
+    const head = plan.head && inView(plan.head);
+    const namedHead = head && (!plan.settlement || plan.settlementOffice);
     const titleKey = namedHead ? postTitleKey(head.key) : officeTitleKey(area.id);
     title.textContent = namedHead ? postTitle(head, postOccupant(head, people)) : state.title(house.id, titleKey, area.name);
     owner.innerHTML = ownerFor(head ?? {});
@@ -143,12 +151,12 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     // Leadership posts stay available when the list is filtered to vacancies.
     headPost.hidden = !head;
     headPost.innerHTML = head ? renderPost(head, postOccupant(head, people), {
-      headLabel: plan.settlement ? 'Ortsleitung' : area.id === 'regentschaft' ? 'Sonderamt unter dem Oberhaupt' : parentViews.length ? 'Hofamt'
+      headLabel: plan.settlementOffice ? 'Amtsleitung' : plan.settlement ? 'Ortsleitung' : area.id === 'regentschaft' ? 'Sonderamt unter dem Oberhaupt' : parentViews.length ? 'Hofamt'
         : branch() ? `Leitung · ${branch().name}` : house.county || house.rank === 'county'
           ? 'Amtsleitung der Grafschaft' : `Amtsleitung unter dem ${rankOf(house).ruler}`,
       image: area.imageSrc,
-      renameHead: Boolean(plan.settlement),
-      showDepartment: !parentViews.length,
+      renameHead: Boolean(plan.settlement && !plan.settlementOffice),
+      showDepartment: !parentViews.length || Boolean(plan.settlement && !plan.settlementOffice),
       appointmentLinks, ownerFor, serviceRecipient,
     }) : '';
     const custom = [...positions.values()].filter(slot => slot.custom && slot.area === area.id);
@@ -158,7 +166,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     const visible = entries => entries.filter(slot => !vacanciesOnly.checked || needsFilling(slot));
     role('posts').innerHTML = plan.sections.map(group => {
       const support = group.id ? custom.filter(slot => slot.placement === group.id) : [];
-      const active = visible([...group.slots.map(slot => positions.get(slot.key)).filter(Boolean), ...support]);
+      const active = visible([...group.slots.map(inView).filter(Boolean), ...support]);
       const fixed = active.filter(slot => !slot.kind);
       const repeated = active.filter(slot => slot.kind);
       return active.length || group.repeatableHere || group.staff
@@ -524,8 +532,12 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
       title.focus({ preventScroll: true });
       postScroll.scrollTop = 0;
       list.scrollTop = 0;
-      const direct = plan.slots.find(slot => department && slot.department === department);
-      if (direct) openDepartment(department, direct.key);
+      const path = department ? officePlanPath(house.plans, department) : [];
+      for (const id of path[0] === category.id ? path.slice(1) : []) {
+        const direct = plan.slots.find(slot => slot.department === id);
+        if (!direct) break;
+        openDepartment(id, direct.key);
+      }
       if (postKey) focusPost(state.postKey(house.id, postKey));
     },
   };

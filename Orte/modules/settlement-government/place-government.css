@@ -1,4 +1,5 @@
 @import url('../../../shared/cenyr-administration/administration-materials.css');
+@import url('../../../Kontinente/modules/administration/administration-office-dialog.css');
 
 [data-orte-government-row][hidden] { display: none; }
 [data-orte-government] {
@@ -47,7 +48,7 @@
   object-fit: contain;
 }
 .place-government-heading .place-government-link { margin-inline-start: auto; }
-[data-orte-government] .place-government-section-title {
+:is([data-orte-government], .place-office-dialog) .place-government-section-title {
   display: flex;
   align-items: center;
   gap: .45rem;
@@ -60,7 +61,7 @@
   font: 700 1.1rem/1.25 Georgia, serif;
 }
 .place-government-section-title img { flex: 0 0 26px; width: 26px; height: 26px; object-fit: contain; }
-[data-orte-government] ul {
+:is([data-orte-government], .place-office-dialog) ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 172px), 1fr));
   gap: .55rem;
@@ -77,6 +78,7 @@
 .place-government-areas .place-government-section-title { margin: 0; border-top: 0; border-inline-start: 0; font-size: .98rem; }
 .place-government-areas ul { grid-template-columns: 1fr; }
 .place-government-card {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: .5rem;
@@ -101,6 +103,34 @@
   object-fit: cover;
 }
 .place-government-person a { color: var(--administration-accent); text-underline-offset: .15em; }
+.place-government-card:has(> div > .place-government-open) > div { flex: 1; }
+.place-government-open {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: space-between;
+  gap: .45rem;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.place-government-card .place-government-open::after { position: absolute; inset: 0; content: ''; }
+.place-government-card:has(.place-government-open:hover) { box-shadow: inset 0 0 0 2px #8b62438c; }
+.place-government-open > span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 19px;
+  min-height: 19px;
+  color: var(--administration-accent);
+  background: var(--administration-button-image) center / 100% 100% no-repeat;
+  font: 700 1rem/1 Georgia, serif;
+}
+.place-government-card .place-government-person a { position: relative; z-index: 1; }
+.place-government-card.is-selected { outline: 2px solid var(--administration-accent); outline-offset: -2px; }
 .place-government-areas .place-government-card { border: 0; background: transparent; }
 .place-government-areas .place-government-card + .place-government-card { border-top: 1px solid var(--administration-line); }
 .place-government-lead ul { grid-template-columns: minmax(0, 385px); }
@@ -120,8 +150,15 @@
   background: var(--administration-paper-light);
   font: inherit;
 }
-[data-orte-government] :is(a, select):focus-visible { outline: 2px solid var(--administration-accent); outline-offset: 2px; }
+[data-orte-government] :is(a, button, select):focus-visible { outline: 2px solid var(--administration-accent); outline-offset: 2px; }
 .place-government-heading .place-government-link:focus-visible { outline-color: var(--administration-cream); }
+.place-office-dialog { width: min(800px, calc(100vw - 1rem)); }
+.place-office-dialog .administration-office-body { display: block; }
+.place-office-dialog ul { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.place-office-dialog .place-office-lead { grid-template-columns: minmax(0, 1fr); }
+.place-office-supervisor { margin: .5rem 0; color: var(--administration-muted); }
+.place-office-duty { margin: .45rem 0 0; line-height: 1.45; }
+.place-office-footer { position: sticky; bottom: -.8rem; margin-top: 1rem; padding: .6rem 0; background: var(--administration-paper); }
 @media (max-width: 520px) {
   .place-government-heading .place-government-link { margin-inline-start: 0; }
 }

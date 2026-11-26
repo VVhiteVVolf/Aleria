@@ -1261,6 +1261,14 @@ export const OFFICE_CAST = {
           "name": "Tŵr Rhewgorn",
           "type": "Turm"
         }
+      ],
+      "fiefContacts": [
+        {
+          "id": "person--haus-argall--uthyr-argall",
+          "seat": "Tŵr Rhewgorn",
+          "title": "Hauptmann und Verwalter",
+          "note": "Hauptmann der Wache und örtliche Obrigkeit laut Anhörung von Celtigerns Wacht."
+        }
       ]
     },
     {
@@ -2154,6 +2162,12 @@ export const OFFICE_CAST = {
       "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
       "href": "/Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=rhydric-argall",
       "almanacHref": "/AleriaAlmanach/AleriaAlmanach.html?character=person--haus-argall--rhydric-argall"
+    },
+    {
+      "id": "person--haus-argall--uthyr-argall",
+      "name": "Uthyr Argall",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-argall/uthyr-argall.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=uthyr-argall"
     },
     {
       "id": "person--haus-arth--melyn-arth",

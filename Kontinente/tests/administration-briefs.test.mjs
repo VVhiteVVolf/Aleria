@@ -37,7 +37,7 @@ test('Alle Vasallen erhalten fachlich passende Aufgaben ohne Änderung ihrer Bes
   }
 });
 
-test('Alle verwendeten CK-Aufgabenicons sind vorhandene lokale Dateien', async () => {
+test('Alle verwendeten Amtsaufgabenzeichen sind eigene lokale Dateien', async () => {
   for (const key of Object.keys(OFFICE_DUTY_ICONS)) await access(new URL(`../..${dutyIcon(key)}`, import.meta.url));
   assert.throws(() => dutyIcon('not-a-known-icon'), /Unknown/);
 });

@@ -124,7 +124,9 @@ die ausgewählte Grafschaft und die ausgewählte Herrschaft. Über die Schriftro
 im Amtsfenster lassen sich zusätzlich das offene Amt und seine übergeordneten
 Amtsbereiche übertragen. Ein Hofexport enthält die Hofämter und deren
 Unterstrukturen. Ein Ortsratexport enthält den ausgewählten Ort, seine
-Postenliste und die dortigen Entwurfsänderungen.
+Fachämter und die dortigen Entwurfsänderungen. Im einzelnen Ortsamt lässt
+sich auch nur dessen Hierarchie exportieren. Der Amtsweg führt über die
+Ortsübersicht zurück zu den Lehenswarten und übernimmt die Kandidatenfilter.
 
 Die Datei enthält die Auswahl und kann auch über den allgemeinen Import geladen
 werden. Für einen Import in eine engere Auswahl werden nur deren Stellen

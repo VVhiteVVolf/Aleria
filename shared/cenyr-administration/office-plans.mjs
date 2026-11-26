@@ -357,7 +357,7 @@ export function buildOfficePlans(house) {
   const localPlan = house.rank === 'royal' ? null : buildLehenswartePlan(house);
   const sharedWatchPosts = (localPlan?.sections || []).flatMap(section => section.slots).filter(post => post.previousKey);
   const definitions = Object.entries(house.offices).filter(([id]) => id !== 'regentschaft').map(([id, office]) => {
-    if (house.county) return [id, countyOfficeDefinition(house, id, office)];
+    if (house.county) return [id, countyOfficeDefinition(house, id, office, sharedWatchPosts)];
     if (id === 'ratskanzlei' || id === 'ratsberatung') {
       return [id, { head: { ...office, reportsTo: `dem ${rankOf(house).ruler}`,
         description: id === 'ratskanzlei' ? 'Leitet die Beratungen des königlichen Rates. Führt die Kanzlei und ist oberster Berater des Königs.'

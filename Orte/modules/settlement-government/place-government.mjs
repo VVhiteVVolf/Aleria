@@ -1,16 +1,18 @@
 import { escapeHtml as e } from '../../../Vorschau/shared/country-workbench/render.mjs';
 import { geographicKey } from '../../../shared/world-directory/geographic-key.mjs';
-import { settlementDefinition, settlementJurisdiction } from '../../../shared/cenyr-administration/settlement-government.mjs';
+import { settlementDefinition } from '../../../shared/cenyr-administration/settlement-government.mjs';
+import { buildSettlementOfficePlans } from '../../../shared/cenyr-administration/settlement-plans.mjs';
 import { officeIcon } from '../../../shared/cenyr-administration/office-icons.mjs';
 import { preparationHref } from '../../../shared/cenyr-administration/office-appointments.mjs';
 import { LEHENSWARTE_ID } from '../../../shared/cenyr-administration/lehenswarte-plan.mjs';
+import { governmentCard, governmentContext, governmentSectionTitle as sectionTitle, handleGovernmentPortraitError } from './place-government-cards.mjs';
+import { bindPlaceOfficeDialog } from './place-office-dialog.mjs';
 
 const row = document.querySelector('[data-orte-government-row]');
 const section = row?.querySelector('[data-orte-government]');
 const types = ['Bauernsiedlung', 'Handelssiedlung', 'Bergbausiedlung', 'Fischersiedlung', 'Hafensiedlung', 'Waldsiedlung',
   'Dorf', 'Kleinstadt', 'Stadt', 'Turm', 'Burg', 'Festung', 'Garnison', 'Kirchensiedlung', 'Klostersiedlung', 'Priorei', 'Abtei', 'Pachtsiedlung'];
-const portraitFallback = '/Stammbäume/assets/images/placeholders/unknown.png';
-const hierarchyLabels = { church: 'Kirche', guild: 'Gilde', place: 'Ort' };
+const updateOfficeDialog = section && bindPlaceOfficeDialog(section);
 
 function placeScope(entry, houses) {
   const placeName = geographicKey(entry.name);
@@ -23,46 +25,30 @@ function placeScope(entry, houses) {
   return matches.length === 1 ? matches[0] : null;
 }
 
-function card(slot, person, owner) {
-  const icon = slot.image || officeIcon(slot.icon || 'coordination');
-  const identity = person?.name || 'Besetzung offen';
-  return '<li class="place-government-card">' +
-    '<img class="place-government-icon" src="' + e(icon) + '" alt="" width="31" height="31" loading="lazy">' +
-    '<div><strong>' + e(slot.title) + '</strong><small class="place-government-owner">' + e(owner) + '</small>' +
-    '<span class="place-government-person"><img src="' + e(person?.portrait || portraitFallback) +
-      '" alt="" width="28" height="28" loading="lazy"' + (person?.portrait ? ' data-government-portrait' : '') + '>' + (person?.href
-    ? '<a href="' + e(person.href) + '">' + e(identity) + '</a>' : '<span>' + e(identity) + '</span>') + '</span></div></li>';
-}
-
-function cards(posts, people, context) {
-  return posts.map(post => card(post, people.get(post.holder), context(post))).join('');
-}
-
-function sectionTitle(level, title, iconKey = 'coordination') {
-  const icon = iconKey.startsWith('/') ? iconKey : officeIcon(iconKey);
-  return `<${level} class="place-government-section-title">` +
-    `<img src="${e(icon)}" alt="" width="26" height="26" loading="lazy">${e(title)}</${level}>`;
-}
-
 function render(data, definition, source, typeSelector = '') {
-  const { plan, scope, people = new Map() } = source || {};
-  const head = plan?.head || definition.head;
-  const council = plan?.sections.find(group => group.id === 'ortsrat');
-  const government = plan?.sections.filter(group => group.id.startsWith('ortsregierung-')) || definition.government;
+  const { scope, plans = buildSettlementOfficePlans({}, definition), people = new Map() } = source || {};
+  const plan = plans[definition.id];
+  const head = plan.head;
+  const council = plan.sections.find(group => group.id === 'ortsrat');
+  const government = plan.sections.filter(group => group.id.startsWith('ortsregierung-'));
   const crest = data?.images?.['icon-png']?.src || scope?.crest;
-  const officeContext = post => hierarchyLabels[settlementJurisdiction(definition.kind, post)] + ' · ' + definition.place;
+  const card = (post, destination) => governmentCard(post, people, governmentContext(definition, post), { destination });
   const href = scope && preparationHref(scope.id, LEHENSWARTE_ID, definition.id);
+  const councilLink = `<button type="button" class="place-government-open" data-government-office="ortsrat"
+    aria-haspopup="dialog"><strong>${e(council.title)}</strong><span aria-hidden="true">›</span></button>`;
   section.innerHTML = '<header class="place-government-heading">' +
     (crest ? '<img class="place-government-crest" src="' + e(crest) + '" alt="" width="48" height="48" loading="lazy">' : '') +
     '<div><h2>' + e(definition.label + ' ' + definition.place) + '</h2>' +
     (scope ? '<p>Untersteht ' + e(scope.name) + '</p>' : '') + '</div>' +
     (href ? '<a class="place-government-link administration-planning-link" href="' + e(href) + '">Ortsrat in der Werkstatt ↗</a>' : '') + '</header>' + typeSelector +
     '<div class="place-government-lead">' + sectionTitle('h3', 'Ortsleitung', definition.head.icon) + '<ul>' +
-    card({ icon: definition.head.icon, ...head }, people.get(head.holder), officeContext(head)) + '</ul></div>' +
+    card(head, head.department) + '</ul></div>' +
     sectionTitle('h3', 'Regierende Ämter', 'command') + '<div class="place-government-areas">' + government.map(group =>
-      '<section>' + sectionTitle('h4', group.title, group.icon) + '<ul>' + cards(group.slots, people, officeContext) + '</ul></section>').join('') + '</div>' +
-    sectionTitle('h3', council?.title || definition.council.title, 'records') + '<ul data-government-council>' +
-    cards(council?.slots || definition.council.seats, people, officeContext) + '</ul>';
+      '<section>' + sectionTitle('h4', group.title, group.icon) + '<ul>' + group.slots.map(post => card(post, post.department)).join('') + '</ul></section>').join('') + '</div>' +
+    `<h3 class="place-government-section-title place-government-council-title"><img src="${e(officeIcon('council'))}"
+      alt="" width="26" height="26" loading="lazy">${councilLink}</h3><ul data-government-council>` +
+    council.slots.map(post => card(post, 'ortsrat')).join('') + '</ul>';
+  updateOfficeDialog({ definition, plan, plans, people, scope });
   row.hidden = false;
 }
 
@@ -82,8 +68,8 @@ async function sourceFor(entry, definition) {
   }
   if (!scope) return null;
   if (geographicKey(scope.governmentSeat) === geographicKey(entry.name)) return { administrationSeat: true };
-  const plan = buildOfficePlans(scope)[definition.id];
-  return plan ? { scope, plan, people: new Map(people.map(person => [person.id, person])) } : null;
+  const plans = buildOfficePlans(scope);
+  return plans[definition.id] ? { scope, plans, people: new Map(people.map(person => [person.id, person])) } : null;
 }
 
 let renderVersion = 0;
@@ -116,12 +102,7 @@ async function mount(entry, data) {
 
 if (section) {
   section.dataset.codexOwnHeadings = '';
-  section.addEventListener('error', event => {
-    const image = event.target;
-    if (!image.hasAttribute('data-government-portrait')) return;
-    image.removeAttribute('data-government-portrait');
-    image.src = portraitFallback;
-  }, true);
+  section.addEventListener('error', handleGovernmentPortraitError, true);
   document.addEventListener('aleria:orte:data-ready', event => mount(event.detail.entry, event.detail.data));
   if (window.ORT_DATA) mount(window.ORTE_CONFIG?.registryEntry, window.ORT_DATA);
 }

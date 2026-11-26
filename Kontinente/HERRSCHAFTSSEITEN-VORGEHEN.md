@@ -57,7 +57,7 @@ Die erzeugte Ratsansicht wird mit `data-kontinente-generated-view` vom Inline-Ex
 
 Die acht Verwaltungsbereiche stehen als kompakte Pergamentkacheln in **einer einzigen Zeile**. Die Zeile nutzt bis zu 1120 Pixel Breite; bei weniger Platz scrollt nur diese Zeile horizontal. Kachelhöhen bleiben gleich, Symbole sind 54 Pixel groß. Die bisherigen Verwaltungsfenster und ihre territoriale Zuordnung bleiben erhalten.
 
-Die Gestaltung gehört ausschließlich `modules/administration/administration.css`. Keine zusätzlichen Raster- oder Kartenüberschreibungen in `herrschaft.css` ergänzen. `administration-content.js` enthält die zentrale Zuordnung zu den vorhandenen lokalen Organisationsicons; alte Tabellen und strukturierte Seiten beziehen ihre sichtbaren Symbole daraus.
+Die Gestaltung gehört ausschließlich `modules/administration/administration.css`. `administration-content.js` ordnet die acht Bereiche den eigenen Amtszeichen unter `shared/cenyr-administration/assets/icons/` zu. Amtskarten, Aufgabensymbole und Ortsämter verwenden dieselbe Bildsammlung.
 
 Die Grafschaftsvorlage enthält dafür bereits einen leeren Container mit `data-administration-grid`, aus dem die gemeinsame Komponente alle acht Bereiche aufbaut. Neue Herrschaften ohne eigene Verwaltungsinhalte öffnen weiterhin einen leeren Bereich und übernehmen keine Inhalte der Grafschaft.
 

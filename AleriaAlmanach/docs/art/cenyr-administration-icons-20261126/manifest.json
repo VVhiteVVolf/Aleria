@@ -1,0 +1,447 @@
+{
+  "version": 1,
+  "originals": [
+    {
+      "id": "ratszeichen",
+      "version": 1,
+      "selected": false,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/ratszeichen-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1495993,
+      "sha256": "36909871c2585e4bd4ae7126fad4bfb651bd603b51e521258e8ca49cd70af862"
+    },
+    {
+      "id": "ratszeichen",
+      "version": 2,
+      "selected": true,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/ratszeichen-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1997022,
+      "sha256": "556c35b18f973e32499869f1b53ce34a2599000b60d094ec6a2522c873b1a9aa"
+    },
+    {
+      "id": "amtsdienste",
+      "version": 1,
+      "selected": false,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/amtsdienste-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1535765,
+      "sha256": "c15df99221129192d1dc6e327f5999a72c9b68a72c00e77e007cd103b412f704"
+    },
+    {
+      "id": "amtsdienste",
+      "version": 2,
+      "selected": true,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/amtsdienste-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1924821,
+      "sha256": "a90dfc7373aa76d407e59dc283448caff81edfaa0ec2a09062a2ed65446bc212"
+    },
+    {
+      "id": "ortsdienste",
+      "version": 1,
+      "selected": false,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/ortsdienste-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1602100,
+      "sha256": "bf4f1ffb3886ba75b41314eb89d3ba8303372ae52ed2f2172a79ea259001f5c3"
+    },
+    {
+      "id": "ortsdienste",
+      "version": 2,
+      "selected": true,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/ortsdienste-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2024391,
+      "sha256": "130c4be58f5f2693517bf1a2e0e163fdbacea5419c36e578537a63e5b52bec14"
+    },
+    {
+      "id": "ort-und-werkstatt",
+      "version": 1,
+      "selected": false,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/ort-und-werkstatt-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1705606,
+      "sha256": "26127cfd691a561355de999ba5e69ad3b927708db4ab752a57e1310feff04422"
+    },
+    {
+      "id": "ort-und-werkstatt",
+      "version": 2,
+      "selected": true,
+      "file": "AleriaAlmanach/docs/art/cenyr-administration-icons-20261126/originals/ort-und-werkstatt-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2036846,
+      "sha256": "ee23a9e350800dd0a4185b15a6670802934860d3e80ea9ffdfba718a9f5467fb"
+    }
+  ],
+  "icons": {
+    "command": {
+      "file": "shared/cenyr-administration/assets/icons/command.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 9308,
+      "sha256": "5ab2f3784513ebd13e0de9d70a627ef5df23eb54a8a9b4e0a4ea9bb3836a1c6b",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 1,
+      "column": 1
+    },
+    "faith": {
+      "file": "shared/cenyr-administration/assets/icons/faith.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 9172,
+      "sha256": "b15a7ba4be96ec3401f6599e84fafc8efd732ff76777f36904425552ac6ba473",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 1,
+      "column": 2
+    },
+    "justice": {
+      "file": "shared/cenyr-administration/assets/icons/justice.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10074,
+      "sha256": "1e728fcc2d6c94a822a0133db253e0d560906d419cf7912f0aae94bf0cfbcdad",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 1,
+      "column": 3
+    },
+    "money": {
+      "file": "shared/cenyr-administration/assets/icons/money.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 11236,
+      "sha256": "7561d4454cadce075f71de947deda7f713eddbba539a6f705475bbd04c492f62",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 2,
+      "column": 1
+    },
+    "secrecy": {
+      "file": "shared/cenyr-administration/assets/icons/secrecy.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10004,
+      "sha256": "03dd01746b3dbe9eb1fc88a9c3f36fd30177694fbc6af650a538667dd39b104b",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 2,
+      "column": 2
+    },
+    "diplomacy": {
+      "file": "shared/cenyr-administration/assets/icons/diplomacy.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 8574,
+      "sha256": "ce3cad39907c973368d3badacea8eda12c648e765162c16ecd88b018e5818b44",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 2,
+      "column": 3
+    },
+    "arcane": {
+      "file": "shared/cenyr-administration/assets/icons/arcane.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 6678,
+      "sha256": "26192ce49952a54fc24cb08fbddb01e82972e20d440ab8a90da549c238098a8c",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 3,
+      "column": 1
+    },
+    "music": {
+      "file": "shared/cenyr-administration/assets/icons/music.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 14350,
+      "sha256": "794137614051537db51dc717d2fdbe029fe2cc526c6084dc63f39941fb41fedf",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 3,
+      "column": 2
+    },
+    "court": {
+      "file": "shared/cenyr-administration/assets/icons/court.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10706,
+      "sha256": "5ef6635541058330adcd9eaea8dbf2395ecf3964c7eda2e258f3ba696daaaf7c",
+      "original": "originals/ratszeichen-v2.png",
+      "row": 3,
+      "column": 3
+    },
+    "records": {
+      "file": "shared/cenyr-administration/assets/icons/records.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 13104,
+      "sha256": "36e01cd2948fcc94f37de2d48bd492d6bc627f835fe5712a2bdd6af49dbf0f1f",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 1,
+      "column": 1
+    },
+    "coordination": {
+      "file": "shared/cenyr-administration/assets/icons/coordination.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12330,
+      "sha256": "8c9c675ad09e1ab9bb6c2faa52cc3f8d6048a4df5a2dafee67956f51a94f40be",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 1,
+      "column": 2
+    },
+    "supplies": {
+      "file": "shared/cenyr-administration/assets/icons/supplies.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 13448,
+      "sha256": "8bec99a480774b134f45baf06a251abe5fda54f657e79d75b3dfb6b21da33986",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 1,
+      "column": 3
+    },
+    "arms": {
+      "file": "shared/cenyr-administration/assets/icons/arms.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10042,
+      "sha256": "ebca6d14d91adc4260234d183b6343674ff85a2c32df0c6e805b98a000f2e950",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 2,
+      "column": 1
+    },
+    "scouting": {
+      "file": "shared/cenyr-administration/assets/icons/scouting.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 11042,
+      "sha256": "45a93a72e378ec4c93f527d98cfe32add0805954790d48bd3cb71e94004e89e1",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 2,
+      "column": 2
+    },
+    "learning": {
+      "file": "shared/cenyr-administration/assets/icons/learning.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10128,
+      "sha256": "65805b112c76077bd3ce96b2e5b937fd845b90d9478d49adbf458a266d9560b9",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 2,
+      "column": 3
+    },
+    "care": {
+      "file": "shared/cenyr-administration/assets/icons/care.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 11072,
+      "sha256": "835687edb2ed838631653c56b23a3f61cba5ee3e77e27815bd8db0a060550405",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 3,
+      "column": 1
+    },
+    "inquiry": {
+      "file": "shared/cenyr-administration/assets/icons/inquiry.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 9358,
+      "sha256": "3673e96d33982eb720fe63b6383845252ea7a21ef6c064abdecb12c87ca10241",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 3,
+      "column": 2
+    },
+    "proclamation": {
+      "file": "shared/cenyr-administration/assets/icons/proclamation.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10284,
+      "sha256": "8d7ef13477d2f7d873a27ec64fbc2cccf1087b6011c5862bb15ed97f4ec60da7",
+      "original": "originals/amtsdienste-v2.png",
+      "row": 3,
+      "column": 3
+    },
+    "hospitality": {
+      "file": "shared/cenyr-administration/assets/icons/hospitality.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12574,
+      "sha256": "0e89c0964212b0ad60152cd0261c22c2551ff8b6d88b12aa7cf5fc11b8a60908",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 1,
+      "column": 1
+    },
+    "works": {
+      "file": "shared/cenyr-administration/assets/icons/works.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12504,
+      "sha256": "33105063af8204761247c53d0b3944f65a4b0be3d2e4ed29e252eae94abcac08",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 1,
+      "column": 2
+    },
+    "garden": {
+      "file": "shared/cenyr-administration/assets/icons/garden.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10792,
+      "sha256": "e1d5fd0178deb21fa3c51980347a84fca3b82bfa6232dce4b20fef1f892f0ce5",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 1,
+      "column": 3
+    },
+    "judgment": {
+      "file": "shared/cenyr-administration/assets/icons/judgment.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10074,
+      "sha256": "b63443f01382fd2f720b7fe1c7c04e52a5a1bd712244f0af9e1b6efa68f114f4",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 2,
+      "column": 1
+    },
+    "horse": {
+      "file": "shared/cenyr-administration/assets/icons/horse.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 13606,
+      "sha256": "794197811efa66ea6cc924241799a3235b448c6aa2d60b96c5c45440cbf00bdc",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 2,
+      "column": 2
+    },
+    "sailing": {
+      "file": "shared/cenyr-administration/assets/icons/sailing.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12862,
+      "sha256": "77e111e85e69905a8e5cb0959f8b28e46fecc288225ae2784be4a6e122efb87c",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 2,
+      "column": 3
+    },
+    "courier": {
+      "file": "shared/cenyr-administration/assets/icons/courier.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12708,
+      "sha256": "6c0be2c605613b2218bcfac48b825afa4b0744531fc46d3024bc93a9edf0a51b",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 3,
+      "column": 1
+    },
+    "watch": {
+      "file": "shared/cenyr-administration/assets/icons/watch.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 11534,
+      "sha256": "e676655c9ae2784fa6dfed16779982a2b6e0ecc65bfeb3bd8477b1ec42587d9d",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 3,
+      "column": 2
+    },
+    "council": {
+      "file": "shared/cenyr-administration/assets/icons/council.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 14558,
+      "sha256": "0d3d1237eef51bac2aa9aa6a14d987caffc2e75ee0389376fb339a6391f02dae",
+      "original": "originals/ortsdienste-v2.png",
+      "row": 3,
+      "column": 3
+    },
+    "mayor": {
+      "file": "shared/cenyr-administration/assets/icons/mayor.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12184,
+      "sha256": "bb0c0dfd17b7da84e70fbc6c158843b014179559937a827468bf99688884b6e4",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 1,
+      "column": 1
+    },
+    "toll": {
+      "file": "shared/cenyr-administration/assets/icons/toll.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 10750,
+      "sha256": "83c3a870014eb60984e24083d89352e55b132f39cc3b11b6922fab8895f29021",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 1,
+      "column": 2
+    },
+    "quill": {
+      "file": "shared/cenyr-administration/assets/icons/quill.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 8298,
+      "sha256": "71211e1f4781d89b989c4bc158c0963150e70519a1e4881e281f7eb760908733",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 1,
+      "column": 3
+    },
+    "territory": {
+      "file": "shared/cenyr-administration/assets/icons/territory.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 14164,
+      "sha256": "1e23270e4b72cb33beb1b522cc54ccf2e21a574d90e24dea6e3e3c81e150016c",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 2,
+      "column": 1
+    },
+    "guild": {
+      "file": "shared/cenyr-administration/assets/icons/guild.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12052,
+      "sha256": "ea9bbeab2306b4113a51712c226da5fbdaab2ea07297493a47f67c4a4a92fc1f",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 2,
+      "column": 2
+    },
+    "import": {
+      "file": "shared/cenyr-administration/assets/icons/import.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12466,
+      "sha256": "7a68d7974e5600dc64699f11a19f3ea19e6d4c7c1db34c0c2c39a961318a496d",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 2,
+      "column": 3
+    },
+    "export": {
+      "file": "shared/cenyr-administration/assets/icons/export.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 12438,
+      "sha256": "bdd24e5e8f84194801ec52d097fa1ba663eb19c10b89abafe9079dcdadfde8b7",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 3,
+      "column": 1
+    },
+    "search": {
+      "file": "shared/cenyr-administration/assets/icons/search.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 13964,
+      "sha256": "92e0fbe529e79076d6b9f48a5f72b1ac3f8d589267597cb70ddedbe87710b7e0",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 3,
+      "column": 2
+    },
+    "ancestry": {
+      "file": "shared/cenyr-administration/assets/icons/ancestry.webp",
+      "width": 96,
+      "height": 96,
+      "bytes": 13510,
+      "sha256": "4d41accf3c78ae8033be89b776147a51aa346dd1a9a771fd0dee00fe0e94ce70",
+      "original": "originals/ort-und-werkstatt-v2.png",
+      "row": 3,
+      "column": 3
+    }
+  }
+}

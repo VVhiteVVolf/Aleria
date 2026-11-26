@@ -18,6 +18,9 @@ import { officeTitleKey, postTitleKey, titleKeyForTemplate } from '../Herrschaft
 import { vacancyEntries, filterVacancies } from '../Herrschaftsverwaltung/vacancy-search.mjs';
 import { COURT_AREA, LEHENSWARTE_AREA } from '../../shared/cenyr-administration/office-icons.mjs';
 import { OFFICE_CAST } from '../../shared/cenyr-administration/office-cast.generated.mjs';
+import { locateOfficePosts, officePlanPath } from '../../shared/cenyr-administration/office-appointments.mjs';
+import { settlementDefinition } from '../../shared/cenyr-administration/settlement-government.mjs';
+import { buildSettlementOfficePlans } from '../../shared/cenyr-administration/settlement-plans.mjs';
 
 const roster = JSON.parse(await readFile(new URL('../Herrschaftsverwaltung/roster.generated.json', import.meta.url), 'utf8'));
 const houses = roster.houses.map(house => ({ ...house, plans: buildOfficePlans(house) }));
@@ -509,6 +512,69 @@ test('vacancy search works across houses, with draft titles, localities and one 
   assert.equal(vacancy.length, 1);
   assert.equal(new URL(vacancy[0].href, 'https://aleria.invalid').searchParams.get('posten'), key);
   assert.match(filterVacancies(all(), 'twr morlan leuchtfeuer', scope, 'lehenswarte')[0].href, /amt=lehenswarte/);
+});
+
+test('settlements give each governing office its own branch and exportable repeated posts', () => {
+  const wyrm = houses.find(house => house.id === 'wyrm');
+  const overview = wyrm.plans['ortsrat-llysfaen'];
+  const governed = overview.slots.filter(slot => slot.department);
+  assert.equal(governed.length, 8);
+  for (const office of governed) {
+    assert.deepEqual(officePlanPath(wyrm.plans, office.department), ['lehenswarte', 'ortsrat-llysfaen', office.department]);
+    const branch = wyrm.plans[office.department];
+    assert.equal(branch.head.key, office.key);
+    assert.equal(branch.head.holder, office.holder);
+    assert(branch.sections.length && branch.slots.some(slot => slot.kind));
+  }
+  const watch = wyrm.plans['ortsamt-llysfaen--wache'];
+  assert(watch.slots.some(slot => slot.title === 'Wachvogt'));
+  assert(watch.slots.some(slot => slot.title === 'Waffenmeister der Wache'));
+  assert.equal(watch.slots.filter(slot => slot.templateId === 'r-leutnant').length, 2);
+  assert.equal(overview.sections.find(group => group.id === 'ortsrat').slots.length, 5);
+  const finance = 'ortsamt-llysfaen--kasse';
+  const toll = wyrm.plans[finance].templates.find(template => template.id === 'r-zoellner');
+  let serial = 0;
+  const state = createAssemblyState(houses, roster.free, { people, treeCandidates, makeId: () => `toll-${++serial}` });
+  const [first, second] = state.addPosts(wyrm.id, { ...toll, templateId: toll.id, area: finance }, 2);
+  state.assign(wyrm.id, second, idFor('Brinthan Argall'));
+  state.removePost(wyrm.id, first);
+  const scope = { type: 'office', id: wyrm.id, area: finance };
+  const transfer = JSON.parse(state.serialize({ ...scope, area: 'ortsrat-llysfaen' }));
+  assert.deepEqual(transfer.houses.wyrm.posts.map(post => post.area), [finance]);
+  assert.equal(transfer.houses.wyrm.assignments[second], idFor('Brinthan Argall'));
+  const imported = createAssemblyState(houses, roster.free, { people, treeCandidates });
+  imported.importDraft(JSON.stringify(transfer), scope);
+  assert.equal(imported.positions(wyrm.id).get(second).placement, 'zoll');
+  assert.equal(imported.positions(wyrm.id).get(second).occupant, idFor('Brinthan Argall'));
+
+  for (const [type, branch] of [['Dorf', 'ortskanzlei'], ['Turm', 'garnisonsfuehrung'],
+    ['Burg', 'ortskanzlei'], ['Priorei', 'geistliche-kanzlei'], ['Pachtsiedlung', 'pachtkanzlei']]) {
+    const definition = settlementDefinition({ name: 'Musterort', type }, { template: true });
+    const plans = buildSettlementOfficePlans({}, definition);
+    assert.equal(plans['ortsamt-musterort--leitung'].sections[0].id, branch, type);
+    if (type === 'Turm' || type === 'Burg') {
+      const captain = plans[type === 'Burg' ? 'ortsamt-musterort--wache' : 'ortsamt-musterort--leitung'];
+      assert(captain.slots.some(slot => slot.key === 'ortsrat-musterort/stellvertretung'), type);
+      assert(captain.slots.some(slot => slot.key === 'ortsrat-musterort/versorgung'), type);
+    }
+  }
+});
+
+test('Uthyr Argall holds one Tŵr Rhewgorn appointment in the county, settlement and workbench', () => {
+  const uthyr = idFor('Uthyr Argall');
+  const key = lehenswartKey('Tŵr Rhewgorn');
+  const branches = draig.plans;
+  assert.equal(branches['ortsrat-twrrhewgorn'].head.holder, uthyr);
+  assert.equal(branches['ortsamt-twrrhewgorn--leitung'].head.key, key);
+  const watch = branches.militaer.slots.find(post => post.key === key);
+  assert.equal(watch.holder, uthyr);
+  assert.equal(watch.previousKey, 'militaer/wacht-rhewgorn');
+  assert.equal(locateOfficePosts(branches).get(key).alternateDepartment, 'ortsamt-twrrhewgorn--leitung');
+  assert(officialCouncil(draig.territoryId, 'militaer', countyAreas.militaer).groups.flatMap(group => group.roles)
+    .some(role => role.name === 'Uthyr Argall' && role.title.includes('Tŵr Rhewgorn')));
+  const state = createAssemblyState(houses, roster.free, { people });
+  assert.equal(state.appointments(uthyr).filter(entry => entry.scopeId === 'draig').length, 1);
+  assert.equal(state.postKey('draig', watch.previousKey), key);
 });
 
 test('a guild lease stores its own title, keeps its seat and supports restoration and export', () => {
