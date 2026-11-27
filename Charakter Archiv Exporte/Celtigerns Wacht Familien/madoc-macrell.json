@@ -1,0 +1,49 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/madoc-macrell.json",
+  "character": {
+    "id": "person--haus-macrell--madoc-macrell",
+    "name": "Madoc Macrell",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+    "bio": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Madoc Macrell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Madoc Macrell"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Macrell"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Haus Macrell",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=madoc-macrell"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-macrell--madoc-macrell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-macrell--madoc-macrell"
+    },
+    "archived": false
+  }
+}

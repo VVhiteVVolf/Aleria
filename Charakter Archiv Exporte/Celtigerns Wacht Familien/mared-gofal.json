@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/mared-gofal.json",
+  "character": {
+    "id": "person--haus-gofal--mared-gofal",
+    "name": "Mared Gofal",
+    "title": "Vogtamt bei Haus Gafyr offen",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+    "bio": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Mared Gofal",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Mared Gofal"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gofal"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Vogtamt bei Haus Gafyr offen"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+        "biographyTitle": "Vogtamt bei Haus Gafyr offen",
+        "biographyText": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Gofal",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=mared-gofal"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-gofal--mared-gofal"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gofal--mared-gofal"
+    },
+    "archived": false
+  }
+}

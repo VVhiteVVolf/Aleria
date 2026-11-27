@@ -20526,7 +20526,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Grafschaft Celtigerns Wacht - Gwyl Celtigern",
     type: "Grafschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=20261106-gwernant-v1",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=20261127-dienstfamilien",
     contentSource: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json?v=camruisge-20261124",
     contentPolicy: {
       blockedLinkHosts: ["animexx.de"],
@@ -20615,7 +20615,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft der Saethwyr",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/herrschaft.data.js?v=panels-20260911a",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/herrschaft.data.js?v=20261127-dienstfamilien",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },
@@ -20631,7 +20631,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft der Gafyr",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/herrschaft.data.js?v=20261122-chamois-bwach",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/herrschaft.data.js?v=20261127-dienstfamilien",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },

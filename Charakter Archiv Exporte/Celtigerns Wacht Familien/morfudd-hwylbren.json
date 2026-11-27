@@ -1,0 +1,49 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/morfudd-hwylbren.json",
+  "character": {
+    "id": "person--haus-hwylbren--morfudd-hwylbren",
+    "name": "Morfudd Hwylbren",
+    "title": "",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+    "bio": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morfudd Hwylbren",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morfudd Hwylbren"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Hwylbren"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Hwylbren",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=morfudd-hwylbren"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+    },
+    "archived": false
+  }
+}

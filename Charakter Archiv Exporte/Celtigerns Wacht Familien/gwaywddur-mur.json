@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwaywddur-mur.json",
+  "character": {
+    "id": "person--haus-mur--gwaywddur-mur",
+    "name": "Gwaywddur Mur",
+    "title": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+    "bio": "Gwaywddur Mur steht trotz seines hohen Alters weiterhin als Hauptmann im Dienst des Hauses Gafyr. Tarian ist sein Sohn und Rhydwyn sein Enkel.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Gwaywddur Mur",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Gwaywddur Mur"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Mur"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+        "biographyTitle": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr",
+        "biographyText": "Gwaywddur Mur steht trotz seines hohen Alters weiterhin als Hauptmann im Dienst des Hauses Gafyr. Tarian ist sein Sohn und Rhydwyn sein Enkel.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Mur",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=gwaywddur-mur"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-mur--gwaywddur-mur"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-mur--gwaywddur-mur"
+    },
+    "archived": false
+  }
+}

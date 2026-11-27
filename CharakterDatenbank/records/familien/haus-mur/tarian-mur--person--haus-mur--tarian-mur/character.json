@@ -1,0 +1,226 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-mur--tarian-mur",
+  "slug": "tarian-mur",
+  "identity": {
+    "name": "Tarian Mur",
+    "aliases": [],
+    "worldPersonId": "person--haus-mur--tarian-mur"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-mur",
+      "label": "Familie Mur"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-mur",
+        "familyTitle": "Familie Mur",
+        "personId": "tarian-mur",
+        "worldPersonId": "person--haus-mur--tarian-mur",
+        "houseId": "house-mur",
+        "houseName": "Familie Mur",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Tarian Mur\",\"title\":\"Sohn von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaywddur-mur\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mur--gwaywddur-mur\",\"name\":\"Gwaywddur Mur\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-mur--tarian-mur",
+      "documentIds": [
+        "person--haus-mur--tarian-mur"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-mur--tarian-mur",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-mur",
+        "personId": "tarian-mur",
+        "worldPersonId": "person--haus-mur--tarian-mur",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/tarian-mur.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-mur--tarian-mur"
+    ],
+    "contentHash": "9b90ac8a7918711f1cdd5fc25c857190644261a3fd993e9cba833973b2501b4f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-mur--tarian-mur",
+        "name": "Tarian Mur",
+        "title": "Sohn von Gwaywddur Mur",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+        "bio": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Tarian Mur",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Tarian Mur"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Mur"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Sohn von Gwaywddur Mur"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+            "biographyTitle": "Sohn von Gwaywddur Mur",
+            "biographyText": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Mur",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=tarian-mur"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-mur--tarian-mur"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-mur--tarian-mur"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-mur--tarian-mur",
+    "name": "Tarian Mur",
+    "title": "Sohn von Gwaywddur Mur",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+    "bio": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Tarian Mur",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Tarian Mur"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Mur"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Sohn von Gwaywddur Mur"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+        "biographyTitle": "Sohn von Gwaywddur Mur",
+        "biographyText": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Mur",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=tarian-mur"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-mur--tarian-mur"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-mur--tarian-mur",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-mur",
+      "houseName": "Familie Mur",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-mur",
+          "personId": "tarian-mur",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Tarian Mur\",\"title\":\"Sohn von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaywddur-mur\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mur--gwaywddur-mur\",\"name\":\"Gwaywddur Mur\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "gwaywddur-mur",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-mur--gwaywddur-mur",
+            "name": "Gwaywddur Mur"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

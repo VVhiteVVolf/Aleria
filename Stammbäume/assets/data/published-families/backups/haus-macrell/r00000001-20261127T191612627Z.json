@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-macrell",
+  "revision": 1,
+  "updatedAt": "2026-11-27T19:16:12.627Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-macrell",
+      "title": "Haus Macrell",
+      "motto": "",
+      "description": "Junges Ritterhaus aus der Seefahrt im Umfeld des Hauses Saethwyr. Ein bürgerlicher Schiffskapitän begründete die Linie nach seinem Ritterschlag.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-emblem.jpeg",
+      "houseProfile": {
+        "rankId": "knight-simple",
+        "seat": "",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-macrell-gruender",
+        "worldPersonId": "person--haus-macrell--haus-macrell-gruender",
+        "name": "???",
+        "title": "Schiffskapitän · Name offen",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-macrell",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "haus-macrell-gruenderin",
+        "worldPersonId": "person--haus-macrell--haus-macrell-gruenderin",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-macrell",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "morcant-macrell",
+        "worldPersonId": "person--haus-macrell--morcant-macrell",
+        "name": "Morcant Macrell",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-macrell",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "madoc-macrell",
+        "worldPersonId": "person--haus-macrell--madoc-macrell",
+        "name": "Madoc Macrell",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-macrell",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "nerys-macrell",
+        "worldPersonId": "person--haus-macrell--nerys-macrell",
+        "name": "Nerys Macrell",
+        "title": "An Bord von Arian Saethwyr",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-macrell",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-macrell-founders",
+        "participantIds": [
+          "haus-macrell-gruender",
+          "haus-macrell-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Platzhalter für die offene Gründergeneration.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-macrell",
+        "name": "Haus Macrell",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-emblem.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-macrell-unrecorded-generations",
+        "parentPartnershipId": "marriage-haus-macrell-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "morcant-macrell",
+          "madoc-macrell",
+          "nerys-macrell"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "Ältere Generationen und Verbindungen offen",
+        "notes": "Die einzelnen Karten hinter der Lücke sind die Ansatzpunkte der belegten Linien und der noch nicht zugeordneten Angehörigen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-macrell-founders",
+      "houseId": "house-macrell",
+      "crestSubtitle": "Ritterhaus",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-macrell-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceRevision": 1,
+      "authoredOn": "2026-11-27",
+      "sourceNote": "Der bürgerliche Schiffskapitän der Gründungsgeschichte bleibt namenlos. Nerys’ Bildbeschriftung „Arians Schiff“ verweist im Saethwyr-Kontext auf das bestehende Schiffskommando von Arian Saethwyr. Bordrang, Familienoberhaupt, nähere Verwandtschaft und ein eigener Sitz sind offen.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 1,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Macrell",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-hausfigur-v1.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Junges Ritterhaus aus der Seefahrt im Umfeld des Hauses Saethwyr. Ein bürgerlicher Schiffskapitän begründete die Linie nach seinem Ritterschlag.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Macrell"
+          ],
+          [
+            "Rang",
+            "Einfache Ritterfamilie"
+          ],
+          [
+            "Stammsitz",
+            "Offen"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Offen"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-emblem.jpeg",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Junges Ritterhaus aus der Seefahrt im Umfeld des Hauses Saethwyr. Ein bürgerlicher Schiffskapitän begründete die Linie nach seinem Ritterschlag.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [
+            "Schiffsoffiziere und Kapitäne",
+            "Dienst zur See für Haus Saethwyr"
+          ],
+          "historyTitle": "Geschichte",
+          "historyText": "Ein bürgerlicher Kapitän wurde für seine Dienste zur See für Haus Saethwyr zum Ritter geschlagen. Damit begann vor rund 150 Jahren die Geschichte der Macrells.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Das Haus verbindet Ritterstand mit Seeerfahrung und enger Verbundenheit mit den Mannschaften."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-emblem.jpeg",
+              "title": "Haus Macrell · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-macrell"
+            },
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+              "title": "Haus Saethwyr",
+              "text": "Seefahrt im Dienst des Hauses Saethwyr",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-saethwyr"
+            },
+            {
+              "icon": "../Stammbäume/assets/images/portraits/haus-saethwyr/arian-saethwyr.jpg",
+              "title": "Arian Saethwyr",
+              "text": "Kapitänin des Schiffes, dem Nerys Macrell zugeordnet ist.",
+              "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-saethwyr&mode=view&person=arian-saethwyr"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

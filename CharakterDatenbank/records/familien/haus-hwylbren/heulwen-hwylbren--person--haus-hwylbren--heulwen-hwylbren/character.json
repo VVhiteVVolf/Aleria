@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-hwylbren--heulwen-hwylbren",
+  "slug": "heulwen-hwylbren",
+  "identity": {
+    "name": "Heulwen Hwylbren",
+    "aliases": [],
+    "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-hwylbren",
+      "label": "Familie Hwylbren"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-hwylbren",
+        "familyTitle": "Familie Hwylbren",
+        "personId": "heulwen-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+        "houseId": "house-hwylbren",
+        "houseName": "Familie Hwylbren",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Heulwen Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-hwylbren--heulwen-hwylbren",
+      "documentIds": [
+        "person--haus-hwylbren--heulwen-hwylbren"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-hwylbren--heulwen-hwylbren",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-hwylbren",
+        "personId": "heulwen-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/heulwen-hwylbren.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-hwylbren--heulwen-hwylbren"
+    ],
+    "contentHash": "fb8cd376ce6ca990e4f3e26a831dd4da6c128be4e8d9a60cd7cc00d709039c04"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-hwylbren--heulwen-hwylbren",
+        "name": "Heulwen Hwylbren",
+        "title": "",
+        "gender": "female",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+        "bio": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Heulwen Hwylbren",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Heulwen Hwylbren"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Hwylbren"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Hwylbren",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=heulwen-hwylbren"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-hwylbren--heulwen-hwylbren",
+    "name": "Heulwen Hwylbren",
+    "title": "",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+    "bio": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Heulwen Hwylbren",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Heulwen Hwylbren"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Hwylbren"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Hwylbren",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=heulwen-hwylbren"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-hwylbren",
+      "houseName": "Familie Hwylbren",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-hwylbren",
+          "personId": "heulwen-hwylbren",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Heulwen Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

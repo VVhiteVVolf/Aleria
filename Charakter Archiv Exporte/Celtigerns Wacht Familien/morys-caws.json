@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/morys-caws.json",
+  "character": {
+    "id": "person--haus-caws--morys-caws",
+    "name": "Morys Caws",
+    "title": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+    "bio": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morys Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morys Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Zweiter Sohn · Küchenmeister des Hauses Gafyr"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+        "biographyTitle": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+        "biographyText": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--morys-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--morys-caws"
+    },
+    "archived": false
+  }
+}

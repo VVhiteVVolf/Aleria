@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-penwaig--bledri-penwaig",
+  "slug": "bledri-penwaig",
+  "identity": {
+    "name": "Bledri Penwaig",
+    "aliases": [],
+    "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-penwaig",
+      "label": "Familie Penwaig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-penwaig",
+        "familyTitle": "Familie Penwaig",
+        "personId": "bledri-penwaig",
+        "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Bledri Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-penwaig--bledri-penwaig",
+      "documentIds": [
+        "person--haus-penwaig--bledri-penwaig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-penwaig--bledri-penwaig",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-penwaig",
+        "personId": "bledri-penwaig",
+        "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/bledri-penwaig.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-penwaig--bledri-penwaig"
+    ],
+    "contentHash": "f419279acb2c6e63a007b7eca2f5926bf91da7f75a9ffb97555dc9b85e05f8c1"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-penwaig--bledri-penwaig",
+        "name": "Bledri Penwaig",
+        "title": "",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+        "bio": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Bledri Penwaig",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Bledri Penwaig"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Penwaig"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Penwaig",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=bledri-penwaig"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-penwaig--bledri-penwaig",
+    "name": "Bledri Penwaig",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+    "bio": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Bledri Penwaig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Bledri Penwaig"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Penwaig"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Penwaig",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=bledri-penwaig"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-penwaig",
+      "houseName": "Familie Penwaig",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-penwaig",
+          "personId": "bledri-penwaig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Bledri Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

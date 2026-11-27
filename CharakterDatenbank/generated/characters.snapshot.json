@@ -24,6 +24,26 @@
     "Charakter Archiv Exporte/Biographien/caralyn-chwedonol-2026-11-02/caralyn-lokaler-abgleich.json",
     "Charakter Archiv Exporte/Biographien/rheinallt-gafyr-2026-11-15/rheinallt-aktuell.json",
     "Charakter Archiv Exporte/Biographien/ysabel-bronnor-2026-11-21/ysabel-bronnor-aktuell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/bedwyr-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/bledri-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/einion-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/eirwyn-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/eluned-gofal.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/goronvy-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwaywddur-mur.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwrgan-hwylbren.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/heulwen-hwylbren.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/luned-gofal.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/madoc-macrell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/mared-gofal.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/mererid-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/merfyn-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/morcant-macrell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/morfudd-hwylbren.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/morys-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/nerys-macrell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/rhydwyn-mur.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/tarian-mur.json",
     "Charakter Archiv Exporte/Chamois/abaelor-chamois.json",
     "Charakter Archiv Exporte/Chamois/avelwen-chamois.json",
     "Charakter Archiv Exporte/Chamois/brenae-chamois.json",
@@ -518,7 +538,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-22T21:00:00.000Z",
+  "sourceExportedAt": "2026-11-27T18:12:03Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -266955,6 +266975,2374 @@
           ]
         },
         "authoredFeature": "haus-chamois"
+      }
+    },
+    {
+      "id": "person--haus-mur--gwaywddur-mur",
+      "name": "Gwaywddur Mur",
+      "title": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+      "bio": "Gwaywddur Mur steht trotz seines hohen Alters weiterhin als Hauptmann im Dienst des Hauses Gafyr. Tarian ist sein Sohn und Rhydwyn sein Enkel.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Gwaywddur Mur",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Gwaywddur Mur"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Mur"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+          "biographyTitle": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr",
+          "biographyText": "Gwaywddur Mur steht trotz seines hohen Alters weiterhin als Hauptmann im Dienst des Hauses Gafyr. Tarian ist sein Sohn und Rhydwyn sein Enkel.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Mur",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=gwaywddur-mur"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-mur--gwaywddur-mur"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-mur--gwaywddur-mur",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-mur",
+        "houseName": "Familie Mur",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-mur",
+            "personId": "gwaywddur-mur",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Gwaywddur Mur\",\"title\":\"Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[{\"personId\":\"tarian-mur\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mur--tarian-mur\",\"name\":\"Tarian Mur\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": [
+            {
+              "personId": "tarian-mur",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-mur--tarian-mur",
+              "name": "Tarian Mur"
+            }
+          ]
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-mur--gwaywddur-mur",
+        "path": "records/familien/haus-mur/gwaywddur-mur--person--haus-mur--gwaywddur-mur/character.json",
+        "schemaVersion": 1,
+        "contentHash": "7f377451f47ab2acf16d94ad9a35b7ca47fd5bf0aa62ed768c32f2b592099394",
+        "firestoreDocumentIds": [
+          "person--haus-mur--gwaywddur-mur"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-mur",
+            "label": "Familie Mur"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-mur",
+              "familyTitle": "Familie Mur",
+              "personId": "gwaywddur-mur",
+              "worldPersonId": "person--haus-mur--gwaywddur-mur",
+              "houseId": "house-mur",
+              "houseName": "Familie Mur",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Gwaywddur Mur\",\"title\":\"Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[{\"personId\":\"tarian-mur\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mur--tarian-mur\",\"name\":\"Tarian Mur\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-mur--tarian-mur",
+      "name": "Tarian Mur",
+      "title": "Sohn von Gwaywddur Mur",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+      "bio": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Tarian Mur",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Tarian Mur"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Mur"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Sohn von Gwaywddur Mur"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+          "biographyTitle": "Sohn von Gwaywddur Mur",
+          "biographyText": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Mur",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=tarian-mur"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-mur--tarian-mur"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-mur--tarian-mur",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-mur",
+        "houseName": "Familie Mur",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-mur",
+            "personId": "tarian-mur",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Tarian Mur\",\"title\":\"Sohn von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaywddur-mur\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mur--gwaywddur-mur\",\"name\":\"Gwaywddur Mur\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "gwaywddur-mur",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-mur--gwaywddur-mur",
+              "name": "Gwaywddur Mur"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-mur--tarian-mur",
+        "path": "records/familien/haus-mur/tarian-mur--person--haus-mur--tarian-mur/character.json",
+        "schemaVersion": 1,
+        "contentHash": "9b90ac8a7918711f1cdd5fc25c857190644261a3fd993e9cba833973b2501b4f",
+        "firestoreDocumentIds": [
+          "person--haus-mur--tarian-mur"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-mur",
+            "label": "Familie Mur"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-mur",
+              "familyTitle": "Familie Mur",
+              "personId": "tarian-mur",
+              "worldPersonId": "person--haus-mur--tarian-mur",
+              "houseId": "house-mur",
+              "houseName": "Familie Mur",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Tarian Mur\",\"title\":\"Sohn von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaywddur-mur\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mur--gwaywddur-mur\",\"name\":\"Gwaywddur Mur\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-mur--rhydwyn-mur",
+      "name": "Rhydwyn Mur",
+      "title": "Enkel von Gwaywddur Mur",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+      "bio": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Rhydwyn Mur",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Rhydwyn Mur"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Mur"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Enkel von Gwaywddur Mur"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+          "biographyTitle": "Enkel von Gwaywddur Mur",
+          "biographyText": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Mur",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=rhydwyn-mur"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-mur--rhydwyn-mur"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-mur--rhydwyn-mur",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-mur",
+        "houseName": "Familie Mur",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-mur",
+            "personId": "rhydwyn-mur",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Rhydwyn Mur\",\"title\":\"Enkel von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-mur--rhydwyn-mur",
+        "path": "records/familien/haus-mur/rhydwyn-mur--person--haus-mur--rhydwyn-mur/character.json",
+        "schemaVersion": 1,
+        "contentHash": "9bc2b00c86ea87daf59e79336ab3115f653eccb670cf5b8cc7ce038676909f46",
+        "firestoreDocumentIds": [
+          "person--haus-mur--rhydwyn-mur"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-mur",
+            "label": "Familie Mur"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-mur",
+              "familyTitle": "Familie Mur",
+              "personId": "rhydwyn-mur",
+              "worldPersonId": "person--haus-mur--rhydwyn-mur",
+              "houseId": "house-mur",
+              "houseName": "Familie Mur",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Rhydwyn Mur\",\"title\":\"Enkel von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-gofal--luned-gofal",
+      "name": "Luned Gofal",
+      "title": "Oberste Zofe des Hauses Gafyr",
+      "gender": "female",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+      "bio": "Luned ist die oberste Zofe des Hauses Gafyr. Ihr Amt steht für die Tradition der Gofals in der persönlichen Dienerschaft.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Luned Gofal",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Luned Gofal"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Gofal"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Oberste Zofe des Hauses Gafyr"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+          "biographyTitle": "Oberste Zofe des Hauses Gafyr",
+          "biographyText": "Luned ist die oberste Zofe des Hauses Gafyr. Ihr Amt steht für die Tradition der Gofals in der persönlichen Dienerschaft.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Gofal",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=luned-gofal"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-gofal--luned-gofal"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-gofal--luned-gofal",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-gofal",
+        "houseName": "Familie Gofal",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-gofal",
+            "personId": "luned-gofal",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Luned Gofal\",\"title\":\"Oberste Zofe des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-gofal--luned-gofal",
+        "path": "records/familien/haus-gofal/luned-gofal--person--haus-gofal--luned-gofal/character.json",
+        "schemaVersion": 1,
+        "contentHash": "09ec037995f5617a8313dbfe55b7f1eeecaa087a3f97e7eb74776fb381cee485",
+        "firestoreDocumentIds": [
+          "person--haus-gofal--luned-gofal"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-gofal",
+            "label": "Familie Gofal"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-gofal",
+              "familyTitle": "Familie Gofal",
+              "personId": "luned-gofal",
+              "worldPersonId": "person--haus-gofal--luned-gofal",
+              "houseId": "house-gofal",
+              "houseName": "Familie Gofal",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Luned Gofal\",\"title\":\"Oberste Zofe des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-gofal--mared-gofal",
+      "name": "Mared Gofal",
+      "title": "Vogtamt bei Haus Gafyr offen",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+      "bio": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Mared Gofal",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Mared Gofal"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Gofal"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Vogtamt bei Haus Gafyr offen"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+          "biographyTitle": "Vogtamt bei Haus Gafyr offen",
+          "biographyText": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Gofal",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=mared-gofal"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-gofal--mared-gofal"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-gofal--mared-gofal",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-gofal",
+        "houseName": "Familie Gofal",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-gofal",
+            "personId": "mared-gofal",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Mared Gofal\",\"title\":\"Vogtamt bei Haus Gafyr offen\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-gofal--mared-gofal",
+        "path": "records/familien/haus-gofal/mared-gofal--person--haus-gofal--mared-gofal/character.json",
+        "schemaVersion": 1,
+        "contentHash": "e547f5a33d59be683bef5601ab6bcbb3e0a2e7bdee19a473ca60a5968cc00ba1",
+        "firestoreDocumentIds": [
+          "person--haus-gofal--mared-gofal"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-gofal",
+            "label": "Familie Gofal"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-gofal",
+              "familyTitle": "Familie Gofal",
+              "personId": "mared-gofal",
+              "worldPersonId": "person--haus-gofal--mared-gofal",
+              "houseId": "house-gofal",
+              "houseName": "Familie Gofal",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Mared Gofal\",\"title\":\"Vogtamt bei Haus Gafyr offen\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-gofal--eluned-gofal",
+      "name": "Eluned Gofal",
+      "title": "Zofe des Hauses Gafyr",
+      "gender": "female",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+      "bio": "Eluned dient Haus Gafyr als Zofe. Ihr genaues Verwandtschaftsverhältnis zu Luned und Mared ist offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Eluned Gofal",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Eluned Gofal"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Gofal"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Zofe des Hauses Gafyr"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+          "biographyTitle": "Zofe des Hauses Gafyr",
+          "biographyText": "Eluned dient Haus Gafyr als Zofe. Ihr genaues Verwandtschaftsverhältnis zu Luned und Mared ist offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Gofal",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-gofal--eluned-gofal"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-gofal--eluned-gofal",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-gofal",
+        "houseName": "Familie Gofal",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-gofal",
+            "personId": "eluned-gofal",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Eluned Gofal\",\"title\":\"Zofe des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-gofal--eluned-gofal",
+        "path": "records/familien/haus-gofal/eluned-gofal--person--haus-gofal--eluned-gofal/character.json",
+        "schemaVersion": 1,
+        "contentHash": "48bb5b174c4616b7496a62161196db01d814192ba639d0315cffd5bb7a6d702a",
+        "firestoreDocumentIds": [
+          "person--haus-gofal--eluned-gofal"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-gofal",
+            "label": "Familie Gofal"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-gofal",
+              "familyTitle": "Familie Gofal",
+              "personId": "eluned-gofal",
+              "worldPersonId": "person--haus-gofal--eluned-gofal",
+              "houseId": "house-gofal",
+              "houseName": "Familie Gofal",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Eluned Gofal\",\"title\":\"Zofe des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-caws--goronvy-caws",
+      "name": "Goronvy Caws",
+      "title": "Familienoberhaupt · Käsemeister",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg",
+      "bio": "Goronvy Caws führt die Familie und ist Käsemeister. Bedwyr und Morys sind seine Söhne, Eirwyn ist seine Enkelin.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Goronvy Caws",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Goronvy Caws"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Caws"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Familienoberhaupt · Käsemeister"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg",
+          "biographyTitle": "Familienoberhaupt · Käsemeister",
+          "biographyText": "Goronvy Caws führt die Familie und ist Käsemeister. Bedwyr und Morys sind seine Söhne, Eirwyn ist seine Enkelin.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Caws",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=goronvy-caws"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-caws--goronvy-caws"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-caws--goronvy-caws",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-caws",
+            "personId": "goronvy-caws",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Goronvy Caws\",\"title\":\"Familienoberhaupt · Käsemeister\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[{\"personId\":\"bedwyr-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--bedwyr-caws\",\"name\":\"Bedwyr Caws\"},{\"personId\":\"morys-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--morys-caws\",\"name\":\"Morys Caws\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": [
+            {
+              "personId": "bedwyr-caws",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-caws--bedwyr-caws",
+              "name": "Bedwyr Caws"
+            },
+            {
+              "personId": "morys-caws",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-caws--morys-caws",
+              "name": "Morys Caws"
+            }
+          ]
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-caws--goronvy-caws",
+        "path": "records/familien/haus-caws/goronvy-caws--person--haus-caws--goronvy-caws/character.json",
+        "schemaVersion": 1,
+        "contentHash": "0e1071cddf556ad60c964757fe73b2107696d72f7f39e2ff09a9bae4d392eeca",
+        "firestoreDocumentIds": [
+          "person--haus-caws--goronvy-caws"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-caws",
+            "label": "Familie Caws"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-caws",
+              "familyTitle": "Familie Caws",
+              "personId": "goronvy-caws",
+              "worldPersonId": "person--haus-caws--goronvy-caws",
+              "houseId": "house-caws",
+              "houseName": "Familie Caws",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Goronvy Caws\",\"title\":\"Familienoberhaupt · Käsemeister\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[{\"personId\":\"bedwyr-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--bedwyr-caws\",\"name\":\"Bedwyr Caws\"},{\"personId\":\"morys-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--morys-caws\",\"name\":\"Morys Caws\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-caws--bedwyr-caws",
+      "name": "Bedwyr Caws",
+      "title": "Ältester Sohn · Ziegenhof",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+      "bio": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Bedwyr Caws",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Bedwyr Caws"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Caws"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Ältester Sohn · Ziegenhof"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+          "biographyTitle": "Ältester Sohn · Ziegenhof",
+          "biographyText": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Caws",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=bedwyr-caws"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-caws--bedwyr-caws"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-caws--bedwyr-caws",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-caws",
+            "personId": "bedwyr-caws",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Bedwyr Caws\",\"title\":\"Ältester Sohn · Ziegenhof\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[{\"personId\":\"eirwyn-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--eirwyn-caws\",\"name\":\"Eirwyn Caws\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "goronvy-caws",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-caws--goronvy-caws",
+              "name": "Goronvy Caws"
+            }
+          ],
+          "partners": [],
+          "children": [
+            {
+              "personId": "eirwyn-caws",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-caws--eirwyn-caws",
+              "name": "Eirwyn Caws"
+            }
+          ]
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-caws--bedwyr-caws",
+        "path": "records/familien/haus-caws/bedwyr-caws--person--haus-caws--bedwyr-caws/character.json",
+        "schemaVersion": 1,
+        "contentHash": "bcb08f6922058ce54ee4bd68f3bdac0ff99cf4c659f381a07e5ba2539b07cac4",
+        "firestoreDocumentIds": [
+          "person--haus-caws--bedwyr-caws"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-caws",
+            "label": "Familie Caws"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-caws",
+              "familyTitle": "Familie Caws",
+              "personId": "bedwyr-caws",
+              "worldPersonId": "person--haus-caws--bedwyr-caws",
+              "houseId": "house-caws",
+              "houseName": "Familie Caws",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Bedwyr Caws\",\"title\":\"Ältester Sohn · Ziegenhof\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[{\"personId\":\"eirwyn-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--eirwyn-caws\",\"name\":\"Eirwyn Caws\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-caws--morys-caws",
+      "name": "Morys Caws",
+      "title": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+      "bio": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Morys Caws",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Morys Caws"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Caws"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Zweiter Sohn · Küchenmeister des Hauses Gafyr"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+          "biographyTitle": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+          "biographyText": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Caws",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-caws--morys-caws"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-caws--morys-caws",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-caws",
+            "personId": "morys-caws",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Morys Caws\",\"title\":\"Zweiter Sohn · Küchenmeister des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "goronvy-caws",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-caws--goronvy-caws",
+              "name": "Goronvy Caws"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-caws--morys-caws",
+        "path": "records/familien/haus-caws/morys-caws--person--haus-caws--morys-caws/character.json",
+        "schemaVersion": 1,
+        "contentHash": "5b59393c03b8665f253c3b810be72154c69be367820ebbe83022e360f424206b",
+        "firestoreDocumentIds": [
+          "person--haus-caws--morys-caws"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-caws",
+            "label": "Familie Caws"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-caws",
+              "familyTitle": "Familie Caws",
+              "personId": "morys-caws",
+              "worldPersonId": "person--haus-caws--morys-caws",
+              "houseId": "house-caws",
+              "houseName": "Familie Caws",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Morys Caws\",\"title\":\"Zweiter Sohn · Küchenmeister des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-caws--eirwyn-caws",
+      "name": "Eirwyn Caws",
+      "title": "Tochter von Bedwyr Caws",
+      "gender": "female",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+      "bio": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Eirwyn Caws",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Eirwyn Caws"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Caws"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Tochter von Bedwyr Caws"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+          "biographyTitle": "Tochter von Bedwyr Caws",
+          "biographyText": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Caws",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=eirwyn-caws"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-caws--eirwyn-caws"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-caws--eirwyn-caws",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-caws",
+            "personId": "eirwyn-caws",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Eirwyn Caws\",\"title\":\"Tochter von Bedwyr Caws\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bedwyr-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--bedwyr-caws\",\"name\":\"Bedwyr Caws\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "bedwyr-caws",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-caws--bedwyr-caws",
+              "name": "Bedwyr Caws"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr",
+      "localRecord": {
+        "recordId": "character--person--haus-caws--eirwyn-caws",
+        "path": "records/familien/haus-caws/eirwyn-caws--person--haus-caws--eirwyn-caws/character.json",
+        "schemaVersion": 1,
+        "contentHash": "86423964535669e4640fbcca319b2bd30d18c419536c05ef80719623b15ae16c",
+        "firestoreDocumentIds": [
+          "person--haus-caws--eirwyn-caws"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-caws",
+            "label": "Familie Caws"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-caws",
+              "familyTitle": "Familie Caws",
+              "personId": "eirwyn-caws",
+              "worldPersonId": "person--haus-caws--eirwyn-caws",
+              "houseId": "house-caws",
+              "houseName": "Familie Caws",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Gafyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Eirwyn Caws\",\"title\":\"Tochter von Bedwyr Caws\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bedwyr-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--bedwyr-caws\",\"name\":\"Bedwyr Caws\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-penwaig--merfyn-penwaig",
+      "name": "Merfyn Penwaig",
+      "title": "Vogt des Hauses Saethwyr",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+      "bio": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Merfyn Penwaig",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Merfyn Penwaig"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Penwaig"
+          },
+          {
+            "label": "Einordnung",
+            "value": "Vogt des Hauses Saethwyr"
+          },
+          {
+            "label": "Alter",
+            "value": "99 Jahre"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+          "biographyTitle": "Vogt des Hauses Saethwyr",
+          "biographyText": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Penwaig",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-penwaig--merfyn-penwaig"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-penwaig",
+            "personId": "merfyn-penwaig",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Merfyn Penwaig\",\"title\":\"Vogt des Hauses Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "age": 99,
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-penwaig--merfyn-penwaig",
+        "path": "records/familien/haus-penwaig/merfyn-penwaig--person--haus-penwaig--merfyn-penwaig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "c6aea3916c2b9647f918d5c92bc59c083be6e7f5ae6dbd6691383ffbf2372d89",
+        "firestoreDocumentIds": [
+          "person--haus-penwaig--merfyn-penwaig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-penwaig",
+            "label": "Familie Penwaig"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-penwaig",
+              "familyTitle": "Familie Penwaig",
+              "personId": "merfyn-penwaig",
+              "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+              "houseId": "house-penwaig",
+              "houseName": "Familie Penwaig",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Merfyn Penwaig\",\"title\":\"Vogt des Hauses Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-penwaig--einion-penwaig",
+      "name": "Einion Penwaig",
+      "title": "",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+      "bio": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Einion Penwaig",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Einion Penwaig"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Penwaig"
+          },
+          {
+            "label": "Alter",
+            "value": "in seinen Siebzigern"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Penwaig",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=einion-penwaig"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-penwaig--einion-penwaig"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-penwaig--einion-penwaig",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-penwaig",
+            "personId": "einion-penwaig",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Einion Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-penwaig--einion-penwaig",
+        "path": "records/familien/haus-penwaig/einion-penwaig--person--haus-penwaig--einion-penwaig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "eb2baf4d753cc73012e3be7fdfa24f1d48d975312912d34366206aca1ddbc656",
+        "firestoreDocumentIds": [
+          "person--haus-penwaig--einion-penwaig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-penwaig",
+            "label": "Familie Penwaig"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-penwaig",
+              "familyTitle": "Familie Penwaig",
+              "personId": "einion-penwaig",
+              "worldPersonId": "person--haus-penwaig--einion-penwaig",
+              "houseId": "house-penwaig",
+              "houseName": "Familie Penwaig",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Einion Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-penwaig--bledri-penwaig",
+      "name": "Bledri Penwaig",
+      "title": "",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+      "bio": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Bledri Penwaig",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Bledri Penwaig"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Penwaig"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Penwaig",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=bledri-penwaig"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-penwaig",
+            "personId": "bledri-penwaig",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Bledri Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-penwaig--bledri-penwaig",
+        "path": "records/familien/haus-penwaig/bledri-penwaig--person--haus-penwaig--bledri-penwaig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "f419279acb2c6e63a007b7eca2f5926bf91da7f75a9ffb97555dc9b85e05f8c1",
+        "firestoreDocumentIds": [
+          "person--haus-penwaig--bledri-penwaig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-penwaig",
+            "label": "Familie Penwaig"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-penwaig",
+              "familyTitle": "Familie Penwaig",
+              "personId": "bledri-penwaig",
+              "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+              "houseId": "house-penwaig",
+              "houseName": "Familie Penwaig",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Bledri Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-penwaig--mererid-penwaig",
+      "name": "Mererid Penwaig",
+      "title": "",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+      "bio": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Mererid Penwaig",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Mererid Penwaig"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Penwaig"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Penwaig",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=mererid-penwaig"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-penwaig--mererid-penwaig"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-penwaig",
+            "personId": "mererid-penwaig",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Mererid Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-penwaig--mererid-penwaig",
+        "path": "records/familien/haus-penwaig/mererid-penwaig--person--haus-penwaig--mererid-penwaig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "62aa1b110f60059de51499d3d99e3f7d880841447d9e99b7820eeda4fcf60775",
+        "firestoreDocumentIds": [
+          "person--haus-penwaig--mererid-penwaig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-penwaig",
+            "label": "Familie Penwaig"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-penwaig",
+              "familyTitle": "Familie Penwaig",
+              "personId": "mererid-penwaig",
+              "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+              "houseId": "house-penwaig",
+              "houseName": "Familie Penwaig",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Mererid Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-macrell--morcant-macrell",
+      "name": "Morcant Macrell",
+      "title": "",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+      "bio": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Morcant Macrell",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Morcant Macrell"
+          },
+          {
+            "label": "Familie",
+            "value": "Haus Macrell"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Haus Macrell",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=morcant-macrell"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-macrell--morcant-macrell"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-macrell--morcant-macrell",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-macrell",
+        "houseName": "Haus Macrell",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-macrell",
+            "personId": "morcant-macrell",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Morcant Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-macrell--morcant-macrell",
+        "path": "records/familien/haus-macrell/morcant-macrell--person--haus-macrell--morcant-macrell/character.json",
+        "schemaVersion": 1,
+        "contentHash": "c8f8763566495f152705c94050110881080e0812f6715aa026ecbc1ec776e740",
+        "firestoreDocumentIds": [
+          "person--haus-macrell--morcant-macrell"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-macrell",
+            "label": "Haus Macrell"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-macrell",
+              "familyTitle": "Haus Macrell",
+              "personId": "morcant-macrell",
+              "worldPersonId": "person--haus-macrell--morcant-macrell",
+              "houseId": "house-macrell",
+              "houseName": "Haus Macrell",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Morcant Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-macrell--madoc-macrell",
+      "name": "Madoc Macrell",
+      "title": "",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+      "bio": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Madoc Macrell",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Madoc Macrell"
+          },
+          {
+            "label": "Familie",
+            "value": "Haus Macrell"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Haus Macrell",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=madoc-macrell"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-macrell--madoc-macrell"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-macrell--madoc-macrell",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-macrell",
+        "houseName": "Haus Macrell",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-macrell",
+            "personId": "madoc-macrell",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Madoc Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-macrell--madoc-macrell",
+        "path": "records/familien/haus-macrell/madoc-macrell--person--haus-macrell--madoc-macrell/character.json",
+        "schemaVersion": 1,
+        "contentHash": "758643d80311f5cc5e182c7936cc9aba97397f4597f918604aa93a4e9dfc74d7",
+        "firestoreDocumentIds": [
+          "person--haus-macrell--madoc-macrell"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-macrell",
+            "label": "Haus Macrell"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-macrell",
+              "familyTitle": "Haus Macrell",
+              "personId": "madoc-macrell",
+              "worldPersonId": "person--haus-macrell--madoc-macrell",
+              "houseId": "house-macrell",
+              "houseName": "Haus Macrell",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Madoc Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-macrell--nerys-macrell",
+      "name": "Nerys Macrell",
+      "title": "An Bord von Arian Saethwyr",
+      "gender": "female",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+      "bio": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Nerys Macrell",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Nerys Macrell"
+          },
+          {
+            "label": "Familie",
+            "value": "Haus Macrell"
+          },
+          {
+            "label": "Einordnung",
+            "value": "An Bord von Arian Saethwyr"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+          "biographyTitle": "An Bord von Arian Saethwyr",
+          "biographyText": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Haus Macrell",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=nerys-macrell"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-macrell--nerys-macrell"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-macrell--nerys-macrell",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "house-macrell",
+        "houseName": "Haus Macrell",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-macrell",
+            "personId": "nerys-macrell",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Nerys Macrell\",\"title\":\"An Bord von Arian Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-macrell--nerys-macrell",
+        "path": "records/familien/haus-macrell/nerys-macrell--person--haus-macrell--nerys-macrell/character.json",
+        "schemaVersion": 1,
+        "contentHash": "2fa5297c8dd667573ad054d5ffeac84d543e7cf8e905fe82031fc8dade878b21",
+        "firestoreDocumentIds": [
+          "person--haus-macrell--nerys-macrell"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-macrell",
+            "label": "Haus Macrell"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-macrell",
+              "familyTitle": "Haus Macrell",
+              "personId": "nerys-macrell",
+              "worldPersonId": "person--haus-macrell--nerys-macrell",
+              "houseId": "house-macrell",
+              "houseName": "Haus Macrell",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Nerys Macrell\",\"title\":\"An Bord von Arian Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-hwylbren--morfudd-hwylbren",
+      "name": "Morfudd Hwylbren",
+      "title": "",
+      "gender": "female",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+      "bio": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Morfudd Hwylbren",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Morfudd Hwylbren"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Hwylbren"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Hwylbren",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=morfudd-hwylbren"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-hwylbren",
+        "houseName": "Familie Hwylbren",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-hwylbren",
+            "personId": "morfudd-hwylbren",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Morfudd Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-hwylbren--morfudd-hwylbren",
+        "path": "records/familien/haus-hwylbren/morfudd-hwylbren--person--haus-hwylbren--morfudd-hwylbren/character.json",
+        "schemaVersion": 1,
+        "contentHash": "d0aae4d8b4008d44e3210fecf9e4251ab02291937e9af529ba91b1f29f931189",
+        "firestoreDocumentIds": [
+          "person--haus-hwylbren--morfudd-hwylbren"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-hwylbren",
+            "label": "Familie Hwylbren"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-hwylbren",
+              "familyTitle": "Familie Hwylbren",
+              "personId": "morfudd-hwylbren",
+              "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+              "houseId": "house-hwylbren",
+              "houseName": "Familie Hwylbren",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Morfudd Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-hwylbren--gwrgan-hwylbren",
+      "name": "Gwrgan Hwylbren",
+      "title": "",
+      "gender": "male",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+      "bio": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Gwrgan Hwylbren",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Gwrgan Hwylbren"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Hwylbren"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Hwylbren",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=gwrgan-hwylbren"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-hwylbren",
+        "houseName": "Familie Hwylbren",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-hwylbren",
+            "personId": "gwrgan-hwylbren",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Gwrgan Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-hwylbren--gwrgan-hwylbren",
+        "path": "records/familien/haus-hwylbren/gwrgan-hwylbren--person--haus-hwylbren--gwrgan-hwylbren/character.json",
+        "schemaVersion": 1,
+        "contentHash": "759c455ae8c4f3807c8f1956281b33eec7463171b05aa5cb2797bfd574aa0fd8",
+        "firestoreDocumentIds": [
+          "person--haus-hwylbren--gwrgan-hwylbren"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-hwylbren",
+            "label": "Familie Hwylbren"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-hwylbren",
+              "familyTitle": "Familie Hwylbren",
+              "personId": "gwrgan-hwylbren",
+              "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+              "houseId": "house-hwylbren",
+              "houseName": "Familie Hwylbren",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Gwrgan Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
+      }
+    },
+    {
+      "id": "person--haus-hwylbren--heulwen-hwylbren",
+      "name": "Heulwen Hwylbren",
+      "title": "",
+      "gender": "female",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+      "bio": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Heulwen Hwylbren",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Heulwen Hwylbren"
+          },
+          {
+            "label": "Familie",
+            "value": "Familie Hwylbren"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+          "biographyTitle": "Biografie",
+          "biographyText": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Familie Hwylbren",
+              "text": "Personenkarte und belegte Familienverbindungen",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=heulwen-hwylbren"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+      },
+      "genealogy": {
+        "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "houseId": "house-hwylbren",
+        "houseName": "Familie Hwylbren",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "haus-hwylbren",
+            "personId": "heulwen-hwylbren",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-27T18:12:03Z",
+            "lastSyncedAt": "2026-11-27T18:12:03Z",
+            "url": "",
+            "fingerprint": "{\"name\":\"Heulwen Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "archived": false,
+      "aliases": [],
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr",
+      "localRecord": {
+        "recordId": "character--person--haus-hwylbren--heulwen-hwylbren",
+        "path": "records/familien/haus-hwylbren/heulwen-hwylbren--person--haus-hwylbren--heulwen-hwylbren/character.json",
+        "schemaVersion": 1,
+        "contentHash": "fb8cd376ce6ca990e4f3e26a831dd4da6c128be4e8d9a60cd7cc00d709039c04",
+        "firestoreDocumentIds": [
+          "person--haus-hwylbren--heulwen-hwylbren"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-hwylbren",
+            "label": "Familie Hwylbren"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-hwylbren",
+              "familyTitle": "Familie Hwylbren",
+              "personId": "heulwen-hwylbren",
+              "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+              "houseId": "house-hwylbren",
+              "houseName": "Familie Hwylbren",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Herrschaft der Saethwyr"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Heulwen Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": []
+        },
+        "authoredFeature": "celtigerns-wacht-families-20261127"
       }
     }
   ],

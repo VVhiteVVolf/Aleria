@@ -1,6 +1,7 @@
 import { existsSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { FAMILY_REGISTRY } from '../../../Stammbäume/assets/js/data/families.registry.js';
+import { CELTIGERNS_WACHT_FAMILY_SOURCES } from '../../../Stammbäume/assets/js/data/celtigerns-wacht-families/family-sources.js';
 import { ALERIA_CURRENT_YEAR } from '../../../Stammbäume/assets/js/config/chronology.js';
 import { calculateAge } from '../../../Stammbäume/assets/js/domain/person-presentation.js';
 import { isPersonRecordedDead } from '../../../Stammbäume/assets/js/domain/person-life-state.js';
@@ -19,7 +20,7 @@ import { geographicKey } from '../../../shared/world-directory/geographic-key.mj
 import { CENYR_ADMINISTRATION_SCOPES } from '../../../shared/cenyr-administration/scopes.mjs';
 import { recordedLocalOffice, WATCH_AND_LOCAL_ADMINISTRATION } from '../../../shared/cenyr-administration/local-authority.mjs';
 import { PERSONAL_SERVICE, SERVICE_HOUSES, FREE_HOUSES, OTHER_SERVICE, STAFF, TERRITORIAL_NAME_NOTES, COURT_NAME_NOTES,
-  SETTLEMENT_APPOINTMENT_SOURCES } from './roster-sources.mjs';
+  COURT_STAFF_POSITIONS, SETTLEMENT_APPOINTMENT_SOURCES } from './roster-sources.mjs';
 import { buildCountyRoster } from './county-roster.mjs';
 import { buildTreeCandidateIndex } from './tree-candidate-index.mjs';
 import { readAlmanacAppointments } from './almanac-appointments.mjs';
@@ -45,6 +46,8 @@ const isNamed = name => typeof name === 'string' && /\p{L}/u.test(name)
   && !/^(?:unbekannt|unbenannt|nicht benannt|offen|folgt)/i.test(name.trim());
 const isLiving = person => person.status === 'alive' && !isPersonRecordedDead(person) && isNamed(person.name);
 const personHref = (family, id) => `/Stammbäume/Stammbaum.html?family=${encodeURIComponent(family)}&mode=view&person=${encodeURIComponent(id)}`;
+const reviewedCandidateIds = new Set(CELTIGERNS_WACHT_FAMILY_SOURCES.flatMap(family =>
+  family.people.map(person => `person--${family.id}--${person.id}`)));
 
 function publicMarriages(family, person) {
   return family.partnerships.filter(link => link.type === 'marriage'
@@ -52,7 +55,7 @@ function publicMarriages(family, person) {
     && link.participantIds.includes(person.id));
 }
 
-function relationship(family, person) {
+function relationship(family, person, fallback = 'single') {
   const marriages = publicMarriages(family, person);
   const other = link => family.persons.find(p => p.id !== person.id && link.participantIds.includes(p.id));
   if (marriages.some(link => link.status === 'active' && !isPersonRecordedDead(other(link)))) return 'married';
@@ -61,7 +64,7 @@ function relationship(family, person) {
   if (marriages.length) return 'unknown';
   if (family.partnerships.some(link => link.type === 'engagement' && link.status === 'active' && link.visibility === 'public'
     && link.certainty === 'confirmed' && link.participantIds.includes(person.id))) return 'engaged';
-  return person.familyRole === 'married' ? 'unknown' : 'single';
+  return person.familyRole === 'married' ? 'unknown' : fallback;
 }
 
 function ownFamilyMembers(record) {
@@ -74,8 +77,11 @@ function ownFamilyMembers(record) {
 }
 
 const people = new Map();
-function addFamilyPerson(record, person, currentName, portrait, localId) {
-  if (!isLiving(person)) throw new Error(`Unbestätigte aktuelle Identität: ${record.id}/${person.id}`);
+function addFamilyPerson(record, person, currentName, portrait, localId, { candidate = false } = {}) {
+  const reviewedCandidate = reviewedCandidateIds.has(person.worldPersonId);
+  const availableForPlanning = candidate && reviewedCandidate && person.status === 'unknown'
+    && !isPersonRecordedDead(person) && isNamed(person.name);
+  if (!isLiving(person) && !availableForPlanning) throw new Error(`Unbestätigte aktuelle Identität: ${record.id}/${person.id}`);
   const id = person.worldPersonId || localId;
   if (!id) throw new Error(`Fehlende Weltpersonen-ID: ${record.id}/${person.id}`);
   const previous = people.get(id);
@@ -87,13 +93,14 @@ function addFamilyPerson(record, person, currentName, portrait, localId) {
   const familyName = buildFamilyPersonDisplayName(record.family, person);
   const birth = String(person.birth || '');
   const approximate = /^\d{4}\s*\?$/.test(birth);
-  const age = calculateAge(approximate ? { ...person, birth: birth.replace(/\?/, '').trim() } : person);
+  const reportedAge = reviewedCandidate && Number.isInteger(person.extensions?.portraitAge) ? person.extensions.portraitAge : null;
+  const age = calculateAge(approximate ? { ...person, birth: birth.replace(/\?/, '').trim() } : person) ?? reportedAge;
   const name = currentName || familyName;
   people.set(id, {
     id, name, ...(name !== familyName ? { alias: familyName } : {}),
     portrait: portraitFor(id, portrait, person.portrait, previous?.portrait),
     sex: person.sex, age, ...(age !== null && approximate ? { approximate: true } : {}),
-    relationship: relationship(record.family, person),
+    relationship: relationship(record.family, person, reviewedCandidate ? 'unknown' : 'single'),
     href: personHref(record.id, person.id),
   });
   return id;
@@ -215,17 +222,29 @@ function addHouse(profile) {
     admit(holder, 'service', '', 'Belegtes Ortsamt in ' + place.name);
     staff.push({ area, slot, holder, ...(title ? { title } : {}) });
   }
-  const court = courts[scope].offices.map(({ role, name, id, familyId, image, detail }) => {
+  const court = courts[scope].offices.flatMap(({ role, name, id, familyId, image, detail }) => {
     const note = COURT_NAME_NOTES[`${scope}/${role}`];
+    const position = COURT_STAFF_POSITIONS[`${scope}/${familyId}/${id}`];
     if (isNamed(name) && !note) {
       const type = houseOfficeFor(role)?.id || geographicKey(role);
       const slot = type === 'hofmeister' ? 'leitung' : type;
       const holder = id && familyId ? exactPerson(familyId, id, name) : addNamedMember(scope, { name, imageSrc: image }, `hof/${slot}`);
       admit(holder, familyId === ownId ? 'house' : 'service', directory.get(familyId)?.name || '', 'Belegtes Hofamt');
-      staff.push({ area: 'hof', slot, holder });
+      staff.push({ area: 'hof', slot, ...position, holder });
     }
-    return { role, ...((note || detail) ? { note: note || detail } : {}) };
+    return position ? [] : [{ role, ...((note || detail) ? { note: note || detail } : {}) }];
   });
+  for (const family of CELTIGERNS_WACHT_FAMILY_SOURCES.filter(family => family.patron.toLowerCase() === scope)) {
+    const record = registry.get(family.id);
+    for (const source of family.people) {
+      const person = record?.family.persons.find(entry => entry.id === source.id);
+      if (!person) throw new Error(`Fehlender Kandidat für ${scope}: ${family.id}/${source.id}`);
+      if (isPersonRecordedDead(person)) continue;
+      const holder = addFamilyPerson(record, person, undefined, undefined, `stammbaum/${family.id}/${source.id}`, { candidate: true });
+      const detail = [source.title, source.ageEstimate].filter(Boolean).join(' · ');
+      admit(holder, 'family', family.title, detail);
+    }
+  }
   return {
     ...profile, name: own.name, title: territory.name, crest: own.emblem, href: council.href, ruler: rulerId,
     offices, court, contacts, staff, governmentSeat: geography.domain.center, enrolled: enrolled.filter(item => item.id !== ownId).sort(byName),

@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/luned-gofal.json",
+  "character": {
+    "id": "person--haus-gofal--luned-gofal",
+    "name": "Luned Gofal",
+    "title": "Oberste Zofe des Hauses Gafyr",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+    "bio": "Luned ist die oberste Zofe des Hauses Gafyr. Ihr Amt steht für die Tradition der Gofals in der persönlichen Dienerschaft.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Luned Gofal",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Luned Gofal"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gofal"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Oberste Zofe des Hauses Gafyr"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+        "biographyTitle": "Oberste Zofe des Hauses Gafyr",
+        "biographyText": "Luned ist die oberste Zofe des Hauses Gafyr. Ihr Amt steht für die Tradition der Gofals in der persönlichen Dienerschaft.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Gofal",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=luned-gofal"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-gofal--luned-gofal"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gofal--luned-gofal"
+    },
+    "archived": false
+  }
+}

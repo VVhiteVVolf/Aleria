@@ -18554,6 +18554,102 @@
         "bild-7748a579a9fcaa5f"
       ],
       "missingNote": ""
+    },
+    {
+      "id": "haus-caws",
+      "name": "Familie Caws",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Herrschaft der Gafyr",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-caws&mode=view",
+      "sources": [
+        "haus-caws"
+      ],
+      "illustrationIds": [
+        "bild-14f456ba85046d30"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-gofal",
+      "name": "Familie Gofal",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Herrschaft der Gafyr",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gofal&mode=view",
+      "sources": [
+        "haus-gofal"
+      ],
+      "illustrationIds": [
+        "bild-0b68014bd5d7e611"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-hwylbren",
+      "name": "Familie Hwylbren",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Herrschaft der Saethwyr",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view",
+      "sources": [
+        "haus-hwylbren"
+      ],
+      "illustrationIds": [
+        "bild-dde44de0fa5441b2"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-mur",
+      "name": "Familie Mur",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Herrschaft der Gafyr",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-mur&mode=view",
+      "sources": [
+        "haus-mur"
+      ],
+      "illustrationIds": [
+        "bild-6c06f7c8625e878e"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-penwaig",
+      "name": "Familie Penwaig",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Herrschaft der Saethwyr",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view",
+      "sources": [
+        "haus-penwaig"
+      ],
+      "illustrationIds": [
+        "bild-885dc55367abbdf9"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-macrell",
+      "name": "Haus Macrell",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Herrschaft der Saethwyr",
+      "rank": "Einfache Ritterfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-macrell&mode=view",
+      "sources": [
+        "haus-macrell"
+      ],
+      "illustrationIds": [
+        "bild-577d28b8436d9334"
+      ],
+      "missingNote": ""
     }
   ],
   "illustrations": [
@@ -53550,6 +53646,132 @@
       ],
       "copies": [
         "AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-14f456ba85046d30",
+      "name": "Familie Caws · Hausdarstellung",
+      "category": "Bürgerliche Hausdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-hausfigur-v1.png",
+      "sha256": "14f456ba85046d302489c9d7a9f0f3a4ac9d9e8d46704e5edda338b9e3537b78",
+      "houseIds": [
+        "haus-caws"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caws/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-hausfigur-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-0b68014bd5d7e611",
+      "name": "Familie Gofal · Hausdarstellung",
+      "category": "Bürgerliche Hausdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofal/gofal-hausfigur-v1.png",
+      "sha256": "0b68014bd5d7e611c1f4b3e2d121e0c129fd4260e34d1b3330cb87c73f6f9ba1",
+      "houseIds": [
+        "haus-gofal"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gofal/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofal/gofal-hausfigur-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-dde44de0fa5441b2",
+      "name": "Familie Hwylbren · Hausdarstellung",
+      "category": "Bürgerliche Hausdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-hausfigur-v1.png",
+      "sha256": "dde44de0fa5441b2d001bdb368c927ffeb7abaeac7333b841e77da0ae57a8d38",
+      "houseIds": [
+        "haus-hwylbren"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Hwylbren/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-hausfigur-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-6c06f7c8625e878e",
+      "name": "Familie Mur · Hausdarstellung",
+      "category": "Kriegerdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-hausfigur-v1.png",
+      "sha256": "6c06f7c8625e878e74dffb031b681865a74906544afb6742bd0e24408468baf8",
+      "houseIds": [
+        "haus-mur"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Mur/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-hausfigur-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-885dc55367abbdf9",
+      "name": "Familie Penwaig · Hausdarstellung",
+      "category": "Bürgerliche Hausdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-hausfigur-v1.png",
+      "sha256": "885dc55367abbdf96d1c0008d46d9fc3c65ad65ac72921a804fdabf99623336d",
+      "houseIds": [
+        "haus-penwaig"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Penwaig/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-hausfigur-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-577d28b8436d9334",
+      "name": "Haus Macrell · Hausdarstellung",
+      "category": "Kriegerdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-hausfigur-v1.png",
+      "sha256": "577d28b8436d9334646621c34dd28b2295fc3ed2498e8b13cbd8cefa02f81f7f",
+      "houseIds": [
+        "haus-macrell"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Macrell/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Macrell/macrell-hausfigur-v1.png"
       ],
       "note": ""
     }

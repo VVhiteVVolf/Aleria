@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-hwylbren",
+  "revision": 1,
+  "updatedAt": "2026-11-27T19:16:12.627Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-hwylbren",
+      "title": "Familie Hwylbren",
+      "motto": "",
+      "description": "Traditionsreiche Bürger- und Handwerkerfamilie. Die Hwylbrens fertigen und reparieren Segel, Flaggen und Banner und rüsten die Flotte des Hauses Saethwyr aus.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-emblem.jpeg",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-hwylbren-gruender",
+        "worldPersonId": "person--haus-hwylbren--haus-hwylbren-gruender",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hwylbren",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "haus-hwylbren-gruenderin",
+        "worldPersonId": "person--haus-hwylbren--haus-hwylbren-gruenderin",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hwylbren",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "morfudd-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+        "name": "Morfudd Hwylbren",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hwylbren",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "gwrgan-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+        "name": "Gwrgan Hwylbren",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hwylbren",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "heulwen-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+        "name": "Heulwen Hwylbren",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hwylbren",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-hwylbren-founders",
+        "participantIds": [
+          "haus-hwylbren-gruender",
+          "haus-hwylbren-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Platzhalter für die offene Gründergeneration.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-hwylbren",
+        "name": "Familie Hwylbren",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-emblem.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-hwylbren-unrecorded-generations",
+        "parentPartnershipId": "marriage-haus-hwylbren-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "morfudd-hwylbren",
+          "gwrgan-hwylbren",
+          "heulwen-hwylbren"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "Ältere Generationen und Verbindungen offen",
+        "notes": "Die einzelnen Karten hinter der Lücke sind die Ansatzpunkte der belegten Linien und der noch nicht zugeordneten Angehörigen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-hwylbren-founders",
+      "houseId": "house-hwylbren",
+      "crestSubtitle": "Bürgerfamilie",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-hwylbren-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceRevision": 1,
+      "authoredOn": "2026-11-27",
+      "sourceNote": "Die Bildreihe nennt drei Angehörige. Eine nähere Verwandtschaft, das Familienoberhaupt und die genaue Lage der Werkstatt sind offen.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 1,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Hwylbren",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-hausfigur-v1.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Traditionsreiche Bürger- und Handwerkerfamilie. Die Hwylbrens fertigen und reparieren Segel, Flaggen und Banner und rüsten die Flotte des Hauses Saethwyr aus.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Hwylbren"
+          ],
+          [
+            "Rang",
+            "Bürgerliche Familie"
+          ],
+          [
+            "Stammsitz",
+            "Offen"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Offen"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-emblem.jpeg",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Traditionsreiche Bürger- und Handwerkerfamilie. Die Hwylbrens fertigen und reparieren Segel, Flaggen und Banner und rüsten die Flotte des Hauses Saethwyr aus.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [
+            "Segelherstellung und Instandsetzung",
+            "Prunksegel, Schiffsflaggen und Banner"
+          ],
+          "historyTitle": "Geschichte",
+          "historyText": "Die Hwylbrens fertigen seit rund 300 Jahren Segel und gehören zu den wichtigsten Ausrüstern der Saethwyr-Flotte.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Sorgfalt und die Ausbildung von Nachkommen und Lehrlingen tragen die Familientradition."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Hwylbren/hwylbren-emblem.jpeg",
+              "title": "Familie Hwylbren · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-hwylbren"
+            },
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+              "title": "Haus Saethwyr",
+              "text": "Segelmacherei für die Flotte des Hauses Saethwyr",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-saethwyr"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

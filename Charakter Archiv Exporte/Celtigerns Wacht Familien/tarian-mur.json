@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/tarian-mur.json",
+  "character": {
+    "id": "person--haus-mur--tarian-mur",
+    "name": "Tarian Mur",
+    "title": "Sohn von Gwaywddur Mur",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+    "bio": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Tarian Mur",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Tarian Mur"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Mur"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Sohn von Gwaywddur Mur"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+        "biographyTitle": "Sohn von Gwaywddur Mur",
+        "biographyText": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Mur",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=tarian-mur"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-mur--tarian-mur"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-mur--tarian-mur"
+    },
+    "archived": false
+  }
+}

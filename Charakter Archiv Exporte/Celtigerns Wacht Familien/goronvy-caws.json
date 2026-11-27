@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/goronvy-caws.json",
+  "character": {
+    "id": "person--haus-caws--goronvy-caws",
+    "name": "Goronvy Caws",
+    "title": "Familienoberhaupt · Käsemeister",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg",
+    "bio": "Goronvy Caws führt die Familie und ist Käsemeister. Bedwyr und Morys sind seine Söhne, Eirwyn ist seine Enkelin.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Goronvy Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Goronvy Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Familienoberhaupt · Käsemeister"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg",
+        "biographyTitle": "Familienoberhaupt · Käsemeister",
+        "biographyText": "Goronvy Caws führt die Familie und ist Käsemeister. Bedwyr und Morys sind seine Söhne, Eirwyn ist seine Enkelin.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=goronvy-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--goronvy-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--goronvy-caws"
+    },
+    "archived": false
+  }
+}

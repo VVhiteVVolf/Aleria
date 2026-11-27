@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-mur",
+  "revision": 1,
+  "updatedAt": "2026-11-27T19:16:12.627Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-mur",
+      "title": "Familie Mur",
+      "motto": "",
+      "description": "Alteingesessene Bürgerfamilie im Waffendienst des Hauses Gafyr. Gwaywddur Mur führt die Familie und dient als Hauptmann.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-emblem.jpeg",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-mur-gruender",
+        "worldPersonId": "person--haus-mur--haus-mur-gruender",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mur",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "haus-mur-gruenderin",
+        "worldPersonId": "person--haus-mur--haus-mur-gruenderin",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mur",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "gwaywddur-mur",
+        "worldPersonId": "person--haus-mur--gwaywddur-mur",
+        "name": "Gwaywddur Mur",
+        "title": "Familienoberhaupt · Hauptmann im Dienst des Hauses Gafyr",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mur",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Gwaywddur Mur steht trotz seines hohen Alters weiterhin als Hauptmann im Dienst des Hauses Gafyr. Tarian ist sein Sohn und Rhydwyn sein Enkel.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "tarian-mur",
+        "worldPersonId": "person--haus-mur--tarian-mur",
+        "name": "Tarian Mur",
+        "title": "Sohn von Gwaywddur Mur",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-mur/tarian-mur.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mur",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tarian ist Gwaywddur Murs Sohn. Die Vorlage zeigt ihn in schwarzer Rüstung mit goldenen Einfassungen, einem ockerfarbenen Mantel und einem Schild. Sein eigener Dienstgrad ist offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "rhydwyn-mur",
+        "worldPersonId": "person--haus-mur--rhydwyn-mur",
+        "name": "Rhydwyn Mur",
+        "title": "Enkel von Gwaywddur Mur",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mur",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-mur-founders",
+        "participantIds": [
+          "haus-mur-gruender",
+          "haus-mur-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Platzhalter für die offene Gründergeneration.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-tarian-mur",
+        "childId": "tarian-mur",
+        "parentIds": [
+          "gwaywddur-mur"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-mur",
+        "name": "Familie Mur",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-emblem.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-mur-unrecorded-generations",
+        "parentPartnershipId": "marriage-haus-mur-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "gwaywddur-mur",
+          "rhydwyn-mur"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "Ältere Generationen und Verbindungen offen",
+        "notes": "Die einzelnen Karten hinter der Lücke sind die Ansatzpunkte der belegten Linien und der noch nicht zugeordneten Angehörigen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-mur-founders",
+      "houseId": "house-mur",
+      "crestSubtitle": "Bürgerfamilie",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-mur-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceRevision": 1,
+      "authoredOn": "2026-11-27",
+      "sourceNote": "Die Bildbeschriftung nennt Tarian als Sohn und Rhydwyn als Enkel des Familienoberhaupts. Welches Kind Gwaywddurs Rhydwyns Elternteil ist, ist unbekannt.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 1,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Mur",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-hausfigur-v1.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Alteingesessene Bürgerfamilie im Waffendienst des Hauses Gafyr. Gwaywddur Mur führt die Familie und dient als Hauptmann.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Mur"
+          ],
+          [
+            "Rang",
+            "Bürgerliche Familie"
+          ],
+          [
+            "Stammsitz",
+            "Offen"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Gwaywddur Mur"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-emblem.jpeg",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Alteingesessene Bürgerfamilie im Waffendienst des Hauses Gafyr. Gwaywddur Mur führt die Familie und dient als Hauptmann.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [
+            "Langjähriger Waffendienst",
+            "Hauptmann Gwaywddur Mur"
+          ],
+          "historyTitle": "Geschichte",
+          "historyText": "Über rund drei Jahrhunderte stellte die Familie Waffenknechte für das Haus Gafyr. Gwaywddur Mur führt heute die Familie und versieht weiterhin seinen Hauptmannsdienst.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Disziplin, Kameradschaft und familiärer Zusammenhalt prägen ihren Ruf."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Mur/mur-emblem.jpeg",
+              "title": "Familie Mur · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-mur"
+            },
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+              "title": "Haus Gafyr",
+              "text": "Waffendienst für Haus Gafyr",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gafyr"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/einion-penwaig.json",
+  "character": {
+    "id": "person--haus-penwaig--einion-penwaig",
+    "name": "Einion Penwaig",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+    "bio": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Einion Penwaig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Einion Penwaig"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Penwaig"
+        },
+        {
+          "label": "Alter",
+          "value": "in seinen Siebzigern"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Penwaig",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=einion-penwaig"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-penwaig--einion-penwaig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-penwaig--einion-penwaig"
+    },
+    "archived": false
+  }
+}

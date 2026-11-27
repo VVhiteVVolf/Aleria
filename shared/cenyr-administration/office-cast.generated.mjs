@@ -48,7 +48,8 @@ export const OFFICE_CAST = {
       },
       "court": [
         {
-          "role": "Vogt"
+          "role": "Vogt",
+          "note": "99 Jahre"
         },
         {
           "role": "Schatzmeister"
@@ -146,6 +147,11 @@ export const OFFICE_CAST = {
           "area": "militaer",
           "slot": "wachkommandant",
           "holder": "person--haus-arth--melyn-arth"
+        },
+        {
+          "area": "hof",
+          "slot": "vogt",
+          "holder": "person--haus-penwaig--merfyn-penwaig"
         }
       ],
       "governmentSeat": "Gwynthor",
@@ -325,6 +331,27 @@ export const OFFICE_CAST = {
           "area": "unterhaltung",
           "slot": "hofbarde",
           "holder": "person--haus-chamois--lleirys-chamois"
+        },
+        {
+          "area": "hof",
+          "slot": "kueche",
+          "holder": "person--haus-caws--morys-caws"
+        },
+        {
+          "area": "hof-hausmacht",
+          "slot": "hauptmann-hausmacht",
+          "holder": "person--haus-mur--gwaywddur-mur"
+        },
+        {
+          "area": "hof",
+          "slot": "zofe",
+          "title": "Oberste Zofe",
+          "holder": "person--haus-gofal--luned-gofal"
+        },
+        {
+          "area": "hof-vogt",
+          "slot": "zofenstelle",
+          "holder": "person--haus-gofal--eluned-gofal"
         }
       ],
       "governmentSeat": "Gwynthor",
@@ -2336,6 +2363,12 @@ export const OFFICE_CAST = {
       "href": "/Stammbäume/Stammbaum.html?family=haus-caerthwyn&mode=view&person=bowen-caerthwyn"
     },
     {
+      "id": "person--haus-caws--morys-caws",
+      "name": "Morys Caws",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws"
+    },
+    {
       "id": "person--haus-cein--sorcha-cein",
       "name": "Sorcha Wyrm",
       "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/sorcha-cein.jpg",
@@ -2661,6 +2694,18 @@ export const OFFICE_CAST = {
       "href": "/Stammbäume/Stammbaum.html?family=haus-gelyn&mode=view&person=dehlia-gelyn"
     },
     {
+      "id": "person--haus-gofal--eluned-gofal",
+      "name": "Eluned Gofal",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal"
+    },
+    {
+      "id": "person--haus-gofal--luned-gofal",
+      "name": "Luned Gofal",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=luned-gofal"
+    },
+    {
       "id": "person--haus-gostyn--derfel-gostyn",
       "name": "Derfel Gostyn",
       "portrait": "/Stammbäume/assets/images/portraits/haus-gostyn/derfel-gostyn.jpg",
@@ -2794,6 +2839,12 @@ export const OFFICE_CAST = {
       "href": "/Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=jenniffer-marwolaeth"
     },
     {
+      "id": "person--haus-mur--gwaywddur-mur",
+      "name": "Gwaywddur Mur",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=gwaywddur-mur"
+    },
+    {
       "id": "person--haus-myrgath--lleucu-myrgath",
       "name": "Lleucu Myrgath",
       "portrait": "/Stammbäume/assets/images/portraits/haus-myrgath/lleucu-myrgath.png",
@@ -2806,6 +2857,12 @@ export const OFFICE_CAST = {
       "portrait": "/Stammbäume/assets/images/portraits/haus-pendrwn/emyr-pendrwn.jpeg",
       "href": "/Stammbäume/Stammbaum.html?family=haus-pendrwn&mode=view&person=emyr-pendrwn",
       "almanacHref": "/AleriaAlmanach/AleriaAlmanach.html?character=enB95CcCzvhA5E0jjN1P"
+    },
+    {
+      "id": "person--haus-penwaig--merfyn-penwaig",
+      "name": "Merfyn Penwaig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig"
     },
     {
       "id": "person--haus-penwyn--rhianu-penwyn",

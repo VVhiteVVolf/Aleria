@@ -242,6 +242,53 @@ test('the Saethwyr pool contains their living house members and keeps other lieg
   assert(roster.free.every(person => houses.every(house => house.candidates.every(candidate => candidate.id !== person.id))));
 });
 
+test('Gafyr und Saethwyr haben ihre neuen Familien als Bewerber und belegte Hofdienste an den richtigen Stellen', () => {
+  const namedFamilies = {
+    gafyr: ['haus-mur', 'haus-gofal', 'haus-caws'],
+    saethwyr: ['haus-penwaig', 'haus-macrell', 'haus-hwylbren'],
+  };
+  const draft = createAssemblyState(houses, roster.free);
+  for (const [scope, familyIds] of Object.entries(namedFamilies)) {
+    const house = houses.find(row => row.id === scope);
+    const candidates = house.candidates.filter(row => familyIds.some(id => row.id.startsWith(`person--${id}--`)));
+    assert.equal(candidates.length, 10, scope);
+    assert.equal(new Set(candidates.map(row => row.id)).size, 10, scope);
+    const records = FAMILY_REGISTRY.filter(record => familyIds.includes(record.id));
+    for (const record of records) {
+      for (const person of record.family.persons.filter(row => !row.extensions.preparedPlaceholder)) {
+        const holder = people.get(person.worldPersonId);
+        assert(candidates.some(row => row.id === person.worldPersonId));
+        assert.equal(holder.name, person.name);
+        assert.equal(holder.portrait, `/Stammbäume/${person.portrait}`);
+        assert.equal(holder.relationship, 'unknown');
+        assert.equal(new URL(holder.href, 'https://aleria.invalid').searchParams.get('person'), person.id);
+      }
+    }
+  }
+  for (const [scope, key, name] of [
+    ['gafyr', 'hof-hausmacht/hauptmann-hausmacht', 'Gwaywddur Mur'],
+    ['gafyr', 'hof/zofe', 'Luned Gofal'],
+    ['gafyr', 'hof-vogt/zofenstelle', 'Eluned Gofal'],
+    ['gafyr', 'hof/kueche', 'Morys Caws'],
+    ['saethwyr', 'hof/vogt', 'Merfyn Penwaig'],
+  ]) {
+    assert.equal(draft.positions(scope).get(key).occupant, idFor(name), name);
+    const native = OFFICE_CAST.houses.find(house => house.id === scope);
+    assert.equal(native.staff.filter(row => row.holder === idFor(name) && `${row.area}/${row.slot}` === key).length, 1);
+  }
+  assert.equal(draft.positions('gafyr').get('hof/zofe').title, 'Oberste Zofe');
+  const maidTemplates = houses.find(house => house.id === 'gafyr').plans['hof-vogt'].templates
+    .filter(template => template.id === 'r-zofenstelle');
+  assert.deepEqual(maidTemplates.map(template => template.title), ['Zofe']);
+  assert.equal(people.get(idFor('Merfyn Penwaig')).age, 99);
+  assert.equal(draft.positions('gafyr').get('hof/vogt').occupant, null);
+  assert.equal(houses.find(house => house.id === 'gafyr').candidates.find(row => row.id === idFor('Mared Gofal')).kind, 'family');
+  draft.assign('gafyr', 'hof/vogt', idFor('Mared Gofal'));
+  assert.equal(draft.positions('gafyr').get('hof/vogt').occupant, idFor('Mared Gofal'));
+  assert.match(saethwyr.candidates.find(row => row.id === idFor('Nerys Macrell')).detail, /Arian Saethwyr/);
+  assert(!saethwyr.staff.some(row => row.holder === idFor('Nerys Macrell')));
+});
+
 test('appointing a councillor changes only the chosen post and supports undo and voluntary release', () => {
   const draft = createAssemblyState(houses, roster.free);
   const previous = draft.assign('saethwyr', 'spionage/leitung', imogen);

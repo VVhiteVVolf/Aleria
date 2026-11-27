@@ -1,0 +1,235 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-caws--bedwyr-caws",
+  "slug": "bedwyr-caws",
+  "identity": {
+    "name": "Bedwyr Caws",
+    "aliases": [],
+    "worldPersonId": "person--haus-caws--bedwyr-caws"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-caws",
+      "label": "Familie Caws"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-caws",
+        "familyTitle": "Familie Caws",
+        "personId": "bedwyr-caws",
+        "worldPersonId": "person--haus-caws--bedwyr-caws",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Bedwyr Caws\",\"title\":\"Ältester Sohn · Ziegenhof\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[{\"personId\":\"eirwyn-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--eirwyn-caws\",\"name\":\"Eirwyn Caws\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-caws--bedwyr-caws",
+      "documentIds": [
+        "person--haus-caws--bedwyr-caws"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-caws--bedwyr-caws",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-caws",
+        "personId": "bedwyr-caws",
+        "worldPersonId": "person--haus-caws--bedwyr-caws",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/bedwyr-caws.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-caws--bedwyr-caws"
+    ],
+    "contentHash": "bcb08f6922058ce54ee4bd68f3bdac0ff99cf4c659f381a07e5ba2539b07cac4"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-caws--bedwyr-caws",
+        "name": "Bedwyr Caws",
+        "title": "Ältester Sohn · Ziegenhof",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+        "bio": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Bedwyr Caws",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Bedwyr Caws"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Caws"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Ältester Sohn · Ziegenhof"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+            "biographyTitle": "Ältester Sohn · Ziegenhof",
+            "biographyText": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Caws",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=bedwyr-caws"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-caws--bedwyr-caws"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-caws--bedwyr-caws"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-caws--bedwyr-caws",
+    "name": "Bedwyr Caws",
+    "title": "Ältester Sohn · Ziegenhof",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+    "bio": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Bedwyr Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Bedwyr Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Ältester Sohn · Ziegenhof"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+        "biographyTitle": "Ältester Sohn · Ziegenhof",
+        "biographyText": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=bedwyr-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--bedwyr-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--bedwyr-caws",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-caws",
+      "houseName": "Familie Caws",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-caws",
+          "personId": "bedwyr-caws",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Bedwyr Caws\",\"title\":\"Ältester Sohn · Ziegenhof\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[{\"personId\":\"eirwyn-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--eirwyn-caws\",\"name\":\"Eirwyn Caws\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "goronvy-caws",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caws--goronvy-caws",
+            "name": "Goronvy Caws"
+          }
+        ],
+        "partners": [],
+        "children": [
+          {
+            "personId": "eirwyn-caws",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caws--eirwyn-caws",
+            "name": "Eirwyn Caws"
+          }
+        ]
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

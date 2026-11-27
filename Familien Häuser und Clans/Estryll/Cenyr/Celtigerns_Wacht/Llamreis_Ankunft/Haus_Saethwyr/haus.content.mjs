@@ -1,5 +1,7 @@
 // Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
 // Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
+import { celtigernsFamilyMember } from '../../../../../modules/house-content/celtigerns-service-family-content.mjs';
+
 export const HOUSE_CONTENT = {
   "id": "haus-saethwyr",
   "name": "Haus Saethwyr O'Gwynthor",
@@ -197,8 +199,8 @@ export const HOUSE_CONTENT = {
   ],
   "offices": [
     {
-      "role": "Vogt",
-      "silhouette": "male"
+      ...celtigernsFamilyMember('penwaig', 'merfyn-penwaig'),
+      "role": "Vogt"
     },
     {
       "role": "Schatzmeister",
@@ -295,7 +297,7 @@ export const HOUSE_CONTENT = {
     "Saethwyr war zuerst der Name von Kynwrigs Schiff.",
     "Kynwrigs Versuch, Melwas nachzueifern, scheiterte der Überlieferung nach ausgerechnet an dessen Schnurrbart."
   ],
-  "contentVersion": "20261024-housebio-v1",
+  "contentVersion": "20261127-dienstfamilien",
   "omitMilitaryProfile": true,
   "illustrationCategory": "Hausdarstellung",
   "biographySourceRevision": 6,

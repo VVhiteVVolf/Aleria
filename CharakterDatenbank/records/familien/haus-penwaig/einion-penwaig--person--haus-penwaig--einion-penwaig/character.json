@@ -1,0 +1,217 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-penwaig--einion-penwaig",
+  "slug": "einion-penwaig",
+  "identity": {
+    "name": "Einion Penwaig",
+    "aliases": [],
+    "worldPersonId": "person--haus-penwaig--einion-penwaig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-penwaig",
+      "label": "Familie Penwaig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-penwaig",
+        "familyTitle": "Familie Penwaig",
+        "personId": "einion-penwaig",
+        "worldPersonId": "person--haus-penwaig--einion-penwaig",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Einion Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-penwaig--einion-penwaig",
+      "documentIds": [
+        "person--haus-penwaig--einion-penwaig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-penwaig--einion-penwaig",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-penwaig",
+        "personId": "einion-penwaig",
+        "worldPersonId": "person--haus-penwaig--einion-penwaig",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/einion-penwaig.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-penwaig--einion-penwaig"
+    ],
+    "contentHash": "eb2baf4d753cc73012e3be7fdfa24f1d48d975312912d34366206aca1ddbc656"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-penwaig--einion-penwaig",
+        "name": "Einion Penwaig",
+        "title": "",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+        "bio": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Einion Penwaig",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Einion Penwaig"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Penwaig"
+            },
+            {
+              "label": "Alter",
+              "value": "in seinen Siebzigern"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Penwaig",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=einion-penwaig"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-penwaig--einion-penwaig"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-penwaig--einion-penwaig"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-penwaig--einion-penwaig",
+    "name": "Einion Penwaig",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+    "bio": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Einion Penwaig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Einion Penwaig"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Penwaig"
+        },
+        {
+          "label": "Alter",
+          "value": "in seinen Siebzigern"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Penwaig",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=einion-penwaig"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-penwaig--einion-penwaig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-penwaig--einion-penwaig",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-penwaig",
+      "houseName": "Familie Penwaig",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-penwaig",
+          "personId": "einion-penwaig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Einion Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

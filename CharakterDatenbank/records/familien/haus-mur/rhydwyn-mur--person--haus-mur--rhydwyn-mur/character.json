@@ -1,0 +1,217 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-mur--rhydwyn-mur",
+  "slug": "rhydwyn-mur",
+  "identity": {
+    "name": "Rhydwyn Mur",
+    "aliases": [],
+    "worldPersonId": "person--haus-mur--rhydwyn-mur"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-mur",
+      "label": "Familie Mur"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-mur",
+        "familyTitle": "Familie Mur",
+        "personId": "rhydwyn-mur",
+        "worldPersonId": "person--haus-mur--rhydwyn-mur",
+        "houseId": "house-mur",
+        "houseName": "Familie Mur",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Rhydwyn Mur\",\"title\":\"Enkel von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-mur--rhydwyn-mur",
+      "documentIds": [
+        "person--haus-mur--rhydwyn-mur"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-mur--rhydwyn-mur",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-mur",
+        "personId": "rhydwyn-mur",
+        "worldPersonId": "person--haus-mur--rhydwyn-mur",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/rhydwyn-mur.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-mur--rhydwyn-mur"
+    ],
+    "contentHash": "9bc2b00c86ea87daf59e79336ab3115f653eccb670cf5b8cc7ce038676909f46"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-mur--rhydwyn-mur",
+        "name": "Rhydwyn Mur",
+        "title": "Enkel von Gwaywddur Mur",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+        "bio": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Rhydwyn Mur",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Rhydwyn Mur"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Mur"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Enkel von Gwaywddur Mur"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+            "biographyTitle": "Enkel von Gwaywddur Mur",
+            "biographyText": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Mur",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=rhydwyn-mur"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-mur--rhydwyn-mur"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-mur--rhydwyn-mur"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-mur--rhydwyn-mur",
+    "name": "Rhydwyn Mur",
+    "title": "Enkel von Gwaywddur Mur",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+    "bio": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Rhydwyn Mur",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rhydwyn Mur"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Mur"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Enkel von Gwaywddur Mur"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+        "biographyTitle": "Enkel von Gwaywddur Mur",
+        "biographyText": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Mur",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=rhydwyn-mur"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-mur--rhydwyn-mur"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-mur--rhydwyn-mur",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-mur",
+      "houseName": "Familie Mur",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-mur",
+          "personId": "rhydwyn-mur",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Rhydwyn Mur\",\"title\":\"Enkel von Gwaywddur Mur\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-mur\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

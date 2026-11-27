@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/eirwyn-caws.json",
+  "character": {
+    "id": "person--haus-caws--eirwyn-caws",
+    "name": "Eirwyn Caws",
+    "title": "Tochter von Bedwyr Caws",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+    "bio": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Eirwyn Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Eirwyn Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Tochter von Bedwyr Caws"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+        "biographyTitle": "Tochter von Bedwyr Caws",
+        "biographyText": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=eirwyn-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--eirwyn-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--eirwyn-caws"
+    },
+    "archived": false
+  }
+}

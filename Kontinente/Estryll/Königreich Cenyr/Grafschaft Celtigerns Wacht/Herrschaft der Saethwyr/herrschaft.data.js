@@ -32,6 +32,23 @@
         seat: "Gwynthor",
         liege: "Saethwyr",
       }),
+      data.family("Macrell", {
+        familyId: "haus-macrell", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Ritterliche/Macrell/macrell-emblem.jpeg`,
+        rank: "Einfache Ritterfamilie",
+      }),
+    ]),
+    data.familySection("Bürgerliche Familien", [
+      data.family("Penwaig", {
+        familyId: "haus-penwaig", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Bürgerliche/Gwynthor/Penwaig/penwaig-emblem.jpeg`,
+        rank: "Bürgerliche Familie",
+      }),
+      data.family("Hwylbren", {
+        familyId: "haus-hwylbren", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Bürgerliche/Gwynthor/Hwylbren/hwylbren-emblem.jpeg`,
+        rank: "Bürgerliche Familie",
+      }),
     ]),
   ]);
 

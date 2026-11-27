@@ -5,7 +5,10 @@ export const RELATIONSHIPS = {
   widowed: 'Verwitwet', divorced: 'Geschieden', unknown: 'Familienstand offen',
 };
 export const SEXES = { female: 'Frau', male: 'Mann', unknown: 'Geschlecht offen' };
-export const AFFILIATIONS = { house: 'Eigenes Haus', knight: 'Ritterhaus', service: 'Direkter Dienst', free: 'Freier Bürgerpool', tree: 'Aus Stammbaum ergänzt' };
+export const AFFILIATIONS = {
+  house: 'Eigenes Haus', knight: 'Ritterhaus', service: 'Direkter Dienst',
+  family: 'Aus Familienakte', free: 'Freier Bürgerpool', tree: 'Aus Stammbaum ergänzt',
+};
 export const MIN_ADULT_AGE = 18;
 
 export function filterCandidates(candidates, filters) {

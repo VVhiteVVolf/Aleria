@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-macrell--morcant-macrell",
+  "slug": "morcant-macrell",
+  "identity": {
+    "name": "Morcant Macrell",
+    "aliases": [],
+    "worldPersonId": "person--haus-macrell--morcant-macrell"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-macrell",
+      "label": "Haus Macrell"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-macrell",
+        "familyTitle": "Haus Macrell",
+        "personId": "morcant-macrell",
+        "worldPersonId": "person--haus-macrell--morcant-macrell",
+        "houseId": "house-macrell",
+        "houseName": "Haus Macrell",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Morcant Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-macrell--morcant-macrell",
+      "documentIds": [
+        "person--haus-macrell--morcant-macrell"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-macrell--morcant-macrell",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-macrell",
+        "personId": "morcant-macrell",
+        "worldPersonId": "person--haus-macrell--morcant-macrell",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/morcant-macrell.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-macrell--morcant-macrell"
+    ],
+    "contentHash": "c8f8763566495f152705c94050110881080e0812f6715aa026ecbc1ec776e740"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-macrell--morcant-macrell",
+        "name": "Morcant Macrell",
+        "title": "",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+        "bio": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Morcant Macrell",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Morcant Macrell"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Macrell"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Haus Macrell",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=morcant-macrell"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-macrell--morcant-macrell"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-macrell--morcant-macrell"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-macrell--morcant-macrell",
+    "name": "Morcant Macrell",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+    "bio": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morcant Macrell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morcant Macrell"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Macrell"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Haus Macrell",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=morcant-macrell"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-macrell--morcant-macrell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-macrell--morcant-macrell",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-macrell",
+      "houseName": "Haus Macrell",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-macrell",
+          "personId": "morcant-macrell",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Morcant Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

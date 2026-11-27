@@ -1,0 +1,226 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-caws--eirwyn-caws",
+  "slug": "eirwyn-caws",
+  "identity": {
+    "name": "Eirwyn Caws",
+    "aliases": [],
+    "worldPersonId": "person--haus-caws--eirwyn-caws"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-caws",
+      "label": "Familie Caws"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-caws",
+        "familyTitle": "Familie Caws",
+        "personId": "eirwyn-caws",
+        "worldPersonId": "person--haus-caws--eirwyn-caws",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Eirwyn Caws\",\"title\":\"Tochter von Bedwyr Caws\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bedwyr-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--bedwyr-caws\",\"name\":\"Bedwyr Caws\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-caws--eirwyn-caws",
+      "documentIds": [
+        "person--haus-caws--eirwyn-caws"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-caws--eirwyn-caws",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-caws",
+        "personId": "eirwyn-caws",
+        "worldPersonId": "person--haus-caws--eirwyn-caws",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/eirwyn-caws.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-caws--eirwyn-caws"
+    ],
+    "contentHash": "86423964535669e4640fbcca319b2bd30d18c419536c05ef80719623b15ae16c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-caws--eirwyn-caws",
+        "name": "Eirwyn Caws",
+        "title": "Tochter von Bedwyr Caws",
+        "gender": "female",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+        "bio": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Eirwyn Caws",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Eirwyn Caws"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Caws"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Tochter von Bedwyr Caws"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+            "biographyTitle": "Tochter von Bedwyr Caws",
+            "biographyText": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Caws",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=eirwyn-caws"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-caws--eirwyn-caws"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-caws--eirwyn-caws"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-caws--eirwyn-caws",
+    "name": "Eirwyn Caws",
+    "title": "Tochter von Bedwyr Caws",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+    "bio": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Eirwyn Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Eirwyn Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Tochter von Bedwyr Caws"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+        "biographyTitle": "Tochter von Bedwyr Caws",
+        "biographyText": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=eirwyn-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--eirwyn-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--eirwyn-caws",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-caws",
+      "houseName": "Familie Caws",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-caws",
+          "personId": "eirwyn-caws",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Eirwyn Caws\",\"title\":\"Tochter von Bedwyr Caws\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"bedwyr-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--bedwyr-caws\",\"name\":\"Bedwyr Caws\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "bedwyr-caws",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caws--bedwyr-caws",
+            "name": "Bedwyr Caws"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

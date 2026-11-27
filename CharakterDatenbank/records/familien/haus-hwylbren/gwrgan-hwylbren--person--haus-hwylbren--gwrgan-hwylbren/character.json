@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-hwylbren--gwrgan-hwylbren",
+  "slug": "gwrgan-hwylbren",
+  "identity": {
+    "name": "Gwrgan Hwylbren",
+    "aliases": [],
+    "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-hwylbren",
+      "label": "Familie Hwylbren"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-hwylbren",
+        "familyTitle": "Familie Hwylbren",
+        "personId": "gwrgan-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+        "houseId": "house-hwylbren",
+        "houseName": "Familie Hwylbren",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Gwrgan Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-hwylbren--gwrgan-hwylbren",
+      "documentIds": [
+        "person--haus-hwylbren--gwrgan-hwylbren"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-hwylbren--gwrgan-hwylbren",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-hwylbren",
+        "personId": "gwrgan-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwrgan-hwylbren.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-hwylbren--gwrgan-hwylbren"
+    ],
+    "contentHash": "759c455ae8c4f3807c8f1956281b33eec7463171b05aa5cb2797bfd574aa0fd8"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-hwylbren--gwrgan-hwylbren",
+        "name": "Gwrgan Hwylbren",
+        "title": "",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+        "bio": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Gwrgan Hwylbren",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Gwrgan Hwylbren"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Hwylbren"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Hwylbren",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=gwrgan-hwylbren"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-hwylbren--gwrgan-hwylbren",
+    "name": "Gwrgan Hwylbren",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+    "bio": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Gwrgan Hwylbren",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Gwrgan Hwylbren"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Hwylbren"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Hwylbren",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=gwrgan-hwylbren"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-hwylbren",
+      "houseName": "Familie Hwylbren",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-hwylbren",
+          "personId": "gwrgan-hwylbren",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Gwrgan Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

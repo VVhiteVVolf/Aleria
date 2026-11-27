@@ -1,5 +1,7 @@
 // Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
 // Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
+import { celtigernsFamilyMember } from '../../../../../modules/house-content/celtigerns-service-family-content.mjs';
+
 export const HOUSE_CONTENT = {
   "id": "haus-gafyr",
   "name": "Haus Gafyr O'Gwynthor",
@@ -240,8 +242,8 @@ export const HOUSE_CONTENT = {
       "silhouette": "male"
     },
     {
-      "role": "Küchenmeister",
-      "silhouette": "male"
+      ...celtigernsFamilyMember('caws', 'morys-caws'),
+      "role": "Küchenmeister"
     },
     {
       "role": "Brotmeister",
@@ -278,7 +280,10 @@ export const HOUSE_CONTENT = {
     {
       "role": "Zwingermeister",
       "silhouette": "male"
-    }
+    },
+    { ...celtigernsFamilyMember('mur', 'gwaywddur-mur'), "role": "Hauptmann" },
+    { ...celtigernsFamilyMember('gofal', 'luned-gofal'), "role": "Oberste Zofe" },
+    { ...celtigernsFamilyMember('gofal', 'eluned-gofal'), "role": "Zofe" }
   ],
   "figuresTitle": "Ursprung und Vermächtnis des Hauses",
   "figures": [
@@ -305,7 +310,7 @@ export const HOUSE_CONTENT = {
     "Garyms Hornhelm war ursprünglich die Trophäe eines Zweikampfs.",
     "Neben seinen Rittern ist das Haus für Ziegenkäse aus seinen nördlichen Besitzungen bekannt."
   ],
-  "contentVersion": "20261024-housebio-v1",
+  "contentVersion": "20261127-dienstfamilien",
   "omitMilitaryProfile": true,
   "illustrationCategory": "Hausdarstellung",
   "biographySourceRevision": 7,

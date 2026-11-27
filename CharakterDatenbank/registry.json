@@ -24,6 +24,26 @@
     "Charakter Archiv Exporte/Biographien/caralyn-chwedonol-2026-11-02/caralyn-lokaler-abgleich.json",
     "Charakter Archiv Exporte/Biographien/rheinallt-gafyr-2026-11-15/rheinallt-aktuell.json",
     "Charakter Archiv Exporte/Biographien/ysabel-bronnor-2026-11-21/ysabel-bronnor-aktuell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/bedwyr-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/bledri-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/einion-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/eirwyn-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/eluned-gofal.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/goronvy-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwaywddur-mur.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwrgan-hwylbren.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/heulwen-hwylbren.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/luned-gofal.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/madoc-macrell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/mared-gofal.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/mererid-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/merfyn-penwaig.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/morcant-macrell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/morfudd-hwylbren.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/morys-caws.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/nerys-macrell.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/rhydwyn-mur.json",
+    "Charakter Archiv Exporte/Celtigerns Wacht Familien/tarian-mur.json",
     "Charakter Archiv Exporte/Chamois/abaelor-chamois.json",
     "Charakter Archiv Exporte/Chamois/avelwen-chamois.json",
     "Charakter Archiv Exporte/Chamois/brenae-chamois.json",
@@ -518,8 +538,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-22T21:00:00.000Z",
-  "count": 492,
+  "sourceExportedAt": "2026-11-27T18:12:03Z",
+  "count": 512,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -9763,6 +9783,366 @@
       "familyStatus": "linked",
       "path": "records/familien/haus-chamois/dyror--person--haus-chamois--dyror-chamois/character.json",
       "contentHash": "ffdc622aa4eefaf80d17be38e614e2a709fb317ca01cfa5188ed828e11a8c777"
+    },
+    {
+      "recordId": "character--person--haus-mur--gwaywddur-mur",
+      "name": "Gwaywddur Mur",
+      "aliases": [],
+      "worldPersonId": "person--haus-mur--gwaywddur-mur",
+      "firestoreDocumentId": "person--haus-mur--gwaywddur-mur",
+      "firestoreDocumentIds": [
+        "person--haus-mur--gwaywddur-mur"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-mur",
+        "label": "Familie Mur"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-mur/gwaywddur-mur--person--haus-mur--gwaywddur-mur/character.json",
+      "contentHash": "7f377451f47ab2acf16d94ad9a35b7ca47fd5bf0aa62ed768c32f2b592099394"
+    },
+    {
+      "recordId": "character--person--haus-mur--tarian-mur",
+      "name": "Tarian Mur",
+      "aliases": [],
+      "worldPersonId": "person--haus-mur--tarian-mur",
+      "firestoreDocumentId": "person--haus-mur--tarian-mur",
+      "firestoreDocumentIds": [
+        "person--haus-mur--tarian-mur"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-mur",
+        "label": "Familie Mur"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-mur/tarian-mur--person--haus-mur--tarian-mur/character.json",
+      "contentHash": "9b90ac8a7918711f1cdd5fc25c857190644261a3fd993e9cba833973b2501b4f"
+    },
+    {
+      "recordId": "character--person--haus-mur--rhydwyn-mur",
+      "name": "Rhydwyn Mur",
+      "aliases": [],
+      "worldPersonId": "person--haus-mur--rhydwyn-mur",
+      "firestoreDocumentId": "person--haus-mur--rhydwyn-mur",
+      "firestoreDocumentIds": [
+        "person--haus-mur--rhydwyn-mur"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-mur",
+        "label": "Familie Mur"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-mur/rhydwyn-mur--person--haus-mur--rhydwyn-mur/character.json",
+      "contentHash": "9bc2b00c86ea87daf59e79336ab3115f653eccb670cf5b8cc7ce038676909f46"
+    },
+    {
+      "recordId": "character--person--haus-gofal--luned-gofal",
+      "name": "Luned Gofal",
+      "aliases": [],
+      "worldPersonId": "person--haus-gofal--luned-gofal",
+      "firestoreDocumentId": "person--haus-gofal--luned-gofal",
+      "firestoreDocumentIds": [
+        "person--haus-gofal--luned-gofal"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-gofal",
+        "label": "Familie Gofal"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-gofal/luned-gofal--person--haus-gofal--luned-gofal/character.json",
+      "contentHash": "09ec037995f5617a8313dbfe55b7f1eeecaa087a3f97e7eb74776fb381cee485"
+    },
+    {
+      "recordId": "character--person--haus-gofal--mared-gofal",
+      "name": "Mared Gofal",
+      "aliases": [],
+      "worldPersonId": "person--haus-gofal--mared-gofal",
+      "firestoreDocumentId": "person--haus-gofal--mared-gofal",
+      "firestoreDocumentIds": [
+        "person--haus-gofal--mared-gofal"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-gofal",
+        "label": "Familie Gofal"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-gofal/mared-gofal--person--haus-gofal--mared-gofal/character.json",
+      "contentHash": "e547f5a33d59be683bef5601ab6bcbb3e0a2e7bdee19a473ca60a5968cc00ba1"
+    },
+    {
+      "recordId": "character--person--haus-gofal--eluned-gofal",
+      "name": "Eluned Gofal",
+      "aliases": [],
+      "worldPersonId": "person--haus-gofal--eluned-gofal",
+      "firestoreDocumentId": "person--haus-gofal--eluned-gofal",
+      "firestoreDocumentIds": [
+        "person--haus-gofal--eluned-gofal"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-gofal",
+        "label": "Familie Gofal"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-gofal/eluned-gofal--person--haus-gofal--eluned-gofal/character.json",
+      "contentHash": "48bb5b174c4616b7496a62161196db01d814192ba639d0315cffd5bb7a6d702a"
+    },
+    {
+      "recordId": "character--person--haus-caws--goronvy-caws",
+      "name": "Goronvy Caws",
+      "aliases": [],
+      "worldPersonId": "person--haus-caws--goronvy-caws",
+      "firestoreDocumentId": "person--haus-caws--goronvy-caws",
+      "firestoreDocumentIds": [
+        "person--haus-caws--goronvy-caws"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-caws",
+        "label": "Familie Caws"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-caws/goronvy-caws--person--haus-caws--goronvy-caws/character.json",
+      "contentHash": "0e1071cddf556ad60c964757fe73b2107696d72f7f39e2ff09a9bae4d392eeca"
+    },
+    {
+      "recordId": "character--person--haus-caws--bedwyr-caws",
+      "name": "Bedwyr Caws",
+      "aliases": [],
+      "worldPersonId": "person--haus-caws--bedwyr-caws",
+      "firestoreDocumentId": "person--haus-caws--bedwyr-caws",
+      "firestoreDocumentIds": [
+        "person--haus-caws--bedwyr-caws"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-caws",
+        "label": "Familie Caws"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-caws/bedwyr-caws--person--haus-caws--bedwyr-caws/character.json",
+      "contentHash": "bcb08f6922058ce54ee4bd68f3bdac0ff99cf4c659f381a07e5ba2539b07cac4"
+    },
+    {
+      "recordId": "character--person--haus-caws--morys-caws",
+      "name": "Morys Caws",
+      "aliases": [],
+      "worldPersonId": "person--haus-caws--morys-caws",
+      "firestoreDocumentId": "person--haus-caws--morys-caws",
+      "firestoreDocumentIds": [
+        "person--haus-caws--morys-caws"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-caws",
+        "label": "Familie Caws"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-caws/morys-caws--person--haus-caws--morys-caws/character.json",
+      "contentHash": "5b59393c03b8665f253c3b810be72154c69be367820ebbe83022e360f424206b"
+    },
+    {
+      "recordId": "character--person--haus-caws--eirwyn-caws",
+      "name": "Eirwyn Caws",
+      "aliases": [],
+      "worldPersonId": "person--haus-caws--eirwyn-caws",
+      "firestoreDocumentId": "person--haus-caws--eirwyn-caws",
+      "firestoreDocumentIds": [
+        "person--haus-caws--eirwyn-caws"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-caws",
+        "label": "Familie Caws"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-caws/eirwyn-caws--person--haus-caws--eirwyn-caws/character.json",
+      "contentHash": "86423964535669e4640fbcca319b2bd30d18c419536c05ef80719623b15ae16c"
+    },
+    {
+      "recordId": "character--person--haus-penwaig--merfyn-penwaig",
+      "name": "Merfyn Penwaig",
+      "aliases": [],
+      "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+      "firestoreDocumentId": "person--haus-penwaig--merfyn-penwaig",
+      "firestoreDocumentIds": [
+        "person--haus-penwaig--merfyn-penwaig"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-penwaig",
+        "label": "Familie Penwaig"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-penwaig/merfyn-penwaig--person--haus-penwaig--merfyn-penwaig/character.json",
+      "contentHash": "c6aea3916c2b9647f918d5c92bc59c083be6e7f5ae6dbd6691383ffbf2372d89"
+    },
+    {
+      "recordId": "character--person--haus-penwaig--einion-penwaig",
+      "name": "Einion Penwaig",
+      "aliases": [],
+      "worldPersonId": "person--haus-penwaig--einion-penwaig",
+      "firestoreDocumentId": "person--haus-penwaig--einion-penwaig",
+      "firestoreDocumentIds": [
+        "person--haus-penwaig--einion-penwaig"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-penwaig",
+        "label": "Familie Penwaig"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-penwaig/einion-penwaig--person--haus-penwaig--einion-penwaig/character.json",
+      "contentHash": "eb2baf4d753cc73012e3be7fdfa24f1d48d975312912d34366206aca1ddbc656"
+    },
+    {
+      "recordId": "character--person--haus-penwaig--bledri-penwaig",
+      "name": "Bledri Penwaig",
+      "aliases": [],
+      "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+      "firestoreDocumentId": "person--haus-penwaig--bledri-penwaig",
+      "firestoreDocumentIds": [
+        "person--haus-penwaig--bledri-penwaig"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-penwaig",
+        "label": "Familie Penwaig"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-penwaig/bledri-penwaig--person--haus-penwaig--bledri-penwaig/character.json",
+      "contentHash": "f419279acb2c6e63a007b7eca2f5926bf91da7f75a9ffb97555dc9b85e05f8c1"
+    },
+    {
+      "recordId": "character--person--haus-penwaig--mererid-penwaig",
+      "name": "Mererid Penwaig",
+      "aliases": [],
+      "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+      "firestoreDocumentId": "person--haus-penwaig--mererid-penwaig",
+      "firestoreDocumentIds": [
+        "person--haus-penwaig--mererid-penwaig"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-penwaig",
+        "label": "Familie Penwaig"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-penwaig/mererid-penwaig--person--haus-penwaig--mererid-penwaig/character.json",
+      "contentHash": "62aa1b110f60059de51499d3d99e3f7d880841447d9e99b7820eeda4fcf60775"
+    },
+    {
+      "recordId": "character--person--haus-macrell--morcant-macrell",
+      "name": "Morcant Macrell",
+      "aliases": [],
+      "worldPersonId": "person--haus-macrell--morcant-macrell",
+      "firestoreDocumentId": "person--haus-macrell--morcant-macrell",
+      "firestoreDocumentIds": [
+        "person--haus-macrell--morcant-macrell"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-macrell",
+        "label": "Haus Macrell"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-macrell/morcant-macrell--person--haus-macrell--morcant-macrell/character.json",
+      "contentHash": "c8f8763566495f152705c94050110881080e0812f6715aa026ecbc1ec776e740"
+    },
+    {
+      "recordId": "character--person--haus-macrell--madoc-macrell",
+      "name": "Madoc Macrell",
+      "aliases": [],
+      "worldPersonId": "person--haus-macrell--madoc-macrell",
+      "firestoreDocumentId": "person--haus-macrell--madoc-macrell",
+      "firestoreDocumentIds": [
+        "person--haus-macrell--madoc-macrell"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-macrell",
+        "label": "Haus Macrell"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-macrell/madoc-macrell--person--haus-macrell--madoc-macrell/character.json",
+      "contentHash": "758643d80311f5cc5e182c7936cc9aba97397f4597f918604aa93a4e9dfc74d7"
+    },
+    {
+      "recordId": "character--person--haus-macrell--nerys-macrell",
+      "name": "Nerys Macrell",
+      "aliases": [],
+      "worldPersonId": "person--haus-macrell--nerys-macrell",
+      "firestoreDocumentId": "person--haus-macrell--nerys-macrell",
+      "firestoreDocumentIds": [
+        "person--haus-macrell--nerys-macrell"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-macrell",
+        "label": "Haus Macrell"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-macrell/nerys-macrell--person--haus-macrell--nerys-macrell/character.json",
+      "contentHash": "2fa5297c8dd667573ad054d5ffeac84d543e7cf8e905fe82031fc8dade878b21"
+    },
+    {
+      "recordId": "character--person--haus-hwylbren--morfudd-hwylbren",
+      "name": "Morfudd Hwylbren",
+      "aliases": [],
+      "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+      "firestoreDocumentId": "person--haus-hwylbren--morfudd-hwylbren",
+      "firestoreDocumentIds": [
+        "person--haus-hwylbren--morfudd-hwylbren"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-hwylbren",
+        "label": "Familie Hwylbren"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-hwylbren/morfudd-hwylbren--person--haus-hwylbren--morfudd-hwylbren/character.json",
+      "contentHash": "d0aae4d8b4008d44e3210fecf9e4251ab02291937e9af529ba91b1f29f931189"
+    },
+    {
+      "recordId": "character--person--haus-hwylbren--gwrgan-hwylbren",
+      "name": "Gwrgan Hwylbren",
+      "aliases": [],
+      "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren",
+      "firestoreDocumentId": "person--haus-hwylbren--gwrgan-hwylbren",
+      "firestoreDocumentIds": [
+        "person--haus-hwylbren--gwrgan-hwylbren"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-hwylbren",
+        "label": "Familie Hwylbren"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-hwylbren/gwrgan-hwylbren--person--haus-hwylbren--gwrgan-hwylbren/character.json",
+      "contentHash": "759c455ae8c4f3807c8f1956281b33eec7463171b05aa5cb2797bfd574aa0fd8"
+    },
+    {
+      "recordId": "character--person--haus-hwylbren--heulwen-hwylbren",
+      "name": "Heulwen Hwylbren",
+      "aliases": [],
+      "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren",
+      "firestoreDocumentId": "person--haus-hwylbren--heulwen-hwylbren",
+      "firestoreDocumentIds": [
+        "person--haus-hwylbren--heulwen-hwylbren"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-hwylbren",
+        "label": "Familie Hwylbren"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-hwylbren/heulwen-hwylbren--person--haus-hwylbren--heulwen-hwylbren/character.json",
+      "contentHash": "fb8cd376ce6ca990e4f3e26a831dd4da6c128be4e8d9a60cd7cc00d709039c04"
     }
   ]
 }

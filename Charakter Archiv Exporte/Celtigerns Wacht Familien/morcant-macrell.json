@@ -1,0 +1,49 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/morcant-macrell.json",
+  "character": {
+    "id": "person--haus-macrell--morcant-macrell",
+    "name": "Morcant Macrell",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+    "bio": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morcant Macrell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morcant Macrell"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Macrell"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Morcant ist als Angehöriger des Hauses Macrell überliefert. Ein Amt und seine genaue Stellung in der Familienlinie sind offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Haus Macrell",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=morcant-macrell"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-macrell--morcant-macrell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-macrell--morcant-macrell"
+    },
+    "archived": false
+  }
+}

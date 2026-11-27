@@ -81,10 +81,10 @@ test('Unterherrschaften führen alle eigenen registrierten Häuser, ohne ihre kl
   assert.deepEqual(ids(dispossessed.cards), ['haus-skellor']);
 });
 
-test('Ritterfürsten zeigen ihre belegten Vasallen direkt auf der eigenen Herrschaftsseite', () => {
+test('Ritterfürsten zeigen die ihrer Herrschaft zugeordneten Häuser und Familien', () => {
   for (const [key, expected] of [
-    ['gafyr', ['chamois','gafyr','gostyn','tlawd']],
-    ['saethwyr', ['chwedlonol','eneiniog','saethwyr']],
+    ['gafyr', ['caws','chamois','gafyr','gofal','gostyn','mur','tlawd']],
+    ['saethwyr', ['chwedlonol','eneiniog','hwylbren','macrell','penwaig','saethwyr']],
     ['wyrm', ['argall','blevis','brogar','cludwyr','crewe','glyn','jernigan','loer','rhyddid','talfryn','tarw','tynged','wyrm']],
   ]) {
     const cards = territories[key].filter(section => section.title !== 'Ausgestoßene Häuser').flatMap(section => section.cards);

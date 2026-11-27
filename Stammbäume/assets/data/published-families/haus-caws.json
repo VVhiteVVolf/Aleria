@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-caws",
+  "revision": 1,
+  "updatedAt": "2026-11-27T19:16:12.627Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-caws",
+      "title": "Familie Caws",
+      "motto": "",
+      "description": "Wohlhabende Bürgerfamilie mit eigenem Ziegenhof und Käserei im Herrschaftsgebiet der Gafyr. Goronvy Caws ist Familienoberhaupt und Käsemeister.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-emblem.jpeg",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Ziegenhof im Herrschaftsgebiet der Gafyr",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-caws-gruender",
+        "worldPersonId": "person--haus-caws--haus-caws-gruender",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-caws",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "haus-caws-gruenderin",
+        "worldPersonId": "person--haus-caws--haus-caws-gruenderin",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-caws",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "goronvy-caws",
+        "worldPersonId": "person--haus-caws--goronvy-caws",
+        "name": "Goronvy Caws",
+        "title": "Familienoberhaupt · Käsemeister",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-caws/goronvy-caws.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-caws",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Goronvy Caws führt die Familie und ist Käsemeister. Bedwyr und Morys sind seine Söhne, Eirwyn ist seine Enkelin.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "bedwyr-caws",
+        "worldPersonId": "person--haus-caws--bedwyr-caws",
+        "name": "Bedwyr Caws",
+        "title": "Ältester Sohn · Ziegenhof",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-caws",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "morys-caws",
+        "worldPersonId": "person--haus-caws--morys-caws",
+        "name": "Morys Caws",
+        "title": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-caws/morys-caws.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-caws",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "eirwyn-caws",
+        "worldPersonId": "person--haus-caws--eirwyn-caws",
+        "name": "Eirwyn Caws",
+        "title": "Tochter von Bedwyr Caws",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-caws",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eirwyn ist die Tochter Bedwyrs und Enkelin Goronvys. Ihr Porträt zeigt sie mit einem Laib Käse. Ein eigener Amtstitel ist offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-caws-founders",
+        "participantIds": [
+          "haus-caws-gruender",
+          "haus-caws-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Platzhalter für die offene Gründergeneration.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-bedwyr-caws",
+        "childId": "bedwyr-caws",
+        "parentIds": [
+          "goronvy-caws"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-morys-caws",
+        "childId": "morys-caws",
+        "parentIds": [
+          "goronvy-caws"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eirwyn-caws",
+        "childId": "eirwyn-caws",
+        "parentIds": [
+          "bedwyr-caws"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-caws",
+        "name": "Familie Caws",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-emblem.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-caws-unrecorded-generations",
+        "parentPartnershipId": "marriage-haus-caws-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "goronvy-caws"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "Ältere Generationen und Verbindungen offen",
+        "notes": "Die einzelnen Karten hinter der Lücke sind die Ansatzpunkte der belegten Linien und der noch nicht zugeordneten Angehörigen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-caws-founders",
+      "houseId": "house-caws",
+      "crestSubtitle": "Bürgerfamilie",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-caws-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceRevision": 1,
+      "authoredOn": "2026-11-27",
+      "sourceNote": "Die Bildbeschriftungen belegen Goronvys Söhne Bedwyr und Morys sowie Bedwyrs Tochter Eirwyn. Weitere Elternteile und Eheschließungen sind offen.",
+      "chartAlignLineageOriginOverPersonId": "goronvy-caws",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 1,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Caws",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-hausfigur-v1.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Wohlhabende Bürgerfamilie mit eigenem Ziegenhof und Käserei im Herrschaftsgebiet der Gafyr. Goronvy Caws ist Familienoberhaupt und Käsemeister.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Caws"
+          ],
+          [
+            "Rang",
+            "Bürgerliche Familie"
+          ],
+          [
+            "Stammsitz",
+            "Ziegenhof im Herrschaftsgebiet der Gafyr"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Goronvy Caws"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-emblem.jpeg",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Wohlhabende Bürgerfamilie mit eigenem Ziegenhof und Käserei im Herrschaftsgebiet der Gafyr. Goronvy Caws ist Familienoberhaupt und Käsemeister.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [
+            "Ziegenzucht und Käseproduktion",
+            "Morys Caws als Küchenmeister des Hauses Gafyr"
+          ],
+          "historyTitle": "Geschichte",
+          "historyText": "Die Caws verbinden Ziegenzucht und Käsehandwerk seit Generationen. Ihr Käse ist auch außerhalb des Herrschaftsgebiets geschätzt.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Familienrezepte, Gastfreundschaft und die Verbundenheit mit dem ländlichen Handwerk prägen das Hausleben."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Eigener Ziegenhof mit angeschlossener Käserei im Herrschaftsgebiet der Gafyr."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Caws/caws-emblem.jpeg",
+              "title": "Familie Caws · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caws"
+            },
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+              "title": "Haus Gafyr",
+              "text": "Ziegenzucht und Käserei im Gebiet der Gafyr",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gafyr"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

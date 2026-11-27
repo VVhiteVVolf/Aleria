@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-hwylbren--morfudd-hwylbren",
+  "slug": "morfudd-hwylbren",
+  "identity": {
+    "name": "Morfudd Hwylbren",
+    "aliases": [],
+    "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-hwylbren",
+      "label": "Familie Hwylbren"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-hwylbren",
+        "familyTitle": "Familie Hwylbren",
+        "personId": "morfudd-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+        "houseId": "house-hwylbren",
+        "houseName": "Familie Hwylbren",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Morfudd Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-hwylbren--morfudd-hwylbren",
+      "documentIds": [
+        "person--haus-hwylbren--morfudd-hwylbren"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-hwylbren--morfudd-hwylbren",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-hwylbren",
+        "personId": "morfudd-hwylbren",
+        "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/morfudd-hwylbren.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-hwylbren--morfudd-hwylbren"
+    ],
+    "contentHash": "d0aae4d8b4008d44e3210fecf9e4251ab02291937e9af529ba91b1f29f931189"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-hwylbren--morfudd-hwylbren",
+        "name": "Morfudd Hwylbren",
+        "title": "",
+        "gender": "female",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+        "bio": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Morfudd Hwylbren",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Morfudd Hwylbren"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Hwylbren"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Hwylbren",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=morfudd-hwylbren"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-hwylbren--morfudd-hwylbren",
+    "name": "Morfudd Hwylbren",
+    "title": "",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+    "bio": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morfudd Hwylbren",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morfudd Hwylbren"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Hwylbren"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Morfudd ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer Näharbeit am Segeltuch.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Hwylbren",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=morfudd-hwylbren"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-hwylbren--morfudd-hwylbren",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-hwylbren",
+      "houseName": "Familie Hwylbren",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-hwylbren",
+          "personId": "morfudd-hwylbren",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Morfudd Hwylbren\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"unknown\",\"houseId\":\"house-hwylbren\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

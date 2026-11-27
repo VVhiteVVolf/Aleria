@@ -48,7 +48,8 @@
       },
       "court": [
         {
-          "role": "Vogt"
+          "role": "Vogt",
+          "note": "99 Jahre"
         },
         {
           "role": "Schatzmeister"
@@ -146,6 +147,11 @@
           "area": "militaer",
           "slot": "wachkommandant",
           "holder": "person--haus-arth--melyn-arth"
+        },
+        {
+          "area": "hof",
+          "slot": "vogt",
+          "holder": "person--haus-penwaig--merfyn-penwaig"
         }
       ],
       "governmentSeat": "Gwynthor",
@@ -544,6 +550,12 @@
           "detail": "Kommandantin der Saethwyr-Truppen"
         },
         {
+          "id": "person--haus-macrell--nerys-macrell",
+          "kind": "service",
+          "family": "Haus Macrell",
+          "detail": "An Bord von Arian Saethwyr"
+        },
+        {
           "id": "person--haus-marwolaeth--jenniffer-marwolaeth",
           "kind": "house",
           "family": "Haus Saethwyr",
@@ -572,6 +584,53 @@
           "kind": "house",
           "family": "Haus Saethwyr",
           "detail": "Belegtes Ratsamt"
+        },
+        {
+          "id": "person--haus-penwaig--merfyn-penwaig",
+          "kind": "service",
+          "family": "Familie Penwaig",
+          "detail": "Belegtes Hofamt"
+        },
+        {
+          "id": "person--haus-penwaig--einion-penwaig",
+          "kind": "family",
+          "family": "Familie Penwaig",
+          "detail": "in seinen Siebzigern"
+        },
+        {
+          "id": "person--haus-penwaig--bledri-penwaig",
+          "kind": "family",
+          "family": "Familie Penwaig"
+        },
+        {
+          "id": "person--haus-penwaig--mererid-penwaig",
+          "kind": "family",
+          "family": "Familie Penwaig"
+        },
+        {
+          "id": "person--haus-macrell--morcant-macrell",
+          "kind": "family",
+          "family": "Haus Macrell"
+        },
+        {
+          "id": "person--haus-macrell--madoc-macrell",
+          "kind": "family",
+          "family": "Haus Macrell"
+        },
+        {
+          "id": "person--haus-hwylbren--morfudd-hwylbren",
+          "kind": "family",
+          "family": "Familie Hwylbren"
+        },
+        {
+          "id": "person--haus-hwylbren--gwrgan-hwylbren",
+          "kind": "family",
+          "family": "Familie Hwylbren"
+        },
+        {
+          "id": "person--haus-hwylbren--heulwen-hwylbren",
+          "kind": "family",
+          "family": "Familie Hwylbren"
         }
       ]
     },
@@ -728,6 +787,27 @@
           "area": "unterhaltung",
           "slot": "hofbarde",
           "holder": "person--haus-chamois--lleirys-chamois"
+        },
+        {
+          "area": "hof",
+          "slot": "kueche",
+          "holder": "person--haus-caws--morys-caws"
+        },
+        {
+          "area": "hof-hausmacht",
+          "slot": "hauptmann-hausmacht",
+          "holder": "person--haus-mur--gwaywddur-mur"
+        },
+        {
+          "area": "hof",
+          "slot": "zofe",
+          "title": "Oberste Zofe",
+          "holder": "person--haus-gofal--luned-gofal"
+        },
+        {
+          "area": "hof-vogt",
+          "slot": "zofenstelle",
+          "holder": "person--haus-gofal--eluned-gofal"
         }
       ],
       "governmentSeat": "Gwynthor",
@@ -1173,6 +1253,66 @@
           "kind": "house",
           "family": "Haus Gafyr",
           "detail": "Belegtes Ratsamt"
+        },
+        {
+          "id": "person--haus-caws--morys-caws",
+          "kind": "service",
+          "family": "Familie Caws",
+          "detail": "Belegtes Hofamt"
+        },
+        {
+          "id": "person--haus-mur--gwaywddur-mur",
+          "kind": "service",
+          "family": "Familie Mur",
+          "detail": "Belegtes Hofamt"
+        },
+        {
+          "id": "person--haus-gofal--luned-gofal",
+          "kind": "service",
+          "family": "Familie Gofal",
+          "detail": "Belegtes Hofamt"
+        },
+        {
+          "id": "person--haus-gofal--eluned-gofal",
+          "kind": "service",
+          "family": "Familie Gofal",
+          "detail": "Belegtes Hofamt"
+        },
+        {
+          "id": "person--haus-mur--tarian-mur",
+          "kind": "family",
+          "family": "Familie Mur",
+          "detail": "Sohn von Gwaywddur Mur"
+        },
+        {
+          "id": "person--haus-mur--rhydwyn-mur",
+          "kind": "family",
+          "family": "Familie Mur",
+          "detail": "Enkel von Gwaywddur Mur"
+        },
+        {
+          "id": "person--haus-gofal--mared-gofal",
+          "kind": "family",
+          "family": "Familie Gofal",
+          "detail": "Vogtamt bei Haus Gafyr offen"
+        },
+        {
+          "id": "person--haus-caws--goronvy-caws",
+          "kind": "family",
+          "family": "Familie Caws",
+          "detail": "Familienoberhaupt · Käsemeister"
+        },
+        {
+          "id": "person--haus-caws--bedwyr-caws",
+          "kind": "family",
+          "family": "Familie Caws",
+          "detail": "Ältester Sohn · Ziegenhof"
+        },
+        {
+          "id": "person--haus-caws--eirwyn-caws",
+          "kind": "family",
+          "family": "Familie Caws",
+          "detail": "Tochter von Bedwyr Caws"
         }
       ]
     },
@@ -58892,6 +59032,96 @@
       ]
     },
     {
+      "id": "person--haus-mur--gwaywddur-mur",
+      "family": "Familie Mur",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Gafyr"
+      ]
+    },
+    {
+      "id": "person--haus-gofal--luned-gofal",
+      "family": "Familie Gofal",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Gafyr"
+      ]
+    },
+    {
+      "id": "person--haus-gofal--eluned-gofal",
+      "family": "Familie Gofal",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Gafyr"
+      ]
+    },
+    {
+      "id": "person--haus-caws--goronvy-caws",
+      "family": "Familie Caws",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Gafyr"
+      ]
+    },
+    {
+      "id": "person--haus-caws--bedwyr-caws",
+      "family": "Familie Caws",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Gafyr"
+      ]
+    },
+    {
+      "id": "person--haus-caws--morys-caws",
+      "family": "Familie Caws",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Gafyr"
+      ]
+    },
+    {
+      "id": "person--haus-penwaig--merfyn-penwaig",
+      "family": "Familie Penwaig",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Saethwyr"
+      ]
+    },
+    {
+      "id": "person--haus-penwaig--einion-penwaig",
+      "family": "Familie Penwaig",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Saethwyr"
+      ]
+    },
+    {
+      "id": "person--haus-macrell--nerys-macrell",
+      "family": "Haus Macrell",
+      "regions": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Herrschaft der Saethwyr"
+      ]
+    },
+    {
       "id": "person--almanach--wjnuopliifgduhjqkjhu",
       "family": "Haus Bradrhith",
       "regions": [
@@ -84220,6 +84450,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-torawg&mode=view&person=bedwyr-morfydd-torawg-spouse"
     },
     {
+      "id": "person--haus-caws--bedwyr-caws",
+      "name": "Bedwyr Caws",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=bedwyr-caws"
+    },
+    {
       "id": "person--haus-garrael--bedwyr-garrael",
       "name": "Bedwyr Garrael",
       "portrait": "/Stammbäume/assets/images/portraits/haus-garrael/bedwyr-garrael.jpg",
@@ -84876,6 +85115,15 @@
       "age": 77,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-aelmor&mode=view&person=bledri-aelmor"
+    },
+    {
+      "id": "person--haus-penwaig--bledri-penwaig",
+      "name": "Bledri Penwaig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=bledri-penwaig"
     },
     {
       "id": "person--haus-twyllod--bledri-twyllod",
@@ -93647,6 +93895,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-tlawd&mode=view&person=einion"
     },
     {
+      "id": "person--haus-penwaig--einion-penwaig",
+      "name": "Einion Penwaig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=einion-penwaig"
+    },
+    {
       "id": "person--family-tree--eira-spouse-maerllys",
       "name": "Eira",
       "portrait": "/Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png",
@@ -94041,6 +94298,15 @@
       "age": 19,
       "relationship": "single",
       "href": "/Stammbäume/Stammbaum.html?family=haus-curiad&mode=view&person=eirweth-curiad"
+    },
+    {
+      "id": "person--haus-caws--eirwyn-caws",
+      "name": "Eirwyn Caws",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caws/eirwyn-caws.jpeg",
+      "sex": "female",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=eirwyn-caws"
     },
     {
       "id": "person--haus-eirth--eirwyn-eirth",
@@ -94853,6 +95119,15 @@
       "age": 20,
       "relationship": "single",
       "href": "/Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=eluned-falchdyn"
+    },
+    {
+      "id": "person--haus-gofal--eluned-gofal",
+      "name": "Eluned Gofal",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+      "sex": "female",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal"
     },
     {
       "id": "person--haus-gofrann--eluned-gofrann",
@@ -100169,6 +100444,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-luthsach&mode=view&person=gormlaith-1674-luthsach"
     },
     {
+      "id": "person--haus-caws--goronvy-caws",
+      "name": "Goronvy Caws",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caws/goronvy-caws.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=goronvy-caws"
+    },
+    {
       "id": "person--haus-aelmor--goronwy-aelmor",
       "name": "Goronwy Aelmor",
       "portrait": "",
@@ -101148,6 +101432,15 @@
       "age": 41,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=gwawr-saethwyr"
+    },
+    {
+      "id": "person--haus-mur--gwaywddur-mur",
+      "name": "Gwaywddur Mur",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=gwaywddur-mur"
     },
     {
       "id": "person--haus-brandyddyn--gweirfan-brandyddyn",
@@ -102274,6 +102567,15 @@
       "age": 43,
       "relationship": "unknown",
       "href": "/Stammbäume/Stammbaum.html?family=haus-cochdon&mode=view&person=gwrgan-cochdon"
+    },
+    {
+      "id": "person--haus-hwylbren--gwrgan-hwylbren",
+      "name": "Gwrgan Hwylbren",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=gwrgan-hwylbren"
     },
     {
       "id": "person--haus-brandyddyn--gwrgant-brandyddyn",
@@ -104039,6 +104341,15 @@
       "age": 37,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-gwregysdu&mode=view&person=heulwen-gwregysdu"
+    },
+    {
+      "id": "person--haus-hwylbren--heulwen-hwylbren",
+      "name": "Heulwen Hwylbren",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+      "sex": "female",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=heulwen-hwylbren"
     },
     {
       "id": "person--haus-lyfant-caer-asgwrn--heulwen-lyfant",
@@ -112022,6 +112333,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-eiddfer&mode=view&person=luned-eiddfer"
     },
     {
+      "id": "person--haus-gofal--luned-gofal",
+      "name": "Luned Gofal",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+      "sex": "female",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=luned-gofal"
+    },
+    {
       "id": "person--haus-morglan--luned-morglan",
       "name": "Luned Morglan",
       "portrait": "",
@@ -112551,6 +112871,15 @@
       "age": 36,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-gofrann&mode=view&person=madoc-gofrann"
+    },
+    {
+      "id": "person--haus-macrell--madoc-macrell",
+      "name": "Madoc Macrell",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=madoc-macrell"
     },
     {
       "id": "person--haus-tonnarth--madoc-tonnarth",
@@ -113727,6 +114056,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=craigddu-gruenderin"
     },
     {
+      "id": "person--haus-gofal--mared-gofal",
+      "name": "Mared Gofal",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=mared-gofal"
+    },
+    {
       "id": "person--haus-gwregysdu--mared-gwregysdu",
       "name": "Mared Gwregysdu",
       "portrait": "/AleriaAlmanach/assets/gwregysdu-harbor/portraits/mared.png",
@@ -114883,6 +115221,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meredydd-gwyllach"
     },
     {
+      "id": "person--haus-penwaig--mererid-penwaig",
+      "name": "Mererid Penwaig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=mererid-penwaig"
+    },
+    {
       "id": "person--haus-mathgraig--merfyn-ffraid-mathgraig-spouse",
       "name": "Merfyn",
       "portrait": "",
@@ -114926,6 +115273,15 @@
       "age": 55,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-morgwynt&mode=view&person=merfyn-morgwynt"
+    },
+    {
+      "id": "person--haus-penwaig--merfyn-penwaig",
+      "name": "Merfyn Penwaig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+      "sex": "male",
+      "age": 99,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig"
     },
     {
       "id": "person--haus-gruenhand--meriadan-gruenhand",
@@ -115613,6 +115969,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-gwaedlyd-tredegar&mode=view&person=morcant-gwaedlyd"
     },
     {
+      "id": "person--haus-macrell--morcant-macrell",
+      "name": "Morcant Macrell",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-macrell/morcant-macrell.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=morcant-macrell"
+    },
+    {
       "id": "person--haus-sgwarnog--morcant-sgwarnog",
       "name": "Morcant Sgwarnog",
       "portrait": "/Stammbäume/assets/images/portraits/haus-grawn/morcant-sgwarnog.jpg",
@@ -115692,6 +116057,15 @@
       "age": 64,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=morfudd-gwialen"
+    },
+    {
+      "id": "person--haus-hwylbren--morfudd-hwylbren",
+      "name": "Morfudd Hwylbren",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-hwylbren/morfudd-hwylbren.jpeg",
+      "sex": "female",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=morfudd-hwylbren"
     },
     {
       "id": "person--haus-ymladd--morfudd-ymladd",
@@ -116035,6 +116409,15 @@
       "age": 11,
       "relationship": "single",
       "href": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view&person=morwyn-illewod"
+    },
+    {
+      "id": "person--haus-caws--morys-caws",
+      "name": "Morys Caws",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws"
     },
     {
       "id": "person--haus-cumhail--mughna-1724-cumhail",
@@ -117225,6 +117608,15 @@
       "age": 37,
       "relationship": "single",
       "href": "/Stammbäume/Stammbaum.html?family=haus-ddraenen&mode=view&person=nerys-ddraenen"
+    },
+    {
+      "id": "person--haus-macrell--nerys-macrell",
+      "name": "Nerys Macrell",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+      "sex": "female",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=nerys-macrell"
     },
     {
       "id": "person--melog--person-5b669286",
@@ -122789,6 +123181,15 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll"
     },
     {
+      "id": "person--haus-mur--rhydwyn-mur",
+      "name": "Rhydwyn Mur",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=rhydwyn-mur"
+    },
+    {
       "id": "person--haus-brandyddyn--rhyfelen-brandyddyn",
       "name": "Rhyfelen Brândyddyn",
       "portrait": "",
@@ -127642,6 +128043,15 @@
       "age": 46,
       "relationship": "married",
       "href": "/Stammbäume/Stammbaum.html?family=haus-illygoden-tredegar&mode=view&person=taredd-illygoden"
+    },
+    {
+      "id": "person--haus-mur--tarian-mur",
+      "name": "Tarian Mur",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-mur/tarian-mur.jpeg",
+      "sex": "male",
+      "age": null,
+      "relationship": "unknown",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=tarian-mur"
     },
     {
       "id": "person--haus-karreg--tarkarn-karreg",

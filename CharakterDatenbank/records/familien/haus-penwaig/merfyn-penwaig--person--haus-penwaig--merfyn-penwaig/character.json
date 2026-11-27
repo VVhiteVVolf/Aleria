@@ -1,0 +1,227 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-penwaig--merfyn-penwaig",
+  "slug": "merfyn-penwaig",
+  "identity": {
+    "name": "Merfyn Penwaig",
+    "aliases": [],
+    "worldPersonId": "person--haus-penwaig--merfyn-penwaig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-penwaig",
+      "label": "Familie Penwaig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-penwaig",
+        "familyTitle": "Familie Penwaig",
+        "personId": "merfyn-penwaig",
+        "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Merfyn Penwaig\",\"title\":\"Vogt des Hauses Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-penwaig--merfyn-penwaig",
+      "documentIds": [
+        "person--haus-penwaig--merfyn-penwaig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-penwaig--merfyn-penwaig",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-penwaig",
+        "personId": "merfyn-penwaig",
+        "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/merfyn-penwaig.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-penwaig--merfyn-penwaig"
+    ],
+    "contentHash": "c6aea3916c2b9647f918d5c92bc59c083be6e7f5ae6dbd6691383ffbf2372d89"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-penwaig--merfyn-penwaig",
+        "name": "Merfyn Penwaig",
+        "title": "Vogt des Hauses Saethwyr",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+        "bio": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Merfyn Penwaig",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Merfyn Penwaig"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Penwaig"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Vogt des Hauses Saethwyr"
+            },
+            {
+              "label": "Alter",
+              "value": "99 Jahre"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+            "biographyTitle": "Vogt des Hauses Saethwyr",
+            "biographyText": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Penwaig",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-penwaig--merfyn-penwaig"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-penwaig--merfyn-penwaig"
+        },
+        "age": 99,
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-penwaig--merfyn-penwaig",
+    "name": "Merfyn Penwaig",
+    "title": "Vogt des Hauses Saethwyr",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+    "bio": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Merfyn Penwaig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Merfyn Penwaig"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Penwaig"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Vogt des Hauses Saethwyr"
+        },
+        {
+          "label": "Alter",
+          "value": "99 Jahre"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+        "biographyTitle": "Vogt des Hauses Saethwyr",
+        "biographyText": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Penwaig",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-penwaig--merfyn-penwaig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-penwaig",
+      "houseName": "Familie Penwaig",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-penwaig",
+          "personId": "merfyn-penwaig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Merfyn Penwaig\",\"title\":\"Vogt des Hauses Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "age": 99,
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

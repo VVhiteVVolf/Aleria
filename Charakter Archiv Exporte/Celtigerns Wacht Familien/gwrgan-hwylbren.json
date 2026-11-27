@@ -1,0 +1,49 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/gwrgan-hwylbren.json",
+  "character": {
+    "id": "person--haus-hwylbren--gwrgan-hwylbren",
+    "name": "Gwrgan Hwylbren",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+    "bio": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Gwrgan Hwylbren",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Gwrgan Hwylbren"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Hwylbren"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/gwrgan-hwylbren.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Gwrgan ist als Angehöriger der Hwylbrens überliefert. Sein Porträt zeigt ihn mit einem Zirkel über dem Entwurf eines Segels.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Hwylbren",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=gwrgan-hwylbren"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-hwylbren--gwrgan-hwylbren"
+    },
+    "archived": false
+  }
+}

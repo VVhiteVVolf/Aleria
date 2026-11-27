@@ -68,6 +68,7 @@ import { HOUSE_BIELLE_FAMILY, HOUSE_DESELE_FAMILY } from './brevanor-desele-biel
 import { HOUSE_LOTHAIRE_FAMILY } from './house-lothaire-family.js';
 import { HOUSE_VALERUS_FAMILY } from './house-valerus-family.js';
 import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from './gwynthor-small-households.js';
+import { CELTIGERNS_WACHT_SERVICE_FAMILIES } from './celtigerns-wacht-families/family-records.js';
 import { GWYNTHOR_ERBSTREIT_FAMILIES } from './gwynthor-erbstreit/family-records.js';
 import { GWYNTHOR_FLEISCHSAMMLER_FAMILIES } from './gwynthor-fleischsammler/family-records.js';
 import { SEPT_CNEACAIL_FAMILY } from './sept-cneacail-family.js';
@@ -451,6 +452,12 @@ export const FAMILY_REGISTRY = Object.freeze([
   familyRecord({ id: 'haus-lothaire', title: 'Haus Lothaire', family: HOUSE_LOTHAIRE_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-valerus', title: 'Haus Valerus', family: HOUSE_VALERUS_FAMILY, type: 'commoner' }),
   ...GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES.map(family => familyRecord({ id: family.document.id, title: family.document.title, family, type: 'commoner' })),
+  ...CELTIGERNS_WACHT_SERVICE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'commoner' ? 'commoner' : 'lower-nobility'
+  })),
   familyRecord({
     id: 'haus-bradrhith',
     title: 'Haus Bradrhith',

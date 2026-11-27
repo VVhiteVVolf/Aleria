@@ -10,6 +10,7 @@ export const PERSONAL_SERVICE = {
   ],
   saethwyr: [
     ['haus-saethwyr', 'melyn-arth', 'Melyn Saethwyr', 'Kommandantin der Saethwyr-Truppen'],
+    ['haus-macrell', 'nerys-macrell', 'Nerys Macrell', 'An Bord von Arian Saethwyr'],
   ],
 };
 
@@ -54,6 +55,13 @@ export const TERRITORIAL_NAME_NOTES = {
 
 export const COURT_NAME_NOTES = {
   'saethwyr/Kommandant der Garde': 'Die Hofliste nennt Melyn Saethwyr mit offener Identitätszuordnung. Ihre Personenakte belegt den Truppenbefehl unter dem Marschall.',
+};
+
+// These house-page roles belong to an existing subordinate post in the workbench.
+export const COURT_STAFF_POSITIONS = {
+  'gafyr/haus-mur/gwaywddur-mur': { area: 'hof-hausmacht', slot: 'hauptmann-hausmacht' },
+  'gafyr/haus-gofal/luned-gofal': { area: 'hof', slot: 'zofe', title: 'Oberste Zofe' },
+  'gafyr/haus-gofal/eluned-gofal': { area: 'hof-vogt', slot: 'zofenstelle' },
 };
 
 // The public town records identify these additional local officeholders.

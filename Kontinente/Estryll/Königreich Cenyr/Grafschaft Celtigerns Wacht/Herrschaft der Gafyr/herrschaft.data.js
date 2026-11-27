@@ -40,6 +40,24 @@
         rank: "Einfache Ritterfamilie",
       }),
     ]),
+    data.familySection("Bürgerliche Familien", [
+      data.family("Mur", {
+        familyId: "haus-mur", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Bürgerliche/Gwynthor/Mur/mur-emblem.jpeg`,
+        rank: "Bürgerliche Familie",
+      }),
+      data.family("Gofal", {
+        familyId: "haus-gofal", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Bürgerliche/Gwynthor/Gofal/gofal-emblem.png`,
+        rank: "Bürgerliche Familie",
+      }),
+      data.family("Caws", {
+        familyId: "haus-caws", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Bürgerliche/Gwynthor/Caws/caws-emblem.jpeg`,
+        seat: "Ziegenhof im Gebiet der Gafyr",
+        rank: "Bürgerliche Familie",
+      }),
+    ]),
     data.familySection("Ausgestoßene Häuser", [
       data.family("Bwach", {
         familyId: "haus-bwach", housePage: "kleinehaeuser.html",

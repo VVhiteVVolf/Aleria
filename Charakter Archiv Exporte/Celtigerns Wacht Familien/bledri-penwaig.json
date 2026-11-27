@@ -1,0 +1,49 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/bledri-penwaig.json",
+  "character": {
+    "id": "person--haus-penwaig--bledri-penwaig",
+    "name": "Bledri Penwaig",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+    "bio": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Bledri Penwaig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Bledri Penwaig"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Penwaig"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Penwaig",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=bledri-penwaig"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-penwaig--bledri-penwaig"
+    },
+    "archived": false
+  }
+}

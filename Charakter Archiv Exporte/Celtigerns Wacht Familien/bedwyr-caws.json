@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/bedwyr-caws.json",
+  "character": {
+    "id": "person--haus-caws--bedwyr-caws",
+    "name": "Bedwyr Caws",
+    "title": "Ältester Sohn · Ziegenhof",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+    "bio": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Bedwyr Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Bedwyr Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Ältester Sohn · Ziegenhof"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/bedwyr-caws.jpeg",
+        "biographyTitle": "Ältester Sohn · Ziegenhof",
+        "biographyText": "Bedwyr ist Goronvys ältester Sohn und mit dem Ziegenhof der Familie verbunden. Eirwyn ist seine Tochter.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=bedwyr-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--bedwyr-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--bedwyr-caws"
+    },
+    "archived": false
+  }
+}

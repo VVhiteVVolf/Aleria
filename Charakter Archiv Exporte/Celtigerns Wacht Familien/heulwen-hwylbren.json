@@ -1,0 +1,49 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/heulwen-hwylbren.json",
+  "character": {
+    "id": "person--haus-hwylbren--heulwen-hwylbren",
+    "name": "Heulwen Hwylbren",
+    "title": "",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+    "bio": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Heulwen Hwylbren",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Heulwen Hwylbren"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Hwylbren"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-hwylbren/heulwen-hwylbren.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Heulwen ist als Angehörige der Hwylbrens überliefert. Ihr Porträt zeigt sie bei einer heraldischen Stickarbeit.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Hwylbren",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-hwylbren&mode=view&person=heulwen-hwylbren"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-hwylbren--heulwen-hwylbren"
+    },
+    "archived": false
+  }
+}

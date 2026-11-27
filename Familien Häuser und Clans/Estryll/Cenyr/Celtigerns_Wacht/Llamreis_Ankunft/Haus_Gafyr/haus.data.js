@@ -250,9 +250,9 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "hof-offices-11": {
-      "src": "../Stammbäume/assets/images/placeholders/male.png",
-      "href": "",
-      "alt": "Silhouette · Küchenmeister nicht benannt",
+      "src": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws",
+      "alt": "Morys Caws",
       "format": "portrait"
     },
     "hof-offices-12": {
@@ -307,6 +307,24 @@ window.HAEUSER_DATA = {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "",
       "alt": "Silhouette · Zwingermeister nicht benannt",
+      "format": "portrait"
+    },
+    "hof-offices-21": {
+      "src": "../Stammbäume/assets/images/portraits/haus-mur/gwaywddur-mur.jpeg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-mur&mode=view&person=gwaywddur-mur",
+      "alt": "Gwaywddur Mur",
+      "format": "portrait"
+    },
+    "hof-offices-22": {
+      "src": "../Stammbäume/assets/images/portraits/haus-gofal/luned-gofal.jpeg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gofal&mode=view&person=luned-gofal",
+      "alt": "Luned Gofal",
+      "format": "portrait"
+    },
+    "hof-offices-23": {
+      "src": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal",
+      "alt": "Eluned Gofal",
       "format": "portrait"
     },
     "haus-figur-1": {
@@ -495,10 +513,10 @@ window.HAEUSER_DATA = {
             "imageKey": "hof-offices-10"
           },
           {
-            "name": "Nicht benannt",
+            "name": "Morys Caws",
             "role": "Küchenmeister",
             "detail": "",
-            "href": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws",
             "imageKey": "hof-offices-11"
           },
           {
@@ -563,6 +581,27 @@ window.HAEUSER_DATA = {
             "detail": "",
             "href": "",
             "imageKey": "hof-offices-20"
+          },
+          {
+            "name": "Gwaywddur Mur",
+            "role": "Hauptmann",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-mur&mode=view&person=gwaywddur-mur",
+            "imageKey": "hof-offices-21"
+          },
+          {
+            "name": "Luned Gofal",
+            "role": "Oberste Zofe",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gofal&mode=view&person=luned-gofal",
+            "imageKey": "hof-offices-22"
+          },
+          {
+            "name": "Eluned Gofal",
+            "role": "Zofe",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal",
+            "imageKey": "hof-offices-23"
           }
         ]
       }

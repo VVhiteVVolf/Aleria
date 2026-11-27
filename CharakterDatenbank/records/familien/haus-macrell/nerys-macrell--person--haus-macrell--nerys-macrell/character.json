@@ -1,0 +1,217 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-macrell--nerys-macrell",
+  "slug": "nerys-macrell",
+  "identity": {
+    "name": "Nerys Macrell",
+    "aliases": [],
+    "worldPersonId": "person--haus-macrell--nerys-macrell"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-macrell",
+      "label": "Haus Macrell"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-macrell",
+        "familyTitle": "Haus Macrell",
+        "personId": "nerys-macrell",
+        "worldPersonId": "person--haus-macrell--nerys-macrell",
+        "houseId": "house-macrell",
+        "houseName": "Haus Macrell",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Nerys Macrell\",\"title\":\"An Bord von Arian Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-macrell--nerys-macrell",
+      "documentIds": [
+        "person--haus-macrell--nerys-macrell"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-macrell--nerys-macrell",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-macrell",
+        "personId": "nerys-macrell",
+        "worldPersonId": "person--haus-macrell--nerys-macrell",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/nerys-macrell.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-macrell--nerys-macrell"
+    ],
+    "contentHash": "2fa5297c8dd667573ad054d5ffeac84d543e7cf8e905fe82031fc8dade878b21"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-macrell--nerys-macrell",
+        "name": "Nerys Macrell",
+        "title": "An Bord von Arian Saethwyr",
+        "gender": "female",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+        "bio": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Nerys Macrell",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Nerys Macrell"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Macrell"
+            },
+            {
+              "label": "Einordnung",
+              "value": "An Bord von Arian Saethwyr"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+            "biographyTitle": "An Bord von Arian Saethwyr",
+            "biographyText": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Haus Macrell",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=nerys-macrell"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-macrell--nerys-macrell"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-macrell--nerys-macrell"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-macrell--nerys-macrell",
+    "name": "Nerys Macrell",
+    "title": "An Bord von Arian Saethwyr",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+    "bio": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Nerys Macrell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Nerys Macrell"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Macrell"
+        },
+        {
+          "label": "Einordnung",
+          "value": "An Bord von Arian Saethwyr"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg",
+        "biographyTitle": "An Bord von Arian Saethwyr",
+        "biographyText": "Nerys wird Arians Schiff zugeordnet. Arian Saethwyr ist die Kapitänin des bestehenden Schiffskommandos. Nerys’ genauer Bordposten ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Haus Macrell",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=nerys-macrell"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-macrell--nerys-macrell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-macrell--nerys-macrell",
+      "sex": "female",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-macrell",
+      "houseName": "Haus Macrell",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-macrell",
+          "personId": "nerys-macrell",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Nerys Macrell\",\"title\":\"An Bord von Arian Saethwyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/nerys-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-macrell--madoc-macrell",
+  "slug": "madoc-macrell",
+  "identity": {
+    "name": "Madoc Macrell",
+    "aliases": [],
+    "worldPersonId": "person--haus-macrell--madoc-macrell"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-macrell",
+      "label": "Haus Macrell"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-macrell",
+        "familyTitle": "Haus Macrell",
+        "personId": "madoc-macrell",
+        "worldPersonId": "person--haus-macrell--madoc-macrell",
+        "houseId": "house-macrell",
+        "houseName": "Haus Macrell",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Madoc Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-macrell--madoc-macrell",
+      "documentIds": [
+        "person--haus-macrell--madoc-macrell"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-macrell--madoc-macrell",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-macrell",
+        "personId": "madoc-macrell",
+        "worldPersonId": "person--haus-macrell--madoc-macrell",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/madoc-macrell.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-macrell--madoc-macrell"
+    ],
+    "contentHash": "758643d80311f5cc5e182c7936cc9aba97397f4597f918604aa93a4e9dfc74d7"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-macrell--madoc-macrell",
+        "name": "Madoc Macrell",
+        "title": "",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+        "bio": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Madoc Macrell",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Madoc Macrell"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Macrell"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Haus Macrell",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=madoc-macrell"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-macrell--madoc-macrell"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-macrell--madoc-macrell"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-macrell--madoc-macrell",
+    "name": "Madoc Macrell",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+    "bio": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Madoc Macrell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Madoc Macrell"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Macrell"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Madoc ist als Angehöriger des Hauses Macrell überliefert. Die Vorlage zeigt ihn mit einer Seekarte an Bord.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Haus Macrell",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-macrell&mode=view&person=madoc-macrell"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-macrell--madoc-macrell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-macrell--madoc-macrell",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-macrell",
+      "houseName": "Haus Macrell",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-macrell",
+          "personId": "madoc-macrell",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Madoc Macrell\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-macrell\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-macrell/madoc-macrell.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

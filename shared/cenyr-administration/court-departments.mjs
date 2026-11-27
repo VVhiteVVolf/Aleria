@@ -149,7 +149,7 @@ function householdGroups(household, house) {
       ['hausknecht', 'Hausknecht', 'Übernimmt Besorgungen, Transporte und praktische Arbeiten nach Einteilung des Vogtes.', 'supplies', 'service', 4],
     ]),
     group('zofen', 'Zofen', 'hospitality', [
-      { ...maid, key: 'hof/zofe', kind: 'service', templateId: maid.title === 'Zofe' ? 'r-zofenstelle' : 'r-zofe-rianna' },
+      { ...maid, key: 'hof/zofe', kind: 'service', templateId: maid.title === 'Zofe' ? 'r-zofenstelle' : 'r-zofe-rianna', templateTitle: maid.title },
       ['zofenstelle', 'Zofe', 'Übernimmt persönliche Dienste für die anvertraute Hofangehörige.', 'hospitality', 'service', additionalMaids],
     ]),
     group('kammerdiener', 'Kammerdiener', 'hospitality', [

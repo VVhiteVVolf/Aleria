@@ -94,6 +94,14 @@ Verwaltung und die Dyarchie von Camruisge verwenden ihre eigenen Einstiege.
   „Freie Posten finden“ durchsucht alle Herrschaften nach Stelle, Haus und
   Standort und verlinkt jeden Treffer direkt. Stellen mit ausstehender
   Nachbesetzung erscheinen ebenfalls in der Suche.
+- Bei Gafyr sind die zehn bekannten Angehörigen von Mur, Gofal und Caws
+  direkt auswählbar. Bei Saethwyr sind es die zehn Angehörigen von Penwaig,
+  Macrell und Hwylbren. Die Kandidaten stammen aus den neuen Familienakten
+  und können auch bei offenem Lebensstatus als Entwurf ausgewählt werden.
+  Der Filter „Aus Familienakte“ findet die Personen mit offenen Aufgaben.
+  Die fünf belegten Hofdienste sind in der Hausmacht, in der Hofküche und
+  beim Vogt verankert. Mared Gofals Vogtamt bleibt offen. Nerys Macrells
+  Dienstbezug führt zu Arian Saethwyrs Schiff. Ihr genauer Bordposten ist offen.
 - Wiederholbare Dienste haben ihre eigene Gruppe und die Schaltfläche
   „+ Weitere Posten“. Je Vorgang können bis zu 1.000 Stellen angelegt werden.
   Weitere Vorgänge ergänzen die Gruppe. Jeder wiederholbare Posten lässt

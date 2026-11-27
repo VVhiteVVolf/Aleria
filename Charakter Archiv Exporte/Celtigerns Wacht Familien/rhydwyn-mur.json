@@ -1,0 +1,53 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-27T18:12:03Z",
+  "sourcePath": "Charakter Archiv Exporte/Celtigerns Wacht Familien/rhydwyn-mur.json",
+  "character": {
+    "id": "person--haus-mur--rhydwyn-mur",
+    "name": "Rhydwyn Mur",
+    "title": "Enkel von Gwaywddur Mur",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+    "bio": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Rhydwyn Mur",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rhydwyn Mur"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Mur"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Enkel von Gwaywddur Mur"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-mur/rhydwyn-mur.jpeg",
+        "biographyTitle": "Enkel von Gwaywddur Mur",
+        "biographyText": "Rhydwyn gehört zur Enkelgeneration von Gwaywddur Mur. Welches Kind Gwaywddurs sein Elternteil ist, bleibt offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Mur",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-mur&mode=view&person=rhydwyn-mur"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-mur--rhydwyn-mur"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-mur--rhydwyn-mur"
+    },
+    "archived": false
+  }
+}

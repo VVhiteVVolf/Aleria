@@ -1,0 +1,217 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gofal--mared-gofal",
+  "slug": "mared-gofal",
+  "identity": {
+    "name": "Mared Gofal",
+    "aliases": [],
+    "worldPersonId": "person--haus-gofal--mared-gofal"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gofal",
+      "label": "Familie Gofal"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gofal",
+        "familyTitle": "Familie Gofal",
+        "personId": "mared-gofal",
+        "worldPersonId": "person--haus-gofal--mared-gofal",
+        "houseId": "house-gofal",
+        "houseName": "Familie Gofal",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Mared Gofal\",\"title\":\"Vogtamt bei Haus Gafyr offen\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gofal--mared-gofal",
+      "documentIds": [
+        "person--haus-gofal--mared-gofal"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gofal--mared-gofal",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gofal",
+        "personId": "mared-gofal",
+        "worldPersonId": "person--haus-gofal--mared-gofal",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/mared-gofal.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-gofal--mared-gofal"
+    ],
+    "contentHash": "e547f5a33d59be683bef5601ab6bcbb3e0a2e7bdee19a473ca60a5968cc00ba1"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-gofal--mared-gofal",
+        "name": "Mared Gofal",
+        "title": "Vogtamt bei Haus Gafyr offen",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+        "bio": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Mared Gofal",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Mared Gofal"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Gofal"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Vogtamt bei Haus Gafyr offen"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+            "biographyTitle": "Vogtamt bei Haus Gafyr offen",
+            "biographyText": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Gofal",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=mared-gofal"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-gofal--mared-gofal"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-gofal--mared-gofal"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-gofal--mared-gofal",
+    "name": "Mared Gofal",
+    "title": "Vogtamt bei Haus Gafyr offen",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+    "bio": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Mared Gofal",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Mared Gofal"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gofal"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Vogtamt bei Haus Gafyr offen"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg",
+        "biographyTitle": "Vogtamt bei Haus Gafyr offen",
+        "biographyText": "Die Bildbeschriftung nennt das Vogtamt beim Haus Gafyr mit einem Fragezeichen. Mareds genauer Posten ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Gofal",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=mared-gofal"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-gofal--mared-gofal"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gofal--mared-gofal",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-gofal",
+      "houseName": "Familie Gofal",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gofal",
+          "personId": "mared-gofal",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Mared Gofal\",\"title\":\"Vogtamt bei Haus Gafyr offen\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/mared-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

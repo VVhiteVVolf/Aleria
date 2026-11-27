@@ -1,0 +1,209 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-penwaig--mererid-penwaig",
+  "slug": "mererid-penwaig",
+  "identity": {
+    "name": "Mererid Penwaig",
+    "aliases": [],
+    "worldPersonId": "person--haus-penwaig--mererid-penwaig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-penwaig",
+      "label": "Familie Penwaig"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-penwaig",
+        "familyTitle": "Familie Penwaig",
+        "personId": "mererid-penwaig",
+        "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+        "houseId": "house-penwaig",
+        "houseName": "Familie Penwaig",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Mererid Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-penwaig--mererid-penwaig",
+      "documentIds": [
+        "person--haus-penwaig--mererid-penwaig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-penwaig--mererid-penwaig",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-penwaig",
+        "personId": "mererid-penwaig",
+        "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/mererid-penwaig.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-penwaig--mererid-penwaig"
+    ],
+    "contentHash": "62aa1b110f60059de51499d3d99e3f7d880841447d9e99b7820eeda4fcf60775"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-penwaig--mererid-penwaig",
+        "name": "Mererid Penwaig",
+        "title": "",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+        "bio": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Mererid Penwaig",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Mererid Penwaig"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Penwaig"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Penwaig",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=mererid-penwaig"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-penwaig--mererid-penwaig"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-penwaig--mererid-penwaig"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-penwaig--mererid-penwaig",
+    "name": "Mererid Penwaig",
+    "title": "",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+    "bio": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Mererid Penwaig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Mererid Penwaig"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Penwaig"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Penwaig",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penwaig&mode=view&person=mererid-penwaig"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-penwaig--mererid-penwaig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "",
+      "death": "",
+      "houseId": "house-penwaig",
+      "houseName": "Familie Penwaig",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-penwaig",
+          "personId": "mererid-penwaig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Mererid Penwaig\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"unknown\",\"houseId\":\"house-penwaig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Saethwyr"
+  }
+}

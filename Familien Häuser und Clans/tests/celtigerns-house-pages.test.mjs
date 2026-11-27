@@ -9,9 +9,9 @@ import { createHousePageData, createHouseBiography } from '../modules/house-cont
 
 const definitions = [
   ['illysywen', 'Rhonwens_Traenen', 4, 2, 20],
-  ['gafyr', 'Llamreis_Ankunft', 7, 3, 20],
+  ['gafyr', 'Llamreis_Ankunft', 7, 3, 19, 23],
   ['wyrm', 'Llamreis_Ankunft', 6, 2, 20],
-  ['saethwyr', 'Llamreis_Ankunft', 8, 2, 20],
+  ['saethwyr', 'Llamreis_Ankunft', 8, 2, 19],
   ['gwefrydd', 'Artus_Streben', 9, 3, 20],
   ['gwyvern', 'Gwendolyns_Ufer', 6, 2, 13],
   ['arwydd', 'Rhonwens_Traenen', 1, 3, 20],
@@ -21,7 +21,7 @@ const treeUrl = new URL('../../Stammbäume/Stammbaum.html', import.meta.url);
 const context = vm.createContext({ window: {} });
 vm.runInContext(await readFile(new URL('../haeuser.registry.js', import.meta.url), 'utf8'), context);
 
-for (const [house, region, headCount, heirCount, silhouetteCount] of definitions) {
+for (const [house, region, headCount, heirCount, silhouetteCount, officeCount = 20] of definitions) {
   const directory = new URL(`../Estryll/Cenyr/Celtigerns_Wacht/${region}/Haus_${house[0].toUpperCase() + house.slice(1)}/`, import.meta.url);
   const { HOUSE_CONTENT: content } = await import(new URL('haus.content.mjs', directory));
   const page = createHousePageData(content);
@@ -50,7 +50,7 @@ for (const [house, region, headCount, heirCount, silhouetteCount] of definitions
   test(`${house}: vollständige Hofdaten, Silhouetten und gültige Personenlinks`, async () => {
     assert.equal(content.heads.length, headCount);
     assert.equal(content.heirs.length, heirCount);
-    assert.equal(content.offices.length, 20);
+    assert.equal(content.offices.length, officeCount);
     assert.equal(content.offices.filter(entry => entry.silhouette).length, silhouetteCount);
     for (const entry of [...content.heads, ...content.heirs, ...content.offices, ...content.figures]) {
       if (!entry.id) continue;

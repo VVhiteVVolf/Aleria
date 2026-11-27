@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-penwaig",
+  "revision": 1,
+  "updatedAt": "2026-11-27T19:16:12.627Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-penwaig",
+      "title": "Familie Penwaig",
+      "motto": "",
+      "description": "Alteingesessene Fischereifamilie im Herrschaftsgebiet der Saethwyr. Ihre Betriebe verbinden Fang, Räucherei, Salzerei und Handel.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-emblem.jpeg",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Saethwyr"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-penwaig-gruender",
+        "worldPersonId": "person--haus-penwaig--haus-penwaig-gruender",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penwaig",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "haus-penwaig-gruenderin",
+        "worldPersonId": "person--haus-penwaig--haus-penwaig-gruenderin",
+        "name": "???",
+        "title": "Gründergeneration · offen",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penwaig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Platzhalter für eine frühere Generation. Name, Lebensdaten und genaue Verbindungen sind offen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      },
+      {
+        "id": "merfyn-penwaig",
+        "worldPersonId": "person--haus-penwaig--merfyn-penwaig",
+        "name": "Merfyn Penwaig",
+        "title": "Vogt des Hauses Saethwyr",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penwaig",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merfyn ist laut Bildbeschriftung 99 Jahre alt und amtierender Vogt des Hauses Saethwyr.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127",
+          "portraitAge": 99
+        }
+      },
+      {
+        "id": "einion-penwaig",
+        "worldPersonId": "person--haus-penwaig--einion-penwaig",
+        "name": "Einion Penwaig",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-penwaig/einion-penwaig.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penwaig",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Bildbeschriftung führt Einion als Angehörigen der Familie in seinen Siebzigern. Sein heutiges Amt und seine nähere Verwandtschaft sind offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127",
+          "ageEstimate": "in seinen Siebzigern"
+        }
+      },
+      {
+        "id": "bledri-penwaig",
+        "worldPersonId": "person--haus-penwaig--bledri-penwaig",
+        "name": "Bledri Penwaig",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-penwaig/bledri-penwaig.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penwaig",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bledri ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn beim Arbeiten an einem Fischernetz.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      },
+      {
+        "id": "mererid-penwaig",
+        "worldPersonId": "person--haus-penwaig--mererid-penwaig",
+        "name": "Mererid Penwaig",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-penwaig/mererid-penwaig.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penwaig",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mererid ist als Angehöriger der Penwaigs überliefert. Das Porträt zeigt ihn mit einem Buch am Hafen. Sein Beruf ist offen.",
+        "extensions": {
+          "authoredSource": "celtigerns-wacht-families-20261127"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-penwaig-founders",
+        "participantIds": [
+          "haus-penwaig-gruender",
+          "haus-penwaig-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Platzhalter für die offene Gründergeneration.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-penwaig",
+        "name": "Familie Penwaig",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-emblem.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-penwaig-unrecorded-generations",
+        "parentPartnershipId": "marriage-haus-penwaig-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "merfyn-penwaig",
+          "einion-penwaig",
+          "bledri-penwaig",
+          "mererid-penwaig"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "Ältere Generationen und Verbindungen offen",
+        "notes": "Die einzelnen Karten hinter der Lücke sind die Ansatzpunkte der belegten Linien und der noch nicht zugeordneten Angehörigen.",
+        "extensions": {
+          "preparedPlaceholder": true
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-penwaig-founders",
+      "houseId": "house-penwaig",
+      "crestSubtitle": "Bürgerfamilie",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-penwaig-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceRevision": 1,
+      "authoredOn": "2026-11-27",
+      "sourceNote": "Die beschriftete Bildreihe nennt Merfyn (99, Vogt) und Einion (in seinen Siebzigern). Im Fließtext ist Einion als 99-jähriger Vogt genannt. Die Bildbeschriftung ist für die Zuordnung maßgeblich. Aus dem Alter wurden keine Geburtsjahre abgeleitet.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 1,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Penwaig",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-hausfigur-v1.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Alteingesessene Fischereifamilie im Herrschaftsgebiet der Saethwyr. Ihre Betriebe verbinden Fang, Räucherei, Salzerei und Handel.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Penwaig"
+          ],
+          [
+            "Rang",
+            "Bürgerliche Familie"
+          ],
+          [
+            "Stammsitz",
+            "Offen"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Offen"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-emblem.jpeg",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Alteingesessene Fischereifamilie im Herrschaftsgebiet der Saethwyr. Ihre Betriebe verbinden Fang, Räucherei, Salzerei und Handel.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [
+            "Fischerei, Verarbeitung und Handel",
+            "Merfyn Penwaig als Vogt des Hauses Saethwyr"
+          ],
+          "historyTitle": "Geschichte",
+          "historyText": "Seit etwa 400 Jahren widmen sich die Penwaigs im Gebiet der Saethwyr dem Fischfang. Ihre Betriebe verarbeiten den Fang in eigenen Räuchereien und Salzereien.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die wohlhabende Familie ist ihrem Handwerk verbunden geblieben. Viele ihrer Angehörigen fischen selbst."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Penwaig/penwaig-emblem.jpeg",
+              "title": "Familie Penwaig · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-penwaig"
+            },
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+              "title": "Haus Saethwyr",
+              "text": "Fischerei und Handel im Gebiet der Saethwyr",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-saethwyr"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

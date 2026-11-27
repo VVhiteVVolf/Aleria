@@ -1,0 +1,226 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-caws--morys-caws",
+  "slug": "morys-caws",
+  "identity": {
+    "name": "Morys Caws",
+    "aliases": [],
+    "worldPersonId": "person--haus-caws--morys-caws"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-caws",
+      "label": "Familie Caws"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-caws",
+        "familyTitle": "Familie Caws",
+        "personId": "morys-caws",
+        "worldPersonId": "person--haus-caws--morys-caws",
+        "houseId": "house-caws",
+        "houseName": "Familie Caws",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Morys Caws\",\"title\":\"Zweiter Sohn · Küchenmeister des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-caws--morys-caws",
+      "documentIds": [
+        "person--haus-caws--morys-caws"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-caws--morys-caws",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-caws",
+        "personId": "morys-caws",
+        "worldPersonId": "person--haus-caws--morys-caws",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/morys-caws.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-caws--morys-caws"
+    ],
+    "contentHash": "5b59393c03b8665f253c3b810be72154c69be367820ebbe83022e360f424206b"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-caws--morys-caws",
+        "name": "Morys Caws",
+        "title": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+        "gender": "male",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+        "bio": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Morys Caws",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Morys Caws"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Caws"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Zweiter Sohn · Küchenmeister des Hauses Gafyr"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+            "biographyTitle": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+            "biographyText": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Caws",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-caws--morys-caws"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-caws--morys-caws"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-caws--morys-caws",
+    "name": "Morys Caws",
+    "title": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+    "gender": "male",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+    "bio": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morys Caws",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morys Caws"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Caws"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Zweiter Sohn · Küchenmeister des Hauses Gafyr"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg",
+        "biographyTitle": "Zweiter Sohn · Küchenmeister des Hauses Gafyr",
+        "biographyText": "Morys ist Goronvys zweiter Sohn. Als Küchenmeister des Hauses Gafyr verbindet er die Familie mit dem Haushalt der Gafyrs.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Caws",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caws&mode=view&person=morys-caws"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caws--morys-caws"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caws--morys-caws",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-caws",
+      "houseName": "Familie Caws",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-caws",
+          "personId": "morys-caws",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Morys Caws\",\"title\":\"Zweiter Sohn · Küchenmeister des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caws\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-caws/morys-caws.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"goronvy-caws\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caws--goronvy-caws\",\"name\":\"Goronvy Caws\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "goronvy-caws",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caws--goronvy-caws",
+            "name": "Goronvy Caws"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

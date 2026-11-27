@@ -1,0 +1,217 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gofal--eluned-gofal",
+  "slug": "eluned-gofal",
+  "identity": {
+    "name": "Eluned Gofal",
+    "aliases": [],
+    "worldPersonId": "person--haus-gofal--eluned-gofal"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gofal",
+      "label": "Familie Gofal"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gofal",
+        "familyTitle": "Familie Gofal",
+        "personId": "eluned-gofal",
+        "worldPersonId": "person--haus-gofal--eluned-gofal",
+        "houseId": "house-gofal",
+        "houseName": "Familie Gofal",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Herrschaft der Gafyr"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Eluned Gofal\",\"title\":\"Zofe des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gofal--eluned-gofal",
+      "documentIds": [
+        "person--haus-gofal--eluned-gofal"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gofal--eluned-gofal",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gofal",
+        "personId": "eluned-gofal",
+        "worldPersonId": "person--haus-gofal--eluned-gofal",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Celtigerns Wacht Familien/eluned-gofal.json",
+    "sourceExportedAt": "2026-11-27T18:12:03Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-gofal--eluned-gofal"
+    ],
+    "contentHash": "48bb5b174c4616b7496a62161196db01d814192ba639d0315cffd5bb7a6d702a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "celtigerns-wacht-families-20261127"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-gofal--eluned-gofal",
+        "name": "Eluned Gofal",
+        "title": "Zofe des Hauses Gafyr",
+        "gender": "female",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+        "bio": "Eluned dient Haus Gafyr als Zofe. Ihr genaues Verwandtschaftsverhältnis zu Luned und Mared ist offen.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Eluned Gofal",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Eluned Gofal"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Gofal"
+            },
+            {
+              "label": "Einordnung",
+              "value": "Zofe des Hauses Gafyr"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+            "biographyTitle": "Zofe des Hauses Gafyr",
+            "biographyText": "Eluned dient Haus Gafyr als Zofe. Ihr genaues Verwandtschaftsverhältnis zu Luned und Mared ist offen.",
+            "documentsTitle": "Stammbaum",
+            "documents": [
+              {
+                "title": "Familie Gofal",
+                "text": "Personenkarte und belegte Familienverbindungen",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-gofal--eluned-gofal"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-gofal--eluned-gofal"
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-gofal--eluned-gofal",
+    "name": "Eluned Gofal",
+    "title": "Zofe des Hauses Gafyr",
+    "gender": "female",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+    "bio": "Eluned dient Haus Gafyr als Zofe. Ihr genaues Verwandtschaftsverhältnis zu Luned und Mared ist offen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Eluned Gofal",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Eluned Gofal"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gofal"
+        },
+        {
+          "label": "Einordnung",
+          "value": "Zofe des Hauses Gafyr"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg",
+        "biographyTitle": "Zofe des Hauses Gafyr",
+        "biographyText": "Eluned dient Haus Gafyr als Zofe. Ihr genaues Verwandtschaftsverhältnis zu Luned und Mared ist offen.",
+        "documentsTitle": "Stammbaum",
+        "documents": [
+          {
+            "title": "Familie Gofal",
+            "text": "Personenkarte und belegte Familienverbindungen",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-gofal&mode=view&person=eluned-gofal"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-gofal--eluned-gofal"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gofal--eluned-gofal",
+      "sex": "female",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-gofal",
+      "houseName": "Familie Gofal",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gofal",
+          "personId": "eluned-gofal",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-27T18:12:03Z",
+          "lastSyncedAt": "2026-11-27T18:12:03Z",
+          "url": "",
+          "fingerprint": "{\"name\":\"Eluned Gofal\",\"title\":\"Zofe des Hauses Gafyr\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gofal\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gofal/eluned-gofal.jpeg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Herrschaft der Gafyr"
+  }
+}

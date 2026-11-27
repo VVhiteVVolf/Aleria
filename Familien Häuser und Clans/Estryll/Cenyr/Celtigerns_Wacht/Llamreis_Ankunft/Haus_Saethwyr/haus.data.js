@@ -190,9 +190,9 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "hof-offices-1": {
-      "src": "../Stammbäume/assets/images/placeholders/male.png",
-      "href": "",
-      "alt": "Silhouette · Vogt nicht benannt",
+      "src": "../Stammbäume/assets/images/portraits/haus-penwaig/merfyn-penwaig.jpeg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig",
+      "alt": "Merfyn Penwaig",
       "format": "portrait"
     },
     "hof-offices-2": {
@@ -419,10 +419,10 @@ window.HAEUSER_DATA = {
         "title": "Hofämter",
         "entries": [
           {
-            "name": "Nicht benannt",
+            "name": "Merfyn Penwaig",
             "role": "Vogt",
-            "detail": "",
-            "href": "",
+            "detail": "99 Jahre",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-penwaig&mode=view&person=merfyn-penwaig",
             "imageKey": "hof-offices-1"
           },
           {
