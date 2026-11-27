@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Alerias Entwurfswerkstatt für Figuren, Häuser, Orte, Fraktionen, Kreaturen und Gegenstände.">
+  <title>Entwurfswerkstatt · Aleria</title>
+  <link rel="icon" href="../../IconOrdner/ReiterIcons/Vorbereitungen-v2.webp" type="image/webp">
+  <link rel="stylesheet" href="../../shared/cenyr-administration/administration-materials.css">
+  <link rel="stylesheet" href="workshop.css">
+  <link rel="stylesheet" href="concept-editor.css">
+  <link rel="stylesheet" href="concept-decisions.css">
+  <script type="module" src="workshop-app.mjs"></script>
+</head>
+<body class="concept-workshop">
+  <a class="workshop-skip" href="#entwurf">Zum Entwurf</a>
+  <div class="workshop-volume" data-concept-workshop>
+    <header class="workshop-header">
+      <nav class="workshop-path" aria-label="Aleria">
+        <a href="../index.html">← Vorbereitungen</a>
+        <a href="../../AleriaAlmanach/AleriaAlmanach.html">Aleria Almanach ↗</a>
+      </nav>
+      <div class="workshop-heading">
+        <div class="workshop-title">
+          <img src="../../IconOrdner/ReiterIcons/Vorbereitungen-v2.webp" width="68" height="68" alt="">
+          <div>
+            <h1>Entwurfswerkstatt</h1>
+            <p>Figuren, Häuser, Orte, Fraktionen, Kreaturen und Gegenstände</p>
+          </div>
+        </div>
+        <div class="workshop-transfer">
+          <div class="workshop-actions">
+            <button type="button" class="workshop-button workshop-button--dark" data-action="import">
+              <img src="../../shared/cenyr-administration/assets/icons/import.webp" width="20" height="20" alt="">Importieren
+            </button>
+            <button type="button" class="workshop-button workshop-button--primary" data-action="export-all" disabled>
+              <img src="../../shared/cenyr-administration/assets/icons/export.webp" width="20" height="20" alt="">Mappe exportieren
+            </button>
+          </div>
+          <input type="file" accept=".json,application/json" data-role="import-file" hidden>
+          <p class="workshop-save" data-role="save" role="status">Entwürfe werden in diesem Browser gespeichert.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="workshop-layout">
+      <aside class="workshop-sidebar" aria-labelledby="drafts-title">
+        <div class="workshop-sidebar-heading">
+          <h2 id="drafts-title">Entwurfsmappe</h2>
+          <button type="button" class="workshop-button workshop-button--dark" data-action="choose-type" aria-haspopup="dialog">＋ Neuer Entwurf</button>
+        </div>
+        <nav data-role="drafts" aria-label="Gespeicherte Entwürfe"></nav>
+        <button type="button" class="workshop-button workshop-button--dark workshop-example-button" data-action="choose-examples" aria-haspopup="dialog">Musterbeispiele</button>
+      </aside>
+      <main class="workshop-ledger" id="entwurf" tabindex="-1">
+        <p class="workshop-notice" data-role="notice" role="status" hidden></p>
+        <div data-role="editor"></div>
+        <noscript><p>Die Werkstatt benötigt JavaScript, um Entwürfe zu öffnen und zu speichern.</p></noscript>
+      </main>
+    </div>
+
+    <dialog class="workshop-dialog" data-role="choice-dialog" aria-labelledby="choice-title">
+      <div class="workshop-dialog-heading">
+        <h2 id="choice-title" data-role="choice-title"></h2>
+        <form method="dialog"><button class="workshop-button workshop-button--dark">Schließen</button></form>
+      </div>
+      <div class="workshop-dialog-body" data-role="choice-options"></div>
+    </dialog>
+
+    <dialog class="workshop-dialog workshop-dialog--picker" data-role="picker" aria-labelledby="picker-title">
+      <div class="workshop-dialog-heading">
+        <h2 id="picker-title" data-role="picker-title"></h2>
+        <button type="button" class="workshop-button workshop-button--dark" data-picker-action="close">Schließen</button>
+      </div>
+      <div class="workshop-dialog-body">
+        <div class="picker-filters" data-role="picker-filters"></div>
+        <label class="concept-field">
+          <span data-role="picker-label"></span>
+          <input type="search" data-role="picker-search" autocomplete="off">
+        </label>
+        <p class="picker-status" data-role="picker-status" role="status"></p>
+        <div data-role="picker-results"></div>
+        <button type="button" class="workshop-button" data-picker-action="more" hidden>Weitere anzeigen</button>
+      </div>
+    </dialog>
+
+    <dialog class="workshop-dialog workshop-dialog--image" data-role="image-dialog" aria-labelledby="image-title">
+      <div class="workshop-dialog-heading">
+        <h2 id="image-title" data-role="image-title"></h2>
+        <form method="dialog"><button class="workshop-button workshop-button--dark">Schließen</button></form>
+      </div>
+      <div class="workshop-dialog-body" data-role="image-full"></div>
+    </dialog>
+
+    <dialog class="workshop-dialog workshop-dialog--confirm" data-role="delete-dialog" aria-labelledby="delete-title">
+      <div class="workshop-dialog-heading"><h2 id="delete-title">Entwurf löschen?</h2></div>
+      <form class="workshop-dialog-body" method="dialog">
+        <p data-role="delete-copy"></p>
+        <div class="workshop-actions">
+          <button class="workshop-button" value="cancel" autofocus>Abbrechen</button>
+          <button class="workshop-button workshop-button--danger" value="delete">Entwurf löschen</button>
+        </div>
+      </form>
+    </dialog>
+  </div>
+</body>
+</html>
