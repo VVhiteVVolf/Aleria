@@ -1,11 +1,13 @@
 /** Open country workshops and stand-alone planning tools. */
 export const PREPARATION_GROUPS = Object.freeze([
+  Object.freeze({id:'concepts',title:'Konzepte',eyebrow:'Entwurfsmappe',description:'Bearbeitbare Konzepte für Figuren, Häuser, Orte, Fraktionen, Kreaturen und Gegenstände.'}),
   Object.freeze({id:'realms',title:'Länder, Völker und Stadtrepubliken',eyebrow:'Eigenständige Werkstätten',description:'Geschichte, Gesellschaft, Wappen und die politische Ordnung stehen hier zur gemeinsamen Ausarbeitung.'}),
   Object.freeze({id:'argentum',title:'Kaiserreich Argentum',eyebrow:'Drei Provinzen · ein Kaiserreich',description:'Leukonia, Vardentia und Calidaria werden als Provinzen desselben Reiches vorbereitet.'}),
   Object.freeze({id:'administration',title:'Verwaltung und Ratsämter',eyebrow:'Königreich Cenyr',description:'Besetzungsentwürfe für die Krone, die Grafschaften und ihre Herrschaften.'}),
 ]);
 
 export const PREPARATIONS = Object.freeze([
+  {id:'figurenwerkstatt',name:'Entwurfswerkstatt',folder:'Figurenwerkstatt',group:'concepts',kind:'Sechs Vorlagen',image:'../IconOrdner/ReiterIcons/Vorbereitungen-v2.webp',summary:'Bildvarianten vergleichen, Entwürfe verknüpfen und Entscheidungen festhalten. Mit sechs Musterentwürfen und dem Orts-Pitch für Caer Ysgellfor.',keywords:'Charakter Figur Familie Ort Fraktion Kreatur Gegenstand'},
   {id:'adharath',name:'Adharath · Dúinreach',folder:'Adharath',group:'realms',kind:'Nomadenvolk',crest:'assets/emblems/previews/realm-duinreach.webp',summary:'Zwölf wandernde albische Stämme bewahren das Erbe des verlorenen Fürstentums Dúinreach.'},
   {id:'blutstadt',name:'Die Blutstadt',folder:'Blutstadt',group:'realms',kind:'Stadt und Inselherrschaften',crest:'assets/crests/blutstadt.webp',summary:'Die ehemalige Kaiserstadt zwischen Alerischer Kirche, Gilden und mächtigen Bürgerhäusern.'},
   {id:'ishtaran',name:'Ishtaran',folder:'Ishtaran',group:'realms',kind:'Sultanat',crest:'assets/emblems/previews/source-07.webp',summary:'Das Erbe Maghneachs, die Dualität und die Häuser der Steppen- und Reiterkultur.'},
